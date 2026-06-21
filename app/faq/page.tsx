@@ -32,9 +32,9 @@ export default function FaqPage() {
           <div className="max-w-3xl">
             <div className="flex items-center gap-3">
               <span className="eyebrow">FAQ</span></div>
-            <h1 className="mt-5 text-5xl font-semibold leading-[1.05] tracking-tight text-neutral-950 sm:text-6xl">
+            <h1 className="mt-5 text-5xl font-semibold leading-[1.05] tracking-tight text-charcoal sm:text-6xl">
               Questions, answered{" "}
-              <span className="text-neutral-950">honestly</span>
+              <span className="text-charcoal">honestly</span>
             </h1>
             <p className="mt-6 text-base leading-relaxed text-body sm:text-lg">
               The questions parents and students ask us most often. If yours
@@ -54,10 +54,10 @@ export default function FaqPage() {
                 open={i === 0}
               >
                 <summary className="flex cursor-pointer items-center justify-between gap-4 list-none">
-                  <span className="text-base font-semibold text-neutral-950 sm:text-lg">
+                  <span className="text-base font-semibold text-charcoal sm:text-lg">
                     {f.question}
                   </span>
-                  <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full border border-neutral-400 text-neutral-950 transition group-open:rotate-45">
+                  <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full border border-neutral-400 text-charcoal transition group-open:rotate-45">
                     +
                   </span>
                 </summary>

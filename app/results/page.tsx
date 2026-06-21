@@ -26,9 +26,9 @@ export default function ResultsPage() {
           <div className="max-w-3xl">
             <div className="flex items-center gap-3">
               <span className="eyebrow">Results</span></div>
-            <h1 className="mt-5 text-5xl font-semibold leading-[1.05] tracking-tight text-neutral-950 sm:text-6xl">
+            <h1 className="mt-5 text-5xl font-semibold leading-[1.05] tracking-tight text-charcoal sm:text-6xl">
               Where weekly tests turn into{" "}
-              <span className="text-neutral-950">board scores</span>
+              <span className="text-charcoal">board scores</span>
             </h1>
             <p className="mt-6 text-base leading-relaxed text-body sm:text-lg">
               A snapshot of how our Class 10 and Class 12 students performed in
@@ -42,7 +42,7 @@ export default function ResultsPage() {
                 key={s.label}
                 className="rounded border border-neutral-200 bg-white p-6 text-center shadow-sm"
               >
-                <p className="text-4xl font-semibold text-neutral-950 sm:text-5xl">
+                <p className="text-4xl font-semibold text-charcoal sm:text-5xl">
                   {s.value}
                 </p>
                 <p className="mt-2 text-xs uppercase tracking-wider text-muted">
@@ -61,7 +61,7 @@ export default function ResultsPage() {
             title={
               <>
                 Students who reached{" "}
-                <span className="text-neutral-950">90 plus</span>
+                <span className="text-charcoal">90 plus</span>
               </>
             }
             description="Real students from real ESA batches. Names shared with consent. Marks reflect the recent CBSE board cycle."
@@ -85,7 +85,7 @@ export default function ResultsPage() {
                   </div>
                 </div>
                 <div className="p-5">
-                  <h3 className="text-xl font-semibold text-neutral-950">
+                  <h3 className="text-xl font-semibold text-charcoal">
                     {t.name}
                   </h3>
                   <p className="mt-1 text-xs uppercase tracking-wider text-muted">

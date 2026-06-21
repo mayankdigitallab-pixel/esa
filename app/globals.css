@@ -2,27 +2,32 @@
 
 :root {
   --background: #ffffff;
-  --foreground: #1a1a1a;
+  --foreground: #3d3d3d;
 
-  /* Brand palette - from ESA logo (teal book + red accent + charcoal) */
-  --teal-50:  #ecfeff;
-  --teal-100: #cffafe;
-  --teal-200: #a5f3fc;
-  --teal-300: #67e8f0;
-  --teal-400: #22d3ee;
-  --teal-500: #14b8c7;
-  --teal-600: #0e9aa8;
-  --teal-700: #0e7c8b;
-  --teal-800: #155e6b;
-  --teal-900: #164e58;
+  /* Brand palette - exact ESA logo colors */
+  --teal-50:  #e0f7fa;
+  --teal-100: #b2ebf2;
+  --teal-200: #80deea;
+  --teal-300: #4dd0e1;
+  --teal-400: #26c6da;
+  --teal-500: #00bcd4;
+  --teal-600: #00acc1;
+  --teal-700: #0097a7;
+  --teal-800: #00838f;
+  --teal-900: #006064;
 
-  --red-50:  #fef2f2;
-  --red-100: #fee2e2;
-  --red-500: #e63946;
-  --red-600: #d12d3a;
-  --red-700: #b91c1c;
+  --red-50:  #ffebee;
+  --red-100: #ffcdd2;
+  --red-400: #ef5350;
+  --red-500: #e53935;
+  --red-600: #d32f2f;
+  --red-700: #c62828;
 
-  /* Neutral / charcoal scale (for text and supporting UI) */
+  --charcoal: #3d3d3d;
+  --charcoal-soft: #5a5a5a;
+  --dark-gray: #424242;
+
+  /* Neutral scale (kept for surfaces, hairlines, supporting UI) */
   --neutral-50: #fafafa;
   --neutral-100: #f5f5f5;
   --neutral-200: #e5e5e5;
@@ -31,15 +36,15 @@
   --neutral-500: #737373;
   --neutral-600: #525252;
   --neutral-700: #404040;
-  --neutral-800: #262626;
-  --neutral-900: #171717;
+  --neutral-800: #2e2e2e;
+  --neutral-900: #1f1f1f;
   --neutral-950: #1a1a1a;
 
-  --ink-text: #1a1a1a;
-  --body-text: #525252;
-  --muted-text: #737373;
+  --ink-text: #3d3d3d;
+  --body-text: #5a5a5a;
+  --muted-text: #8a8a8a;
   --border-soft: #e5e5e5;
-  --border-strong: #d4d4d4;
+  --border-strong: #424242;
 }
 
 @theme inline {
@@ -59,9 +64,14 @@
 
   --color-red-50:  var(--red-50);
   --color-red-100: var(--red-100);
+  --color-red-400: var(--red-400);
   --color-red-500: var(--red-500);
   --color-red-600: var(--red-600);
   --color-red-700: var(--red-700);
+
+  --color-charcoal:      var(--charcoal);
+  --color-charcoal-soft: var(--charcoal-soft);
+  --color-dark-gray:     var(--dark-gray);
 
   --color-neutral-50:  var(--neutral-50);
   --color-neutral-100: var(--neutral-100);
@@ -81,9 +91,9 @@
   --color-border-soft: var(--border-soft);
   --color-border-strong: var(--border-strong);
 
-  --color-brand: var(--teal-500);
+  --color-brand:      var(--teal-500);
   --color-brand-dark: var(--teal-700);
-  --color-accent: var(--red-500);
+  --color-accent:     var(--red-500);
   --color-accent-dark: var(--red-600);
 
   --font-sans: var(--font-inter);
@@ -95,7 +105,7 @@
 
 body {
   background: var(--background);
-  color: var(--foreground);
+  color: var(--charcoal);
   font-family: var(--font-inter), system-ui, -apple-system, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -103,6 +113,7 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
+  color: var(--charcoal);
   letter-spacing: -0.02em;
   font-weight: 700;
 }
@@ -127,7 +138,7 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 0.95rem;
   border-radius: 8px;
   transition: background 0.15s ease, transform 0.15s ease;
-  box-shadow: 0 6px 20px -8px rgba(230, 57, 70, 0.55);
+  box-shadow: 0 6px 20px -8px rgba(229, 57, 53, 0.55);
 }
 .btn-primary:hover {
   background: var(--red-600);
@@ -145,7 +156,7 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 0.95rem;
   border-radius: 8px;
   transition: background 0.15s ease, transform 0.15s ease;
-  box-shadow: 0 6px 20px -8px rgba(20, 184, 199, 0.55);
+  box-shadow: 0 6px 20px -8px rgba(0, 188, 212, 0.55);
 }
 .btn-teal:hover {
   background: var(--teal-600);
@@ -158,7 +169,7 @@ h1, h2, h3, h4, h5, h6 {
   gap: 0.5rem;
   padding: 0.9rem 1.5rem;
   background: transparent;
-  color: var(--neutral-950);
+  color: var(--charcoal);
   font-weight: 600;
   font-size: 0.95rem;
   border-radius: 8px;
@@ -166,8 +177,9 @@ h1, h2, h3, h4, h5, h6 {
   transition: border-color 0.15s ease, background 0.15s ease;
 }
 .btn-outline:hover {
-  border-color: var(--neutral-950);
-  background: var(--neutral-50);
+  border-color: var(--teal-500);
+  background: var(--teal-50);
+  color: var(--teal-700);
 }
 
 .btn-on-teal {
@@ -176,7 +188,7 @@ h1, h2, h3, h4, h5, h6 {
   gap: 0.5rem;
   padding: 0.9rem 1.5rem;
   background: #fff;
-  color: var(--teal-800);
+  color: var(--teal-700);
   font-weight: 600;
   font-size: 0.95rem;
   border-radius: 8px;
@@ -201,7 +213,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Blog post body */
 .prose-esa {
-  color: var(--neutral-700);
+  color: var(--charcoal);
   font-size: 17px;
   line-height: 1.75;
   max-width: 68ch;
@@ -210,14 +222,14 @@ h1, h2, h3, h4, h5, h6 {
 .prose-esa h2 {
   font-size: 1.7rem;
   font-weight: 700;
-  color: var(--neutral-950);
+  color: var(--charcoal);
   letter-spacing: -0.02em;
   margin: 2.75rem 0 1rem;
 }
 .prose-esa h3 {
   font-size: 1.3rem;
   font-weight: 700;
-  color: var(--neutral-950);
+  color: var(--charcoal);
   letter-spacing: -0.01em;
   margin: 2rem 0 0.75rem;
 }
@@ -231,12 +243,12 @@ h1, h2, h3, h4, h5, h6 {
   text-decoration-thickness: 1px;
 }
 .prose-esa a:hover { color: var(--red-600); }
-.prose-esa strong { color: var(--neutral-950); font-weight: 700; }
+.prose-esa strong { color: var(--charcoal); font-weight: 700; }
 .prose-esa blockquote {
   border-left: 3px solid var(--teal-500);
   padding: 0.25rem 0 0.25rem 1.25rem;
   margin: 1.5rem 0;
-  color: var(--neutral-700);
+  color: var(--charcoal);
 }
 
 @media (max-width: 640px) {

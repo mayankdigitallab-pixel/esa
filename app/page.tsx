@@ -191,7 +191,7 @@ export default function HomePage() {
                   </span>
                   <div>
                     <p className="text-xs font-semibold uppercase tracking-wider text-red-600">7-day free demo</p>
-                    <p className="text-sm font-medium text-neutral-950">No pressure. Try a real batch.</p>
+                    <p className="text-sm font-medium text-charcoal">No pressure. Try a real batch.</p>
                   </div>
                 </div>
               </div>
@@ -210,7 +210,7 @@ export default function HomePage() {
                   <Icon className="h-5 w-5" strokeWidth={2} />
                 </span>
                 <div>
-                  <p className="text-2xl font-bold tracking-tight text-neutral-950 sm:text-3xl">{value}</p>
+                  <p className="text-2xl font-bold tracking-tight text-charcoal sm:text-3xl">{value}</p>
                   <p className="text-xs uppercase tracking-wider text-neutral-500">{label}</p>
                 </div>
               </div>
@@ -235,10 +235,10 @@ export default function HomePage() {
               >
                 <span className={`absolute right-0 top-0 h-1 w-full ${i % 2 === 0 ? "bg-teal-500" : "bg-red-500"}`} />
                 <p className="text-xs font-bold uppercase tracking-wider text-neutral-500">{p.grades}</p>
-                <h3 className="mt-3 text-xl font-bold tracking-tight text-neutral-950">
+                <h3 className="mt-3 text-xl font-bold tracking-tight text-charcoal">
                   {p.label} Program
                 </h3>
-                <p className="mt-3 flex-1 text-sm leading-relaxed text-neutral-600">{p.description}</p>
+                <p className="mt-3 flex-1 text-sm leading-relaxed text-charcoal-soft">{p.description}</p>
                 <Link
                   href={`/programs#${p.slug}`}
                   className="mt-6 inline-flex items-center gap-1 text-sm font-semibold text-teal-700 transition group-hover:text-red-600"
@@ -268,7 +268,7 @@ export default function HomePage() {
               >
                 <div className="flex items-center gap-3">
                   <span className="h-2 w-2 rounded-full bg-teal-500" />
-                  <span className="text-sm font-semibold text-neutral-950">{s.name}</span>
+                  <span className="text-sm font-semibold text-charcoal">{s.name}</span>
                 </div>
                 <span className="text-xs uppercase tracking-wider text-neutral-500">{s.grades}</span>
               </div>
@@ -337,11 +337,11 @@ export default function HomePage() {
                   </span>
                 </div>
                 <div className="mt-5">
-                  <h3 className="text-lg font-bold tracking-tight text-neutral-950">{f.name}</h3>
-                  <p className="mt-1.5 text-sm text-neutral-600">
-                    <span className="font-semibold text-neutral-950">{f.experience}</span> teaching {f.subjects}
+                  <h3 className="text-lg font-bold tracking-tight text-charcoal">{f.name}</h3>
+                  <p className="mt-1.5 text-sm text-charcoal-soft">
+                    <span className="font-semibold text-charcoal">{f.experience}</span> teaching {f.subjects}
                   </p>
-                  <p className="mt-3 text-sm leading-relaxed text-neutral-600 line-clamp-3">{f.bio}</p>
+                  <p className="mt-3 text-sm leading-relaxed text-charcoal-soft line-clamp-3">{f.bio}</p>
                 </div>
               </article>
             ))}
@@ -365,7 +365,7 @@ export default function HomePage() {
                     <Image src={t.image} alt={t.name} fill sizes="80px" className="object-cover" />
                   </div>
                   <div className="flex-1 min-w-0">
-                    <h3 className="text-base font-bold tracking-tight text-neutral-950">{t.name}</h3>
+                    <h3 className="text-base font-bold tracking-tight text-charcoal">{t.name}</h3>
                     <p className="mt-0.5 text-xs uppercase tracking-wider text-neutral-500">
                       {t.grade}{t.stream ? ` · ${t.stream}` : ""}
                     </p>
@@ -373,7 +373,7 @@ export default function HomePage() {
                   </div>
                 </div>
                 {t.quote ? (
-                  <p className="border-t border-neutral-200 bg-neutral-50 px-6 py-4 text-sm leading-relaxed text-neutral-700">
+                  <p className="border-t border-neutral-200 bg-neutral-50 px-6 py-4 text-sm leading-relaxed text-charcoal">
                     &ldquo;{t.quote}&rdquo;
                   </p>
                 ) : null}
@@ -406,8 +406,8 @@ export default function HomePage() {
                 <div className={`relative flex h-24 w-24 items-center justify-center rounded-full ${i % 2 === 0 ? "bg-teal-500" : "bg-red-500"} text-white shadow-lg`}>
                   <span className="text-2xl font-bold tracking-tight">{s.step}</span>
                 </div>
-                <h3 className="mt-6 text-lg font-bold tracking-tight text-neutral-950">{s.title}</h3>
-                <p className="mt-2 text-sm leading-relaxed text-neutral-600">{s.description}</p>
+                <h3 className="mt-6 text-lg font-bold tracking-tight text-charcoal">{s.title}</h3>
+                <p className="mt-2 text-sm leading-relaxed text-charcoal-soft">{s.description}</p>
               </div>
             ))}
           </div>
@@ -433,8 +433,8 @@ export default function HomePage() {
             ].map((item) => (
               <article key={item.title} className="rounded-2xl border border-neutral-200 bg-white p-7">
                 <p className="text-xs font-bold uppercase tracking-wider text-teal-700">{item.label}</p>
-                <h3 className="mt-3 text-base font-bold tracking-tight text-neutral-950 sm:text-lg">{item.title}</h3>
-                <p className="mt-3 text-sm leading-relaxed text-neutral-600">{item.body}</p>
+                <h3 className="mt-3 text-base font-bold tracking-tight text-charcoal sm:text-lg">{item.title}</h3>
+                <p className="mt-3 text-sm leading-relaxed text-charcoal-soft">{item.body}</p>
               </article>
             ))}
           </div>
@@ -506,13 +506,13 @@ export default function HomePage() {
                     <Star key={idx} className="h-4 w-4 fill-current" />
                   ))}
                 </div>
-                <p className="mt-5 flex-1 text-sm leading-relaxed text-neutral-700">{t.text}</p>
+                <p className="mt-5 flex-1 text-sm leading-relaxed text-charcoal">{t.text}</p>
                 <div className="mt-6 flex items-center gap-3 border-t border-neutral-200 pt-5">
                   <div className={`flex h-10 w-10 items-center justify-center rounded-full ${i % 2 === 0 ? "bg-teal-500" : "bg-red-500"} text-sm font-bold text-white`}>
                     {t.name.charAt(0)}
                   </div>
                   <div>
-                    <p className="text-sm font-bold text-neutral-950">{t.name}</p>
+                    <p className="text-sm font-bold text-charcoal">{t.name}</p>
                     <p className="text-xs text-neutral-500">{t.role}</p>
                   </div>
                 </div>
@@ -539,7 +539,7 @@ export default function HomePage() {
               >
                 <div className="flex items-center gap-2.5">
                   <MapPin className="h-4 w-4 text-teal-600" />
-                  <span className="text-sm font-semibold text-neutral-950">{area.name}</span>
+                  <span className="text-sm font-semibold text-charcoal">{area.name}</span>
                 </div>
                 <ArrowUpRight className="h-4 w-4 text-neutral-400 transition group-hover:text-red-600" />
               </Link>
@@ -616,12 +616,12 @@ export default function HomePage() {
                   open={i === 0}
                 >
                   <summary className="flex cursor-pointer items-center justify-between gap-4 list-none">
-                    <span className="text-base font-semibold tracking-tight text-neutral-950">{f.question}</span>
+                    <span className="text-base font-semibold tracking-tight text-charcoal">{f.question}</span>
                     <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-teal-100 text-teal-700 transition group-open:rotate-45 group-open:bg-red-500 group-open:text-white">
                       <Plus className="h-4 w-4" />
                     </span>
                   </summary>
-                  <p className="mt-4 text-sm leading-relaxed text-neutral-700">{f.answer}</p>
+                  <p className="mt-4 text-sm leading-relaxed text-charcoal">{f.answer}</p>
                 </details>
               ))}
               <Link href="/faq" className="btn-ghost mt-6">
@@ -655,7 +655,7 @@ export default function HomePage() {
                     </span>
                     <div>
                       <p className="text-xs font-bold uppercase tracking-wider text-neutral-500">{label}</p>
-                      <p className="mt-1 text-sm leading-relaxed text-neutral-700">{value}</p>
+                      <p className="mt-1 text-sm leading-relaxed text-charcoal">{value}</p>
                     </div>
                   </div>
                 </div>

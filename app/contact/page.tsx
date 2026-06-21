@@ -34,9 +34,9 @@ export default function ContactPage() {
           <div className="max-w-3xl">
             <div className="flex items-center gap-3">
               <span className="eyebrow">Contact</span></div>
-            <h1 className="mt-5 text-5xl font-semibold leading-[1.05] tracking-tight text-neutral-950 sm:text-6xl">
+            <h1 className="mt-5 text-5xl font-semibold leading-[1.05] tracking-tight text-charcoal sm:text-6xl">
               Talk to us. Book a{" "}
-              <span className="text-neutral-950">free demo</span>.
+              <span className="text-charcoal">free demo</span>.
             </h1>
             <p className="mt-6 text-base leading-relaxed text-body sm:text-lg">
               We respond within working hours, Monday to Saturday. WhatsApp is
@@ -62,7 +62,7 @@ export default function ContactPage() {
                   <MessageCircle className="h-5 w-5" />
                 </span>
                 <div>
-                  <p className="text-lg font-semibold text-neutral-950">
+                  <p className="text-lg font-semibold text-charcoal">
                     WhatsApp
                   </p>
                   <p className="text-sm text-body">{siteConfig.whatsappDisplay}</p>
@@ -77,7 +77,7 @@ export default function ContactPage() {
                   <Phone className="h-5 w-5" />
                 </span>
                 <div>
-                  <p className="text-lg font-semibold text-neutral-950">
+                  <p className="text-lg font-semibold text-charcoal">
                     Call us
                   </p>
                   <p className="text-sm text-body">{siteConfig.phoneDisplay}</p>
@@ -92,7 +92,7 @@ export default function ContactPage() {
                   <Mail className="h-5 w-5" />
                 </span>
                 <div>
-                  <p className="text-lg font-semibold text-neutral-950">
+                  <p className="text-lg font-semibold text-charcoal">
                     Email
                   </p>
                   <p className="text-sm text-body">{siteConfig.email}</p>
@@ -103,7 +103,7 @@ export default function ContactPage() {
                   <MapPin className="h-5 w-5" />
                 </span>
                 <div>
-                  <p className="text-lg font-semibold text-neutral-950">
+                  <p className="text-lg font-semibold text-charcoal">
                     Address
                   </p>
                   <p className="text-sm text-body">
@@ -118,7 +118,7 @@ export default function ContactPage() {
                   <Clock className="h-5 w-5" />
                 </span>
                 <div>
-                  <p className="text-lg font-semibold text-neutral-950">
+                  <p className="text-lg font-semibold text-charcoal">
                     Working hours
                   </p>
                   <p className="text-sm text-body">
@@ -131,10 +131,10 @@ export default function ContactPage() {
             </div>
 
             <div id="enquiry" className="scroll-mt-24 rounded border border-neutral-200 bg-white p-7 sm:p-10">
-              <p className="text-[11px] uppercase tracking-widest text-neutral-950">
+              <p className="text-[11px] uppercase tracking-widest text-charcoal">
                 Enquiry Form
               </p>
-              <h2 className="mt-2 text-3xl font-semibold text-neutral-950">
+              <h2 className="mt-2 text-3xl font-semibold text-charcoal">
                 Book a free demo class
               </h2>
               <p className="mt-2 text-sm text-body">

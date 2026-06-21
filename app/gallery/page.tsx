@@ -66,9 +66,9 @@ export default function GalleryPage() {
           <div className="max-w-3xl">
             <div className="flex items-center gap-3">
               <span className="eyebrow">Gallery</span></div>
-            <h1 className="mt-5 text-5xl font-semibold leading-[1.05] tracking-tight text-neutral-950 sm:text-6xl">
+            <h1 className="mt-5 text-5xl font-semibold leading-[1.05] tracking-tight text-charcoal sm:text-6xl">
               A look inside{" "}
-              <span className="text-neutral-950">our classrooms</span>
+              <span className="text-charcoal">our classrooms</span>
             </h1>
             <p className="mt-6 text-base leading-relaxed text-body sm:text-lg">
               Photos from a regular week at Excellent Students&apos; Academy in
@@ -95,7 +95,7 @@ export default function GalleryPage() {
                     className="object-cover transition group-hover:scale-105"
                   />
                 </div>
-                <figcaption className="p-4 text-sm font-medium text-neutral-950">
+                <figcaption className="p-4 text-sm font-medium text-charcoal">
                   {g.caption}
                 </figcaption>
               </figure>

@@ -32,7 +32,7 @@ export function Header() {
             priority
           />
           <span className="hidden flex-col leading-none sm:flex">
-            <span className="text-base font-bold tracking-tight text-neutral-950">
+            <span className="text-base font-bold tracking-tight text-charcoal">
               Excellent Students&apos; Academy
             </span>
             <span className="mt-1 text-[11px] font-semibold uppercase tracking-[0.14em] text-teal-700">
@@ -46,7 +46,7 @@ export function Header() {
             <Link
               key={item.href}
               href={item.href}
-              className="text-sm font-medium text-neutral-700 transition hover:text-teal-700"
+              className="text-sm font-medium text-charcoal transition hover:text-teal-700"
             >
               {item.label}
             </Link>
@@ -66,7 +66,7 @@ export function Header() {
           aria-label="Toggle menu"
           aria-expanded={open}
           onClick={() => setOpen((v) => !v)}
-          className="inline-flex h-10 w-10 items-center justify-center rounded-md text-neutral-950 lg:hidden"
+          className="inline-flex h-10 w-10 items-center justify-center rounded-md text-charcoal lg:hidden"
         >
           {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
         </button>
@@ -85,7 +85,7 @@ export function Header() {
                 <Link
                   href={item.href}
                   onClick={() => setOpen(false)}
-                  className="block rounded-md px-3 py-2.5 text-sm font-medium text-neutral-700 transition hover:bg-teal-50 hover:text-teal-700"
+                  className="block rounded-md px-3 py-2.5 text-sm font-medium text-charcoal transition hover:bg-teal-50 hover:text-teal-700"
                 >
                   {item.label}
                 </Link>

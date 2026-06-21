@@ -33,9 +33,9 @@ export default function BlogIndexPage() {
           <div className="max-w-3xl">
             <div className="flex items-center gap-3">
               <span className="eyebrow">Blog</span></div>
-            <h1 className="mt-5 text-5xl font-semibold leading-[1.05] tracking-tight text-neutral-950 sm:text-6xl">
+            <h1 className="mt-5 text-5xl font-semibold leading-[1.05] tracking-tight text-charcoal sm:text-6xl">
               Stories, strategies and{" "}
-              <span className="text-neutral-950">topper journeys</span>
+              <span className="text-charcoal">topper journeys</span>
             </h1>
             <p className="mt-6 text-base leading-relaxed text-body sm:text-lg">
               Practical guides for parents, exam strategies for students and
@@ -63,10 +63,10 @@ export default function BlogIndexPage() {
                 />
               </div>
               <div>
-                <span className="text-[11px] uppercase tracking-widest text-neutral-950">
+                <span className="text-[11px] uppercase tracking-widest text-charcoal">
                   {featured.category}
                 </span>
-                <h2 className="mt-3 text-3xl font-semibold leading-tight text-neutral-950 sm:text-4xl">
+                <h2 className="mt-3 text-3xl font-semibold leading-tight text-charcoal sm:text-4xl">
                   {featured.title}
                 </h2>
                 <p className="mt-4 text-sm leading-relaxed text-body sm:text-base">
@@ -86,7 +86,7 @@ export default function BlogIndexPage() {
                     {featured.readTime}
                   </span>
                 </div>
-                <span className="mt-6 inline-flex items-center gap-1.5 text-sm font-semibold text-neutral-950 transition group-hover:text-teal-700">
+                <span className="mt-6 inline-flex items-center gap-1.5 text-sm font-semibold text-charcoal transition group-hover:text-teal-700">
                   Read full story
                   <ArrowRight className="h-4 w-4" />
                 </span>
@@ -119,10 +119,10 @@ export default function BlogIndexPage() {
                   />
                 </div>
                 <div className="p-6">
-                  <p className="text-[10px] uppercase tracking-widest text-neutral-950">
+                  <p className="text-[10px] uppercase tracking-widest text-charcoal">
                     {p.category}
                   </p>
-                  <h3 className="mt-2 text-lg font-semibold leading-snug text-neutral-950 group-hover:text-teal-700 sm:text-xl">
+                  <h3 className="mt-2 text-lg font-semibold leading-snug text-charcoal group-hover:text-teal-700 sm:text-xl">
                     {p.title}
                   </h3>
                   <p className="mt-3 text-sm leading-relaxed text-body line-clamp-3">

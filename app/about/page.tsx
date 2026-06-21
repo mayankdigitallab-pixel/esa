@@ -96,9 +96,9 @@ export default function AboutPage() {
           <div className="max-w-3xl">
             <div className="flex items-center gap-3">
               <span className="eyebrow">About ESA</span></div>
-            <h1 className="mt-5 text-5xl font-semibold leading-[1.05] tracking-tight text-neutral-950 sm:text-6xl">
+            <h1 className="mt-5 text-5xl font-semibold leading-[1.05] tracking-tight text-charcoal sm:text-6xl">
               Nine years of patient,{" "}
-              <span className="text-neutral-950">disciplined</span> coaching
+              <span className="text-charcoal">disciplined</span> coaching
               in Rohini
             </h1>
             <p className="mt-6 text-base leading-relaxed text-body sm:text-lg">
@@ -120,7 +120,7 @@ export default function AboutPage() {
                 title={
                   <>
                     Built one batch at a time,{" "}
-                    <span className="text-neutral-950">in Rohini</span>
+                    <span className="text-charcoal">in Rohini</span>
                   </>
                 }
                 description="ESA was started by Chandan Prajapati, an engineer who realised teaching was his real calling. The first batch had three students from Rohini Sector 7. Word of mouth among parents grew the institute from there."
@@ -169,7 +169,7 @@ export default function AboutPage() {
             title={
               <>
                 Four values that shape{" "}
-                <span className="text-neutral-950">every batch</span>
+                <span className="text-charcoal">every batch</span>
               </>
             }
             description="If you sit in any ESA classroom, you will see these four things in action. They are not aspirational. They are operational."
@@ -180,10 +180,10 @@ export default function AboutPage() {
                 key={title}
                 className="rounded border border-neutral-200 bg-white p-7 transition hover:-translate-y-1 hover:border-neutral-400 hover:shadow-lg"
               >
-                <span className="inline-flex h-11 w-11 items-center justify-center rounded bg-neutral-50 text-neutral-950">
+                <span className="inline-flex h-11 w-11 items-center justify-center rounded bg-neutral-50 text-charcoal">
                   <Icon className="h-5 w-5" strokeWidth={1.75} />
                 </span>
-                <h3 className="mt-4 text-xl font-semibold text-neutral-950">
+                <h3 className="mt-4 text-xl font-semibold text-charcoal">
                   {title}
                 </h3>
                 <p className="mt-2 text-sm leading-relaxed text-body">
@@ -202,7 +202,7 @@ export default function AboutPage() {
             title={
               <>
                 Nine years,{" "}
-                <span className="text-neutral-950">one neighbourhood</span>
+                <span className="text-charcoal">one neighbourhood</span>
               </>
             }
             description="A short timeline of how Excellent Students' Academy grew from one room to the institute it is today."
@@ -210,10 +210,10 @@ export default function AboutPage() {
           <ol className="relative space-y-10 border-l-2 border-neutral-200 pl-8">
             {timeline.map((t) => (
               <li key={t.year} className="relative">
-                <span className="absolute -left-[42px] flex h-12 w-12 items-center justify-center rounded-full border-2 border-neutral-400 bg-white text-xs font-semibold text-neutral-950">
+                <span className="absolute -left-[42px] flex h-12 w-12 items-center justify-center rounded-full border-2 border-neutral-400 bg-white text-xs font-semibold text-charcoal">
                   {t.year}
                 </span>
-                <h3 className="text-xl font-semibold text-neutral-950">
+                <h3 className="text-xl font-semibold text-charcoal">
                   {t.title}
                 </h3>
                 <p className="mt-2 text-sm leading-relaxed text-body">

@@ -59,13 +59,13 @@ export default async function AreaPage({
           </Link>
           <div className="mt-6 max-w-3xl">
             <div className="flex items-center gap-3">
-              <MapPin className="h-4 w-4 text-neutral-950" />
+              <MapPin className="h-4 w-4 text-charcoal" />
               <span className="eyebrow">
                 {area.distanceKm === 0 ? "Our home base" : `${area.distanceKm} km from our centre`}
               </span></div>
-            <h1 className="mt-5 text-4xl font-semibold leading-[1.1] tracking-tight text-neutral-950 sm:text-5xl lg:text-6xl">
+            <h1 className="mt-5 text-4xl font-semibold leading-[1.1] tracking-tight text-charcoal sm:text-5xl lg:text-6xl">
               Best Coaching in{" "}
-              <span className="text-neutral-950">{area.name}</span> for
+              <span className="text-charcoal">{area.name}</span> for
               Class 1 to 12
             </h1>
             <p className="mt-6 text-base leading-relaxed text-body sm:text-lg">
@@ -104,7 +104,7 @@ export default async function AreaPage({
                 title={
                   <>
                     What ESA offers{" "}
-                    <span className="text-neutral-950">
+                    <span className="text-charcoal">
                       {area.name} families
                     </span>
                   </>
@@ -126,17 +126,17 @@ export default async function AreaPage({
                     key={p}
                     className="flex items-start gap-3 text-sm leading-relaxed text-body"
                   >
-                    <CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0 text-neutral-950" />
+                    <CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0 text-charcoal" />
                     {p}
                   </li>
                 ))}
               </ul>
             </div>
             <div className="rounded border border-neutral-200 bg-white p-7 sm:p-10">
-              <p className="text-[11px] uppercase tracking-widest text-neutral-950">
+              <p className="text-[11px] uppercase tracking-widest text-charcoal">
                 Getting here from {area.name}
               </p>
-              <h2 className="mt-2 text-2xl font-semibold leading-snug text-neutral-950 sm:text-3xl">
+              <h2 className="mt-2 text-2xl font-semibold leading-snug text-charcoal sm:text-3xl">
                 Just {area.distanceKm === 0 ? "0" : area.distanceKm} km from{" "}
                 {area.name}
               </h2>
@@ -148,13 +148,13 @@ export default async function AreaPage({
               <dl className="mt-6 space-y-3 text-sm">
                 <div className="flex justify-between border-b border-neutral-200 pb-2">
                   <dt className="text-muted">Distance from {area.name}</dt>
-                  <dd className="font-medium text-neutral-950">
+                  <dd className="font-medium text-charcoal">
                     {area.distanceKm === 0 ? "We are here" : `${area.distanceKm} km`}
                   </dd>
                 </div>
                 <div className="flex justify-between border-b border-neutral-200 pb-2">
                   <dt className="text-muted">Approx commute</dt>
-                  <dd className="font-medium text-neutral-950">
+                  <dd className="font-medium text-charcoal">
                     {area.distanceKm < 3
                       ? "Under 10 minutes"
                       : area.distanceKm < 6
@@ -164,11 +164,11 @@ export default async function AreaPage({
                 </div>
                 <div className="flex justify-between border-b border-neutral-200 pb-2">
                   <dt className="text-muted">Public transport</dt>
-                  <dd className="font-medium text-neutral-950">Auto / Metro</dd>
+                  <dd className="font-medium text-charcoal">Auto / Metro</dd>
                 </div>
                 <div className="flex justify-between">
                   <dt className="text-muted">Home tuition</dt>
-                  <dd className="font-medium text-neutral-950">Available</dd>
+                  <dd className="font-medium text-charcoal">Available</dd>
                 </div>
               </dl>
             </div>
@@ -183,7 +183,7 @@ export default async function AreaPage({
             title={
               <>
                 ESA also serves families from these{" "}
-                <span className="text-neutral-950">other localities</span>
+                <span className="text-charcoal">other localities</span>
               </>
             }
           />
@@ -195,8 +195,8 @@ export default async function AreaPage({
                 className="group flex items-center justify-between rounded border border-neutral-200 bg-white px-5 py-4 transition hover:border-neutral-400 hover:shadow"
               >
                 <div className="flex items-center gap-3">
-                  <MapPin className="h-4 w-4 text-neutral-950" />
-                  <span className="text-sm font-medium text-neutral-950">
+                  <MapPin className="h-4 w-4 text-charcoal" />
+                  <span className="text-sm font-medium text-charcoal">
                     {a.name}
                   </span>
                 </div>

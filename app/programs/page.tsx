@@ -33,9 +33,9 @@ export default function ProgramsPage() {
           <div className="max-w-3xl">
             <div className="flex items-center gap-3">
               <span className="eyebrow">Programs</span></div>
-            <h1 className="mt-5 text-5xl font-semibold leading-[1.05] tracking-tight text-neutral-950 sm:text-6xl">
+            <h1 className="mt-5 text-5xl font-semibold leading-[1.05] tracking-tight text-charcoal sm:text-6xl">
               Coaching programs for{" "}
-              <span className="text-neutral-950">every class</span>, from
+              <span className="text-charcoal">every class</span>, from
               Grade 1 to Grade 12
             </h1>
             <p className="mt-6 text-base leading-relaxed text-body sm:text-lg">
@@ -57,13 +57,13 @@ export default function ProgramsPage() {
                 className="grid scroll-mt-24 items-start gap-10 lg:grid-cols-[0.4fr_0.6fr]"
               >
                 <div>
-                  <p className="text-[11px] uppercase tracking-widest text-neutral-950">
+                  <p className="text-[11px] uppercase tracking-widest text-charcoal">
                     {`Program 0${i + 1}`}
                   </p>
                   <p className="mt-2 text-sm font-semibold uppercase tracking-wider text-muted">
                     {p.grades}
                   </p>
-                  <h2 className="mt-2 text-3xl font-semibold leading-tight text-neutral-950 sm:text-4xl">
+                  <h2 className="mt-2 text-3xl font-semibold leading-tight text-charcoal sm:text-4xl">
                     {p.label}
                   </h2>
                   <p className="mt-4 text-sm leading-relaxed text-body">
@@ -71,23 +71,23 @@ export default function ProgramsPage() {
                   </p>
                   <div className="mt-6 space-y-3 text-sm text-body">
                     <div className="flex items-start gap-3">
-                      <BookOpen className="mt-0.5 h-4 w-4 shrink-0 text-neutral-950" />
+                      <BookOpen className="mt-0.5 h-4 w-4 shrink-0 text-charcoal" />
                       <span>
-                        <strong className="text-neutral-950">Subjects:</strong>{" "}
+                        <strong className="text-charcoal">Subjects:</strong>{" "}
                         {p.subjects.join(", ")}
                       </span>
                     </div>
                     <div className="flex items-start gap-3">
-                      <Calendar className="mt-0.5 h-4 w-4 shrink-0 text-neutral-950" />
+                      <Calendar className="mt-0.5 h-4 w-4 shrink-0 text-charcoal" />
                       <span>
-                        <strong className="text-neutral-950">Schedule:</strong>{" "}
+                        <strong className="text-charcoal">Schedule:</strong>{" "}
                         {p.schedule}
                       </span>
                     </div>
                     <div className="flex items-start gap-3">
-                      <IndianRupee className="mt-0.5 h-4 w-4 shrink-0 text-neutral-950" />
+                      <IndianRupee className="mt-0.5 h-4 w-4 shrink-0 text-charcoal" />
                       <span>
-                        <strong className="text-neutral-950">Fee:</strong>{" "}
+                        <strong className="text-charcoal">Fee:</strong>{" "}
                         {p.feeRange}
                       </span>
                     </div>
@@ -109,12 +109,12 @@ export default function ProgramsPage() {
                   </div>
                 </div>
                 <ul className="rounded border border-neutral-200 bg-white p-7 space-y-4">
-                  <p className="text-base font-semibold text-neutral-950">
+                  <p className="text-base font-semibold text-charcoal">
                     What this program includes
                   </p>
                   {p.highlights.map((h) => (
                     <li key={h} className="flex items-start gap-3 text-sm text-body">
-                      <CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0 text-neutral-950" />
+                      <CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0 text-charcoal" />
                       {h}
                     </li>
                   ))}
@@ -127,10 +127,10 @@ export default function ProgramsPage() {
               className="grid scroll-mt-24 items-start gap-10 rounded border-2 border-neutral-400 bg-white p-8 lg:grid-cols-[0.4fr_0.6fr] sm:p-10"
             >
               <div>
-                <p className="text-[11px] uppercase tracking-widest text-neutral-950">
+                <p className="text-[11px] uppercase tracking-widest text-charcoal">
                   Special Program
                 </p>
-                <h2 className="mt-2 text-3xl font-semibold leading-tight text-neutral-950 sm:text-4xl">
+                <h2 className="mt-2 text-3xl font-semibold leading-tight text-charcoal sm:text-4xl">
                   Crash Courses
                 </h2>
                 <p className="mt-2 text-sm font-semibold uppercase tracking-wider text-muted">
@@ -163,7 +163,7 @@ export default function ProgramsPage() {
                   "One-on-one diagnostic test at the start",
                 ].map((h) => (
                   <li key={h} className="flex items-start gap-3 text-sm text-body">
-                    <CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0 text-neutral-950" />
+                    <CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0 text-charcoal" />
                     {h}
                   </li>
                 ))}

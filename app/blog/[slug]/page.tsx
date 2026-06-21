@@ -97,10 +97,10 @@ export default async function BlogPostPage({
               All posts
             </Link>
             <div className="mt-6 flex items-center gap-3">
-              <span className="text-[11px] uppercase tracking-widest text-neutral-950">
+              <span className="text-[11px] uppercase tracking-widest text-charcoal">
                 {post.category}
               </span></div>
-            <h1 className="mt-4 max-w-4xl text-4xl font-semibold leading-tight text-neutral-950 sm:text-5xl lg:text-6xl">
+            <h1 className="mt-4 max-w-4xl text-4xl font-semibold leading-tight text-charcoal sm:text-5xl lg:text-6xl">
               {post.title}
             </h1>
             <div className="mt-6 flex flex-wrap items-center gap-4 text-xs uppercase tracking-wider text-muted">
@@ -142,7 +142,7 @@ export default async function BlogPostPage({
 
       <section className="border-t border-neutral-200 bg-white py-16 sm:py-20">
         <Container>
-          <h2 className="text-2xl font-semibold text-neutral-950 sm:text-3xl">
+          <h2 className="text-2xl font-semibold text-charcoal sm:text-3xl">
             Keep reading
           </h2>
           <div className="mt-8 grid gap-6 sm:grid-cols-2">
@@ -162,13 +162,13 @@ export default async function BlogPostPage({
                   />
                 </div>
                 <div>
-                  <p className="text-[10px] uppercase tracking-widest text-neutral-950">
+                  <p className="text-[10px] uppercase tracking-widest text-charcoal">
                     {p.category}
                   </p>
-                  <h3 className="mt-1 text-base font-semibold leading-snug text-neutral-950 group-hover:text-teal-700 sm:text-lg">
+                  <h3 className="mt-1 text-base font-semibold leading-snug text-charcoal group-hover:text-teal-700 sm:text-lg">
                     {p.title}
                   </h3>
-                  <span className="mt-2 inline-flex items-center gap-1 text-xs font-semibold text-neutral-950">
+                  <span className="mt-2 inline-flex items-center gap-1 text-xs font-semibold text-charcoal">
                     Read
                     <ArrowRight className="h-3.5 w-3.5" />
                   </span>

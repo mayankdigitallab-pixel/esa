@@ -23,8 +23,8 @@ export function EnquiryForm() {
   if (sent) {
     return (
       <div className="mt-6 rounded border border-neutral-300 bg-neutral-50 p-6 text-center">
-        <CheckCircle2 className="mx-auto h-10 w-10 text-neutral-950" />
-        <p className="mt-3 text-lg font-semibold text-neutral-950">
+        <CheckCircle2 className="mx-auto h-10 w-10 text-charcoal" />
+        <p className="mt-3 text-lg font-semibold text-charcoal">
           Your enquiry is on its way
         </p>
         <p className="mt-1 text-sm text-body">
@@ -119,7 +119,7 @@ function Field({
     <label className="block">
       <span className="mb-1.5 block text-xs font-semibold uppercase tracking-wider text-muted">
         {label}
-        {required ? <span className="ml-1 text-neutral-950">*</span> : null}
+        {required ? <span className="ml-1 text-charcoal">*</span> : null}
       </span>
       {children}
     </label>
