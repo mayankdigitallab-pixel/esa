@@ -750,43 +750,41 @@ export default function HomePage() {
             </Link>
           </div>
 
-          <div className="mt-12">
-            <CardCarousel lgCards={3} mdCards={2} tone="light" ariaLabel="Student results carousel">
-              {toppers.map((t) => (
-                <article
-                  key={t.name}
-                  className="group flex h-full flex-col overflow-hidden rounded-2xl border border-neutral-200 bg-white transition hover:-translate-y-1 hover:shadow-xl"
-                >
-                  <div className="relative aspect-[4/5] overflow-hidden bg-neutral-100">
-                    <Image
-                      src={t.image}
-                      alt={`${t.name}, board topper at Excellent Students' Academy Rohini`}
-                      fill
-                      sizes="(max-width: 1024px) 86vw, 33vw"
-                      className="object-cover transition duration-500 group-hover:scale-[1.04]"
-                    />
-                    <div className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-charcoal/95 via-charcoal/40 to-transparent" />
-                    <span className="absolute right-4 top-4 rounded-full bg-red-500 px-3 py-1.5 text-sm font-bold text-white shadow-lg">
-                      {t.marks}
-                    </span>
-                    <span className="absolute left-4 top-4 inline-flex rounded-full bg-white/95 px-3 py-1 text-[10px] font-bold uppercase tracking-wider text-teal-700 backdrop-blur">
-                      Board Topper
-                    </span>
-                    <div className="absolute inset-x-0 bottom-0 p-5">
-                      <h3 className="text-xl font-bold tracking-tight text-white">{t.name}</h3>
-                      <p className="mt-1 text-xs font-medium text-white/85">
-                        {t.grade}{t.stream ? ` · ${t.stream}` : ""}
-                      </p>
-                    </div>
+          <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+            {toppers.slice(0, 8).map((t) => (
+              <article
+                key={t.name}
+                className="group flex flex-col overflow-hidden rounded-2xl border border-neutral-200 bg-white transition hover:-translate-y-1 hover:shadow-xl"
+              >
+                <div className="relative aspect-[4/5] overflow-hidden bg-neutral-100">
+                  <Image
+                    src={t.image}
+                    alt={`${t.name}, board topper at Excellent Students' Academy Rohini`}
+                    fill
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                    className="object-cover transition duration-500 group-hover:scale-[1.04]"
+                  />
+                  <div className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-charcoal/95 via-charcoal/40 to-transparent" />
+                  <span className="absolute right-3 top-3 rounded-full bg-red-500 px-2.5 py-1 text-xs font-bold text-white shadow-lg">
+                    {t.marks}
+                  </span>
+                  <span className="absolute left-3 top-3 inline-flex rounded-full bg-white/95 px-2.5 py-0.5 text-[9px] font-bold uppercase tracking-[0.14em] text-teal-700 backdrop-blur">
+                    Board Topper
+                  </span>
+                  <div className="absolute inset-x-0 bottom-0 p-4">
+                    <h3 className="text-lg font-bold tracking-tight text-white">{t.name}</h3>
+                    <p className="mt-1 text-[11px] font-medium text-white/85">
+                      {t.grade}{t.stream ? ` · ${t.stream}` : ""}
+                    </p>
                   </div>
-                  {t.quote ? (
-                    <div className="flex-1 border-t border-neutral-200 bg-neutral-50 p-6">
-                      <p className="text-sm leading-relaxed text-charcoal">&ldquo;{t.quote}&rdquo;</p>
-                    </div>
-                  ) : null}
-                </article>
-              ))}
-            </CardCarousel>
+                </div>
+                {t.quote ? (
+                  <div className="flex-1 border-t border-neutral-200 bg-neutral-50 p-5">
+                    <p className="text-sm leading-relaxed text-charcoal">&ldquo;{t.quote}&rdquo;</p>
+                  </div>
+                ) : null}
+              </article>
+            ))}
           </div>
 
           <div className="mt-14 grid gap-px overflow-hidden rounded-2xl border border-neutral-200 bg-neutral-200 sm:grid-cols-4">
