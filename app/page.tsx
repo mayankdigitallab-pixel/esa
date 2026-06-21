@@ -67,7 +67,7 @@ export const metadata: Metadata = {
 };
 
 const trustPoints = [
-  { value: "9+", label: "Years coaching", icon: Award },
+  { value: "11", label: "Years coaching", icon: Award },
   { value: "500+", label: "Students mentored", icon: Users },
   { value: "84%", label: "Average board score", icon: ClipboardCheck },
   { value: "100%", label: "Pass percentage", icon: Sparkles },
@@ -520,7 +520,7 @@ export default function HomePage() {
               </div>
               <div className="mt-10 grid gap-4 border-t border-white/12 pt-7">
                 {[
-                  { v: "9+ yrs", l: "Trusted institute in Rohini" },
+                  { v: "11 yrs", l: "Trusted institute in Rohini" },
                   { v: "500+", l: "Students mentored to date" },
                 ].map((s, i) => (
                   <div key={s.l} className="flex items-center gap-4">
@@ -651,9 +651,9 @@ export default function HomePage() {
                   {/* Stats grid */}
                   <div className="mt-8 grid grid-cols-2 gap-x-6 gap-y-5 border-t border-neutral-200 pt-7 sm:grid-cols-4">
                     {[
-                      { v: "9+", l: "Years teaching", c: "teal" },
+                      { v: "11", l: "Years teaching", c: "teal" },
                       { v: "500+", l: "Students mentored", c: "red" },
-                      { v: "2", l: "Subjects taught", c: "teal" },
+                      { v: "Math", l: "Class 11-12", c: "teal" },
                       { v: "B.Tech", l: "Engineering grad", c: "red" },
                     ].map((s) => (
                       <div key={s.l}>
