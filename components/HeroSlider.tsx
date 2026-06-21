@@ -5,8 +5,6 @@ import Image from "next/image";
 import Link from "next/link";
 import {
   ArrowRight,
-  ChevronLeft,
-  ChevronRight,
   Star,
   Phone,
   Calendar,
@@ -24,7 +22,6 @@ export function HeroSlider() {
     setIndex(((i % heroSlides.length) + heroSlides.length) % heroSlides.length);
   }, []);
   const next = useCallback(() => goTo(index + 1), [index, goTo]);
-  const prev = useCallback(() => goTo(index - 1), [index, goTo]);
 
   useEffect(() => {
     if (paused) return;
@@ -32,18 +29,16 @@ export function HeroSlider() {
     return () => clearTimeout(t);
   }, [index, paused, next]);
 
-  const slide = heroSlides[index];
-
   return (
     <section
       className="esa-hero relative isolate overflow-hidden bg-charcoal text-white"
       onMouseEnter={() => setPaused(true)}
       onMouseLeave={() => setPaused(false)}
-      style={{ minHeight: 680 }}
+      style={{ minHeight: 720 }}
     >
       <style
         dangerouslySetInnerHTML={{
-          __html: `.esa-hero-grid{display:grid;grid-template-columns:1fr;}.esa-hero-left{padding:48px 24px;}@media(min-width:1024px){.esa-hero-grid{grid-template-columns:1fr 1px 400px;}.esa-hero-left{padding:96px 64px 120px 80px;}}`,
+          __html: `.esa-hero-grid{display:grid;grid-template-columns:1fr;min-height:720px;}.esa-hero-left{padding:80px 24px 120px;display:flex;flex-direction:column;justify-content:center;}.esa-hero-right{padding:0 24px 80px;}@media(min-width:1024px){.esa-hero-grid{grid-template-columns:1fr 1px 380px;}.esa-hero-left{padding:96px 56px 120px 80px;justify-content:center;}.esa-hero-right{padding:96px 80px 96px 56px;display:flex;flex-direction:column;justify-content:center;}}`,
         }}
       />
 
@@ -70,17 +65,17 @@ export function HeroSlider() {
         ))}
       </div>
 
-      <div className="esa-hero-grid relative z-10 items-center" style={{ minHeight: 680 }}>
+      <div className="esa-hero-grid relative z-10">
         {/* LEFT */}
         <div className="esa-hero-left relative">
-          <div className="relative" style={{ minHeight: 360 }}>
+          <div className="relative">
             {heroSlides.map((s, i) => (
               <div
                 key={s.eyebrow + i}
-                className={`absolute inset-0 flex flex-col justify-center transition-all duration-700 ease-out ${
+                className={`transition-all duration-700 ease-out ${
                   i === index
-                    ? "translate-y-0 opacity-100"
-                    : "pointer-events-none translate-y-3 opacity-0"
+                    ? "relative translate-y-0 opacity-100"
+                    : "pointer-events-none absolute inset-0 translate-y-3 opacity-0"
                 }`}
                 aria-hidden={i !== index}
               >
@@ -93,9 +88,9 @@ export function HeroSlider() {
                 <h1
                   className="mt-7 m-0"
                   style={{
-                    fontSize: "clamp(2.8rem, 7vw, 6.5rem)",
+                    fontSize: "clamp(2.8rem, 7.5vw, 7rem)",
                     fontWeight: 600,
-                    lineHeight: 0.98,
+                    lineHeight: 0.96,
                     letterSpacing: "-0.03em",
                     color: "#F5F1E8",
                   }}
@@ -130,47 +125,6 @@ export function HeroSlider() {
               </div>
             ))}
           </div>
-
-          {/* Controls row stays anchored bottom of left column on desktop */}
-          <div className="mt-10 flex items-center gap-5 lg:absolute lg:bottom-12 lg:left-20 lg:right-16 lg:mt-0">
-            <div className="flex items-center gap-1.5">
-              {heroSlides.map((_, i) => (
-                <button
-                  key={i}
-                  type="button"
-                  onClick={() => goTo(i)}
-                  aria-label={`Go to slide ${i + 1}`}
-                  aria-current={i === index}
-                  className={`h-[3px] rounded-full transition-all ${
-                    i === index
-                      ? "w-9 bg-red-500"
-                      : "w-4 bg-white/30 hover:bg-white/60"
-                  }`}
-                />
-              ))}
-            </div>
-            <span className="text-[11px] font-semibold tracking-[0.22em] text-white/65">
-              {String(index + 1).padStart(2, "0")} / {String(heroSlides.length).padStart(2, "0")}
-            </span>
-            <div className="ml-auto flex items-center gap-2">
-              <button
-                type="button"
-                onClick={prev}
-                aria-label="Previous slide"
-                className="flex h-9 w-9 items-center justify-center rounded-full border border-white/20 text-white transition hover:bg-white/10"
-              >
-                <ChevronLeft className="h-4 w-4" />
-              </button>
-              <button
-                type="button"
-                onClick={next}
-                aria-label="Next slide"
-                className="flex h-9 w-9 items-center justify-center rounded-full border border-white/20 text-white transition hover:bg-white/10"
-              >
-                <ChevronRight className="h-4 w-4" />
-              </button>
-            </div>
-          </div>
         </div>
 
         {/* VERTICAL DIVIDER */}
@@ -180,32 +134,55 @@ export function HeroSlider() {
           aria-hidden
         />
 
-        {/* RIGHT - MDL-style hairline rows, no card bg */}
-        <aside className="hidden lg:block" style={{ padding: "96px 80px 120px 56px" }}>
-          <Row
-            icon={<Star size={15} className="fill-current" />}
-            label="CLIENT RATING"
-            value={<>{slide.accentColor ? "4.9 / 5 · 300+ parents trust ESA" : "—"}</>}
-          />
-          <Divider />
-          <Row
-            icon={<Phone size={15} />}
-            label="CALL US"
-            value={siteConfig.phoneDisplay}
-            href={`tel:${siteConfig.phone}`}
-          />
-          <Divider />
-          <Row
-            icon={<Calendar size={15} />}
-            label="FREE DEMO CLASS"
-            value={
-              <span className="inline-flex items-center gap-1">
-                Book a 7-day demo <span aria-hidden>→</span>
-              </span>
-            }
-            href="/contact#enquiry"
-          />
+        {/* RIGHT - MDL-style hairline rows */}
+        <aside className="esa-hero-right hidden lg:flex">
+          <div>
+            <Row
+              icon={<Star size={15} className="fill-current" />}
+              label="CLIENT RATING"
+              value="4.9 / 5 · 300+ parents trust ESA"
+            />
+            <Divider />
+            <Row
+              icon={<Phone size={15} />}
+              label="CALL US"
+              value={siteConfig.phoneDisplay}
+              href={`tel:${siteConfig.phone}`}
+            />
+            <Divider />
+            <Row
+              icon={<Calendar size={15} />}
+              label="FREE DEMO CLASS"
+              value={
+                <span className="inline-flex items-center gap-1">
+                  Book a 7-day demo <span aria-hidden>→</span>
+                </span>
+              }
+              href="/contact#enquiry"
+            />
+          </div>
         </aside>
+      </div>
+
+      {/* Pagination dots - bottom-left of the entire section, MDL-style */}
+      <div className="absolute bottom-7 left-6 z-20 flex items-center gap-4 sm:left-10 lg:left-20">
+        <div className="flex items-center gap-1.5">
+          {heroSlides.map((_, i) => (
+            <button
+              key={i}
+              type="button"
+              onClick={() => goTo(i)}
+              aria-label={`Go to slide ${i + 1}`}
+              aria-current={i === index}
+              className={`h-[3px] rounded-full transition-all ${
+                i === index ? "w-10 bg-red-500" : "w-4 bg-white/35 hover:bg-white/65"
+              }`}
+            />
+          ))}
+        </div>
+        <span className="text-[11px] font-semibold tracking-[0.22em] text-white/65">
+          {String(index + 1).padStart(2, "0")} / {String(heroSlides.length).padStart(2, "0")}
+        </span>
       </div>
     </section>
   );
@@ -223,7 +200,7 @@ function Row({
   href?: string;
 }) {
   const inner = (
-    <div className="flex items-center gap-4">
+    <div className="flex items-start gap-4">
       <span
         className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full text-teal-400"
         style={{ border: "1px solid rgba(255,255,255,0.22)" }}
@@ -237,7 +214,7 @@ function Row({
         >
           {label}
         </p>
-        <p className="mt-1 text-sm font-semibold text-white">{value}</p>
+        <p className="mt-1.5 text-[15px] font-semibold leading-snug text-white">{value}</p>
       </div>
     </div>
   );
