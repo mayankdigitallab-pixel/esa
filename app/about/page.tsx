@@ -90,17 +90,15 @@ const timeline = [
 export default function AboutPage() {
   return (
     <div>
-      <section className="relative overflow-hidden bg-cream-50 py-16 sm:py-20">
-        <div className="pointer-events-none absolute -right-32 top-10 h-96 w-96 rounded-full bg-gold-100/60 blur-3xl" />
+      <section className="relative overflow-hidden bg-white py-16 sm:py-20">
+        <div className="hidden" />
         <Container className="relative">
           <div className="max-w-3xl">
             <div className="flex items-center gap-3">
-              <span className="eyebrow">About ESA</span>
-              <span className="gold-divider" />
-            </div>
-            <h1 className="mt-5 font-serif text-5xl font-semibold leading-[1.05] tracking-tight text-navy-900 sm:text-6xl">
+              <span className="eyebrow">About ESA</span></div>
+            <h1 className="mt-5 text-5xl font-semibold leading-[1.05] tracking-tight text-neutral-950 sm:text-6xl">
               Nine years of patient,{" "}
-              <span className="text-gold-600 italic">disciplined</span> coaching
+              <span className="text-neutral-950">disciplined</span> coaching
               in Rohini
             </h1>
             <p className="mt-6 text-base leading-relaxed text-body sm:text-lg">
@@ -113,7 +111,7 @@ export default function AboutPage() {
         </Container>
       </section>
 
-      <section className="border-y border-cream-200 bg-white py-20 sm:py-24">
+      <section className="border-y border-neutral-200 bg-white py-20 sm:py-24">
         <Container>
           <div className="grid items-start gap-12 lg:grid-cols-[1.1fr_0.9fr]">
             <div>
@@ -122,7 +120,7 @@ export default function AboutPage() {
                 title={
                   <>
                     Built one batch at a time,{" "}
-                    <span className="italic text-gold-600">in Rohini</span>
+                    <span className="text-neutral-950">in Rohini</span>
                   </>
                 }
                 description="ESA was started by Chandan Prajapati, an engineer who realised teaching was his real calling. The first batch had three students from Rohini Sector 7. Word of mouth among parents grew the institute from there."
@@ -149,7 +147,7 @@ export default function AboutPage() {
               </div>
             </div>
             <div className="relative">
-              <div className="absolute -right-6 -top-6 h-24 w-24 rounded border-2 border-gold-400" />
+              <div className="absolute -right-6 -top-6 h-24 w-24 rounded border-2 border-neutral-400" />
               <div className="relative aspect-[4/5] overflow-hidden rounded shadow-2xl">
                 <Image
                   src="https://images.unsplash.com/photo-1577896851231-70ef18881754?auto=format&fit=crop&w=900&q=80"
@@ -164,14 +162,14 @@ export default function AboutPage() {
         </Container>
       </section>
 
-      <section className="bg-cream-50 py-20 sm:py-28">
+      <section className="bg-white py-20 sm:py-28">
         <Container>
           <SectionHeading
             eyebrow="What we stand for"
             title={
               <>
                 Four values that shape{" "}
-                <span className="italic text-gold-600">every batch</span>
+                <span className="text-neutral-950">every batch</span>
               </>
             }
             description="If you sit in any ESA classroom, you will see these four things in action. They are not aspirational. They are operational."
@@ -180,12 +178,12 @@ export default function AboutPage() {
             {values.map(({ icon: Icon, title, description }) => (
               <div
                 key={title}
-                className="rounded border border-cream-200 bg-white p-7 transition hover:-translate-y-1 hover:border-gold-400 hover:shadow-lg"
+                className="rounded border border-neutral-200 bg-white p-7 transition hover:-translate-y-1 hover:border-neutral-400 hover:shadow-lg"
               >
-                <span className="inline-flex h-11 w-11 items-center justify-center rounded bg-gold-50 text-gold-700">
+                <span className="inline-flex h-11 w-11 items-center justify-center rounded bg-neutral-50 text-neutral-950">
                   <Icon className="h-5 w-5" strokeWidth={1.75} />
                 </span>
-                <h3 className="mt-4 font-serif text-xl font-semibold text-navy-900">
+                <h3 className="mt-4 text-xl font-semibold text-neutral-950">
                   {title}
                 </h3>
                 <p className="mt-2 text-sm leading-relaxed text-body">
@@ -197,25 +195,25 @@ export default function AboutPage() {
         </Container>
       </section>
 
-      <section className="border-y border-cream-200 bg-white py-20 sm:py-28">
+      <section className="border-y border-neutral-200 bg-white py-20 sm:py-28">
         <Container>
           <SectionHeading
             eyebrow="The Journey"
             title={
               <>
                 Nine years,{" "}
-                <span className="italic text-gold-600">one neighbourhood</span>
+                <span className="text-neutral-950">one neighbourhood</span>
               </>
             }
             description="A short timeline of how Excellent Students' Academy grew from one room to the institute it is today."
           />
-          <ol className="relative space-y-10 border-l-2 border-gold-200 pl-8">
+          <ol className="relative space-y-10 border-l-2 border-neutral-200 pl-8">
             {timeline.map((t) => (
               <li key={t.year} className="relative">
-                <span className="absolute -left-[42px] flex h-12 w-12 items-center justify-center rounded-full border-2 border-gold-400 bg-cream-50 font-mono text-xs font-semibold text-gold-700">
+                <span className="absolute -left-[42px] flex h-12 w-12 items-center justify-center rounded-full border-2 border-neutral-400 bg-white text-xs font-semibold text-neutral-950">
                   {t.year}
                 </span>
-                <h3 className="font-serif text-xl font-semibold text-navy-900">
+                <h3 className="text-xl font-semibold text-neutral-950">
                   {t.title}
                 </h3>
                 <p className="mt-2 text-sm leading-relaxed text-body">
@@ -227,28 +225,28 @@ export default function AboutPage() {
         </Container>
       </section>
 
-      <section className="relative overflow-hidden bg-navy-900 py-20 text-white sm:py-24">
+      <section className="relative overflow-hidden bg-neutral-950 py-20 text-white sm:py-24">
         <Container className="relative">
           <div className="grid items-center gap-10 lg:grid-cols-[1.2fr_0.8fr]">
             <div>
               <div className="flex items-center gap-3">
-                <span className="font-mono text-[11px] uppercase tracking-[0.22em] text-gold-400">
+                <span className="text-[11px] uppercase tracking-[0.22em] text-neutral-400">
                   Visit ESA
                 </span>
-                <span className="h-px w-12 bg-gold-400" />
+                <span className="h-px w-12 bg-neutral-400" />
               </div>
-              <h2 className="mt-5 font-serif text-4xl font-semibold leading-tight sm:text-5xl">
+              <h2 className="mt-5 text-4xl font-semibold leading-tight sm:text-5xl">
                 Come see a class in action.{" "}
-                <span className="italic text-gold-400">First one is free.</span>
+                <span className="text-neutral-400">First one is free.</span>
               </h2>
-              <p className="mt-5 max-w-2xl text-base leading-relaxed text-navy-100">
+              <p className="mt-5 max-w-2xl text-base leading-relaxed text-neutral-200">
                 Whether you are looking for primary tuition or board prep
                 coaching, the easiest way to judge ESA is to come watch a real
                 batch. Book a free demo via WhatsApp or fill our short enquiry
                 form.
               </p>
               <div className="mt-8 flex flex-wrap gap-3">
-                <Link href="/contact#enquiry" className="btn-gold">
+                <Link href="/contact#enquiry" className="btn-primary">
                   Book Free Demo
                   <ArrowRight className="h-4 w-4" />
                 </Link>
@@ -269,13 +267,13 @@ export default function AboutPage() {
               ].map((s) => (
                 <div
                   key={s.label}
-                  className="rounded border border-navy-700/60 bg-white/[0.04] p-5 backdrop-blur-sm"
+                  className="rounded border border-neutral-800/60 bg-white/[0.04] p-5 backdrop-blur-sm"
                 >
-                  <s.icon className="h-5 w-5 text-gold-400" />
-                  <p className="mt-3 font-serif text-3xl font-semibold">
+                  <s.icon className="h-5 w-5 text-neutral-400" />
+                  <p className="mt-3 text-3xl font-semibold">
                     {s.value}
                   </p>
-                  <p className="mt-1 text-xs uppercase tracking-wider text-navy-200">
+                  <p className="mt-1 text-xs uppercase tracking-wider text-neutral-300">
                     {s.label}
                   </p>
                 </div>

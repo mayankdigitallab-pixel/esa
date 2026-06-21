@@ -28,16 +28,14 @@ export default function BlogIndexPage() {
   const [featured, ...rest] = sorted;
   return (
     <div>
-      <section className="bg-cream-50 py-16 sm:py-20">
+      <section className="bg-white py-16 sm:py-20">
         <Container>
           <div className="max-w-3xl">
             <div className="flex items-center gap-3">
-              <span className="eyebrow">Blog</span>
-              <span className="gold-divider" />
-            </div>
-            <h1 className="mt-5 font-serif text-5xl font-semibold leading-[1.05] tracking-tight text-navy-900 sm:text-6xl">
+              <span className="eyebrow">Blog</span></div>
+            <h1 className="mt-5 text-5xl font-semibold leading-[1.05] tracking-tight text-neutral-950 sm:text-6xl">
               Stories, strategies and{" "}
-              <span className="text-gold-600 italic">topper journeys</span>
+              <span className="text-neutral-950">topper journeys</span>
             </h1>
             <p className="mt-6 text-base leading-relaxed text-body sm:text-lg">
               Practical guides for parents, exam strategies for students and
@@ -48,11 +46,11 @@ export default function BlogIndexPage() {
       </section>
 
       {featured ? (
-        <section className="border-t border-cream-200 bg-white py-16 sm:py-20">
+        <section className="border-t border-neutral-200 bg-white py-16 sm:py-20">
           <Container>
             <Link
               href={`/blog/${featured.slug}`}
-              className="group grid items-center gap-8 rounded border border-cream-200 bg-cream-50 p-6 transition hover:border-gold-400 hover:shadow-xl sm:p-8 lg:grid-cols-[0.9fr_1.1fr]"
+              className="group grid items-center gap-8 rounded border border-neutral-200 bg-white p-6 transition hover:border-neutral-400 hover:shadow-xl sm:p-8 lg:grid-cols-[0.9fr_1.1fr]"
             >
               <div className="relative aspect-[4/3] overflow-hidden rounded sm:aspect-[5/4]">
                 <Image
@@ -65,10 +63,10 @@ export default function BlogIndexPage() {
                 />
               </div>
               <div>
-                <span className="font-mono text-[11px] uppercase tracking-widest text-gold-700">
+                <span className="text-[11px] uppercase tracking-widest text-neutral-950">
                   {featured.category}
                 </span>
-                <h2 className="mt-3 font-serif text-3xl font-semibold leading-tight text-navy-900 sm:text-4xl">
+                <h2 className="mt-3 text-3xl font-semibold leading-tight text-neutral-950 sm:text-4xl">
                   {featured.title}
                 </h2>
                 <p className="mt-4 text-sm leading-relaxed text-body sm:text-base">
@@ -88,7 +86,7 @@ export default function BlogIndexPage() {
                     {featured.readTime}
                   </span>
                 </div>
-                <span className="mt-6 inline-flex items-center gap-1.5 text-sm font-semibold text-gold-700 transition group-hover:text-gold-800">
+                <span className="mt-6 inline-flex items-center gap-1.5 text-sm font-semibold text-neutral-950 transition group-hover:text-neutral-950">
                   Read full story
                   <ArrowRight className="h-4 w-4" />
                 </span>
@@ -98,7 +96,7 @@ export default function BlogIndexPage() {
         </section>
       ) : null}
 
-      <section className="bg-cream-50 py-16 sm:py-20">
+      <section className="bg-white py-16 sm:py-20">
         <Container>
           <SectionHeading
             eyebrow="More from the blog"
@@ -109,7 +107,7 @@ export default function BlogIndexPage() {
               <Link
                 key={p.slug}
                 href={`/blog/${p.slug}`}
-                className="group overflow-hidden rounded border border-cream-200 bg-white transition hover:-translate-y-1 hover:shadow-lg"
+                className="group overflow-hidden rounded border border-neutral-200 bg-white transition hover:-translate-y-1 hover:shadow-lg"
               >
                 <div className="relative aspect-[4/3] overflow-hidden">
                   <Image
@@ -121,10 +119,10 @@ export default function BlogIndexPage() {
                   />
                 </div>
                 <div className="p-6">
-                  <p className="font-mono text-[10px] uppercase tracking-widest text-gold-700">
+                  <p className="text-[10px] uppercase tracking-widest text-neutral-950">
                     {p.category}
                   </p>
-                  <h3 className="mt-2 font-serif text-lg font-semibold leading-snug text-navy-900 group-hover:text-gold-700 sm:text-xl">
+                  <h3 className="mt-2 text-lg font-semibold leading-snug text-neutral-950 group-hover:text-neutral-950 sm:text-xl">
                     {p.title}
                   </h3>
                   <p className="mt-3 text-sm leading-relaxed text-body line-clamp-3">

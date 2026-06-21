@@ -3,22 +3,13 @@ import Image from "next/image";
 import Link from "next/link";
 import {
   ArrowRight,
+  ArrowUpRight,
   Star,
-  Award,
-  BookOpen,
-  ClipboardCheck,
-  Snowflake,
-  FileText,
-  Users,
-  Sparkles,
-  Calendar,
-  Quote,
   CheckCircle2,
   MapPin,
   Phone,
   Mail,
-  Clock,
-  ChevronRight,
+  Plus,
 } from "lucide-react";
 import { Container } from "@/components/ui/Container";
 import { SectionHeading } from "@/components/ui/SectionHeading";
@@ -63,88 +54,28 @@ export const metadata: Metadata = {
 };
 
 const trustPoints = [
-  { value: "9+", label: "Years of coaching", icon: Award },
-  { value: "500+", label: "Students mentored", icon: Users },
-  { value: "84%", label: "Average board score", icon: ClipboardCheck },
-  { value: "100%", label: "Pass percentage", icon: Sparkles },
+  { value: "9+", label: "Years coaching" },
+  { value: "500+", label: "Students mentored" },
+  { value: "84%", label: "Average board score" },
+  { value: "100%", label: "Pass percentage" },
 ];
 
 const facilities = [
-  {
-    icon: Snowflake,
-    title: "Fully AC premises",
-    description:
-      "Air-conditioned classrooms across two floors. Designed for focused, comfortable study sessions even in Delhi summers.",
-  },
-  {
-    icon: Users,
-    title: "Expert trained faculty",
-    description:
-      "All our mentors are postgraduates or B.Tech holders with 6+ years of coaching experience across CBSE and ICSE boards.",
-  },
-  {
-    icon: Calendar,
-    title: "7-day free demo",
-    description:
-      "Sit through real batches for up to a week before you decide. We earn your enrolment, we don't pressure it.",
-  },
-  {
-    icon: ClipboardCheck,
-    title: "Weekly tests",
-    description:
-      "Every Saturday is test day. Students get used to exam discipline early, so boards feel familiar by the time they arrive.",
-  },
-  {
-    icon: FileText,
-    title: "Faculty-prepared notes",
-    description:
-      "Concise chapter notes for Class 8 to 12, written by our own faculty after teaching the same syllabus for years.",
-  },
-  {
-    icon: Users,
-    title: "Monthly parent meetings",
-    description:
-      "We sit with parents every month to share progress, strengths and areas to work on. No surprises at result time.",
-  },
-  {
-    icon: BookOpen,
-    title: "Guest lectures",
-    description:
-      "Periodic sessions from senior educators and industry mentors on career guidance, stream selection and exam strategy.",
-  },
-  {
-    icon: Award,
-    title: "Nominal fee structure",
-    description:
-      "Our pricing is intentionally accessible. The same coaching quality you would pay double for at a chain institute.",
-  },
+  { title: "Fully AC premises", description: "Air-conditioned classrooms across two floors. Designed for focused, comfortable study sessions even in Delhi summers." },
+  { title: "Expert faculty", description: "All mentors are postgraduates or B.Tech holders with 6+ years of coaching experience across CBSE and ICSE boards." },
+  { title: "7-day free demo", description: "Sit through real batches for up to a week before you decide. We earn your enrolment, we don't pressure it." },
+  { title: "Weekly tests", description: "Every Saturday is test day. Students get used to exam discipline early, so boards feel familiar by the time they arrive." },
+  { title: "Faculty notes", description: "Concise chapter notes for Class 8 to 12, written by our own faculty after teaching the same syllabus for years." },
+  { title: "Monthly parent meetings", description: "We sit with parents every month to share progress, strengths and areas to work on. No surprises at result time." },
+  { title: "Guest lectures", description: "Periodic sessions from senior educators and industry mentors on career guidance, stream selection and exam strategy." },
+  { title: "Nominal fees", description: "Our pricing is intentionally accessible. The same coaching quality you would pay double for at a chain institute." },
 ];
 
 const processSteps = [
-  {
-    step: "01",
-    title: "Book a free demo",
-    description:
-      "Send a WhatsApp or fill our enquiry form. Pick a slot that works for your child's class and subject.",
-  },
-  {
-    step: "02",
-    title: "Attend 7 days of demo classes",
-    description:
-      "Sit through real batches. See the teaching method, meet faculty, talk to current students.",
-  },
-  {
-    step: "03",
-    title: "Enrol when you are convinced",
-    description:
-      "Pick the batch and subject combination. Pay the nominal monthly fee. Get a printed schedule and material list.",
-  },
-  {
-    step: "04",
-    title: "Weekly tests and monthly reviews",
-    description:
-      "Your child writes weekly tests. You get a monthly review meeting. Progress is tracked, not assumed.",
-  },
+  { step: "01", title: "Book a free demo", description: "Send a WhatsApp or fill our enquiry form. Pick a slot that works for your child's class and subject." },
+  { step: "02", title: "Attend 7 days of demo classes", description: "Sit through real batches. See the teaching method, meet faculty, talk to current students." },
+  { step: "03", title: "Enrol when convinced", description: "Pick the batch and subject combination. Pay the nominal monthly fee. Get a printed schedule and material list." },
+  { step: "04", title: "Weekly tests, monthly reviews", description: "Your child writes weekly tests. You get a monthly review meeting. Progress is tracked, not assumed." },
 ];
 
 const orgSchema = {
@@ -153,8 +84,7 @@ const orgSchema = {
   name: "Excellent Students' Academy",
   alternateName: ["ESA Rohini", "Excellent Students Academy"],
   url: "https://www.theesa.in",
-  description:
-    "Coaching institute in Rohini Sector 7, New Delhi for Class 1 to 12. Math, Science, Commerce. Serving Rohini, Pitampura, Shalimar Bagh, Model Town, Ashok Vihar.",
+  description: "Coaching institute in Rohini Sector 7, New Delhi for Class 1 to 12. Math, Science, Commerce. Serving Rohini, Pitampura, Shalimar Bagh, Model Town, Ashok Vihar.",
   email: siteConfig.email,
   telephone: siteConfig.phone,
   address: {
@@ -164,11 +94,7 @@ const orgSchema = {
     postalCode: siteConfig.address.pin,
     addressCountry: "IN",
   },
-  geo: {
-    "@type": "GeoCoordinates",
-    latitude: "28.7061354",
-    longitude: "77.1223773",
-  },
+  geo: { "@type": "GeoCoordinates", latitude: "28.7061354", longitude: "77.1223773" },
   areaServed: nearbyAreas.map((a) => a.name),
   openingHoursSpecification: {
     "@type": "OpeningHoursSpecification",
@@ -190,69 +116,47 @@ const faqSchema = {
 
 export default function HomePage() {
   return (
-    <div className="text-ink">
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(orgSchema) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
-      />
+    <div>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(orgSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
-      {/* ── HERO ── */}
-      <section className="relative overflow-hidden bg-cream-50">
-        <div className="pointer-events-none absolute -right-32 top-10 h-96 w-96 rounded-full bg-gold-100/60 blur-3xl" />
-        <div className="pointer-events-none absolute -left-20 bottom-0 h-80 w-80 rounded-full bg-navy-100/70 blur-3xl" />
-        <Container className="relative grid items-center gap-12 py-16 lg:grid-cols-[1.1fr_0.9fr] lg:py-24">
+      {/* HERO */}
+      <section className="border-b border-neutral-200 bg-white">
+        <Container className="grid items-center gap-16 py-20 lg:grid-cols-[1.1fr_0.9fr] lg:py-32">
           <div>
-            <div className="flex items-center gap-3">
-              <span className="eyebrow">Rohini Sector 7, New Delhi</span>
-              <span className="gold-divider" />
-            </div>
-            <h1 className="mt-5 font-serif text-5xl font-semibold leading-[1.05] tracking-tight text-navy-900 sm:text-6xl lg:text-7xl">
-              Best coaching in Rohini, where{" "}
-              <span className="text-gold-600 italic">ambition</span> meets discipline
+            <p className="eyebrow">Rohini Sector 7 · New Delhi</p>
+            <h1 className="mt-6 text-5xl font-semibold leading-[1.05] tracking-tight text-neutral-950 sm:text-6xl lg:text-7xl">
+              Coaching in Rohini where ambition meets discipline.
             </h1>
-            <p className="mt-6 max-w-xl text-base leading-relaxed text-body sm:text-lg">
-              For 9+ years, Excellent Students&apos; Academy has been the
-              trusted coaching institute for students from Class 1 to 12 across
-              Rohini, Pitampura, Shalimar Bagh and nearby Delhi areas. Expert
-              mentors, weekly tests, monthly parent meetings, nominal fees.
+            <p className="mt-7 max-w-xl text-base leading-relaxed text-neutral-600 sm:text-lg">
+              For 9+ years, Excellent Students&apos; Academy has been the trusted coaching institute for students from Class 1 to 12 across Rohini, Pitampura, Shalimar Bagh and nearby Delhi areas. Expert mentors, weekly tests, monthly parent meetings, nominal fees.
             </p>
-            <div className="mt-8 flex flex-wrap items-center gap-3">
+            <div className="mt-9 flex flex-wrap items-center gap-3">
               <Link href="/contact#enquiry" className="btn-primary">
-                Book Free Demo Class
+                Book free demo class
                 <ArrowRight className="h-4 w-4" />
               </Link>
               <Link href="/programs" className="btn-outline">
-                Explore Programs
+                Explore programs
               </Link>
             </div>
-            <div className="mt-10 grid max-w-md grid-cols-2 gap-6">
-              <div>
-                <p className="font-serif text-3xl font-semibold text-navy-900">
-                  9+
-                </p>
-                <p className="mt-1 text-xs uppercase tracking-wider text-muted">
-                  Years of coaching
-                </p>
+            <div className="mt-14 flex items-center gap-6 border-t border-neutral-200 pt-8 sm:gap-10">
+              <div className="flex items-center gap-1.5">
+                <div className="flex gap-0.5 text-neutral-950">
+                  {Array.from({ length: 5 }).map((_, i) => (
+                    <Star key={i} className="h-4 w-4 fill-current" />
+                  ))}
+                </div>
+                <span className="text-sm font-medium text-neutral-950">4.9</span>
+                <span className="text-sm text-neutral-500">/ 300+ reviews</span>
               </div>
-              <div>
-                <p className="font-serif text-3xl font-semibold text-navy-900">
-                  500+
-                </p>
-                <p className="mt-1 text-xs uppercase tracking-wider text-muted">
-                  Students mentored
-                </p>
-              </div>
+              <div className="h-8 w-px bg-neutral-200" />
+              <p className="text-sm text-neutral-600">Trusted by parents across North Delhi</p>
             </div>
           </div>
 
           <div className="relative">
-            <div className="absolute -left-6 -top-6 hidden h-32 w-32 rounded border-2 border-gold-400 sm:block" />
-            <div className="absolute -right-6 -bottom-6 hidden h-40 w-40 rounded bg-navy-900 sm:block" />
-            <div className="relative aspect-[4/5] overflow-hidden rounded shadow-2xl">
+            <div className="relative aspect-[4/5] overflow-hidden rounded-xl bg-neutral-100">
               <Image
                 src="https://images.unsplash.com/photo-1581726707445-75cbe4efc586?auto=format&fit=crop&w=900&q=80"
                 alt="Students studying at Excellent Students' Academy, the best coaching institute in Rohini Sector 7"
@@ -262,87 +166,46 @@ export default function HomePage() {
                 priority
               />
             </div>
-            <div className="absolute -left-6 bottom-12 w-56 rounded bg-white p-4 shadow-xl">
-              <div className="flex items-center gap-2">
-                <div className="flex gap-0.5 text-gold-500">
-                  {Array.from({ length: 5 }).map((_, i) => (
-                    <Star key={i} className="h-3.5 w-3.5 fill-current" />
-                  ))}
-                </div>
-                <span className="text-xs font-semibold text-navy-900">4.9</span>
-              </div>
-              <p className="mt-2 text-xs leading-snug text-body">
-                Rated by 300+ parents and students across Rohini, Pitampura
-                and Shalimar Bagh.
-              </p>
-            </div>
           </div>
         </Container>
       </section>
 
-      {/* ── TRUST STRIP ── */}
-      <section className="border-y border-cream-200 bg-white">
+      {/* TRUST STRIP */}
+      <section className="border-b border-neutral-200 bg-neutral-50">
         <Container>
-          <div className="grid grid-cols-2 gap-y-8 py-10 sm:grid-cols-4">
-            {trustPoints.map(({ icon: Icon, value, label }) => (
-              <div
-                key={label}
-                className="flex items-center gap-3 px-3 sm:justify-center"
-              >
-                <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded bg-gold-50 text-gold-700">
-                  <Icon className="h-5 w-5" strokeWidth={1.75} />
-                </span>
-                <div>
-                  <p className="font-serif text-2xl font-semibold text-navy-900">
-                    {value}
-                  </p>
-                  <p className="text-xs uppercase tracking-wider text-muted">
-                    {label}
-                  </p>
-                </div>
+          <div className="grid grid-cols-2 divide-x divide-neutral-200 sm:grid-cols-4">
+            {trustPoints.map(({ value, label }) => (
+              <div key={label} className="px-6 py-10 sm:px-8">
+                <p className="text-3xl font-semibold tracking-tight text-neutral-950 sm:text-4xl">{value}</p>
+                <p className="mt-2 text-xs uppercase tracking-wider text-neutral-500">{label}</p>
               </div>
             ))}
           </div>
         </Container>
       </section>
 
-      {/* ── PROGRAMS ── */}
-      <section className="bg-cream-50 py-20 sm:py-28">
+      {/* PROGRAMS */}
+      <section className="border-b border-neutral-200 bg-white py-24 sm:py-32">
         <Container>
           <SectionHeading
-            eyebrow="Our Programs"
-            title={
-              <>
-                Coaching for every{" "}
-                <span className="italic text-gold-600">stage</span> of school
-              </>
-            }
+            eyebrow="Programs"
+            title="Coaching for every stage of school."
             description="From foundation classes for young learners to board prep for Class 12 stream students, every batch is built around weekly tests and chapter-wise mastery."
           />
-          <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-4">
+          <div className="grid gap-px overflow-hidden rounded-xl border border-neutral-200 bg-neutral-200 md:grid-cols-2 xl:grid-cols-4">
             {programs.map((p) => (
-              <article
-                key={p.slug}
-                className="group relative flex flex-col rounded border border-cream-200 bg-white p-7 transition hover:-translate-y-1 hover:border-gold-400 hover:shadow-xl"
-              >
-                <span className="absolute right-7 top-7 font-mono text-[10px] uppercase tracking-widest text-gold-700">
-                  {p.label}
-                </span>
-                <p className="text-xs font-semibold uppercase tracking-wider text-muted">
-                  {p.grades}
-                </p>
-                <h3 className="mt-2 font-serif text-2xl font-semibold leading-snug text-navy-900">
+              <article key={p.slug} className="group flex flex-col bg-white p-8 transition hover:bg-neutral-50">
+                <p className="text-xs uppercase tracking-wider text-neutral-500">{p.grades}</p>
+                <h3 className="mt-3 text-xl font-semibold tracking-tight text-neutral-950">
                   {p.label} Program
                 </h3>
-                <p className="mt-3 flex-1 text-sm leading-relaxed text-body">
-                  {p.description}
-                </p>
+                <p className="mt-3 flex-1 text-sm leading-relaxed text-neutral-600">{p.description}</p>
                 <Link
                   href={`/programs#${p.slug}`}
-                  className="mt-5 inline-flex items-center gap-1 text-sm font-semibold text-gold-700 transition group-hover:text-gold-800"
+                  className="mt-6 inline-flex items-center gap-1 text-sm font-medium text-neutral-950"
                 >
                   See details
-                  <ChevronRight className="h-4 w-4 transition group-hover:translate-x-0.5" />
+                  <ArrowUpRight className="h-4 w-4 transition group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
                 </Link>
               </article>
             ))}
@@ -350,129 +213,82 @@ export default function HomePage() {
         </Container>
       </section>
 
-      {/* ── SUBJECTS ── */}
-      <section className="border-y border-cream-200 bg-white py-20 sm:py-24">
+      {/* SUBJECTS */}
+      <section className="border-b border-neutral-200 bg-neutral-50 py-24 sm:py-32">
         <Container>
           <SectionHeading
-            eyebrow="Subjects we cover"
-            title={
-              <>
-                Every core school subject,{" "}
-                <span className="italic text-gold-600">expertly taught</span>
-              </>
-            }
+            eyebrow="Subjects"
+            title="Every core school subject, expertly taught."
             description="Choose any combination. Most students enrol for 3 to 5 subjects per term. Stream-specific combinations available for Class 11 and 12."
           />
           <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
             {subjects.map((s) => (
               <div
                 key={s.name}
-                className="flex items-center justify-between rounded border border-cream-200 bg-cream-50 px-5 py-4 transition hover:border-gold-400 hover:bg-white"
+                className="flex items-center justify-between rounded-md border border-neutral-200 bg-white px-5 py-4 transition hover:border-neutral-950"
               >
-                <div className="flex items-center gap-3">
-                  <span className="flex h-2.5 w-2.5 rounded-full bg-gold-500" />
-                  <span className="font-medium text-navy-900">{s.name}</span>
-                </div>
-                <span className="text-xs uppercase tracking-wider text-muted">
-                  {s.grades}
-                </span>
+                <span className="text-sm font-medium text-neutral-950">{s.name}</span>
+                <span className="text-xs uppercase tracking-wider text-neutral-500">{s.grades}</span>
               </div>
             ))}
           </div>
         </Container>
       </section>
 
-      {/* ── WHY ESA ── */}
-      <section className="relative overflow-hidden bg-navy-900 py-20 text-white sm:py-28">
-        <div className="pointer-events-none absolute -right-40 top-1/4 h-80 w-80 rounded-full bg-gold-500/10 blur-3xl" />
-        <div className="pointer-events-none absolute -left-32 bottom-0 h-80 w-80 rounded-full bg-navy-500/30 blur-3xl" />
-        <Container className="relative">
+      {/* WHY ESA */}
+      <section className="border-b border-neutral-200 bg-neutral-950 py-24 text-white sm:py-32">
+        <Container>
           <SectionHeading
             eyebrow="Why ESA"
-            title={
-              <>
-                What you get when you{" "}
-                <span className="italic text-gold-400">enrol with us</span>
-              </>
-            }
-            description="The little things parents notice and remember. Eight commitments we make to every student walking through our door."
+            title="What you get when you enrol with us."
+            description="Eight commitments we make to every student walking through our door."
             dark
           />
-          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
-            {facilities.map(({ icon: Icon, title, description }) => (
-              <div
-                key={title}
-                className="group rounded border border-navy-700/50 bg-white/[0.04] p-6 backdrop-blur-sm transition hover:border-gold-500/60 hover:bg-white/[0.06]"
-              >
-                <span className="inline-flex h-11 w-11 items-center justify-center rounded bg-gold-500/15 text-gold-300 transition group-hover:bg-gold-500 group-hover:text-navy-900">
-                  <Icon className="h-5 w-5" strokeWidth={1.75} />
-                </span>
-                <h3 className="mt-4 font-serif text-lg font-semibold text-white">
-                  {title}
-                </h3>
-                <p className="mt-2 text-sm leading-relaxed text-navy-200">
-                  {description}
-                </p>
+          <div className="grid gap-px overflow-hidden rounded-xl bg-neutral-800 md:grid-cols-2 lg:grid-cols-4">
+            {facilities.map(({ title, description }) => (
+              <div key={title} className="bg-neutral-950 p-7">
+                <h3 className="text-base font-semibold tracking-tight text-white">{title}</h3>
+                <p className="mt-3 text-sm leading-relaxed text-neutral-400">{description}</p>
               </div>
             ))}
           </div>
         </Container>
       </section>
 
-      {/* ── FACULTY ── */}
-      <section className="bg-cream-50 py-20 sm:py-28">
+      {/* FACULTY */}
+      <section className="border-b border-neutral-200 bg-white py-24 sm:py-32">
         <Container>
           <div className="flex flex-col items-start justify-between gap-6 sm:flex-row sm:items-end">
             <SectionHeading
               className="mb-0"
               eyebrow="Faculty"
-              title={
-                <>
-                  Mentors who teach with{" "}
-                  <span className="italic text-gold-600">conviction</span>
-                </>
-              }
+              title="Mentors who teach with conviction."
               description="Six senior faculty members. Each one has spent more than half a decade teaching the exact syllabus they handle today."
             />
-            <Link
-              href="/faculty"
-              className="inline-flex items-center gap-1.5 text-sm font-semibold text-navy-900 transition hover:text-gold-700"
-            >
+            <Link href="/faculty" className="btn-ghost">
               View all faculty
               <ArrowRight className="h-4 w-4" />
             </Link>
           </div>
-          <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="mt-14 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
             {faculty.slice(0, 3).map((f) => (
-              <article
-                key={f.slug}
-                className="overflow-hidden rounded border border-cream-200 bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-xl"
-              >
-                <div className="relative aspect-[4/3] overflow-hidden bg-navy-100">
+              <article key={f.slug} className="group">
+                <div className="relative aspect-[4/5] overflow-hidden rounded-lg bg-neutral-100">
                   <Image
                     src={f.image}
                     alt={`${f.name}, ${f.title} at Excellent Students' Academy Rohini`}
                     fill
                     sizes="(max-width: 1024px) 100vw, 33vw"
-                    className="object-cover"
+                    className="object-cover transition duration-500 group-hover:scale-[1.03]"
                   />
                 </div>
-                <div className="p-6">
-                  <p className="text-[11px] font-mono uppercase tracking-widest text-gold-700">
-                    {f.title}
+                <div className="mt-5">
+                  <p className="text-xs uppercase tracking-wider text-neutral-500">{f.title}</p>
+                  <h3 className="mt-1.5 text-lg font-semibold tracking-tight text-neutral-950">{f.name}</h3>
+                  <p className="mt-2 text-sm text-neutral-600">
+                    <span className="font-medium text-neutral-950">{f.experience}</span> teaching {f.subjects}
                   </p>
-                  <h3 className="mt-1 font-serif text-xl font-semibold text-navy-900">
-                    {f.name}
-                  </h3>
-                  <p className="mt-2 text-sm text-body">
-                    <strong className="font-semibold text-navy-900">
-                      {f.experience}
-                    </strong>{" "}
-                    teaching {f.subjects}
-                  </p>
-                  <p className="mt-3 text-sm leading-relaxed text-body line-clamp-3">
-                    {f.bio}
-                  </p>
+                  <p className="mt-3 text-sm leading-relaxed text-neutral-600 line-clamp-3">{f.bio}</p>
                 </div>
               </article>
             ))}
@@ -480,183 +296,105 @@ export default function HomePage() {
         </Container>
       </section>
 
-      {/* ── RESULTS ── */}
-      <section className="border-y border-cream-200 bg-white py-20 sm:py-28">
+      {/* RESULTS */}
+      <section className="border-b border-neutral-200 bg-neutral-50 py-24 sm:py-32">
         <Container>
           <SectionHeading
             eyebrow="Recent Results"
-            title={
-              <>
-                Students who turned hard work into{" "}
-                <span className="italic text-gold-600">real scores</span>
-              </>
-            }
+            title="Students who turned hard work into real scores."
             description="A glimpse of the last board cycle. Each name reflects months of weekly testing, mock exams and disciplined revision at our Rohini centre."
           />
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {toppers.slice(0, 6).map((t) => (
-              <article
-                key={t.name}
-                className="overflow-hidden rounded border border-cream-200 bg-cream-50 transition hover:-translate-y-1 hover:shadow-lg"
-              >
-                <div className="flex items-center gap-5 p-5">
-                  <div className="relative h-20 w-20 shrink-0 overflow-hidden rounded-full border-2 border-gold-400">
-                    <Image
-                      src={t.image}
-                      alt={t.name}
-                      fill
-                      sizes="80px"
-                      className="object-cover"
-                    />
+              <article key={t.name} className="rounded-lg border border-neutral-200 bg-white p-6">
+                <div className="flex items-center gap-5">
+                  <div className="relative h-16 w-16 shrink-0 overflow-hidden rounded-full bg-neutral-100">
+                    <Image src={t.image} alt={t.name} fill sizes="64px" className="object-cover" />
                   </div>
-                  <div>
-                    <h3 className="font-serif text-xl font-semibold text-navy-900">
-                      {t.name}
-                    </h3>
-                    <p className="text-xs uppercase tracking-wider text-muted">
-                      {t.grade}
-                      {t.stream ? ` | ${t.stream}` : ""}
-                    </p>
-                    <p className="mt-2 font-serif text-3xl font-semibold text-gold-700">
-                      {t.marks}
+                  <div className="flex-1 min-w-0">
+                    <h3 className="text-base font-semibold tracking-tight text-neutral-950">{t.name}</h3>
+                    <p className="mt-0.5 text-xs uppercase tracking-wider text-neutral-500">
+                      {t.grade}{t.stream ? ` · ${t.stream}` : ""}
                     </p>
                   </div>
+                  <p className="text-2xl font-semibold tracking-tight text-neutral-950">{t.marks}</p>
                 </div>
                 {t.quote ? (
-                  <p className="border-t border-cream-200 px-5 py-4 text-sm italic leading-relaxed text-body">
+                  <p className="mt-5 border-t border-neutral-200 pt-4 text-sm leading-relaxed text-neutral-600">
                     &ldquo;{t.quote}&rdquo;
                   </p>
                 ) : null}
               </article>
             ))}
           </div>
-          <div className="mt-12 grid gap-6 rounded border border-cream-200 bg-cream-50 p-8 sm:grid-cols-4">
+          <div className="mt-14 grid gap-px overflow-hidden rounded-lg border border-neutral-200 bg-neutral-200 sm:grid-cols-4">
             {resultsStats.map((s) => (
-              <div key={s.label} className="text-center">
-                <p className="font-serif text-4xl font-semibold text-navy-900 sm:text-5xl">
-                  {s.value}
-                </p>
-                <p className="mt-2 text-xs uppercase tracking-wider text-muted">
-                  {s.label}
-                </p>
+              <div key={s.label} className="bg-white px-6 py-8 text-center">
+                <p className="text-3xl font-semibold tracking-tight text-neutral-950 sm:text-4xl">{s.value}</p>
+                <p className="mt-2 text-xs uppercase tracking-wider text-neutral-500">{s.label}</p>
               </div>
             ))}
           </div>
         </Container>
       </section>
 
-      {/* ── PROCESS ── */}
-      <section className="bg-cream-50 py-20 sm:py-28">
+      {/* PROCESS */}
+      <section className="border-b border-neutral-200 bg-white py-24 sm:py-32">
         <Container>
           <SectionHeading
             eyebrow="How to join"
-            title={
-              <>
-                A simple, no-pressure{" "}
-                <span className="italic text-gold-600">enrolment process</span>
-              </>
-            }
+            title="A simple, no-pressure enrolment."
             description="From your first WhatsApp message to your child writing the first weekly test. Four steps, zero pressure."
           />
-          <div className="relative grid gap-8 lg:grid-cols-4">
-            <div className="pointer-events-none absolute top-12 hidden h-px w-full bg-gradient-to-r from-transparent via-gold-300/60 to-transparent lg:block" />
+          <div className="grid gap-px overflow-hidden rounded-lg border border-neutral-200 bg-neutral-200 lg:grid-cols-4">
             {processSteps.map((s) => (
-              <div key={s.step} className="relative">
-                <div className="relative flex h-24 w-24 items-center justify-center rounded-full border-2 border-gold-400 bg-white shadow-sm">
-                  <span className="font-serif text-3xl font-semibold text-gold-700">
-                    {s.step}
-                  </span>
-                </div>
-                <h3 className="mt-6 font-serif text-xl font-semibold text-navy-900">
-                  {s.title}
-                </h3>
-                <p className="mt-2 text-sm leading-relaxed text-body">
-                  {s.description}
-                </p>
+              <div key={s.step} className="bg-white p-8">
+                <p className="text-sm font-medium text-neutral-400">{s.step}</p>
+                <h3 className="mt-3 text-lg font-semibold tracking-tight text-neutral-950">{s.title}</h3>
+                <p className="mt-3 text-sm leading-relaxed text-neutral-600">{s.description}</p>
               </div>
             ))}
           </div>
         </Container>
       </section>
 
-      {/* ── A WEEK AT ESA (parent-focused) ── */}
-      <section className="border-y border-cream-200 bg-white py-16 sm:py-24">
+      {/* A WEEK AT ESA */}
+      <section className="border-b border-neutral-200 bg-neutral-50 py-24 sm:py-32">
         <Container>
           <SectionHeading
             eyebrow="A week at ESA"
-            title={
-              <>
-                What your child&apos;s week{" "}
-                <span className="italic text-gold-600">actually looks like</span>
-              </>
-            }
-            description="Most parents want to know the day-to-day before they enrol. Here is exactly how a regular week runs for a Class 10 or Class 12 student at our Rohini centre."
+            title="What your child's week actually looks like."
+            description="Here is exactly how a regular week runs for a Class 10 or Class 12 student at our Rohini centre."
           />
-          <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {[
-              {
-                label: "Mon to Fri",
-                title: "Concept classes",
-                body: "Subject-wise batches between 4 PM and 8:30 PM. Each batch runs 90 minutes with a 10-minute doubt window at the end. No question leaves the room unresolved.",
-              },
-              {
-                label: "Every Saturday",
-                title: "Weekly chapter tests",
-                body: "5 PM to 8 PM. The chapter taught that week gets tested. Scored within 48 hours. WhatsApp scorecard goes to parents on Monday morning.",
-              },
-              {
-                label: "First Saturday of the month",
-                title: "Parent meeting day",
-                body: "15-minute one-on-one with your child's mentor. We review the four weekly test scores, what is improving, what needs work, and the plan for next month.",
-              },
-              {
-                label: "Last weekend of the month",
-                title: "Full mock paper",
-                body: "Three-hour mock exam under board conditions. Same time slot as the real CBSE paper. Same marking pattern. Feedback delivered within a week.",
-              },
-              {
-                label: "Sunday (on request)",
-                title: "Doubt clearing sessions",
-                body: "Reserved for students who missed something during the week or have a specific tough topic. Free and optional. WhatsApp us by Friday to book a slot.",
-              },
-              {
-                label: "Always",
-                title: "Open-book parent visibility",
-                body: "Parents can walk in any working day between 11 AM and 1 PM to talk to faculty or check their child's progress register. No appointment needed.",
-              },
+              { label: "Mon to Fri", title: "Concept classes", body: "Subject-wise batches between 4 PM and 8:30 PM. Each batch runs 90 minutes with a 10-minute doubt window at the end. No question leaves the room unresolved." },
+              { label: "Every Saturday", title: "Weekly chapter tests", body: "5 PM to 8 PM. The chapter taught that week gets tested. Scored within 48 hours. WhatsApp scorecard goes to parents on Monday morning." },
+              { label: "First Saturday monthly", title: "Parent meeting day", body: "15-minute one-on-one with your child's mentor. We review the four weekly test scores, what is improving, what needs work, and the plan for next month." },
+              { label: "Last weekend monthly", title: "Full mock paper", body: "Three-hour mock exam under board conditions. Same time slot as the real CBSE paper. Same marking pattern. Feedback within a week." },
+              { label: "Sunday (on request)", title: "Doubt clearing", body: "Reserved for students who missed something during the week or have a specific tough topic. Free and optional. WhatsApp us by Friday to book a slot." },
+              { label: "Always", title: "Parent visibility", body: "Parents can walk in any working day between 11 AM and 1 PM to talk to faculty or check their child's progress register. No appointment needed." },
             ].map((item) => (
-              <article
-                key={item.title}
-                className="rounded border border-cream-200 bg-cream-50 p-6"
-              >
-                <p className="font-mono text-[10px] uppercase tracking-widest text-gold-700">
-                  {item.label}
-                </p>
-                <h3 className="mt-2 font-serif text-lg font-semibold text-navy-900 sm:text-xl">
-                  {item.title}
-                </h3>
-                <p className="mt-3 text-sm leading-relaxed text-body">
-                  {item.body}
-                </p>
+              <article key={item.title} className="rounded-lg border border-neutral-200 bg-white p-7">
+                <p className="text-xs uppercase tracking-wider text-neutral-500">{item.label}</p>
+                <h3 className="mt-3 text-base font-semibold tracking-tight text-neutral-950 sm:text-lg">{item.title}</h3>
+                <p className="mt-3 text-sm leading-relaxed text-neutral-600">{item.body}</p>
               </article>
             ))}
           </div>
         </Container>
       </section>
 
-      {/* ── MISSED CLASS / PARENT COMM (parent-focused) ── */}
-      <section className="bg-cream-50 py-16 sm:py-24">
+      {/* MISSED CLASS / PARENT COMM */}
+      <section className="border-b border-neutral-200 bg-white py-24 sm:py-32">
         <Container>
           <div className="grid gap-10 lg:grid-cols-2">
-            <div className="rounded border border-cream-200 bg-white p-7 sm:p-10">
-              <p className="font-mono text-[11px] uppercase tracking-widest text-gold-700">
-                Missed a class? Here is what we do.
-              </p>
-              <h3 className="mt-3 font-serif text-2xl font-semibold text-navy-900 sm:text-3xl">
-                Your child does not fall behind.{" "}
-                <span className="italic text-gold-600">Ever.</span>
+            <div className="rounded-lg border border-neutral-200 bg-neutral-50 p-8 sm:p-10">
+              <p className="eyebrow">Missed a class?</p>
+              <h3 className="mt-4 text-2xl font-semibold tracking-tight text-neutral-950 sm:text-3xl">
+                Your child does not fall behind. Ever.
               </h3>
-              <ul className="mt-6 space-y-4 text-sm text-body">
+              <ul className="mt-8 space-y-4 text-sm text-neutral-700">
                 {[
                   "Recording of every class is shared on WhatsApp the same day. Your child can watch it that night.",
                   "We share faculty-prepared chapter notes for whatever was taught, so the catch-up is structured.",
@@ -665,22 +403,19 @@ export default function HomePage() {
                   "Doubt sessions on Sunday are open for catch-up. No extra fee.",
                 ].map((p) => (
                   <li key={p} className="flex items-start gap-3">
-                    <CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0 text-gold-600" />
+                    <CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0 text-neutral-950" strokeWidth={1.75} />
                     {p}
                   </li>
                 ))}
               </ul>
             </div>
 
-            <div className="rounded border border-cream-200 bg-white p-7 sm:p-10">
-              <p className="font-mono text-[11px] uppercase tracking-widest text-gold-700">
-                How we keep parents in the loop
-              </p>
-              <h3 className="mt-3 font-serif text-2xl font-semibold text-navy-900 sm:text-3xl">
-                You always know what is happening,{" "}
-                <span className="italic text-gold-600">not just at result time.</span>
+            <div className="rounded-lg border border-neutral-200 bg-neutral-50 p-8 sm:p-10">
+              <p className="eyebrow">Parent communication</p>
+              <h3 className="mt-4 text-2xl font-semibold tracking-tight text-neutral-950 sm:text-3xl">
+                You always know what is happening. Not just at result time.
               </h3>
-              <ul className="mt-6 space-y-4 text-sm text-body">
+              <ul className="mt-8 space-y-4 text-sm text-neutral-700">
                 {[
                   "WhatsApp scorecard every Monday morning with the previous Saturday's test marks.",
                   "Monthly 15-minute meeting with your child's actual mentor. First Saturday of every month.",
@@ -689,7 +424,7 @@ export default function HomePage() {
                   "Parent feedback form once every term so you can flag concerns formally.",
                 ].map((p) => (
                   <li key={p} className="flex items-start gap-3">
-                    <CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0 text-gold-600" />
+                    <CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0 text-neutral-950" strokeWidth={1.75} />
                     {p}
                   </li>
                 ))}
@@ -699,43 +434,30 @@ export default function HomePage() {
         </Container>
       </section>
 
-      {/* ── TESTIMONIALS ── */}
-      <section className="border-y border-cream-200 bg-white py-20 sm:py-28">
+      {/* TESTIMONIALS */}
+      <section className="border-b border-neutral-200 bg-neutral-50 py-24 sm:py-32">
         <Container>
           <SectionHeading
-            eyebrow="What parents and students say"
-            title={
-              <>
-                Stories from inside our{" "}
-                <span className="italic text-gold-600">classrooms</span>
-              </>
-            }
+            eyebrow="Reviews"
+            title="What parents and students say."
             description="Real reviews from current and past students of Excellent Students' Academy in Rohini."
           />
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {testimonials.slice(0, 6).map((t) => (
-              <article
-                key={t.name}
-                className="flex flex-col rounded border border-cream-200 bg-cream-50 p-7"
-              >
-                <Quote className="h-7 w-7 text-gold-400" strokeWidth={1.5} />
-                <p className="mt-4 flex-1 text-sm leading-relaxed text-body">
-                  {t.text}
-                </p>
-                <div className="mt-6 flex items-center gap-3 border-t border-cream-200 pt-4">
-                  <div className="flex h-10 w-10 items-center justify-center rounded-full bg-navy-900 font-serif text-sm font-semibold text-gold-400">
+              <article key={t.name} className="flex flex-col rounded-lg border border-neutral-200 bg-white p-7">
+                <div className="flex gap-0.5 text-neutral-950">
+                  {Array.from({ length: t.rating }).map((_, i) => (
+                    <Star key={i} className="h-3.5 w-3.5 fill-current" />
+                  ))}
+                </div>
+                <p className="mt-5 flex-1 text-sm leading-relaxed text-neutral-700">{t.text}</p>
+                <div className="mt-6 flex items-center gap-3 border-t border-neutral-200 pt-5">
+                  <div className="flex h-9 w-9 items-center justify-center rounded-full bg-neutral-950 text-xs font-semibold text-white">
                     {t.name.charAt(0)}
                   </div>
                   <div>
-                    <p className="text-sm font-semibold text-navy-900">
-                      {t.name}
-                    </p>
-                    <p className="text-xs text-muted">{t.role}</p>
-                  </div>
-                  <div className="ml-auto flex gap-0.5 text-gold-500">
-                    {Array.from({ length: t.rating }).map((_, i) => (
-                      <Star key={i} className="h-3.5 w-3.5 fill-current" />
-                    ))}
+                    <p className="text-sm font-medium text-neutral-950">{t.name}</p>
+                    <p className="text-xs text-neutral-500">{t.role}</p>
                   </div>
                 </div>
               </article>
@@ -744,86 +466,60 @@ export default function HomePage() {
         </Container>
       </section>
 
-      {/* ── AREAS WE SERVE ── */}
-      <section className="bg-cream-50 py-20 sm:py-24">
+      {/* AREAS WE SERVE */}
+      <section className="border-b border-neutral-200 bg-white py-24 sm:py-32">
         <Container>
           <SectionHeading
-            eyebrow="Areas We Serve"
-            title={
-              <>
-                Students travel to ESA from{" "}
-                <span className="italic text-gold-600">all over North Delhi</span>
-              </>
-            }
-            description="Excellent Students' Academy is located in Rohini Sector 7. Students come to us from these neighbouring localities. Home tuition is also available in most of them."
+            eyebrow="Areas we serve"
+            title="Students travel to ESA from across North Delhi."
+            description="Located in Rohini Sector 7. Students come from these neighbouring localities. Home tuition is also available in most of them."
           />
           <div className="grid gap-3 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
             {nearbyAreas.map((area, i) => (
               <Link
                 key={area.slug}
                 href={`/areas/${area.slug}`}
-                className={`group ${i >= 8 ? "hidden sm:flex" : "flex"} items-center justify-between rounded border border-cream-200 bg-white px-5 py-4 transition hover:border-gold-400 hover:shadow-md`}
+                className={`group ${i >= 8 ? "hidden sm:flex" : "flex"} items-center justify-between rounded-md border border-neutral-200 bg-white px-5 py-4 transition hover:border-neutral-950`}
               >
-                <div className="flex items-center gap-3">
-                  <MapPin className="h-4 w-4 text-gold-600" />
-                  <span className="text-sm font-medium text-navy-900">
-                    {area.name}
-                  </span>
+                <div className="flex items-center gap-2.5">
+                  <MapPin className="h-4 w-4 text-neutral-400" />
+                  <span className="text-sm font-medium text-neutral-950">{area.name}</span>
                 </div>
-                <ChevronRight className="h-4 w-4 text-muted transition group-hover:translate-x-0.5 group-hover:text-gold-700" />
+                <ArrowUpRight className="h-4 w-4 text-neutral-400 transition group-hover:text-neutral-950" />
               </Link>
             ))}
           </div>
-          <p className="mt-6 text-center text-sm text-muted sm:hidden">
-            Showing 8 closest areas. We also serve {nearbyAreas.length - 8} more localities across North Delhi.
-          </p>
         </Container>
       </section>
 
-      {/* ── DEMO CTA BANNER ── */}
-      <section className="relative overflow-hidden bg-gradient-to-br from-navy-900 via-navy-800 to-navy-900 py-20 text-white sm:py-24">
-        <div className="pointer-events-none absolute -right-20 top-0 h-80 w-80 rounded-full bg-gold-500/15 blur-3xl" />
-        <div className="pointer-events-none absolute -left-20 bottom-0 h-80 w-80 rounded-full bg-gold-500/10 blur-3xl" />
-        <Container className="relative">
-          <div className="grid items-center gap-10 lg:grid-cols-[1.4fr_1fr]">
+      {/* DEMO CTA */}
+      <section className="border-b border-neutral-200 bg-neutral-950 py-24 text-white sm:py-32">
+        <Container>
+          <div className="grid items-center gap-12 lg:grid-cols-[1.4fr_1fr]">
             <div>
-              <div className="flex items-center gap-3">
-                <span className="font-mono text-[11px] uppercase tracking-[0.22em] text-gold-400">
-                  Free Demo Class
-                </span>
-                <span className="h-px w-12 bg-gold-400" />
-              </div>
-              <h2 className="mt-5 font-serif text-4xl font-semibold leading-tight sm:text-5xl">
-                Book a free demo class today.{" "}
-                <span className="italic text-gold-400">
-                  No fees, no pressure.
-                </span>
+              <p className="eyebrow text-neutral-400">Free demo class</p>
+              <h2 className="mt-5 text-4xl font-semibold leading-[1.05] tracking-tight sm:text-5xl lg:text-6xl">
+                Book a free demo class today.
               </h2>
-              <p className="mt-5 max-w-2xl text-base leading-relaxed text-navy-100 sm:text-lg">
-                Sit through up to 7 days of real coaching batches. Meet faculty.
-                See the teaching method. Enrol only when you are fully convinced.
+              <p className="mt-6 max-w-2xl text-base leading-relaxed text-neutral-300 sm:text-lg">
+                Sit through up to 7 days of real coaching batches. Meet faculty. See the teaching method. Enrol only when you are fully convinced.
               </p>
-              <div className="mt-8 flex flex-wrap items-center gap-3">
+              <div className="mt-9 flex flex-wrap items-center gap-4">
                 <Link
-                  href={whatsappLink(
-                    "Hello ESA, I want to book a free demo class for my child",
-                  )}
+                  href={whatsappLink("Hello ESA, I want to book a free demo class for my child")}
                   target="_blank"
-                  className="btn-gold"
+                  className="inline-flex items-center gap-2 rounded-md bg-white px-5 py-3 text-sm font-medium text-neutral-950 transition hover:bg-neutral-100"
                 >
                   Chat on WhatsApp
                   <ArrowRight className="h-4 w-4" />
                 </Link>
-                <a
-                  href={`tel:${siteConfig.phone}`}
-                  className="inline-flex items-center gap-2 text-sm font-semibold text-white transition hover:text-gold-300"
-                >
+                <a href={`tel:${siteConfig.phone}`} className="inline-flex items-center gap-2 text-sm font-medium text-white transition hover:text-neutral-300">
                   <Phone className="h-4 w-4" />
                   Or call {siteConfig.phoneDisplay}
                 </a>
               </div>
             </div>
-            <ul className="space-y-3 rounded border border-navy-700 bg-white/[0.04] p-7 backdrop-blur-sm">
+            <ul className="space-y-3.5 rounded-lg border border-neutral-800 bg-neutral-900 p-7">
               {[
                 "7 days of demo classes, completely free",
                 "Real batch experience, not a 'special' demo",
@@ -831,11 +527,8 @@ export default function HomePage() {
                 "No registration fee, no commitment to enrol",
                 "Decide after seeing the teaching first-hand",
               ].map((point) => (
-                <li
-                  key={point}
-                  className="flex items-start gap-3 text-sm text-navy-100"
-                >
-                  <CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0 text-gold-400" />
+                <li key={point} className="flex items-start gap-3 text-sm text-neutral-200">
+                  <CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0 text-white" strokeWidth={1.75} />
                   {point}
                 </li>
               ))}
@@ -844,18 +537,13 @@ export default function HomePage() {
         </Container>
       </section>
 
-      {/* ── FAQ TEASER ── */}
-      <section className="bg-cream-50 py-20 sm:py-28">
+      {/* FAQ */}
+      <section className="border-b border-neutral-200 bg-white py-24 sm:py-32">
         <Container>
-          <div className="grid gap-12 lg:grid-cols-[1fr_1.4fr]">
+          <div className="grid gap-14 lg:grid-cols-[1fr_1.4fr]">
             <SectionHeading
               eyebrow="FAQ"
-              title={
-                <>
-                  Common questions{" "}
-                  <span className="italic text-gold-600">answered</span>
-                </>
-              }
+              title="Common questions answered."
               description="If your question is not here, WhatsApp us or call. We respond within working hours."
               className="mb-0"
             />
@@ -863,26 +551,19 @@ export default function HomePage() {
               {faqs.slice(0, 5).map((f, i) => (
                 <details
                   key={f.question}
-                  className="group rounded border border-cream-200 bg-white p-5 open:border-gold-400 open:shadow-md"
+                  className="group rounded-lg border border-neutral-200 bg-white p-5 open:border-neutral-950"
                   open={i === 0}
                 >
                   <summary className="flex cursor-pointer items-center justify-between gap-4 list-none">
-                    <span className="font-serif text-base font-semibold text-navy-900 sm:text-lg">
-                      {f.question}
-                    </span>
-                    <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full border border-gold-400 text-gold-700 transition group-open:rotate-45">
-                      +
+                    <span className="text-base font-medium tracking-tight text-neutral-950">{f.question}</span>
+                    <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full border border-neutral-300 text-neutral-500 transition group-open:rotate-45 group-open:border-neutral-950 group-open:text-neutral-950">
+                      <Plus className="h-3.5 w-3.5" />
                     </span>
                   </summary>
-                  <p className="mt-3 text-sm leading-relaxed text-body">
-                    {f.answer}
-                  </p>
+                  <p className="mt-4 text-sm leading-relaxed text-neutral-600">{f.answer}</p>
                 </details>
               ))}
-              <Link
-                href="/faq"
-                className="mt-4 inline-flex items-center gap-1.5 text-sm font-semibold text-navy-900 transition hover:text-gold-700"
-              >
+              <Link href="/faq" className="btn-ghost mt-6">
                 View all questions
                 <ArrowRight className="h-4 w-4" />
               </Link>
@@ -891,93 +572,35 @@ export default function HomePage() {
         </Container>
       </section>
 
-      {/* ── CONTACT / LOCATION ── */}
-      <section className="bg-white py-20 sm:py-28">
+      {/* CONTACT */}
+      <section className="bg-neutral-50 py-24 sm:py-32">
         <Container>
           <SectionHeading
             eyebrow="Visit us"
-            title={
-              <>
-                Drop by the academy{" "}
-                <span className="italic text-gold-600">in Rohini</span>
-              </>
-            }
+            title="Drop by the academy in Rohini."
             description="Our centre is on the 2nd floor at C7/72, Sector 7, Rohini. Walk in any working day between 10 AM and 8:30 PM, or schedule a slot via WhatsApp."
           />
           <div className="grid gap-8 lg:grid-cols-[1fr_1.2fr]">
-            <div className="space-y-5">
-              <div className="rounded border border-cream-200 bg-cream-50 p-6">
-                <div className="flex items-start gap-4">
-                  <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded bg-navy-900 text-gold-400">
-                    <MapPin className="h-5 w-5" />
-                  </span>
-                  <div>
-                    <p className="font-serif text-base font-semibold text-navy-900">
-                      Address
-                    </p>
-                    <p className="mt-1 text-sm leading-relaxed text-body">
-                      {siteConfig.address.line1}, {siteConfig.address.line2}
-                      <br />
-                      {siteConfig.address.city} {siteConfig.address.pin}
-                    </p>
+            <div className="space-y-4">
+              {[
+                { icon: MapPin, label: "Address", value: <>{siteConfig.address.line1}, {siteConfig.address.line2}<br />{siteConfig.address.city} {siteConfig.address.pin}</> },
+                { icon: Phone, label: "Call us", value: <a href={`tel:${siteConfig.phone}`} className="transition hover:text-neutral-950">{siteConfig.phoneDisplay}</a> },
+                { icon: Mail, label: "Email", value: <a href={`mailto:${siteConfig.email}`} className="transition hover:text-neutral-950">{siteConfig.email}</a> },
+              ].map(({ icon: Icon, label, value }) => (
+                <div key={label} className="rounded-lg border border-neutral-200 bg-white p-6">
+                  <div className="flex items-start gap-4">
+                    <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-md bg-neutral-100 text-neutral-700">
+                      <Icon className="h-4 w-4" strokeWidth={1.75} />
+                    </span>
+                    <div>
+                      <p className="text-xs uppercase tracking-wider text-neutral-500">{label}</p>
+                      <p className="mt-1 text-sm leading-relaxed text-neutral-700">{value}</p>
+                    </div>
                   </div>
                 </div>
-              </div>
-              <div className="rounded border border-cream-200 bg-cream-50 p-6">
-                <div className="flex items-start gap-4">
-                  <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded bg-navy-900 text-gold-400">
-                    <Phone className="h-5 w-5" />
-                  </span>
-                  <div>
-                    <p className="font-serif text-base font-semibold text-navy-900">
-                      Call us
-                    </p>
-                    <a
-                      href={`tel:${siteConfig.phone}`}
-                      className="mt-1 block text-sm text-body transition hover:text-gold-700"
-                    >
-                      {siteConfig.phoneDisplay}
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <div className="rounded border border-cream-200 bg-cream-50 p-6">
-                <div className="flex items-start gap-4">
-                  <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded bg-navy-900 text-gold-400">
-                    <Mail className="h-5 w-5" />
-                  </span>
-                  <div>
-                    <p className="font-serif text-base font-semibold text-navy-900">
-                      Email
-                    </p>
-                    <a
-                      href={`mailto:${siteConfig.email}`}
-                      className="mt-1 block text-sm text-body transition hover:text-gold-700"
-                    >
-                      {siteConfig.email}
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <div className="rounded border border-cream-200 bg-cream-50 p-6">
-                <div className="flex items-start gap-4">
-                  <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded bg-navy-900 text-gold-400">
-                    <Clock className="h-5 w-5" />
-                  </span>
-                  <div>
-                    <p className="font-serif text-base font-semibold text-navy-900">
-                      Working hours
-                    </p>
-                    <p className="mt-1 text-sm leading-relaxed text-body">
-                      Monday to Saturday: {siteConfig.hours.weekdays}
-                      <br />
-                      Sunday: {siteConfig.hours.sunday}
-                    </p>
-                  </div>
-                </div>
-              </div>
+              ))}
             </div>
-            <div className="overflow-hidden rounded border border-cream-200 shadow-sm">
+            <div className="overflow-hidden rounded-lg border border-neutral-200">
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3501.8089!2d77.119802!3d28.706135!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjjCsDQyJzIyLjEiTiA3N8KwMDcnMjAuNiJF!5e0!3m2!1sen!2sin!4v1700000000000"
                 width="100%"

@@ -21,16 +21,14 @@ export const metadata: Metadata = {
 export default function ResultsPage() {
   return (
     <div>
-      <section className="bg-cream-50 py-16 sm:py-20">
+      <section className="bg-white py-16 sm:py-20">
         <Container>
           <div className="max-w-3xl">
             <div className="flex items-center gap-3">
-              <span className="eyebrow">Results</span>
-              <span className="gold-divider" />
-            </div>
-            <h1 className="mt-5 font-serif text-5xl font-semibold leading-[1.05] tracking-tight text-navy-900 sm:text-6xl">
+              <span className="eyebrow">Results</span></div>
+            <h1 className="mt-5 text-5xl font-semibold leading-[1.05] tracking-tight text-neutral-950 sm:text-6xl">
               Where weekly tests turn into{" "}
-              <span className="text-gold-600 italic">board scores</span>
+              <span className="text-neutral-950">board scores</span>
             </h1>
             <p className="mt-6 text-base leading-relaxed text-body sm:text-lg">
               A snapshot of how our Class 10 and Class 12 students performed in
@@ -42,9 +40,9 @@ export default function ResultsPage() {
             {resultsStats.map((s) => (
               <div
                 key={s.label}
-                className="rounded border border-cream-200 bg-white p-6 text-center shadow-sm"
+                className="rounded border border-neutral-200 bg-white p-6 text-center shadow-sm"
               >
-                <p className="font-serif text-4xl font-semibold text-navy-900 sm:text-5xl">
+                <p className="text-4xl font-semibold text-neutral-950 sm:text-5xl">
                   {s.value}
                 </p>
                 <p className="mt-2 text-xs uppercase tracking-wider text-muted">
@@ -56,14 +54,14 @@ export default function ResultsPage() {
         </Container>
       </section>
 
-      <section className="border-t border-cream-200 bg-white py-20 sm:py-24">
+      <section className="border-t border-neutral-200 bg-white py-20 sm:py-24">
         <Container>
           <SectionHeading
             eyebrow="Recent toppers"
             title={
               <>
                 Students who reached{" "}
-                <span className="italic text-gold-600">90 plus</span>
+                <span className="text-neutral-950">90 plus</span>
               </>
             }
             description="Real students from real ESA batches. Names shared with consent. Marks reflect the recent CBSE board cycle."
@@ -72,7 +70,7 @@ export default function ResultsPage() {
             {toppers.map((t) => (
               <article
                 key={t.name}
-                className="overflow-hidden rounded border border-cream-200 bg-cream-50 transition hover:-translate-y-1 hover:shadow-lg"
+                className="overflow-hidden rounded border border-neutral-200 bg-white transition hover:-translate-y-1 hover:shadow-lg"
               >
                 <div className="relative aspect-[4/3] overflow-hidden">
                   <Image
@@ -82,12 +80,12 @@ export default function ResultsPage() {
                     sizes="(max-width: 1024px) 100vw, 33vw"
                     className="object-cover"
                   />
-                  <div className="absolute right-3 top-3 rounded bg-navy-900 px-3 py-1.5 font-serif text-lg font-semibold text-gold-400 shadow-lg">
+                  <div className="absolute right-3 top-3 rounded bg-neutral-950 px-3 py-1.5 text-lg font-semibold text-neutral-400 shadow-lg">
                     {t.marks}
                   </div>
                 </div>
                 <div className="p-5">
-                  <h3 className="font-serif text-xl font-semibold text-navy-900">
+                  <h3 className="text-xl font-semibold text-neutral-950">
                     {t.name}
                   </h3>
                   <p className="mt-1 text-xs uppercase tracking-wider text-muted">
@@ -95,7 +93,7 @@ export default function ResultsPage() {
                     {t.stream ? ` | ${t.stream}` : ""}
                   </p>
                   {t.quote ? (
-                    <p className="mt-3 text-sm italic leading-relaxed text-body">
+                    <p className="mt-3 text-sm leading-relaxed text-body">
                       &ldquo;{t.quote}&rdquo;
                     </p>
                   ) : null}

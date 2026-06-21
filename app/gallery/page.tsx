@@ -61,16 +61,14 @@ const gallery = [
 export default function GalleryPage() {
   return (
     <div>
-      <section className="bg-cream-50 py-16 sm:py-20">
+      <section className="bg-white py-16 sm:py-20">
         <Container>
           <div className="max-w-3xl">
             <div className="flex items-center gap-3">
-              <span className="eyebrow">Gallery</span>
-              <span className="gold-divider" />
-            </div>
-            <h1 className="mt-5 font-serif text-5xl font-semibold leading-[1.05] tracking-tight text-navy-900 sm:text-6xl">
+              <span className="eyebrow">Gallery</span></div>
+            <h1 className="mt-5 text-5xl font-semibold leading-[1.05] tracking-tight text-neutral-950 sm:text-6xl">
               A look inside{" "}
-              <span className="text-gold-600 italic">our classrooms</span>
+              <span className="text-neutral-950">our classrooms</span>
             </h1>
             <p className="mt-6 text-base leading-relaxed text-body sm:text-lg">
               Photos from a regular week at Excellent Students&apos; Academy in
@@ -80,13 +78,13 @@ export default function GalleryPage() {
         </Container>
       </section>
 
-      <section className="border-t border-cream-200 bg-white py-16 sm:py-20">
+      <section className="border-t border-neutral-200 bg-white py-16 sm:py-20">
         <Container>
           <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {gallery.map((g) => (
               <figure
                 key={g.src}
-                className="group overflow-hidden rounded border border-cream-200 bg-cream-50"
+                className="group overflow-hidden rounded border border-neutral-200 bg-white"
               >
                 <div className="relative aspect-[4/3] overflow-hidden">
                   <Image
@@ -97,7 +95,7 @@ export default function GalleryPage() {
                     className="object-cover transition group-hover:scale-105"
                   />
                 </div>
-                <figcaption className="p-4 text-sm font-medium text-navy-900">
+                <figcaption className="p-4 text-sm font-medium text-neutral-950">
                   {g.caption}
                 </figcaption>
               </figure>

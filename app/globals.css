@@ -1,76 +1,59 @@
 @import "tailwindcss";
 
 :root {
-  --background: #fdfaf2;
-  --foreground: #0a1628;
+  --background: #ffffff;
+  --foreground: #0a0a0a;
 
-  /* Brand palette — premium academic (navy + gold) */
-  --navy-50: #f3f6fb;
-  --navy-100: #e6edf6;
-  --navy-200: #c5d2e5;
-  --navy-300: #94abca;
-  --navy-500: #436088;
-  --navy-700: #1f3a63;
-  --navy-800: #122849;
-  --navy-900: #0a1628;
-  --navy-950: #050d1a;
+  /* Neutral scale - modern minimal */
+  --neutral-50: #fafafa;
+  --neutral-100: #f5f5f5;
+  --neutral-200: #e5e5e5;
+  --neutral-300: #d4d4d4;
+  --neutral-400: #a3a3a3;
+  --neutral-500: #737373;
+  --neutral-600: #525252;
+  --neutral-700: #404040;
+  --neutral-800: #262626;
+  --neutral-900: #171717;
+  --neutral-950: #0a0a0a;
 
-  --gold-50: #fdf8ec;
-  --gold-100: #faedc8;
-  --gold-200: #f3dc8e;
-  --gold-300: #e7c25a;
-  --gold-400: #d4a73c;
-  --gold-500: #c9a961;
-  --gold-600: #b88d2c;
-  --gold-700: #95701f;
-  --gold-800: #6f5215;
+  /* Single restrained accent */
+  --accent: #2563eb;
+  --accent-hover: #1d4ed8;
 
-  --cream-50: #fdfaf2;
-  --cream-100: #f7f1e1;
-  --cream-200: #ece2c8;
-
-  --ink-text: #1a1a2e;
-  --body-text: #475467;
-  --muted-text: #6b7280;
-  --border-soft: #e8e1cc;
+  --ink-text: #0a0a0a;
+  --body-text: #525252;
+  --muted-text: #a3a3a3;
+  --border-soft: #e5e5e5;
+  --border-strong: #d4d4d4;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
 
-  --color-navy-50: var(--navy-50);
-  --color-navy-100: var(--navy-100);
-  --color-navy-200: var(--navy-200);
-  --color-navy-300: var(--navy-300);
-  --color-navy-500: var(--navy-500);
-  --color-navy-700: var(--navy-700);
-  --color-navy-800: var(--navy-800);
-  --color-navy-900: var(--navy-900);
-  --color-navy-950: var(--navy-950);
+  --color-neutral-50: var(--neutral-50);
+  --color-neutral-100: var(--neutral-100);
+  --color-neutral-200: var(--neutral-200);
+  --color-neutral-300: var(--neutral-300);
+  --color-neutral-400: var(--neutral-400);
+  --color-neutral-500: var(--neutral-500);
+  --color-neutral-600: var(--neutral-600);
+  --color-neutral-700: var(--neutral-700);
+  --color-neutral-800: var(--neutral-800);
+  --color-neutral-900: var(--neutral-900);
+  --color-neutral-950: var(--neutral-950);
 
-  --color-gold-50: var(--gold-50);
-  --color-gold-100: var(--gold-100);
-  --color-gold-200: var(--gold-200);
-  --color-gold-300: var(--gold-300);
-  --color-gold-400: var(--gold-400);
-  --color-gold-500: var(--gold-500);
-  --color-gold-600: var(--gold-600);
-  --color-gold-700: var(--gold-700);
-  --color-gold-800: var(--gold-800);
-
-  --color-cream-50: var(--cream-50);
-  --color-cream-100: var(--cream-100);
-  --color-cream-200: var(--cream-200);
+  --color-accent: var(--accent);
+  --color-accent-hover: var(--accent-hover);
 
   --color-ink: var(--ink-text);
   --color-body: var(--body-text);
   --color-muted: var(--muted-text);
   --color-border-soft: var(--border-soft);
+  --color-border-strong: var(--border-strong);
 
   --font-sans: var(--font-inter);
-  --font-serif: var(--font-fraunces);
-  --font-mono: var(--font-dm-mono);
 }
 
 * {
@@ -80,151 +63,138 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: var(--font-inter), system-ui, sans-serif;
+  font-family: var(--font-inter), system-ui, -apple-system, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-feature-settings: "cv11", "ss01";
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: var(--font-fraunces), Georgia, serif;
-  font-feature-settings: "ss01", "ss02";
-  letter-spacing: -0.01em;
-}
-
-.gold-divider {
-  width: 56px;
-  height: 2px;
-  background: linear-gradient(90deg, var(--gold-400), var(--gold-600));
+  letter-spacing: -0.02em;
+  font-weight: 600;
 }
 
 .eyebrow {
-  font-family: var(--font-dm-mono), monospace;
-  font-size: 11px;
-  letter-spacing: 0.22em;
+  font-size: 12px;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: var(--gold-700);
+  color: var(--neutral-500);
+  font-weight: 500;
+}
+
+.hairline {
+  height: 1px;
+  background: var(--border-soft);
+  width: 100%;
 }
 
 .btn-primary {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  padding: 0.85rem 1.6rem;
-  background: var(--navy-900);
+  padding: 0.8rem 1.4rem;
+  background: var(--neutral-950);
   color: #fff;
-  font-weight: 600;
-  font-size: 0.92rem;
-  border-radius: 4px;
-  transition: background 0.2s ease, transform 0.2s ease;
-  box-shadow: 0 12px 24px -8px rgba(10, 22, 40, 0.25);
+  font-weight: 500;
+  font-size: 0.9rem;
+  border-radius: 6px;
+  transition: background 0.15s ease;
 }
 .btn-primary:hover {
-  background: var(--navy-700);
-  transform: translateY(-1px);
-}
-
-.btn-gold {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  padding: 0.85rem 1.6rem;
-  background: linear-gradient(135deg, var(--gold-500), var(--gold-700));
-  color: #fff;
-  font-weight: 600;
-  font-size: 0.92rem;
-  border-radius: 4px;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-  box-shadow: 0 12px 24px -10px rgba(149, 112, 31, 0.45);
-}
-.btn-gold:hover {
-  transform: translateY(-1px);
-  box-shadow: 0 18px 30px -10px rgba(149, 112, 31, 0.5);
+  background: var(--neutral-800);
 }
 
 .btn-outline {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  padding: 0.85rem 1.6rem;
+  padding: 0.8rem 1.4rem;
   background: transparent;
-  color: var(--navy-900);
-  font-weight: 600;
-  font-size: 0.92rem;
-  border-radius: 4px;
-  border: 1.5px solid var(--navy-900);
-  transition: background 0.2s ease, color 0.2s ease;
+  color: var(--neutral-950);
+  font-weight: 500;
+  font-size: 0.9rem;
+  border-radius: 6px;
+  border: 1px solid var(--neutral-300);
+  transition: border-color 0.15s ease, background 0.15s ease;
 }
 .btn-outline:hover {
-  background: var(--navy-900);
-  color: #fff;
+  border-color: var(--neutral-950);
+  background: var(--neutral-50);
 }
 
-/* Blog post body styles */
+.btn-ghost {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-weight: 500;
+  font-size: 0.9rem;
+  color: var(--neutral-950);
+  transition: color 0.15s ease;
+}
+.btn-ghost:hover {
+  color: var(--accent);
+}
+
+/* Blog post body */
 .prose-esa {
-  color: var(--body-text);
-  font-size: 16px;
+  color: var(--neutral-700);
+  font-size: 17px;
   line-height: 1.75;
+  max-width: 68ch;
 }
 .prose-esa p {
   margin: 0 0 1.25em;
 }
 .prose-esa h2 {
-  font-family: var(--font-fraunces), Georgia, serif;
-  font-size: 1.85rem;
+  font-size: 1.65rem;
   font-weight: 600;
-  color: var(--navy-900);
-  margin: 2.5rem 0 1rem;
-  letter-spacing: -0.01em;
+  color: var(--neutral-950);
+  letter-spacing: -0.02em;
+  margin: 2.75rem 0 1rem;
 }
 .prose-esa h3 {
-  font-family: var(--font-fraunces), Georgia, serif;
-  font-size: 1.35rem;
+  font-size: 1.25rem;
   font-weight: 600;
-  color: var(--navy-900);
+  color: var(--neutral-950);
+  letter-spacing: -0.01em;
   margin: 2rem 0 0.75rem;
 }
 .prose-esa ul, .prose-esa ol {
   margin: 0 0 1.25em;
-  padding-left: 1.5rem;
+  padding-left: 1.4rem;
 }
 .prose-esa li {
-  margin-bottom: 0.6em;
+  margin-bottom: 0.55em;
 }
 .prose-esa li::marker {
-  color: var(--gold-600);
+  color: var(--neutral-400);
 }
 .prose-esa a {
-  color: var(--gold-700);
+  color: var(--accent);
   text-decoration: underline;
   text-underline-offset: 3px;
+  text-decoration-thickness: 1px;
 }
 .prose-esa a:hover {
-  color: var(--gold-800);
+  color: var(--accent-hover);
 }
 .prose-esa strong {
-  color: var(--navy-900);
+  color: var(--neutral-950);
   font-weight: 600;
 }
 .prose-esa blockquote {
-  border-left: 3px solid var(--gold-400);
-  padding: 0.5rem 0 0.5rem 1.5rem;
+  border-left: 2px solid var(--neutral-300);
+  padding: 0.25rem 0 0.25rem 1.25rem;
   margin: 1.5rem 0;
-  font-style: italic;
-  color: var(--navy-800);
+  color: var(--neutral-600);
 }
 
 @media (max-width: 640px) {
-  .prose-esa { font-size: 15.5px; }
-  .prose-esa h2 { font-size: 1.55rem; margin: 2rem 0 0.75rem; }
-  .prose-esa h3 { font-size: 1.2rem; margin: 1.5rem 0 0.5rem; }
+  .prose-esa { font-size: 16px; }
+  .prose-esa h2 { font-size: 1.45rem; margin: 2.25rem 0 0.75rem; }
+  .prose-esa h3 { font-size: 1.15rem; margin: 1.5rem 0 0.5rem; }
 }
 
-/* Reduce decorative blur effects on mobile for performance */
-@media (max-width: 768px) {
-  .blur-3xl { filter: blur(40px); }
-}
-
-/* Better tap targets on mobile */
 @media (max-width: 768px) {
   a, button, [role="button"] {
     min-height: 40px;

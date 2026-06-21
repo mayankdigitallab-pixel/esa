@@ -27,16 +27,14 @@ export default function FaqPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
       />
-      <section className="bg-cream-50 py-16 sm:py-20">
+      <section className="bg-white py-16 sm:py-20">
         <Container>
           <div className="max-w-3xl">
             <div className="flex items-center gap-3">
-              <span className="eyebrow">FAQ</span>
-              <span className="gold-divider" />
-            </div>
-            <h1 className="mt-5 font-serif text-5xl font-semibold leading-[1.05] tracking-tight text-navy-900 sm:text-6xl">
+              <span className="eyebrow">FAQ</span></div>
+            <h1 className="mt-5 text-5xl font-semibold leading-[1.05] tracking-tight text-neutral-950 sm:text-6xl">
               Questions, answered{" "}
-              <span className="text-gold-600 italic">honestly</span>
+              <span className="text-neutral-950">honestly</span>
             </h1>
             <p className="mt-6 text-base leading-relaxed text-body sm:text-lg">
               The questions parents and students ask us most often. If yours
@@ -46,20 +44,20 @@ export default function FaqPage() {
           </div>
         </Container>
       </section>
-      <section className="border-t border-cream-200 bg-white py-16 sm:py-20">
+      <section className="border-t border-neutral-200 bg-white py-16 sm:py-20">
         <Container>
           <div className="mx-auto max-w-3xl space-y-3">
             {faqs.map((f, i) => (
               <details
                 key={f.question}
-                className="group rounded border border-cream-200 bg-cream-50 p-5 open:border-gold-400 open:bg-white open:shadow-md"
+                className="group rounded border border-neutral-200 bg-white p-5 open:border-neutral-400 open:bg-white open:shadow-md"
                 open={i === 0}
               >
                 <summary className="flex cursor-pointer items-center justify-between gap-4 list-none">
-                  <span className="font-serif text-base font-semibold text-navy-900 sm:text-lg">
+                  <span className="text-base font-semibold text-neutral-950 sm:text-lg">
                     {f.question}
                   </span>
-                  <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full border border-gold-400 text-gold-700 transition group-open:rotate-45">
+                  <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full border border-neutral-400 text-neutral-950 transition group-open:rotate-45">
                     +
                   </span>
                 </summary>

@@ -19,26 +19,25 @@ export function SectionHeading({
   return (
     <div
       className={cn(
-        "mb-12 max-w-3xl space-y-4",
+        "mb-16 max-w-2xl space-y-5",
         isCenter && "mx-auto text-center",
         className,
       )}
     >
       {eyebrow ? (
-        <div
+        <p
           className={cn(
-            "flex items-center gap-3",
-            isCenter && "justify-center",
+            "eyebrow",
+            dark && "text-neutral-400",
           )}
         >
-          <span className="eyebrow">{eyebrow}</span>
-          <span className="gold-divider" />
-        </div>
+          {eyebrow}
+        </p>
       ) : null}
       <h2
         className={cn(
-          "text-4xl font-semibold leading-tight tracking-tight sm:text-5xl",
-          dark ? "text-white" : "text-navy-900",
+          "text-3xl font-semibold leading-[1.15] tracking-tight sm:text-4xl lg:text-5xl",
+          dark ? "text-white" : "text-neutral-950",
         )}
       >
         {title}
@@ -47,7 +46,7 @@ export function SectionHeading({
         <p
           className={cn(
             "text-base leading-relaxed sm:text-lg",
-            dark ? "text-navy-100" : "text-body",
+            dark ? "text-neutral-300" : "text-neutral-600",
           )}
         >
           {description}

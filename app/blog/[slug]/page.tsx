@@ -86,23 +86,21 @@ export default async function BlogPostPage({
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
       />
-      <article className="bg-cream-50 pb-20">
-        <header className="border-b border-cream-200 bg-white py-12 sm:py-16">
+      <article className="bg-white pb-20">
+        <header className="border-b border-neutral-200 bg-white py-12 sm:py-16">
           <Container>
             <Link
               href="/blog"
-              className="inline-flex items-center gap-1.5 text-xs uppercase tracking-wider text-muted transition hover:text-gold-700"
+              className="inline-flex items-center gap-1.5 text-xs uppercase tracking-wider text-muted transition hover:text-neutral-950"
             >
               <ChevronLeft className="h-3.5 w-3.5" />
               All posts
             </Link>
             <div className="mt-6 flex items-center gap-3">
-              <span className="font-mono text-[11px] uppercase tracking-widest text-gold-700">
+              <span className="text-[11px] uppercase tracking-widest text-neutral-950">
                 {post.category}
-              </span>
-              <span className="gold-divider" />
-            </div>
-            <h1 className="mt-4 max-w-4xl font-serif text-4xl font-semibold leading-tight text-navy-900 sm:text-5xl lg:text-6xl">
+              </span></div>
+            <h1 className="mt-4 max-w-4xl text-4xl font-semibold leading-tight text-neutral-950 sm:text-5xl lg:text-6xl">
               {post.title}
             </h1>
             <div className="mt-6 flex flex-wrap items-center gap-4 text-xs uppercase tracking-wider text-muted">
@@ -123,7 +121,7 @@ export default async function BlogPostPage({
           </Container>
         </header>
 
-        <div className="relative aspect-[16/9] max-h-[420px] overflow-hidden bg-navy-100 sm:max-h-[520px]">
+        <div className="relative aspect-[16/9] max-h-[420px] overflow-hidden bg-neutral-200 sm:max-h-[520px]">
           <Image
             src={post.cover}
             alt={post.title}
@@ -142,9 +140,9 @@ export default async function BlogPostPage({
         </Container>
       </article>
 
-      <section className="border-t border-cream-200 bg-white py-16 sm:py-20">
+      <section className="border-t border-neutral-200 bg-white py-16 sm:py-20">
         <Container>
-          <h2 className="font-serif text-2xl font-semibold text-navy-900 sm:text-3xl">
+          <h2 className="text-2xl font-semibold text-neutral-950 sm:text-3xl">
             Keep reading
           </h2>
           <div className="mt-8 grid gap-6 sm:grid-cols-2">
@@ -152,7 +150,7 @@ export default async function BlogPostPage({
               <Link
                 key={p.slug}
                 href={`/blog/${p.slug}`}
-                className="group flex items-center gap-5 rounded border border-cream-200 bg-cream-50 p-5 transition hover:border-gold-400 hover:shadow-lg"
+                className="group flex items-center gap-5 rounded border border-neutral-200 bg-white p-5 transition hover:border-neutral-400 hover:shadow-lg"
               >
                 <div className="relative h-24 w-24 shrink-0 overflow-hidden rounded sm:h-28 sm:w-28">
                   <Image
@@ -164,13 +162,13 @@ export default async function BlogPostPage({
                   />
                 </div>
                 <div>
-                  <p className="font-mono text-[10px] uppercase tracking-widest text-gold-700">
+                  <p className="text-[10px] uppercase tracking-widest text-neutral-950">
                     {p.category}
                   </p>
-                  <h3 className="mt-1 font-serif text-base font-semibold leading-snug text-navy-900 group-hover:text-gold-700 sm:text-lg">
+                  <h3 className="mt-1 text-base font-semibold leading-snug text-neutral-950 group-hover:text-neutral-950 sm:text-lg">
                     {p.title}
                   </h3>
-                  <span className="mt-2 inline-flex items-center gap-1 text-xs font-semibold text-gold-700">
+                  <span className="mt-2 inline-flex items-center gap-1 text-xs font-semibold text-neutral-950">
                     Read
                     <ArrowRight className="h-3.5 w-3.5" />
                   </span>

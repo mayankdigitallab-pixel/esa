@@ -1,11 +1,5 @@
 import Link from "next/link";
-import {
-  Phone,
-  Mail,
-  MapPin,
-  Clock,
-  GraduationCap,
-} from "lucide-react";
+import { Phone, Mail, MapPin } from "lucide-react";
 
 function FacebookIcon({ className }: { className?: string }) {
   return (
@@ -36,178 +30,114 @@ export function Footer() {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="bg-navy-900 text-navy-100">
-      <div className="border-b border-navy-700/50">
-        <div className="mx-auto grid max-w-6xl gap-10 px-5 py-14 sm:px-6 lg:grid-cols-4 lg:gap-12 lg:px-8 lg:py-16">
-          <div className="lg:col-span-1">
-            <Link href="/" className="flex items-center gap-2.5">
-              <span className="flex h-10 w-10 items-center justify-center rounded bg-gold-500 text-navy-900">
-                <GraduationCap className="h-5 w-5" />
+    <footer className="border-t border-neutral-200 bg-white">
+      <div className="mx-auto grid max-w-7xl gap-12 px-5 py-16 sm:px-6 lg:grid-cols-4 lg:gap-16 lg:px-8 lg:py-20">
+        <div className="lg:col-span-1">
+          <Link href="/" className="flex items-center gap-2.5">
+            <span className="flex h-9 w-9 items-center justify-center rounded-md bg-neutral-950 text-sm font-semibold tracking-tight text-white">
+              ESA
+            </span>
+            <span className="text-sm font-semibold tracking-tight text-neutral-950">
+              Excellent Students&apos; Academy
+            </span>
+          </Link>
+          <p className="mt-5 text-sm leading-relaxed text-neutral-600">
+            Coaching institute in Rohini, Delhi for Grades 1 to 12. Trusted by parents for disciplined tuition, expert faculty and consistent board results.
+          </p>
+          <div className="mt-6 flex gap-2">
+            <a
+              href={siteConfig.socials.facebook}
+              aria-label="Facebook"
+              className="flex h-9 w-9 items-center justify-center rounded-md border border-neutral-200 text-neutral-500 transition hover:border-neutral-950 hover:text-neutral-950"
+            >
+              <FacebookIcon className="h-4 w-4" />
+            </a>
+            <a
+              href={siteConfig.socials.instagram}
+              aria-label="Instagram"
+              className="flex h-9 w-9 items-center justify-center rounded-md border border-neutral-200 text-neutral-500 transition hover:border-neutral-950 hover:text-neutral-950"
+            >
+              <InstagramIcon className="h-4 w-4" />
+            </a>
+            <a
+              href={siteConfig.socials.youtube}
+              aria-label="YouTube"
+              className="flex h-9 w-9 items-center justify-center rounded-md border border-neutral-200 text-neutral-500 transition hover:border-neutral-950 hover:text-neutral-950"
+            >
+              <YoutubeIcon className="h-4 w-4" />
+            </a>
+          </div>
+        </div>
+
+        <div>
+          <h3 className="text-xs font-semibold uppercase tracking-wider text-neutral-500">
+            Programs
+          </h3>
+          <ul className="mt-5 space-y-3 text-sm">
+            <li><Link href="/programs#grades-1-5" className="text-neutral-700 transition hover:text-neutral-950">Classes 1 to 5</Link></li>
+            <li><Link href="/programs#grades-6-8" className="text-neutral-700 transition hover:text-neutral-950">Classes 6 to 8</Link></li>
+            <li><Link href="/programs#grades-9-10" className="text-neutral-700 transition hover:text-neutral-950">Classes 9 and 10</Link></li>
+            <li><Link href="/programs#grades-11-12" className="text-neutral-700 transition hover:text-neutral-950">Classes 11 and 12</Link></li>
+            <li><Link href="/programs#crash" className="text-neutral-700 transition hover:text-neutral-950">Crash Courses</Link></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 className="text-xs font-semibold uppercase tracking-wider text-neutral-500">
+            Quick Links
+          </h3>
+          <ul className="mt-5 space-y-3 text-sm">
+            <li><Link href="/about" className="text-neutral-700 transition hover:text-neutral-950">About Us</Link></li>
+            <li><Link href="/faculty" className="text-neutral-700 transition hover:text-neutral-950">Faculty</Link></li>
+            <li><Link href="/results" className="text-neutral-700 transition hover:text-neutral-950">Results</Link></li>
+            <li><Link href="/gallery" className="text-neutral-700 transition hover:text-neutral-950">Gallery</Link></li>
+            <li><Link href="/faq" className="text-neutral-700 transition hover:text-neutral-950">FAQ</Link></li>
+            <li><Link href="/contact" className="text-neutral-700 transition hover:text-neutral-950">Contact</Link></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 className="text-xs font-semibold uppercase tracking-wider text-neutral-500">
+            Reach Us
+          </h3>
+          <ul className="mt-5 space-y-3 text-sm">
+            <li className="flex gap-2.5">
+              <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-neutral-400" />
+              <span className="text-neutral-700">
+                {siteConfig.address.line1}, {siteConfig.address.line2}, {siteConfig.address.city} {siteConfig.address.pin}
               </span>
-              <span className="font-serif text-lg font-semibold text-white">
-                ESA
-              </span>
-            </Link>
-            <p className="mt-4 text-sm leading-relaxed text-navy-200">
-              Excellent Students&apos; Academy is a coaching institute in Rohini,
-              Delhi for Grades 1 to 12. Trusted by parents for disciplined
-              tuition, expert faculty and consistent board results.
-            </p>
-            <div className="mt-6 flex gap-3">
-              <a
-                href={siteConfig.socials.facebook}
-                aria-label="Facebook"
-                className="flex h-9 w-9 items-center justify-center rounded border border-navy-700 text-navy-200 transition hover:border-gold-500 hover:text-gold-400"
-              >
-                <FacebookIcon className="h-4 w-4" />
+            </li>
+            <li>
+              <a href={`tel:${siteConfig.phone}`} className="flex items-center gap-2.5 text-neutral-700 transition hover:text-neutral-950">
+                <Phone className="h-4 w-4 text-neutral-400" />
+                {siteConfig.phoneDisplay}
               </a>
-              <a
-                href={siteConfig.socials.instagram}
-                aria-label="Instagram"
-                className="flex h-9 w-9 items-center justify-center rounded border border-navy-700 text-navy-200 transition hover:border-gold-500 hover:text-gold-400"
-              >
-                <InstagramIcon className="h-4 w-4" />
+            </li>
+            <li>
+              <a href={`mailto:${siteConfig.email}`} className="flex items-center gap-2.5 text-neutral-700 transition hover:text-neutral-950">
+                <Mail className="h-4 w-4 text-neutral-400" />
+                {siteConfig.email}
               </a>
-              <a
-                href={siteConfig.socials.youtube}
-                aria-label="YouTube"
-                className="flex h-9 w-9 items-center justify-center rounded border border-navy-700 text-navy-200 transition hover:border-gold-500 hover:text-gold-400"
-              >
-                <YoutubeIcon className="h-4 w-4" />
-              </a>
-            </div>
-          </div>
-
-          <div>
-            <h3 className="font-serif text-base font-semibold text-white">
-              Programs
-            </h3>
-            <ul className="mt-4 space-y-3 text-sm">
-              <li>
-                <Link href="/programs#grades-1-5" className="text-navy-200 transition hover:text-gold-300">
-                  Classes 1 to 5
-                </Link>
-              </li>
-              <li>
-                <Link href="/programs#grades-6-8" className="text-navy-200 transition hover:text-gold-300">
-                  Classes 6 to 8
-                </Link>
-              </li>
-              <li>
-                <Link href="/programs#grades-9-10" className="text-navy-200 transition hover:text-gold-300">
-                  Classes 9 and 10
-                </Link>
-              </li>
-              <li>
-                <Link href="/programs#grades-11-12" className="text-navy-200 transition hover:text-gold-300">
-                  Classes 11 and 12
-                </Link>
-              </li>
-              <li>
-                <Link href="/programs#crash" className="text-navy-200 transition hover:text-gold-300">
-                  Crash Courses
-                </Link>
-              </li>
-            </ul>
-          </div>
-
-          <div>
-            <h3 className="font-serif text-base font-semibold text-white">
-              Quick Links
-            </h3>
-            <ul className="mt-4 space-y-3 text-sm">
-              <li>
-                <Link href="/about" className="text-navy-200 transition hover:text-gold-300">
-                  About Us
-                </Link>
-              </li>
-              <li>
-                <Link href="/faculty" className="text-navy-200 transition hover:text-gold-300">
-                  Our Faculty
-                </Link>
-              </li>
-              <li>
-                <Link href="/results" className="text-navy-200 transition hover:text-gold-300">
-                  Results
-                </Link>
-              </li>
-              <li>
-                <Link href="/gallery" className="text-navy-200 transition hover:text-gold-300">
-                  Gallery
-                </Link>
-              </li>
-              <li>
-                <Link href="/faq" className="text-navy-200 transition hover:text-gold-300">
-                  FAQ
-                </Link>
-              </li>
-              <li>
-                <Link href="/contact" className="text-navy-200 transition hover:text-gold-300">
-                  Contact
-                </Link>
-              </li>
-            </ul>
-          </div>
-
-          <div>
-            <h3 className="font-serif text-base font-semibold text-white">
-              Reach Us
-            </h3>
-            <ul className="mt-4 space-y-3 text-sm">
-              <li className="flex gap-2.5">
-                <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-gold-400" />
-                <span className="text-navy-200">
-                  {siteConfig.address.line1},{" "}
-                  {siteConfig.address.line2},{" "}
-                  {siteConfig.address.city} {siteConfig.address.pin}
-                </span>
-              </li>
-              <li>
-                <a
-                  href={`tel:${siteConfig.phone}`}
-                  className="flex items-center gap-2.5 text-navy-200 transition hover:text-gold-300"
-                >
-                  <Phone className="h-4 w-4 text-gold-400" />
-                  {siteConfig.phoneDisplay}
-                </a>
-              </li>
-              <li>
-                <a
-                  href={`mailto:${siteConfig.email}`}
-                  className="flex items-center gap-2.5 text-navy-200 transition hover:text-gold-300"
-                >
-                  <Mail className="h-4 w-4 text-gold-400" />
-                  {siteConfig.email}
-                </a>
-              </li>
-              <li className="flex gap-2.5">
-                <Clock className="mt-0.5 h-4 w-4 shrink-0 text-gold-400" />
-                <span className="text-navy-200">
-                  Mon to Sat: {siteConfig.hours.weekdays}
-                  <br />
-                  Sun: {siteConfig.hours.sunday}
-                </span>
-              </li>
-            </ul>
-          </div>
+            </li>
+          </ul>
         </div>
       </div>
 
-      <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-3 px-5 py-5 text-xs text-navy-300 sm:flex-row sm:px-6 lg:px-8">
-        <p>
-          &copy; {year} Excellent Students&apos; Academy. All rights reserved.
-        </p>
-        <p>
-          Reimagined by{" "}
-          <a
-            href="https://www.mayankdigitallabs.in"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="font-medium text-gold-400 transition hover:text-gold-300"
-          >
-            Mayank Digital Labs
-          </a>
-        </p>
+      <div className="border-t border-neutral-200">
+        <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-3 px-5 py-6 text-xs text-neutral-500 sm:flex-row sm:px-6 lg:px-8">
+          <p>&copy; {year} Excellent Students&apos; Academy. All rights reserved.</p>
+          <p>
+            Reimagined by{" "}
+            <a
+              href="https://www.mayankdigitallabs.in"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-medium text-neutral-700 transition hover:text-neutral-950"
+            >
+              Mayank Digital Labs
+            </a>
+          </p>
+        </div>
       </div>
     </footer>
   );

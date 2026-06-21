@@ -22,9 +22,9 @@ export function EnquiryForm() {
 
   if (sent) {
     return (
-      <div className="mt-6 rounded border border-gold-300 bg-gold-50 p-6 text-center">
-        <CheckCircle2 className="mx-auto h-10 w-10 text-gold-600" />
-        <p className="mt-3 font-serif text-lg font-semibold text-navy-900">
+      <div className="mt-6 rounded border border-neutral-300 bg-neutral-50 p-6 text-center">
+        <CheckCircle2 className="mx-auto h-10 w-10 text-neutral-950" />
+        <p className="mt-3 text-lg font-semibold text-neutral-950">
           Your enquiry is on its way
         </p>
         <p className="mt-1 text-sm text-body">
@@ -43,7 +43,7 @@ export function EnquiryForm() {
           required
           value={name}
           onChange={(e) => setName(e.target.value)}
-          className="w-full rounded border border-cream-200 bg-white px-4 py-3 text-sm text-ink outline-none transition focus:border-gold-500"
+          className="w-full rounded border border-neutral-200 bg-white px-4 py-3 text-sm text-ink outline-none transition focus:border-neutral-950"
           placeholder="Your full name"
         />
       </Field>
@@ -54,7 +54,7 @@ export function EnquiryForm() {
           pattern="[0-9+\s-]{10,}"
           value={phone}
           onChange={(e) => setPhone(e.target.value)}
-          className="w-full rounded border border-cream-200 bg-white px-4 py-3 text-sm text-ink outline-none transition focus:border-gold-500"
+          className="w-full rounded border border-neutral-200 bg-white px-4 py-3 text-sm text-ink outline-none transition focus:border-neutral-950"
           placeholder="10 digit mobile"
         />
       </Field>
@@ -63,7 +63,7 @@ export function EnquiryForm() {
           required
           value={grade}
           onChange={(e) => setGrade(e.target.value)}
-          className="w-full rounded border border-cream-200 bg-white px-4 py-3 text-sm text-ink outline-none transition focus:border-gold-500"
+          className="w-full rounded border border-neutral-200 bg-white px-4 py-3 text-sm text-ink outline-none transition focus:border-neutral-950"
         >
           <option value="">Select class</option>
           {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12].map((g) => (
@@ -78,7 +78,7 @@ export function EnquiryForm() {
           type="text"
           value={subjects}
           onChange={(e) => setSubjects(e.target.value)}
-          className="w-full rounded border border-cream-200 bg-white px-4 py-3 text-sm text-ink outline-none transition focus:border-gold-500"
+          className="w-full rounded border border-neutral-200 bg-white px-4 py-3 text-sm text-ink outline-none transition focus:border-neutral-950"
           placeholder="e.g. Math, Science, Social Science"
         />
       </Field>
@@ -87,13 +87,13 @@ export function EnquiryForm() {
           value={message}
           onChange={(e) => setMessage(e.target.value)}
           rows={3}
-          className="w-full rounded border border-cream-200 bg-white px-4 py-3 text-sm text-ink outline-none transition focus:border-gold-500"
+          className="w-full rounded border border-neutral-200 bg-white px-4 py-3 text-sm text-ink outline-none transition focus:border-neutral-950"
           placeholder="Tell us a little about your goals (optional)"
         />
       </Field>
       <button
         type="submit"
-        className="flex w-full items-center justify-center gap-2 rounded bg-navy-900 px-6 py-3.5 text-sm font-semibold text-white transition hover:bg-navy-700"
+        className="flex w-full items-center justify-center gap-2 rounded bg-neutral-950 px-6 py-3.5 text-sm font-semibold text-white transition hover:bg-neutral-800"
       >
         Send via WhatsApp
         <Send className="h-4 w-4" />
@@ -119,7 +119,7 @@ function Field({
     <label className="block">
       <span className="mb-1.5 block text-xs font-semibold uppercase tracking-wider text-muted">
         {label}
-        {required ? <span className="ml-1 text-gold-600">*</span> : null}
+        {required ? <span className="ml-1 text-neutral-950">*</span> : null}
       </span>
       {children}
     </label>

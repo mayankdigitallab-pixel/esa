@@ -28,16 +28,14 @@ export const metadata: Metadata = {
 export default function ProgramsPage() {
   return (
     <div>
-      <section className="bg-cream-50 py-16 sm:py-20">
+      <section className="bg-white py-16 sm:py-20">
         <Container>
           <div className="max-w-3xl">
             <div className="flex items-center gap-3">
-              <span className="eyebrow">Programs</span>
-              <span className="gold-divider" />
-            </div>
-            <h1 className="mt-5 font-serif text-5xl font-semibold leading-[1.05] tracking-tight text-navy-900 sm:text-6xl">
+              <span className="eyebrow">Programs</span></div>
+            <h1 className="mt-5 text-5xl font-semibold leading-[1.05] tracking-tight text-neutral-950 sm:text-6xl">
               Coaching programs for{" "}
-              <span className="text-gold-600 italic">every class</span>, from
+              <span className="text-neutral-950">every class</span>, from
               Grade 1 to Grade 12
             </h1>
             <p className="mt-6 text-base leading-relaxed text-body sm:text-lg">
@@ -49,7 +47,7 @@ export default function ProgramsPage() {
         </Container>
       </section>
 
-      <section className="border-t border-cream-200 bg-white py-20 sm:py-24">
+      <section className="border-t border-neutral-200 bg-white py-20 sm:py-24">
         <Container>
           <div className="space-y-16">
             {programs.map((p, i) => (
@@ -59,13 +57,13 @@ export default function ProgramsPage() {
                 className="grid scroll-mt-24 items-start gap-10 lg:grid-cols-[0.4fr_0.6fr]"
               >
                 <div>
-                  <p className="font-mono text-[11px] uppercase tracking-widest text-gold-700">
+                  <p className="text-[11px] uppercase tracking-widest text-neutral-950">
                     {`Program 0${i + 1}`}
                   </p>
                   <p className="mt-2 text-sm font-semibold uppercase tracking-wider text-muted">
                     {p.grades}
                   </p>
-                  <h2 className="mt-2 font-serif text-3xl font-semibold leading-tight text-navy-900 sm:text-4xl">
+                  <h2 className="mt-2 text-3xl font-semibold leading-tight text-neutral-950 sm:text-4xl">
                     {p.label}
                   </h2>
                   <p className="mt-4 text-sm leading-relaxed text-body">
@@ -73,23 +71,23 @@ export default function ProgramsPage() {
                   </p>
                   <div className="mt-6 space-y-3 text-sm text-body">
                     <div className="flex items-start gap-3">
-                      <BookOpen className="mt-0.5 h-4 w-4 shrink-0 text-gold-600" />
+                      <BookOpen className="mt-0.5 h-4 w-4 shrink-0 text-neutral-950" />
                       <span>
-                        <strong className="text-navy-900">Subjects:</strong>{" "}
+                        <strong className="text-neutral-950">Subjects:</strong>{" "}
                         {p.subjects.join(", ")}
                       </span>
                     </div>
                     <div className="flex items-start gap-3">
-                      <Calendar className="mt-0.5 h-4 w-4 shrink-0 text-gold-600" />
+                      <Calendar className="mt-0.5 h-4 w-4 shrink-0 text-neutral-950" />
                       <span>
-                        <strong className="text-navy-900">Schedule:</strong>{" "}
+                        <strong className="text-neutral-950">Schedule:</strong>{" "}
                         {p.schedule}
                       </span>
                     </div>
                     <div className="flex items-start gap-3">
-                      <IndianRupee className="mt-0.5 h-4 w-4 shrink-0 text-gold-600" />
+                      <IndianRupee className="mt-0.5 h-4 w-4 shrink-0 text-neutral-950" />
                       <span>
-                        <strong className="text-navy-900">Fee:</strong>{" "}
+                        <strong className="text-neutral-950">Fee:</strong>{" "}
                         {p.feeRange}
                       </span>
                     </div>
@@ -110,13 +108,13 @@ export default function ProgramsPage() {
                     </Link>
                   </div>
                 </div>
-                <ul className="rounded border border-cream-200 bg-cream-50 p-7 space-y-4">
-                  <p className="font-serif text-base font-semibold text-navy-900">
+                <ul className="rounded border border-neutral-200 bg-white p-7 space-y-4">
+                  <p className="text-base font-semibold text-neutral-950">
                     What this program includes
                   </p>
                   {p.highlights.map((h) => (
                     <li key={h} className="flex items-start gap-3 text-sm text-body">
-                      <CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0 text-gold-600" />
+                      <CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0 text-neutral-950" />
                       {h}
                     </li>
                   ))}
@@ -126,13 +124,13 @@ export default function ProgramsPage() {
 
             <article
               id="crash"
-              className="grid scroll-mt-24 items-start gap-10 rounded border-2 border-gold-400 bg-cream-50 p-8 lg:grid-cols-[0.4fr_0.6fr] sm:p-10"
+              className="grid scroll-mt-24 items-start gap-10 rounded border-2 border-neutral-400 bg-white p-8 lg:grid-cols-[0.4fr_0.6fr] sm:p-10"
             >
               <div>
-                <p className="font-mono text-[11px] uppercase tracking-widest text-gold-700">
+                <p className="text-[11px] uppercase tracking-widest text-neutral-950">
                   Special Program
                 </p>
-                <h2 className="mt-2 font-serif text-3xl font-semibold leading-tight text-navy-900 sm:text-4xl">
+                <h2 className="mt-2 text-3xl font-semibold leading-tight text-neutral-950 sm:text-4xl">
                   Crash Courses
                 </h2>
                 <p className="mt-2 text-sm font-semibold uppercase tracking-wider text-muted">
@@ -149,7 +147,7 @@ export default function ProgramsPage() {
                       "Hello ESA, I want details on the Crash Course",
                     )}
                     target="_blank"
-                    className="btn-gold"
+                    className="btn-primary"
                   >
                     Get Crash Course Details
                     <ArrowRight className="h-4 w-4" />
@@ -165,7 +163,7 @@ export default function ProgramsPage() {
                   "One-on-one diagnostic test at the start",
                 ].map((h) => (
                   <li key={h} className="flex items-start gap-3 text-sm text-body">
-                    <CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0 text-gold-600" />
+                    <CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0 text-neutral-950" />
                     {h}
                   </li>
                 ))}
