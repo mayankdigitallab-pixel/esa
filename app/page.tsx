@@ -21,6 +21,7 @@ import {
 } from "lucide-react";
 import { Container } from "@/components/ui/Container";
 import { SectionHeading } from "@/components/ui/SectionHeading";
+import { HeroSlider } from "@/components/HeroSlider";
 import { programs, subjects } from "@/data/programs";
 import { faculty } from "@/data/faculty";
 import { testimonials } from "@/data/testimonials";
@@ -128,77 +129,7 @@ export default function HomePage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(orgSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
-      {/* HERO - teal background */}
-      <section className="relative overflow-hidden bg-gradient-to-br from-teal-600 via-teal-700 to-teal-800 text-white">
-        <div className="pointer-events-none absolute -right-32 -top-32 h-96 w-96 rounded-full bg-teal-400/30 blur-3xl" />
-        <div className="pointer-events-none absolute -bottom-32 -left-32 h-96 w-96 rounded-full bg-red-500/20 blur-3xl" />
-        <Container className="relative grid items-center gap-14 py-20 lg:grid-cols-[1.1fr_0.9fr] lg:py-28">
-          <div>
-            <span className="inline-flex items-center gap-2 rounded-full bg-white/15 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.16em] text-teal-50 backdrop-blur">
-              <span className="h-1.5 w-1.5 rounded-full bg-red-400" />
-              Rohini Sector 7 · New Delhi
-            </span>
-            <h1 className="mt-6 text-5xl font-extrabold leading-[1.02] tracking-tight sm:text-6xl lg:text-7xl">
-              Coaching in Rohini where{" "}
-              <span className="relative inline-block">
-                <span className="relative z-10 text-white">ambition</span>
-                <span className="absolute inset-x-0 bottom-1 h-3 bg-red-500/70 -z-0" aria-hidden />
-              </span>{" "}
-              meets discipline.
-            </h1>
-            <p className="mt-7 max-w-xl text-base leading-relaxed text-teal-50 sm:text-lg">
-              For 9+ years, Excellent Students&apos; Academy has been the trusted coaching institute for students from Class 1 to 12 across Rohini, Pitampura, Shalimar Bagh and nearby Delhi areas.
-            </p>
-            <div className="mt-9 flex flex-wrap items-center gap-3">
-              <Link href="/contact#enquiry" className="btn-primary">
-                Book free demo class
-                <ArrowRight className="h-4 w-4" />
-              </Link>
-              <Link href="/programs" className="btn-on-teal">
-                Explore programs
-              </Link>
-            </div>
-            <div className="mt-12 flex flex-wrap items-center gap-6 border-t border-white/15 pt-7 sm:gap-10">
-              <div className="flex items-center gap-1.5">
-                <div className="flex gap-0.5 text-yellow-300">
-                  {Array.from({ length: 5 }).map((_, i) => (
-                    <Star key={i} className="h-4 w-4 fill-current" />
-                  ))}
-                </div>
-                <span className="text-sm font-semibold">4.9</span>
-                <span className="text-sm text-teal-100">/ 300+ reviews</span>
-              </div>
-              <div className="h-6 w-px bg-white/20" />
-              <p className="text-sm text-teal-100">Trusted by parents across North Delhi</p>
-            </div>
-          </div>
-
-          <div className="relative">
-            <div className="absolute -inset-4 rounded-3xl bg-gradient-to-br from-red-500/30 to-teal-400/20 blur-2xl" />
-            <div className="relative aspect-[4/5] overflow-hidden rounded-2xl ring-2 ring-white/20 shadow-2xl">
-              <Image
-                src="https://images.unsplash.com/photo-1581726707445-75cbe4efc586?auto=format&fit=crop&w=900&q=80"
-                alt="Students studying at Excellent Students' Academy, the best coaching institute in Rohini Sector 7"
-                fill
-                sizes="(max-width: 1024px) 100vw, 45vw"
-                className="object-cover"
-                priority
-              />
-              <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-neutral-950/70 to-transparent p-5">
-                <div className="flex items-center gap-3 rounded-lg bg-white/95 p-3 backdrop-blur">
-                  <span className="flex h-10 w-10 items-center justify-center rounded-full bg-red-500 text-white">
-                    <Sparkles className="h-5 w-5" />
-                  </span>
-                  <div>
-                    <p className="text-xs font-semibold uppercase tracking-wider text-red-600">7-day free demo</p>
-                    <p className="text-sm font-medium text-charcoal">No pressure. Try a real batch.</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </Container>
-      </section>
+      <HeroSlider />
 
       {/* TRUST STRIP */}
       <section className="border-b border-neutral-200 bg-white">
