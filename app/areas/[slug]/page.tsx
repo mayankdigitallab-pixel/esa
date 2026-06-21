@@ -3,6 +3,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { MapPin, ArrowRight, CheckCircle2 } from "lucide-react";
 import { Container } from "@/components/ui/Container";
+import { PageBanner } from "@/components/ui/PageBanner";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { nearbyAreas } from "@/data/areas";
 import { siteConfig, whatsappLink } from "@/data/site";
@@ -49,50 +50,13 @@ export default async function AreaPage({
 
   return (
     <div>
-      <section className="bg-white py-16 sm:py-20">
-        <Container>
-          <Link
-            href="/"
-            className="inline-flex items-center gap-1.5 text-xs uppercase tracking-wider text-muted transition hover:text-teal-700"
-          >
-            Home
-          </Link>
-          <div className="mt-6 max-w-3xl">
-            <div className="flex items-center gap-3">
-              <MapPin className="h-4 w-4 text-charcoal" />
-              <span className="eyebrow">
-                {area.distanceKm === 0 ? "Our home base" : `${area.distanceKm} km from our centre`}
-              </span></div>
-            <h1 className="mt-5 text-4xl font-semibold leading-[1.1] tracking-tight text-charcoal sm:text-5xl lg:text-6xl">
-              Best Coaching in{" "}
-              <span className="text-charcoal">{area.name}</span> for
-              Class 1 to 12
-            </h1>
-            <p className="mt-6 text-base leading-relaxed text-body sm:text-lg">
-              {area.description} Excellent Students&apos; Academy is the
-              trusted coaching choice for {area.name} families looking for
-              serious board exam preparation and consistent academic
-              improvement.
-            </p>
-            <div className="mt-8 flex flex-wrap gap-3">
-              <Link href="/contact#enquiry" className="btn-primary">
-                Book Free Demo
-                <ArrowRight className="h-4 w-4" />
-              </Link>
-              <a
-                href={whatsappLink(
-                  `Hello ESA, I am from ${area.name} and want to enquire about coaching for my child`,
-                )}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn-outline"
-              >
-                WhatsApp Us
-              </a>
-            </div>
-          </div>
-        </Container>
-      </section>
+      <PageBanner
+        label={`Coaching · ${area.name}`}
+        image="https://images.unsplash.com/photo-1543269865-cbf427effbad?auto=format&fit=crop&w=1920&q=80"
+        imageAlt={`Coaching classes for students in ${area.name}`}
+        heading={<>Best coaching for Class 1 to 12 in {area.name}.</>}
+        subtitle={`ESA's Rohini Sector 7 centre serves students from ${area.name} and nearby North Delhi areas. Home tuition also available across most of these localities.`}
+      />
 
       <section className="border-t border-neutral-200 bg-white py-16 sm:py-24">
         <Container>

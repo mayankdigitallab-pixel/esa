@@ -87,23 +87,23 @@ export default async function BlogPostPage({
         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
       />
       <article className="bg-white pb-20">
-        <header className="border-b border-neutral-200 bg-white py-12 sm:py-16">
+        <header className="bg-gradient-to-br from-charcoal via-charcoal/95 to-charcoal py-12 text-white sm:py-16">
           <Container>
             <Link
               href="/blog"
-              className="inline-flex items-center gap-1.5 text-xs uppercase tracking-wider text-muted transition hover:text-teal-700"
+              className="inline-flex items-center gap-1.5 text-xs uppercase tracking-wider text-white/70 transition hover:text-teal-300"
             >
               <ChevronLeft className="h-3.5 w-3.5" />
               All posts
             </Link>
             <div className="mt-6 flex items-center gap-3">
-              <span className="text-[11px] uppercase tracking-widest text-charcoal">
+              <span className="text-[11px] uppercase tracking-widest text-teal-300">
                 {post.category}
               </span></div>
-            <h1 className="mt-4 max-w-4xl text-4xl font-semibold leading-tight text-charcoal sm:text-5xl lg:text-6xl">
+            <h1 className="mt-4 max-w-4xl text-4xl font-semibold leading-tight text-white sm:text-5xl lg:text-6xl">
               {post.title}
             </h1>
-            <div className="mt-6 flex flex-wrap items-center gap-4 text-xs uppercase tracking-wider text-muted">
+            <div className="mt-6 flex flex-wrap items-center gap-4 text-xs uppercase tracking-wider text-white/75">
               <span className="flex items-center gap-1.5">
                 <Calendar className="h-3.5 w-3.5" />
                 {new Date(post.date).toLocaleDateString("en-IN", {

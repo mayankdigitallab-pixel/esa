@@ -4,6 +4,7 @@ import Link from "next/link";
 import { ArrowRight, Calendar, Clock } from "lucide-react";
 import { Container } from "@/components/ui/Container";
 import { SectionHeading } from "@/components/ui/SectionHeading";
+import { PageBanner } from "@/components/ui/PageBanner";
 import { blogPosts } from "@/data/blog";
 
 export const metadata: Metadata = {
@@ -28,22 +29,13 @@ export default function BlogIndexPage() {
   const [featured, ...rest] = sorted;
   return (
     <div>
-      <section className="bg-white py-16 sm:py-20">
-        <Container>
-          <div className="max-w-3xl">
-            <div className="flex items-center gap-3">
-              <span className="eyebrow">Blog</span></div>
-            <h1 className="mt-5 text-5xl font-semibold leading-[1.05] tracking-tight text-charcoal sm:text-6xl">
-              Stories, strategies and{" "}
-              <span className="text-charcoal">topper journeys</span>
-            </h1>
-            <p className="mt-6 text-base leading-relaxed text-body sm:text-lg">
-              Practical guides for parents, exam strategies for students and
-              real stories from inside our Rohini classrooms.
-            </p>
-          </div>
-        </Container>
-      </section>
+      <PageBanner
+        label="ESA Blog"
+        image="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&w=1920&q=80"
+        imageAlt="Student studying at Excellent Students Academy"
+        heading={<>Guides for parents and students in Rohini.</>}
+        subtitle="Board exam strategy, stream choice, coaching selection, study habits and Rohini-specific parenting tips from the faculty at ESA."
+      />
 
       {featured ? (
         <section className="border-t border-neutral-200 bg-white py-16 sm:py-20">

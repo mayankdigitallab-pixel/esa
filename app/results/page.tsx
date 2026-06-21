@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import { Container } from "@/components/ui/Container";
 import { SectionHeading } from "@/components/ui/SectionHeading";
+import { PageBanner, BannerStatsRight } from "@/components/ui/PageBanner";
 import { toppers, resultsStats } from "@/data/results";
 
 export const metadata: Metadata = {
@@ -21,38 +22,23 @@ export const metadata: Metadata = {
 export default function ResultsPage() {
   return (
     <div>
-      <section className="bg-white py-16 sm:py-20">
-        <Container>
-          <div className="max-w-3xl">
-            <div className="flex items-center gap-3">
-              <span className="eyebrow">Results</span></div>
-            <h1 className="mt-5 text-5xl font-semibold leading-[1.05] tracking-tight text-charcoal sm:text-6xl">
-              Where weekly tests turn into{" "}
-              <span className="text-charcoal">board scores</span>
-            </h1>
-            <p className="mt-6 text-base leading-relaxed text-body sm:text-lg">
-              A snapshot of how our Class 10 and Class 12 students performed in
-              recent CBSE board exams. Behind every score is months of weekly
-              testing, mock exams and disciplined revision.
-            </p>
-          </div>
-          <div className="mt-12 grid gap-6 sm:grid-cols-4">
-            {resultsStats.map((s) => (
-              <div
-                key={s.label}
-                className="rounded border border-neutral-200 bg-white p-6 text-center shadow-sm"
-              >
-                <p className="text-4xl font-semibold text-charcoal sm:text-5xl">
-                  {s.value}
-                </p>
-                <p className="mt-2 text-xs uppercase tracking-wider text-muted">
-                  {s.label}
-                </p>
-              </div>
-            ))}
-          </div>
-        </Container>
-      </section>
+      <PageBanner
+        label="Recent Results"
+        image="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=1920&q=80"
+        imageAlt="ESA students celebrating their board exam results"
+        heading={<>Students who turned hard work into real scores.</>}
+        subtitle="Class 10 and Class 12 board results from our Rohini centre. Each name reflects months of weekly testing, mock exams and disciplined revision."
+        right={
+          <BannerStatsRight
+            stats={[
+              { value: "100%", label: "Pass percentage" },
+              { value: "84%", label: "Average score" },
+              { value: "95+", label: "Top scorers" },
+              { value: "5+", label: "90%+ scorers" },
+            ]}
+          />
+        }
+      />
 
       <section className="border-t border-neutral-200 bg-white py-20 sm:py-24">
         <Container>

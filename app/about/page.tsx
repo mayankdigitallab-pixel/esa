@@ -12,6 +12,7 @@ import {
 } from "lucide-react";
 import { Container } from "@/components/ui/Container";
 import { SectionHeading } from "@/components/ui/SectionHeading";
+import { PageBanner, BannerStatsRight } from "@/components/ui/PageBanner";
 
 export const metadata: Metadata = {
   title: "About Us | Best Coaching Institute in Rohini Since 2015",
@@ -90,26 +91,23 @@ const timeline = [
 export default function AboutPage() {
   return (
     <div>
-      <section className="relative overflow-hidden bg-white py-16 sm:py-20">
-        <div className="hidden" />
-        <Container className="relative">
-          <div className="max-w-3xl">
-            <div className="flex items-center gap-3">
-              <span className="eyebrow">About ESA</span></div>
-            <h1 className="mt-5 text-5xl font-semibold leading-[1.05] tracking-tight text-charcoal sm:text-6xl">
-              Nine years of patient,{" "}
-              <span className="text-charcoal">disciplined</span> coaching
-              in Rohini
-            </h1>
-            <p className="mt-6 text-base leading-relaxed text-body sm:text-lg">
-              Excellent Students&apos; Academy started in 2015 as a single-room
-              tuition centre in Rohini Sector 7. Nine years later it remains
-              what it has always been, a place where Class 1 to 12 students go
-              to learn properly, not just to attend.
-            </p>
-          </div>
-        </Container>
-      </section>
+      <PageBanner
+        label="About ESA"
+        image="https://images.unsplash.com/photo-1577896851231-70ef18881754?auto=format&fit=crop&w=1920&q=80"
+        imageAlt="Excellent Students' Academy classroom in Rohini"
+        heading={<>Nine years of patient, disciplined coaching in Rohini.</>}
+        subtitle="Excellent Students' Academy started in 2015 as a single-room tuition centre in Rohini Sector 7. Nine years later it remains what it has always been - a place where Class 1 to 12 students go to learn properly, not just to attend."
+        right={
+          <BannerStatsRight
+            stats={[
+              { value: "9+", label: "Years of coaching" },
+              { value: "500+", label: "Students mentored" },
+              { value: "84%", label: "Average board score" },
+              { value: "100%", label: "Pass percentage" },
+            ]}
+          />
+        }
+      />
 
       <section className="border-y border-neutral-200 bg-white py-20 sm:py-24">
         <Container>

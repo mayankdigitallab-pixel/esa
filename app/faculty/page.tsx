@@ -4,6 +4,7 @@ import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { Container } from "@/components/ui/Container";
 import { SectionHeading } from "@/components/ui/SectionHeading";
+import { PageBanner, BannerStatsRight } from "@/components/ui/PageBanner";
 import { faculty } from "@/data/faculty";
 
 export const metadata: Metadata = {
@@ -23,23 +24,23 @@ export const metadata: Metadata = {
 export default function FacultyPage() {
   return (
     <div>
-      <section className="bg-white py-16 sm:py-20">
-        <Container>
-          <div className="max-w-3xl">
-            <div className="flex items-center gap-3">
-              <span className="eyebrow">Faculty</span></div>
-            <h1 className="mt-5 text-5xl font-semibold leading-[1.05] tracking-tight text-charcoal sm:text-6xl">
-              The mentors behind{" "}
-              <span className="text-charcoal">every result</span>
-            </h1>
-            <p className="mt-6 text-base leading-relaxed text-body sm:text-lg">
-              Six senior faculty members. Every mentor at ESA has spent more
-              than half a decade teaching the exact subject they handle today.
-              No revolving-door teachers, no junior helpers running classes.
-            </p>
-          </div>
-        </Container>
-      </section>
+      <PageBanner
+        label="Our Faculty"
+        image="https://images.unsplash.com/photo-1577896851231-70ef18881754?auto=format&fit=crop&w=1920&q=80"
+        imageAlt="ESA faculty teaching students in Rohini"
+        heading={<>Mentors who teach with conviction and care.</>}
+        subtitle="Six senior faculty members. Postgraduates and B.Tech holders with 6+ years coaching across CBSE and ICSE. They stay with the same batches for years - not gig-style replacement teachers."
+        right={
+          <BannerStatsRight
+            stats={[
+              { value: "6+", label: "Senior faculty" },
+              { value: "6+ yrs", label: "Avg experience" },
+              { value: "100%", label: "Subject specialists" },
+              { value: "WhatsApp", label: "Direct mentor access" },
+            ]}
+          />
+        }
+      />
 
       <section className="border-t border-neutral-200 bg-white py-20 sm:py-24">
         <Container>

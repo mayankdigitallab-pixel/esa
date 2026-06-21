@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import { Container } from "@/components/ui/Container";
 import { SectionHeading } from "@/components/ui/SectionHeading";
+import { PageBanner, BannerStatsRight } from "@/components/ui/PageBanner";
 
 export const metadata: Metadata = {
   title: "Gallery | Inside ESA Rohini",
@@ -61,22 +62,23 @@ const gallery = [
 export default function GalleryPage() {
   return (
     <div>
-      <section className="bg-white py-16 sm:py-20">
-        <Container>
-          <div className="max-w-3xl">
-            <div className="flex items-center gap-3">
-              <span className="eyebrow">Gallery</span></div>
-            <h1 className="mt-5 text-5xl font-semibold leading-[1.05] tracking-tight text-charcoal sm:text-6xl">
-              A look inside{" "}
-              <span className="text-charcoal">our classrooms</span>
-            </h1>
-            <p className="mt-6 text-base leading-relaxed text-body sm:text-lg">
-              Photos from a regular week at Excellent Students&apos; Academy in
-              Rohini Sector 7. Real batches, real students, no staged shoots.
-            </p>
-          </div>
-        </Container>
-      </section>
+      <PageBanner
+        label="Gallery"
+        image="https://images.unsplash.com/photo-1571260899304-425eee4c7efc?auto=format&fit=crop&w=1920&q=80"
+        imageAlt="ESA classroom and facility in Rohini Sector 7"
+        heading={<>Inside our Rohini centre.</>}
+        subtitle="A look at our AC classrooms, batches in session, board results, parent meetings and faculty across two floors at Sector 7."
+        right={
+          <BannerStatsRight
+            stats={[
+              { value: "2", label: "Floors AC premises" },
+              { value: "8+", label: "Classrooms" },
+              { value: "500+", label: "Students" },
+              { value: "Daily", label: "Open 10-8:30" },
+            ]}
+          />
+        }
+      />
 
       <section className="border-t border-neutral-200 bg-white py-16 sm:py-20">
         <Container>

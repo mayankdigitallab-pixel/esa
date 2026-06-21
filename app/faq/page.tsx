@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Container } from "@/components/ui/Container";
 import { SectionHeading } from "@/components/ui/SectionHeading";
+import { PageBanner } from "@/components/ui/PageBanner";
 import { faqs } from "@/data/faqs";
 
 export const metadata: Metadata = {
@@ -27,23 +28,13 @@ export default function FaqPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
       />
-      <section className="bg-white py-16 sm:py-20">
-        <Container>
-          <div className="max-w-3xl">
-            <div className="flex items-center gap-3">
-              <span className="eyebrow">FAQ</span></div>
-            <h1 className="mt-5 text-5xl font-semibold leading-[1.05] tracking-tight text-charcoal sm:text-6xl">
-              Questions, answered{" "}
-              <span className="text-charcoal">honestly</span>
-            </h1>
-            <p className="mt-6 text-base leading-relaxed text-body sm:text-lg">
-              The questions parents and students ask us most often. If yours
-              isn&apos;t covered, WhatsApp us and we will reply within working
-              hours.
-            </p>
-          </div>
-        </Container>
-      </section>
+      <PageBanner
+        label="Frequently Asked"
+        image="https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?auto=format&fit=crop&w=1920&q=80"
+        imageAlt="Parents discussing coaching options for their child"
+        heading={<>Questions parents ask before enrolling.</>}
+        subtitle="If your question is not here, WhatsApp us or call. We respond within working hours and can answer most questions before you commit to a demo."
+      />
       <section className="border-t border-neutral-200 bg-white py-16 sm:py-20">
         <Container>
           <div className="mx-auto max-w-3xl space-y-3">

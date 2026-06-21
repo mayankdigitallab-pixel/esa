@@ -10,6 +10,7 @@ import {
 } from "lucide-react";
 import { Container } from "@/components/ui/Container";
 import { SectionHeading } from "@/components/ui/SectionHeading";
+import { PageBanner, BannerContactRight } from "@/components/ui/PageBanner";
 import { siteConfig, whatsappLink } from "@/data/site";
 import { EnquiryForm } from "@/components/EnquiryForm";
 
@@ -29,22 +30,14 @@ export const metadata: Metadata = {
 export default function ContactPage() {
   return (
     <div>
-      <section className="bg-white py-16 sm:py-20">
-        <Container>
-          <div className="max-w-3xl">
-            <div className="flex items-center gap-3">
-              <span className="eyebrow">Contact</span></div>
-            <h1 className="mt-5 text-5xl font-semibold leading-[1.05] tracking-tight text-charcoal sm:text-6xl">
-              Talk to us. Book a{" "}
-              <span className="text-charcoal">free demo</span>.
-            </h1>
-            <p className="mt-6 text-base leading-relaxed text-body sm:text-lg">
-              We respond within working hours, Monday to Saturday. WhatsApp is
-              the fastest. Or visit our Rohini Sector 7 centre.
-            </p>
-          </div>
-        </Container>
-      </section>
+      <PageBanner
+        label="Get In Touch"
+        image="https://images.unsplash.com/photo-1497486751825-1233686d5d80?auto=format&fit=crop&w=1920&q=80"
+        imageAlt="Welcome to Excellent Students Academy in Rohini"
+        heading={<>Book a free demo. No fees. No pressure.</>}
+        subtitle="Visit our Sector 7 centre, call us, or send a WhatsApp. We respond within working hours and can book a demo slot the same day."
+        right={<BannerContactRight />}
+      />
 
       <section className="border-t border-neutral-200 bg-white py-16 sm:py-20">
         <Container>

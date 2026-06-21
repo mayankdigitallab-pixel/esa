@@ -3,6 +3,7 @@ import Link from "next/link";
 import { ArrowRight, CheckCircle2, Calendar, BookOpen, IndianRupee } from "lucide-react";
 import { Container } from "@/components/ui/Container";
 import { SectionHeading } from "@/components/ui/SectionHeading";
+import { PageBanner, BannerStatsRight } from "@/components/ui/PageBanner";
 import { programs } from "@/data/programs";
 import { whatsappLink } from "@/data/site";
 
@@ -28,24 +29,23 @@ export const metadata: Metadata = {
 export default function ProgramsPage() {
   return (
     <div>
-      <section className="bg-white py-16 sm:py-20">
-        <Container>
-          <div className="max-w-3xl">
-            <div className="flex items-center gap-3">
-              <span className="eyebrow">Programs</span></div>
-            <h1 className="mt-5 text-5xl font-semibold leading-[1.05] tracking-tight text-charcoal sm:text-6xl">
-              Coaching programs for{" "}
-              <span className="text-charcoal">every class</span>, from
-              Grade 1 to Grade 12
-            </h1>
-            <p className="mt-6 text-base leading-relaxed text-body sm:text-lg">
-              Pick the stage your child is at. Each program is structured around
-              chapter mastery, weekly tests and monthly review with parents.
-              Stream-wise specialisation for Class 11 and 12.
-            </p>
-          </div>
-        </Container>
-      </section>
+      <PageBanner
+        label="Our Programs"
+        image="https://images.unsplash.com/photo-1427504494785-3a9ca7044f45?auto=format&fit=crop&w=1920&q=80"
+        imageAlt="Students in ESA classroom"
+        heading={<>Coaching programs for Class 1 to 12 - built around weekly tests.</>}
+        subtitle="Foundation programs, middle school strengthening, Class 9-10 board prep, and Class 11-12 stream-specific coaching. Pick the right program for your child's stage."
+        right={
+          <BannerStatsRight
+            stats={[
+              { value: "1-12", label: "Classes covered" },
+              { value: "12+", label: "Subjects taught" },
+              { value: "84%", label: "Average board score" },
+              { value: "7 days", label: "Free demo" },
+            ]}
+          />
+        }
+      />
 
       <section className="border-t border-neutral-200 bg-white py-20 sm:py-24">
         <Container>
