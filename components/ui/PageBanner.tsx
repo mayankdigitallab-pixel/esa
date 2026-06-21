@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { Phone, Mail, MessageCircle, MapPin } from "lucide-react";
+import { Phone, Mail, MessageCircle, MapPin, Star, Calendar } from "lucide-react";
 
 interface PageBannerProps {
   image: string;
@@ -23,10 +23,10 @@ export function PageBanner({
   priority = true,
 }: PageBannerProps) {
   return (
-    <section className="esa-pb relative overflow-hidden" style={{ minHeight: 580 }}>
+    <section className="esa-pb relative overflow-hidden" style={{ minHeight: 640 }}>
       <style
         dangerouslySetInnerHTML={{
-          __html: `.esa-pb-left{padding:48px 20px;}.esa-pb-grid-right{grid-template-columns:1fr;}@media(min-width:1024px){.esa-pb-left{padding:80px 56px 80px 64px;}.esa-pb-grid-right{grid-template-columns:1fr 1px 380px;}}`,
+          __html: `.esa-pb-grid-inner{display:grid;grid-template-columns:1fr;}.esa-pb-left{padding:48px 24px;}@media(min-width:1024px){.esa-pb-grid-inner{grid-template-columns:1fr 1px 380px;}.esa-pb-left{padding:96px 64px 96px 80px;}}`,
         }}
       />
       <Image
@@ -38,35 +38,38 @@ export function PageBanner({
         priority={priority}
         quality={85}
       />
-      <div className="absolute inset-0 bg-gradient-to-r from-charcoal/90 via-charcoal/75 to-charcoal/45" aria-hidden />
-      <div className="absolute inset-0 bg-gradient-to-t from-charcoal/55 via-transparent to-transparent" aria-hidden />
+      <div className="absolute inset-0 bg-charcoal/65" aria-hidden />
 
       <div
-        className={`esa-pb-grid-inner relative z-10 grid items-center${right ? " esa-pb-grid-right" : ""}`}
-        style={{ minHeight: 580, gridTemplateColumns: right ? undefined : "1fr" }}
+        className="esa-pb-grid-inner relative z-10 items-center"
+        style={{ minHeight: 640 }}
       >
         <div className="esa-pb-left">
           {label && (
-            <div className="mb-7 flex items-center gap-3.5">
-              <span className="text-[11px] font-bold uppercase tracking-[0.22em] text-teal-300">
+            <div className="mb-8 flex items-center gap-4">
+              <span className="text-[11px] font-semibold uppercase tracking-[0.22em] text-teal-400">
                 {label}
               </span>
-              <span className="h-px w-11 bg-teal-300/80" />
+              <span className="h-px w-12 bg-teal-400" />
             </div>
           )}
           <h1
-            className="m-0 text-white"
+            className="m-0"
             style={{
-              fontSize: "clamp(2.6rem, 6.5vw, 5.5rem)",
-              fontWeight: 800,
-              lineHeight: 1,
-              letterSpacing: "-0.025em",
+              fontSize: "clamp(2.6rem, 7vw, 6.5rem)",
+              fontWeight: 600,
+              lineHeight: 0.98,
+              letterSpacing: "-0.03em",
+              color: "#F5F1E8",
             }}
           >
             {heading}
           </h1>
           {subtitle && (
-            <p className="mt-7 max-w-xl text-base leading-relaxed text-white/75 sm:text-lg">
+            <p
+              className="mt-7 max-w-xl text-base leading-relaxed sm:text-[17px]"
+              style={{ color: "rgba(255,255,255,0.62)" }}
+            >
               {subtitle}
             </p>
           )}
@@ -75,18 +78,58 @@ export function PageBanner({
 
         {right && (
           <div
-            className="hidden self-center bg-white/20 lg:block"
-            style={{ height: "60%", width: 1 }}
+            className="hidden self-center lg:block"
+            style={{ height: "62%", width: 1, background: "rgba(255,255,255,0.18)" }}
             aria-hidden
           />
         )}
         {right && (
-          <div className="hidden lg:block" style={{ padding: "80px 64px 80px 56px" }}>
+          <div className="hidden lg:block" style={{ padding: "96px 80px 96px 56px" }}>
             {right}
           </div>
         )}
       </div>
     </section>
+  );
+}
+
+// Generic row used by all right-panel variants
+function BannerRow({
+  icon,
+  label,
+  value,
+  href,
+}: {
+  icon: React.ReactNode;
+  label: string;
+  value: React.ReactNode;
+  href?: string;
+}) {
+  const inner = (
+    <div className="flex items-center gap-4">
+      <span
+        className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full text-teal-400"
+        style={{ border: "1px solid rgba(255,255,255,0.22)" }}
+      >
+        {icon}
+      </span>
+      <div>
+        <p
+          className="m-0 text-[10px] font-semibold uppercase tracking-[0.2em]"
+          style={{ color: "rgba(255,255,255,0.45)" }}
+        >
+          {label}
+        </p>
+        <p className="mt-1 text-sm font-semibold text-white">{value}</p>
+      </div>
+    </div>
+  );
+  return href ? (
+    <a href={href} className="block no-underline">
+      {inner}
+    </a>
+  ) : (
+    inner
   );
 }
 
@@ -101,18 +144,10 @@ export function BannerContactRight() {
     <div>
       {items.map((item, i) => (
         <div key={item.label}>
-          {i > 0 && <div className="my-4 h-px bg-white/12" />}
-          <a href={item.href} className="flex items-center gap-3.5 no-underline">
-            <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-white/25 text-teal-300">
-              {item.icon}
-            </span>
-            <div>
-              <p className="m-0 text-[10px] font-semibold uppercase tracking-[0.18em] text-white/40">
-                {item.label}
-              </p>
-              <p className="mt-1 text-sm font-bold text-white">{item.value}</p>
-            </div>
-          </a>
+          {i > 0 && (
+            <div className="my-5" style={{ height: 1, background: "rgba(255,255,255,0.12)" }} />
+          )}
+          <BannerRow icon={item.icon} label={item.label} value={item.value} href={item.href} />
         </div>
       ))}
     </div>
@@ -121,23 +156,63 @@ export function BannerContactRight() {
 
 export function BannerStatsRight({ stats }: { stats: { value: string; label: string }[] }) {
   return (
-    <div className="grid grid-cols-2 gap-x-6 gap-y-7">
+    <div>
       {stats.map((s, i) => (
         <div key={s.label}>
-          <div
-            className={i % 2 === 0 ? "text-teal-300" : "text-red-400"}
-            style={{
-              fontSize: "clamp(1.9rem, 2.7vw, 2.6rem)",
-              fontWeight: 800,
-              lineHeight: 1,
-              letterSpacing: "-0.02em",
-            }}
-          >
-            {s.value}
+          {i > 0 && (
+            <div className="my-6" style={{ height: 1, background: "rgba(255,255,255,0.12)" }} />
+          )}
+          <div>
+            <p
+              className="m-0 text-[10px] font-semibold uppercase tracking-[0.2em]"
+              style={{ color: "rgba(255,255,255,0.45)" }}
+            >
+              {s.label}
+            </p>
+            <p
+              className="mt-1 font-bold"
+              style={{
+                fontSize: "clamp(1.8rem, 2.6vw, 2.4rem)",
+                lineHeight: 1.05,
+                letterSpacing: "-0.02em",
+                color: i % 2 === 0 ? "#22D3EE" : "#F87171",
+              }}
+            >
+              {s.value}
+            </p>
           </div>
-          <div className="mt-1.5 text-xs leading-tight text-white/55">{s.label}</div>
         </div>
       ))}
+    </div>
+  );
+}
+
+export function BannerHeroRight() {
+  return (
+    <div>
+      <BannerRow
+        icon={<Star size={15} className="fill-current" />}
+        label="CLIENT RATING"
+        value={<>4.9 / 5 · 300+ parents trust ESA</>}
+      />
+      <div className="my-5" style={{ height: 1, background: "rgba(255,255,255,0.12)" }} />
+      <BannerRow
+        icon={<Phone size={15} />}
+        label="CALL US"
+        value="+91 88826 63340"
+        href="tel:+918882663340"
+      />
+      <div className="my-5" style={{ height: 1, background: "rgba(255,255,255,0.12)" }} />
+      <BannerRow
+        icon={<Calendar size={15} />}
+        label="FREE DEMO CLASS"
+        value={
+          <span className="inline-flex items-center gap-1">
+            Book a 7-day demo <span aria-hidden>→</span>
+          </span>
+        }
+        href="/contact#enquiry"
+      />
     </div>
   );
 }
