@@ -23,6 +23,7 @@ import { Container } from "@/components/ui/Container";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { HeroSlider } from "@/components/HeroSlider";
 import { CardCarousel } from "@/components/CardCarousel";
+import { FacultyMarquee } from "@/components/FacultyMarquee";
 import { HomeEnquiryForm } from "@/components/HomeEnquiryForm";
 import { NewsletterForm } from "@/components/NewsletterForm";
 import { programs, subjects } from "@/data/programs";
@@ -704,32 +705,7 @@ export default function HomePage() {
             </Link>
           </div>
           <div className="mt-12">
-            <CardCarousel lgCards={3} mdCards={2} tone="light" ariaLabel="Faculty carousel">
-              {faculty.slice(1).map((f) => (
-                <article key={f.slug} className="group h-full">
-                  <div className="relative aspect-[4/5] overflow-hidden rounded-2xl bg-neutral-100">
-                    <Image
-                      src={f.image}
-                      alt={`${f.name}, ${f.title} at Excellent Students' Academy Rohini`}
-                      fill
-                      sizes="(max-width: 1024px) 86vw, 33vw"
-                      className="object-cover transition duration-500 group-hover:scale-[1.04]"
-                    />
-                    <div className="absolute inset-x-0 bottom-0 h-36 bg-gradient-to-t from-charcoal/90 via-charcoal/30 to-transparent" />
-                    <span className="absolute left-4 top-4 inline-flex rounded-full bg-white/95 px-3 py-1 text-[10px] font-bold uppercase tracking-wider text-teal-700 backdrop-blur">
-                      {f.title}
-                    </span>
-                    <div className="absolute inset-x-0 bottom-0 p-5">
-                      <h3 className="text-lg font-bold tracking-tight text-white">{f.name}</h3>
-                      <p className="mt-1 text-xs text-white/80">{f.experience} · {f.qualification}</p>
-                    </div>
-                  </div>
-                  <p className="mt-4 text-sm text-charcoal-soft">
-                    Teaching <span className="font-semibold text-charcoal">{f.subjects}</span>
-                  </p>
-                </article>
-              ))}
-            </CardCarousel>
+            <FacultyMarquee />
           </div>
         </Container>
       </section>
