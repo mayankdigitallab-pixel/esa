@@ -726,8 +726,8 @@ export default function HomePage() {
             </Link>
           </div>
 
-          <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-            {toppers.slice(0, 8).map((t) => (
+          <div className="mt-12 grid gap-5 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5">
+            {toppers.map((t) => (
               <article
                 key={t.name}
                 className="group flex flex-col overflow-hidden rounded-2xl border border-neutral-200 bg-white transition hover:-translate-y-1 hover:shadow-xl"
@@ -750,7 +750,7 @@ export default function HomePage() {
                   <div className="absolute inset-x-0 bottom-0 p-4">
                     <h3 className="text-lg font-bold tracking-tight text-white">{t.name}</h3>
                     <p className="mt-1 text-[11px] font-medium text-white/85">
-                      {t.grade}{t.stream ? ` · ${t.stream}` : ""}
+                      {t.school ?? `${t.grade ?? ""}${t.stream ? ` · ${t.stream}` : ""}`}
                     </p>
                   </div>
                 </div>

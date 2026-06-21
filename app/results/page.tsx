@@ -61,12 +61,12 @@ export default function ResultsPage() {
                 <div className="relative aspect-[4/3] overflow-hidden">
                   <Image
                     src={t.image}
-                    alt={`${t.name}, ${t.grade} student at ESA Rohini`}
+                    alt={`${t.name}, student at ESA Rohini`}
                     fill
                     sizes="(max-width: 1024px) 100vw, 33vw"
                     className="object-cover"
                   />
-                  <div className="absolute right-3 top-3 rounded bg-neutral-950 px-3 py-1.5 text-lg font-semibold text-neutral-400 shadow-lg">
+                  <div className="absolute right-3 top-3 rounded bg-red-500 px-3 py-1.5 text-lg font-bold text-white shadow-lg">
                     {t.marks}
                   </div>
                 </div>
@@ -75,8 +75,7 @@ export default function ResultsPage() {
                     {t.name}
                   </h3>
                   <p className="mt-1 text-xs uppercase tracking-wider text-muted">
-                    {t.grade}
-                    {t.stream ? ` | ${t.stream}` : ""}
+                    {t.school ?? `${t.grade ?? ""}${t.stream ? ` | ${t.stream}` : ""}`}
                   </p>
                   {t.quote ? (
                     <p className="mt-3 text-sm leading-relaxed text-body">
