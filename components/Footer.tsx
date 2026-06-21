@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { Phone, Mail, MapPin } from "lucide-react";
 
 function FacebookIcon({ className }: { className?: string }) {
@@ -30,39 +31,43 @@ export function Footer() {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="border-t border-neutral-200 bg-white">
+    <footer className="bg-neutral-950 text-neutral-300">
       <div className="mx-auto grid max-w-7xl gap-12 px-5 py-16 sm:px-6 lg:grid-cols-4 lg:gap-16 lg:px-8 lg:py-20">
         <div className="lg:col-span-1">
-          <Link href="/" className="flex items-center gap-2.5">
-            <span className="flex h-9 w-9 items-center justify-center rounded-md bg-neutral-950 text-sm font-semibold tracking-tight text-white">
-              ESA
-            </span>
-            <span className="text-sm font-semibold tracking-tight text-neutral-950">
+          <Link href="/" className="flex items-center gap-3">
+            <Image
+              src="/esa-logo.jpg"
+              alt="Excellent Students' Academy logo"
+              width={56}
+              height={56}
+              className="h-12 w-12 rounded-full object-cover"
+            />
+            <span className="text-base font-bold tracking-tight text-white">
               Excellent Students&apos; Academy
             </span>
           </Link>
-          <p className="mt-5 text-sm leading-relaxed text-neutral-600">
+          <p className="mt-5 text-sm leading-relaxed text-neutral-400">
             Coaching institute in Rohini, Delhi for Grades 1 to 12. Trusted by parents for disciplined tuition, expert faculty and consistent board results.
           </p>
           <div className="mt-6 flex gap-2">
             <a
               href={siteConfig.socials.facebook}
               aria-label="Facebook"
-              className="flex h-9 w-9 items-center justify-center rounded-md border border-neutral-200 text-neutral-500 transition hover:border-neutral-950 hover:text-neutral-950"
+              className="flex h-9 w-9 items-center justify-center rounded-md border border-neutral-700 text-neutral-400 transition hover:border-teal-400 hover:text-teal-300"
             >
               <FacebookIcon className="h-4 w-4" />
             </a>
             <a
               href={siteConfig.socials.instagram}
               aria-label="Instagram"
-              className="flex h-9 w-9 items-center justify-center rounded-md border border-neutral-200 text-neutral-500 transition hover:border-neutral-950 hover:text-neutral-950"
+              className="flex h-9 w-9 items-center justify-center rounded-md border border-neutral-700 text-neutral-400 transition hover:border-teal-400 hover:text-teal-300"
             >
               <InstagramIcon className="h-4 w-4" />
             </a>
             <a
               href={siteConfig.socials.youtube}
               aria-label="YouTube"
-              className="flex h-9 w-9 items-center justify-center rounded-md border border-neutral-200 text-neutral-500 transition hover:border-neutral-950 hover:text-neutral-950"
+              className="flex h-9 w-9 items-center justify-center rounded-md border border-neutral-700 text-neutral-400 transition hover:border-red-400 hover:text-red-400"
             >
               <YoutubeIcon className="h-4 w-4" />
             </a>
@@ -70,52 +75,52 @@ export function Footer() {
         </div>
 
         <div>
-          <h3 className="text-xs font-semibold uppercase tracking-wider text-neutral-500">
+          <h3 className="text-xs font-bold uppercase tracking-wider text-teal-300">
             Programs
           </h3>
           <ul className="mt-5 space-y-3 text-sm">
-            <li><Link href="/programs#grades-1-5" className="text-neutral-700 transition hover:text-neutral-950">Classes 1 to 5</Link></li>
-            <li><Link href="/programs#grades-6-8" className="text-neutral-700 transition hover:text-neutral-950">Classes 6 to 8</Link></li>
-            <li><Link href="/programs#grades-9-10" className="text-neutral-700 transition hover:text-neutral-950">Classes 9 and 10</Link></li>
-            <li><Link href="/programs#grades-11-12" className="text-neutral-700 transition hover:text-neutral-950">Classes 11 and 12</Link></li>
-            <li><Link href="/programs#crash" className="text-neutral-700 transition hover:text-neutral-950">Crash Courses</Link></li>
+            <li><Link href="/programs#grades-1-5" className="text-neutral-300 transition hover:text-white">Classes 1 to 5</Link></li>
+            <li><Link href="/programs#grades-6-8" className="text-neutral-300 transition hover:text-white">Classes 6 to 8</Link></li>
+            <li><Link href="/programs#grades-9-10" className="text-neutral-300 transition hover:text-white">Classes 9 and 10</Link></li>
+            <li><Link href="/programs#grades-11-12" className="text-neutral-300 transition hover:text-white">Classes 11 and 12</Link></li>
+            <li><Link href="/programs#crash" className="text-neutral-300 transition hover:text-white">Crash Courses</Link></li>
           </ul>
         </div>
 
         <div>
-          <h3 className="text-xs font-semibold uppercase tracking-wider text-neutral-500">
+          <h3 className="text-xs font-bold uppercase tracking-wider text-teal-300">
             Quick Links
           </h3>
           <ul className="mt-5 space-y-3 text-sm">
-            <li><Link href="/about" className="text-neutral-700 transition hover:text-neutral-950">About Us</Link></li>
-            <li><Link href="/faculty" className="text-neutral-700 transition hover:text-neutral-950">Faculty</Link></li>
-            <li><Link href="/results" className="text-neutral-700 transition hover:text-neutral-950">Results</Link></li>
-            <li><Link href="/gallery" className="text-neutral-700 transition hover:text-neutral-950">Gallery</Link></li>
-            <li><Link href="/faq" className="text-neutral-700 transition hover:text-neutral-950">FAQ</Link></li>
-            <li><Link href="/contact" className="text-neutral-700 transition hover:text-neutral-950">Contact</Link></li>
+            <li><Link href="/about" className="text-neutral-300 transition hover:text-white">About Us</Link></li>
+            <li><Link href="/faculty" className="text-neutral-300 transition hover:text-white">Faculty</Link></li>
+            <li><Link href="/results" className="text-neutral-300 transition hover:text-white">Results</Link></li>
+            <li><Link href="/gallery" className="text-neutral-300 transition hover:text-white">Gallery</Link></li>
+            <li><Link href="/faq" className="text-neutral-300 transition hover:text-white">FAQ</Link></li>
+            <li><Link href="/contact" className="text-neutral-300 transition hover:text-white">Contact</Link></li>
           </ul>
         </div>
 
         <div>
-          <h3 className="text-xs font-semibold uppercase tracking-wider text-neutral-500">
+          <h3 className="text-xs font-bold uppercase tracking-wider text-teal-300">
             Reach Us
           </h3>
           <ul className="mt-5 space-y-3 text-sm">
             <li className="flex gap-2.5">
-              <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-neutral-400" />
-              <span className="text-neutral-700">
+              <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-teal-400" />
+              <span className="text-neutral-300">
                 {siteConfig.address.line1}, {siteConfig.address.line2}, {siteConfig.address.city} {siteConfig.address.pin}
               </span>
             </li>
             <li>
-              <a href={`tel:${siteConfig.phone}`} className="flex items-center gap-2.5 text-neutral-700 transition hover:text-neutral-950">
-                <Phone className="h-4 w-4 text-neutral-400" />
+              <a href={`tel:${siteConfig.phone}`} className="flex items-center gap-2.5 text-neutral-300 transition hover:text-white">
+                <Phone className="h-4 w-4 text-teal-400" />
                 {siteConfig.phoneDisplay}
               </a>
             </li>
             <li>
-              <a href={`mailto:${siteConfig.email}`} className="flex items-center gap-2.5 text-neutral-700 transition hover:text-neutral-950">
-                <Mail className="h-4 w-4 text-neutral-400" />
+              <a href={`mailto:${siteConfig.email}`} className="flex items-center gap-2.5 text-neutral-300 transition hover:text-white">
+                <Mail className="h-4 w-4 text-teal-400" />
                 {siteConfig.email}
               </a>
             </li>
@@ -123,7 +128,7 @@ export function Footer() {
         </div>
       </div>
 
-      <div className="border-t border-neutral-200">
+      <div className="border-t border-neutral-800">
         <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-3 px-5 py-6 text-xs text-neutral-500 sm:flex-row sm:px-6 lg:px-8">
           <p>&copy; {year} Excellent Students&apos; Academy. All rights reserved.</p>
           <p>
@@ -132,7 +137,7 @@ export function Footer() {
               href="https://www.mayankdigitallabs.in"
               target="_blank"
               rel="noopener noreferrer"
-              className="font-medium text-neutral-700 transition hover:text-neutral-950"
+              className="font-semibold text-teal-300 transition hover:text-teal-200"
             >
               Mayank Digital Labs
             </a>

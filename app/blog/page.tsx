@@ -86,7 +86,7 @@ export default function BlogIndexPage() {
                     {featured.readTime}
                   </span>
                 </div>
-                <span className="mt-6 inline-flex items-center gap-1.5 text-sm font-semibold text-neutral-950 transition group-hover:text-neutral-950">
+                <span className="mt-6 inline-flex items-center gap-1.5 text-sm font-semibold text-neutral-950 transition group-hover:text-teal-700">
                   Read full story
                   <ArrowRight className="h-4 w-4" />
                 </span>
@@ -122,7 +122,7 @@ export default function BlogIndexPage() {
                   <p className="text-[10px] uppercase tracking-widest text-neutral-950">
                     {p.category}
                   </p>
-                  <h3 className="mt-2 text-lg font-semibold leading-snug text-neutral-950 group-hover:text-neutral-950 sm:text-xl">
+                  <h3 className="mt-2 text-lg font-semibold leading-snug text-neutral-950 group-hover:text-teal-700 sm:text-xl">
                     {p.title}
                   </h3>
                   <p className="mt-3 text-sm leading-relaxed text-body line-clamp-3">

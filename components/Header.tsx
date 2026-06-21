@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import Link from "next/link";
 import { Menu, X, ArrowRight } from "lucide-react";
 import { cn } from "@/lib/utils";
@@ -19,17 +20,22 @@ export function Header() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-40 border-b border-neutral-200 bg-white/80 backdrop-blur-md">
-      <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-5 sm:px-6 lg:px-8">
-        <Link href="/" className="flex items-center gap-2.5">
-          <span className="flex h-9 w-9 items-center justify-center rounded-md bg-neutral-950 text-sm font-semibold tracking-tight text-white">
-            ESA
-          </span>
+    <header className="sticky top-0 z-40 border-b border-neutral-200 bg-white/90 backdrop-blur-md">
+      <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-5 sm:px-6 lg:px-8">
+        <Link href="/" className="flex items-center gap-3">
+          <Image
+            src="/esa-logo.jpg"
+            alt="Excellent Students' Academy logo"
+            width={56}
+            height={56}
+            className="h-12 w-12 rounded-full object-cover sm:h-14 sm:w-14"
+            priority
+          />
           <span className="hidden flex-col leading-none sm:flex">
-            <span className="text-sm font-semibold tracking-tight text-neutral-950">
+            <span className="text-base font-bold tracking-tight text-neutral-950">
               Excellent Students&apos; Academy
             </span>
-            <span className="mt-1 text-[11px] text-neutral-500">
+            <span className="mt-1 text-[11px] font-semibold uppercase tracking-[0.14em] text-teal-700">
               Coaching · Rohini, Delhi
             </span>
           </span>
@@ -40,7 +46,7 @@ export function Header() {
             <Link
               key={item.href}
               href={item.href}
-              className="text-sm text-neutral-600 transition hover:text-neutral-950"
+              className="text-sm font-medium text-neutral-700 transition hover:text-teal-700"
             >
               {item.label}
             </Link>
@@ -49,7 +55,7 @@ export function Header() {
 
         <Link
           href="/contact#enquiry"
-          className="hidden items-center gap-1.5 rounded-md bg-neutral-950 px-4 py-2 text-sm font-medium text-white transition hover:bg-neutral-800 lg:inline-flex"
+          className="hidden items-center gap-1.5 rounded-lg bg-red-500 px-4 py-2.5 text-sm font-semibold text-white shadow-sm transition hover:bg-red-600 lg:inline-flex"
         >
           Book Free Demo
           <ArrowRight className="h-3.5 w-3.5" />
@@ -79,7 +85,7 @@ export function Header() {
                 <Link
                   href={item.href}
                   onClick={() => setOpen(false)}
-                  className="block rounded-md px-3 py-2.5 text-sm text-neutral-700 transition hover:bg-neutral-50 hover:text-neutral-950"
+                  className="block rounded-md px-3 py-2.5 text-sm font-medium text-neutral-700 transition hover:bg-teal-50 hover:text-teal-700"
                 >
                   {item.label}
                 </Link>
@@ -89,7 +95,7 @@ export function Header() {
           <Link
             href="/contact#enquiry"
             onClick={() => setOpen(false)}
-            className="mt-3 flex items-center justify-center gap-1.5 rounded-md bg-neutral-950 px-4 py-3 text-sm font-medium text-white"
+            className="mt-3 flex items-center justify-center gap-1.5 rounded-lg bg-red-500 px-4 py-3 text-sm font-semibold text-white"
           >
             Book Free Demo
             <ArrowRight className="h-4 w-4" />

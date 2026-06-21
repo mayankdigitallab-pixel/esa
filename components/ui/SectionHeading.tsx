@@ -19,7 +19,7 @@ export function SectionHeading({
   return (
     <div
       className={cn(
-        "mb-16 max-w-2xl space-y-5",
+        "mb-14 max-w-2xl space-y-5",
         isCenter && "mx-auto text-center",
         className,
       )}
@@ -28,7 +28,7 @@ export function SectionHeading({
         <p
           className={cn(
             "eyebrow",
-            dark && "text-neutral-400",
+            dark && "text-teal-300",
           )}
         >
           {eyebrow}
@@ -36,7 +36,7 @@ export function SectionHeading({
       ) : null}
       <h2
         className={cn(
-          "text-3xl font-semibold leading-[1.15] tracking-tight sm:text-4xl lg:text-5xl",
+          "text-3xl font-bold leading-[1.1] tracking-tight sm:text-4xl lg:text-5xl",
           dark ? "text-white" : "text-neutral-950",
         )}
       >

@@ -53,7 +53,7 @@ export default async function AreaPage({
         <Container>
           <Link
             href="/"
-            className="inline-flex items-center gap-1.5 text-xs uppercase tracking-wider text-muted transition hover:text-neutral-950"
+            className="inline-flex items-center gap-1.5 text-xs uppercase tracking-wider text-muted transition hover:text-teal-700"
           >
             Home
           </Link>
@@ -200,7 +200,7 @@ export default async function AreaPage({
                     {a.name}
                   </span>
                 </div>
-                <ArrowRight className="h-4 w-4 text-muted transition group-hover:translate-x-0.5 group-hover:text-neutral-950" />
+                <ArrowRight className="h-4 w-4 text-muted transition group-hover:translate-x-0.5 group-hover:text-teal-700" />
               </Link>
             ))}
           </div>

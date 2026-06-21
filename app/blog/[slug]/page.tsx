@@ -91,7 +91,7 @@ export default async function BlogPostPage({
           <Container>
             <Link
               href="/blog"
-              className="inline-flex items-center gap-1.5 text-xs uppercase tracking-wider text-muted transition hover:text-neutral-950"
+              className="inline-flex items-center gap-1.5 text-xs uppercase tracking-wider text-muted transition hover:text-teal-700"
             >
               <ChevronLeft className="h-3.5 w-3.5" />
               All posts
@@ -165,7 +165,7 @@ export default async function BlogPostPage({
                   <p className="text-[10px] uppercase tracking-widest text-neutral-950">
                     {p.category}
                   </p>
-                  <h3 className="mt-1 text-base font-semibold leading-snug text-neutral-950 group-hover:text-neutral-950 sm:text-lg">
+                  <h3 className="mt-1 text-base font-semibold leading-snug text-neutral-950 group-hover:text-teal-700 sm:text-lg">
                     {p.title}
                   </h3>
                   <span className="mt-2 inline-flex items-center gap-1 text-xs font-semibold text-neutral-950">
