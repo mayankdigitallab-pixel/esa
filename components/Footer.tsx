@@ -32,7 +32,7 @@ export function Footer() {
 
   return (
     <footer className="bg-neutral-950 text-neutral-300">
-      <div className="mx-auto grid max-w-7xl gap-12 px-5 py-16 sm:px-6 lg:grid-cols-4 lg:gap-16 lg:px-8 lg:py-20">
+      <div className="mx-auto grid max-w-[1480px] gap-12 px-5 py-16 sm:px-6 lg:grid-cols-4 lg:gap-16 lg:px-8 lg:py-20">
         <div className="lg:col-span-1">
           <Link href="/" className="flex items-center gap-3">
             <Image
@@ -129,7 +129,7 @@ export function Footer() {
       </div>
 
       <div className="border-t border-neutral-800">
-        <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-3 px-5 py-6 text-xs text-neutral-500 sm:flex-row sm:px-6 lg:px-8">
+        <div className="mx-auto flex max-w-[1480px] flex-col items-center justify-between gap-3 px-5 py-6 text-xs text-neutral-500 sm:flex-row sm:px-6 lg:px-8">
           <p>&copy; {year} Excellent Students&apos; Academy. All rights reserved.</p>
           <p>
             Reimagined by{" "}

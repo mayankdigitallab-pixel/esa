@@ -54,7 +54,7 @@ export function Header() {
           : "bg-charcoal/85 backdrop-blur-sm",
       )}
     >
-      <div className="mx-auto flex h-20 w-full max-w-7xl items-center justify-between px-5 sm:px-6 lg:px-8">
+      <div className="mx-auto flex h-20 w-full max-w-[1480px] items-center justify-between px-4 sm:px-5 lg:px-8">
         <Link href="/" aria-label="ESA home" className="flex shrink-0 items-center gap-3">
           <Image
             src="/esa-logo.jpg"

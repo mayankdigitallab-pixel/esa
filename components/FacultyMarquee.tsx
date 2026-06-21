@@ -42,7 +42,7 @@ export function FacultyMarquee() {
               .esa-marquee-card { width: calc((100vw - 4rem) / 2); max-width: 360px; }
             }
             @media (min-width: 1024px) {
-              .esa-marquee-card { width: calc((min(1280px, 100vw) - 6rem - 5rem) / 4); max-width: 320px; }
+              .esa-marquee-card { width: calc((min(1480px, 100vw) - 4rem - 5rem) / 4); max-width: 360px; }
             }
             @media (prefers-reduced-motion: reduce) {
               .esa-marquee-track { animation: none; }
