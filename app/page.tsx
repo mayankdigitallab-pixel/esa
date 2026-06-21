@@ -22,6 +22,9 @@ import {
 import { Container } from "@/components/ui/Container";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { HeroSlider } from "@/components/HeroSlider";
+import { CardCarousel } from "@/components/CardCarousel";
+import { HomeEnquiryForm } from "@/components/HomeEnquiryForm";
+import { NewsletterForm } from "@/components/NewsletterForm";
 import { programs, subjects } from "@/data/programs";
 import { faculty } from "@/data/faculty";
 import { testimonials } from "@/data/testimonials";
@@ -150,167 +153,642 @@ export default function HomePage() {
         </Container>
       </section>
 
-      {/* PROGRAMS */}
-      <section className="bg-neutral-50 py-24 sm:py-28">
-        <Container>
-          <SectionHeading
-            eyebrow="Our Programs"
-            title={<>Coaching for every <span className="text-teal-600">stage of school</span>.</>}
-            description="From foundation classes for young learners to board prep for Class 12 stream students, every batch is built around weekly tests and chapter-wise mastery."
-          />
-          <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-4">
-            {programs.map((p, i) => (
-              <article
-                key={p.slug}
-                className="group relative flex flex-col overflow-hidden rounded-2xl border border-neutral-200 bg-white p-7 transition hover:-translate-y-1 hover:border-teal-400 hover:shadow-xl"
+      {/* PROGRAMS - dark, side-by-side layout with rich cards */}
+      <section className="relative overflow-hidden bg-charcoal py-24 text-white sm:py-28">
+        <div className="pointer-events-none absolute -left-40 top-1/4 h-96 w-96 rounded-full bg-teal-500/10 blur-3xl" />
+        <div className="pointer-events-none absolute -right-40 bottom-0 h-96 w-96 rounded-full bg-red-500/10 blur-3xl" />
+        <Container className="relative">
+          <div className="grid gap-12 lg:grid-cols-[0.85fr_1.15fr] lg:gap-16 xl:gap-20">
+            {/* LEFT - heading and CTA */}
+            <div className="lg:sticky lg:top-28 lg:self-start">
+              <div className="flex items-center gap-3">
+                <span className="text-[11px] font-semibold uppercase tracking-[0.22em] text-teal-400">
+                  Our Programs
+                </span>
+                <span className="h-px w-12 bg-teal-400" />
+              </div>
+              <h2
+                className="mt-6 m-0"
+                style={{
+                  fontSize: "clamp(2.2rem, 4.5vw, 3.6rem)",
+                  fontWeight: 600,
+                  lineHeight: 1.02,
+                  letterSpacing: "-0.03em",
+                  color: "#F5F1E8",
+                }}
               >
-                <span className={`absolute right-0 top-0 h-1 w-full ${i % 2 === 0 ? "bg-teal-500" : "bg-red-500"}`} />
-                <p className="text-xs font-bold uppercase tracking-wider text-neutral-500">{p.grades}</p>
-                <h3 className="mt-3 text-xl font-bold tracking-tight text-charcoal">
-                  {p.label} Program
-                </h3>
-                <p className="mt-3 flex-1 text-sm leading-relaxed text-charcoal-soft">{p.description}</p>
-                <Link
-                  href={`/programs#${p.slug}`}
-                  className="mt-6 inline-flex items-center gap-1 text-sm font-semibold text-teal-700 transition group-hover:text-red-600"
-                >
-                  See details
-                  <ArrowUpRight className="h-4 w-4 transition group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+                Coaching for every{" "}
+                <span style={{ color: "#22D3EE" }}>stage of school</span>.
+              </h2>
+              <p className="mt-6 max-w-md text-base leading-relaxed" style={{ color: "rgba(255,255,255,0.62)" }}>
+                Foundation classes for young learners. Board prep for Class 9-10. Stream-wise coaching for Class 11-12. Every batch built around weekly tests and chapter-wise mastery.
+              </p>
+              <div className="mt-8 flex flex-wrap gap-3">
+                <Link href="/programs" className="btn-primary">
+                  View all programs
+                  <ArrowRight className="h-4 w-4" />
                 </Link>
+                <Link
+                  href="/contact#enquiry"
+                  className="inline-flex items-center gap-2 rounded-lg border border-white/30 px-5 py-3 text-sm font-semibold text-white transition hover:bg-white/10"
+                >
+                  Book free demo
+                </Link>
+              </div>
+              <div className="mt-10 grid grid-cols-2 gap-x-6 gap-y-5 border-t border-white/12 pt-7">
+                <div>
+                  <p className="text-2xl font-bold tracking-tight" style={{ color: "#22D3EE" }}>1-12</p>
+                  <p className="mt-1 text-xs uppercase tracking-wider text-white/50">Classes covered</p>
+                </div>
+                <div>
+                  <p className="text-2xl font-bold tracking-tight" style={{ color: "#F87171" }}>12+</p>
+                  <p className="mt-1 text-xs uppercase tracking-wider text-white/50">Subjects taught</p>
+                </div>
+              </div>
+            </div>
+
+            {/* RIGHT - 2x2 rich program cards */}
+            <div className="grid gap-5 sm:grid-cols-2">
+              {programs.map((p, i) => {
+                const accent = i % 2 === 0 ? "teal" : "red";
+                const Icon = [BookOpen, FileText, ClipboardCheck, Award][i] ?? BookOpen;
+                return (
+                  <Link
+                    key={p.slug}
+                    href={`/programs#${p.slug}`}
+                    className="group relative flex flex-col overflow-hidden rounded-2xl border border-white/10 bg-white/[0.04] p-6 transition hover:-translate-y-1 hover:border-white/25 hover:bg-white/[0.07]"
+                  >
+                    {/* Stage number watermark */}
+                    <span
+                      className="pointer-events-none absolute right-5 top-3 select-none text-7xl font-bold leading-none tracking-tighter opacity-[0.08] transition group-hover:opacity-[0.16]"
+                      style={{ color: accent === "teal" ? "#22D3EE" : "#F87171" }}
+                      aria-hidden
+                    >
+                      0{i + 1}
+                    </span>
+                    {/* Icon chip */}
+                    <span
+                      className={`flex h-11 w-11 items-center justify-center rounded-xl ${
+                        accent === "teal" ? "bg-teal-500/15 text-teal-300" : "bg-red-500/15 text-red-300"
+                      }`}
+                    >
+                      <Icon className="h-5 w-5" strokeWidth={2} />
+                    </span>
+                    <p className="mt-5 text-[10px] font-bold uppercase tracking-[0.2em] text-white/45">
+                      {p.grades}
+                    </p>
+                    <h3
+                      className="mt-2 m-0"
+                      style={{
+                        fontSize: "1.35rem",
+                        fontWeight: 600,
+                        letterSpacing: "-0.02em",
+                        color: "#F5F1E8",
+                        lineHeight: 1.2,
+                      }}
+                    >
+                      {p.label} Program
+                    </h3>
+                    <p className="mt-3 flex-1 text-sm leading-relaxed" style={{ color: "rgba(255,255,255,0.65)" }}>
+                      {p.description}
+                    </p>
+                    <ul className="mt-5 space-y-2 border-t border-white/10 pt-5">
+                      {p.highlights.slice(0, 2).map((h) => (
+                        <li key={h} className="flex items-start gap-2 text-[13px] text-white/70">
+                          <CheckCircle2
+                            className={`mt-0.5 h-4 w-4 shrink-0 ${
+                              accent === "teal" ? "text-teal-400" : "text-red-400"
+                            }`}
+                            strokeWidth={2}
+                          />
+                          <span>{h}</span>
+                        </li>
+                      ))}
+                    </ul>
+                    <span
+                      className={`mt-6 inline-flex items-center gap-1.5 text-sm font-semibold ${
+                        accent === "teal" ? "text-teal-300" : "text-red-300"
+                      }`}
+                    >
+                      Program details
+                      <ArrowUpRight className="h-4 w-4 transition group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+                    </span>
+                  </Link>
+                );
+              })}
+            </div>
+          </div>
+        </Container>
+      </section>
+
+      {/* SPECIALISED COURSES */}
+      <section className="bg-white py-20 sm:py-24">
+        <Container>
+          <div className="text-center">
+            <span className="inline-flex items-center gap-3 text-[11px] font-semibold uppercase tracking-[0.22em] text-teal-700">
+              <span className="h-px w-10 bg-teal-500" />
+              Our Specialised Courses
+              <span className="h-px w-10 bg-teal-500" />
+            </span>
+            <h2
+              className="mt-5 m-0 text-charcoal"
+              style={{
+                fontSize: "clamp(2rem, 4vw, 3.2rem)",
+                fontWeight: 700,
+                lineHeight: 1.05,
+                letterSpacing: "-0.03em",
+              }}
+            >
+              Custom curated courses for every candidate.
+            </h2>
+            <p className="mx-auto mt-4 max-w-2xl text-base leading-relaxed text-charcoal-soft">
+              Pick the right format for your child - long-term tuition, structured coaching for boards, or focused crash revision before exams.
+            </p>
+          </div>
+
+          <div className="mt-14 grid gap-7 md:grid-cols-3">
+            {[
+              {
+                title: "Tuition Classes",
+                tag: "Class 1 to 12",
+                subtitle: "For Class 1-12th Standard",
+                description:
+                  "Long-term subject-wise tuition with weekly tests, regular doubt clearing and monthly parent reviews.",
+                image:
+                  "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=900&q=80",
+                accent: "teal" as const,
+                href: "/programs#grades-1-5",
+              },
+              {
+                title: "Coaching Classes",
+                tag: "Class 6 to 12",
+                subtitle: "For Classes 6th to 12th Standard",
+                description:
+                  "Board-focused coaching for Class 6 to 12 with chapter-wise drills, mock papers and exam-style answer training.",
+                image:
+                  "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&w=900&q=80",
+                accent: "red" as const,
+                href: "/programs#grades-9-10",
+              },
+              {
+                title: "Crash Courses",
+                tag: "Class 6 to 12",
+                subtitle: "For Classes 6th to 12th Standard",
+                description:
+                  "Last-mile revision before boards. 6 to 8 week intensive program covering full syllabus and mock papers.",
+                image:
+                  "https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?auto=format&fit=crop&w=900&q=80",
+                accent: "teal" as const,
+                href: "/programs#crash",
+              },
+            ].map((c) => (
+              <article
+                key={c.title}
+                className="group overflow-hidden rounded-2xl border border-neutral-200 bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-xl"
+              >
+                <div className="relative aspect-[4/3] overflow-hidden bg-neutral-100">
+                  <Image
+                    src={c.image}
+                    alt={`${c.title} at Excellent Students' Academy Rohini`}
+                    fill
+                    sizes="(max-width: 768px) 100vw, 33vw"
+                    className="object-cover transition duration-500 group-hover:scale-[1.04]"
+                  />
+                  <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-charcoal/85 via-charcoal/30 to-transparent" />
+                  <span
+                    className={`absolute right-4 top-4 rounded-full px-3 py-1 text-[10px] font-bold uppercase tracking-[0.16em] text-white ${
+                      c.accent === "teal" ? "bg-teal-500" : "bg-red-500"
+                    }`}
+                  >
+                    {c.tag}
+                  </span>
+                  <div className="absolute inset-x-0 bottom-0 p-5">
+                    <h3 className="text-2xl font-bold tracking-tight text-white">{c.title}</h3>
+                    <p className="mt-1 text-xs font-medium text-white/85">{c.subtitle}</p>
+                  </div>
+                </div>
+                <div className="flex flex-col p-6">
+                  <p className="text-sm leading-relaxed text-charcoal-soft">{c.description}</p>
+                  <div className="mt-6 flex items-center gap-3">
+                    <Link
+                      href="/contact#enquiry"
+                      className={`inline-flex flex-1 items-center justify-center gap-1.5 rounded-lg px-4 py-3 text-sm font-bold text-white transition ${
+                        c.accent === "teal"
+                          ? "bg-teal-500 hover:bg-teal-600"
+                          : "bg-red-500 hover:bg-red-600"
+                      }`}
+                    >
+                      Enquire
+                      <ArrowRight className="h-4 w-4" />
+                    </Link>
+                    <Link
+                      href={c.href}
+                      className="inline-flex items-center gap-1 rounded-lg border border-neutral-300 px-4 py-3 text-sm font-semibold text-charcoal transition hover:border-charcoal hover:bg-neutral-50"
+                    >
+                      Details
+                    </Link>
+                  </div>
+                </div>
               </article>
             ))}
           </div>
         </Container>
       </section>
 
-      {/* SUBJECTS */}
-      <section className="border-y border-neutral-200 bg-white py-24 sm:py-28">
+      {/* SUBJECTS - side-by-side, categorised */}
+      <section className="bg-neutral-50 py-20 sm:py-24">
         <Container>
-          <SectionHeading
-            eyebrow="Subjects we cover"
-            title={<>Every core school subject, <span className="text-red-600">expertly taught</span>.</>}
-            description="Choose any combination. Most students enrol for 3 to 5 subjects per term. Stream-specific combinations available for Class 11 and 12."
-          />
-          <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
-            {subjects.map((s) => (
-              <div
-                key={s.name}
-                className="flex items-center justify-between rounded-lg border border-neutral-200 bg-white px-5 py-4 transition hover:border-teal-400 hover:bg-teal-50"
-              >
-                <div className="flex items-center gap-3">
-                  <span className="h-2 w-2 rounded-full bg-teal-500" />
-                  <span className="text-sm font-semibold text-charcoal">{s.name}</span>
-                </div>
-                <span className="text-xs uppercase tracking-wider text-neutral-500">{s.grades}</span>
+          <div className="grid gap-10 lg:grid-cols-[0.85fr_1.15fr] lg:gap-16 xl:gap-20">
+            <div className="lg:sticky lg:top-28 lg:self-start">
+              <div className="flex items-center gap-3">
+                <span className="text-[11px] font-semibold uppercase tracking-[0.22em] text-teal-700">
+                  Subjects We Cover
+                </span>
+                <span className="h-px w-12 bg-teal-500" />
               </div>
-            ))}
+              <h2
+                className="mt-6 m-0 text-charcoal"
+                style={{
+                  fontSize: "clamp(2rem, 4vw, 3.2rem)",
+                  fontWeight: 600,
+                  lineHeight: 1.04,
+                  letterSpacing: "-0.03em",
+                }}
+              >
+                Every core school subject,{" "}
+                <span style={{ color: "#E53935" }}>expertly taught</span>.
+              </h2>
+              <p className="mt-5 max-w-md text-base leading-relaxed text-charcoal-soft">
+                Choose any combination. Most students enrol for 3 to 5 subjects per term. Stream-specific combinations for Class 11 and 12.
+              </p>
+              <div className="mt-7 inline-flex items-center gap-2 rounded-full border border-neutral-300 bg-white px-4 py-2 text-sm font-medium text-charcoal">
+                <span className="h-2 w-2 rounded-full bg-teal-500" /> 12 subjects
+                <span className="mx-2 h-3 w-px bg-neutral-300" />
+                <span className="h-2 w-2 rounded-full bg-red-500" /> CBSE · ICSE
+              </div>
+            </div>
+
+            <div className="space-y-8">
+              {[
+                {
+                  category: "Core subjects",
+                  desc: "Taught across all classes, every term.",
+                  accent: "teal",
+                  items: subjects.filter((s) => ["Mathematics", "Science (PCB / PCM)", "English", "Hindi", "Social Science", "Computer Science"].includes(s.name)),
+                },
+                {
+                  category: "Languages",
+                  desc: "Available for relevant classes.",
+                  accent: "red",
+                  items: subjects.filter((s) => ["Sanskrit"].includes(s.name)),
+                },
+                {
+                  category: "Stream subjects · Class 11 & 12",
+                  desc: "Science, Commerce and Arts streams.",
+                  accent: "teal",
+                  items: subjects.filter((s) => ["Physics", "Chemistry", "Accountancy", "Business Studies", "Economics"].includes(s.name)),
+                },
+              ].map((group) => (
+                <div key={group.category}>
+                  <div className="flex items-center gap-3">
+                    <span
+                      className={`h-2 w-2 rounded-full ${
+                        group.accent === "teal" ? "bg-teal-500" : "bg-red-500"
+                      }`}
+                    />
+                    <p className="text-xs font-bold uppercase tracking-[0.16em] text-charcoal">{group.category}</p>
+                    <span className="h-px flex-1 bg-neutral-200" />
+                    <span className="text-xs text-neutral-500">{group.items.length} subjects</span>
+                  </div>
+                  <div className="mt-4 grid gap-2 sm:grid-cols-2">
+                    {group.items.map((s) => (
+                      <div
+                        key={s.name}
+                        className={`group flex items-center justify-between rounded-xl border border-neutral-200 bg-white px-4 py-3.5 transition hover:-translate-y-0.5 hover:shadow-md ${
+                          group.accent === "teal" ? "hover:border-teal-400" : "hover:border-red-400"
+                        }`}
+                      >
+                        <span className="text-sm font-semibold text-charcoal">{s.name}</span>
+                        <span className="text-[10px] font-bold uppercase tracking-wider text-neutral-500">
+                          {s.grades.replace("Class ", "").replace(" - ", "–")}
+                        </span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              ))}
+            </div>
           </div>
         </Container>
       </section>
 
-      {/* WHY ESA - dark section */}
-      <section className="relative overflow-hidden bg-neutral-950 py-24 text-white sm:py-28">
-        <div className="pointer-events-none absolute -right-40 top-1/4 h-96 w-96 rounded-full bg-teal-500/15 blur-3xl" />
+      {/* WHY ESA - side-by-side, dark with featured promise + cards */}
+      <section className="relative overflow-hidden bg-charcoal py-20 text-white sm:py-24">
+        <div className="pointer-events-none absolute -right-40 top-1/4 h-96 w-96 rounded-full bg-teal-500/12 blur-3xl" />
         <div className="pointer-events-none absolute -left-40 bottom-0 h-96 w-96 rounded-full bg-red-500/10 blur-3xl" />
         <Container className="relative">
-          <SectionHeading
-            eyebrow="Why ESA"
-            title={<>What you get when you <span className="text-teal-300">enrol with us</span>.</>}
-            description="Eight commitments we make to every student walking through our door."
-            dark
-          />
-          <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-4">
-            {facilities.map(({ icon: Icon, title, description }, i) => (
-              <div
-                key={title}
-                className="group rounded-2xl border border-white/10 bg-white/[0.04] p-6 backdrop-blur-sm transition hover:border-teal-400/60 hover:bg-white/[0.08]"
-              >
-                <span className={`inline-flex h-12 w-12 items-center justify-center rounded-xl ${i % 2 === 0 ? "bg-teal-500/15 text-teal-300" : "bg-red-500/15 text-red-300"} transition group-hover:scale-110`}>
-                  <Icon className="h-5 w-5" strokeWidth={2} />
+          <div className="grid gap-12 lg:grid-cols-[0.85fr_1.15fr] lg:gap-16 xl:gap-20">
+            <div className="lg:sticky lg:top-28 lg:self-start">
+              <div className="flex items-center gap-3">
+                <span className="text-[11px] font-semibold uppercase tracking-[0.22em] text-teal-400">
+                  Why ESA
                 </span>
-                <h3 className="mt-5 text-base font-bold tracking-tight text-white">{title}</h3>
-                <p className="mt-2 text-sm leading-relaxed text-neutral-400">{description}</p>
+                <span className="h-px w-12 bg-teal-400" />
               </div>
-            ))}
+              <h2
+                className="mt-6 m-0"
+                style={{
+                  fontSize: "clamp(2rem, 4vw, 3.2rem)",
+                  fontWeight: 600,
+                  lineHeight: 1.04,
+                  letterSpacing: "-0.03em",
+                  color: "#F5F1E8",
+                }}
+              >
+                What you get when{" "}
+                <span style={{ color: "#22D3EE" }}>you enrol with us</span>.
+              </h2>
+              <p className="mt-5 max-w-md text-base leading-relaxed" style={{ color: "rgba(255,255,255,0.62)" }}>
+                Eight specific commitments we make to every student walking through our door. Not vague promises - concrete things you can hold us to.
+              </p>
+              <div className="mt-8 flex flex-wrap gap-3">
+                <Link href="/contact#enquiry" className="btn-primary">
+                  Book free demo
+                  <ArrowRight className="h-4 w-4" />
+                </Link>
+              </div>
+              <div className="mt-10 grid gap-4 border-t border-white/12 pt-7">
+                {[
+                  { v: "9+ yrs", l: "Trusted institute in Rohini" },
+                  { v: "500+", l: "Students mentored to date" },
+                ].map((s, i) => (
+                  <div key={s.l} className="flex items-center gap-4">
+                    <span
+                      className="text-2xl font-bold tracking-tight"
+                      style={{ color: i === 0 ? "#22D3EE" : "#F87171" }}
+                    >
+                      {s.v}
+                    </span>
+                    <span className="text-sm text-white/65">{s.l}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <div className="grid gap-4 sm:grid-cols-2">
+              {facilities.map(({ icon: Icon, title, description }, i) => {
+                const accent = i % 2 === 0 ? "teal" : "red";
+                return (
+                  <div
+                    key={title}
+                    className="group rounded-2xl border border-white/10 bg-white/[0.04] p-6 transition hover:-translate-y-1 hover:border-white/25 hover:bg-white/[0.07]"
+                  >
+                    <div className="flex items-start gap-4">
+                      <span
+                        className={`flex h-11 w-11 shrink-0 items-center justify-center rounded-xl ${
+                          accent === "teal" ? "bg-teal-500/15 text-teal-300" : "bg-red-500/15 text-red-300"
+                        } transition group-hover:scale-110`}
+                      >
+                        <Icon className="h-5 w-5" strokeWidth={2} />
+                      </span>
+                      <div className="min-w-0">
+                        <h3
+                          className="m-0"
+                          style={{
+                            fontSize: "1.05rem",
+                            fontWeight: 600,
+                            letterSpacing: "-0.01em",
+                            color: "#F5F1E8",
+                          }}
+                        >
+                          {title}
+                        </h3>
+                        <p
+                          className="mt-2 text-[13.5px] leading-relaxed"
+                          style={{ color: "rgba(255,255,255,0.6)" }}
+                        >
+                          {description}
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
           </div>
         </Container>
       </section>
 
-      {/* FACULTY */}
-      <section className="bg-white py-24 sm:py-28">
+      {/* FOUNDER - dedicated feature section */}
+      <section className="relative overflow-hidden bg-white py-20 sm:py-24">
+        <div className="pointer-events-none absolute -left-32 top-20 h-80 w-80 rounded-full bg-teal-100/60 blur-3xl" />
+        <div className="pointer-events-none absolute -right-20 bottom-10 h-80 w-80 rounded-full bg-red-100/50 blur-3xl" />
+        <Container className="relative">
+          {(() => {
+            const founder = faculty[0];
+            return (
+              <div className="grid items-center gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:gap-16 xl:gap-20">
+                {/* Photo column */}
+                <div className="relative">
+                  <div className="absolute -left-3 -top-3 hidden h-24 w-24 rounded-2xl border-2 border-teal-500 sm:block" aria-hidden />
+                  <div className="absolute -right-3 -bottom-3 hidden h-32 w-32 rounded-2xl bg-red-500 sm:block" aria-hidden />
+                  <div className="relative aspect-[4/5] overflow-hidden rounded-2xl bg-neutral-100 shadow-2xl">
+                    <Image
+                      src={founder.image}
+                      alt={`${founder.name}, Founder & Director of Excellent Students' Academy`}
+                      fill
+                      sizes="(max-width: 1024px) 100vw, 45vw"
+                      className="object-cover"
+                    />
+                    <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-charcoal/85 via-charcoal/40 to-transparent p-6">
+                      <div className="flex items-center gap-2 text-[10px] font-bold uppercase tracking-[0.2em] text-teal-300">
+                        <span className="h-1.5 w-1.5 rounded-full bg-teal-400" />
+                        Founder &amp; Director
+                      </div>
+                      <p className="mt-2 text-xl font-bold tracking-tight text-white sm:text-2xl">
+                        {founder.name}
+                      </p>
+                      <p className="mt-1 text-xs text-white/75">{founder.qualification}</p>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Content column */}
+                <div>
+                  <div className="flex items-center gap-3">
+                    <span className="text-[11px] font-semibold uppercase tracking-[0.22em] text-teal-700">
+                      Meet The Founder
+                    </span>
+                    <span className="h-px w-12 bg-teal-500" />
+                  </div>
+                  <h2
+                    className="mt-6 m-0 text-charcoal"
+                    style={{
+                      fontSize: "clamp(2rem, 4vw, 3.4rem)",
+                      fontWeight: 600,
+                      lineHeight: 1.04,
+                      letterSpacing: "-0.03em",
+                    }}
+                  >
+                    Built by a mentor who still{" "}
+                    <span style={{ color: "#00BCD4" }}>teaches every day</span>.
+                  </h2>
+                  <p className="mt-6 text-base leading-relaxed text-charcoal-soft sm:text-[17px]">
+                    {founder.name.replace("Mr. ", "")} started ESA in 2015 with one room and three students. Nine years later he still teaches every batch he started with — Social Science for Class 9 and 10, and Mathematics for Class 11 and 12.
+                  </p>
+
+                  {/* Pull quote */}
+                  <div className="mt-8 rounded-2xl border-l-4 border-red-500 bg-neutral-50 p-6">
+                    <p className="text-base font-medium leading-relaxed text-charcoal sm:text-lg">
+                      &ldquo;I do not want ESA to grow faster than it can teach well. Every batch I add, I want to be able to look the parents in the eye after the result.&rdquo;
+                    </p>
+                    <p className="mt-3 text-xs font-bold uppercase tracking-[0.18em] text-teal-700">
+                      {founder.name.replace("Mr. ", "")} · Founder
+                    </p>
+                  </div>
+
+                  {/* Stats grid */}
+                  <div className="mt-8 grid grid-cols-2 gap-x-6 gap-y-5 border-t border-neutral-200 pt-7 sm:grid-cols-4">
+                    {[
+                      { v: "9+", l: "Years teaching", c: "teal" },
+                      { v: "500+", l: "Students mentored", c: "red" },
+                      { v: "2", l: "Subjects taught", c: "teal" },
+                      { v: "B.Tech", l: "Engineering grad", c: "red" },
+                    ].map((s) => (
+                      <div key={s.l}>
+                        <p
+                          className="text-2xl font-bold tracking-tight"
+                          style={{ color: s.c === "teal" ? "#00BCD4" : "#E53935" }}
+                        >
+                          {s.v}
+                        </p>
+                        <p className="mt-1 text-xs uppercase tracking-wider text-neutral-500">
+                          {s.l}
+                        </p>
+                      </div>
+                    ))}
+                  </div>
+
+                  <div className="mt-8 flex flex-wrap gap-3">
+                    <Link href="/about" className="btn-primary">
+                      Read the ESA story
+                      <ArrowRight className="h-4 w-4" />
+                    </Link>
+                    <Link
+                      href="/faculty"
+                      className="inline-flex items-center gap-2 rounded-lg border border-neutral-300 px-5 py-3 text-sm font-semibold text-charcoal transition hover:border-teal-500 hover:bg-teal-50 hover:text-teal-700"
+                    >
+                      Meet all faculty
+                    </Link>
+                  </div>
+                </div>
+              </div>
+            );
+          })()}
+        </Container>
+      </section>
+
+      {/* FACULTY CAROUSEL (12 teachers, excluding founder) */}
+      <section className="bg-neutral-50 py-20 sm:py-24">
         <Container>
           <div className="flex flex-col items-start justify-between gap-6 sm:flex-row sm:items-end">
             <SectionHeading
               className="mb-0"
-              eyebrow="Faculty"
-              title={<>Mentors who teach with <span className="text-teal-600">conviction</span>.</>}
-              description="Six senior faculty members. Each one has spent more than half a decade teaching the exact syllabus they handle today."
+              eyebrow="Senior Faculty"
+              title={<>The mentors behind every <span className="text-teal-600">batch and subject</span>.</>}
+              description="Twelve senior faculty members. Postgraduates and B.Tech holders with 6+ years of coaching across CBSE and ICSE boards."
             />
             <Link href="/faculty" className="btn-ghost">
               View all faculty
               <ArrowRight className="h-4 w-4" />
             </Link>
           </div>
-          <div className="mt-14 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
-            {faculty.slice(0, 3).map((f) => (
-              <article key={f.slug} className="group">
-                <div className="relative aspect-[4/5] overflow-hidden rounded-2xl bg-neutral-100">
-                  <Image
-                    src={f.image}
-                    alt={`${f.name}, ${f.title} at Excellent Students' Academy Rohini`}
-                    fill
-                    sizes="(max-width: 1024px) 100vw, 33vw"
-                    className="object-cover transition duration-500 group-hover:scale-[1.04]"
-                  />
-                  <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-neutral-950/70 to-transparent" />
-                  <span className="absolute left-4 top-4 inline-flex rounded-full bg-white/95 px-3 py-1 text-[10px] font-bold uppercase tracking-wider text-teal-700 backdrop-blur">
-                    {f.title}
-                  </span>
-                </div>
-                <div className="mt-5">
-                  <h3 className="text-lg font-bold tracking-tight text-charcoal">{f.name}</h3>
-                  <p className="mt-1.5 text-sm text-charcoal-soft">
-                    <span className="font-semibold text-charcoal">{f.experience}</span> teaching {f.subjects}
+          <div className="mt-12">
+            <CardCarousel lgCards={3} mdCards={2} tone="light" ariaLabel="Faculty carousel">
+              {faculty.slice(1).map((f) => (
+                <article key={f.slug} className="group h-full">
+                  <div className="relative aspect-[4/5] overflow-hidden rounded-2xl bg-neutral-100">
+                    <Image
+                      src={f.image}
+                      alt={`${f.name}, ${f.title} at Excellent Students' Academy Rohini`}
+                      fill
+                      sizes="(max-width: 1024px) 86vw, 33vw"
+                      className="object-cover transition duration-500 group-hover:scale-[1.04]"
+                    />
+                    <div className="absolute inset-x-0 bottom-0 h-36 bg-gradient-to-t from-charcoal/90 via-charcoal/30 to-transparent" />
+                    <span className="absolute left-4 top-4 inline-flex rounded-full bg-white/95 px-3 py-1 text-[10px] font-bold uppercase tracking-wider text-teal-700 backdrop-blur">
+                      {f.title}
+                    </span>
+                    <div className="absolute inset-x-0 bottom-0 p-5">
+                      <h3 className="text-lg font-bold tracking-tight text-white">{f.name}</h3>
+                      <p className="mt-1 text-xs text-white/80">{f.experience} · {f.qualification}</p>
+                    </div>
+                  </div>
+                  <p className="mt-4 text-sm text-charcoal-soft">
+                    Teaching <span className="font-semibold text-charcoal">{f.subjects}</span>
                   </p>
-                  <p className="mt-3 text-sm leading-relaxed text-charcoal-soft line-clamp-3">{f.bio}</p>
-                </div>
-              </article>
-            ))}
+                </article>
+              ))}
+            </CardCarousel>
           </div>
         </Container>
       </section>
 
-      {/* RESULTS */}
-      <section className="border-y border-neutral-200 bg-neutral-50 py-24 sm:py-28">
+      {/* RESULTS CAROUSEL with bigger student images */}
+      <section className="border-y border-neutral-200 bg-white py-20 sm:py-24">
         <Container>
-          <SectionHeading
-            eyebrow="Recent Results"
-            title={<>Students who turned hard work into <span className="text-red-600">real scores</span>.</>}
-            description="A glimpse of the last board cycle. Each name reflects months of weekly testing, mock exams and disciplined revision at our Rohini centre."
-          />
-          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {toppers.slice(0, 6).map((t) => (
-              <article key={t.name} className="overflow-hidden rounded-2xl border border-neutral-200 bg-white transition hover:-translate-y-1 hover:shadow-lg">
-                <div className="flex items-center gap-5 p-6">
-                  <div className="relative h-20 w-20 shrink-0 overflow-hidden rounded-full ring-4 ring-teal-100">
-                    <Image src={t.image} alt={t.name} fill sizes="80px" className="object-cover" />
-                  </div>
-                  <div className="flex-1 min-w-0">
-                    <h3 className="text-base font-bold tracking-tight text-charcoal">{t.name}</h3>
-                    <p className="mt-0.5 text-xs uppercase tracking-wider text-neutral-500">
-                      {t.grade}{t.stream ? ` · ${t.stream}` : ""}
-                    </p>
-                    <p className="mt-2 text-2xl font-bold tracking-tight text-red-600">{t.marks}</p>
-                  </div>
-                </div>
-                {t.quote ? (
-                  <p className="border-t border-neutral-200 bg-neutral-50 px-6 py-4 text-sm leading-relaxed text-charcoal">
-                    &ldquo;{t.quote}&rdquo;
-                  </p>
-                ) : null}
-              </article>
-            ))}
+          <div className="flex flex-col items-start justify-between gap-6 sm:flex-row sm:items-end">
+            <SectionHeading
+              className="mb-0"
+              eyebrow="Recent Results"
+              title={<>Students who turned hard work into <span className="text-red-600">real scores</span>.</>}
+              description="Twelve toppers from the last board cycle. Each name reflects months of weekly testing, mock exams and disciplined revision at our Rohini centre."
+            />
+            <Link href="/results" className="btn-ghost">
+              All results
+              <ArrowRight className="h-4 w-4" />
+            </Link>
           </div>
+
+          <div className="mt-12">
+            <CardCarousel lgCards={3} mdCards={2} tone="light" ariaLabel="Student results carousel">
+              {toppers.map((t) => (
+                <article
+                  key={t.name}
+                  className="group flex h-full flex-col overflow-hidden rounded-2xl border border-neutral-200 bg-white transition hover:-translate-y-1 hover:shadow-xl"
+                >
+                  <div className="relative aspect-[4/5] overflow-hidden bg-neutral-100">
+                    <Image
+                      src={t.image}
+                      alt={`${t.name}, board topper at Excellent Students' Academy Rohini`}
+                      fill
+                      sizes="(max-width: 1024px) 86vw, 33vw"
+                      className="object-cover transition duration-500 group-hover:scale-[1.04]"
+                    />
+                    <div className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-charcoal/95 via-charcoal/40 to-transparent" />
+                    <span className="absolute right-4 top-4 rounded-full bg-red-500 px-3 py-1.5 text-sm font-bold text-white shadow-lg">
+                      {t.marks}
+                    </span>
+                    <span className="absolute left-4 top-4 inline-flex rounded-full bg-white/95 px-3 py-1 text-[10px] font-bold uppercase tracking-wider text-teal-700 backdrop-blur">
+                      Board Topper
+                    </span>
+                    <div className="absolute inset-x-0 bottom-0 p-5">
+                      <h3 className="text-xl font-bold tracking-tight text-white">{t.name}</h3>
+                      <p className="mt-1 text-xs font-medium text-white/85">
+                        {t.grade}{t.stream ? ` · ${t.stream}` : ""}
+                      </p>
+                    </div>
+                  </div>
+                  {t.quote ? (
+                    <div className="flex-1 border-t border-neutral-200 bg-neutral-50 p-6">
+                      <p className="text-sm leading-relaxed text-charcoal">&ldquo;{t.quote}&rdquo;</p>
+                    </div>
+                  ) : null}
+                </article>
+              ))}
+            </CardCarousel>
+          </div>
+
           <div className="mt-14 grid gap-px overflow-hidden rounded-2xl border border-neutral-200 bg-neutral-200 sm:grid-cols-4">
             {resultsStats.map((s, i) => (
               <div key={s.label} className="bg-white px-6 py-8 text-center">
@@ -564,13 +1042,13 @@ export default function HomePage() {
         </Container>
       </section>
 
-      {/* CONTACT */}
-      <section className="border-t border-neutral-200 bg-neutral-50 py-24 sm:py-28">
+      {/* CONTACT - left details + right enquiry form */}
+      <section id="enquiry" className="border-t border-neutral-200 bg-neutral-50 py-20 sm:py-24">
         <Container>
           <SectionHeading
-            eyebrow="Visit us"
+            eyebrow="Visit us · Get in touch"
             title={<>Drop by the academy <span className="text-teal-600">in Rohini</span>.</>}
-            description="Our centre is on the 2nd floor at C7/72, Sector 7, Rohini. Walk in any working day between 10 AM and 8:30 PM, or schedule a slot via WhatsApp."
+            description="Our centre is on the 2nd floor at C7/72, Sector 7, Rohini. Walk in any working day between 10 AM and 8:30 PM, or book a demo using the form on the right."
           />
           <div className="grid gap-8 lg:grid-cols-[1fr_1.2fr]">
             <div className="space-y-4">
@@ -592,17 +1070,68 @@ export default function HomePage() {
                 </div>
               ))}
             </div>
-            <div className="overflow-hidden rounded-2xl border border-neutral-200">
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3501.8089!2d77.119802!3d28.706135!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjjCsDQyJzIyLjEiTiA3N8KwMDcnMjAuNiJF!5e0!3m2!1sen!2sin!4v1700000000000"
-                width="100%"
-                height="100%"
-                style={{ border: 0, minHeight: 480 }}
-                allowFullScreen
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-                title="Excellent Students' Academy location on Google Maps"
-              />
+
+            <div className="rounded-2xl border border-neutral-200 bg-white p-7 shadow-sm sm:p-9">
+              <p className="text-[11px] font-bold uppercase tracking-[0.18em] text-teal-700">
+                Book Free Demo Class
+              </p>
+              <h3
+                className="mt-2 text-charcoal"
+                style={{
+                  fontSize: "clamp(1.6rem, 2.4vw, 2rem)",
+                  fontWeight: 700,
+                  letterSpacing: "-0.02em",
+                  lineHeight: 1.15,
+                }}
+              >
+                Tell us about your child. We will plan the rest.
+              </h3>
+              <p className="mt-3 text-sm leading-relaxed text-charcoal-soft">
+                Share a few details and we will WhatsApp you back with batch timings, demo slot and fees.
+              </p>
+              <div className="mt-7">
+                <HomeEnquiryForm />
+              </div>
+            </div>
+          </div>
+        </Container>
+      </section>
+
+      {/* NEWSLETTER */}
+      <section className="relative overflow-hidden bg-charcoal py-16 text-white sm:py-20">
+        <div className="pointer-events-none absolute -right-32 top-0 h-72 w-72 rounded-full bg-teal-500/15 blur-3xl" />
+        <div className="pointer-events-none absolute -left-32 bottom-0 h-72 w-72 rounded-full bg-red-500/15 blur-3xl" />
+        <Container className="relative">
+          <div className="grid items-center gap-10 lg:grid-cols-[1fr_1.1fr] lg:gap-16">
+            <div>
+              <div className="flex items-center gap-3">
+                <span className="text-[11px] font-semibold uppercase tracking-[0.22em] text-teal-300">
+                  ESA Newsletter
+                </span>
+                <span className="h-px w-12 bg-teal-400" />
+              </div>
+              <h2
+                className="mt-5 m-0"
+                style={{
+                  fontSize: "clamp(1.7rem, 3vw, 2.4rem)",
+                  fontWeight: 700,
+                  letterSpacing: "-0.025em",
+                  lineHeight: 1.1,
+                  color: "#F5F1E8",
+                }}
+              >
+                Stay updated on{" "}
+                <span style={{ color: "#22D3EE" }}>batches, results and parent tips</span>.
+              </h2>
+              <p className="mt-4 max-w-md text-sm leading-relaxed sm:text-base" style={{ color: "rgba(255,255,255,0.62)" }}>
+                One short email a month. Upcoming batch openings, board exam tips for parents, and what we are learning at the academy. No spam.
+              </p>
+            </div>
+            <div>
+              <NewsletterForm />
+              <p className="mt-4 text-xs text-white/45">
+                We respect your inbox. Unsubscribe anytime.
+              </p>
             </div>
           </div>
         </Container>
