@@ -97,7 +97,7 @@ export function PhotoLightbox({ items, openIndex, onClose, onIndexChange }: Prop
         className="relative my-auto w-full max-w-2xl py-2"
         onClick={(e) => e.stopPropagation()}
       >
-        {/* Image with overlaid caption */}
+        {/* Image - shown fully (object-contain) so logos and full frame are visible */}
         <div
           className="relative w-full overflow-hidden rounded-xl bg-neutral-900 shadow-2xl"
           style={{ aspectRatio: "4 / 5", maxHeight: "62vh" }}
@@ -107,7 +107,7 @@ export function PhotoLightbox({ items, openIndex, onClose, onIndexChange }: Prop
             alt={active.name}
             fill
             sizes="(max-width: 768px) 100vw, 640px"
-            className="object-cover"
+            className="object-contain"
             priority
           />
           {active.badge ? (
@@ -115,21 +115,21 @@ export function PhotoLightbox({ items, openIndex, onClose, onIndexChange }: Prop
               {active.badge}
             </span>
           ) : null}
-          <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-charcoal/95 via-charcoal/55 to-transparent p-5 pt-16">
-            {active.eyebrow ? (
-              <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-teal-300">
-                {active.eyebrow}
-              </p>
-            ) : null}
-            <h3 className="mt-1.5 text-xl font-bold tracking-tight text-white sm:text-2xl">
-              {active.name}
-            </h3>
-            {active.meta ? (
-              <p className="mt-1 text-xs leading-snug text-white/85 sm:text-sm">
-                {active.meta}
-              </p>
-            ) : null}
-          </div>
+        </div>
+
+        {/* Caption block (eyebrow + name + meta) below the image so we never crop the photo */}
+        <div className="mt-4 flex flex-col items-start gap-2 px-1">
+          {active.eyebrow ? (
+            <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-teal-300">
+              {active.eyebrow}
+            </span>
+          ) : null}
+          <h3 className="text-xl font-bold tracking-tight text-white sm:text-2xl">
+            {active.name}
+          </h3>
+          {active.meta ? (
+            <p className="text-sm leading-snug text-white/80">{active.meta}</p>
+          ) : null}
         </div>
 
         {/* Description / bio below the image */}
