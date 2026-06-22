@@ -998,25 +998,46 @@ export default function HomePage() {
             title={<>Drop by the academy <span className="text-teal-600">in Rohini</span>.</>}
             description="Our centre is on the 2nd floor at C7/72, Sector 7, Rohini. Walk in any working day between 10 AM and 8:30 PM, or book a demo using the form on the right."
           />
-          <div className="grid gap-8 lg:grid-cols-[1fr_1.2fr]">
-            <div className="space-y-4">
-              {[
-                { icon: MapPin, label: "Address", value: <>{siteConfig.address.line1}, {siteConfig.address.line2}<br />{siteConfig.address.city} {siteConfig.address.pin}</>, accent: "teal" },
-                { icon: Phone, label: "Call us", value: <a href={`tel:${siteConfig.phone}`} className="transition hover:text-teal-700">{siteConfig.phoneDisplay}</a>, accent: "red" },
-                { icon: Mail, label: "Email", value: <a href={`mailto:${siteConfig.email}`} className="transition hover:text-teal-700">{siteConfig.email}</a>, accent: "teal" },
-              ].map(({ icon: Icon, label, value, accent }) => (
-                <div key={label} className="rounded-xl border border-neutral-200 bg-white p-6">
-                  <div className="flex items-start gap-4">
-                    <span className={`flex h-11 w-11 shrink-0 items-center justify-center rounded-xl ${accent === "teal" ? "bg-teal-500 text-white" : "bg-red-500 text-white"}`}>
-                      <Icon className="h-5 w-5" strokeWidth={2} />
-                    </span>
-                    <div>
-                      <p className="text-xs font-bold uppercase tracking-wider text-neutral-500">{label}</p>
-                      <p className="mt-1 text-sm leading-relaxed text-charcoal">{value}</p>
+          <div className="grid gap-8 lg:grid-cols-[1fr_1.2fr] lg:items-center">
+            <div>
+              <div className="mb-6">
+                <p className="text-[11px] font-bold uppercase tracking-[0.18em] text-teal-700">
+                  Reach Us
+                </p>
+                <h3
+                  className="mt-2 text-charcoal"
+                  style={{
+                    fontSize: "clamp(1.5rem, 2.4vw, 1.85rem)",
+                    fontWeight: 700,
+                    letterSpacing: "-0.02em",
+                    lineHeight: 1.2,
+                  }}
+                >
+                  Our Rohini centre details.
+                </h3>
+                <p className="mt-2 text-sm leading-relaxed text-charcoal-soft">
+                  Visit our 2nd-floor centre any working day, or call us between 10 AM and 8:30 PM.
+                </p>
+              </div>
+              <div className="space-y-4">
+                {[
+                  { icon: MapPin, label: "Address", value: <>{siteConfig.address.line1}, {siteConfig.address.line2}<br />{siteConfig.address.city} {siteConfig.address.pin}</>, accent: "teal" },
+                  { icon: Phone, label: "Call us", value: <a href={`tel:${siteConfig.phone}`} className="transition hover:text-teal-700">{siteConfig.phoneDisplay}</a>, accent: "red" },
+                  { icon: Mail, label: "Email", value: <a href={`mailto:${siteConfig.email}`} className="transition hover:text-teal-700">{siteConfig.email}</a>, accent: "teal" },
+                ].map(({ icon: Icon, label, value, accent }) => (
+                  <div key={label} className="rounded-xl border border-neutral-200 bg-white p-6">
+                    <div className="flex items-start gap-4">
+                      <span className={`flex h-11 w-11 shrink-0 items-center justify-center rounded-xl ${accent === "teal" ? "bg-teal-500 text-white" : "bg-red-500 text-white"}`}>
+                        <Icon className="h-5 w-5" strokeWidth={2} />
+                      </span>
+                      <div>
+                        <p className="text-xs font-bold uppercase tracking-wider text-neutral-500">{label}</p>
+                        <p className="mt-1 text-sm leading-relaxed text-charcoal">{value}</p>
+                      </div>
                     </div>
                   </div>
-                </div>
-              ))}
+                ))}
+              </div>
             </div>
 
             <div className="rounded-2xl border border-neutral-200 bg-white p-7 shadow-sm sm:p-9">
