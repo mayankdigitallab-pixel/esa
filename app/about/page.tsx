@@ -279,66 +279,105 @@ export default function AboutPage() {
         </Container>
       </section>
 
-      <section className="bg-white py-20 sm:py-28">
+      {/* VALUES with brand gradient cards */}
+      <section className="bg-white py-20 sm:py-24">
         <Container>
           <SectionHeading
             eyebrow="What we stand for"
-            title={
-              <>
-                Four values that shape{" "}
-                <span className="text-charcoal">every batch</span>
-              </>
-            }
+            title={<>Four values that shape <span className="text-teal-600">every batch</span></>}
             description="If you sit in any ESA classroom, you will see these four things in action. They are not aspirational. They are operational."
           />
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-            {values.map(({ icon: Icon, title, description }) => (
-              <div
-                key={title}
-                className="rounded border border-neutral-200 bg-white p-7 transition hover:-translate-y-1 hover:border-neutral-400 hover:shadow-lg"
-              >
-                <span className="inline-flex h-11 w-11 items-center justify-center rounded bg-neutral-50 text-charcoal">
-                  <Icon className="h-5 w-5" strokeWidth={1.75} />
-                </span>
-                <h3 className="mt-4 text-xl font-semibold text-charcoal">
-                  {title}
-                </h3>
-                <p className="mt-2 text-sm leading-relaxed text-body">
-                  {description}
-                </p>
-              </div>
-            ))}
+            {values.map(({ icon: Icon, title, description }, i) => {
+              const palette = [
+                { from: "#E0F7FA", to: "#FFFFFF", ring: "#00BCD4", icon: "bg-teal-500 text-white" },
+                { from: "#FFEBEE", to: "#FFFFFF", ring: "#E53935", icon: "bg-red-500 text-white" },
+                { from: "#E0F7FA", to: "#FFFFFF", ring: "#00BCD4", icon: "bg-teal-500 text-white" },
+                { from: "#FFEBEE", to: "#FFFFFF", ring: "#E53935", icon: "bg-red-500 text-white" },
+              ][i] ?? { from: "#E0F7FA", to: "#FFFFFF", ring: "#00BCD4", icon: "bg-teal-500 text-white" };
+              return (
+                <div
+                  key={title}
+                  className="group relative overflow-hidden rounded-2xl border border-neutral-200 p-7 transition hover:-translate-y-1 hover:shadow-xl"
+                  style={{ background: `linear-gradient(160deg, ${palette.from} 0%, ${palette.to} 78%)` }}
+                >
+                  <span
+                    className="pointer-events-none absolute -right-12 -top-12 h-32 w-32 rounded-full opacity-20 blur-2xl transition group-hover:opacity-40"
+                    style={{ background: palette.ring }}
+                    aria-hidden
+                  />
+                  <span className={`relative inline-flex h-11 w-11 items-center justify-center rounded-xl ${palette.icon}`}>
+                    <Icon className="h-5 w-5" strokeWidth={2} />
+                  </span>
+                  <h3 className="relative mt-5 text-xl font-bold tracking-tight text-charcoal">
+                    {title}
+                  </h3>
+                  <p className="relative mt-3 text-sm leading-relaxed text-charcoal-soft">
+                    {description}
+                  </p>
+                </div>
+              );
+            })}
           </div>
         </Container>
       </section>
 
-      <section className="border-y border-neutral-200 bg-white py-20 sm:py-28">
-        <Container>
+      {/* TIMELINE - redesigned vertical milestone layout */}
+      <section className="relative overflow-hidden border-y border-neutral-200 bg-neutral-50 py-20 sm:py-24">
+        <div className="pointer-events-none absolute -left-32 top-20 h-80 w-80 rounded-full bg-teal-100/60 blur-3xl" />
+        <div className="pointer-events-none absolute -right-20 bottom-10 h-80 w-80 rounded-full bg-red-100/40 blur-3xl" />
+        <Container className="relative">
           <SectionHeading
             eyebrow="The Journey"
-            title={
-              <>
-                Nine years,{" "}
-                <span className="text-charcoal">one neighbourhood</span>
-              </>
-            }
+            title={<>Eleven years, <span className="text-teal-600">one neighbourhood</span>.</>}
             description="A short timeline of how Excellent Students' Academy grew from one room to the institute it is today."
           />
-          <ol className="relative space-y-10 border-l-2 border-neutral-200 pl-8">
-            {timeline.map((t) => (
-              <li key={t.year} className="relative">
-                <span className="absolute -left-[42px] flex h-12 w-12 items-center justify-center rounded-full border-2 border-neutral-400 bg-white text-xs font-semibold text-charcoal">
-                  {t.year}
-                </span>
-                <h3 className="text-xl font-semibold text-charcoal">
-                  {t.title}
-                </h3>
-                <p className="mt-2 text-sm leading-relaxed text-body">
-                  {t.description}
-                </p>
-              </li>
-            ))}
-          </ol>
+          <div className="relative mt-12">
+            <div className="absolute left-4 top-2 bottom-2 hidden w-px bg-gradient-to-b from-teal-500/40 via-neutral-300 to-red-500/40 sm:block sm:left-10" aria-hidden />
+            <ol className="space-y-6">
+              {timeline.map((t, i) => {
+                const accent = i % 2 === 0 ? "teal" : "red";
+                return (
+                  <li key={t.year} className="relative">
+                    <div className="grid gap-4 sm:grid-cols-[8rem_1fr]">
+                      <div className="flex items-center gap-3 sm:flex-col sm:items-start sm:gap-2 sm:pl-0">
+                        <span
+                          className={`relative z-10 inline-flex h-16 w-16 items-center justify-center rounded-full text-white shadow-lg ${
+                            accent === "teal" ? "bg-teal-500" : "bg-red-500"
+                          }`}
+                        >
+                          <span className="text-sm font-bold tracking-tight">{t.year}</span>
+                        </span>
+                        <span
+                          className={`text-[10px] font-bold uppercase tracking-[0.18em] ${
+                            accent === "teal" ? "text-teal-700" : "text-red-600"
+                          }`}
+                        >
+                          Milestone {String(i + 1).padStart(2, "0")}
+                        </span>
+                      </div>
+                      <div
+                        className="rounded-2xl border border-neutral-200 bg-white p-6 transition hover:-translate-y-0.5 hover:shadow-lg sm:p-7"
+                        style={{
+                          background:
+                            accent === "teal"
+                              ? "linear-gradient(135deg, #ffffff 0%, #E0F7FA 100%)"
+                              : "linear-gradient(135deg, #ffffff 0%, #FFEBEE 100%)",
+                        }}
+                      >
+                        <h3 className="text-xl font-bold tracking-tight text-charcoal sm:text-2xl">
+                          {t.title}
+                        </h3>
+                        <p className="mt-3 text-sm leading-relaxed text-charcoal-soft sm:text-base">
+                          {t.description}
+                        </p>
+                      </div>
+                    </div>
+                  </li>
+                );
+              })}
+            </ol>
+          </div>
         </Container>
       </section>
 
