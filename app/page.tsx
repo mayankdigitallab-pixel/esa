@@ -627,7 +627,11 @@ export default function HomePage() {
                     <span style={{ color: "#00BCD4" }}>teaches every day</span>.
                   </h2>
                   <p className="mt-6 text-base leading-relaxed text-charcoal-soft sm:text-[17px]">
-                    {founder.name.replace("Mr. ", "")} started ESA in 2015 with one room and three students. Nine years later he still teaches every batch he started with — Social Science for Class 9 and 10, and Mathematics for Class 11 and 12.
+                    <strong className="font-bold text-charcoal">{founder.name.replace("Mr. ", "")}</strong>{" "}
+                    started <strong className="font-bold text-charcoal">ESA in 2015</strong> with one room and three students.{" "}
+                    <strong className="font-bold text-charcoal">Eleven years later</strong> he is still in the classroom -{" "}
+                    personally mentoring{" "}
+                    <strong className="font-bold text-charcoal">every Class 11 and 12 Mathematics batch</strong> at our Rohini centre.
                   </p>
 
                   {/* Pull quote */}

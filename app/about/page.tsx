@@ -165,10 +165,16 @@ export default function AboutPage() {
                     <span style={{ color: "#00BCD4" }}>teaches every day</span>.
                   </h2>
                   <p className="mt-6 text-base leading-relaxed text-charcoal-soft sm:text-[17px]">
-                    {founder.name.replace("Mr. ", "")} founded Excellent Students&apos; Academy in 2015 with one room and three students. Eleven years later he is still in the classroom - personally mentoring every Class 11 and 12 Mathematics batch at our Rohini Sector 7 centre.
+                    <strong className="font-bold text-charcoal">{founder.name.replace("Mr. ", "")}</strong>{" "}
+                    founded <strong className="font-bold text-charcoal">Excellent Students&apos; Academy in 2015</strong> with one room and three students.{" "}
+                    <strong className="font-bold text-charcoal">Eleven years later</strong> he is still in the classroom - personally mentoring{" "}
+                    <strong className="font-bold text-charcoal">every Class 11 and 12 Mathematics batch</strong> at our Rohini Sector 7 centre.
                   </p>
                   <p className="mt-4 text-base leading-relaxed text-charcoal-soft sm:text-[17px]">
-                    An engineer by training (B.Tech, Mechanical), he chose teaching over a corporate career when he realised how rarely students get a teacher who explains concepts from first principles. That belief still shapes every batch at ESA today.
+                    An engineer by training{" "}
+                    <strong className="font-bold text-charcoal">(B.Tech, Mechanical)</strong>, he chose teaching over a corporate career when he realised how rarely students get a teacher who explains concepts{" "}
+                    <strong className="font-bold text-charcoal">from first principles</strong>. That belief still shapes{" "}
+                    <strong className="font-bold text-charcoal">every batch at ESA today</strong>.
                   </p>
 
                   {/* Pull quote */}
