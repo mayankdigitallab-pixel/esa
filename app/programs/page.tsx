@@ -47,105 +47,154 @@ export default function ProgramsPage() {
         }
       />
 
-      <section className="border-t border-neutral-200 bg-white py-20 sm:py-24">
+      <section className="border-t border-neutral-200 bg-neutral-50 py-20 sm:py-24">
         <Container>
-          <div className="space-y-16">
-            {programs.map((p, i) => (
-              <article
-                key={p.slug}
-                id={p.slug}
-                className="grid scroll-mt-24 items-start gap-10 lg:grid-cols-[0.4fr_0.6fr]"
-              >
-                <div>
-                  <p className="text-[11px] uppercase tracking-widest text-charcoal">
-                    {`Program 0${i + 1}`}
-                  </p>
-                  <p className="mt-2 text-sm font-semibold uppercase tracking-wider text-muted">
-                    {p.grades}
-                  </p>
-                  <h2 className="mt-2 text-3xl font-semibold leading-tight text-charcoal sm:text-4xl">
-                    {p.label}
-                  </h2>
-                  <p className="mt-4 text-sm leading-relaxed text-body">
-                    {p.description}
-                  </p>
-                  <div className="mt-6 space-y-3 text-sm text-body">
-                    <div className="flex items-start gap-3">
-                      <BookOpen className="mt-0.5 h-4 w-4 shrink-0 text-charcoal" />
-                      <span>
-                        <strong className="text-charcoal">Subjects:</strong>{" "}
-                        {p.subjects.join(", ")}
+          <div className="space-y-8">
+            {programs.map((p, i) => {
+              const accent = i % 2 === 0 ? "teal" : "red";
+              const bg =
+                accent === "teal"
+                  ? "linear-gradient(135deg, #E0F7FA 0%, #FFFFFF 65%)"
+                  : "linear-gradient(135deg, #FFEBEE 0%, #FFFFFF 65%)";
+              const haloColor = accent === "teal" ? "#00BCD4" : "#E53935";
+              const numColor = accent === "teal" ? "#00BCD4" : "#E53935";
+              return (
+                <article
+                  key={p.slug}
+                  id={p.slug}
+                  className="relative grid scroll-mt-24 items-start gap-8 overflow-hidden rounded-2xl border border-neutral-200 p-7 shadow-sm sm:p-10 lg:grid-cols-[0.42fr_0.58fr] lg:gap-12"
+                  style={{ background: bg }}
+                >
+                  <span
+                    className="pointer-events-none absolute -right-16 -top-16 h-48 w-48 rounded-full opacity-25 blur-3xl"
+                    style={{ background: haloColor }}
+                    aria-hidden
+                  />
+                  <div className="relative">
+                    <div className="flex items-center gap-3">
+                      <span
+                        className={`inline-flex h-12 w-12 items-center justify-center rounded-xl text-xl font-bold text-white shadow-md ${
+                          accent === "teal" ? "bg-teal-500" : "bg-red-500"
+                        }`}
+                      >
+                        0{i + 1}
+                      </span>
+                      <span
+                        className="text-[11px] font-bold uppercase tracking-[0.22em]"
+                        style={{ color: numColor }}
+                      >
+                        Program 0{i + 1}
                       </span>
                     </div>
-                    <div className="flex items-start gap-3">
-                      <Calendar className="mt-0.5 h-4 w-4 shrink-0 text-charcoal" />
-                      <span>
-                        <strong className="text-charcoal">Schedule:</strong>{" "}
-                        {p.schedule}
-                      </span>
+                    <p className="mt-5 text-xs font-bold uppercase tracking-[0.18em] text-charcoal-soft">
+                      {p.grades}
+                    </p>
+                    <h2 className="mt-2 text-3xl font-bold leading-tight tracking-tight text-charcoal sm:text-4xl">
+                      {p.label}
+                    </h2>
+                    <p className="mt-4 text-sm leading-relaxed text-charcoal-soft sm:text-[15px]">
+                      {p.description}
+                    </p>
+                    <div className="mt-6 space-y-3 text-sm text-charcoal-soft">
+                      <div className="flex items-start gap-3">
+                        <BookOpen className="mt-0.5 h-4 w-4 shrink-0 text-charcoal" />
+                        <span>
+                          <strong className="text-charcoal">Subjects:</strong>{" "}
+                          {p.subjects.join(", ")}
+                        </span>
+                      </div>
+                      <div className="flex items-start gap-3">
+                        <Calendar className="mt-0.5 h-4 w-4 shrink-0 text-charcoal" />
+                        <span>
+                          <strong className="text-charcoal">Schedule:</strong>{" "}
+                          {p.schedule}
+                        </span>
+                      </div>
+                      <div className="flex items-start gap-3">
+                        <IndianRupee className="mt-0.5 h-4 w-4 shrink-0 text-charcoal" />
+                        <span>
+                          <strong className="text-charcoal">Fee:</strong>{" "}
+                          {p.feeRange}
+                        </span>
+                      </div>
                     </div>
-                    <div className="flex items-start gap-3">
-                      <IndianRupee className="mt-0.5 h-4 w-4 shrink-0 text-charcoal" />
-                      <span>
-                        <strong className="text-charcoal">Fee:</strong>{" "}
-                        {p.feeRange}
-                      </span>
+                    <div className="mt-7 flex flex-wrap gap-3">
+                      <Link
+                        href={whatsappLink(
+                          `Hello ESA, please share details for ${p.label} (${p.grades})`,
+                        )}
+                        target="_blank"
+                        className="btn-primary"
+                      >
+                        Enquire on WhatsApp
+                        <ArrowRight className="h-4 w-4" />
+                      </Link>
+                      <Link href="/contact#enquiry" className="btn-outline">
+                        Book Free Demo
+                      </Link>
                     </div>
                   </div>
-                  <div className="mt-7 flex flex-wrap gap-3">
-                    <Link
-                      href={whatsappLink(
-                        `Hello ESA, please share details for ${p.label} (${p.grades})`,
-                      )}
-                      target="_blank"
-                      className="btn-primary"
-                    >
-                      Enquire on WhatsApp
-                      <ArrowRight className="h-4 w-4" />
-                    </Link>
-                    <Link href="/contact#enquiry" className="btn-outline">
-                      Book Free Demo
-                    </Link>
+                  <div
+                    className="relative rounded-2xl border border-neutral-200 bg-white/80 p-7 backdrop-blur-sm"
+                  >
+                    <p className="text-xs font-bold uppercase tracking-[0.16em] text-charcoal">
+                      What this program includes
+                    </p>
+                    <ul className="mt-5 space-y-3.5">
+                      {p.highlights.map((h) => (
+                        <li key={h} className="flex items-start gap-3 text-sm text-charcoal-soft">
+                          <CheckCircle2
+                            className={`mt-0.5 h-5 w-5 shrink-0 ${
+                              accent === "teal" ? "text-teal-500" : "text-red-500"
+                            }`}
+                            strokeWidth={2}
+                          />
+                          {h}
+                        </li>
+                      ))}
+                    </ul>
                   </div>
-                </div>
-                <ul className="rounded border border-neutral-200 bg-white p-7 space-y-4">
-                  <p className="text-base font-semibold text-charcoal">
-                    What this program includes
-                  </p>
-                  {p.highlights.map((h) => (
-                    <li key={h} className="flex items-start gap-3 text-sm text-body">
-                      <CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0 text-charcoal" />
-                      {h}
-                    </li>
-                  ))}
-                </ul>
-              </article>
-            ))}
+                </article>
+              );
+            })}
 
             <article
               id="crash"
-              className="grid scroll-mt-24 items-start gap-10 rounded border-2 border-neutral-400 bg-white p-8 lg:grid-cols-[0.4fr_0.6fr] sm:p-10"
+              className="relative grid scroll-mt-24 items-start gap-8 overflow-hidden rounded-2xl border border-neutral-200 p-7 shadow-sm sm:p-10 lg:grid-cols-[0.42fr_0.58fr] lg:gap-12"
+              style={{
+                background:
+                  "linear-gradient(135deg, #1A1A1A 0%, #2E2E2E 60%, #1A1A1A 100%)",
+              }}
             >
-              <div>
-                <p className="text-[11px] uppercase tracking-widest text-charcoal">
-                  Special Program
-                </p>
-                <h2 className="mt-2 text-3xl font-semibold leading-tight text-charcoal sm:text-4xl">
-                  Crash Courses
-                </h2>
-                <p className="mt-2 text-sm font-semibold uppercase tracking-wider text-muted">
+              <span
+                className="pointer-events-none absolute -right-16 -top-16 h-48 w-48 rounded-full bg-red-500/30 blur-3xl"
+                aria-hidden
+              />
+              <span
+                className="pointer-events-none absolute -left-16 -bottom-16 h-48 w-48 rounded-full bg-teal-500/25 blur-3xl"
+                aria-hidden
+              />
+              <div className="relative">
+                <div className="flex items-center gap-3">
+                  <span className="inline-flex h-12 w-12 items-center justify-center rounded-xl bg-red-500 text-xl font-bold text-white shadow-md">
+                    ★
+                  </span>
+                  <span className="text-[11px] font-bold uppercase tracking-[0.22em] text-red-400">
+                    Special Program
+                  </span>
+                </div>
+                <p className="mt-5 text-xs font-bold uppercase tracking-[0.18em] text-teal-300">
                   Class 6 to 12
                 </p>
-                <p className="mt-4 text-sm leading-relaxed text-body">
-                  4 to 8 week intensive courses before board exams. Full
-                  syllabus revision, mock papers, time-management drills.
-                  Designed for students who need a sharp push before exams.
+                <h2 className="mt-2 text-3xl font-bold leading-tight tracking-tight text-white sm:text-4xl">
+                  Crash Courses
+                </h2>
+                <p className="mt-4 text-sm leading-relaxed text-white/70 sm:text-[15px]">
+                  4 to 8 week intensive courses before board exams. Full syllabus revision, mock papers, time-management drills. Designed for students who need a sharp push before exams.
                 </p>
                 <div className="mt-7 flex flex-wrap gap-3">
                   <Link
-                    href={whatsappLink(
-                      "Hello ESA, I want details on the Crash Course",
-                    )}
+                    href={whatsappLink("Hello ESA, I want details on the Crash Course")}
                     target="_blank"
                     className="btn-primary"
                   >
@@ -154,20 +203,25 @@ export default function ProgramsPage() {
                   </Link>
                 </div>
               </div>
-              <ul className="space-y-4">
-                {[
-                  "Compressed full-syllabus revision plan",
-                  "10+ mock papers under exam conditions",
-                  "Daily doubt sessions during the program",
-                  "Subject-wise revision notes provided",
-                  "One-on-one diagnostic test at the start",
-                ].map((h) => (
-                  <li key={h} className="flex items-start gap-3 text-sm text-body">
-                    <CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0 text-charcoal" />
-                    {h}
-                  </li>
-                ))}
-              </ul>
+              <div className="relative rounded-2xl border border-white/15 bg-white/[0.06] p-7 backdrop-blur">
+                <p className="text-xs font-bold uppercase tracking-[0.16em] text-teal-300">
+                  What this program includes
+                </p>
+                <ul className="mt-5 space-y-3.5">
+                  {[
+                    "Compressed full-syllabus revision plan",
+                    "10+ mock papers under exam conditions",
+                    "Daily doubt sessions during the program",
+                    "Subject-wise revision notes provided",
+                    "One-on-one diagnostic test at the start",
+                  ].map((h) => (
+                    <li key={h} className="flex items-start gap-3 text-sm text-white/80">
+                      <CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0 text-teal-300" strokeWidth={2} />
+                      {h}
+                    </li>
+                  ))}
+                </ul>
+              </div>
             </article>
           </div>
         </Container>
