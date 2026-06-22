@@ -852,32 +852,46 @@ export default function HomePage() {
               autoplayMs={5500}
               ariaLabel="Testimonials carousel"
             >
-              {testimonials.map((t, i) => (
-                <article
-                  key={t.name}
-                  className="flex h-full flex-col rounded-2xl border border-neutral-200 bg-white p-7 transition hover:-translate-y-1 hover:shadow-lg"
-                >
-                  <div className="flex gap-0.5 text-yellow-400">
-                    {Array.from({ length: t.rating }).map((_, idx) => (
-                      <Star key={idx} className="h-4 w-4 fill-current" />
-                    ))}
-                  </div>
-                  <p className="mt-5 flex-1 text-sm leading-relaxed text-charcoal">{t.text}</p>
-                  <div className="mt-6 flex items-center gap-3 border-t border-neutral-200 pt-5">
-                    <div
-                      className={`flex h-10 w-10 items-center justify-center rounded-full ${
-                        i % 2 === 0 ? "bg-teal-500" : "bg-red-500"
-                      } text-sm font-bold text-white`}
-                    >
-                      {t.name.charAt(0)}
+              {testimonials.map((t, i) => {
+                const accent = i % 2 === 0 ? "teal" : "red";
+                const bg =
+                  accent === "teal"
+                    ? "linear-gradient(155deg, #E0F7FA 0%, #FFFFFF 70%)"
+                    : "linear-gradient(155deg, #FFEBEE 0%, #FFFFFF 70%)";
+                const haloColor = accent === "teal" ? "#00BCD4" : "#E53935";
+                return (
+                  <article
+                    key={t.name}
+                    className="group relative flex h-full flex-col overflow-hidden rounded-2xl border border-neutral-200 p-7 transition hover:-translate-y-1 hover:shadow-xl"
+                    style={{ background: bg }}
+                  >
+                    <span
+                      className="pointer-events-none absolute -right-12 -top-12 h-32 w-32 rounded-full opacity-20 blur-2xl transition group-hover:opacity-40"
+                      style={{ background: haloColor }}
+                      aria-hidden
+                    />
+                    <div className="relative flex gap-0.5 text-yellow-400">
+                      {Array.from({ length: t.rating }).map((_, idx) => (
+                        <Star key={idx} className="h-4 w-4 fill-current" />
+                      ))}
                     </div>
-                    <div>
-                      <p className="text-sm font-bold text-charcoal">{t.name}</p>
-                      <p className="text-xs text-neutral-500">{t.role}</p>
+                    <p className="relative mt-5 flex-1 text-sm leading-relaxed text-charcoal">{t.text}</p>
+                    <div className="relative mt-6 flex items-center gap-3 border-t border-neutral-200/70 pt-5">
+                      <div
+                        className={`flex h-10 w-10 items-center justify-center rounded-full ${
+                          accent === "teal" ? "bg-teal-500" : "bg-red-500"
+                        } text-sm font-bold text-white`}
+                      >
+                        {t.name.charAt(0)}
+                      </div>
+                      <div>
+                        <p className="text-sm font-bold text-charcoal">{t.name}</p>
+                        <p className="text-xs text-neutral-500">{t.role}</p>
+                      </div>
                     </div>
-                  </div>
-                </article>
-              ))}
+                  </article>
+                );
+              })}
             </CardCarousel>
           </div>
         </Container>
