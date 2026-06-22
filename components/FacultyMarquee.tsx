@@ -13,8 +13,8 @@ const lightboxItems: LightboxItem[] = teachers.map((f) => ({
   image: f.image,
   name: f.name,
   eyebrow: f.title,
-  meta: `${f.experience} · ${f.qualification}`,
-  description: `${f.bio} Teaching ${f.subjects}.`,
+  meta: `${f.subjects} · ${f.experience}`,
+  description: f.bio,
 }));
 
 export function FacultyMarquee() {

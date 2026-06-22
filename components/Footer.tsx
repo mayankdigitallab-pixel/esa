@@ -131,17 +131,24 @@ export function Footer() {
       <div className="border-t border-neutral-800">
         <div className="mx-auto flex max-w-[1480px] flex-col items-center justify-between gap-3 px-5 py-6 text-xs text-neutral-500 sm:flex-row sm:px-6 lg:px-8">
           <p>&copy; {year} Excellent Students&apos; Academy. All rights reserved.</p>
-          <p>
-            Reimagined by{" "}
+          <div className="flex items-center gap-4">
+            <Link href="/terms" className="transition hover:text-white">
+              Terms &amp; Conditions
+            </Link>
+            <span className="text-neutral-700">·</span>
+            <Link href="/privacy" className="transition hover:text-white">
+              Privacy Policy
+            </Link>
+            <span className="text-neutral-700">·</span>
             <a
               href="https://www.mayankdigitallabs.in"
               target="_blank"
               rel="noopener noreferrer"
               className="font-semibold text-teal-300 transition hover:text-teal-200"
             >
-              Mayank Digital Labs
+              by Mayank Digital Labs
             </a>
-          </p>
+          </div>
         </div>
       </div>
     </footer>
