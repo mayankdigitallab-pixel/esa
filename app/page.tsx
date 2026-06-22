@@ -33,6 +33,7 @@ import { testimonials } from "@/data/testimonials";
 import { toppers, resultsStats } from "@/data/results";
 import { faqs } from "@/data/faqs";
 import { siteConfig, whatsappLink } from "@/data/site";
+import { blogPosts } from "@/data/blog";
 import { nearbyAreas } from "@/data/areas";
 
 export const metadata: Metadata = {
@@ -897,8 +898,87 @@ export default function HomePage() {
         </Container>
       </section>
 
+      {/* BLOG TEASER */}
+      <section className="bg-white py-20 sm:py-24">
+        <Container>
+          <div className="flex flex-col items-start justify-between gap-6 sm:flex-row sm:items-end">
+            <div className="max-w-2xl">
+              <div className="flex items-center gap-3">
+                <span className="text-[11px] font-semibold uppercase tracking-[0.22em] text-teal-700">
+                  From the ESA blog
+                </span>
+                <span className="h-px w-12 bg-teal-500" />
+              </div>
+              <h2
+                className="mt-5 m-0 text-charcoal"
+                style={{
+                  fontSize: "clamp(1.9rem, 3.8vw, 3rem)",
+                  fontWeight: 700,
+                  lineHeight: 1.06,
+                  letterSpacing: "-0.025em",
+                }}
+              >
+                Tips for parents and students in Rohini.
+              </h2>
+              <p className="mt-4 text-sm leading-relaxed text-charcoal-soft sm:text-base">
+                Board exam strategy, stream choice, coaching selection and study habits, written by our own faculty.
+              </p>
+            </div>
+            <Link href="/blog" className="btn-ghost">
+              View all posts
+              <ArrowRight className="h-4 w-4" />
+            </Link>
+          </div>
+
+          <div className="mt-12 grid gap-6 md:grid-cols-3">
+            {[...blogPosts]
+              .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
+              .slice(0, 3)
+              .map((p) => (
+                <Link
+                  key={p.slug}
+                  href={`/blog/${p.slug}`}
+                  className="group overflow-hidden rounded-2xl border border-neutral-200 bg-white transition hover:-translate-y-1 hover:shadow-xl"
+                >
+                  <div className="relative aspect-[16/10] overflow-hidden bg-neutral-100">
+                    <Image
+                      src={p.cover}
+                      alt={p.title}
+                      fill
+                      sizes="(max-width: 768px) 100vw, 33vw"
+                      className="object-cover transition duration-500 group-hover:scale-[1.04]"
+                    />
+                    <span className="absolute left-3 top-3 inline-flex rounded-full bg-white/95 px-2.5 py-0.5 text-[10px] font-bold uppercase tracking-[0.14em] text-teal-700 backdrop-blur">
+                      {p.category}
+                    </span>
+                  </div>
+                  <div className="p-6">
+                    <h3 className="text-base font-bold leading-snug tracking-tight text-charcoal group-hover:text-teal-700 sm:text-lg">
+                      {p.title}
+                    </h3>
+                    <p className="mt-3 line-clamp-2 text-sm leading-relaxed text-charcoal-soft">
+                      {p.excerpt}
+                    </p>
+                    <div className="mt-5 flex items-center gap-3 text-[11px] text-neutral-500">
+                      <span>
+                        {new Date(p.date).toLocaleDateString("en-IN", {
+                          day: "numeric",
+                          month: "short",
+                          year: "numeric",
+                        })}
+                      </span>
+                      <span className="text-neutral-300">·</span>
+                      <span>{p.readTime}</span>
+                    </div>
+                  </div>
+                </Link>
+              ))}
+          </div>
+        </Container>
+      </section>
+
       {/* AREAS */}
-      <section className="bg-white py-24 sm:py-28">
+      <section className="bg-neutral-50 py-24 sm:py-28">
         <Container>
           <SectionHeading
             eyebrow="Areas we serve"
