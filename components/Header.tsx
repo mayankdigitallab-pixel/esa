@@ -179,6 +179,17 @@ export function Header() {
   }, [searchOpen]);
 
   useEffect(() => {
+    if (open) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [open]);
+
+  useEffect(() => {
     if (!searchOpen) return;
     const onKey = (e: KeyboardEvent) => {
       if (e.key === "Escape") closeSearch();
@@ -318,36 +329,95 @@ export function Header() {
           </div>
         </div>
 
-        {open && (
-          <div className="lg:hidden">
-            <div className="border-t border-white/10 bg-charcoal px-5 pb-6 pt-4 sm:px-6">
-              <nav className="grid gap-1">
-                {nav.map((item) => (
-                  <Link
-                    key={item.href}
-                    href={item.href}
-                    className={cn(
-                      "rounded-xl px-4 py-3 text-sm font-medium transition",
-                      isActive(item.href)
-                        ? "bg-white/10 text-white"
-                        : "text-white/75 hover:bg-white/5 hover:text-white",
-                    )}
-                  >
-                    {item.label}
-                  </Link>
-                ))}
-              </nav>
-              <Link
-                href="/contact#enquiry"
-                className="mt-4 flex items-center justify-center gap-1.5 rounded-full bg-red-500 px-5 py-3 text-sm font-semibold text-white"
-              >
-                Book Free Demo
-                <ArrowRight className="h-4 w-4" />
-              </Link>
+      </header>
+
+      {/* Full-screen mobile menu */}
+      {open && (
+        <div
+          className="fixed inset-0 z-[150] flex flex-col bg-charcoal lg:hidden"
+          role="dialog"
+          aria-modal="true"
+          aria-label="Mobile navigation"
+        >
+          {/* Header bar inside the overlay so user can close */}
+          <div className="flex h-20 items-center justify-between border-b border-white/10 px-5">
+            <Link href="/" onClick={() => setOpen(false)} className="flex items-center gap-3">
+              <Image
+                src="/esa-logo.jpg"
+                alt="ESA logo"
+                width={56}
+                height={56}
+                className="h-12 w-12 rounded-full object-cover"
+              />
+              <span className="text-base font-bold tracking-tight text-white">ESA Rohini</span>
+            </Link>
+            <button
+              type="button"
+              onClick={() => setOpen(false)}
+              aria-label="Close menu"
+              className="inline-flex h-11 w-11 items-center justify-center rounded-xl border border-white/20 text-white"
+            >
+              <X className="h-5 w-5" />
+            </button>
+          </div>
+
+          <div className="flex-1 overflow-y-auto px-5 py-6">
+            <nav className="grid gap-1.5">
+              {nav.map((item) => (
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  onClick={() => setOpen(false)}
+                  className={cn(
+                    "rounded-xl px-4 py-3.5 text-base font-medium transition",
+                    isActive(item.href)
+                      ? "bg-teal-500/15 text-teal-300"
+                      : "text-white/85 hover:bg-white/5 hover:text-white",
+                  )}
+                >
+                  {item.label}
+                </Link>
+              ))}
+            </nav>
+
+            <div className="mt-8 border-t border-white/10 pt-6">
+              <p className="text-[11px] font-bold uppercase tracking-[0.18em] text-teal-300">
+                Reach Us
+              </p>
+              <div className="mt-4 space-y-3 text-sm text-white/80">
+                <a href="tel:+918882663340" className="block transition hover:text-white">
+                  Call: +91 88826 63340
+                </a>
+                <a
+                  href="https://wa.me/918882663340"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block transition hover:text-white"
+                >
+                  WhatsApp: +91 88826 63340
+                </a>
+                <a href="mailto:info@theesa.in" className="block transition hover:text-white">
+                  Email: info@theesa.in
+                </a>
+                <p className="text-white/65">
+                  C7/72, Sector 7, Rohini, New Delhi 110085
+                </p>
+              </div>
             </div>
           </div>
-        )}
-      </header>
+
+          <div className="border-t border-white/10 bg-charcoal p-5">
+            <Link
+              href="/contact#enquiry"
+              onClick={() => setOpen(false)}
+              className="flex items-center justify-center gap-1.5 rounded-full bg-red-500 px-5 py-3.5 text-sm font-bold text-white shadow-lg shadow-red-500/30"
+            >
+              Book Free Demo
+              <ArrowRight className="h-4 w-4" />
+            </Link>
+          </div>
+        </div>
+      )}
 
       {/* Full-screen search overlay */}
       {searchOpen && (
