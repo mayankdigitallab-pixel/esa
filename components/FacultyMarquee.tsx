@@ -11,15 +11,7 @@ export function FacultyMarquee() {
   const loop = [...teachers, ...teachers];
 
   return (
-    <div
-      className="esa-marquee group/marquee relative overflow-hidden"
-      style={{
-        WebkitMaskImage:
-          "linear-gradient(to right, transparent, #000 6%, #000 94%, transparent)",
-        maskImage:
-          "linear-gradient(to right, transparent, #000 6%, #000 94%, transparent)",
-      }}
-    >
+    <div className="esa-marquee group/marquee relative overflow-hidden">
       <style
         dangerouslySetInnerHTML={{
           __html: `
