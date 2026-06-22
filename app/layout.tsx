@@ -65,10 +65,10 @@ export default function RootLayout({
 }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en" className={`${inter.variable} h-full antialiased`}>
-      <body className="min-h-full flex flex-col bg-white text-ink">
+      <body className="min-h-full flex flex-col overflow-x-hidden bg-white text-ink">
         <TopBar />
         <Header />
-        <main className="flex-1">{children}</main>
+        <main className="w-full flex-1">{children}</main>
         <Footer />
         <WhatsAppButton />
       </body>
