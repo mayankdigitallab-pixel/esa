@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
-import Image from "next/image";
 import { Container } from "@/components/ui/Container";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { PageBanner, BannerStatsRight } from "@/components/ui/PageBanner";
-import { toppers, resultsStats } from "@/data/results";
+import { ResultsGrid } from "@/components/ResultsGrid";
+import { toppers } from "@/data/results";
 
 export const metadata: Metadata = {
   title: "Board Results & Toppers | ESA Rohini",
@@ -52,40 +52,7 @@ export default function ResultsPage() {
             }
             description="Real students from real ESA batches. Names shared with consent. Marks reflect the recent CBSE board cycle."
           />
-          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {toppers.map((t) => (
-              <article
-                key={t.name}
-                className="overflow-hidden rounded border border-neutral-200 bg-white transition hover:-translate-y-1 hover:shadow-lg"
-              >
-                <div className="relative aspect-[4/3] overflow-hidden">
-                  <Image
-                    src={t.image}
-                    alt={`${t.name}, student at ESA Rohini`}
-                    fill
-                    sizes="(max-width: 1024px) 100vw, 33vw"
-                    className="object-cover"
-                  />
-                  <div className="absolute right-3 top-3 rounded bg-red-500 px-3 py-1.5 text-lg font-bold text-white shadow-lg">
-                    {t.marks}
-                  </div>
-                </div>
-                <div className="p-5">
-                  <h3 className="text-xl font-semibold text-charcoal">
-                    {t.name}
-                  </h3>
-                  <p className="mt-1 text-xs uppercase tracking-wider text-muted">
-                    {t.school ?? `${t.grade ?? ""}${t.stream ? ` | ${t.stream}` : ""}`}
-                  </p>
-                  {t.quote ? (
-                    <p className="mt-3 text-sm leading-relaxed text-body">
-                      &ldquo;{t.quote}&rdquo;
-                    </p>
-                  ) : null}
-                </div>
-              </article>
-            ))}
-          </div>
+          <ResultsGrid items={toppers} />
         </Container>
       </section>
     </div>
