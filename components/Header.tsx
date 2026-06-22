@@ -7,8 +7,12 @@ import { usePathname, useRouter } from "next/navigation";
 import { Menu, X, ArrowRight, Search } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { faculty } from "@/data/faculty";
-import { programs } from "@/data/programs";
+import { programs, subjects } from "@/data/programs";
 import { nearbyAreas } from "@/data/areas";
+import { toppers } from "@/data/results";
+import { testimonials } from "@/data/testimonials";
+import { faqs } from "@/data/faqs";
+import { blogPosts } from "@/data/blog";
 
 const nav = [
   { href: "/", label: "Home" },
@@ -23,24 +27,111 @@ const nav = [
 
 const TRENDING = ["Class 10 Boards", "Class 12 Math", "Free Demo", "Crash Course", "Fee Structure", "Home Tuition"];
 
-type SearchHit = { title: string; type: string; href: string };
+type SearchHit = { title: string; type: string; href: string; keywords: string };
 
 function buildSearchIndex(): SearchHit[] {
   const hits: SearchHit[] = [];
+
+  // Pages
+  const pages: SearchHit[] = [
+    { title: "Home", type: "Page", href: "/", keywords: "home esa rohini coaching" },
+    { title: "About ESA Rohini", type: "Page", href: "/about", keywords: "about story founder chandan prajapati eleven years" },
+    { title: "Our Programs", type: "Page", href: "/programs", keywords: "programs courses class 1 2 3 4 5 6 7 8 9 10 11 12 foundation board prep senior secondary" },
+    { title: "Our Faculty", type: "Page", href: "/faculty", keywords: "faculty teachers mentors postgraduates b.tech experienced" },
+    { title: "Board Results", type: "Page", href: "/results", keywords: "results board topper marks cbse 90 95" },
+    { title: "Photo Gallery", type: "Page", href: "/gallery", keywords: "gallery photos centre classroom" },
+    { title: "ESA Blog", type: "Page", href: "/blog", keywords: "blog articles guides parents tips" },
+    { title: "Contact Us", type: "Page", href: "/contact", keywords: "contact phone whatsapp email visit demo enquiry" },
+    { title: "FAQs", type: "Page", href: "/faq", keywords: "faq questions parents answers" },
+    { title: "Book Free Demo Class", type: "Action", href: "/contact#enquiry", keywords: "demo free 7 day book trial class enrol enquiry" },
+    { title: "WhatsApp ESA Rohini", type: "Action", href: "https://wa.me/918882663340", keywords: "whatsapp message chat phone" },
+    { title: "Terms & Conditions", type: "Legal", href: "/terms", keywords: "terms conditions agreement fees refund" },
+    { title: "Privacy Policy", type: "Legal", href: "/privacy", keywords: "privacy policy data information" },
+  ];
+  hits.push(...pages);
+
+  // Programs
   for (const p of programs) {
-    hits.push({ title: `${p.label} Program - ${p.grades}`, type: "Program", href: `/programs#${p.slug}` });
+    hits.push({
+      title: `${p.label} Program - ${p.grades}`,
+      type: "Program",
+      href: `/programs#${p.slug}`,
+      keywords: `${p.label} ${p.grades} ${p.description} ${p.subjects.join(" ")} ${p.highlights.join(" ")}`,
+    });
   }
+  hits.push({ title: "Crash Course - Class 6 to 12", type: "Program", href: "/programs#crash", keywords: "crash course revision boards mock papers short term" });
+
+  // Subjects
+  for (const s of subjects) {
+    hits.push({
+      title: `${s.name} - ${s.grades}`,
+      type: "Subject",
+      href: `/programs`,
+      keywords: `${s.name} ${s.grades} subject`,
+    });
+  }
+
+  // Faculty
   for (const f of faculty) {
-    hits.push({ title: `${f.name} - ${f.title}`, type: "Faculty", href: `/faculty#${f.slug}` });
+    hits.push({
+      title: `${f.name} - ${f.title}`,
+      type: "Faculty",
+      href: `/faculty#${f.slug}`,
+      keywords: `${f.name} ${f.title} ${f.subjects} ${f.experience} ${f.qualification} ${f.bio}`,
+    });
   }
+
+  // Areas served
   for (const a of nearbyAreas) {
-    hits.push({ title: `Coaching in ${a.name}`, type: "Area", href: `/areas/${a.slug}` });
+    hits.push({
+      title: `Coaching in ${a.name}`,
+      type: "Area",
+      href: `/areas/${a.slug}`,
+      keywords: `${a.name} area locality north delhi coaching home tuition`,
+    });
   }
-  hits.push({ title: "Book a free demo class", type: "Contact", href: "/contact#enquiry" });
-  hits.push({ title: "All board results", type: "Results", href: "/results" });
-  hits.push({ title: "Photo gallery", type: "Gallery", href: "/gallery" });
-  hits.push({ title: "FAQs and parent questions", type: "FAQ", href: "/faq" });
-  hits.push({ title: "About ESA Rohini", type: "About", href: "/about" });
+
+  // Toppers
+  for (const t of toppers) {
+    hits.push({
+      title: `${t.name} - ${t.marks}`,
+      type: "Topper",
+      href: `/results`,
+      keywords: `${t.name} ${t.marks} ${t.school ?? ""} ${t.grade ?? ""} ${t.stream ?? ""} topper student`,
+    });
+  }
+
+  // Testimonials (names only - text is in keywords)
+  for (const t of testimonials) {
+    hits.push({
+      title: `Review by ${t.name}`,
+      type: "Review",
+      href: `/#testimonials`,
+      keywords: `${t.name} ${t.role} ${t.text} review testimonial`,
+    });
+  }
+
+  // FAQ entries
+  for (let i = 0; i < faqs.length; i++) {
+    const f = faqs[i];
+    hits.push({
+      title: f.question,
+      type: "FAQ",
+      href: `/faq`,
+      keywords: `${f.question} ${f.answer}`,
+    });
+  }
+
+  // Blog posts
+  for (const b of blogPosts) {
+    hits.push({
+      title: b.title,
+      type: "Blog",
+      href: `/blog/${b.slug}`,
+      keywords: `${b.title} ${b.category} ${b.excerpt} ${b.description}`,
+    });
+  }
+
   return hits;
 }
 
@@ -105,13 +196,28 @@ export function Header() {
   function handleChange(e: React.ChangeEvent<HTMLInputElement>) {
     const val = e.target.value;
     setQuery(val);
-    if (val.trim().length >= 2) {
-      const q = val.toLowerCase();
-      const index = buildSearchIndex();
-      setHits(index.filter((h) => h.title.toLowerCase().includes(q)).slice(0, 10));
-    } else {
+    const q = val.trim().toLowerCase();
+    if (q.length === 0) {
       setHits([]);
+      return;
     }
+    const index = buildSearchIndex();
+    // Score: 3 = title prefix, 2 = title contains, 1 = keywords contains
+    const scored = index
+      .map((h) => {
+        const title = h.title.toLowerCase();
+        const kw = h.keywords.toLowerCase();
+        let score = 0;
+        if (title.startsWith(q)) score = 3;
+        else if (title.includes(q)) score = 2;
+        else if (kw.includes(q)) score = 1;
+        return { h, score };
+      })
+      .filter((x) => x.score > 0)
+      .sort((a, b) => b.score - a.score)
+      .slice(0, 12)
+      .map((x) => x.h);
+    setHits(scored);
   }
 
   function handleSubmit(e: React.FormEvent) {
@@ -124,9 +230,7 @@ export function Header() {
 
   function handleTrending(term: string) {
     setQuery(term);
-    const q = term.toLowerCase();
-    const index = buildSearchIndex();
-    setHits(index.filter((h) => h.title.toLowerCase().includes(q)).slice(0, 10));
+    handleChange({ target: { value: term } } as React.ChangeEvent<HTMLInputElement>);
   }
 
   const isActive = (href: string) =>
