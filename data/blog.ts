@@ -207,4 +207,235 @@ export const blogPosts: BlogPost[] = [
 <h3>Book a free demo for Class 10</h3>
 <p>If your child is starting Class 10 next year and you want to evaluate ESA, book a free 7-day demo at our Rohini Sector 7 centre. They sit in the actual evening batch, write the Saturday test, and you decide after.</p>`,
   },
+  {
+    slug: "class-12-science-pcm-coaching-rohini-2026",
+    title: "Class 12 Science Coaching in Rohini: PCM Strategy for Boards + JEE Foundation",
+    description:
+      "How Class 12 Science (PCM) students in Rohini should prepare for CBSE boards and JEE foundation together. Subject-wise plan, weekly tests, mock papers and what ESA does in our Sector 7 centre.",
+    date: "2026-06-12",
+    readTime: "8 min read",
+    category: "Class 12",
+    author: "ESA Editorial",
+    cover:
+      "https://images.unsplash.com/photo-1453733190371-0a9bedd82893?auto=format&fit=crop&w=1200&q=80",
+    excerpt:
+      "Most Class 12 PCM students try to balance board prep with JEE foundation. Here is the schedule that actually works, and the gaps in it that we cover at ESA in Rohini.",
+    body: `<p>Class 12 PCM is the most demanding year of school in India. Three heavy subjects, two parallel exams (CBSE plus JEE), and a January-to-March window that decides the next four years. This guide explains how Rohini students should plan it, and what we do at Excellent Students' Academy Sector 7 to make it manageable.</p>
+
+<h2>Why parallel prep is the only realistic path</h2>
+<p>Students who try to first finish boards and then "start JEE prep" in April lose the entire year. Conversely, students who chase only JEE and treat boards as a side task often slip below 90 percent in Class 12 boards, which closes doors at premium colleges. The only realistic strategy is parallel prep where Physics, Chemistry and Math are taught with both objective rigor and CBSE answer-writing technique.</p>
+
+<h2>Subject-wise breakdown</h2>
+<h3>Physics</h3>
+<p>The biggest scoring subject if practised right. Class 12 chapters - Current Electricity, EMI, Optics, Modern Physics - reward students who do at least 30 numerical per chapter. ESA Physics batches run 90-minute sessions four days a week with a focused numerical hour on Saturdays.</p>
+
+<h3>Chemistry</h3>
+<p>Three sub-subjects in one paper: Organic, Inorganic and Physical. Organic Class 12 cannot be crammed in the last month. NCERT mastery is the only way. Our Organic Chemistry track at ESA spends extra time on named reactions and reaction mechanisms because that is what JEE asks and what students lose marks on in boards too.</p>
+
+<h3>Mathematics</h3>
+<p>Class 12 Math is the highest scoring of the three if your problem-solving is fluent. Integration, vectors, 3D and probability together carry close to 50 marks. Our Math Class 12 batch finishes the full syllabus by December and runs mock papers from January.</p>
+
+<h2>Weekly testing and feedback</h2>
+<p>Every Saturday at ESA is test day. The chapter taught that week is tested. Scored within 48 hours. Detailed analytics shared with parents on WhatsApp. By the time boards arrive, most Class 12 students have written 30 plus chapter tests and 6 plus full mock papers in their main subjects.</p>
+
+<h2>What separates ESA Class 12 batches</h2>
+<ul><li>Senior faculty who only teach Class 11 and 12 - no juggling with junior batches</li><li>Full syllabus by mid-December, three months of pure revision and mocks after</li><li>JEE Foundation classes alternate days, included in the standard fee</li><li>Direct WhatsApp access to subject teachers for doubt clearing</li></ul>
+
+<h3>Book a free Class 12 demo</h3>
+<p>Book 7 days of real Class 12 batches at our Rohini Sector 7 centre. Sit through Physics, Chem, Math sessions, write the Saturday test, meet the faculty. Decide after.</p>`,
+  },
+  {
+    slug: "class-11-commerce-coaching-rohini-stream-guide",
+    title: "Class 11 Commerce Coaching in Rohini: Accounts, BST and Economics Made Simple",
+    description:
+      "Class 11 Commerce in Rohini - what your child will study, how Accounts, Business Studies and Economics differ, and how ESA teaches all three to build a strong Class 12 base.",
+    date: "2026-06-08",
+    readTime: "7 min read",
+    category: "Class 11",
+    author: "ESA Editorial",
+    cover:
+      "https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?auto=format&fit=crop&w=1200&q=80",
+    excerpt:
+      "Class 11 Commerce is where most Class 10 average students discover they can actually score high. Here is what we teach, in what order, and why that order matters at ESA Rohini.",
+    body: `<p>Class 11 Commerce is the most underrated stream in Delhi schools. Many parents push children towards Science by default. But a Class 10 student who is comfortable with English, has a logical mind and finds Math manageable will often outscore Science students in Class 12 if they pick Commerce. This guide explains the three core subjects and how we teach them at Excellent Students' Academy Rohini.</p>
+
+<h2>The three core subjects</h2>
+<h3>Accountancy</h3>
+<p>Accounts is the first time most students see a subject where every problem has one correct answer. There is no opinion in a balance sheet. Class 11 Accounts covers basic concepts, journal entries, ledger, trial balance, depreciation and partnership basics. By the end of Class 11, your child should be writing journal entries the way they write a sentence in English - without thinking.</p>
+
+<h3>Business Studies</h3>
+<p>BST is the most read and least practised subject. It looks easy because everything is in plain English. The trap is that students cram it the week before the exam and score 60. Toppers treat it as a writing discipline - answer in points, learn the framework chapters (organising, staffing, marketing) cold, and practise the 5-mark answers all year.</p>
+
+<h3>Economics</h3>
+<p>Class 11 Economics has two halves - Statistics and Micro Economics. Statistics is closer to Math. Micro is closer to BST. Students who do well in both halves usually become Commerce toppers. We treat each half separately at ESA and recommend each student practise 15 numerical from the stats half every week.</p>
+
+<h2>How ESA structures the Commerce batch</h2>
+<p>Our Class 11 Commerce program at the Rohini Sector 7 centre runs Monday to Saturday, 5 PM to 8:30 PM. The week is split:</p>
+<ul><li>Monday and Thursday: Accountancy</li><li>Tuesday and Friday: Business Studies</li><li>Wednesday: Economics (Statistics half)</li><li>Saturday: Weekly chapter test for whichever subject was the focus, plus one hour Economics Micro</li></ul>
+
+<h2>What weak Class 10 students do well in Class 11 Commerce</h2>
+<p>Every year we see students who scored 70-75 percent in Class 10 finish Class 11 Commerce above 85. Three reasons. One, Accounts rewards practice not aptitude. Two, BST is shorter than 10th Social Science. Three, the Commerce stream has fewer parallel competitive exams pulling attention - no JEE, no NEET - so the focus stays on boards.</p>
+
+<h3>Book a free Class 11 Commerce demo</h3>
+<p>If your child is moving into Class 11 next year and you want to evaluate the Commerce stream, book a 7-day demo with us. Real batch, real faculty, no commitment.</p>`,
+  },
+  {
+    slug: "weekly-test-system-board-exam-prep-rohini",
+    title: "Why Weekly Tests Work: The ESA Saturday Routine That Builds Board Exam Stamina",
+    description:
+      "How a weekly Saturday test at Excellent Students' Academy Rohini turns nervous Class 9 to 12 students into confident board paper writers. The exact format, what is tested, how scores are shared.",
+    date: "2026-06-05",
+    readTime: "6 min read",
+    category: "Study Habits",
+    author: "ESA Editorial",
+    cover:
+      "https://images.unsplash.com/photo-1456406644174-8ddd4cd52a06?auto=format&fit=crop&w=1200&q=80",
+    excerpt:
+      "There is no special topper batch at ESA. There is just the same weekly Saturday test that every student writes. Eleven years of it has made our boards results what they are.",
+    body: `<p>If a Class 9 student walks into Excellent Students' Academy in March, by June they have already written 12 tests. By December, 40. By board exam day, 60 plus. That is the single most underrated reason our students do well. Not the faculty. Not the notes. The Saturday test routine.</p>
+
+<h2>The format</h2>
+<p>Every Saturday from 5 PM to 8 PM is test day at our Rohini Sector 7 centre. Students sit for an exam-style paper of the chapter taught that week in their main subject. The paper is closed book. Phones are collected at the door. The time is strict.</p>
+<p>Three hours - the same duration as a CBSE board paper - is intentional. Most students cannot write for three hours in March if they have not done so all year. By the time the actual board paper arrives, our students are not nervous about the duration.</p>
+
+<h2>What is tested</h2>
+<p>The chapter taught in the week. Not the syllabus so far. Not the last three chapters. Just the current chapter. This is important. Cramming five chapters for a test is harmful. Owning one chapter every week, every week, every week, is how mastery builds.</p>
+
+<h2>Scoring and feedback</h2>
+<p>Papers are corrected by the same teacher who taught the chapter. Within 48 hours. Scores reach parents on WhatsApp Monday morning along with a one-line teacher note - what was strong, what was weak. Students get the corrected paper Monday evening.</p>
+<p>Once a month we hold a parent meeting where we review the four Saturday scores. Patterns emerge. A student is steady at 75 in Math but slipping in Chemistry. We act on the slip immediately, not after the next term result.</p>
+
+<h2>Mock papers and the final stretch</h2>
+<p>From January (Class 10 and Class 12) we add full-syllabus mock papers every other weekend. By board exam day each senior student has written at least 8 full mocks. The mock papers use past CBSE patterns. The board exam, in their head, becomes "another Saturday test".</p>
+
+<h2>Why this matters more than coaching content</h2>
+<p>Honestly, most CBSE coaching institutes teach the same content. Where they differ is in discipline. The Saturday routine is a discipline machine. It removes the question "have I revised enough" and replaces it with "have I done the next Saturday test". One you can argue with, the other you cannot avoid.</p>
+
+<h3>Try one Saturday test free</h3>
+<p>Book a 7-day demo at ESA Rohini. The free trial includes one Saturday test that your child will write alongside our regular batch. The score and feedback come to you on WhatsApp the following Monday - exactly the way it would if your child enrolled.</p>`,
+  },
+  {
+    slug: "math-anxiety-class-9-10-rohini-parents-guide",
+    title: "When Class 9 Math Starts to Feel Hard: A Parent's Guide for Rohini Students",
+    description:
+      "Class 9 Math anxiety is the most common reason parents call us at ESA Rohini. Why it happens, what works, what doesn't, and how we fix it in our Sector 7 batches.",
+    date: "2026-05-30",
+    readTime: "6 min read",
+    category: "Class 9-10",
+    author: "ESA Editorial",
+    cover:
+      "https://images.unsplash.com/photo-1635372722656-389f87a941b7?auto=format&fit=crop&w=1200&q=80",
+    excerpt:
+      "Many Class 8 students who scored 90 in Math suddenly hit 65 in Class 9. It is not their fault. The jump in abstraction is real. Here is how parents in Rohini should respond.",
+    body: `<p>The single most common parent phone call we get at our Rohini centre is some version of "she always did well in Math, but Class 9 has been a shock". The phenomenon is real. The Class 8 to Class 9 jump in CBSE Math is the steepest of all school years. This guide explains why and what to do.</p>
+
+<h2>What changes in Class 9 Math</h2>
+<p>Class 8 Math is mostly arithmetic and applied. Class 9 introduces three things at once - formal Geometry proofs, abstract Algebra (polynomials and coordinate geometry), and Number Systems with irrationals. None of these reward memorisation. All of them reward sustained, daily practice.</p>
+<p>A Class 8 student who scored 90 by quickly solving sums often becomes a Class 9 student who scores 65 because they cannot prove that two triangles are congruent in five logical steps. The skill being tested has changed.</p>
+
+<h2>What does not work</h2>
+<ul><li>Buying more practice books. The student already has enough.</li><li>Yelling about the score. The student already feels worse than the parent.</li><li>Switching teachers every six weeks. Math improvement is a six-month curve.</li></ul>
+
+<h2>What does work</h2>
+<h3>Daily practice in small batches</h3>
+<p>Twenty minutes a day is more effective than two hours on Sunday. We give our Class 9 students a one-page daily worksheet they finish at home and bring to the next class. Builds the muscle.</p>
+
+<h3>Pre-class concept clarity</h3>
+<p>Students who read the next chapter the day before class do twice as well. They walk into the classroom with one specific question instead of being lost from minute one.</p>
+
+<h3>Weekly chapter tests</h3>
+<p>Our Saturday tests force the student to write Math under time pressure every single week. By December, "Math anxiety" is replaced with "Math fatigue" - and that is a healthier place to be from.</p>
+
+<h3>One-on-one diagnostic</h3>
+<p>Every new Class 9 student at ESA Rohini sits with our Math mentor for one diagnostic session. We do not teach. We just figure out where they actually are. Sometimes it is one weak chapter in Class 8 (often Linear Equations) holding them back. We fix that first.</p>
+
+<h2>What parents should do at home</h2>
+<p>Three things. One, do not ask about the score - ask about what was taught that day. Two, sit next to them for twenty minutes during their Math practice. You do not need to know the answer. Your presence is the variable. Three, talk to the teacher monthly, not after the term result.</p>
+
+<h3>Book a Class 9 Math demo at ESA</h3>
+<p>If your child is in Class 9 and Math has slipped, book a 7-day demo at our Rohini Sector 7 centre. The first day is the diagnostic. The next six are regular batches. Decide after.</p>`,
+  },
+  {
+    slug: "free-demo-class-rohini-coaching-what-parents-should-look-for",
+    title: "Free Demo Class in Rohini: What Parents Should Watch For in 7 Days",
+    description:
+      "Most Rohini coaching institutes offer a free demo class. Here is what you should actually pay attention to during your 7-day trial at ESA - and what every parent forgets to check.",
+    date: "2026-05-26",
+    readTime: "5 min read",
+    category: "Parent Guide",
+    author: "ESA Editorial",
+    cover:
+      "https://images.unsplash.com/photo-1543269865-cbf427effbad?auto=format&fit=crop&w=1200&q=80",
+    excerpt:
+      "Booking a free demo class is easy. Using those 7 days to actually evaluate whether the institute is right for your child is the hard part. Here is our parent checklist.",
+    body: `<p>At Excellent Students' Academy in Rohini we offer 7 days of free demo classes for every new student. Most coaching institutes do. But many parents enrol or reject after watching just one class - which is too little information. This guide is the checklist we wish every parent used during those 7 days, whether at ESA or any other institute.</p>
+
+<h2>Day 1 - Walk in, observe the room</h2>
+<p>Before the class starts, count the chairs. A small batch is the single biggest predictor of teaching quality. At ESA we cap batches around 18 students. If a "demo class" suddenly has 35 chairs, you are probably watching a marketing class, not a regular batch.</p>
+
+<h2>Day 2 - Watch how a doubt is handled</h2>
+<p>Sit in a class. Look for the moment a student raises their hand. Does the teacher answer immediately, or push it to "after class"? At a good institute the doubt is handled in class for everyone's benefit. At a bad one it is brushed away to keep the lesson on schedule.</p>
+
+<h2>Day 3 - Ask for the chapter notes</h2>
+<p>If the institute claims "we have our own notes", ask to see them. Faculty-prepared notes for the actual board syllabus are very different from photocopied previous-year material. We share our chapter notes openly with every demo student.</p>
+
+<h2>Day 4 - Saturday test day</h2>
+<p>If you can, time your demo so it overlaps the institute's test day. Watch how the test is administered. Phones collected? Time strictly enforced? Paper of the chapter just taught? These are the basics. Many institutes claim to test weekly but do not.</p>
+
+<h2>Day 5 - Talk to a current parent</h2>
+<p>Ask the front desk to give you the WhatsApp of any current parent willing to talk. We do this on request at ESA. If the institute refuses, that itself is information.</p>
+
+<h2>Day 6 - Look at last year's result sheet</h2>
+<p>Any coaching institute should be able to show you the full board result sheet of last year - not a poster of toppers, the full list with marks. Most cannot. The few that can are the ones serious about results.</p>
+
+<h2>Day 7 - The fee conversation</h2>
+<p>On the last day talk to admin about fees, refund policy, what happens if a student misses a month, and whether the WhatsApp group with the mentor is included. Vague fee structures are an early sign of trouble.</p>
+
+<h3>Book your 7-day demo at ESA Rohini</h3>
+<p>If you are evaluating coaching for your child in Rohini, book a 7-day demo at our Sector 7 centre. Walk in any working day, no fee, no commitment. We will hand you this checklist on Day 1.</p>`,
+  },
+  {
+    slug: "home-tuition-vs-coaching-institute-rohini-which-is-better",
+    title: "Home Tuition vs Coaching Institute in Rohini: Which Actually Works for Your Child",
+    description:
+      "Home tuition or coaching institute in Rohini? Cost, peer learning, discipline, teacher quality compared. When each option makes sense for Class 1 to 12 students.",
+    date: "2026-05-22",
+    readTime: "7 min read",
+    category: "Parent Guide",
+    author: "ESA Editorial",
+    cover:
+      "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=1200&q=80",
+    excerpt:
+      "Every Rohini parent eventually asks this question. We answer honestly - home tuition is better in some cases, coaching is better in others. Here is how to decide.",
+    body: `<p>We run a coaching institute in Rohini Sector 7. We also send our own faculty for home tuition across Rohini, Pitampura and Shalimar Bagh. So when parents ask "home tuition or coaching institute", we genuinely see both sides. This article is an honest comparison.</p>
+
+<h2>Where home tuition is better</h2>
+<h3>For Classes 1 to 4</h3>
+<p>Young children learn better in their own environment with one focused adult attention. Home tuition for Class 1 to 4 in Rohini is, in our experience, more effective than batch coaching at these ages.</p>
+
+<h3>For students recovering from a specific weakness</h3>
+<p>If a Class 7 student suddenly drops in Math, a focused two-month home tuition with one teacher can fix that gap faster than a full batch. After the gap closes, they can join a regular batch.</p>
+
+<h3>For students with confidence issues</h3>
+<p>Children who freeze when asked a question in front of peers often open up one-on-one. A patient home tutor for 4-6 months can rebuild that confidence enough for them to thrive in a batch later.</p>
+
+<h2>Where coaching institute is better</h2>
+<h3>For Class 9 to 12</h3>
+<p>The CBSE board exam is a competitive environment. Students benefit from sitting next to others writing the same paper. Saturday tests, mock papers, the discipline of a fixed schedule - these are very hard to replicate at home.</p>
+
+<h3>For peer learning</h3>
+<p>Discussing a Math problem with a classmate who solved it differently is a learning moment that home tuition cannot give. Hearing a sharp question from a peer can unlock a concept the teacher's explanation did not.</p>
+
+<h3>For accountability</h3>
+<p>A child who knows their Saturday score will be compared with 17 others sits and works on Friday night. A child who knows their Saturday score will be seen only by mom and the tutor often does not.</p>
+
+<h2>The cost comparison</h2>
+<p>In Rohini, home tuition for Class 10 costs roughly Rs 4,000 to Rs 8,000 per subject per month depending on tutor seniority. A coaching institute covers four subjects for around Rs 6,000 to Rs 10,000 per month. Per-subject, the institute is significantly cheaper.</p>
+
+<h2>The honest middle path</h2>
+<p>For many parents the right answer is both. Coaching institute for the four core subjects where peer learning, weekly testing and faculty seniority matter. Home tuition for one specific weak subject in the months it needs extra love. We run both at ESA and many of our families use this combination.</p>
+
+<h3>Talk to us before deciding</h3>
+<p>If you are deciding between home tuition and coaching for your Rohini-area child, walk in to our Sector 7 centre. We will tell you honestly what we think suits your child. Sometimes we recommend home tuition with one of our own teachers. Sometimes we recommend coaching. The advice is free.</p>`,
+  },
 ];
