@@ -13,6 +13,7 @@ import {
 import { Container } from "@/components/ui/Container";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { PageBanner, BannerStatsRight } from "@/components/ui/PageBanner";
+import { faculty } from "@/data/faculty";
 
 export const metadata: Metadata = {
   title: "About Us | Best Coaching Institute in Rohini Since 2015",
@@ -95,12 +96,12 @@ export default function AboutPage() {
         label="About ESA"
         image="https://images.unsplash.com/photo-1577896851231-70ef18881754?auto=format&fit=crop&w=1920&q=80"
         imageAlt="Excellent Students' Academy classroom in Rohini"
-        heading={<>Nine years of patient, disciplined coaching in Rohini.</>}
-        subtitle="Excellent Students' Academy started in 2015 as a single-room tuition centre in Rohini Sector 7. Nine years later it remains what it has always been - a place where Class 1 to 12 students go to learn properly, not just to attend."
+        heading={<>Eleven years of patient, disciplined coaching in Rohini.</>}
+        subtitle="Excellent Students' Academy started in 2015 as a single-room tuition centre in Rohini Sector 7. Eleven years later it remains what it has always been - a place where Class 1 to 12 students go to learn properly, not just to attend."
         right={
           <BannerStatsRight
             stats={[
-              { value: "9+", label: "Years of coaching" },
+              { value: "11", label: "Years of coaching" },
               { value: "500+", label: "Students mentored" },
               { value: "84%", label: "Average board score" },
               { value: "100%", label: "Pass percentage" },
@@ -108,6 +109,118 @@ export default function AboutPage() {
           />
         }
       />
+
+      {/* FOUNDER / CEO section just below banner */}
+      <section className="relative overflow-hidden bg-white py-20 sm:py-24">
+        <div className="pointer-events-none absolute -left-32 top-20 h-80 w-80 rounded-full bg-teal-100/60 blur-3xl" />
+        <div className="pointer-events-none absolute -right-20 bottom-10 h-80 w-80 rounded-full bg-red-100/50 blur-3xl" />
+        <Container className="relative">
+          {(() => {
+            const founder = faculty[0];
+            return (
+              <div className="grid items-center gap-12 lg:grid-cols-[0.55fr_1.45fr] lg:gap-16 xl:gap-20">
+                {/* Photo column */}
+                <div className="relative mx-auto w-full max-w-[360px] lg:mx-0">
+                  <div className="absolute -left-3 -top-3 hidden h-20 w-20 rounded-2xl border-2 border-teal-500 sm:block" aria-hidden />
+                  <div className="absolute -right-3 -bottom-3 hidden h-24 w-24 rounded-2xl bg-red-500 sm:block" aria-hidden />
+                  <div className="relative aspect-[4/5] overflow-hidden rounded-2xl bg-neutral-100 shadow-2xl">
+                    <Image
+                      src={founder.image}
+                      alt={`${founder.name}, Founder, CEO and Director of Excellent Students' Academy Rohini`}
+                      fill
+                      sizes="(max-width: 1024px) 360px, 360px"
+                      className="object-cover"
+                    />
+                    <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-charcoal/85 via-charcoal/40 to-transparent p-5">
+                      <div className="flex items-center gap-2 text-[10px] font-bold uppercase tracking-[0.2em] text-teal-300">
+                        <span className="h-1.5 w-1.5 rounded-full bg-teal-400" />
+                        Founder, CEO &amp; Director
+                      </div>
+                      <p className="mt-2 text-xl font-bold tracking-tight text-white sm:text-2xl">
+                        {founder.name}
+                      </p>
+                      <p className="mt-1 text-xs text-white/75">{founder.qualification}</p>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Content column */}
+                <div>
+                  <div className="flex items-center gap-3">
+                    <span className="text-[11px] font-semibold uppercase tracking-[0.22em] text-teal-700">
+                      Meet The Founder
+                    </span>
+                    <span className="h-px w-12 bg-teal-500" />
+                  </div>
+                  <h2
+                    className="mt-6 m-0 text-charcoal"
+                    style={{
+                      fontSize: "clamp(2rem, 4vw, 3.4rem)",
+                      fontWeight: 700,
+                      lineHeight: 1.04,
+                      letterSpacing: "-0.03em",
+                    }}
+                  >
+                    Built by a mentor who still{" "}
+                    <span style={{ color: "#00BCD4" }}>teaches every day</span>.
+                  </h2>
+                  <p className="mt-6 text-base leading-relaxed text-charcoal-soft sm:text-[17px]">
+                    {founder.name.replace("Mr. ", "")} founded Excellent Students&apos; Academy in 2015 with one room and three students. Eleven years later he is still in the classroom - personally mentoring every Class 11 and 12 Mathematics batch at our Rohini Sector 7 centre.
+                  </p>
+                  <p className="mt-4 text-base leading-relaxed text-charcoal-soft sm:text-[17px]">
+                    An engineer by training (B.Tech, Mechanical), he chose teaching over a corporate career when he realised how rarely students get a teacher who explains concepts from first principles. That belief still shapes every batch at ESA today.
+                  </p>
+
+                  {/* Pull quote */}
+                  <div className="mt-8 rounded-2xl border-l-4 border-red-500 bg-neutral-50 p-6">
+                    <p className="text-base font-medium leading-relaxed text-charcoal sm:text-lg">
+                      &ldquo;I do not want ESA to grow faster than it can teach well. Every batch I add, I want to be able to look the parents in the eye after the result.&rdquo;
+                    </p>
+                    <p className="mt-3 text-xs font-bold uppercase tracking-[0.18em] text-teal-700">
+                      {founder.name.replace("Mr. ", "")} · Founder, CEO &amp; Director
+                    </p>
+                  </div>
+
+                  {/* Stats grid */}
+                  <div className="mt-8 grid grid-cols-2 gap-x-6 gap-y-5 border-t border-neutral-200 pt-7 sm:grid-cols-4">
+                    {[
+                      { v: "11", l: "Years teaching", c: "teal" },
+                      { v: "500+", l: "Students mentored", c: "red" },
+                      { v: "Math", l: "Class 11-12", c: "teal" },
+                      { v: "B.Tech", l: "Engineering grad", c: "red" },
+                    ].map((s) => (
+                      <div key={s.l}>
+                        <p
+                          className="text-2xl font-bold tracking-tight"
+                          style={{ color: s.c === "teal" ? "#00BCD4" : "#E53935" }}
+                        >
+                          {s.v}
+                        </p>
+                        <p className="mt-1 text-xs uppercase tracking-wider text-neutral-500">
+                          {s.l}
+                        </p>
+                      </div>
+                    ))}
+                  </div>
+
+                  <div className="mt-8 flex flex-wrap gap-3">
+                    <Link href="/contact#enquiry" className="btn-primary">
+                      Talk to Sir directly
+                      <ArrowRight className="h-4 w-4" />
+                    </Link>
+                    <Link
+                      href="/faculty"
+                      className="inline-flex items-center gap-2 rounded-lg border border-neutral-300 px-5 py-3 text-sm font-semibold text-charcoal transition hover:border-teal-500 hover:bg-teal-50 hover:text-teal-700"
+                    >
+                      Meet the full faculty
+                    </Link>
+                  </div>
+                </div>
+              </div>
+            );
+          })()}
+        </Container>
+      </section>
 
       <section className="border-y border-neutral-200 bg-white py-20 sm:py-24">
         <Container>

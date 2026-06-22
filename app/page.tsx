@@ -26,6 +26,7 @@ import { CardCarousel } from "@/components/CardCarousel";
 import { FacultyMarquee } from "@/components/FacultyMarquee";
 import { HomeEnquiryForm } from "@/components/HomeEnquiryForm";
 import { NewsletterForm } from "@/components/NewsletterForm";
+import { StudentResults } from "@/components/StudentResults";
 import { programs, subjects } from "@/data/programs";
 import { faculty } from "@/data/faculty";
 import { testimonials } from "@/data/testimonials";
@@ -154,111 +155,90 @@ export default function HomePage() {
         </Container>
       </section>
 
-      {/* PROGRAMS - dark, side-by-side layout with rich cards */}
-      <section className="relative overflow-hidden bg-charcoal py-24 text-white sm:py-28">
-        <div className="pointer-events-none absolute -left-40 top-1/4 h-96 w-96 rounded-full bg-teal-500/10 blur-3xl" />
-        <div className="pointer-events-none absolute -right-40 bottom-0 h-96 w-96 rounded-full bg-red-500/10 blur-3xl" />
-        <Container className="relative">
-          <div className="grid gap-12 lg:grid-cols-[0.85fr_1.15fr] lg:gap-16 xl:gap-20">
-            {/* LEFT - heading and CTA */}
-            <div className="lg:sticky lg:top-28 lg:self-start">
+      {/* PROGRAMS - light bg, 4 horizontal cards with gradient headers */}
+      <section className="bg-neutral-50 py-20 sm:py-24">
+        <Container>
+          <div className="flex flex-col items-start justify-between gap-6 sm:flex-row sm:items-end">
+            <div className="max-w-2xl">
               <div className="flex items-center gap-3">
-                <span className="text-[11px] font-semibold uppercase tracking-[0.22em] text-teal-400">
+                <span className="text-[11px] font-semibold uppercase tracking-[0.22em] text-teal-700">
                   Our Programs
                 </span>
-                <span className="h-px w-12 bg-teal-400" />
+                <span className="h-px w-12 bg-teal-500" />
               </div>
               <h2
-                className="mt-6 m-0"
+                className="mt-5 m-0 text-charcoal"
                 style={{
-                  fontSize: "clamp(2.2rem, 4.5vw, 3.6rem)",
-                  fontWeight: 600,
-                  lineHeight: 1.02,
+                  fontSize: "clamp(2rem, 4vw, 3.2rem)",
+                  fontWeight: 700,
+                  lineHeight: 1.04,
                   letterSpacing: "-0.03em",
-                  color: "#F5F1E8",
                 }}
               >
-                Coaching for every{" "}
-                <span style={{ color: "#22D3EE" }}>stage of school</span>.
+                Coaching for every <span style={{ color: "#00BCD4" }}>stage of school</span>.
               </h2>
-              <p className="mt-6 max-w-md text-base leading-relaxed" style={{ color: "rgba(255,255,255,0.62)" }}>
+              <p className="mt-4 text-base leading-relaxed text-charcoal-soft">
                 Foundation classes for young learners. Board prep for Class 9-10. Stream-wise coaching for Class 11-12. Every batch built around weekly tests and chapter-wise mastery.
               </p>
-              <div className="mt-8 flex flex-wrap gap-3">
-                <Link href="/programs" className="btn-primary">
-                  View all programs
-                  <ArrowRight className="h-4 w-4" />
-                </Link>
-                <Link
-                  href="/contact#enquiry"
-                  className="inline-flex items-center gap-2 rounded-lg border border-white/30 px-5 py-3 text-sm font-semibold text-white transition hover:bg-white/10"
-                >
-                  Book free demo
-                </Link>
-              </div>
-              <div className="mt-10 grid grid-cols-2 gap-x-6 gap-y-5 border-t border-white/12 pt-7">
-                <div>
-                  <p className="text-2xl font-bold tracking-tight" style={{ color: "#22D3EE" }}>1-12</p>
-                  <p className="mt-1 text-xs uppercase tracking-wider text-white/50">Classes covered</p>
-                </div>
-                <div>
-                  <p className="text-2xl font-bold tracking-tight" style={{ color: "#F87171" }}>12+</p>
-                  <p className="mt-1 text-xs uppercase tracking-wider text-white/50">Subjects taught</p>
-                </div>
-              </div>
             </div>
+            <Link href="/programs" className="btn-ghost">
+              View all programs
+              <ArrowRight className="h-4 w-4" />
+            </Link>
+          </div>
 
-            {/* RIGHT - 2x2 rich program cards */}
-            <div className="grid gap-5 sm:grid-cols-2">
-              {programs.map((p, i) => {
-                const accent = i % 2 === 0 ? "teal" : "red";
-                const Icon = [BookOpen, FileText, ClipboardCheck, Award][i] ?? BookOpen;
-                return (
-                  <Link
-                    key={p.slug}
-                    href={`/programs#${p.slug}`}
-                    className="group relative flex flex-col overflow-hidden rounded-2xl border border-white/10 bg-white/[0.04] p-6 transition hover:-translate-y-1 hover:border-white/25 hover:bg-white/[0.07]"
+          <div className="mt-12 grid gap-6 md:grid-cols-2 xl:grid-cols-4">
+            {programs.map((p, i) => {
+              const accent = i % 2 === 0 ? "teal" : "red";
+              const Icon = [BookOpen, FileText, ClipboardCheck, Award][i] ?? BookOpen;
+              const headerGradient =
+                accent === "teal"
+                  ? "linear-gradient(135deg, #00BCD4 0%, #0097A7 100%)"
+                  : "linear-gradient(135deg, #E53935 0%, #C62828 100%)";
+              return (
+                <article
+                  key={p.slug}
+                  className="group relative flex flex-col overflow-hidden rounded-2xl border border-neutral-200 bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-xl"
+                >
+                  <div
+                    className="relative flex items-start justify-between gap-3 p-6"
+                    style={{ background: headerGradient }}
                   >
-                    {/* Stage number watermark */}
+                    <span className="flex h-12 w-12 items-center justify-center rounded-xl bg-white/20 text-white backdrop-blur">
+                      <Icon className="h-6 w-6" strokeWidth={2.2} />
+                    </span>
                     <span
-                      className="pointer-events-none absolute right-5 top-3 select-none text-7xl font-bold leading-none tracking-tighter opacity-[0.08] transition group-hover:opacity-[0.16]"
-                      style={{ color: accent === "teal" ? "#22D3EE" : "#F87171" }}
+                      className="select-none text-5xl font-bold leading-none tracking-tighter text-white/25"
                       aria-hidden
                     >
                       0{i + 1}
                     </span>
-                    {/* Icon chip */}
-                    <span
-                      className={`flex h-11 w-11 items-center justify-center rounded-xl ${
-                        accent === "teal" ? "bg-teal-500/15 text-teal-300" : "bg-red-500/15 text-red-300"
-                      }`}
-                    >
-                      <Icon className="h-5 w-5" strokeWidth={2} />
-                    </span>
-                    <p className="mt-5 text-[10px] font-bold uppercase tracking-[0.2em] text-white/45">
+                  </div>
+
+                  <div className="flex flex-1 flex-col p-6">
+                    <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-neutral-500">
                       {p.grades}
                     </p>
                     <h3
-                      className="mt-2 m-0"
+                      className="mt-2 m-0 text-charcoal"
                       style={{
                         fontSize: "1.35rem",
-                        fontWeight: 600,
+                        fontWeight: 700,
                         letterSpacing: "-0.02em",
-                        color: "#F5F1E8",
                         lineHeight: 1.2,
                       }}
                     >
                       {p.label} Program
                     </h3>
-                    <p className="mt-3 flex-1 text-sm leading-relaxed" style={{ color: "rgba(255,255,255,0.65)" }}>
+                    <p className="mt-3 flex-1 text-sm leading-relaxed text-charcoal-soft">
                       {p.description}
                     </p>
-                    <ul className="mt-5 space-y-2 border-t border-white/10 pt-5">
-                      {p.highlights.slice(0, 2).map((h) => (
-                        <li key={h} className="flex items-start gap-2 text-[13px] text-white/70">
+                    <ul className="mt-5 space-y-2 border-t border-neutral-200 pt-5">
+                      {p.highlights.slice(0, 3).map((h) => (
+                        <li key={h} className="flex items-start gap-2 text-[13px] text-charcoal-soft">
                           <CheckCircle2
                             className={`mt-0.5 h-4 w-4 shrink-0 ${
-                              accent === "teal" ? "text-teal-400" : "text-red-400"
+                              accent === "teal" ? "text-teal-500" : "text-red-500"
                             }`}
                             strokeWidth={2}
                           />
@@ -266,18 +246,30 @@ export default function HomePage() {
                         </li>
                       ))}
                     </ul>
-                    <span
-                      className={`mt-6 inline-flex items-center gap-1.5 text-sm font-semibold ${
-                        accent === "teal" ? "text-teal-300" : "text-red-300"
-                      }`}
-                    >
-                      Program details
-                      <ArrowUpRight className="h-4 w-4 transition group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
-                    </span>
-                  </Link>
-                );
-              })}
-            </div>
+                    <div className="mt-6 flex items-center gap-3">
+                      <Link
+                        href="/contact#enquiry"
+                        className={`inline-flex flex-1 items-center justify-center gap-1.5 rounded-lg px-4 py-2.5 text-sm font-bold text-white transition ${
+                          accent === "teal"
+                            ? "bg-teal-500 hover:bg-teal-600"
+                            : "bg-red-500 hover:bg-red-600"
+                        }`}
+                      >
+                        Enquire
+                        <ArrowRight className="h-3.5 w-3.5" />
+                      </Link>
+                      <Link
+                        href={`/programs#${p.slug}`}
+                        className="inline-flex items-center gap-1 rounded-lg border border-neutral-300 px-3 py-2.5 text-sm font-semibold text-charcoal transition hover:border-charcoal hover:bg-neutral-50"
+                      >
+                        Details
+                        <ArrowUpRight className="h-3.5 w-3.5" />
+                      </Link>
+                    </div>
+                  </div>
+                </article>
+              );
+            })}
           </div>
         </Container>
       </section>
@@ -588,20 +580,20 @@ export default function HomePage() {
           {(() => {
             const founder = faculty[0];
             return (
-              <div className="grid items-center gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:gap-16 xl:gap-20">
+              <div className="grid items-center gap-12 lg:grid-cols-[0.55fr_1.45fr] lg:gap-16 xl:gap-20">
                 {/* Photo column */}
-                <div className="relative">
-                  <div className="absolute -left-3 -top-3 hidden h-24 w-24 rounded-2xl border-2 border-teal-500 sm:block" aria-hidden />
-                  <div className="absolute -right-3 -bottom-3 hidden h-32 w-32 rounded-2xl bg-red-500 sm:block" aria-hidden />
+                <div className="relative mx-auto w-full max-w-[360px] lg:mx-0">
+                  <div className="absolute -left-3 -top-3 hidden h-20 w-20 rounded-2xl border-2 border-teal-500 sm:block" aria-hidden />
+                  <div className="absolute -right-3 -bottom-3 hidden h-24 w-24 rounded-2xl bg-red-500 sm:block" aria-hidden />
                   <div className="relative aspect-[4/5] overflow-hidden rounded-2xl bg-neutral-100 shadow-2xl">
                     <Image
                       src={founder.image}
                       alt={`${founder.name}, Founder & Director of Excellent Students' Academy`}
                       fill
-                      sizes="(max-width: 1024px) 100vw, 45vw"
+                      sizes="(max-width: 1024px) 360px, 360px"
                       className="object-cover"
                     />
-                    <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-charcoal/85 via-charcoal/40 to-transparent p-6">
+                    <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-charcoal/85 via-charcoal/40 to-transparent p-5">
                       <div className="flex items-center gap-2 text-[10px] font-bold uppercase tracking-[0.2em] text-teal-300">
                         <span className="h-1.5 w-1.5 rounded-full bg-teal-400" />
                         Founder &amp; Director
@@ -726,41 +718,8 @@ export default function HomePage() {
             </Link>
           </div>
 
-          <div className="mt-12 grid gap-5 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5">
-            {toppers.map((t) => (
-              <article
-                key={t.name}
-                className="group flex flex-col overflow-hidden rounded-2xl border border-neutral-200 bg-white transition hover:-translate-y-1 hover:shadow-xl"
-              >
-                <div className="relative aspect-[4/5] overflow-hidden bg-neutral-100">
-                  <Image
-                    src={t.image}
-                    alt={`${t.name}, board topper at Excellent Students' Academy Rohini`}
-                    fill
-                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
-                    className="object-cover transition duration-500 group-hover:scale-[1.04]"
-                  />
-                  <div className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-charcoal/95 via-charcoal/40 to-transparent" />
-                  <span className="absolute right-3 top-3 rounded-full bg-red-500 px-2.5 py-1 text-xs font-bold text-white shadow-lg">
-                    {t.marks}
-                  </span>
-                  <span className="absolute left-3 top-3 inline-flex rounded-full bg-white/95 px-2.5 py-0.5 text-[9px] font-bold uppercase tracking-[0.14em] text-teal-700 backdrop-blur">
-                    Board Topper
-                  </span>
-                  <div className="absolute inset-x-0 bottom-0 p-4">
-                    <h3 className="text-lg font-bold tracking-tight text-white">{t.name}</h3>
-                    <p className="mt-1 text-[11px] font-medium text-white/85">
-                      {t.school ?? `${t.grade ?? ""}${t.stream ? ` · ${t.stream}` : ""}`}
-                    </p>
-                  </div>
-                </div>
-                {t.quote ? (
-                  <div className="flex-1 border-t border-neutral-200 bg-neutral-50 p-5">
-                    <p className="text-sm leading-relaxed text-charcoal">&ldquo;{t.quote}&rdquo;</p>
-                  </div>
-                ) : null}
-              </article>
-            ))}
+          <div className="mt-12">
+            <StudentResults toppers={toppers} />
           </div>
 
           <div className="mt-14 grid gap-px overflow-hidden rounded-2xl border border-neutral-200 bg-neutral-200 sm:grid-cols-4">
