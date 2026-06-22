@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { ArrowRight, Calendar, Clock, ChevronLeft } from "lucide-react";
+import { ArrowRight, ChevronRight } from "lucide-react";
 import { Container } from "@/components/ui/Container";
 import { blogPosts } from "@/data/blog";
 import { siteConfig } from "@/data/site";
@@ -40,6 +40,11 @@ export async function generateMetadata({
   };
 }
 
+function shortTitle(title: string) {
+  const trimmed = title.split(":")[0] ?? title;
+  return trimmed.length > 60 ? `${trimmed.slice(0, 57)}...` : trimmed;
+}
+
 export default async function BlogPostPage({
   params,
 }: {
@@ -49,9 +54,7 @@ export default async function BlogPostPage({
   const post = blogPosts.find((p) => p.slug === slug);
   if (!post) notFound();
 
-  const related = blogPosts
-    .filter((p) => p.slug !== post.slug)
-    .slice(0, 2);
+  const related = blogPosts.filter((p) => p.slug !== post.slug).slice(0, 3);
 
   const articleSchema = {
     "@context": "https://schema.org",
@@ -61,18 +64,11 @@ export default async function BlogPostPage({
     image: post.cover,
     datePublished: post.date,
     dateModified: post.date,
-    author: {
-      "@type": "Organization",
-      name: siteConfig.name,
-      url: siteConfig.domain,
-    },
+    author: { "@type": "Person", name: post.author },
     publisher: {
       "@type": "Organization",
       name: siteConfig.name,
-      logo: {
-        "@type": "ImageObject",
-        url: `${siteConfig.domain}/icon-512.png`,
-      },
+      logo: { "@type": "ImageObject", url: `${siteConfig.domain}/esa-logo.jpg` },
     },
     mainEntityOfPage: {
       "@type": "WebPage",
@@ -80,101 +76,200 @@ export default async function BlogPostPage({
     },
   };
 
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: siteConfig.domain },
+      { "@type": "ListItem", position: 2, name: "Blog", item: `${siteConfig.domain}/blog` },
+      {
+        "@type": "ListItem",
+        position: 3,
+        name: shortTitle(post.title),
+        item: `${siteConfig.domain}/blog/${post.slug}`,
+      },
+    ],
+  };
+
   return (
-    <div>
+    <div className="bg-neutral-50">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
       />
-      <article className="bg-white pb-20">
-        <header className="bg-gradient-to-br from-charcoal via-charcoal/95 to-charcoal py-12 text-white sm:py-16">
-          <Container>
-            <Link
-              href="/blog"
-              className="inline-flex items-center gap-1.5 text-xs uppercase tracking-wider text-white/70 transition hover:text-teal-300"
-            >
-              <ChevronLeft className="h-3.5 w-3.5" />
-              All posts
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+
+      <article className="pb-20">
+        {/* Breadcrumb */}
+        <Container>
+          <nav
+            aria-label="Breadcrumb"
+            className="flex flex-wrap items-center gap-2 pt-8 text-xs font-medium uppercase tracking-[0.14em] text-neutral-500 sm:pt-10"
+          >
+            <Link href="/" className="text-teal-700 transition hover:text-red-600">
+              Home
             </Link>
-            <div className="mt-6 flex items-center gap-3">
-              <span className="text-[11px] uppercase tracking-widest text-teal-300">
+            <ChevronRight className="h-3 w-3 text-neutral-400" aria-hidden />
+            <Link href="/blog" className="text-teal-700 transition hover:text-red-600">
+              Blog
+            </Link>
+            <ChevronRight className="h-3 w-3 text-neutral-400" aria-hidden />
+            <span className="text-charcoal">{shortTitle(post.title)}</span>
+          </nav>
+        </Container>
+
+        {/* Article paper */}
+        <Container className="mt-6">
+          <div className="mx-auto max-w-4xl overflow-hidden rounded-2xl bg-[#F8F4EA] shadow-sm">
+            {/* Hero image */}
+            <figure className="px-6 pt-6 sm:px-10 sm:pt-10">
+              <div className="relative aspect-[4/3] overflow-hidden rounded-xl bg-neutral-200 sm:aspect-[5/4]">
+                <Image
+                  src={post.cover}
+                  alt={post.title}
+                  fill
+                  sizes="(max-width: 1024px) 100vw, 900px"
+                  className="object-cover"
+                  priority
+                />
+              </div>
+              <figcaption className="mt-4 text-center text-sm italic text-charcoal-soft">
+                {post.excerpt}
+              </figcaption>
+            </figure>
+
+            {/* Headline + meta */}
+            <header className="px-6 pt-8 sm:px-10 sm:pt-12">
+              <span className="inline-flex rounded-full bg-teal-50 px-3 py-1 text-[10px] font-bold uppercase tracking-[0.18em] text-teal-700">
                 {post.category}
-              </span></div>
-            <h1 className="mt-4 max-w-4xl text-4xl font-semibold leading-tight text-white sm:text-5xl lg:text-6xl">
-              {post.title}
-            </h1>
-            <div className="mt-6 flex flex-wrap items-center gap-4 text-xs uppercase tracking-wider text-white/75">
-              <span className="flex items-center gap-1.5">
-                <Calendar className="h-3.5 w-3.5" />
-                {new Date(post.date).toLocaleDateString("en-IN", {
-                  day: "numeric",
-                  month: "long",
-                  year: "numeric",
-                })}
               </span>
-              <span className="flex items-center gap-1.5">
-                <Clock className="h-3.5 w-3.5" />
-                {post.readTime}
-              </span>
-              <span>By {post.author}</span>
+              <h1
+                className="mt-5 m-0 text-charcoal"
+                style={{
+                  fontFamily: "Georgia, 'Times New Roman', serif",
+                  fontSize: "clamp(2rem, 4.5vw, 3.4rem)",
+                  fontWeight: 700,
+                  lineHeight: 1.08,
+                  letterSpacing: "-0.015em",
+                }}
+              >
+                {post.title}
+              </h1>
+              <div className="mt-6 flex flex-wrap items-center gap-x-3 gap-y-2 text-xs text-neutral-600 sm:text-[13px]">
+                <span>By</span>
+                <span className="font-semibold text-teal-700">{post.author}</span>
+                <span className="text-neutral-300">·</span>
+                <span>
+                  Last reviewed{" "}
+                  <time dateTime={post.date} className="font-semibold text-charcoal">
+                    {new Date(post.date).toLocaleDateString("en-IN", {
+                      day: "numeric",
+                      month: "long",
+                      year: "numeric",
+                    })}
+                  </time>
+                </span>
+                <span className="text-neutral-300">·</span>
+                <span className="font-medium">{post.readTime}</span>
+              </div>
+            </header>
+
+            {/* Body */}
+            <div className="px-6 pb-12 pt-8 sm:px-10 sm:pt-10">
+              <div
+                className="prose-esa mx-auto"
+                dangerouslySetInnerHTML={{ __html: post.body }}
+              />
             </div>
-          </Container>
-        </header>
 
-        <div className="relative aspect-[16/9] max-h-[420px] overflow-hidden bg-neutral-200 sm:max-h-[520px]">
-          <Image
-            src={post.cover}
-            alt={post.title}
-            fill
-            sizes="100vw"
-            className="object-cover"
-            priority
-          />
-        </div>
-
-        <Container className="mt-12 max-w-3xl">
-          <div
-            className="prose-esa"
-            dangerouslySetInnerHTML={{ __html: post.body }}
-          />
+            {/* Company CTA */}
+            <div className="border-t border-neutral-200 bg-charcoal px-6 py-12 text-center text-white sm:px-10">
+              <p className="text-[11px] font-bold uppercase tracking-[0.22em] text-teal-300">
+                Excellent Students&apos; Academy
+              </p>
+              <h2
+                className="mt-4 text-white"
+                style={{
+                  fontSize: "clamp(1.5rem, 3vw, 2.2rem)",
+                  fontWeight: 700,
+                  letterSpacing: "-0.02em",
+                  lineHeight: 1.15,
+                }}
+              >
+                Want this kind of coaching for your child?
+              </h2>
+              <p className="mx-auto mt-3 max-w-xl text-sm leading-relaxed text-white/70 sm:text-base">
+                Book a free 7-day demo at our Rohini Sector 7 centre. Real batch, real faculty, no commitment.
+              </p>
+              <div className="mt-6 flex flex-wrap justify-center gap-3">
+                <Link href="/contact#enquiry" className="btn-primary">
+                  Book Free Demo
+                  <ArrowRight className="h-4 w-4" />
+                </Link>
+                <Link
+                  href="/programs"
+                  className="inline-flex items-center gap-2 rounded-lg border border-white/30 px-5 py-3 text-sm font-semibold text-white transition hover:bg-white/10"
+                >
+                  Explore programs
+                </Link>
+              </div>
+            </div>
+          </div>
         </Container>
       </article>
 
+      {/* Keep reading */}
       <section className="border-t border-neutral-200 bg-white py-16 sm:py-20">
         <Container>
-          <h2 className="text-2xl font-semibold text-charcoal sm:text-3xl">
-            Keep reading
-          </h2>
-          <div className="mt-8 grid gap-6 sm:grid-cols-2">
-            {related.map((p) => (
-              <Link
-                key={p.slug}
-                href={`/blog/${p.slug}`}
-                className="group flex items-center gap-5 rounded border border-neutral-200 bg-white p-5 transition hover:border-neutral-400 hover:shadow-lg"
-              >
-                <div className="relative h-24 w-24 shrink-0 overflow-hidden rounded sm:h-28 sm:w-28">
-                  <Image
-                    src={p.cover}
-                    alt={p.title}
-                    fill
-                    sizes="120px"
-                    className="object-cover"
-                  />
-                </div>
-                <div>
-                  <p className="text-[10px] uppercase tracking-widest text-charcoal">
-                    {p.category}
-                  </p>
-                  <h3 className="mt-1 text-base font-semibold leading-snug text-charcoal group-hover:text-teal-700 sm:text-lg">
-                    {p.title}
-                  </h3>
-                  <span className="mt-2 inline-flex items-center gap-1 text-xs font-semibold text-charcoal">
-                    Read
-                    <ArrowRight className="h-3.5 w-3.5" />
-                  </span>
-                </div>
-              </Link>
-            ))}
+          <div className="mx-auto max-w-4xl">
+            <p className="text-[11px] font-bold uppercase tracking-[0.22em] text-teal-700">
+              Keep reading
+            </p>
+            <h2
+              className="mt-3 text-charcoal"
+              style={{
+                fontSize: "clamp(1.6rem, 2.6vw, 2.2rem)",
+                fontWeight: 700,
+                letterSpacing: "-0.02em",
+                lineHeight: 1.15,
+              }}
+            >
+              More from the ESA blog.
+            </h2>
+            <div className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+              {related.map((p) => (
+                <Link
+                  key={p.slug}
+                  href={`/blog/${p.slug}`}
+                  className="group overflow-hidden rounded-2xl border border-neutral-200 bg-white transition hover:-translate-y-1 hover:shadow-lg"
+                >
+                  <div className="relative aspect-[16/10] overflow-hidden bg-neutral-100">
+                    <Image
+                      src={p.cover}
+                      alt={p.title}
+                      fill
+                      sizes="(max-width: 1024px) 100vw, 30vw"
+                      className="object-cover transition duration-500 group-hover:scale-[1.04]"
+                    />
+                    <span className="absolute left-3 top-3 inline-flex rounded-full bg-white/95 px-2.5 py-0.5 text-[10px] font-bold uppercase tracking-[0.14em] text-teal-700 backdrop-blur">
+                      {p.category}
+                    </span>
+                  </div>
+                  <div className="p-5">
+                    <h3 className="text-base font-bold leading-snug tracking-tight text-charcoal group-hover:text-teal-700">
+                      {p.title}
+                    </h3>
+                    <span className="mt-3 inline-flex items-center gap-1 text-xs font-semibold text-teal-700">
+                      Read
+                      <ArrowRight className="h-3.5 w-3.5" />
+                    </span>
+                  </div>
+                </Link>
+              ))}
+            </div>
           </div>
         </Container>
       </section>
