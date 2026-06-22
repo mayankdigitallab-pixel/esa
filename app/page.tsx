@@ -840,26 +840,41 @@ export default function HomePage() {
             title={<>What parents and students <span className="text-teal-600">say about us</span>.</>}
             description="Real reviews from current and past students of Excellent Students' Academy in Rohini."
           />
-          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-            {testimonials.slice(0, 6).map((t, i) => (
-              <article key={t.name} className="flex flex-col rounded-2xl border border-neutral-200 bg-white p-7 transition hover:-translate-y-1 hover:shadow-lg">
-                <div className="flex gap-0.5 text-yellow-400">
-                  {Array.from({ length: t.rating }).map((_, idx) => (
-                    <Star key={idx} className="h-4 w-4 fill-current" />
-                  ))}
-                </div>
-                <p className="mt-5 flex-1 text-sm leading-relaxed text-charcoal">{t.text}</p>
-                <div className="mt-6 flex items-center gap-3 border-t border-neutral-200 pt-5">
-                  <div className={`flex h-10 w-10 items-center justify-center rounded-full ${i % 2 === 0 ? "bg-teal-500" : "bg-red-500"} text-sm font-bold text-white`}>
-                    {t.name.charAt(0)}
+          <div className="mt-4">
+            <CardCarousel
+              lgCards={3}
+              mdCards={2}
+              tone="light"
+              autoplayMs={5500}
+              ariaLabel="Testimonials carousel"
+            >
+              {testimonials.map((t, i) => (
+                <article
+                  key={t.name}
+                  className="flex h-full flex-col rounded-2xl border border-neutral-200 bg-white p-7 transition hover:-translate-y-1 hover:shadow-lg"
+                >
+                  <div className="flex gap-0.5 text-yellow-400">
+                    {Array.from({ length: t.rating }).map((_, idx) => (
+                      <Star key={idx} className="h-4 w-4 fill-current" />
+                    ))}
                   </div>
-                  <div>
-                    <p className="text-sm font-bold text-charcoal">{t.name}</p>
-                    <p className="text-xs text-neutral-500">{t.role}</p>
+                  <p className="mt-5 flex-1 text-sm leading-relaxed text-charcoal">{t.text}</p>
+                  <div className="mt-6 flex items-center gap-3 border-t border-neutral-200 pt-5">
+                    <div
+                      className={`flex h-10 w-10 items-center justify-center rounded-full ${
+                        i % 2 === 0 ? "bg-teal-500" : "bg-red-500"
+                      } text-sm font-bold text-white`}
+                    >
+                      {t.name.charAt(0)}
+                    </div>
+                    <div>
+                      <p className="text-sm font-bold text-charcoal">{t.name}</p>
+                      <p className="text-xs text-neutral-500">{t.role}</p>
+                    </div>
                   </div>
-                </div>
-              </article>
-            ))}
+                </article>
+              ))}
+            </CardCarousel>
           </div>
         </Container>
       </section>

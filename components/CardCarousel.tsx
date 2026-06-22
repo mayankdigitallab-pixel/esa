@@ -13,6 +13,10 @@ interface CardCarouselProps {
   tone?: "dark" | "light";
   /** Optional aria label for the carousel region */
   ariaLabel?: string;
+  /** Auto-advance every N milliseconds (0 disables) */
+  autoplayMs?: number;
+  /** Loop back to first slide after reaching the last (default true when autoplay is on) */
+  loop?: boolean;
 }
 
 export function CardCarousel({
@@ -21,11 +25,15 @@ export function CardCarousel({
   mdCards = 2,
   tone = "dark",
   ariaLabel = "Carousel",
+  autoplayMs = 0,
+  loop,
 }: CardCarouselProps) {
   const scrollRef = useRef<HTMLDivElement>(null);
   const [index, setIndex] = useState(0);
+  const [paused, setPaused] = useState(false);
   const slides = Array.isArray(children) ? children : [children];
   const total = slides.length;
+  const isLooping = loop ?? autoplayMs > 0;
 
   const scrollToIndex = useCallback(
     (i: number) => {
@@ -41,13 +49,17 @@ export function CardCarousel({
   );
 
   const next = useCallback(() => {
-    const newIdx = Math.min(index + 1, total - 1);
+    const newIdx = isLooping
+      ? (index + 1) % total
+      : Math.min(index + 1, total - 1);
     setIndex(newIdx);
     scrollToIndex(newIdx);
-  }, [index, total, scrollToIndex]);
+  }, [index, total, scrollToIndex, isLooping]);
 
   const prev = useCallback(() => {
-    const newIdx = Math.max(index - 1, 0);
+    const newIdx = isLooping
+      ? (index - 1 + total) % total
+      : Math.max(index - 1, 0);
     setIndex(newIdx);
     scrollToIndex(newIdx);
   }, [index, scrollToIndex]);
@@ -74,6 +86,13 @@ export function CardCarousel({
     };
   }, []);
 
+  // Autoplay
+  useEffect(() => {
+    if (!autoplayMs || paused) return;
+    const t = setTimeout(() => next(), autoplayMs);
+    return () => clearTimeout(t);
+  }, [autoplayMs, paused, index, next]);
+
   const arrowBase =
     tone === "dark"
       ? "border border-white/25 text-white hover:bg-white/10"
@@ -84,7 +103,13 @@ export function CardCarousel({
   const counterColor = tone === "dark" ? "text-white/65" : "text-neutral-500";
 
   return (
-    <div className="relative" aria-roledescription="carousel" aria-label={ariaLabel}>
+    <div
+      className="relative"
+      aria-roledescription="carousel"
+      aria-label={ariaLabel}
+      onMouseEnter={() => setPaused(true)}
+      onMouseLeave={() => setPaused(false)}
+    >
       <div
         ref={scrollRef}
         className="esa-carousel -mx-4 flex snap-x snap-mandatory gap-5 overflow-x-auto px-4 pb-4 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
@@ -135,7 +160,7 @@ export function CardCarousel({
           <button
             type="button"
             onClick={prev}
-            disabled={index === 0}
+            disabled={!isLooping && index === 0}
             aria-label="Previous"
             className={`flex h-10 w-10 items-center justify-center rounded-full transition disabled:cursor-not-allowed disabled:opacity-40 ${arrowBase}`}
           >
@@ -144,7 +169,7 @@ export function CardCarousel({
           <button
             type="button"
             onClick={next}
-            disabled={index === total - 1}
+            disabled={!isLooping && index === total - 1}
             aria-label="Next"
             className={`flex h-10 w-10 items-center justify-center rounded-full transition disabled:cursor-not-allowed disabled:opacity-40 ${arrowBase}`}
           >
