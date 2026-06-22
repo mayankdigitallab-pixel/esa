@@ -29,14 +29,14 @@ export function ResultsGrid({ items }: { items: Topper[] }) {
               type="button"
               onClick={() => setIndex(i)}
               aria-label={`View ${t.name}'s photo full size`}
-              className="relative block aspect-[4/3] w-full cursor-zoom-in overflow-hidden bg-neutral-100 outline-none focus-visible:ring-2 focus-visible:ring-teal-500"
+              className="relative block aspect-[4/5] w-full cursor-zoom-in overflow-hidden bg-neutral-100 outline-none focus-visible:ring-2 focus-visible:ring-teal-500"
             >
               <Image
                 src={t.image}
                 alt={`${t.name}, student at ESA Rohini`}
                 fill
                 sizes="(max-width: 1024px) 100vw, 33vw"
-                className="object-cover transition duration-500 hover:scale-[1.04]"
+                className="object-cover object-top transition duration-500 hover:scale-[1.04]"
               />
               <div className="absolute right-3 top-3 rounded-full bg-red-500 px-3 py-1.5 text-lg font-bold text-white shadow-lg">
                 {t.marks}

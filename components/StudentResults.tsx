@@ -58,7 +58,7 @@ export function StudentResults({ toppers }: Props) {
                 alt={`${t.name}, board topper at Excellent Students' Academy Rohini`}
                 fill
                 sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 20vw"
-                className="object-cover transition duration-500 group-hover:scale-[1.06]"
+                className="object-cover object-top transition duration-500 group-hover:scale-[1.06]"
               />
               <div className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-charcoal/95 via-charcoal/40 to-transparent" />
               <span className="absolute right-3 top-3 rounded-full bg-red-500 px-2.5 py-1 text-xs font-bold text-white shadow-lg">
