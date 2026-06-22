@@ -71,96 +71,97 @@ export function BlogIndex({ posts }: Props) {
     <div className="grid gap-10 lg:grid-cols-[1fr_320px] xl:gap-12">
       {/* LEFT - main posts */}
       <div className="min-w-0">
-        {featured ? (
-          <section>
-            <p className="text-[11px] font-bold uppercase tracking-[0.22em] text-teal-700">
-              Latest Post
-            </p>
-            <Link
-              href={`/blog/${featured.slug}`}
-              className="group mt-5 block overflow-hidden rounded-2xl border border-neutral-200 bg-white transition hover:-translate-y-1 hover:shadow-xl"
-            >
-              <div className="relative aspect-[16/10] overflow-hidden bg-neutral-100">
-                <Image
-                  src={featured.cover}
-                  alt={featured.title}
-                  fill
-                  sizes="(max-width: 1024px) 100vw, 60vw"
-                  className="object-cover transition duration-500 group-hover:scale-[1.03]"
-                  priority
-                />
-              </div>
-              <div className="p-6 sm:p-8">
-                <span className="inline-flex rounded-full bg-teal-50 px-3 py-1 text-[10px] font-bold uppercase tracking-[0.16em] text-teal-700">
-                  {featured.category}
-                </span>
-                <h2 className="mt-4 text-2xl font-bold leading-tight tracking-tight text-charcoal sm:text-3xl">
-                  {featured.title}
-                </h2>
-                <p className="mt-4 text-sm leading-relaxed text-charcoal-soft sm:text-base">
-                  {featured.excerpt}
+        {(featured || editorPicks.length > 0) ? (
+          <section className="grid gap-8 lg:grid-cols-2 lg:gap-6">
+            {/* Latest post - left column */}
+            {featured ? (
+              <div>
+                <p className="text-[11px] font-bold uppercase tracking-[0.22em] text-teal-700">
+                  Latest Post
                 </p>
-                <div className="mt-5 flex flex-wrap items-center gap-4 text-xs text-neutral-500">
-                  <span className="font-medium text-charcoal">By {featured.author}</span>
-                  <span className="text-neutral-300">·</span>
-                  <span className="flex items-center gap-1.5">
-                    <Calendar className="h-3.5 w-3.5" />
-                    {formatDate(featured.date)}
-                  </span>
-                  <span className="text-neutral-300">·</span>
-                  <span className="flex items-center gap-1.5">
-                    <Clock className="h-3.5 w-3.5" />
-                    {featured.readTime}
-                  </span>
-                </div>
-              </div>
-            </Link>
-          </section>
-        ) : null}
-
-        {editorPicks.length > 0 ? (
-          <section className="mt-14">
-            <p className="text-[11px] font-bold uppercase tracking-[0.22em] text-teal-700">
-              Editor&apos;s Picks
-            </p>
-            <div className="mt-5 grid gap-5 sm:grid-cols-2">
-              {editorPicks.map((p) => (
                 <Link
-                  key={p.slug}
-                  href={`/blog/${p.slug}`}
-                  className="group overflow-hidden rounded-2xl border border-neutral-200 bg-white transition hover:-translate-y-1 hover:shadow-lg"
+                  href={`/blog/${featured.slug}`}
+                  className="group mt-5 flex h-[calc(100%-2.5rem)] flex-col overflow-hidden rounded-2xl border border-neutral-200 bg-white transition hover:-translate-y-1 hover:shadow-xl"
                 >
-                  <div className="relative aspect-[16/9] overflow-hidden bg-neutral-100">
+                  <div className="relative aspect-[5/4] overflow-hidden bg-neutral-100">
                     <Image
-                      src={p.cover}
-                      alt={p.title}
+                      src={featured.cover}
+                      alt={featured.title}
                       fill
-                      sizes="(max-width: 1024px) 100vw, 30vw"
-                      className="object-cover transition duration-500 group-hover:scale-[1.04]"
+                      sizes="(max-width: 1024px) 100vw, 40vw"
+                      className="object-cover transition duration-500 group-hover:scale-[1.03]"
+                      priority
                     />
-                    <span className="absolute left-3 top-3 inline-flex rounded-full bg-white/95 px-2.5 py-0.5 text-[10px] font-bold uppercase tracking-[0.14em] text-teal-700 backdrop-blur">
-                      {p.category}
-                    </span>
                   </div>
-                  <div className="p-5">
-                    <h3 className="text-base font-bold leading-snug tracking-tight text-charcoal group-hover:text-teal-700 sm:text-lg">
-                      {p.title}
-                    </h3>
-                    <div className="mt-4 flex items-center gap-3 text-[11px] text-neutral-500">
+                  <div className="flex flex-1 flex-col p-6">
+                    <span className="inline-flex w-fit rounded-full bg-teal-50 px-3 py-1 text-[10px] font-bold uppercase tracking-[0.16em] text-teal-700">
+                      {featured.category}
+                    </span>
+                    <h2 className="mt-4 text-xl font-bold leading-tight tracking-tight text-charcoal sm:text-2xl">
+                      {featured.title}
+                    </h2>
+                    <p className="mt-3 line-clamp-3 text-sm leading-relaxed text-charcoal-soft">
+                      {featured.excerpt}
+                    </p>
+                    <div className="mt-auto pt-5 flex flex-wrap items-center gap-x-3 gap-y-1.5 text-[11px] text-neutral-500">
+                      <span className="font-medium text-charcoal">By {featured.author}</span>
+                      <span className="text-neutral-300">·</span>
                       <span className="flex items-center gap-1.5">
                         <Calendar className="h-3 w-3" />
-                        {formatDate(p.date)}
+                        {formatDate(featured.date)}
                       </span>
                       <span className="text-neutral-300">·</span>
                       <span className="flex items-center gap-1.5">
                         <Clock className="h-3 w-3" />
-                        {p.readTime}
+                        {featured.readTime}
                       </span>
                     </div>
                   </div>
                 </Link>
-              ))}
-            </div>
+              </div>
+            ) : null}
+
+            {/* Editor's picks - right column 2x2 grid */}
+            {editorPicks.length > 0 ? (
+              <div>
+                <p className="text-[11px] font-bold uppercase tracking-[0.22em] text-teal-700">
+                  Editor&apos;s Picks
+                </p>
+                <div className="mt-5 grid gap-4 sm:grid-cols-2">
+                  {editorPicks.map((p) => (
+                    <Link
+                      key={p.slug}
+                      href={`/blog/${p.slug}`}
+                      className="group flex flex-col overflow-hidden rounded-2xl border border-neutral-200 bg-white transition hover:-translate-y-1 hover:shadow-lg"
+                    >
+                      <div className="relative aspect-[5/3] overflow-hidden bg-neutral-100">
+                        <Image
+                          src={p.cover}
+                          alt={p.title}
+                          fill
+                          sizes="(max-width: 768px) 50vw, 22vw"
+                          className="object-cover transition duration-500 group-hover:scale-[1.04]"
+                        />
+                      </div>
+                      <div className="flex flex-1 flex-col p-4">
+                        <span className="inline-flex w-fit rounded-full bg-teal-50 px-2 py-0.5 text-[9px] font-bold uppercase tracking-[0.14em] text-teal-700">
+                          {p.category}
+                        </span>
+                        <h3 className="mt-3 line-clamp-3 text-[13.5px] font-bold leading-snug tracking-tight text-charcoal group-hover:text-teal-700">
+                          {p.title}
+                        </h3>
+                        <div className="mt-auto pt-4 flex items-center gap-2 text-[10px] text-neutral-500">
+                          <Calendar className="h-3 w-3" />
+                          {formatDate(p.date)}
+                          <span className="text-neutral-300">·</span>
+                          <span>{p.readTime}</span>
+                        </div>
+                      </div>
+                    </Link>
+                  ))}
+                </div>
+              </div>
+            ) : null}
           </section>
         ) : null}
 
