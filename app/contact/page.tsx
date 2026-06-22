@@ -32,8 +32,8 @@ export default function ContactPage() {
     <div>
       <PageBanner
         label="Get In Touch"
-        image="https://images.unsplash.com/photo-1497486751825-1233686d5d80?auto=format&fit=crop&w=1920&q=80"
-        imageAlt="Welcome to Excellent Students Academy in Rohini"
+        image="https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=1920&q=80"
+        imageAlt="Students learning in a friendly classroom at Excellent Students' Academy Rohini"
         heading={<>Book a free demo. No fees. No pressure.</>}
         subtitle="Visit our Sector 7 centre, call us, or send a WhatsApp. We respond within working hours and can book a demo slot the same day."
         right={<BannerContactRight />}
