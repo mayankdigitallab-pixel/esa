@@ -39,8 +39,13 @@ export default function ContactPage() {
         right={<BannerContactRight />}
       />
 
-      <section className="border-t border-neutral-200 bg-white py-16 sm:py-20">
-        <Container>
+      <section
+        className="relative overflow-hidden border-t border-neutral-200 py-16 sm:py-20"
+        style={{ background: "linear-gradient(135deg, #E0F7FA 0%, #FFFFFF 55%, #FFEBEE 100%)" }}
+      >
+        <div className="pointer-events-none absolute -left-24 -top-24 h-72 w-72 rounded-full bg-teal-200/40 blur-3xl" aria-hidden />
+        <div className="pointer-events-none absolute -right-24 bottom-0 h-72 w-72 rounded-full bg-red-200/30 blur-3xl" aria-hidden />
+        <Container className="relative">
           <div className="grid gap-10 lg:grid-cols-[1fr_1.2fr]">
             <div className="space-y-4">
               <a
@@ -49,9 +54,10 @@ export default function ContactPage() {
                 )}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-start gap-4 rounded border border-neutral-200 bg-white p-6 transition hover:border-neutral-400 hover:bg-white"
+                className="flex items-start gap-4 rounded-2xl border border-neutral-200 p-6 shadow-sm transition hover:-translate-y-0.5 hover:shadow-md"
+                style={{ background: "linear-gradient(135deg, #DCFCE7 0%, #FFFFFF 70%)" }}
               >
-                <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded bg-[#25D366] text-white">
+                <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-[#25D366] text-white shadow-sm">
                   <MessageCircle className="h-5 w-5" />
                 </span>
                 <div>
@@ -59,14 +65,15 @@ export default function ContactPage() {
                     WhatsApp
                   </p>
                   <p className="text-sm text-body">{siteConfig.whatsappDisplay}</p>
-                  <p className="mt-1 text-xs text-muted">Fastest response</p>
+                  <p className="mt-1 text-xs font-semibold uppercase tracking-wider text-green-700">Fastest response</p>
                 </div>
               </a>
               <a
                 href={`tel:${siteConfig.phone}`}
-                className="flex items-start gap-4 rounded border border-neutral-200 bg-white p-6 transition hover:border-neutral-400 hover:bg-white"
+                className="flex items-start gap-4 rounded-2xl border border-neutral-200 p-6 shadow-sm transition hover:-translate-y-0.5 hover:shadow-md"
+                style={{ background: "linear-gradient(135deg, #E0F7FA 0%, #FFFFFF 70%)" }}
               >
-                <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded bg-neutral-950 text-neutral-400">
+                <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-teal-500 text-white shadow-sm">
                   <Phone className="h-5 w-5" />
                 </span>
                 <div>
@@ -79,9 +86,10 @@ export default function ContactPage() {
               </a>
               <a
                 href={`mailto:${siteConfig.email}`}
-                className="flex items-start gap-4 rounded border border-neutral-200 bg-white p-6 transition hover:border-neutral-400 hover:bg-white"
+                className="flex items-start gap-4 rounded-2xl border border-neutral-200 p-6 shadow-sm transition hover:-translate-y-0.5 hover:shadow-md"
+                style={{ background: "linear-gradient(135deg, #FFEBEE 0%, #FFFFFF 70%)" }}
               >
-                <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded bg-neutral-950 text-neutral-400">
+                <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-red-500 text-white shadow-sm">
                   <Mail className="h-5 w-5" />
                 </span>
                 <div>
@@ -91,8 +99,11 @@ export default function ContactPage() {
                   <p className="text-sm text-body">{siteConfig.email}</p>
                 </div>
               </a>
-              <div className="flex items-start gap-4 rounded border border-neutral-200 bg-white p-6">
-                <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded bg-neutral-950 text-neutral-400">
+              <div
+                className="flex items-start gap-4 rounded-2xl border border-neutral-200 p-6 shadow-sm"
+                style={{ background: "linear-gradient(135deg, #FEF3C7 0%, #FFFFFF 70%)" }}
+              >
+                <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-amber-500 text-white shadow-sm">
                   <MapPin className="h-5 w-5" />
                 </span>
                 <div>
@@ -106,8 +117,11 @@ export default function ContactPage() {
                   </p>
                 </div>
               </div>
-              <div className="flex items-start gap-4 rounded border border-neutral-200 bg-white p-6">
-                <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded bg-neutral-950 text-neutral-400">
+              <div
+                className="flex items-start gap-4 rounded-2xl border border-neutral-200 p-6 shadow-sm"
+                style={{ background: "linear-gradient(135deg, #E0E7FF 0%, #FFFFFF 70%)" }}
+              >
+                <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-indigo-500 text-white shadow-sm">
                   <Clock className="h-5 w-5" />
                 </span>
                 <div>
@@ -123,11 +137,11 @@ export default function ContactPage() {
               </div>
             </div>
 
-            <div id="enquiry" className="scroll-mt-24 rounded border border-neutral-200 bg-white p-7 sm:p-10">
-              <p className="text-[11px] uppercase tracking-widest text-charcoal">
+            <div id="enquiry" className="scroll-mt-24 rounded-2xl border border-neutral-200 bg-white p-7 shadow-lg sm:p-10">
+              <p className="text-[11px] font-bold uppercase tracking-widest text-teal-700">
                 Enquiry Form
               </p>
-              <h2 className="mt-2 text-3xl font-semibold text-charcoal">
+              <h2 className="mt-2 text-3xl font-bold tracking-tight text-charcoal">
                 Book a free demo class
               </h2>
               <p className="mt-2 text-sm text-body">
@@ -137,7 +151,7 @@ export default function ContactPage() {
               <EnquiryForm />
             </div>
           </div>
-          <div className="mt-12 overflow-hidden rounded border border-neutral-200">
+          <div className="mt-12 overflow-hidden rounded-2xl border border-neutral-200 shadow-sm">
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3501.8089!2d77.119802!3d28.706135!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjjCsDQyJzIyLjEiTiA3N8KwMDcnMjAuNiJF!5e0!3m2!1sen!2sin!4v1700000000000"
               width="100%"
