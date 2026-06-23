@@ -4,6 +4,7 @@ import { SectionHeading } from "@/components/ui/SectionHeading";
 import { PageBanner, BannerStatsRight } from "@/components/ui/PageBanner";
 import { ResultsGrid } from "@/components/ResultsGrid";
 import { toppers } from "@/data/results";
+import { breadcrumbSchema, jsonLd } from "@/lib/seo";
 
 export const metadata: Metadata = {
   title: "Board Results & Toppers | ESA Rohini",
@@ -20,8 +21,13 @@ export const metadata: Metadata = {
 };
 
 export default function ResultsPage() {
+  const breadcrumb = breadcrumbSchema([
+    { name: "Home", href: "/" },
+    { name: "Results", href: "/results" },
+  ]);
   return (
     <div>
+      <script {...jsonLd(breadcrumb)} />
       <PageBanner
         label="Recent Results"
         image="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=1920&q=80"

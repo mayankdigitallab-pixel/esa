@@ -40,12 +40,21 @@ export const metadata: Metadata = {
     siteName: "Excellent Students' Academy",
     locale: "en_IN",
     type: "website",
+    images: [
+      {
+        url: "/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Students and faculty at Excellent Students' Academy Rohini",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Excellent Students' Academy | Rohini",
     description:
       "Coaching and home tuition for Grades 1 to 12 in Rohini Sector 7, Delhi.",
+    images: ["/og-image.jpg"],
   },
   robots: {
     index: true,

@@ -21,6 +21,7 @@ import {
   type MaterialGroupMeta,
 } from "@/data/materials";
 import { whatsappLink } from "@/data/site";
+import { breadcrumbSchema, jsonLd } from "@/lib/seo";
 
 export const metadata: Metadata = {
   title: "Study Materials | Class 1 to 12 PDF Notes Download | ESA Rohini",
@@ -199,9 +200,14 @@ function GroupSection({ group }: { group: MaterialGroupMeta }) {
 
 export default function MaterialsPage() {
   const totalClasses = classMaterials.length;
+  const breadcrumb = breadcrumbSchema([
+    { name: "Home", href: "/" },
+    { name: "Study Materials", href: "/materials" },
+  ]);
 
   return (
     <div>
+      <script {...jsonLd(breadcrumb)} />
       <PageBanner
         label="Study Materials"
         image="/gallery/g07.jpg"

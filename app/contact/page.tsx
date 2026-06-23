@@ -13,6 +13,7 @@ import { SectionHeading } from "@/components/ui/SectionHeading";
 import { PageBanner, BannerContactRight } from "@/components/ui/PageBanner";
 import { siteConfig, whatsappLink } from "@/data/site";
 import { EnquiryForm } from "@/components/EnquiryForm";
+import { breadcrumbSchema, jsonLd } from "@/lib/seo";
 
 export const metadata: Metadata = {
   title: "Contact Us | Book a Free Demo at ESA Rohini",
@@ -28,8 +29,13 @@ export const metadata: Metadata = {
 };
 
 export default function ContactPage() {
+  const breadcrumb = breadcrumbSchema([
+    { name: "Home", href: "/" },
+    { name: "Contact", href: "/contact" },
+  ]);
   return (
     <div>
+      <script {...jsonLd(breadcrumb)} />
       <PageBanner
         label="Get In Touch"
         image="https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=1920&q=80"

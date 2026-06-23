@@ -3,6 +3,7 @@ import { Container } from "@/components/ui/Container";
 import { PageBanner } from "@/components/ui/PageBanner";
 import { BlogIndex } from "@/components/BlogIndex";
 import { blogPosts } from "@/data/blog";
+import { breadcrumbSchema, jsonLd } from "@/lib/seo";
 
 export const metadata: Metadata = {
   title: "Blog | ESA Rohini",
@@ -20,8 +21,13 @@ export const metadata: Metadata = {
 };
 
 export default function BlogIndexPage() {
+  const breadcrumb = breadcrumbSchema([
+    { name: "Home", href: "/" },
+    { name: "Blog", href: "/blog" },
+  ]);
   return (
     <div>
+      <script {...jsonLd(breadcrumb)} />
       <PageBanner
         label="ESA Blog"
         image="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&w=1920&q=80"

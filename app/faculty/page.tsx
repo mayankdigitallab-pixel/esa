@@ -6,6 +6,7 @@ import { SectionHeading } from "@/components/ui/SectionHeading";
 import { PageBanner, BannerStatsRight } from "@/components/ui/PageBanner";
 import { FacultyGrid } from "@/components/FacultyGrid";
 import { faculty } from "@/data/faculty";
+import { breadcrumbSchema, facultyItemListSchema, jsonLd } from "@/lib/seo";
 
 export const metadata: Metadata = {
   title: "Our Faculty | Expert Teachers at ESA Rohini",
@@ -22,8 +23,14 @@ export const metadata: Metadata = {
 };
 
 export default function FacultyPage() {
+  const breadcrumb = breadcrumbSchema([
+    { name: "Home", href: "/" },
+    { name: "Faculty", href: "/faculty" },
+  ]);
   return (
     <div>
+      <script {...jsonLd(breadcrumb)} />
+      <script {...jsonLd(facultyItemListSchema())} />
       <PageBanner
         label="Our Faculty"
         image="https://images.unsplash.com/photo-1577896851231-70ef18881754?auto=format&fit=crop&w=1920&q=80"

@@ -6,6 +6,7 @@ import { SectionHeading } from "@/components/ui/SectionHeading";
 import { PageBanner, BannerStatsRight } from "@/components/ui/PageBanner";
 import { programs } from "@/data/programs";
 import { whatsappLink } from "@/data/site";
+import { breadcrumbSchema, courseListSchema, jsonLd } from "@/lib/seo";
 
 export const metadata: Metadata = {
   title: "Programs & Courses | Class 1 to 12 Coaching in Rohini",
@@ -27,8 +28,14 @@ export const metadata: Metadata = {
 };
 
 export default function ProgramsPage() {
+  const breadcrumb = breadcrumbSchema([
+    { name: "Home", href: "/" },
+    { name: "Programs", href: "/programs" },
+  ]);
   return (
     <div>
+      <script {...jsonLd(breadcrumb)} />
+      <script {...jsonLd(courseListSchema())} />
       <PageBanner
         label="Our Programs"
         image="https://images.unsplash.com/photo-1427504494785-3a9ca7044f45?auto=format&fit=crop&w=1920&q=80"

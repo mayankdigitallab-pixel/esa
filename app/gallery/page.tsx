@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { PageBanner, BannerStatsRight } from "@/components/ui/PageBanner";
 import { GalleryClient } from "./GalleryClient";
+import { breadcrumbSchema, jsonLd } from "@/lib/seo";
 
 export const metadata: Metadata = {
   title: "Gallery | Inside ESA Rohini - Classes, Festivals, Birthdays",
@@ -10,8 +11,13 @@ export const metadata: Metadata = {
 };
 
 export default function GalleryPage() {
+  const breadcrumb = breadcrumbSchema([
+    { name: "Home", href: "/" },
+    { name: "Gallery", href: "/gallery" },
+  ]);
   return (
     <div>
+      <script {...jsonLd(breadcrumb)} />
       <PageBanner
         label="Gallery"
         image="/gallery/g13.jpg"

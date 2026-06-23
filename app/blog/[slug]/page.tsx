@@ -6,6 +6,7 @@ import { ArrowRight, ChevronRight } from "lucide-react";
 import { Container } from "@/components/ui/Container";
 import { blogPosts } from "@/data/blog";
 import { siteConfig } from "@/data/site";
+import { articleSchema, breadcrumbSchema, jsonLd } from "@/lib/seo";
 
 export function generateStaticParams() {
   return blogPosts.map((p) => ({ slug: p.slug }));
@@ -56,51 +57,16 @@ export default async function BlogPostPage({
 
   const related = blogPosts.filter((p) => p.slug !== post.slug).slice(0, 3);
 
-  const articleSchema = {
-    "@context": "https://schema.org",
-    "@type": "Article",
-    headline: post.title,
-    description: post.description,
-    image: post.cover,
-    datePublished: post.date,
-    dateModified: post.date,
-    author: { "@type": "Person", name: post.author },
-    publisher: {
-      "@type": "Organization",
-      name: siteConfig.name,
-      logo: { "@type": "ImageObject", url: `${siteConfig.domain}/esa-logo.jpg` },
-    },
-    mainEntityOfPage: {
-      "@type": "WebPage",
-      "@id": `${siteConfig.domain}/blog/${post.slug}`,
-    },
-  };
-
-  const breadcrumbSchema = {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Home", item: siteConfig.domain },
-      { "@type": "ListItem", position: 2, name: "Blog", item: `${siteConfig.domain}/blog` },
-      {
-        "@type": "ListItem",
-        position: 3,
-        name: shortTitle(post.title),
-        item: `${siteConfig.domain}/blog/${post.slug}`,
-      },
-    ],
-  };
+  const breadcrumb = breadcrumbSchema([
+    { name: "Home", href: "/" },
+    { name: "Blog", href: "/blog" },
+    { name: shortTitle(post.title), href: `/blog/${post.slug}` },
+  ]);
 
   return (
     <div className="bg-neutral-50">
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
-      />
+      <script {...jsonLd(articleSchema(post))} />
+      <script {...jsonLd(breadcrumb)} />
 
       <article className="pb-20">
         {/* Breadcrumb */}

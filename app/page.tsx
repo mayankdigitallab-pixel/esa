@@ -35,6 +35,7 @@ import { faqs } from "@/data/faqs";
 import { siteConfig, whatsappLink } from "@/data/site";
 import { blogPosts } from "@/data/blog";
 import { nearbyAreas } from "@/data/areas";
+import { breadcrumbSchema, faqPageSchema, jsonLd, localBusinessSchema, speakableWebPage, websiteSchema } from "@/lib/seo";
 
 export const metadata: Metadata = {
   title:
@@ -93,47 +94,22 @@ const processSteps = [
   { step: "04", title: "Weekly tests, monthly reviews", description: "Your child writes weekly tests. You get a monthly review meeting. Progress is tracked, not assumed." },
 ];
 
-const orgSchema = {
-  "@context": "https://schema.org",
-  "@type": "EducationalOrganization",
-  name: "Excellent Students' Academy",
-  alternateName: ["ESA Rohini", "Excellent Students Academy"],
-  url: "https://www.theesa.in",
-  description: "Coaching institute in Rohini Sector 7, New Delhi for Class 1 to 12. Math, Science, Commerce. Serving Rohini, Pitampura, Shalimar Bagh, Model Town, Ashok Vihar.",
-  email: siteConfig.email,
-  telephone: siteConfig.phone,
-  address: {
-    "@type": "PostalAddress",
-    streetAddress: `${siteConfig.address.line1}, ${siteConfig.address.line2}`,
-    addressLocality: siteConfig.address.city,
-    postalCode: siteConfig.address.pin,
-    addressCountry: "IN",
-  },
-  geo: { "@type": "GeoCoordinates", latitude: "28.7061354", longitude: "77.1223773" },
-  areaServed: nearbyAreas.map((a) => a.name),
-  openingHoursSpecification: {
-    "@type": "OpeningHoursSpecification",
-    dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
-    opens: "10:00",
-    closes: "20:30",
-  },
-};
-
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: faqs.map((f) => ({
-    "@type": "Question",
-    name: f.question,
-    acceptedAnswer: { "@type": "Answer", text: f.answer },
-  })),
-};
-
 export default function HomePage() {
+  const homeBreadcrumb = breadcrumbSchema([
+    { name: "Home", href: "/" },
+  ]);
+  const speakable = speakableWebPage({
+    url: "https://www.theesa.in",
+    name: "Excellent Students' Academy Rohini",
+    cssSelectors: ["h1", ".esa-hero h1", ".esa-hero p"],
+  });
   return (
     <div>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(orgSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+      <script {...jsonLd(localBusinessSchema())} />
+      <script {...jsonLd(websiteSchema())} />
+      <script {...jsonLd(faqPageSchema())} />
+      <script {...jsonLd(homeBreadcrumb)} />
+      <script {...jsonLd(speakable)} />
 
       <HeroSlider />
 

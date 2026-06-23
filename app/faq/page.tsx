@@ -3,6 +3,7 @@ import { Container } from "@/components/ui/Container";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { PageBanner } from "@/components/ui/PageBanner";
 import { faqs } from "@/data/faqs";
+import { breadcrumbSchema, faqPageSchema, jsonLd } from "@/lib/seo";
 
 export const metadata: Metadata = {
   title: "FAQ | Coaching Questions Answered | ESA Rohini",
@@ -11,23 +12,15 @@ export const metadata: Metadata = {
   alternates: { canonical: "https://www.theesa.in/faq" },
 };
 
-const schema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: faqs.map((f) => ({
-    "@type": "Question",
-    name: f.question,
-    acceptedAnswer: { "@type": "Answer", text: f.answer },
-  })),
-};
-
 export default function FaqPage() {
+  const breadcrumb = breadcrumbSchema([
+    { name: "Home", href: "/" },
+    { name: "FAQ", href: "/faq" },
+  ]);
   return (
     <div>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
-      />
+      <script {...jsonLd(faqPageSchema())} />
+      <script {...jsonLd(breadcrumb)} />
       <PageBanner
         label="Frequently Asked"
         image="https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?auto=format&fit=crop&w=1920&q=80"

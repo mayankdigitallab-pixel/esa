@@ -14,6 +14,7 @@ import { Container } from "@/components/ui/Container";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { PageBanner, BannerStatsRight } from "@/components/ui/PageBanner";
 import { faculty } from "@/data/faculty";
+import { breadcrumbSchema, jsonLd } from "@/lib/seo";
 
 export const metadata: Metadata = {
   title: "About Us | Best Coaching Institute in Rohini Since 2015",
@@ -90,8 +91,13 @@ const timeline = [
 ];
 
 export default function AboutPage() {
+  const breadcrumb = breadcrumbSchema([
+    { name: "Home", href: "/" },
+    { name: "About", href: "/about" },
+  ]);
   return (
     <div>
+      <script {...jsonLd(breadcrumb)} />
       <PageBanner
         label="About ESA"
         image="https://images.unsplash.com/photo-1577896851231-70ef18881754?auto=format&fit=crop&w=1920&q=80"
