@@ -285,6 +285,66 @@ export default function MaterialsPage() {
         </Container>
       </section>
 
+      <section className="border-t border-neutral-200 bg-white py-16 sm:py-20">
+        <Container>
+          <SectionHeading
+            eyebrow="Official curriculum resources"
+            title={<>Original CBSE and NCERT links your child can rely on.</>}
+            description="Always cross-check syllabus, sample papers and circulars from the source. These are the official government portals our faculty references during planning."
+          />
+          <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-4">
+            {[
+              {
+                name: "NCERT",
+                desc: "Official National Council of Educational Research and Training. Free PDF textbooks for every class.",
+                href: "https://ncert.nic.in/textbook.php",
+                domain: "ncert.nic.in",
+              },
+              {
+                name: "CBSE",
+                desc: "Central Board of Secondary Education. Notifications, results and academic circulars.",
+                href: "https://www.cbse.gov.in",
+                domain: "cbse.gov.in",
+              },
+              {
+                name: "CBSE Academic",
+                desc: "Syllabus, sample papers, marking schemes and curriculum documents for every class.",
+                href: "https://cbseacademic.nic.in",
+                domain: "cbseacademic.nic.in",
+              },
+              {
+                name: "DIKSHA",
+                desc: "Government of India digital learning platform. Free video lessons and learning material for K-12.",
+                href: "https://diksha.gov.in",
+                domain: "diksha.gov.in",
+              },
+            ].map((r) => (
+              <a
+                key={r.domain}
+                href={r.href}
+                target="_blank"
+                rel="noopener noreferrer nofollow"
+                className="group flex flex-col rounded-2xl border border-neutral-200 bg-white p-6 transition hover:-translate-y-1 hover:border-teal-300 hover:shadow-lg"
+              >
+                <div className="flex items-center justify-between">
+                  <span className="inline-flex h-10 w-10 items-center justify-center rounded-xl bg-teal-50 text-teal-700">
+                    <ArrowUpRight className="h-5 w-5 transition group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+                  </span>
+                  <span className="font-mono text-[10px] font-bold uppercase tracking-[0.16em] text-charcoal-soft">
+                    {r.domain}
+                  </span>
+                </div>
+                <h3 className="mt-5 text-lg font-bold tracking-tight text-charcoal">{r.name}</h3>
+                <p className="mt-2 flex-1 text-sm leading-relaxed text-charcoal-soft">{r.desc}</p>
+                <span className="mt-5 text-xs font-bold uppercase tracking-[0.18em] text-teal-700 transition group-hover:text-red-600">
+                  Open official site &rarr;
+                </span>
+              </a>
+            ))}
+          </div>
+        </Container>
+      </section>
+
       <section className="border-t border-neutral-200 bg-charcoal py-16 sm:py-20">
         <Container>
           <div className="grid gap-10 lg:grid-cols-[1.2fr_0.8fr] lg:items-center">

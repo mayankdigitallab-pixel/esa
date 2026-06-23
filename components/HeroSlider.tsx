@@ -82,7 +82,7 @@ export function HeroSlider() {
           >
             <Image
               src={s.image}
-              alt=""
+              alt={`${s.eyebrow} - ${s.headline} ${s.accentWord} at Excellent Students' Academy Rohini`}
               fill
               sizes="100vw"
               className="object-cover"
