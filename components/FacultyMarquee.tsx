@@ -1,13 +1,11 @@
 "use client";
 
-import { useCallback, useEffect, useRef, useState } from "react";
+import { useState } from "react";
 import Image from "next/image";
-import { ChevronLeft, ChevronRight } from "lucide-react";
 import { faculty } from "@/data/faculty";
 import { PhotoLightbox, type LightboxItem } from "@/components/PhotoLightbox";
 
 const teachers = faculty.slice(1); // exclude founder
-const SPEED_PX_PER_S = 28; // marquee scroll speed
 
 const lightboxItems: LightboxItem[] = teachers.map((f) => ({
   image: f.image,
@@ -17,188 +15,91 @@ const lightboxItems: LightboxItem[] = teachers.map((f) => ({
   description: f.bio,
 }));
 
-export function FacultyMarquee() {
-  const scrollerRef = useRef<HTMLDivElement>(null);
-  const pausedRef = useRef(false);
-  const userInteractingRef = useRef(false);
-  const interactionTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
-  const [hovered, setHovered] = useState(false);
-  const [lightboxIndex, setLightboxIndex] = useState<number | null>(null);
-  const dragMovedRef = useRef(false);
+// Duration tuned so a single card crosses the viewport in ~6s on desktop.
+// One full loop = teachers.length × ~6s.
+const LOOP_SECONDS = Math.max(40, teachers.length * 6);
 
-  // Duplicate for seamless loop
+export function FacultyMarquee() {
+  const [lightboxIndex, setLightboxIndex] = useState<number | null>(null);
   const loop = [...teachers, ...teachers];
 
-  // Auto-scroll loop
-  useEffect(() => {
-    const el = scrollerRef.current;
-    if (!el) return;
-    let raf = 0;
-    let last = performance.now();
-    const tick = (now: number) => {
-      const dt = Math.min(0.1, (now - last) / 1000);
-      last = now;
-      if (!pausedRef.current && !userInteractingRef.current) {
-        el.scrollLeft += SPEED_PX_PER_S * dt;
-      }
-      const half = el.scrollWidth / 2;
-      if (half > 0) {
-        if (el.scrollLeft >= half) el.scrollLeft -= half;
-        else if (el.scrollLeft < 0) el.scrollLeft += half;
-      }
-      raf = requestAnimationFrame(tick);
-    };
-    raf = requestAnimationFrame(tick);
-    return () => cancelAnimationFrame(raf);
-  }, []);
-
-  // Mark user-interacting briefly on scroll/touch so manual nav wins over autoplay
-  useEffect(() => {
-    const el = scrollerRef.current;
-    if (!el) return;
-    const onScroll = () => {
-      userInteractingRef.current = true;
-      if (interactionTimerRef.current) clearTimeout(interactionTimerRef.current);
-      interactionTimerRef.current = setTimeout(() => {
-        userInteractingRef.current = false;
-      }, 800);
-    };
-    el.addEventListener("scroll", onScroll, { passive: true });
-    return () => {
-      el.removeEventListener("scroll", onScroll);
-      if (interactionTimerRef.current) clearTimeout(interactionTimerRef.current);
-    };
-  }, []);
-
-  // Pointer drag-to-scroll on desktop
-  useEffect(() => {
-    const el = scrollerRef.current;
-    if (!el) return;
-    let isDown = false;
-    let startX = 0;
-    let startScroll = 0;
-
-    const onDown = (e: PointerEvent) => {
-      // Skip if the press starts inside a link/button so clicks still work
-      const target = e.target as HTMLElement;
-      if (target.closest("a,button")) return;
-      isDown = true;
-      dragMovedRef.current = false;
-      startX = e.clientX;
-      startScroll = el.scrollLeft;
-      el.setPointerCapture(e.pointerId);
-      el.style.cursor = "grabbing";
-      userInteractingRef.current = true;
-    };
-    const onMove = (e: PointerEvent) => {
-      if (!isDown) return;
-      const dx = e.clientX - startX;
-      if (Math.abs(dx) > 4) dragMovedRef.current = true;
-      el.scrollLeft = startScroll - dx;
-    };
-    const endDrag = (e: PointerEvent) => {
-      if (!isDown) return;
-      isDown = false;
-      try {
-        el.releasePointerCapture(e.pointerId);
-      } catch {}
-      el.style.cursor = "";
-      if (interactionTimerRef.current) clearTimeout(interactionTimerRef.current);
-      interactionTimerRef.current = setTimeout(() => {
-        userInteractingRef.current = false;
-      }, 1200);
-    };
-    el.addEventListener("pointerdown", onDown);
-    el.addEventListener("pointermove", onMove);
-    el.addEventListener("pointerup", endDrag);
-    el.addEventListener("pointercancel", endDrag);
-    el.addEventListener("pointerleave", endDrag);
-    return () => {
-      el.removeEventListener("pointerdown", onDown);
-      el.removeEventListener("pointermove", onMove);
-      el.removeEventListener("pointerup", endDrag);
-      el.removeEventListener("pointercancel", endDrag);
-      el.removeEventListener("pointerleave", endDrag);
-    };
-  }, []);
-
-  const scrollByCards = useCallback((dir: 1 | -1) => {
-    const el = scrollerRef.current;
-    if (!el) return;
-    const card = el.querySelector<HTMLElement>("[data-marquee-card]");
-    if (!card) return;
-    const gap = parseFloat(getComputedStyle(el).columnGap || "0") || 20;
-    el.scrollBy({ left: dir * (card.offsetWidth + gap), behavior: "smooth" });
-    userInteractingRef.current = true;
-    if (interactionTimerRef.current) clearTimeout(interactionTimerRef.current);
-    interactionTimerRef.current = setTimeout(() => {
-      userInteractingRef.current = false;
-    }, 1500);
-  }, []);
-
-  // Sync hover state to ref
-  useEffect(() => {
-    pausedRef.current = hovered;
-  }, [hovered]);
-
   return (
-    <div
-      className="esa-marquee group/marquee relative"
-      onMouseEnter={() => setHovered(true)}
-      onMouseLeave={() => setHovered(false)}
-    >
+    <div className="esa-marquee group/marquee relative overflow-hidden">
       <style
         dangerouslySetInnerHTML={{
           __html: `
-            .esa-marquee-scroller {
+            .esa-marquee-track {
               display: flex;
               gap: 1.25rem;
-              overflow-x: auto;
-              scrollbar-width: none;
-              -ms-overflow-style: none;
-              cursor: grab;
-              user-select: none;
-              -webkit-user-select: none;
-              scroll-behavior: auto;
+              width: max-content;
+              animation: esa-marquee ${LOOP_SECONDS}s linear infinite;
+              will-change: transform;
             }
-            .esa-marquee-scroller::-webkit-scrollbar { display: none; }
+            .esa-marquee:hover .esa-marquee-track,
+            .esa-marquee:focus-within .esa-marquee-track {
+              animation-play-state: paused;
+            }
             .esa-marquee-card {
               width: 86vw;
               flex-shrink: 0;
             }
             @media (min-width: 640px) {
-              .esa-marquee-card { width: calc((100vw - 4rem) / 2); max-width: 360px; }
+              .esa-marquee-card { width: 44vw; max-width: 360px; }
             }
             @media (min-width: 1024px) {
-              .esa-marquee-card { width: calc((min(1480px, 100vw) - 4rem - 5rem) / 4); max-width: 360px; }
+              .esa-marquee-card { width: 22vw; max-width: 360px; }
+            }
+            @keyframes esa-marquee {
+              from { transform: translate3d(0, 0, 0); }
+              to   { transform: translate3d(-50%, 0, 0); }
+            }
+            /* Soft edge fade so cards enter / exit gracefully */
+            .esa-marquee::before,
+            .esa-marquee::after {
+              content: "";
+              position: absolute;
+              top: 0;
+              bottom: 0;
+              width: 60px;
+              z-index: 5;
+              pointer-events: none;
+            }
+            .esa-marquee::before {
+              left: 0;
+              background: linear-gradient(to right, var(--background) 0%, rgba(255,255,255,0) 100%);
+            }
+            .esa-marquee::after {
+              right: 0;
+              background: linear-gradient(to left, var(--background) 0%, rgba(255,255,255,0) 100%);
+            }
+            @media (prefers-reduced-motion: reduce) {
+              .esa-marquee-track { animation: none; }
             }
           `,
         }}
       />
-      <div ref={scrollerRef} className="esa-marquee-scroller">
+      <div className="esa-marquee-track">
         {loop.map((f, i) => {
           const realIndex = i % teachers.length;
+          const isClone = i >= teachers.length;
           return (
             <article
               key={`${f.slug}-${i}`}
-              data-marquee-card
               className="esa-marquee-card group"
-              aria-hidden={i >= teachers.length ? true : undefined}
+              aria-hidden={isClone ? true : undefined}
             >
               <button
                 type="button"
-                onClick={() => {
-                  if (dragMovedRef.current) return;
-                  setLightboxIndex(realIndex);
-                }}
+                onClick={() => setLightboxIndex(realIndex)}
                 aria-label={`View ${f.name}'s photo full size`}
+                tabIndex={isClone ? -1 : 0}
                 className="relative block aspect-[4/5] w-full cursor-zoom-in overflow-hidden rounded-2xl bg-neutral-100 outline-none focus-visible:ring-2 focus-visible:ring-teal-500"
               >
                 <Image
                   src={f.image}
                   alt={`${f.name}, ${f.title} at Excellent Students' Academy Rohini`}
                   fill
-                  sizes="(max-width: 640px) 86vw, (max-width: 1024px) 45vw, 25vw"
+                  sizes="(max-width: 640px) 86vw, (max-width: 1024px) 44vw, 22vw"
                   className="object-cover transition duration-500 group-hover:scale-[1.04]"
                   draggable={false}
                 />
@@ -219,26 +120,6 @@ export function FacultyMarquee() {
             </article>
           );
         })}
-      </div>
-
-      {/* Prev / Next controls */}
-      <div className="mt-6 flex items-center justify-end gap-2">
-        <button
-          type="button"
-          onClick={() => scrollByCards(-1)}
-          aria-label="Previous faculty"
-          className="flex h-11 w-11 items-center justify-center rounded-full border border-neutral-300 bg-white text-charcoal shadow-sm transition hover:border-teal-500 hover:bg-teal-50 hover:text-teal-700"
-        >
-          <ChevronLeft className="h-5 w-5" />
-        </button>
-        <button
-          type="button"
-          onClick={() => scrollByCards(1)}
-          aria-label="Next faculty"
-          className="flex h-11 w-11 items-center justify-center rounded-full border border-neutral-300 bg-white text-charcoal shadow-sm transition hover:border-teal-500 hover:bg-teal-50 hover:text-teal-700"
-        >
-          <ChevronRight className="h-5 w-5" />
-        </button>
       </div>
 
       <PhotoLightbox

@@ -96,6 +96,7 @@ export function Footer() {
             <li><Link href="/faculty" className="text-neutral-300 transition hover:text-white">Faculty</Link></li>
             <li><Link href="/results" className="text-neutral-300 transition hover:text-white">Results</Link></li>
             <li><Link href="/gallery" className="text-neutral-300 transition hover:text-white">Gallery</Link></li>
+            <li><Link href="/materials" className="text-neutral-300 transition hover:text-white">Study Materials</Link></li>
             <li><Link href="/faq" className="text-neutral-300 transition hover:text-white">FAQ</Link></li>
             <li><Link href="/contact" className="text-neutral-300 transition hover:text-white">Contact</Link></li>
           </ul>
