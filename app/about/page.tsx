@@ -381,21 +381,23 @@ export default function AboutPage() {
         </Container>
       </section>
 
-      <section className="relative overflow-hidden bg-neutral-950 py-20 text-white sm:py-24">
+      <section className="relative overflow-hidden py-20 text-charcoal sm:py-24" style={{ background: "linear-gradient(135deg, #E0F7FA 0%, #FFFFFF 55%, #FFEBEE 100%)" }}>
+        <div className="pointer-events-none absolute -left-24 -top-24 h-72 w-72 rounded-full bg-teal-200/40 blur-3xl" aria-hidden />
+        <div className="pointer-events-none absolute -right-24 bottom-0 h-72 w-72 rounded-full bg-red-200/30 blur-3xl" aria-hidden />
         <Container className="relative">
           <div className="grid items-center gap-10 lg:grid-cols-[1.2fr_0.8fr]">
             <div>
               <div className="flex items-center gap-3">
-                <span className="text-[11px] uppercase tracking-[0.22em] text-neutral-400">
+                <span className="text-[11px] font-semibold uppercase tracking-[0.22em] text-teal-700">
                   Visit ESA
                 </span>
-                <span className="h-px w-12 bg-neutral-400" />
+                <span className="h-px w-12 bg-teal-500" />
               </div>
-              <h2 className="mt-5 text-4xl font-semibold leading-tight sm:text-5xl">
+              <h2 className="mt-5 text-4xl font-semibold leading-tight tracking-tight text-charcoal sm:text-5xl">
                 Come see a class in action.{" "}
-                <span className="text-neutral-400">First one is free.</span>
+                <span className="text-teal-600">First one is free.</span>
               </h2>
-              <p className="mt-5 max-w-2xl text-base leading-relaxed text-neutral-200">
+              <p className="mt-5 max-w-2xl text-base leading-relaxed text-charcoal-soft">
                 Whether you are looking for primary tuition or board prep
                 coaching, the easiest way to judge ESA is to come watch a real
                 batch. Book a free demo via WhatsApp or fill our short enquiry
@@ -406,10 +408,7 @@ export default function AboutPage() {
                   Book Free Demo
                   <ArrowRight className="h-4 w-4" />
                 </Link>
-                <Link
-                  href="/faculty"
-                  className="inline-flex items-center gap-2 rounded border border-white/30 px-5 py-3 text-sm font-semibold text-white transition hover:bg-white/10"
-                >
+                <Link href="/faculty" className="btn-outline">
                   Meet our faculty
                 </Link>
               </div>
@@ -423,13 +422,13 @@ export default function AboutPage() {
               ].map((s) => (
                 <div
                   key={s.label}
-                  className="rounded border border-neutral-800/60 bg-white/[0.04] p-5 backdrop-blur-sm"
+                  className="rounded-xl border border-neutral-200 bg-white p-5 shadow-sm transition hover:-translate-y-0.5 hover:shadow-md"
                 >
-                  <s.icon className="h-5 w-5 text-neutral-400" />
-                  <p className="mt-3 text-3xl font-semibold">
+                  <s.icon className="h-5 w-5 text-teal-600" />
+                  <p className="mt-3 text-3xl font-bold tracking-tight text-charcoal">
                     {s.value}
                   </p>
-                  <p className="mt-1 text-xs uppercase tracking-wider text-neutral-300">
+                  <p className="mt-1 text-xs font-semibold uppercase tracking-wider text-charcoal-soft">
                     {s.label}
                   </p>
                 </div>
