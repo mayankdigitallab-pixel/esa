@@ -53,25 +53,6 @@ export function FacultyMarquee() {
               from { transform: translate3d(0, 0, 0); }
               to   { transform: translate3d(-50%, 0, 0); }
             }
-            /* Soft edge fade so cards enter / exit gracefully */
-            .esa-marquee::before,
-            .esa-marquee::after {
-              content: "";
-              position: absolute;
-              top: 0;
-              bottom: 0;
-              width: 60px;
-              z-index: 5;
-              pointer-events: none;
-            }
-            .esa-marquee::before {
-              left: 0;
-              background: linear-gradient(to right, var(--background) 0%, rgba(255,255,255,0) 100%);
-            }
-            .esa-marquee::after {
-              right: 0;
-              background: linear-gradient(to left, var(--background) 0%, rgba(255,255,255,0) 100%);
-            }
             @media (prefers-reduced-motion: reduce) {
               .esa-marquee-track { animation: none; }
             }
