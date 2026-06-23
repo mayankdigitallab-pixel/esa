@@ -132,41 +132,59 @@ export default function HomePage() {
         </Container>
       </section>
 
-      {/* FOUNDER-TEACHES band — promotes the key differentiator near the top.
-          Text-only, no images per the brief. */}
-      <section className="relative overflow-hidden bg-charcoal py-8 text-white sm:py-10">
-        <div
-          className="pointer-events-none absolute inset-0"
-          style={{
-            background:
-              "linear-gradient(135deg, rgba(0,188,212,0.18) 0%, transparent 45%, rgba(229,57,53,0.18) 100%)",
-          }}
-          aria-hidden
-        />
-        <Container className="relative">
-          <div className="flex flex-col items-start gap-5 sm:flex-row sm:items-center sm:justify-between">
-            <div className="flex items-start gap-4">
-              <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-teal-500/20 text-teal-300">
-                <Award className="h-5 w-5" strokeWidth={2.2} />
-              </span>
-              <div>
-                <p className="text-[11px] font-bold uppercase tracking-[0.22em] text-teal-300">
-                  Why parents pick ESA
-                </p>
-                <p className="mt-2 text-base font-semibold leading-snug text-white sm:text-lg">
-                  Our founder Mr. Chandan Prajapati personally teaches{" "}
-                  <span className="text-teal-300">every Class 11 and 12 Mathematics batch</span>{" "}
-                  at our Rohini centre.
-                </p>
-              </div>
-            </div>
-            <Link
-              href="/faculty#chandan-prajapati"
-              className="inline-flex items-center gap-2 rounded-full border border-white/25 px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-white/10"
+      {/* FOUNDER-TEACHES banner — full-bleed with Chandan's photo as background. */}
+      <section className="relative isolate overflow-hidden">
+        <div className="absolute inset-0 -z-10">
+          <Image
+            src="/faculty/chandan-prajapati.jpg"
+            alt="Mr. Chandan Prajapati, Founder and Director of Excellent Students' Academy"
+            fill
+            sizes="100vw"
+            className="object-cover object-[center_25%]"
+          />
+          {/* Heavy scrim + left gradient so the text column reads cleanly on
+              any portion of the founder's portrait. */}
+          <div className="absolute inset-0 bg-charcoal/65" aria-hidden />
+          <div
+            className="absolute inset-0"
+            style={{
+              background:
+                "linear-gradient(90deg, rgba(15,15,15,0.92) 0%, rgba(15,15,15,0.75) 35%, rgba(15,15,15,0.30) 70%, rgba(15,15,15,0.05) 100%)",
+            }}
+            aria-hidden
+          />
+        </div>
+        <Container className="relative py-24 sm:py-28 lg:py-32">
+          <div className="max-w-2xl">
+            <p className="inline-flex items-center gap-2 rounded-full border border-white/25 bg-white/10 px-4 py-1.5 text-[11px] font-bold uppercase tracking-[0.22em] text-teal-300 backdrop-blur">
+              <Award className="h-3.5 w-3.5" />
+              Why parents pick ESA
+            </p>
+            <h2
+              className="mt-6 text-4xl font-bold leading-[1.05] tracking-tight text-white drop-shadow-md sm:text-5xl lg:text-6xl"
+              style={{ letterSpacing: "-0.02em" }}
             >
-              Meet the founder
-              <ArrowRight className="h-4 w-4" />
-            </Link>
+              The founder personally teaches{" "}
+              <span className="text-teal-300">every Class 11 and 12 Math batch</span>.
+            </h2>
+            <p className="mt-6 max-w-xl text-base leading-relaxed text-white/85 sm:text-[17px]">
+              Mr. Chandan Prajapati &mdash; B.Tech, Mechanical Engineering &mdash; founded
+              Excellent Students&apos; Academy in 2015 and is still in the classroom every
+              single day. No franchise model. No rotating instructors. The same hands
+              that built ESA teach your child Mathematics.
+            </p>
+            <div className="mt-8 flex flex-wrap items-center gap-3">
+              <Link href="/faculty#chandan-prajapati" className="btn-primary">
+                Meet the founder
+                <ArrowRight className="h-4 w-4" />
+              </Link>
+              <Link
+                href="/contact#enquiry"
+                className="inline-flex items-center gap-2 rounded-lg border border-white/35 px-5 py-3 text-sm font-semibold text-white backdrop-blur transition hover:bg-white/10"
+              >
+                Book a free demo
+              </Link>
+            </div>
           </div>
         </Container>
       </section>
