@@ -93,7 +93,6 @@ export const heroSlides: HeroSlide[] = [
     primaryCta: { label: "Meet The Founder", href: "/faculty#chandan-prajapati" },
     secondaryCta: { label: "Book Free Demo", href: "/contact#enquiry" },
     image: "/faculty/chandan-prajapati.jpg",
-    heavyOverlay: true,
   },
   {
     eyebrow: "Foundation Coaching · Class 1 to 5",
