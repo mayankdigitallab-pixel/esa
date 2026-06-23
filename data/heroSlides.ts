@@ -23,6 +23,28 @@ export const heroSlides: HeroSlide[] = [
       "https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=1920&q=80",
   },
   {
+    eyebrow: "Sector 7 Rohini · Class I to XII",
+    headline: "Find the bright yellow board on",
+    accentWord: "Sector 7's main road.",
+    accentColor: "red",
+    description:
+      "C7/72, 2nd Floor, Sector 7, Rohini. Two minutes from the Rohini West metro side. Walk in any working day between 11 AM and 1 PM to see a live batch.",
+    primaryCta: { label: "Visit The Centre", href: "/contact" },
+    secondaryCta: { label: "Get Directions", href: "/contact" },
+    image: "/gallery/g30.jpg",
+  },
+  {
+    eyebrow: "11 Mentors · Postgrad / B.Tech",
+    headline: "The teachers your child",
+    accentWord: "remembers.",
+    accentColor: "teal",
+    description:
+      "Eleven full-time mentors. Six-plus years of average classroom experience. Every birthday cut at the centre, every Teachers' Day banner — this is the team behind ESA.",
+    primaryCta: { label: "Meet The Faculty", href: "/faculty" },
+    secondaryCta: { label: "See Gallery", href: "/gallery" },
+    image: "/gallery/g22.jpg",
+  },
+  {
     eyebrow: "Class 11 & 12 · Science · Commerce",
     headline: "Stream-ready coaching for Class 11 and",
     accentWord: "Class 12 boards.",
