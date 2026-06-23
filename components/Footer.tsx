@@ -132,7 +132,7 @@ export function Footer() {
       <div className="border-t border-neutral-800">
         <div className="mx-auto flex max-w-[1480px] flex-col items-center justify-between gap-3 px-5 py-6 text-xs text-neutral-500 sm:flex-row sm:px-6 lg:px-8">
           <p>&copy; {year} Excellent Students&apos; Academy. All rights reserved.</p>
-          <div className="flex items-center gap-4">
+          <div className="flex flex-wrap items-center gap-x-4 gap-y-2">
             <Link href="/terms" className="transition hover:text-white">
               Terms &amp; Conditions
             </Link>
@@ -140,6 +140,15 @@ export function Footer() {
             <Link href="/privacy" className="transition hover:text-white">
               Privacy Policy
             </Link>
+            <span className="text-neutral-700">·</span>
+            <a
+              href="/sitemap.xml"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="transition hover:text-white"
+            >
+              Sitemap
+            </a>
             <span className="text-neutral-700">·</span>
             <a
               href="https://www.mayankdigitallabs.in"
