@@ -755,10 +755,10 @@ export default function HomePage() {
             <div className="pointer-events-none absolute top-12 hidden h-px w-full bg-gradient-to-r from-transparent via-teal-300 to-transparent lg:block" />
             {processSteps.map((s, i) => (
               <div key={s.step} className="relative">
-                <div className={`relative flex h-24 w-24 items-center justify-center rounded-full ${i % 2 === 0 ? "bg-teal-500" : "bg-red-500"} text-white shadow-lg`}>
-                  <span className="text-2xl font-bold tracking-tight">{s.step}</span>
+                <div className={`relative flex h-14 w-14 items-center justify-center rounded-full sm:h-20 sm:w-20 lg:h-24 lg:w-24 ${i % 2 === 0 ? "bg-teal-500" : "bg-red-500"} text-white shadow-lg`}>
+                  <span className="text-lg font-bold tracking-tight sm:text-xl lg:text-2xl">{s.step}</span>
                 </div>
-                <h3 className="mt-6 text-lg font-bold tracking-tight text-charcoal">{s.title}</h3>
+                <h3 className="mt-4 text-lg font-bold tracking-tight text-charcoal sm:mt-6">{s.title}</h3>
                 <p className="mt-2 text-sm leading-relaxed text-charcoal-soft">{s.description}</p>
               </div>
             ))}
