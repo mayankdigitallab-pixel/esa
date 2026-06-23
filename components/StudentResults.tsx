@@ -41,11 +41,13 @@ export function StudentResults({ toppers }: Props) {
 
   return (
     <>
-      <div className="grid gap-5 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5">
+      <div
+        className="-mx-4 flex snap-x snap-mandatory gap-5 overflow-x-auto px-4 pb-4 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden sm:mx-0 sm:grid sm:snap-none sm:grid-cols-2 sm:overflow-visible sm:px-0 sm:pb-0 md:grid-cols-3 lg:grid-cols-5"
+      >
         {toppers.map((t, i) => (
           <article
             key={t.name}
-            className="group flex flex-col overflow-hidden rounded-2xl border border-neutral-200 bg-white transition hover:-translate-y-1 hover:shadow-xl"
+            className="group flex w-[80%] shrink-0 snap-start flex-col overflow-hidden rounded-2xl border border-neutral-200 bg-white transition hover:-translate-y-1 hover:shadow-xl sm:w-auto sm:shrink"
           >
             <button
               type="button"
