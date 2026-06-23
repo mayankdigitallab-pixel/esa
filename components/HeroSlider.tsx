@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState, useCallback } from "react";
+import { useEffect, useRef, useState, useCallback } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import {
@@ -13,10 +13,12 @@ import { heroSlides } from "@/data/heroSlides";
 import { siteConfig } from "@/data/site";
 
 const AUTOPLAY_MS = 6500;
+const PARALLAX_FACTOR = 0.35; // 0 = no parallax, 0.5 = strong
 
 export function HeroSlider() {
   const [index, setIndex] = useState(0);
   const [paused, setPaused] = useState(false);
+  const bgRef = useRef<HTMLDivElement>(null);
 
   const goTo = useCallback((i: number) => {
     setIndex(((i % heroSlides.length) + heroSlides.length) % heroSlides.length);
@@ -28,6 +30,28 @@ export function HeroSlider() {
     const t = setTimeout(() => next(), AUTOPLAY_MS);
     return () => clearTimeout(t);
   }, [index, paused, next]);
+
+  // Parallax: translate the background slower than the page scroll
+  useEffect(() => {
+    if (typeof window === "undefined") return;
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+    const bg = bgRef.current;
+    if (!bg) return;
+    let ticking = false;
+    const update = () => {
+      const offset = window.scrollY * PARALLAX_FACTOR;
+      bg.style.transform = `translate3d(0, ${offset}px, 0)`;
+      ticking = false;
+    };
+    const onScroll = () => {
+      if (ticking) return;
+      ticking = true;
+      requestAnimationFrame(update);
+    };
+    update();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
 
   return (
     <section
@@ -42,8 +66,12 @@ export function HeroSlider() {
         }}
       />
 
-      {/* Background image stack */}
-      <div className="absolute inset-0 -z-10">
+      {/* Background image stack (parallax-translated) */}
+      <div
+        ref={bgRef}
+        className="absolute inset-0 -z-10"
+        style={{ top: "-15%", bottom: "-15%", willChange: "transform" }}
+      >
         {heroSlides.map((s, i) => (
           <div
             key={s.image}
