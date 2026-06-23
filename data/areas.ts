@@ -3,6 +3,20 @@ export type Area = {
   name: string;
   distanceKm: number;
   description: string;
+  /**
+   * Optional per-locality fields. When present the area page renders unique
+   * copy; when absent the page falls back to generic templated copy. Filling
+   * these in turns thin near-duplicate pages into real local-SEO content.
+   *
+   * TODO (Mayank): fill in for each area as time allows. Even 2-3 sentences
+   * specific to the locality (a known landmark, common student profile, local
+   * school name, transport quirk) dramatically improves how Google + AI
+   * engines treat these pages.
+   */
+  localCopy?: string;
+  landmark?: string;
+  nearbySchools?: string[];
+  transport?: string;
 };
 
 // Localities around Rohini Sector 7 where most ESA students come from.

@@ -7,6 +7,7 @@ import { PageBanner } from "@/components/ui/PageBanner";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { nearbyAreas } from "@/data/areas";
 import { siteConfig, whatsappLink } from "@/data/site";
+import { breadcrumbSchema, jsonLd } from "@/lib/seo";
 
 export function generateStaticParams() {
   return nearbyAreas.map((a) => ({ slug: a.slug }));
@@ -47,9 +48,15 @@ export default async function AreaPage({
   if (!area) notFound();
 
   const other = nearbyAreas.filter((a) => a.slug !== area.slug).slice(0, 6);
+  const breadcrumb = breadcrumbSchema([
+    { name: "Home", href: "/" },
+    { name: "Areas", href: "/areas/rohini-sector-7" },
+    { name: area.name, href: `/areas/${area.slug}` },
+  ]);
 
   return (
     <div>
+      <script {...jsonLd(breadcrumb)} />
       <PageBanner
         label={`Coaching · ${area.name}`}
         image="https://images.unsplash.com/photo-1543269865-cbf427effbad?auto=format&fit=crop&w=1920&q=80"
@@ -75,6 +82,26 @@ export default async function AreaPage({
                 }
                 description={`Whether you live in ${area.name} and need a coaching centre within a quick drive, or you want focused tuition for your child without juggling multiple tutors, ESA is built around weekly progress and zero pressure.`}
               />
+              {/* Unique per-locality paragraph. Falls back to nothing extra
+                  if localCopy is not yet filled - the rest of the page still
+                  carries the area name through dynamic copy. */}
+              {area.localCopy ? (
+                <p className="mb-6 rounded-2xl border border-teal-200 bg-teal-50/50 p-5 text-sm leading-relaxed text-charcoal">
+                  {area.localCopy}
+                </p>
+              ) : null}
+              {area.landmark ? (
+                <p className="mb-6 text-sm text-charcoal-soft">
+                  <strong className="font-semibold text-charcoal">Local landmark:</strong>{" "}
+                  {area.landmark}.
+                </p>
+              ) : null}
+              {area.nearbySchools && area.nearbySchools.length > 0 ? (
+                <p className="mb-6 text-sm text-charcoal-soft">
+                  <strong className="font-semibold text-charcoal">Schools we coach students from in {area.name}:</strong>{" "}
+                  {area.nearbySchools.join(", ")}.
+                </p>
+              ) : null}
               <ul className="space-y-4">
                 {[
                   `Class 1 to 12 coaching, all subjects covered`,
@@ -128,7 +155,9 @@ export default async function AreaPage({
                 </div>
                 <div className="flex justify-between border-b border-neutral-200 pb-2">
                   <dt className="text-muted">Public transport</dt>
-                  <dd className="font-medium text-charcoal">Auto / Metro</dd>
+                  <dd className="font-medium text-charcoal">
+                    {area.transport ?? "Auto / Metro"}
+                  </dd>
                 </div>
                 <div className="flex justify-between">
                   <dt className="text-muted">Home tuition</dt>
