@@ -581,9 +581,9 @@ export default function HomePage() {
           {(() => {
             const founder = faculty[0];
             return (
-              <div className="grid items-center gap-12 lg:grid-cols-[0.55fr_1.45fr] lg:gap-16 xl:gap-20">
+              <div className="grid items-center gap-12 lg:grid-cols-[0.75fr_1.25fr] lg:gap-16 xl:gap-20">
                 {/* Photo column */}
-                <div className="relative mx-auto w-full max-w-[360px] lg:mx-0">
+                <div className="relative mx-auto w-full max-w-[460px] lg:mx-0">
                   <div className="absolute -left-3 -top-3 hidden h-20 w-20 rounded-2xl border-2 border-teal-500 sm:block" aria-hidden />
                   <div className="absolute -right-3 -bottom-3 hidden h-24 w-24 rounded-2xl bg-red-500 sm:block" aria-hidden />
                   <div className="relative aspect-[4/5] overflow-hidden rounded-2xl bg-neutral-100 shadow-2xl">
@@ -591,7 +591,7 @@ export default function HomePage() {
                       src={founder.image}
                       alt={`${founder.name}, Founder & Director of Excellent Students' Academy`}
                       fill
-                      sizes="(max-width: 1024px) 360px, 360px"
+                      sizes="(max-width: 640px) 92vw, (max-width: 1024px) 460px, 460px"
                       className="object-cover"
                     />
                     <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-charcoal/85 via-charcoal/40 to-transparent p-5">
