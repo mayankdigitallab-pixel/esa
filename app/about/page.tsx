@@ -267,8 +267,8 @@ export default function AboutPage() {
               <div className="absolute -right-6 -top-6 h-24 w-24 rounded border-2 border-neutral-400" />
               <div className="relative aspect-[4/5] overflow-hidden rounded shadow-2xl">
                 <Image
-                  src="https://images.unsplash.com/photo-1577896851231-70ef18881754?auto=format&fit=crop&w=900&q=80"
-                  alt="Inside the Excellent Students' Academy classroom in Rohini Sector 7"
+                  src="/gallery/g30.jpg"
+                  alt="Excellent Students' Academy signboard at C7/72, Sector 7 Rohini"
                   fill
                   sizes="(max-width: 1024px) 100vw, 45vw"
                   className="object-cover"
