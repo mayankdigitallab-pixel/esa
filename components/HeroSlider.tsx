@@ -13,7 +13,7 @@ import { heroSlides } from "@/data/heroSlides";
 import { siteConfig } from "@/data/site";
 
 const AUTOPLAY_MS = 6500;
-const PARALLAX_FACTOR = 0.35; // 0 = no parallax, 0.5 = strong
+const PARALLAX_FACTOR = 0.5; // 0 = no parallax, 0.5 = strong
 
 export function HeroSlider() {
   const [index, setIndex] = useState(0);
@@ -70,7 +70,7 @@ export function HeroSlider() {
       <div
         ref={bgRef}
         className="absolute inset-0 -z-10"
-        style={{ top: "-15%", bottom: "-15%", willChange: "transform" }}
+        style={{ top: "-30%", bottom: "-30%", willChange: "transform" }}
       >
         {heroSlides.map((s, i) => (
           <div
