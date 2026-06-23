@@ -855,6 +855,78 @@ export default function HomePage() {
         </Container>
       </section>
 
+      {/* TEAM BANNER */}
+      <section className="relative isolate overflow-hidden">
+        <div className="absolute inset-0 -z-10">
+          <Image
+            src="/gallery/g22.jpg"
+            alt="The Excellent Students' Academy faculty team on Teachers' Day"
+            fill
+            sizes="100vw"
+            className="object-cover object-[center_30%]"
+          />
+          {/* Strong dark scrim + side gradient so the text column reads cleanly */}
+          <div className="absolute inset-0 bg-charcoal/55" aria-hidden />
+          <div
+            className="absolute inset-0"
+            style={{
+              background:
+                "linear-gradient(90deg, rgba(15,15,15,0.92) 0%, rgba(15,15,15,0.78) 35%, rgba(15,15,15,0.30) 70%, rgba(15,15,15,0.08) 100%)",
+            }}
+            aria-hidden
+          />
+        </div>
+        <Container className="relative py-24 sm:py-28 lg:py-32">
+          <div className="max-w-2xl">
+            <p className="inline-flex items-center gap-2 rounded-full border border-white/25 bg-white/10 px-4 py-1.5 text-[11px] font-bold uppercase tracking-[0.22em] text-teal-300 backdrop-blur">
+              <Users className="h-3.5 w-3.5" />
+              Meet the team
+            </p>
+            <h2
+              className="mt-6 text-4xl font-bold leading-[1.05] tracking-tight text-white drop-shadow-md sm:text-5xl lg:text-6xl"
+              style={{ letterSpacing: "-0.02em" }}
+            >
+              The teachers your child{" "}
+              <span className="text-teal-300">remembers</span> long after the boards.
+            </h2>
+            <p className="mt-6 max-w-xl text-base leading-relaxed text-white/85 sm:text-[17px]">
+              11 full-time mentors. Each one a postgraduate or B.Tech holder. Every birthday cut at the centre, every Teachers&apos; Day banner, every Saturday test scored by hand &mdash; this is the team behind it.
+            </p>
+
+            <div className="mt-8 grid max-w-lg gap-3 sm:grid-cols-3">
+              {[
+                { v: "11", l: "Mentors" },
+                { v: "6+ yrs", l: "Avg. experience" },
+                { v: "100%", l: "Postgrad / B.Tech" },
+              ].map((s) => (
+                <div
+                  key={s.l}
+                  className="rounded-xl border border-white/15 bg-white/10 p-4 backdrop-blur"
+                >
+                  <p className="text-2xl font-bold tracking-tight text-teal-300">{s.v}</p>
+                  <p className="mt-1 text-[11px] font-semibold uppercase tracking-[0.16em] text-white/75">
+                    {s.l}
+                  </p>
+                </div>
+              ))}
+            </div>
+
+            <div className="mt-9 flex flex-wrap items-center gap-3">
+              <Link href="/faculty" className="btn-primary">
+                Meet every mentor
+                <ArrowRight className="h-4 w-4" />
+              </Link>
+              <Link
+                href="/gallery#teachers-day"
+                className="inline-flex items-center gap-2 rounded-lg border border-white/35 px-5 py-3 text-sm font-semibold text-white backdrop-blur transition hover:bg-white/10"
+              >
+                See team photos
+              </Link>
+            </div>
+          </div>
+        </Container>
+      </section>
+
       {/* TESTIMONIALS */}
       <section className="border-y border-neutral-200 bg-neutral-50 py-24 sm:py-28">
         <Container>
@@ -1017,6 +1089,89 @@ export default function HomePage() {
                 <ArrowUpRight className="h-4 w-4 text-neutral-400 transition group-hover:text-red-600" />
               </Link>
             ))}
+          </div>
+        </Container>
+      </section>
+
+      {/* VISIT US BANNER */}
+      <section className="relative isolate overflow-hidden">
+        <div className="absolute inset-0 -z-10">
+          <Image
+            src="/gallery/g30.jpg"
+            alt="Excellent Students' Academy signboard, Sector 7 Rohini"
+            fill
+            sizes="100vw"
+            className="object-cover"
+          />
+          {/* Dark scrim + left-side gradient for text legibility */}
+          <div className="absolute inset-0 bg-charcoal/55" aria-hidden />
+          <div
+            className="absolute inset-0"
+            style={{
+              background:
+                "linear-gradient(90deg, rgba(20,20,20,0.88) 0%, rgba(20,20,20,0.70) 38%, rgba(20,20,20,0.25) 70%, rgba(20,20,20,0.05) 100%)",
+            }}
+            aria-hidden
+          />
+        </div>
+        <Container className="relative py-24 sm:py-28 lg:py-32">
+          <div className="max-w-2xl">
+            <p className="inline-flex items-center gap-2 rounded-full border border-white/25 bg-white/10 px-4 py-1.5 text-[11px] font-bold uppercase tracking-[0.22em] text-teal-300 backdrop-blur">
+              <MapPin className="h-3.5 w-3.5" />
+              Visit our centre
+            </p>
+            <h2
+              className="mt-6 text-4xl font-bold leading-[1.05] tracking-tight text-white drop-shadow-md sm:text-5xl lg:text-6xl"
+              style={{ letterSpacing: "-0.02em" }}
+            >
+              Look for the bright yellow board on{" "}
+              <span className="text-teal-300">Sector 7&apos;s</span> main road.
+            </h2>
+            <p className="mt-6 max-w-xl text-base leading-relaxed text-white/85 sm:text-[17px]">
+              C7/72, 2nd Floor, Sector 7, Rohini, New Delhi 110085. Two minutes from the Rohini West metro side. We&apos;re open Monday to Saturday, 10 AM to 8:30 PM.
+            </p>
+
+            <div className="mt-8 grid max-w-md gap-3 sm:grid-cols-2">
+              <div className="rounded-xl border border-white/15 bg-white/10 p-4 backdrop-blur">
+                <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-teal-300">
+                  Address
+                </p>
+                <p className="mt-1.5 text-sm font-semibold leading-snug text-white">
+                  C7/72, 2nd Floor
+                  <br />
+                  Sector 7, Rohini, Delhi
+                </p>
+              </div>
+              <div className="rounded-xl border border-white/15 bg-white/10 p-4 backdrop-blur">
+                <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-teal-300">
+                  Open
+                </p>
+                <p className="mt-1.5 text-sm font-semibold leading-snug text-white">
+                  Mon to Sat
+                  <br />
+                  10:00 AM &ndash; 8:30 PM
+                </p>
+              </div>
+            </div>
+
+            <div className="mt-9 flex flex-wrap items-center gap-3">
+              <a
+                href="https://maps.app.goo.gl/?q=Excellent+Students+Academy+Sector+7+Rohini"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-primary"
+              >
+                Get directions
+                <ArrowRight className="h-4 w-4" />
+              </a>
+              <a
+                href={`tel:${siteConfig.phone}`}
+                className="inline-flex items-center gap-2 rounded-lg border border-white/35 px-5 py-3 text-sm font-semibold text-white backdrop-blur transition hover:bg-white/10"
+              >
+                <Phone className="h-4 w-4" />
+                Call {siteConfig.phoneDisplay}
+              </a>
+            </div>
           </div>
         </Container>
       </section>
