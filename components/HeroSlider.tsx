@@ -177,8 +177,8 @@ export function HeroSlider() {
           <div>
             <Row
               icon={<Star size={15} className="fill-current" />}
-              label="CLIENT RATING"
-              value="4.9 / 5 · 300+ parents trust ESA"
+              label="ESTABLISHED"
+              value="Coaching in Rohini since 2015"
             />
             <Divider />
             <Row

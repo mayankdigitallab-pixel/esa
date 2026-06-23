@@ -70,10 +70,10 @@ export const metadata: Metadata = {
 };
 
 const trustPoints = [
-  { value: "11", label: "Years coaching", icon: Award },
+  { value: "Since 2015", label: "Coaching in Rohini", icon: Award },
   { value: "500+", label: "Students mentored", icon: Users },
-  { value: "84%", label: "Average board score", icon: ClipboardCheck },
-  { value: "100%", label: "Pass percentage", icon: Sparkles },
+  { value: "84%", label: "Avg board score · 2026", icon: ClipboardCheck },
+  { value: "100%", label: "Pass rate · 2026 batch", icon: Sparkles },
 ];
 
 const facilities = [

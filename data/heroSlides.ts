@@ -18,7 +18,7 @@ export const heroSlides: HeroSlide[] = [
     accentWord: "discipline.",
     accentColor: "red",
     description:
-      "For 9+ years, Excellent Students' Academy has been the trusted coaching institute for Class 1 to 12 students across Rohini, Pitampura and Shalimar Bagh.",
+      "Since 2015, Excellent Students' Academy has been the trusted coaching institute for Class 1 to 12 students across Rohini, Pitampura and Shalimar Bagh.",
     primaryCta: { label: "Book Free Demo Class", href: "/contact#enquiry" },
     secondaryCta: { label: "Explore Programs", href: "/programs" },
     image:

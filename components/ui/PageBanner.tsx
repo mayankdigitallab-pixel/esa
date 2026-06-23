@@ -192,8 +192,8 @@ export function BannerHeroRight() {
     <div>
       <BannerRow
         icon={<Star size={15} className="fill-current" />}
-        label="CLIENT RATING"
-        value={<>4.9 / 5 · 300+ parents trust ESA</>}
+        label="ESTABLISHED"
+        value={<>Coaching in Rohini since 2015</>}
       />
       <div className="my-5" style={{ height: 1, background: "rgba(255,255,255,0.12)" }} />
       <BannerRow

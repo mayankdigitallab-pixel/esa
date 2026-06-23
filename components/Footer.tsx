@@ -49,29 +49,32 @@ export function Footer() {
           <p className="mt-5 text-sm leading-relaxed text-neutral-400">
             Coaching institute in Rohini, Delhi for Grades 1 to 12. Trusted by parents for disciplined tuition, expert faculty and consistent board results.
           </p>
-          <div className="mt-6 flex gap-2">
-            <a
-              href={siteConfig.socials.facebook}
-              aria-label="Facebook"
-              className="flex h-9 w-9 items-center justify-center rounded-md border border-neutral-700 text-neutral-400 transition hover:border-teal-400 hover:text-teal-300"
-            >
-              <FacebookIcon className="h-4 w-4" />
-            </a>
-            <a
-              href={siteConfig.socials.instagram}
-              aria-label="Instagram"
-              className="flex h-9 w-9 items-center justify-center rounded-md border border-neutral-700 text-neutral-400 transition hover:border-teal-400 hover:text-teal-300"
-            >
-              <InstagramIcon className="h-4 w-4" />
-            </a>
-            <a
-              href={siteConfig.socials.youtube}
-              aria-label="YouTube"
-              className="flex h-9 w-9 items-center justify-center rounded-md border border-neutral-700 text-neutral-400 transition hover:border-red-400 hover:text-red-400"
-            >
-              <YoutubeIcon className="h-4 w-4" />
-            </a>
-          </div>
+          {/* Render a social icon only when its URL has been configured.
+              Placeholder ("TODO") entries are filtered so we never ship dead links. */}
+          {(() => {
+            const socials = [
+              { url: siteConfig.socials.facebook, label: "Facebook", Icon: FacebookIcon, hoverClass: "hover:border-teal-400 hover:text-teal-300" },
+              { url: siteConfig.socials.instagram, label: "Instagram", Icon: InstagramIcon, hoverClass: "hover:border-teal-400 hover:text-teal-300" },
+              { url: siteConfig.socials.youtube, label: "YouTube", Icon: YoutubeIcon, hoverClass: "hover:border-red-400 hover:text-red-400" },
+            ].filter((s) => s.url && s.url !== "TODO" && !s.url.match(/^https?:\/\/(www\.)?(facebook|instagram|youtube)\.com\/?$/i));
+            if (socials.length === 0) return null;
+            return (
+              <div className="mt-6 flex gap-2">
+                {socials.map((s) => (
+                  <a
+                    key={s.label}
+                    href={s.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={s.label}
+                    className={`flex h-9 w-9 items-center justify-center rounded-md border border-neutral-700 text-neutral-400 transition ${s.hoverClass}`}
+                  >
+                    <s.Icon className="h-4 w-4" />
+                  </a>
+                ))}
+              </div>
+            );
+          })()}
         </div>
 
         <div>

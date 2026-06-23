@@ -1,10 +1,19 @@
 export type Testimonial = {
   name: string;
+  /** e.g. "Class 12 Parent", "Class 10 Student" */
   role: string;
   text: string;
   rating: number;
+  /** Optional reviewer photo path (under /public). */
+  photo?: string;
+  /** e.g. "Google Reviews", "Parent feedback form". Used as a credibility label. */
+  source?: string;
 };
 
+// TODO: replace these with verified Google Reviews / signed parent feedback.
+// The current entries are placeholder copy carried over from initial site setup;
+// they read as generic and should be swapped for real, attributable testimonials.
+// Schema supports `photo` and `source` for richer reviews (per P4.13).
 export const testimonials: Testimonial[] = [
   {
     name: "Sahaj",

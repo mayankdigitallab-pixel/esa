@@ -47,7 +47,7 @@ export default function ProgramsPage() {
             stats={[
               { value: "1-12", label: "Classes covered" },
               { value: "12+", label: "Subjects taught" },
-              { value: "84%", label: "Average board score" },
+              { value: "84%", label: "Avg score · 2026 batch" },
               { value: "7 days", label: "Free demo" },
             ]}
           />

@@ -20,10 +20,13 @@ export const siteConfig = {
     saturday: "10:00 AM - 8:30 PM",
     sunday: "Closed",
   },
+  // TODO: replace placeholder URLs with real ESA social profile URLs.
+  // Until each one is replaced, the corresponding icon is hidden from the
+  // footer and the URL is excluded from LocalBusiness schema sameAs.
   socials: {
-    facebook: "https://facebook.com/",
-    instagram: "https://instagram.com/",
-    youtube: "https://youtube.com/",
+    facebook: "TODO" as string,
+    instagram: "TODO" as string,
+    youtube: "TODO" as string,
   },
   mapEmbedUrl:
     "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3501.8089!2d77.119802!3d28.706135!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjjCsDQyJzIyLjEiTiA3N8KwMDcnMjAuNiJF!5e0!3m2!1sen!2sin!4v1700000000000",

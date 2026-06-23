@@ -51,7 +51,7 @@ export function localBusinessSchema() {
       `${BASE}/gallery/g30.jpg`,
     ],
     description:
-      "Coaching institute in Rohini Sector 7, New Delhi for Class 1 to 12. Math, Science, Commerce, English and all CBSE subjects. 9+ years of consistent board results across North Delhi.",
+      "Coaching institute in Rohini Sector 7, New Delhi for Class 1 to 12. Math, Science, Commerce, English and all CBSE subjects. Operating since 2015 with consistent CBSE board results across North Delhi.",
     email: siteConfig.email,
     telephone: siteConfig.phone,
     foundingDate: "2015",
@@ -89,11 +89,18 @@ export function localBusinessSchema() {
       },
     ],
     priceRange: "₹₹",
+    // Only include real, configured social URLs. Placeholders ("TODO") and
+    // bare platform homepages are dropped so we don't dilute the entity.
     sameAs: [
       siteConfig.socials.facebook,
       siteConfig.socials.instagram,
       siteConfig.socials.youtube,
-    ].filter(Boolean),
+    ].filter(
+      (u) =>
+        !!u &&
+        u !== "TODO" &&
+        !u.match(/^https?:\/\/(www\.)?(facebook|instagram|youtube)\.com\/?$/i),
+    ),
     aggregateRating: AGGREGATE_RATING,
     review: reviewsForSchema(),
     contactPoint: {

@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Image from "next/image";
 import { faculty } from "@/data/faculty";
 import { PhotoLightbox, type LightboxItem } from "@/components/PhotoLightbox";
@@ -21,7 +21,14 @@ const LOOP_SECONDS = Math.max(40, teachers.length * 6);
 
 export function FacultyMarquee() {
   const [lightboxIndex, setLightboxIndex] = useState<number | null>(null);
-  const loop = [...teachers, ...teachers];
+  // SSR renders a single set of mentors so crawlers and view-source see each
+  // faculty member exactly once. After hydration we append a hidden clone so
+  // the CSS marquee can scroll seamlessly without a visible jump.
+  const [cloned, setCloned] = useState(false);
+  useEffect(() => {
+    setCloned(true);
+  }, []);
+  const loop = cloned ? [...teachers, ...teachers] : teachers;
 
   return (
     <div className="esa-marquee group/marquee relative overflow-hidden">

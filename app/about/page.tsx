@@ -84,9 +84,9 @@ const timeline = [
   },
   {
     year: "2026",
-    title: "9 years of consistent results",
+    title: "Eleventh year of operation",
     description:
-      "Today ESA serves students from Rohini, Pitampura, Shalimar Bagh, Model Town and Ashok Vihar. 84% average board score in the last cycle.",
+      "Today ESA serves students from Rohini, Pitampura, Shalimar Bagh, Model Town and Ashok Vihar. 84% average board score in the last cycle (CBSE 2026).",
   },
 ];
 
@@ -107,10 +107,10 @@ export default function AboutPage() {
         right={
           <BannerStatsRight
             stats={[
-              { value: "11", label: "Years of coaching" },
+              { value: "Since 2015", label: "Operating in Rohini" },
               { value: "500+", label: "Students mentored" },
-              { value: "84%", label: "Average board score" },
-              { value: "100%", label: "Pass percentage" },
+              { value: "84%", label: "Avg score · 2026 batch" },
+              { value: "100%", label: "Pass rate · 2026" },
             ]}
           />
         }
@@ -421,10 +421,10 @@ export default function AboutPage() {
             </div>
             <div className="grid grid-cols-2 gap-6">
               {[
-                { value: "9+", label: "Years coaching", icon: Calendar },
+                { value: "Since 2015", label: "Operating in Rohini", icon: Calendar },
                 { value: "500+", label: "Students mentored", icon: Users },
-                { value: "84%", label: "Avg board score", icon: TrendingUp },
-                { value: "100%", label: "Pass rate", icon: Award },
+                { value: "84%", label: "Avg board score · 2026", icon: TrendingUp },
+                { value: "100%", label: "Pass rate · 2026", icon: Award },
               ].map((s) => (
                 <div
                   key={s.label}

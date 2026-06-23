@@ -37,10 +37,10 @@ export default function ResultsPage() {
         right={
           <BannerStatsRight
             stats={[
-              { value: "100%", label: "Pass percentage" },
-              { value: "84%", label: "Average score" },
-              { value: "95+", label: "Top scorers" },
-              { value: "5+", label: "90%+ scorers" },
+              { value: "100%", label: "Pass rate · 2026" },
+              { value: "84%", label: "Avg score · 2026" },
+              { value: "95.4%", label: "Highest scorer · 2026" },
+              { value: "32", label: "Students above 90%" },
             ]}
           />
         }
