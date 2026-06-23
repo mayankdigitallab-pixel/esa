@@ -271,7 +271,7 @@ export default function AboutPage() {
                   alt="Excellent Students' Academy signboard at C7/72, Sector 7 Rohini"
                   fill
                   sizes="(max-width: 1024px) 100vw, 45vw"
-                  className="object-cover"
+                  className="object-cover object-[30%_center]"
                 />
               </div>
             </div>
