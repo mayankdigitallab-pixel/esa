@@ -914,8 +914,12 @@ export default function HomePage() {
           <SectionHeading
             eyebrow="Reviews"
             title={<>What parents and students <span className="text-teal-600">say about us</span>.</>}
-            description="Real reviews from current and past students of Excellent Students' Academy in Rohini."
+            description="Feedback from ESA students and parents in Rohini."
           />
+          {/* TODO (Mayank): replace these placeholder testimonials with verified
+              Google Reviews. data/testimonials.ts now supports optional photo
+              and source fields so each review can carry a reviewer photo and
+              an attribution like "Google Reviews". */}
           <div className="mt-4">
             <CardCarousel
               lgCards={3}
@@ -949,17 +953,33 @@ export default function HomePage() {
                     </div>
                     <p className="relative mt-5 flex-1 text-sm leading-relaxed text-charcoal">{t.text}</p>
                     <div className="relative mt-6 flex items-center gap-3 border-t border-neutral-200/70 pt-5">
-                      <div
-                        className={`flex h-10 w-10 items-center justify-center rounded-full ${
-                          accent === "teal" ? "bg-teal-500" : "bg-red-500"
-                        } text-sm font-bold text-white`}
-                      >
-                        {t.name.charAt(0)}
-                      </div>
-                      <div>
+                      {t.photo ? (
+                        <Image
+                          src={t.photo}
+                          alt={`Photo of ${t.name}`}
+                          width={40}
+                          height={40}
+                          className="h-10 w-10 rounded-full object-cover"
+                        />
+                      ) : (
+                        <div
+                          className={`flex h-10 w-10 items-center justify-center rounded-full ${
+                            accent === "teal" ? "bg-teal-500" : "bg-red-500"
+                          } text-sm font-bold text-white`}
+                          aria-hidden
+                        >
+                          {t.name.charAt(0)}
+                        </div>
+                      )}
+                      <div className="flex-1">
                         <p className="text-sm font-bold text-charcoal">{t.name}</p>
                         <p className="text-xs text-neutral-500">{t.role}</p>
                       </div>
+                      {t.source ? (
+                        <span className="rounded-full bg-white px-2.5 py-0.5 text-[10px] font-bold uppercase tracking-[0.14em] text-charcoal-soft">
+                          {t.source}
+                        </span>
+                      ) : null}
                     </div>
                   </article>
                 );
