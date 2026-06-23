@@ -7,6 +7,7 @@ import { PageBanner, BannerStatsRight } from "@/components/ui/PageBanner";
 import { programs } from "@/data/programs";
 import { whatsappLink } from "@/data/site";
 import { breadcrumbSchema, courseListSchema, jsonLd } from "@/lib/seo";
+import { FeeBlock } from "@/components/FeeBlock";
 
 export const metadata: Metadata = {
   title: "Programs & Courses | Class 1 to 12 Coaching in Rohini",
@@ -233,6 +234,8 @@ export default function ProgramsPage() {
           </div>
         </Container>
       </section>
+
+      <FeeBlock />
     </div>
   );
 }
