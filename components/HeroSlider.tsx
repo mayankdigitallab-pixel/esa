@@ -88,16 +88,17 @@ export function HeroSlider() {
               className="object-cover"
               priority={i === 0}
             />
-            <div className="absolute inset-0 bg-charcoal/80" />
-            {/* Left-side dark gradient further darkens the text column */}
-            <div
-              className="absolute inset-0"
-              style={{
-                background:
-                  "linear-gradient(90deg, rgba(10,10,10,0.85) 0%, rgba(10,10,10,0.70) 40%, rgba(10,10,10,0.30) 75%, rgba(10,10,10,0.10) 100%)",
-              }}
-              aria-hidden
-            />
+            <div className={`absolute inset-0 ${s.heavyOverlay ? "bg-charcoal/80" : "bg-charcoal/65"}`} />
+            {s.heavyOverlay && (
+              <div
+                className="absolute inset-0"
+                style={{
+                  background:
+                    "linear-gradient(90deg, rgba(10,10,10,0.80) 0%, rgba(10,10,10,0.60) 40%, rgba(10,10,10,0.20) 75%, rgba(10,10,10,0) 100%)",
+                }}
+                aria-hidden
+              />
+            )}
           </div>
         ))}
       </div>

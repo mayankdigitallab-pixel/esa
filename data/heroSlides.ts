@@ -7,6 +7,8 @@ export type HeroSlide = {
   primaryCta: { label: string; href: string };
   secondaryCta: { label: string; href: string };
   image: string;
+  /** Apply an extra-dark scrim for busy/bright photos (e.g. signboards). */
+  heavyOverlay?: boolean;
 };
 
 export const heroSlides: HeroSlide[] = [
@@ -32,6 +34,7 @@ export const heroSlides: HeroSlide[] = [
     primaryCta: { label: "Visit The Centre", href: "/contact" },
     secondaryCta: { label: "Get Directions", href: "/contact" },
     image: "/gallery/g30.jpg",
+    heavyOverlay: true,
   },
   {
     eyebrow: "11 Mentors · Postgrad / B.Tech",
