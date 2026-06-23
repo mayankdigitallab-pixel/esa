@@ -13,6 +13,7 @@ import { SectionHeading } from "@/components/ui/SectionHeading";
 import { PageBanner, BannerContactRight } from "@/components/ui/PageBanner";
 import { siteConfig, whatsappLink } from "@/data/site";
 import { EnquiryForm } from "@/components/EnquiryForm";
+import { CallbackForm } from "@/components/CallbackForm";
 import { breadcrumbSchema, jsonLd } from "@/lib/seo";
 
 export const metadata: Metadata = {
@@ -52,6 +53,13 @@ export default function ContactPage() {
         <div className="pointer-events-none absolute -left-24 -top-24 h-72 w-72 rounded-full bg-teal-200/40 blur-3xl" aria-hidden />
         <div className="pointer-events-none absolute -right-24 bottom-0 h-72 w-72 rounded-full bg-red-200/30 blur-3xl" aria-hidden />
         <Container className="relative">
+          <div className="mb-10">
+            <CallbackForm
+              source="contact-page-mini"
+              title="Just want a quick callback?"
+              subtitle="Leave your number - we will call back within working hours. Skip the long form."
+            />
+          </div>
           <div className="grid gap-10 lg:grid-cols-[1fr_1.2fr]">
             <div className="space-y-4">
               <a

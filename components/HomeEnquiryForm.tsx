@@ -13,6 +13,21 @@ export function HomeEnquiryForm() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+
+    // Capture lead server-side in parallel with the WhatsApp open so we don't
+    // lose anyone who abandons the WA handoff. See /api/enquiry/route.ts.
+    void fetch("/api/enquiry", {
+      method: "POST",
+      headers: { "content-type": "application/json" },
+      body: JSON.stringify({
+        source: "home-hero",
+        name,
+        phone,
+        grade,
+        message,
+      }),
+    }).catch(() => {});
+
     const text = `Hello ESA, I want to book a free demo class.\n\nName: ${name}\nPhone: ${phone}\nClass: ${grade}\nMessage: ${message}`;
     const url = whatsappLink(text);
     window.open(url, "_blank", "noopener,noreferrer");

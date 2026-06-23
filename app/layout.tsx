@@ -5,6 +5,7 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
 import { TopBar } from "@/components/TopBar";
+import { StickyDemoCta } from "@/components/StickyDemoCta";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -80,6 +81,7 @@ export default function RootLayout({
         <main className="w-full flex-1">{children}</main>
         <Footer />
         <WhatsAppButton />
+        <StickyDemoCta />
       </body>
     </html>
   );

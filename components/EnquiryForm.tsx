@@ -14,6 +14,25 @@ export function EnquiryForm() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+
+    // Capture the lead server-side BEFORE opening WhatsApp so we don't lose
+    // anyone who closes the WA tab without sending. Fire-and-forget: the user
+    // sees success via the WhatsApp open regardless of API outcome.
+    void fetch("/api/enquiry", {
+      method: "POST",
+      headers: { "content-type": "application/json" },
+      body: JSON.stringify({
+        source: "contact-page",
+        name,
+        phone,
+        grade,
+        subjects,
+        message,
+      }),
+    }).catch(() => {
+      // Network errors are silent here; the lead still has the WhatsApp path.
+    });
+
     const text = `Hello ESA, I want to book a free demo class.\n\nName: ${name}\nPhone: ${phone}\nGrade: ${grade}\nSubjects: ${subjects}\nMessage: ${message}`;
     const url = whatsappLink(text);
     window.open(url, "_blank", "noopener,noreferrer");
