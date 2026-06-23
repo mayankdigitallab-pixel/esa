@@ -84,16 +84,16 @@ export const heroSlides: HeroSlide[] = [
       "https://images.unsplash.com/photo-1571260899304-425eee4c7efc?auto=format&fit=crop&w=1920&q=80",
   },
   {
-    eyebrow: "Expert Faculty · 6+ Years Experience",
-    headline: "Mentors who teach with",
-    accentWord: "conviction and care.",
-    accentColor: "red",
+    eyebrow: "Why parents pick ESA",
+    headline: "The founder personally teaches",
+    accentWord: "every Class 11 and 12 Math batch.",
+    accentColor: "teal",
     description:
-      "All postgraduates or B.Tech holders with 6+ years of coaching across CBSE and ICSE boards. Direct mentor WhatsApp access for parents.",
-    primaryCta: { label: "Meet The Faculty", href: "/faculty" },
-    secondaryCta: { label: "Read Reviews", href: "/about" },
-    image:
-      "https://images.unsplash.com/photo-1577896851231-70ef18881754?auto=format&fit=crop&w=1920&q=80",
+      "Mr. Chandan Prajapati (B.Tech, Mechanical Engineering) founded ESA in 2015 and is still in the classroom every day. No franchise. No rotating instructors. The same hands that built ESA teach your child Mathematics.",
+    primaryCta: { label: "Meet The Founder", href: "/faculty#chandan-prajapati" },
+    secondaryCta: { label: "Book Free Demo", href: "/contact#enquiry" },
+    image: "/faculty/chandan-prajapati.jpg",
+    heavyOverlay: true,
   },
   {
     eyebrow: "Foundation Coaching · Class 1 to 5",
