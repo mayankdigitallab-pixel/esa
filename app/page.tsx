@@ -771,19 +771,37 @@ export default function HomePage() {
           />
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {[
-              { label: "Mon to Fri", title: "Concept classes", body: "Subject-wise batches between 4 PM and 8:30 PM. Each batch runs 90 minutes with a 10-minute doubt window at the end. No question leaves the room unresolved." },
-              { label: "Every Saturday", title: "Weekly chapter tests", body: "5 PM to 8 PM. The chapter taught that week gets tested. Scored within 48 hours. WhatsApp scorecard goes to parents on Monday morning." },
-              { label: "First Saturday monthly", title: "Parent meeting day", body: "15-minute one-on-one with your child's mentor. We review the four weekly test scores, what is improving, what needs work, and the plan for next month." },
-              { label: "Last weekend monthly", title: "Full mock paper", body: "Three-hour mock exam under board conditions. Same time slot as the real CBSE paper. Same marking pattern. Feedback within a week." },
-              { label: "Sunday (on request)", title: "Doubt clearing", body: "Reserved for students who missed something during the week or have a specific tough topic. Free and optional. WhatsApp us by Friday to book a slot." },
-              { label: "Always", title: "Parent visibility", body: "Parents can walk in any working day between 11 AM and 1 PM to talk to faculty or check their child's progress register. No appointment needed." },
-            ].map((item) => (
-              <article key={item.title} className="rounded-2xl border border-neutral-200 bg-white p-7">
-                <p className="text-xs font-bold uppercase tracking-wider text-teal-700">{item.label}</p>
-                <h3 className="mt-3 text-base font-bold tracking-tight text-charcoal sm:text-lg">{item.title}</h3>
-                <p className="mt-3 text-sm leading-relaxed text-charcoal-soft">{item.body}</p>
-              </article>
-            ))}
+              { label: "Mon to Fri", title: "Concept classes", body: "Subject-wise batches between 4 PM and 8:30 PM. Each batch runs 90 minutes with a 10-minute doubt window at the end. No question leaves the room unresolved.", tint: "teal" },
+              { label: "Every Saturday", title: "Weekly chapter tests", body: "5 PM to 8 PM. The chapter taught that week gets tested. Scored within 48 hours. WhatsApp scorecard goes to parents on Monday morning.", tint: "red" },
+              { label: "First Saturday monthly", title: "Parent meeting day", body: "15-minute one-on-one with your child's mentor. We review the four weekly test scores, what is improving, what needs work, and the plan for next month.", tint: "amber" },
+              { label: "Last weekend monthly", title: "Full mock paper", body: "Three-hour mock exam under board conditions. Same time slot as the real CBSE paper. Same marking pattern. Feedback within a week.", tint: "amber" },
+              { label: "Sunday (on request)", title: "Doubt clearing", body: "Reserved for students who missed something during the week or have a specific tough topic. Free and optional. WhatsApp us by Friday to book a slot.", tint: "teal" },
+              { label: "Always", title: "Parent visibility", body: "Parents can walk in any working day between 11 AM and 1 PM to talk to faculty or check their child's progress register. No appointment needed.", tint: "red" },
+            ].map((item) => {
+              const bg =
+                item.tint === "teal"
+                  ? "linear-gradient(135deg,#E0F7FA 0%,#FFFFFF 70%)"
+                  : item.tint === "red"
+                  ? "linear-gradient(135deg,#FFEBEE 0%,#FFFFFF 70%)"
+                  : "linear-gradient(135deg,#FEF3C7 0%,#FFFFFF 70%)";
+              const labelColor =
+                item.tint === "teal"
+                  ? "text-teal-700"
+                  : item.tint === "red"
+                  ? "text-red-700"
+                  : "text-amber-700";
+              return (
+                <article
+                  key={item.title}
+                  className="rounded-2xl border border-neutral-200 p-7 shadow-sm transition hover:-translate-y-0.5 hover:shadow-md"
+                  style={{ background: bg }}
+                >
+                  <p className={`text-xs font-bold uppercase tracking-wider ${labelColor}`}>{item.label}</p>
+                  <h3 className="mt-3 text-base font-bold tracking-tight text-charcoal sm:text-lg">{item.title}</h3>
+                  <p className="mt-3 text-sm leading-relaxed text-charcoal-soft">{item.body}</p>
+                </article>
+              );
+            })}
           </div>
         </Container>
       </section>
