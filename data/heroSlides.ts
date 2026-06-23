@@ -26,7 +26,7 @@ export const heroSlides: HeroSlide[] = [
     eyebrow: "Sector 7 Rohini · Class I to XII",
     headline: "Find the bright yellow board on",
     accentWord: "Sector 7's main road.",
-    accentColor: "red",
+    accentColor: "teal",
     description:
       "C7/72, 2nd Floor, Sector 7, Rohini. Two minutes from the Rohini West metro side. Walk in any working day between 11 AM and 1 PM to see a live batch.",
     primaryCta: { label: "Visit The Centre", href: "/contact" },

@@ -88,7 +88,16 @@ export function HeroSlider() {
               className="object-cover"
               priority={i === 0}
             />
-            <div className="absolute inset-0 bg-charcoal/65" />
+            <div className="absolute inset-0 bg-charcoal/55" />
+            {/* Left-side dark gradient guarantees text-column readability on bright/busy slides */}
+            <div
+              className="absolute inset-0"
+              style={{
+                background:
+                  "linear-gradient(90deg, rgba(15,15,15,0.78) 0%, rgba(15,15,15,0.55) 35%, rgba(15,15,15,0.10) 70%, rgba(15,15,15,0) 100%)",
+              }}
+              aria-hidden
+            />
           </div>
         ))}
       </div>
