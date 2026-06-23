@@ -739,8 +739,13 @@ export default function HomePage() {
       </section>
 
       {/* PROCESS */}
-      <section className="bg-white py-24 sm:py-28">
-        <Container>
+      <section
+        className="relative overflow-hidden py-24 sm:py-28"
+        style={{ background: "linear-gradient(135deg, #E0F7FA 0%, #FFFFFF 55%, #FFEBEE 100%)" }}
+      >
+        <div className="pointer-events-none absolute -left-24 -top-24 h-72 w-72 rounded-full bg-teal-200/40 blur-3xl" aria-hidden />
+        <div className="pointer-events-none absolute -right-24 bottom-0 h-72 w-72 rounded-full bg-red-200/30 blur-3xl" aria-hidden />
+        <Container className="relative">
           <SectionHeading
             eyebrow="How to join"
             title={<>A simple, no-pressure <span className="text-teal-600">enrolment</span>.</>}
