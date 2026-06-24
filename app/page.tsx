@@ -27,6 +27,7 @@ import { FacultyMarquee } from "@/components/FacultyMarquee";
 import { HomeEnquiryForm } from "@/components/HomeEnquiryForm";
 import { NewsletterForm } from "@/components/NewsletterForm";
 import { StudentResults } from "@/components/StudentResults";
+import { VideoReviews } from "@/components/VideoReviews";
 import { programs, subjects } from "@/data/programs";
 import { faculty } from "@/data/faculty";
 import { testimonials } from "@/data/testimonials";
@@ -988,6 +989,9 @@ export default function HomePage() {
           </div>
         </Container>
       </section>
+
+      {/* VIDEO REVIEWS */}
+      <VideoReviews />
 
       {/* BLOG TEASER */}
       <section className="bg-white py-20 sm:py-24">
