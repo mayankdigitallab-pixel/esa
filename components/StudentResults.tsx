@@ -64,11 +64,8 @@ export function StudentResults({ toppers }: Props) {
                 className="object-cover object-top transition duration-500 group-hover:scale-[1.06]"
               />
               <div className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-charcoal/95 via-charcoal/40 to-transparent" />
-              <span className="absolute right-3 top-3 rounded-full bg-red-500 px-2.5 py-1 text-xs font-bold text-white shadow-lg">
+              <span className="absolute bottom-3 right-3 z-10 rounded-full bg-red-500 px-3 py-1 text-sm font-bold text-white shadow-lg ring-2 ring-white/70">
                 {t.marks}
-              </span>
-              <span className="absolute left-3 top-3 inline-flex rounded-full bg-white/95 px-2.5 py-0.5 text-[9px] font-bold uppercase tracking-[0.14em] text-teal-700 backdrop-blur">
-                Board Topper
               </span>
               <div className="absolute inset-x-0 bottom-0 p-4 text-left">
                 <h3 className="text-lg font-bold tracking-tight text-white">{t.name}</h3>
@@ -132,7 +129,7 @@ export function StudentResults({ toppers }: Props) {
             <div className="mt-5 flex w-full flex-wrap items-center justify-between gap-3 text-white">
               <div>
                 <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-teal-300">
-                  Board Topper
+                  ESA Student · CBSE 2026
                 </p>
                 <h3 className="mt-1 text-2xl font-bold tracking-tight">{active.name}</h3>
                 <p className="mt-1 text-sm text-white/70">

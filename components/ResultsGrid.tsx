@@ -11,7 +11,6 @@ export function ResultsGrid({ items }: { items: Topper[] }) {
   const lightboxItems: LightboxItem[] = items.map((t) => ({
     image: t.image,
     name: t.name,
-    eyebrow: "Board Topper",
     badge: t.marks,
     meta: t.school ?? `${t.grade ?? ""}${t.stream ? ` · ${t.stream}` : ""}`,
     description: t.quote ? `"${t.quote}"` : undefined,
@@ -38,12 +37,9 @@ export function ResultsGrid({ items }: { items: Topper[] }) {
                 sizes="(max-width: 1024px) 100vw, 33vw"
                 className="object-cover object-top transition duration-500 hover:scale-[1.04]"
               />
-              <div className="absolute right-3 top-3 rounded-full bg-red-500 px-3 py-1.5 text-lg font-bold text-white shadow-lg">
+              <div className="absolute bottom-3 right-3 rounded-full bg-red-500 px-3.5 py-1.5 text-lg font-bold text-white shadow-lg ring-2 ring-white/70">
                 {t.marks}
               </div>
-              <span className="absolute left-3 top-3 inline-flex rounded-full bg-white/95 px-2.5 py-0.5 text-[10px] font-bold uppercase tracking-[0.14em] text-teal-700 backdrop-blur">
-                Board Topper
-              </span>
             </button>
             <div className="p-5">
               <h3 className="text-xl font-semibold text-charcoal">{t.name}</h3>
