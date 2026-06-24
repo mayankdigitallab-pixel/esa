@@ -398,8 +398,8 @@ export function Header() {
                 >
                   WhatsApp: +91 88826 63340
                 </a>
-                <a href="mailto:info@theesa.in" className="block transition hover:text-white">
-                  Email: info@theesa.in
+                <a href="mailto:excellentstudentsacademy1@gmail.com" className="block transition hover:text-white">
+                  Email: excellentstudentsacademy1@gmail.com
                 </a>
                 <p className="text-white/65">
                   C7/72, Sector 7, Rohini, New Delhi 110085

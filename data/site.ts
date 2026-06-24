@@ -7,7 +7,7 @@ export const siteConfig = {
   phoneDisplay: "+91 94580 12793",
   whatsapp: "+918750663995",
   whatsappDisplay: "+91 87506 63995",
-  email: "info@theesa.in",
+  email: "excellentstudentsacademy1@gmail.com",
   address: {
     line1: "C7/72, 2nd Floor",
     line2: "Sector 7, Rohini",

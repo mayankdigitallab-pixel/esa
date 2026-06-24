@@ -89,7 +89,7 @@ export default function PrivacyPage() {
               <li>Delete your contact records once the student leaves ESA.</li>
             </ul>
             <p>
-              To exercise any of these rights, email <a href="mailto:info@theesa.in">info@theesa.in</a> from the registered contact and we will action it within 10 working days.
+              To exercise any of these rights, email <a href="mailto:excellentstudentsacademy1@gmail.com">excellentstudentsacademy1@gmail.com</a> from the registered contact and we will action it within 10 working days.
             </p>
 
             <h2>9. Children&apos;s privacy</h2>
@@ -104,7 +104,7 @@ export default function PrivacyPage() {
 
             <h2>11. Contact</h2>
             <p>
-              For any privacy-related question please write to us at <a href="mailto:info@theesa.in">info@theesa.in</a> or call <a href="tel:+919458012793">+91 94580 12793</a>.
+              For any privacy-related question please write to us at <a href="mailto:excellentstudentsacademy1@gmail.com">excellentstudentsacademy1@gmail.com</a> or call <a href="tel:+919458012793">+91 94580 12793</a>.
             </p>
           </article>
         </Container>

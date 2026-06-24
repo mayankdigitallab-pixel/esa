@@ -65,7 +65,7 @@ export default function TermsPage() {
 
             <h2>7. Use of images and content</h2>
             <p>
-              Photographs from classroom activities, batch sessions, parent meetings or results may be used on our website, social channels and printed materials. Names of toppers are published with the consent of the parent or guardian. If you wish to opt out, please write to us at info@theesa.in and we will remove your details within 10 working days.
+              Photographs from classroom activities, batch sessions, parent meetings or results may be used on our website, social channels and printed materials. Names of toppers are published with the consent of the parent or guardian. If you wish to opt out, please write to us at excellentstudentsacademy1@gmail.com and we will remove your details within 10 working days.
             </p>
 
             <h2>8. Intellectual property</h2>
@@ -85,7 +85,7 @@ export default function TermsPage() {
 
             <h2>11. Contact us</h2>
             <p>
-              For any question about these terms please write to us at <a href="mailto:info@theesa.in">info@theesa.in</a> or call <a href="tel:+919458012793">+91 94580 12793</a>. You can also visit us at C7/72, 2nd Floor, Sector 7, Rohini, New Delhi 110085.
+              For any question about these terms please write to us at <a href="mailto:excellentstudentsacademy1@gmail.com">excellentstudentsacademy1@gmail.com</a> or call <a href="tel:+919458012793">+91 94580 12793</a>. You can also visit us at C7/72, 2nd Floor, Sector 7, Rohini, New Delhi 110085.
             </p>
           </article>
         </Container>

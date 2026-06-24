@@ -136,7 +136,7 @@ function BannerRow({
 export function BannerContactRight() {
   const items = [
     { icon: <Phone size={15} />, label: "CALL US", value: "+91 88826 63340", href: "tel:+918882663340" },
-    { icon: <Mail size={15} />, label: "EMAIL", value: "info@theesa.in", href: "mailto:info@theesa.in" },
+    { icon: <Mail size={15} />, label: "EMAIL", value: "excellentstudentsacademy1@gmail.com", href: "mailto:excellentstudentsacademy1@gmail.com" },
     { icon: <MessageCircle size={15} />, label: "WHATSAPP", value: "+91 88826 63340", href: "https://wa.me/918882663340" },
     { icon: <MapPin size={15} />, label: "VISIT US", value: "Sector 7, Rohini, Delhi", href: "/contact" },
   ];
