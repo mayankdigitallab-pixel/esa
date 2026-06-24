@@ -13,17 +13,6 @@ export type HeroSlide = {
 
 export const heroSlides: HeroSlide[] = [
   {
-    eyebrow: "Why parents pick ESA",
-    headline: "The founder personally teaches",
-    accentWord: "every Class 11 and 12 Math batch.",
-    accentColor: "teal",
-    description:
-      "Mr. Chandan Prajapati (B.Tech, Mechanical Engineering) founded ESA in 2015 and is still in the classroom every day. No franchise. No rotating instructors. The same hands that built ESA teach your child Mathematics.",
-    primaryCta: { label: "Meet The Founder", href: "/faculty#chandan-prajapati" },
-    secondaryCta: { label: "Book Free Demo", href: "/contact#enquiry" },
-    image: "/faculty/chandan-prajapati.jpg",
-  },
-  {
     eyebrow: "Coaching Institute · Rohini Sector 7",
     headline: "Coaching in Rohini where ambition meets",
     accentWord: "discipline.",
