@@ -97,17 +97,17 @@ export function PhotoLightbox({ items, openIndex, onClose, onIndexChange }: Prop
         className="relative my-auto w-full max-w-2xl py-2"
         onClick={(e) => e.stopPropagation()}
       >
-        {/* Image - shown fully (object-contain) so logos and full frame are visible */}
-        <div
-          className="relative w-full overflow-hidden rounded-xl bg-neutral-900 shadow-2xl"
-          style={{ aspectRatio: "4 / 5", maxHeight: "62vh" }}
-        >
+        {/* Image - keeps its own aspect ratio so portraits don't get letter-boxed
+            inside a forced 4:5 frame. We cap height/width with CSS and let the
+            image decide its own ratio via Next/Image's intrinsic sizing. */}
+        <div className="relative mx-auto flex max-h-[72vh] w-fit max-w-full justify-center overflow-hidden rounded-xl bg-neutral-900 shadow-2xl">
           <Image
             src={active.image}
             alt={active.name}
-            fill
-            sizes="(max-width: 768px) 100vw, 640px"
-            className="object-contain"
+            width={1200}
+            height={1600}
+            sizes="(max-width: 768px) 100vw, 720px"
+            className="h-auto max-h-[72vh] w-auto max-w-full object-contain"
             priority
           />
           {active.badge ? (
