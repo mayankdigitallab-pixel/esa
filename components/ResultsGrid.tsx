@@ -18,7 +18,7 @@ export function ResultsGrid({ items }: { items: Topper[] }) {
 
   return (
     <>
-      <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+      <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
         {items.map((t, i) => (
           <article
             key={t.name}
@@ -34,7 +34,7 @@ export function ResultsGrid({ items }: { items: Topper[] }) {
                 src={t.image}
                 alt={`${t.name}, student at ESA Rohini`}
                 fill
-                sizes="(max-width: 1024px) 100vw, 33vw"
+                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
                 className="object-cover object-top transition duration-500 hover:scale-[1.04]"
               />
               <div className="absolute bottom-3 right-3 rounded-full bg-red-500 px-3.5 py-1.5 text-lg font-bold text-white shadow-lg ring-2 ring-white/70">
