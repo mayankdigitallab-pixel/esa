@@ -183,9 +183,7 @@ const sections: Section[] = [
       { file: "g23.jpg", alt: "Cake being shared at ESA", caption: "Plates, slices, joy" },
       { file: "g24.jpg", alt: "Group selfie at ESA birthday party", caption: "Selfie with the whole crew" },
       { file: "g28.jpg", alt: "Birthday cake celebration at ESA", caption: "Sweetness travels around the room" },
-      { file: "g49.jpg", alt: "Birthday cake at ESA reception", caption: "Yellow cake, three smiles" },
-      { file: "g51.jpg", alt: "Faculty celebrating a birthday with flowers", caption: "Flowers and cake, faculty-style" },
-      { file: "g48.jpg", alt: "Birthday celebration group with cake", caption: "Whole crew around the table" },
+      { file: "g48.jpg", alt: "Faculty celebrating a birthday with flowers and cake", caption: "Flowers and cake, faculty-style" },
     ],
   },
   {
@@ -199,6 +197,22 @@ const sections: Section[] = [
     photos: [
       { file: "g15.jpg", alt: "Group selfie with ESA faculty", caption: "Last day of the year - phone goes up" },
       { file: "g26.jpg", alt: "Students surround their favourite ma'am", caption: "Crowd around the favourite ma'am" },
+    ],
+  },
+  {
+    id: "outreach",
+    title: "Roadside Outreach",
+    eyebrow: "Meeting parents on the street",
+    blurb:
+      "We set up a small ESA stall outside the centre during enrolment season - parents can walk up, ask questions and grab a fee sheet without crossing the threshold of a coaching institute.",
+    icon: <MapPin className="h-5 w-5" />,
+    accent: "red",
+    photos: [
+      {
+        file: "g49.jpg",
+        alt: "ESA roadside enrolment stall in Rohini Sector 7",
+        caption: "Roadside outreach stall - Sec 7 & Sec 15",
+      },
     ],
   },
   {
