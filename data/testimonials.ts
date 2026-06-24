@@ -16,6 +16,14 @@ export type Testimonial = {
 // Schema supports `photo` and `source` for richer reviews (per P4.13).
 export const testimonials: Testimonial[] = [
   {
+    name: "Sneha Garg",
+    role: "Class 12 · 89% · Himalyan Public School",
+    rating: 5,
+    photo: "/students/sneha-garg.jpg",
+    source: "Student review",
+    text: "I am extremely grateful to this study academy for playing a significant role in my academic success. The teachers are highly knowledgeable, supportive, and always ready to clear doubts. Their way of explaining concepts is simple and effective, which helped me build a strong foundation in every subject. Regular tests, assignments, and personal guidance kept me motivated and disciplined throughout my studies.\n\nWith the constant support and encouragement of the faculty, I scored 89% in my Class 12 board examinations. The academy not only helped me achieve good marks but also improved my confidence and problem-solving skills.\n\nI am especially proud to share that I secured the top position in BCA 1st semester, and a major credit for this achievement goes to the excellent teaching and continuous motivation provided by the academy. The study material, doubt sessions, and friendly learning environment made a huge difference in my academic journey.\n\nI sincerely thank all the teachers and staff members for their dedication and support. I would highly recommend this academy to every student who is looking for quality education, proper guidance, and academic excellence. It has truly been one of the best decisions of my student life.",
+  },
+  {
     name: "Sahaj",
     role: "Student",
     rating: 5,

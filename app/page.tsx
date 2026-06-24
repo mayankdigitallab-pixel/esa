@@ -28,6 +28,7 @@ import { HomeEnquiryForm } from "@/components/HomeEnquiryForm";
 import { NewsletterForm } from "@/components/NewsletterForm";
 import { StudentResults } from "@/components/StudentResults";
 import { VideoReviews } from "@/components/VideoReviews";
+import { TestimonialsSection } from "@/components/TestimonialsSection";
 import { programs, subjects } from "@/data/programs";
 import { faculty } from "@/data/faculty";
 import { testimonials } from "@/data/testimonials";
@@ -910,85 +911,7 @@ export default function HomePage() {
       </section>
 
       {/* TESTIMONIALS */}
-      <section className="border-y border-neutral-200 bg-neutral-50 py-24 sm:py-28">
-        <Container>
-          <SectionHeading
-            eyebrow="Reviews"
-            title={<>What parents and students <span className="text-teal-600">say about us</span>.</>}
-            description="Feedback from ESA students and parents in Rohini."
-          />
-          {/* TODO (Mayank): replace these placeholder testimonials with verified
-              Google Reviews. data/testimonials.ts now supports optional photo
-              and source fields so each review can carry a reviewer photo and
-              an attribution like "Google Reviews". */}
-          <div className="mt-4">
-            <CardCarousel
-              lgCards={3}
-              mdCards={2}
-              tone="light"
-              autoplayMs={5500}
-              ariaLabel="Testimonials carousel"
-            >
-              {testimonials.map((t, i) => {
-                const accent = i % 2 === 0 ? "teal" : "red";
-                const bg =
-                  accent === "teal"
-                    ? "linear-gradient(155deg, #E0F7FA 0%, #FFFFFF 70%)"
-                    : "linear-gradient(155deg, #FFEBEE 0%, #FFFFFF 70%)";
-                const haloColor = accent === "teal" ? "#00BCD4" : "#E53935";
-                return (
-                  <article
-                    key={t.name}
-                    className="group relative flex h-full flex-col overflow-hidden rounded-2xl border border-neutral-200 p-7 transition hover:-translate-y-1 hover:shadow-xl"
-                    style={{ background: bg }}
-                  >
-                    <span
-                      className="pointer-events-none absolute -right-12 -top-12 h-32 w-32 rounded-full opacity-20 blur-2xl transition group-hover:opacity-40"
-                      style={{ background: haloColor }}
-                      aria-hidden
-                    />
-                    <div className="relative flex gap-0.5 text-yellow-400">
-                      {Array.from({ length: t.rating }).map((_, idx) => (
-                        <Star key={idx} className="h-4 w-4 fill-current" />
-                      ))}
-                    </div>
-                    <p className="relative mt-5 flex-1 text-sm leading-relaxed text-charcoal">{t.text}</p>
-                    <div className="relative mt-6 flex items-center gap-3 border-t border-neutral-200/70 pt-5">
-                      {t.photo ? (
-                        <Image
-                          src={t.photo}
-                          alt={`Photo of ${t.name}`}
-                          width={40}
-                          height={40}
-                          className="h-10 w-10 rounded-full object-cover"
-                        />
-                      ) : (
-                        <div
-                          className={`flex h-10 w-10 items-center justify-center rounded-full ${
-                            accent === "teal" ? "bg-teal-500" : "bg-red-500"
-                          } text-sm font-bold text-white`}
-                          aria-hidden
-                        >
-                          {t.name.charAt(0)}
-                        </div>
-                      )}
-                      <div className="flex-1">
-                        <p className="text-sm font-bold text-charcoal">{t.name}</p>
-                        <p className="text-xs text-neutral-500">{t.role}</p>
-                      </div>
-                      {t.source ? (
-                        <span className="rounded-full bg-white px-2.5 py-0.5 text-[10px] font-bold uppercase tracking-[0.14em] text-charcoal-soft">
-                          {t.source}
-                        </span>
-                      ) : null}
-                    </div>
-                  </article>
-                );
-              })}
-            </CardCarousel>
-          </div>
-        </Container>
-      </section>
+      <TestimonialsSection testimonials={testimonials} />
 
       {/* VIDEO REVIEWS */}
       <VideoReviews />
