@@ -41,6 +41,17 @@ export const faculty: Faculty[] = [
     image: "/faculty/prateek.jpg",
   },
   {
+    slug: "prateek-physics",
+    name: "Mr. Prateek",
+    title: "Physics Mentor",
+    subjects: "Physics (Class 11-12)",
+    // TODO (Mayank): confirm exact years of teaching experience.
+    experience: "Senior faculty",
+    qualification: "B.Tech, Amity University",
+    bio: "Teaches Class 11 and 12 Physics at ESA Rohini. B.Tech from Amity University, with a problem-solving-first approach that walks students from concept to numerical without skipping the in-between steps.",
+    image: "/faculty/prateek-physics.jpg",
+  },
+  {
     slug: "sadhana",
     name: "Ms. Sadhana",
     title: "Accountancy Mentor",
