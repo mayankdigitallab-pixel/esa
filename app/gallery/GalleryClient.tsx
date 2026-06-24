@@ -100,7 +100,6 @@ const sections: Section[] = [
     accent: "indigo",
     photos: [
       { file: "g07.jpg", alt: "ESA students in uniform writing weekly test", caption: "Eyes on paper, pens moving" },
-      { file: "g08.jpg", alt: "Full classroom of students taking test", caption: "Saturday: every chapter tested" },
       { file: "g31.jpg", alt: "Middle-school students writing weekly test", caption: "Middle-school batch, full focus" },
       { file: "g32.jpg", alt: "Junior batch test in progress", caption: "Junior batch, pens in hand" },
       { file: "g33.jpg", alt: "Senior batch test in ESA uniform", caption: "Senior batch in matching ESA tees" },
@@ -121,6 +120,7 @@ const sections: Section[] = [
       { file: "g16.jpg", alt: "Faculty and students at the puja", caption: "Faculty and students offering prayers" },
       { file: "g03.jpg", alt: "Ceremony underway at ESA centre", caption: "A quiet moment before classes resume" },
       { file: "g05.jpg", alt: "Group gathered around the puja thali", caption: "Whole team, one prayer" },
+      { file: "g08.jpg", alt: "Faculty seated around the puja aarti thali", caption: "Sitting around the aarti thali together" },
       { file: "g38.jpg", alt: "Lighting diyas at ESA centre on Diwali", caption: "Lighting diyas at the reception" },
       { file: "g50.jpg", alt: "Havan ceremony with sacred fire at ESA", caption: "Havan, sacred fire kindled" },
       { file: "g53.jpg", alt: "Faculty seated around the havan kund", caption: "Sitting together for the havan" },
