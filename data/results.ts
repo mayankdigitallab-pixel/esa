@@ -37,6 +37,13 @@ export const toppers: Topper[] = [
     image: "/students/kashvi.jpg",
   },
   {
+    name: "Sneha Garg",
+    grade: "Class 12",
+    marks: "89%",
+    school: "Himalyan Public School",
+    image: "/students/sneha-garg.jpg",
+  },
+  {
     name: "Shubh",
     marks: "86%",
     school: "Mount Abu Public School",
@@ -70,7 +77,7 @@ export const toppers: Topper[] = [
 
 export const resultsStats = [
   { label: "Top score · 2026", value: "95%" },
-  { label: "Above 85% · 2026", value: "4 of 8" },
+  { label: "Above 85% · 2026", value: "5 of 9" },
   { label: "Pass rate · 2026", value: "100%" },
   { label: "Operating in Rohini", value: "Since 2015" },
 ];
