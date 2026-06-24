@@ -100,7 +100,6 @@ const sections: Section[] = [
     accent: "indigo",
     photos: [
       { file: "g07.jpg", alt: "ESA students in uniform writing weekly test", caption: "Eyes on paper, pens moving" },
-      { file: "g04.jpg", alt: "Senior batch attempting chapter test", caption: "Senior batch test under exam conditions" },
       { file: "g08.jpg", alt: "Full classroom of students taking test", caption: "Saturday: every chapter tested" },
       { file: "g31.jpg", alt: "Middle-school students writing weekly test", caption: "Middle-school batch, full focus" },
       { file: "g32.jpg", alt: "Junior batch test in progress", caption: "Junior batch, pens in hand" },
@@ -159,6 +158,7 @@ const sections: Section[] = [
     accent: "rose",
     photos: [
       { file: "g27.jpg", alt: "Teachers' Day selfie with ESA faculty", caption: "Happy Teachers' Day, sir & ma'am" },
+      { file: "g04.jpg", alt: "Whole batch posing on Teachers' Day at ESA", caption: "Whole batch in front of the Happy Teachers board" },
       { file: "g19.jpg", alt: "Group photo on Teachers' Day at ESA", caption: "One frame, the whole batch" },
       { file: "g22.jpg", alt: "Faculty line-up on Teachers' Day", caption: "Faculty line-up, freshly cheered" },
       { file: "g17.jpg", alt: "Faculty portrait at ESA Rohini", caption: "The mentors behind the marks" },
