@@ -42,13 +42,13 @@ export function StudentResults({ toppers }: Props) {
   return (
     <>
       <div
-        className="-mx-4 flex snap-x snap-mandatory gap-4 overflow-x-auto scroll-smooth px-4 pb-4 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden sm:mx-0 sm:grid sm:snap-none sm:grid-cols-2 sm:gap-5 sm:overflow-visible sm:px-0 sm:pb-0 md:grid-cols-3 lg:grid-cols-5"
+        className="-mx-4 flex snap-x snap-mandatory gap-4 overflow-x-auto scroll-smooth px-4 pb-4 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden sm:gap-5"
         style={{ scrollPaddingLeft: 16, scrollPaddingRight: 16 }}
       >
         {toppers.map((t, i) => (
           <article
             key={t.name}
-            className="group flex w-[86%] shrink-0 snap-start snap-always flex-col overflow-hidden rounded-2xl border border-neutral-200 bg-white transition hover:-translate-y-1 hover:shadow-xl sm:w-auto sm:shrink"
+            className="group flex w-[86%] shrink-0 snap-start snap-always flex-col overflow-hidden rounded-2xl border border-neutral-200 bg-white transition hover:-translate-y-1 hover:shadow-xl sm:w-[44%] md:w-[30%] lg:w-[22%]"
           >
             <button
               type="button"
