@@ -3,6 +3,7 @@ import { Container } from "@/components/ui/Container";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { PageBanner, BannerStatsRight } from "@/components/ui/PageBanner";
 import { ResultsGrid } from "@/components/ResultsGrid";
+import { VideoReviews } from "@/components/VideoReviews";
 import { toppers } from "@/data/results";
 import { breadcrumbSchema, jsonLd } from "@/lib/seo";
 
@@ -61,6 +62,8 @@ export default function ResultsPage() {
           <ResultsGrid items={toppers} />
         </Container>
       </section>
+
+      <VideoReviews />
     </div>
   );
 }

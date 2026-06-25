@@ -20,6 +20,7 @@ const nav = [
   { href: "/programs", label: "Programs" },
   { href: "/faculty", label: "Faculty" },
   { href: "/results", label: "Results" },
+  { href: "/gallery", label: "Gallery" },
   { href: "/contact", label: "Contact" },
 ];
 
