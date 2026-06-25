@@ -119,6 +119,7 @@ export const centres: Centre[] = [
     addressLines: ["Block G, Shakurpur Colony", "Shakurpur, Delhi 110034"],
     inCharge: "Ms. Khushboo",
     inChargeRole: "Centre Incharge",
+    inChargePhoto: "/faculty/khushboo.jpg",
     inChargeBio:
       "Heads our Shakurpur centre. Handles admissions, parent meetings and academic planning for every batch running in Block G. Reach her directly during working hours for any concern.",
     phone: "+919458012793",
