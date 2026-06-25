@@ -174,70 +174,150 @@ export function CentreLanding({ centre }: Props) {
         </Container>
       </section>
 
-      <section className="border-t border-neutral-200 bg-neutral-50 py-16 sm:py-20">
-        <Container>
-          <SectionHeading
-            eyebrow="Centre In-charge"
-            title={<>Meet {centre.inCharge}</>}
-            description={`${centre.inChargeRole} at ${centre.shortName}. Direct point of contact for every parent and student at this centre.`}
-          />
-          <div className="grid gap-8 lg:grid-cols-[300px_1fr]">
-            <div className="overflow-hidden rounded-2xl border border-neutral-200 bg-white shadow-sm">
-              <div className="relative aspect-[4/5] w-full bg-gradient-to-br from-teal-500 to-teal-700">
-                {centre.inChargePhoto ? (
-                  <Image
-                    src={centre.inChargePhoto}
-                    alt={`${centre.inCharge}, ${centre.inChargeRole} at ${centre.name}`}
-                    fill
-                    sizes="(max-width: 1024px) 100vw, 300px"
-                    className="object-cover"
-                  />
-                ) : (
-                  <div className="flex h-full w-full items-center justify-center">
-                    <span className="text-7xl font-bold text-white/90">
-                      {inChargeInitials(centre.inCharge)}
+      <section className="relative overflow-hidden border-t border-neutral-200 bg-neutral-50 py-16 sm:py-20">
+        <div className="pointer-events-none absolute -left-32 top-12 h-72 w-72 rounded-full bg-teal-200/40 blur-3xl" aria-hidden />
+        <div className="pointer-events-none absolute -right-32 bottom-12 h-72 w-72 rounded-full bg-red-200/30 blur-3xl" aria-hidden />
+        <Container className="relative">
+          <div className="mb-10 flex flex-col items-center text-center">
+            <span className="inline-flex items-center gap-3 text-[11px] font-semibold uppercase tracking-[0.22em] text-teal-700">
+              <span className="h-px w-10 bg-teal-500" />
+              Centre In-charge
+              <span className="h-px w-10 bg-teal-500" />
+            </span>
+            <h2 className="mt-4 text-3xl font-bold tracking-tight text-charcoal sm:text-4xl">
+              Meet {centre.inCharge}
+            </h2>
+            <p className="mt-3 max-w-xl text-sm leading-relaxed text-body sm:text-base">
+              {centre.inChargeRole} at {centre.shortName}. Your direct point of contact for
+              admissions, timing, fee, attendance and any parent meeting at this centre.
+            </p>
+          </div>
+
+          <div className="overflow-hidden rounded-3xl border border-neutral-200 bg-white shadow-xl">
+            <div className="grid gap-0 lg:grid-cols-[minmax(0,5fr)_minmax(0,7fr)]">
+              {/* LEFT: photo column with teal gradient */}
+              <div
+                className="relative flex flex-col gap-6 p-6 sm:p-8 lg:p-10"
+                style={{ background: "linear-gradient(135deg, #0d9488 0%, #0f766e 60%, #134e4a 100%)" }}
+              >
+                <div className="pointer-events-none absolute inset-y-0 right-0 w-px bg-white/10" aria-hidden />
+                <div className="relative aspect-square w-full overflow-hidden rounded-2xl bg-white/10 shadow-2xl ring-1 ring-white/10">
+                  {centre.inChargePhoto ? (
+                    <Image
+                      src={centre.inChargePhoto}
+                      alt={`${centre.inCharge}, ${centre.inChargeRole} at ${centre.name}`}
+                      fill
+                      sizes="(max-width: 1024px) 100vw, 40vw"
+                      className="object-cover"
+                    />
+                  ) : (
+                    <div className="flex h-full w-full items-center justify-center">
+                      <span className="text-7xl font-bold tracking-tight text-white/85 sm:text-8xl">
+                        {inChargeInitials(centre.inCharge)}
+                      </span>
+                    </div>
+                  )}
+                  {centre.isFlagship && (
+                    <span className="absolute left-4 top-4 rounded-full bg-amber-400 px-3 py-1 text-[10px] font-bold uppercase tracking-[0.16em] text-amber-950 shadow-md">
+                      Flagship
                     </span>
-                  </div>
-                )}
-              </div>
-              <div className="p-5">
-                <p className="text-[10px] font-bold uppercase tracking-[0.18em] text-teal-600">
-                  {centre.inChargeRole}
-                </p>
-                <h3 className="mt-1 text-lg font-semibold text-charcoal">{centre.inCharge}</h3>
-                {(centre.inChargeQualification || centre.inChargeExperience) && (
-                  <p className="mt-1 text-xs text-muted">
-                    {[centre.inChargeQualification, centre.inChargeExperience]
-                      .filter(Boolean)
-                      .join(" · ")}
+                  )}
+                </div>
+                <div>
+                  <p className="text-[10px] font-bold uppercase tracking-[0.22em] text-teal-100">
+                    {centre.inChargeRole}
                   </p>
-                )}
+                  <h3 className="mt-1.5 text-2xl font-bold text-white sm:text-3xl">
+                    {centre.inCharge}
+                  </h3>
+                  <p className="mt-1 text-sm text-teal-100/80">
+                    {centre.shortName}, {centre.city}
+                  </p>
+                  {(centre.inChargeQualification || centre.inChargeExperience) && (
+                    <div className="mt-4 flex flex-wrap gap-2">
+                      {centre.inChargeQualification && (
+                        <span className="inline-flex items-center gap-1.5 rounded-full bg-white/15 px-3 py-1 text-[11px] font-medium text-white backdrop-blur-sm ring-1 ring-white/15">
+                          <GraduationCap className="h-3 w-3" />
+                          {centre.inChargeQualification}
+                        </span>
+                      )}
+                      {centre.inChargeExperience && (
+                        <span className="inline-flex items-center gap-1.5 rounded-full bg-white/15 px-3 py-1 text-[11px] font-medium text-white backdrop-blur-sm ring-1 ring-white/15">
+                          <ShieldCheck className="h-3 w-3" />
+                          {centre.inChargeExperience}
+                        </span>
+                      )}
+                    </div>
+                  )}
+                </div>
               </div>
-            </div>
-            <div className="space-y-5 text-sm leading-relaxed text-body sm:text-base">
-              {centre.inChargeBio && <p>{centre.inChargeBio}</p>}
-              <p>
-                Parents can reach {centre.inCharge.replace(/^(Mr|Ms|Mrs|Dr)\.?\s+/, "")} directly
-                during working hours for any concern - timing, fee, attendance, syllabus or a
-                one-on-one mentoring slot for their child.
-              </p>
-              <div className="flex flex-wrap gap-3 pt-2">
-                <a
-                  href={`tel:${centre.phone}`}
-                  className="inline-flex items-center gap-2 rounded-full bg-red-500 px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-red-600"
-                >
-                  <Phone className="h-4 w-4" />
-                  Call {centre.shortName}
-                </a>
-                <a
-                  href={centreWa(centre, waMessage)}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 rounded-full border border-[#25D366] px-5 py-2.5 text-sm font-semibold text-[#1c9c4a] transition hover:bg-[#25D366]/10"
-                >
-                  <MessageCircle className="h-4 w-4" />
-                  WhatsApp
-                </a>
+
+              {/* RIGHT: bio + stats + CTAs */}
+              <div className="flex flex-col gap-6 p-6 sm:p-8 lg:p-10">
+                <div>
+                  <p className="inline-flex items-center gap-2 text-[10px] font-bold uppercase tracking-[0.22em] text-teal-700">
+                    <span className="h-1.5 w-1.5 rounded-full bg-teal-500" />
+                    About
+                  </p>
+                  {centre.inChargeBio && (
+                    <p className="mt-3 text-sm leading-relaxed text-body sm:text-base">
+                      {centre.inChargeBio}
+                    </p>
+                  )}
+                </div>
+
+                <div className="rounded-2xl border-l-4 border-teal-500 bg-teal-50/60 p-5">
+                  <p className="text-sm leading-relaxed text-charcoal sm:text-base">
+                    <span className="font-semibold">Direct line:</span> reach{" "}
+                    {centre.inCharge.replace(/^(Mr|Ms|Mrs|Dr)\.?\s+/, "")} during working hours
+                    for any concern - timing, fee, attendance, syllabus or a one-on-one mentoring
+                    slot for your child.
+                  </p>
+                </div>
+
+                <dl className="grid grid-cols-3 gap-3 rounded-2xl border border-neutral-200 bg-white p-4">
+                  <div className="text-center">
+                    <dt className="text-[9px] font-bold uppercase tracking-[0.16em] text-muted">
+                      Centre
+                    </dt>
+                    <dd className="mt-1 text-xs font-bold text-charcoal sm:text-sm">
+                      {centre.shortName}
+                    </dd>
+                  </div>
+                  <div className="border-x border-neutral-200 text-center">
+                    <dt className="text-[9px] font-bold uppercase tracking-[0.16em] text-muted">
+                      Hours
+                    </dt>
+                    <dd className="mt-1 text-xs font-bold text-charcoal sm:text-sm">
+                      10 AM - 8:30 PM
+                    </dd>
+                  </div>
+                  <div className="text-center">
+                    <dt className="text-[9px] font-bold uppercase tracking-[0.16em] text-muted">
+                      Days
+                    </dt>
+                    <dd className="mt-1 text-xs font-bold text-charcoal sm:text-sm">Mon - Sat</dd>
+                  </div>
+                </dl>
+
+                <div className="mt-auto flex flex-col gap-3 pt-2 sm:flex-row">
+                  <a
+                    href={`tel:${centre.phone}`}
+                    className="inline-flex flex-1 items-center justify-center gap-2 rounded-full bg-red-500 px-5 py-3 text-sm font-semibold text-white shadow-lg shadow-red-500/25 transition hover:bg-red-600"
+                  >
+                    <Phone className="h-4 w-4" />
+                    Call {centre.shortName}
+                  </a>
+                  <a
+                    href={centreWa(centre, waMessage)}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex flex-1 items-center justify-center gap-2 rounded-full bg-[#25D366] px-5 py-3 text-sm font-semibold text-white shadow-lg shadow-[#25D366]/25 transition hover:bg-[#1ea855]"
+                  >
+                    <MessageCircle className="h-4 w-4" />
+                    WhatsApp Now
+                  </a>
+                </div>
               </div>
             </div>
           </div>
