@@ -5,7 +5,7 @@ import Image from "next/image";
 import { faculty } from "@/data/faculty";
 import { PhotoLightbox, type LightboxItem } from "@/components/PhotoLightbox";
 
-const teachers = faculty.slice(1); // exclude founder
+const teachers = faculty;
 
 const lightboxItems: LightboxItem[] = teachers.map((f) => ({
   image: f.image,

@@ -665,7 +665,7 @@ export default function HomePage() {
         </Container>
       </section>
 
-      {/* FACULTY CAROUSEL (12 teachers, excluding founder) */}
+      {/* FACULTY CAROUSEL */}
       <section className="bg-white py-20 sm:py-24">
         <Container>
           <div className="flex flex-col items-start justify-between gap-6 sm:flex-row sm:items-end">
@@ -673,7 +673,7 @@ export default function HomePage() {
               className="mb-0"
               eyebrow="Senior Faculty"
               title={<>The mentors behind every <span className="text-teal-600">batch and subject</span>.</>}
-              description="Twelve senior faculty members. Postgraduates and B.Tech holders with 6+ years of coaching across CBSE and ICSE boards."
+              description="Thirteen senior faculty members. Postgraduates and B.Tech holders with 6+ years of coaching across CBSE and ICSE boards."
             />
             <Link href="/faculty" className="btn-ghost">
               View all faculty
