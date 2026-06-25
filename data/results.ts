@@ -62,6 +62,12 @@ export const toppers: Topper[] = [
     image: "/students/saksham.jpg",
   },
   {
+    name: "Vanshika",
+    marks: "83%",
+    school: "CRPF School",
+    image: "/students/vanshika.jpg",
+  },
+  {
     name: "Shrishti",
     marks: "83%",
     school: "Sarvodaya School",
@@ -77,7 +83,7 @@ export const toppers: Topper[] = [
 
 export const resultsStats = [
   { label: "Top score · 2026", value: "95%" },
-  { label: "Above 85% · 2026", value: "5 of 9" },
+  { label: "Above 85% · 2026", value: "5 of 10" },
   { label: "Pass rate · 2026", value: "100%" },
   { label: "Operating in Rohini", value: "Since 2015" },
 ];
