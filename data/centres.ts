@@ -9,6 +9,10 @@ export type Centre = {
   addressLines: string[];
   inCharge: string;
   inChargeRole: string;
+  inChargePhoto?: string;
+  inChargeQualification?: string;
+  inChargeExperience?: string;
+  inChargeBio?: string;
   phone: string;
   phoneDisplay: string;
   whatsapp: string;
@@ -20,6 +24,9 @@ export type Centre = {
   photos: string[];
   isFlagship: boolean;
   landingPath?: string;
+  metaTitle: string;
+  metaDescription: string;
+  heroImage: string;
 };
 
 export const centres: Centre[] = [
@@ -34,6 +41,11 @@ export const centres: Centre[] = [
     addressLines: ["C7/72, 2nd Floor", "Sector 7, Rohini", "New Delhi 110085"],
     inCharge: "Ms. Mamta",
     inChargeRole: "Centre Incharge",
+    inChargePhoto: "/faculty/mamta.jpg",
+    inChargeQualification: "Foundation Teacher, ESA",
+    inChargeExperience: "Senior faculty",
+    inChargeBio:
+      "Heads our flagship Rohini Sector 7 centre. Patient, gentle classroom style focused on early reading, writing and number sense for our youngest learners - and centre operations for every batch running here.",
     phone: "+918750663995",
     phoneDisplay: "+91 87506 63995",
     whatsapp: "+918750663995",
@@ -45,6 +57,12 @@ export const centres: Centre[] = [
     geo: { lat: "28.706135", lng: "77.119802" },
     photos: [],
     isFlagship: true,
+    landingPath: "/rohini-sector-7",
+    metaTitle: "Coaching in Rohini Sector 7 | ESA Flagship Centre",
+    metaDescription:
+      "Excellent Students' Academy flagship centre at C7/72, Sector 7, Rohini, New Delhi. Class 1 to 12 CBSE coaching. Operating since 2015, headed by Ms. Mamta.",
+    heroImage:
+      "https://images.unsplash.com/photo-1577896851231-70ef18881754?auto=format&fit=crop&w=1920&q=80",
   },
   {
     slug: "rohini-sector-15",
@@ -57,6 +75,8 @@ export const centres: Centre[] = [
     addressLines: ["Sector 15, Rohini", "New Delhi 110089"],
     inCharge: "Mr. Dhruv Narayan",
     inChargeRole: "Centre Incharge",
+    inChargeBio:
+      "Heads our Sector 15 Rohini centre. Handles admissions, parent meetings and academic planning for every batch running in Sector 15. Reach him directly during working hours for any concern.",
     phone: "+911171906883",
     phoneDisplay: "011-7190-6883",
     whatsapp: "+918882663340",
@@ -68,6 +88,12 @@ export const centres: Centre[] = [
     geo: { lat: "28.7304518", lng: "77.1264168" },
     photos: [],
     isFlagship: false,
+    landingPath: "/rohini-sector-15",
+    metaTitle: "Coaching in Rohini Sector 15 | ESA Sector 15 Centre",
+    metaDescription:
+      "Excellent Students' Academy coaching centre in Sector 15, Rohini, New Delhi. Class 1 to 12 CBSE coaching - Math, Science, Commerce. Headed by Mr. Dhruv Narayan.",
+    heroImage:
+      "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1920&q=80",
   },
   {
     slug: "shakurpur-delhi",
@@ -80,6 +106,8 @@ export const centres: Centre[] = [
     addressLines: ["Block G, Shakurpur Colony", "Shakurpur, Delhi 110034"],
     inCharge: "Ms. Khushboo",
     inChargeRole: "Centre Incharge",
+    inChargeBio:
+      "Heads our Shakurpur centre. Handles admissions, parent meetings and academic planning for every batch running in Block G. Reach her directly during working hours for any concern.",
     phone: "+918076625741",
     phoneDisplay: "+91 80766 25741",
     whatsapp: "+918076625741",
@@ -92,6 +120,12 @@ export const centres: Centre[] = [
     geo: { lat: "28.6815", lng: "77.1418" },
     photos: [],
     isFlagship: false,
+    landingPath: "/shakurpur",
+    metaTitle: "Coaching in Shakurpur Delhi | ESA Shakurpur Centre",
+    metaDescription:
+      "Excellent Students' Academy coaching centre in Block G, Shakurpur Colony, Delhi 110034. Class 1 to 12 CBSE coaching. Headed by Ms. Khushboo.",
+    heroImage:
+      "https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=1920&q=80",
   },
   {
     slug: "lucknow-thakurganj",
@@ -111,6 +145,11 @@ export const centres: Centre[] = [
     ],
     inCharge: "Mr. Ashok Rastogi",
     inChargeRole: "Centre Incharge",
+    inChargePhoto: "/faculty/ashok-rastogi.jpg",
+    inChargeQualification: "B.Tech, Mechanical Engineering",
+    inChargeExperience: "11 years",
+    inChargeBio:
+      "Heads our Lucknow Thakurganj centre. B.Tech in Mechanical Engineering with eleven years in education and centre management - oversees daily operations, parent communication and academic discipline for every batch running in Lucknow.",
     phone: "+919716502093",
     phoneDisplay: "+91 97165 02093",
     whatsapp: "+919716502093",
@@ -123,6 +162,10 @@ export const centres: Centre[] = [
     photos: ["/centres/lucknow-1.jpg", "/centres/lucknow-2.jpg"],
     isFlagship: false,
     landingPath: "/lucknow",
+    metaTitle: "Coaching in Lucknow Thakurganj | ESA Lucknow Centre",
+    metaDescription:
+      "Excellent Students' Academy Lucknow centre at Thakurganj, Chowk. Class 1 to 12 CBSE coaching, board prep and foundation classes. Headed by Mr. Ashok Rastogi - B.Tech, 11 years.",
+    heroImage: "/centres/lucknow-1.jpg",
   },
 ];
 

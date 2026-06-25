@@ -33,7 +33,7 @@ export function Footer() {
 
   return (
     <footer className="bg-neutral-950 text-neutral-300">
-      <div className="mx-auto grid max-w-[1480px] gap-12 px-5 py-16 sm:px-6 lg:grid-cols-4 lg:gap-16 lg:px-8 lg:py-20">
+      <div className="mx-auto grid max-w-[1480px] gap-12 px-5 py-16 sm:px-6 lg:grid-cols-5 lg:gap-12 lg:px-8 lg:py-20">
         <div className="lg:col-span-1">
           <Link href="/" className="flex items-center gap-3">
             <Image
@@ -98,12 +98,30 @@ export function Footer() {
           <ul className="mt-5 space-y-3 text-sm">
             <li><Link href="/about" className="text-neutral-300 transition hover:text-white">About Us</Link></li>
             <li><Link href="/faculty" className="text-neutral-300 transition hover:text-white">Faculty</Link></li>
-            <li><Link href="/centres" className="text-neutral-300 transition hover:text-white">Our Branches</Link></li>
             <li><Link href="/results" className="text-neutral-300 transition hover:text-white">Results</Link></li>
             <li><Link href="/gallery" className="text-neutral-300 transition hover:text-white">Gallery</Link></li>
             <li><Link href="/materials" className="text-neutral-300 transition hover:text-white">Study Materials</Link></li>
-            <li><Link href="/lucknow" className="text-neutral-300 transition hover:text-white">ESA Lucknow</Link></li>
+            <li><Link href="/faq" className="text-neutral-300 transition hover:text-white">FAQ</Link></li>
             <li><Link href="/contact" className="text-neutral-300 transition hover:text-white">Contact</Link></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 className="text-xs font-bold uppercase tracking-wider text-teal-300">
+            Our Branches
+          </h3>
+          <ul className="mt-5 space-y-3 text-sm">
+            <li><Link href="/centres" className="text-neutral-300 transition hover:text-white font-semibold">All Branches</Link></li>
+            {centres.map((c) => (
+              <li key={c.slug}>
+                <Link
+                  href={c.landingPath ?? "/centres"}
+                  className="text-neutral-300 transition hover:text-white"
+                >
+                  ESA {c.shortName}
+                </Link>
+              </li>
+            ))}
           </ul>
         </div>
 
