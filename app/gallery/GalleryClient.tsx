@@ -218,12 +218,13 @@ const sections: Section[] = [
   {
     id: "centre",
     title: "Our Centres",
-    eyebrow: "Three branches across North Delhi",
+    eyebrow: "Four branches across Delhi and Lucknow",
     blurb:
-      "Rohini Sector 7, Rohini Sector 15 and Shakurpur. Look for the bright yellow ESA board - you're there.",
+      "Rohini Sector 7, Rohini Sector 15, Shakurpur and Lucknow Thakurganj. Look for the bright yellow ESA board - you're there.",
     icon: <MapPin className="h-5 w-5" />,
     accent: "ink",
     photos: [
+      { file: "g57.jpg", alt: "Maa Saraswati poster with Excellent Students Academy banner at the centre", caption: "Maa Saraswati - the spirit of ESA's classrooms" },
       { file: "g30.jpg", alt: "ESA Rohini Sector 7 signboard from below", caption: "Rohini Sector 7 - the board from the metro side" },
       { file: "g29.jpg", alt: "ESA Class XI and XII signboard at Rohini", caption: "Class XI & XII facade" },
       { file: "g54.jpg", alt: "ESA Shakurpur new branch exterior at night", caption: "New Shakurpur branch, lit up at night" },
