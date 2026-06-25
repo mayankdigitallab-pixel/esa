@@ -77,10 +77,10 @@ export const centres: Centre[] = [
     inChargeRole: "Centre Incharge",
     inChargeBio:
       "Heads our Sector 15 Rohini centre. Handles admissions, parent meetings and academic planning for every batch running in Sector 15. Reach him directly during working hours for any concern.",
-    phone: "+911171906883",
-    phoneDisplay: "011-7190-6883",
-    whatsapp: "+918882663340",
-    whatsappDisplay: "+91 88826 63340",
+    phone: "+919458012793",
+    phoneDisplay: "+91 94580 12793",
+    whatsapp: "+919458012793",
+    whatsappDisplay: "+91 94580 12793",
     email: "excellentstudentsacademy1@gmail.com",
     mapEmbedUrl:
       "https://maps.google.com/maps?q=28.7304518,77.1264168&z=17&output=embed",
@@ -108,10 +108,10 @@ export const centres: Centre[] = [
     inChargeRole: "Centre Incharge",
     inChargeBio:
       "Heads our Shakurpur centre. Handles admissions, parent meetings and academic planning for every batch running in Block G. Reach her directly during working hours for any concern.",
-    phone: "+918076625741",
-    phoneDisplay: "+91 80766 25741",
-    whatsapp: "+918076625741",
-    whatsappDisplay: "+91 80766 25741",
+    phone: "+919458012793",
+    phoneDisplay: "+91 94580 12793",
+    whatsapp: "+919458012793",
+    whatsappDisplay: "+91 94580 12793",
     email: "excellentstudentsacademy1@gmail.com",
     mapEmbedUrl:
       "https://maps.google.com/maps?q=Ravi+Shoe+Palace,+Block+G,+Shakurpur+Colony,+Delhi+110034&z=17&output=embed",

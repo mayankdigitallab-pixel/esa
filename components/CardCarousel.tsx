@@ -2,6 +2,7 @@
 
 import { useCallback, useEffect, useRef, useState } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
+import { useDragScroll } from "@/lib/useDragScroll";
 
 interface CardCarouselProps {
   children: React.ReactNode[];
@@ -29,6 +30,7 @@ export function CardCarousel({
   loop,
 }: CardCarouselProps) {
   const scrollRef = useRef<HTMLDivElement>(null);
+  useDragScroll(scrollRef);
   const [index, setIndex] = useState(0);
   const [paused, setPaused] = useState(false);
   const slides = Array.isArray(children) ? children : [children];

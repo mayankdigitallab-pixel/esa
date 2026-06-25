@@ -1,9 +1,10 @@
 "use client";
 
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import { X, ChevronLeft, ChevronRight } from "lucide-react";
 import type { Topper } from "@/data/results";
+import { useDragScroll } from "@/lib/useDragScroll";
 
 interface Props {
   toppers: Topper[];
@@ -11,6 +12,8 @@ interface Props {
 
 export function StudentResults({ toppers }: Props) {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
+  const scrollRef = useRef<HTMLDivElement>(null);
+  useDragScroll(scrollRef);
 
   const close = useCallback(() => setOpenIndex(null), []);
   const next = useCallback(() => {
@@ -42,6 +45,7 @@ export function StudentResults({ toppers }: Props) {
   return (
     <>
       <div
+        ref={scrollRef}
         className="-mx-4 flex snap-x snap-mandatory gap-4 overflow-x-auto scroll-smooth px-4 pb-4 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden sm:gap-5"
         style={{ scrollPaddingLeft: 16, scrollPaddingRight: 16 }}
       >
