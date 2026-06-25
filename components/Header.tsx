@@ -19,7 +19,6 @@ const nav = [
   { href: "/about", label: "About" },
   { href: "/programs", label: "Programs" },
   { href: "/faculty", label: "Faculty" },
-  { href: "/centres", label: "Branches" },
   { href: "/results", label: "Results" },
   { href: "/materials", label: "Materials" },
   { href: "/gallery", label: "Gallery" },
