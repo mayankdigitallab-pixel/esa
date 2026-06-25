@@ -10,6 +10,8 @@ import {
   Users,
   BookOpen,
   CheckCircle2,
+  HelpCircle,
+  ChevronDown,
 } from "lucide-react";
 import { Container } from "@/components/ui/Container";
 import { SectionHeading } from "@/components/ui/SectionHeading";
@@ -19,6 +21,19 @@ import type { Centre } from "@/data/centres";
 import { breadcrumbSchema, jsonLd } from "@/lib/seo";
 
 const BASE = "https://www.theesa.in";
+
+function buildCentreFaqSchema(centre: Centre) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "@id": `${BASE}${centre.landingPath}#faq`,
+    mainEntity: centre.faqs.map((f) => ({
+      "@type": "Question",
+      name: f.question,
+      acceptedAnswer: { "@type": "Answer", text: f.answer },
+    })),
+  };
+}
 
 function buildLocalBusinessSchema(centre: Centre) {
   return {
@@ -119,6 +134,7 @@ export function CentreLanding({ centre }: Props) {
     { name: centre.shortName, href: centre.landingPath ?? "/centres" },
   ]);
   const localBusiness = buildLocalBusinessSchema(centre);
+  const faqSchema = centre.faqs.length > 0 ? buildCentreFaqSchema(centre) : null;
   const highlights = defaultHighlights(centre);
   const waMessage = `Hello ${centre.name}, I want to book a free demo class for my child.`;
 
@@ -126,6 +142,7 @@ export function CentreLanding({ centre }: Props) {
     <div>
       <script {...jsonLd(breadcrumb)} />
       <script {...jsonLd(localBusiness)} />
+      {faqSchema && <script {...jsonLd(faqSchema)} />}
 
       <PageBanner
         label={centre.shortName}
@@ -474,6 +491,83 @@ export function CentreLanding({ centre }: Props) {
           )}
         </Container>
       </section>
+
+      {centre.faqs.length > 0 && (
+        <section className="relative overflow-hidden border-t border-neutral-200 bg-white py-16 sm:py-20">
+          <div className="pointer-events-none absolute -right-40 top-12 h-80 w-80 rounded-full bg-teal-100/60 blur-3xl" aria-hidden />
+          <div className="pointer-events-none absolute -left-40 bottom-12 h-80 w-80 rounded-full bg-amber-100/40 blur-3xl" aria-hidden />
+          <Container className="relative">
+            <div className="mx-auto mb-10 max-w-2xl text-center">
+              <span className="inline-flex items-center gap-2 rounded-full border border-teal-200 bg-teal-50 px-4 py-1.5 text-[11px] font-bold uppercase tracking-[0.22em] text-teal-700">
+                <HelpCircle className="h-3.5 w-3.5" />
+                FAQs · {centre.shortName}
+              </span>
+              <h2 className="mt-4 text-3xl font-bold tracking-tight text-charcoal sm:text-4xl">
+                Common questions from{" "}
+                <span className="bg-gradient-to-r from-teal-600 to-red-500 bg-clip-text text-transparent">
+                  {centre.city}
+                </span>{" "}
+                parents.
+              </h2>
+              <p className="mt-3 text-sm leading-relaxed text-body sm:text-base">
+                Specific to our {centre.shortName} centre. For anything not covered here,
+                WhatsApp {centre.inCharge.replace(/^(Mr|Ms|Mrs|Dr)\.?\s+/, "")} directly.
+              </p>
+            </div>
+
+            <div className="mx-auto max-w-3xl space-y-3">
+              {centre.faqs.map((f, i) => (
+                <details
+                  key={i}
+                  className="group rounded-2xl border border-neutral-200 bg-white shadow-sm transition open:shadow-md hover:border-teal-300"
+                >
+                  <summary className="flex cursor-pointer list-none items-start justify-between gap-4 p-5 sm:p-6">
+                    <div className="flex items-start gap-3">
+                      <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-lg bg-teal-50 text-xs font-bold text-teal-700 ring-1 ring-teal-200">
+                        {String(i + 1).padStart(2, "0")}
+                      </span>
+                      <h3 className="text-base font-semibold leading-snug text-charcoal sm:text-lg">
+                        {f.question}
+                      </h3>
+                    </div>
+                    <ChevronDown className="mt-1 h-5 w-5 shrink-0 text-teal-600 transition group-open:rotate-180" />
+                  </summary>
+                  <div className="px-5 pb-5 pl-[3.75rem] sm:px-6 sm:pb-6 sm:pl-[4rem]">
+                    <p className="text-sm leading-relaxed text-body sm:text-base">{f.answer}</p>
+                  </div>
+                </details>
+              ))}
+            </div>
+
+            <div className="mx-auto mt-10 max-w-2xl rounded-2xl border border-neutral-200 bg-gradient-to-br from-teal-50 via-white to-red-50 p-6 text-center sm:p-8">
+              <p className="text-sm font-semibold text-charcoal sm:text-base">
+                Still have a question about {centre.shortName}?
+              </p>
+              <p className="mt-1.5 text-sm text-body">
+                Reach {centre.inCharge} directly - same-day reply during working hours.
+              </p>
+              <div className="mt-5 flex flex-col items-center justify-center gap-3 sm:flex-row">
+                <a
+                  href={`tel:${centre.phone}`}
+                  className="inline-flex items-center gap-2 rounded-full bg-red-500 px-5 py-2.5 text-sm font-semibold text-white shadow-md transition hover:bg-red-600"
+                >
+                  <Phone className="h-4 w-4" />
+                  Call {centre.shortName}
+                </a>
+                <a
+                  href={centreWa(centre, waMessage)}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 rounded-full bg-[#25D366] px-5 py-2.5 text-sm font-semibold text-white shadow-md transition hover:bg-[#1ea855]"
+                >
+                  <MessageCircle className="h-4 w-4" />
+                  WhatsApp
+                </a>
+              </div>
+            </div>
+          </Container>
+        </section>
+      )}
 
       <section className="relative overflow-hidden border-t border-neutral-200 py-16 sm:py-20" style={{ background: "linear-gradient(135deg, #134e4a 0%, #0f766e 40%, #134e4a 100%)" }}>
         {/* Decorative background elements */}
