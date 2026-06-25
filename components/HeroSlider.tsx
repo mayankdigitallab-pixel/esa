@@ -86,6 +86,7 @@ export function HeroSlider() {
               fill
               sizes="100vw"
               className="object-cover"
+              style={s.objectPosition ? { objectPosition: s.objectPosition } : undefined}
               priority={i === 0}
             />
             <div className={`absolute inset-0 ${s.heavyOverlay ? "bg-charcoal/80" : "bg-charcoal/65"}`} />

@@ -9,6 +9,8 @@ export type HeroSlide = {
   image: string;
   /** Apply an extra-dark scrim for busy/bright photos (e.g. signboards). */
   heavyOverlay?: boolean;
+  /** CSS object-position when the hero crops a non-landscape image. Defaults to "center". */
+  objectPosition?: string;
 };
 
 export const heroSlides: HeroSlide[] = [
@@ -46,6 +48,7 @@ export const heroSlides: HeroSlide[] = [
     primaryCta: { label: "Meet The Faculty", href: "/faculty" },
     secondaryCta: { label: "See Gallery", href: "/gallery" },
     image: "/faculty/team-group.jpg",
+    objectPosition: "center 25%",
   },
   {
     eyebrow: "Class 11 & 12 · Science · Commerce",
