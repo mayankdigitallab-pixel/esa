@@ -80,15 +80,37 @@ export function HeroSlider() {
             }`}
             aria-hidden={i !== index}
           >
-            <Image
-              src={s.image}
-              alt={`${s.eyebrow} - ${s.headline} ${s.accentWord} at Excellent Students' Academy Rohini`}
-              fill
-              sizes="100vw"
-              className="object-cover"
-              style={s.objectPosition ? { objectPosition: s.objectPosition } : undefined}
-              priority={i === 0}
-            />
+            {s.mobileImage ? (
+              <>
+                <Image
+                  src={s.mobileImage}
+                  alt={`${s.eyebrow} - ${s.headline} ${s.accentWord} at Excellent Students' Academy`}
+                  fill
+                  sizes="100vw"
+                  className="block object-cover sm:hidden"
+                  priority={i === 0}
+                />
+                <Image
+                  src={s.image}
+                  alt={`${s.eyebrow} - ${s.headline} ${s.accentWord} at Excellent Students' Academy`}
+                  fill
+                  sizes="100vw"
+                  className="hidden object-cover sm:block"
+                  style={s.objectPosition ? { objectPosition: s.objectPosition } : undefined}
+                  priority={i === 0}
+                />
+              </>
+            ) : (
+              <Image
+                src={s.image}
+                alt={`${s.eyebrow} - ${s.headline} ${s.accentWord} at Excellent Students' Academy Rohini`}
+                fill
+                sizes="100vw"
+                className="object-cover"
+                style={s.objectPosition ? { objectPosition: s.objectPosition } : undefined}
+                priority={i === 0}
+              />
+            )}
             <div className={`absolute inset-0 ${s.heavyOverlay ? "bg-charcoal/80" : "bg-charcoal/65"}`} />
             {s.heavyOverlay && (
               <div

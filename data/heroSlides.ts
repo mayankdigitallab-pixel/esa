@@ -7,6 +7,8 @@ export type HeroSlide = {
   primaryCta: { label: string; href: string };
   secondaryCta: { label: string; href: string };
   image: string;
+  /** Optional portrait-oriented version shown on small screens (sm and below). */
+  mobileImage?: string;
   /** Apply an extra-dark scrim for busy/bright photos (e.g. signboards). */
   heavyOverlay?: boolean;
   /** CSS object-position when the hero crops a non-landscape image. Defaults to "center". */
@@ -48,6 +50,7 @@ export const heroSlides: HeroSlide[] = [
     primaryCta: { label: "Meet The Faculty", href: "/faculty" },
     secondaryCta: { label: "See Gallery", href: "/gallery" },
     image: "/faculty/team-group.jpg",
+    mobileImage: "/faculty/team-group-mobile.jpg",
     objectPosition: "center 25%",
   },
   {
