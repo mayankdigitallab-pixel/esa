@@ -917,8 +917,8 @@ export default function HomePage() {
       {/* VIDEO REVIEWS */}
       <VideoReviews />
 
-      {/* BLOG TEASER */}
-      <section className="bg-white py-20 sm:py-24">
+      {/* BLOG TEASER - hidden on home per request, still accessible via /blog */}
+      <section className="hidden bg-white py-20 sm:py-24">
         <Container>
           <div className="flex flex-col items-start justify-between gap-6 sm:flex-row sm:items-end">
             <div className="max-w-2xl">

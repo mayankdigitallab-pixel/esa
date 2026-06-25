@@ -212,8 +212,8 @@ export function HeroSlider() {
               onClick={() => goTo(i)}
               aria-label={`Go to slide ${i + 1}`}
               aria-current={i === index}
-              className={`h-[3px] rounded-full transition-all ${
-                i === index ? "w-10 bg-red-500" : "w-4 bg-white/35 hover:bg-white/65"
+              className={`h-[2px] rounded-full transition-all sm:h-[3px] ${
+                i === index ? "w-6 sm:w-10 bg-red-500" : "w-2 sm:w-4 bg-white/35 hover:bg-white/65"
               }`}
             />
           ))}

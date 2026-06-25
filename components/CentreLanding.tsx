@@ -475,55 +475,130 @@ export function CentreLanding({ centre }: Props) {
         </Container>
       </section>
 
-      <section className="border-t border-neutral-200 bg-neutral-50 py-16 sm:py-20">
-        <Container>
-          <div className="grid gap-10 lg:grid-cols-[1fr_1.2fr]">
-            <div>
-              <p className="text-[11px] font-bold uppercase tracking-[0.22em] text-teal-700">
-                Book Your Demo
-              </p>
-              <h2 className="mt-3 text-3xl font-bold tracking-tight text-charcoal sm:text-4xl">
-                Free demo class at our {centre.shortName} centre
+      <section className="relative overflow-hidden border-t border-neutral-200 py-16 sm:py-20" style={{ background: "linear-gradient(135deg, #134e4a 0%, #0f766e 40%, #134e4a 100%)" }}>
+        {/* Decorative background elements */}
+        <div className="pointer-events-none absolute -left-32 -top-32 h-96 w-96 rounded-full bg-teal-400/20 blur-3xl" aria-hidden />
+        <div className="pointer-events-none absolute -right-32 bottom-0 h-96 w-96 rounded-full bg-red-500/15 blur-3xl" aria-hidden />
+        <div
+          className="pointer-events-none absolute inset-0 opacity-[0.07]"
+          style={{
+            backgroundImage:
+              "radial-gradient(circle at 1px 1px, rgba(255,255,255,0.6) 1px, transparent 0)",
+            backgroundSize: "32px 32px",
+          }}
+          aria-hidden
+        />
+
+        <Container className="relative">
+          <div className="grid gap-10 lg:grid-cols-[1fr_1.15fr] lg:gap-14">
+            {/* LEFT: Pitch + contact cards */}
+            <div className="text-white">
+              <span className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-1.5 text-[10px] font-bold uppercase tracking-[0.22em] text-teal-200 backdrop-blur-sm">
+                <span className="relative flex h-2 w-2">
+                  <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-amber-400 opacity-75" />
+                  <span className="relative inline-flex h-2 w-2 rounded-full bg-amber-400" />
+                </span>
+                Book Your Demo · Free
+              </span>
+              <h2 className="mt-5 text-3xl font-bold leading-[1.1] tracking-tight text-white sm:text-4xl lg:text-5xl">
+                Free demo class at our{" "}
+                <span className="bg-gradient-to-r from-amber-300 to-amber-100 bg-clip-text text-transparent">
+                  {centre.shortName}
+                </span>{" "}
+                centre.
               </h2>
-              <p className="mt-4 text-sm leading-relaxed text-body sm:text-base">
-                Drop your details and we will call back within working hours to schedule your
-                child&apos;s demo class. Walk in to our {centre.shortName} centre and sit
-                through an actual batch before deciding.
+              <p className="mt-5 max-w-md text-sm leading-relaxed text-white/75 sm:text-base">
+                Walk in. Sit through an actual batch. Meet the faculty. Decide only after.
+                No fee, no commitment - this is how we earn enrolments.
               </p>
-              <div className="mt-6 space-y-3 text-sm text-body">
-                <div className="flex items-start gap-2.5">
-                  <Phone className="mt-0.5 h-4 w-4 shrink-0 text-teal-500" />
-                  <div className="flex flex-wrap items-baseline gap-x-2 gap-y-0.5">
-                    <span>Or call us directly:</span>
-                    <a
-                      href={`tel:${centre.phone}`}
-                      className="font-semibold text-charcoal hover:text-teal-700"
+
+              {/* What happens next */}
+              <ul className="mt-7 grid gap-3">
+                {[
+                  "We call back within working hours to fix a slot",
+                  "Your child sits through a real running batch",
+                  `Meet ${centre.inCharge.replace(/^(Mr|Ms|Mrs|Dr)\.?\s+/, "")} - direct line for any question`,
+                ].map((step, i) => (
+                  <li key={i} className="flex items-start gap-3">
+                    <span
+                      className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-amber-400 to-amber-500 text-[11px] font-bold text-amber-950 shadow-md"
                     >
+                      {i + 1}
+                    </span>
+                    <span className="text-sm leading-relaxed text-white/85">{step}</span>
+                  </li>
+                ))}
+              </ul>
+
+              {/* Contact cards */}
+              <div className="mt-8 grid gap-3 sm:grid-cols-2">
+                <a
+                  href={`tel:${centre.phone}`}
+                  className="group flex items-center gap-3 rounded-2xl border border-white/15 bg-white/10 p-4 backdrop-blur-sm transition hover:border-amber-300/50 hover:bg-white/15"
+                >
+                  <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-red-400 to-red-600 text-white shadow-md transition group-hover:scale-105">
+                    <Phone className="h-5 w-5" />
+                  </span>
+                  <div className="min-w-0">
+                    <p className="text-[10px] font-bold uppercase tracking-[0.18em] text-white/55">
+                      Call us
+                    </p>
+                    <p className="mt-0.5 truncate text-sm font-bold text-white">
                       {centre.phoneDisplay}
-                    </a>
+                    </p>
                   </div>
-                </div>
-                <div className="flex items-start gap-2.5">
-                  <MessageCircle className="mt-0.5 h-4 w-4 shrink-0 text-[#25D366]" />
-                  <div className="flex flex-wrap items-baseline gap-x-2 gap-y-0.5">
-                    <span>WhatsApp:</span>
-                    <a
-                      href={centreWa(centre, waMessage)}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="font-semibold text-charcoal hover:text-teal-700"
-                    >
+                </a>
+                <a
+                  href={centreWa(centre, waMessage)}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group flex items-center gap-3 rounded-2xl border border-white/15 bg-white/10 p-4 backdrop-blur-sm transition hover:border-[#25D366]/50 hover:bg-white/15"
+                >
+                  <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-[#34d97e] to-[#1ea855] text-white shadow-md transition group-hover:scale-105">
+                    <MessageCircle className="h-5 w-5" />
+                  </span>
+                  <div className="min-w-0">
+                    <p className="text-[10px] font-bold uppercase tracking-[0.18em] text-white/55">
+                      WhatsApp
+                    </p>
+                    <p className="mt-0.5 truncate text-sm font-bold text-white">
                       {centre.whatsappDisplay}
-                    </a>
+                    </p>
                   </div>
-                </div>
+                </a>
+              </div>
+
+              {/* Trust signal */}
+              <div className="mt-6 flex flex-wrap items-center gap-x-5 gap-y-2 text-xs text-white/60">
+                <span className="inline-flex items-center gap-1.5">
+                  <ShieldCheck className="h-3.5 w-3.5 text-amber-300" />
+                  No advance payment
+                </span>
+                <span className="inline-flex items-center gap-1.5">
+                  <CheckCircle2 className="h-3.5 w-3.5 text-amber-300" />
+                  Same-day callback
+                </span>
+                <span className="inline-flex items-center gap-1.5">
+                  <Users className="h-3.5 w-3.5 text-amber-300" />
+                  500+ parents enrolled
+                </span>
               </div>
             </div>
+
+            {/* RIGHT: form card */}
             <div
               id="enquiry"
-              className="scroll-mt-24 rounded-2xl border border-neutral-200 bg-white p-7 shadow-lg sm:p-10"
+              className="relative scroll-mt-24 overflow-hidden rounded-3xl bg-white shadow-2xl ring-1 ring-black/5"
             >
-              <EnquiryForm />
+              {/* Gradient header strip */}
+              <div className="relative h-2 w-full bg-gradient-to-r from-teal-500 via-amber-400 to-red-500" />
+              <div className="relative bg-gradient-to-br from-neutral-50 to-white p-6 sm:p-8 lg:p-10">
+                <EnquiryForm />
+                <p className="mt-5 text-center text-[11px] text-muted">
+                  Your details stay with our {centre.shortName} centre only.
+                  We do not share contact info.
+                </p>
+              </div>
             </div>
           </div>
         </Container>

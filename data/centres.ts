@@ -82,6 +82,7 @@ export const centres: Centre[] = [
     addressLines: ["Sector 15, Rohini", "New Delhi 110089"],
     inCharge: "Mr. Dhruv Narayan",
     inChargeRole: "Centre Incharge",
+    inChargePhoto: "/faculty/dhruv-narayan.jpg",
     inChargeBio:
       "Heads our Sector 15 Rohini centre. Handles admissions, parent meetings and academic planning for every batch running in Sector 15. Reach him directly during working hours for any concern.",
     phone: "+919458012793",
