@@ -27,6 +27,7 @@ export type Centre = {
   metaTitle: string;
   metaDescription: string;
   heroImage: string;
+  highlights: string[];
 };
 
 export const centres: Centre[] = [
@@ -63,6 +64,12 @@ export const centres: Centre[] = [
       "Excellent Students' Academy flagship centre at C7/72, Sector 7, Rohini, New Delhi. Class 1 to 12 CBSE coaching. Operating since 2015, headed by Ms. Mamta.",
     heroImage:
       "https://images.unsplash.com/photo-1577896851231-70ef18881754?auto=format&fit=crop&w=1920&q=80",
+    highlights: [
+      "Original ESA centre - operating since 2015, two floors of fully AC classrooms",
+      "Founder Mr. Chandan Prajapati teaches Class 11-12 Math batches in person here",
+      "Foundation classes (1-3) run by Ms. Mamta and a senior junior-class faculty team",
+      "10 minute walk from Rohini West Metro - DAV, Vishal Bharti, Mount Abu students nearby",
+    ],
   },
   {
     slug: "rohini-sector-15",
@@ -94,6 +101,12 @@ export const centres: Centre[] = [
       "Excellent Students' Academy coaching centre in Sector 15, Rohini, New Delhi. Class 1 to 12 CBSE coaching - Math, Science, Commerce. Headed by Mr. Dhruv Narayan.",
     heroImage:
       "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1920&q=80",
+    highlights: [
+      "Newest Delhi branch, smaller batch sizes for Class 6-12 board prep",
+      "Same weekly test schedule and faculty notes as our flagship Sector 7 centre",
+      "Walking distance from Sector 15 market and bus stop - easy parent drop-off",
+      "Serves Sectors 13, 14, 15, 16 students from Rajiv Gandhi, Mount Carmel, and nearby schools",
+    ],
   },
   {
     slug: "shakurpur-delhi",
@@ -126,6 +139,12 @@ export const centres: Centre[] = [
       "Excellent Students' Academy coaching centre in Block G, Shakurpur Colony, Delhi 110034. Class 1 to 12 CBSE coaching. Headed by Ms. Khushboo.",
     heroImage:
       "https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=1920&q=80",
+    highlights: [
+      "West Delhi presence next to Block G market, near Ravi Shoe Palace landmark",
+      "Strong foundation focus for Class 1-5 with Class 6-12 board batches running through the year",
+      "Easy access from Pitampura, Punjabi Bagh, Tri Nagar and Shakurpur Colony",
+      "Walking distance from local schools - DAV, Maharaja Agrasen, Salwan",
+    ],
   },
   {
     slug: "lucknow-thakurganj",
@@ -166,6 +185,12 @@ export const centres: Centre[] = [
     metaDescription:
       "Excellent Students' Academy Lucknow centre at Thakurganj, Chowk. Class 1 to 12 CBSE coaching, board prep and foundation classes. Headed by Mr. Ashok Rastogi - B.Tech, 11 years.",
     heroImage: "/centres/lucknow-1.jpg",
+    highlights: [
+      "ESA's first Uttar Pradesh centre - bringing Rohini-grade coaching to Lucknow",
+      "Centrally located on Hardoi Road, Chowk - easy reach from Basant Vihar, Thakurganj, Daliganj",
+      "Bilingual teaching (English + Hindi explanation) for CBSE and UP Board students",
+      "Faculty trained at our Rohini flagship - same syllabus, same weekly test framework",
+    ],
   },
 ];
 

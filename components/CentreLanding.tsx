@@ -9,6 +9,7 @@ import {
   ShieldCheck,
   Users,
   BookOpen,
+  CheckCircle2,
 } from "lucide-react";
 import { Container } from "@/components/ui/Container";
 import { SectionHeading } from "@/components/ui/SectionHeading";
@@ -174,18 +175,19 @@ export function CentreLanding({ centre }: Props) {
         </Container>
       </section>
 
-      <section className="relative overflow-hidden border-t border-neutral-200 bg-neutral-50 py-16 sm:py-20">
-        <div className="pointer-events-none absolute -left-32 top-12 h-72 w-72 rounded-full bg-teal-200/40 blur-3xl" aria-hidden />
-        <div className="pointer-events-none absolute -right-32 bottom-12 h-72 w-72 rounded-full bg-red-200/30 blur-3xl" aria-hidden />
+      <section className="relative overflow-hidden border-t border-neutral-200 py-16 sm:py-20" style={{ background: "linear-gradient(180deg, #f8fafc 0%, #ecfeff 100%)" }}>
+        <div className="pointer-events-none absolute -left-32 top-12 h-80 w-80 rounded-full bg-teal-300/30 blur-3xl" aria-hidden />
+        <div className="pointer-events-none absolute -right-32 top-1/3 h-80 w-80 rounded-full bg-red-300/20 blur-3xl" aria-hidden />
+        <div className="pointer-events-none absolute left-1/2 bottom-0 h-72 w-72 -translate-x-1/2 rounded-full bg-amber-200/20 blur-3xl" aria-hidden />
         <Container className="relative">
           <div className="mb-10 flex flex-col items-center text-center">
-            <span className="inline-flex items-center gap-3 text-[11px] font-semibold uppercase tracking-[0.22em] text-teal-700">
-              <span className="h-px w-10 bg-teal-500" />
+            <span className="inline-flex items-center gap-3 rounded-full border border-teal-200 bg-white/80 px-4 py-1.5 text-[11px] font-bold uppercase tracking-[0.22em] text-teal-700 shadow-sm backdrop-blur-sm">
+              <span className="h-1.5 w-1.5 rounded-full bg-red-500" />
               Centre In-charge
-              <span className="h-px w-10 bg-teal-500" />
+              <span className="h-1.5 w-1.5 rounded-full bg-teal-500" />
             </span>
-            <h2 className="mt-4 text-3xl font-bold tracking-tight text-charcoal sm:text-4xl">
-              Meet {centre.inCharge}
+            <h2 className="mt-5 text-3xl font-bold tracking-tight text-charcoal sm:text-4xl lg:text-5xl">
+              Meet <span className="bg-gradient-to-r from-teal-600 to-red-500 bg-clip-text text-transparent">{centre.inCharge}</span>
             </h2>
             <p className="mt-3 max-w-xl text-sm leading-relaxed text-body sm:text-base">
               {centre.inChargeRole} at {centre.shortName}. Your direct point of contact for
@@ -193,15 +195,29 @@ export function CentreLanding({ centre }: Props) {
             </p>
           </div>
 
-          <div className="overflow-hidden rounded-3xl border border-neutral-200 bg-white shadow-xl">
+          <div className="relative overflow-hidden rounded-3xl border border-neutral-200 bg-white shadow-2xl">
+            {/* Accent gradient ribbon at top */}
+            <div className="h-1.5 w-full bg-gradient-to-r from-teal-500 via-amber-400 to-red-500" />
+
             <div className="grid gap-0 lg:grid-cols-[minmax(0,5fr)_minmax(0,7fr)]">
-              {/* LEFT: photo column with teal gradient */}
+              {/* LEFT: photo column with deeper gradient */}
               <div
-                className="relative flex flex-col gap-6 p-6 sm:p-8 lg:p-10"
-                style={{ background: "linear-gradient(135deg, #0d9488 0%, #0f766e 60%, #134e4a 100%)" }}
+                className="relative flex flex-col gap-6 overflow-hidden p-6 sm:p-8 lg:p-10"
+                style={{ background: "linear-gradient(135deg, #134e4a 0%, #0f766e 35%, #0d9488 70%, #14b8a6 100%)" }}
               >
-                <div className="pointer-events-none absolute inset-y-0 right-0 w-px bg-white/10" aria-hidden />
-                <div className="relative aspect-square w-full overflow-hidden rounded-2xl bg-white/10 shadow-2xl ring-1 ring-white/10">
+                {/* Decorative pattern */}
+                <div
+                  className="pointer-events-none absolute inset-0 opacity-15"
+                  style={{
+                    backgroundImage:
+                      "radial-gradient(circle at 20% 20%, rgba(255,255,255,0.4) 0%, transparent 35%), radial-gradient(circle at 80% 80%, rgba(34,211,238,0.4) 0%, transparent 35%)",
+                  }}
+                  aria-hidden
+                />
+                <div className="pointer-events-none absolute -right-12 -top-12 h-40 w-40 rounded-full border border-white/15" aria-hidden />
+                <div className="pointer-events-none absolute -left-16 bottom-1/3 h-56 w-56 rounded-full border border-white/10" aria-hidden />
+
+                <div className="relative aspect-square w-full overflow-hidden rounded-2xl bg-white/10 shadow-2xl ring-2 ring-white/20">
                   {centre.inChargePhoto ? (
                     <Image
                       src={centre.inChargePhoto}
@@ -211,38 +227,44 @@ export function CentreLanding({ centre }: Props) {
                       className="object-cover"
                     />
                   ) : (
-                    <div className="flex h-full w-full items-center justify-center">
-                      <span className="text-7xl font-bold tracking-tight text-white/85 sm:text-8xl">
+                    <div className="flex h-full w-full items-center justify-center bg-gradient-to-br from-teal-600 to-teal-800">
+                      <span className="text-7xl font-bold tracking-tight text-white/90 sm:text-8xl">
                         {inChargeInitials(centre.inCharge)}
                       </span>
                     </div>
                   )}
                   {centre.isFlagship && (
-                    <span className="absolute left-4 top-4 rounded-full bg-amber-400 px-3 py-1 text-[10px] font-bold uppercase tracking-[0.16em] text-amber-950 shadow-md">
-                      Flagship
+                    <span className="absolute left-4 top-4 inline-flex items-center gap-1 rounded-full bg-amber-400 px-3 py-1 text-[10px] font-bold uppercase tracking-[0.16em] text-amber-950 shadow-lg">
+                      ★ Flagship
                     </span>
                   )}
+                  <div className="absolute inset-x-0 bottom-0 h-20 bg-gradient-to-t from-charcoal/80 to-transparent" />
+                  <div className="absolute inset-x-0 bottom-3 px-4 text-center">
+                    <p className="text-[10px] font-bold uppercase tracking-[0.22em] text-teal-200">
+                      {centre.shortName}
+                    </p>
+                  </div>
                 </div>
-                <div>
-                  <p className="text-[10px] font-bold uppercase tracking-[0.22em] text-teal-100">
+                <div className="relative">
+                  <p className="text-[10px] font-bold uppercase tracking-[0.22em] text-teal-200">
                     {centre.inChargeRole}
                   </p>
                   <h3 className="mt-1.5 text-2xl font-bold text-white sm:text-3xl">
                     {centre.inCharge}
                   </h3>
                   <p className="mt-1 text-sm text-teal-100/80">
-                    {centre.shortName}, {centre.city}
+                    {centre.city} · {centre.state}
                   </p>
                   {(centre.inChargeQualification || centre.inChargeExperience) && (
                     <div className="mt-4 flex flex-wrap gap-2">
                       {centre.inChargeQualification && (
-                        <span className="inline-flex items-center gap-1.5 rounded-full bg-white/15 px-3 py-1 text-[11px] font-medium text-white backdrop-blur-sm ring-1 ring-white/15">
+                        <span className="inline-flex items-center gap-1.5 rounded-full bg-white/20 px-3 py-1.5 text-[11px] font-medium text-white backdrop-blur-sm ring-1 ring-white/20">
                           <GraduationCap className="h-3 w-3" />
                           {centre.inChargeQualification}
                         </span>
                       )}
                       {centre.inChargeExperience && (
-                        <span className="inline-flex items-center gap-1.5 rounded-full bg-white/15 px-3 py-1 text-[11px] font-medium text-white backdrop-blur-sm ring-1 ring-white/15">
+                        <span className="inline-flex items-center gap-1.5 rounded-full bg-white/20 px-3 py-1.5 text-[11px] font-medium text-white backdrop-blur-sm ring-1 ring-white/20">
                           <ShieldCheck className="h-3 w-3" />
                           {centre.inChargeExperience}
                         </span>
@@ -252,7 +274,7 @@ export function CentreLanding({ centre }: Props) {
                 </div>
               </div>
 
-              {/* RIGHT: bio + stats + CTAs */}
+              {/* RIGHT: bio + highlights + stats + CTAs */}
               <div className="flex flex-col gap-6 p-6 sm:p-8 lg:p-10">
                 <div>
                   <p className="inline-flex items-center gap-2 text-[10px] font-bold uppercase tracking-[0.22em] text-teal-700">
@@ -266,34 +288,72 @@ export function CentreLanding({ centre }: Props) {
                   )}
                 </div>
 
-                <div className="rounded-2xl border-l-4 border-teal-500 bg-teal-50/60 p-5">
+                <div
+                  className="relative overflow-hidden rounded-2xl p-5"
+                  style={{ background: "linear-gradient(135deg, #ecfeff 0%, #f0fdfa 100%)" }}
+                >
+                  <span className="absolute left-0 top-0 h-full w-1 bg-gradient-to-b from-teal-400 to-teal-600" aria-hidden />
                   <p className="text-sm leading-relaxed text-charcoal sm:text-base">
-                    <span className="font-semibold">Direct line:</span> reach{" "}
+                    <span className="font-bold text-teal-700">Direct line:</span> reach{" "}
                     {centre.inCharge.replace(/^(Mr|Ms|Mrs|Dr)\.?\s+/, "")} during working hours
                     for any concern - timing, fee, attendance, syllabus or a one-on-one mentoring
                     slot for your child.
                   </p>
                 </div>
 
-                <dl className="grid grid-cols-3 gap-3 rounded-2xl border border-neutral-200 bg-white p-4">
-                  <div className="text-center">
-                    <dt className="text-[9px] font-bold uppercase tracking-[0.16em] text-muted">
+                {/* Highlights checklist - centre-specific */}
+                {centre.highlights.length > 0 && (
+                  <div>
+                    <p className="inline-flex items-center gap-2 text-[10px] font-bold uppercase tracking-[0.22em] text-red-600">
+                      <span className="h-1.5 w-1.5 rounded-full bg-red-500" />
+                      What&apos;s special about this centre
+                    </p>
+                    <ul className="mt-3 grid gap-2.5">
+                      {centre.highlights.map((h, i) => {
+                        const palette = [
+                          { bg: "bg-teal-50", text: "text-teal-600", ring: "ring-teal-200" },
+                          { bg: "bg-red-50", text: "text-red-600", ring: "ring-red-200" },
+                          { bg: "bg-amber-50", text: "text-amber-600", ring: "ring-amber-200" },
+                          { bg: "bg-indigo-50", text: "text-indigo-600", ring: "ring-indigo-200" },
+                        ];
+                        const p = palette[i % palette.length];
+                        return (
+                          <li
+                            key={i}
+                            className="flex items-start gap-3 rounded-xl border border-neutral-200 bg-white p-3 transition hover:border-teal-300 hover:shadow-sm"
+                          >
+                            <span
+                              className={`flex h-7 w-7 shrink-0 items-center justify-center rounded-lg ${p.bg} ${p.text} ring-1 ${p.ring}`}
+                            >
+                              <CheckCircle2 className="h-4 w-4" />
+                            </span>
+                            <span className="text-sm leading-relaxed text-charcoal">{h}</span>
+                          </li>
+                        );
+                      })}
+                    </ul>
+                  </div>
+                )}
+
+                <dl className="grid grid-cols-3 overflow-hidden rounded-2xl border border-neutral-200 bg-white">
+                  <div className="bg-gradient-to-br from-teal-50 to-white p-4 text-center">
+                    <dt className="text-[9px] font-bold uppercase tracking-[0.16em] text-teal-700">
                       Centre
                     </dt>
                     <dd className="mt-1 text-xs font-bold text-charcoal sm:text-sm">
                       {centre.shortName}
                     </dd>
                   </div>
-                  <div className="border-x border-neutral-200 text-center">
-                    <dt className="text-[9px] font-bold uppercase tracking-[0.16em] text-muted">
+                  <div className="border-x border-neutral-200 bg-gradient-to-br from-amber-50 to-white p-4 text-center">
+                    <dt className="text-[9px] font-bold uppercase tracking-[0.16em] text-amber-700">
                       Hours
                     </dt>
                     <dd className="mt-1 text-xs font-bold text-charcoal sm:text-sm">
                       10 AM - 8:30 PM
                     </dd>
                   </div>
-                  <div className="text-center">
-                    <dt className="text-[9px] font-bold uppercase tracking-[0.16em] text-muted">
+                  <div className="bg-gradient-to-br from-red-50 to-white p-4 text-center">
+                    <dt className="text-[9px] font-bold uppercase tracking-[0.16em] text-red-700">
                       Days
                     </dt>
                     <dd className="mt-1 text-xs font-bold text-charcoal sm:text-sm">Mon - Sat</dd>
@@ -303,18 +363,18 @@ export function CentreLanding({ centre }: Props) {
                 <div className="mt-auto flex flex-col gap-3 pt-2 sm:flex-row">
                   <a
                     href={`tel:${centre.phone}`}
-                    className="inline-flex flex-1 items-center justify-center gap-2 rounded-full bg-red-500 px-5 py-3 text-sm font-semibold text-white shadow-lg shadow-red-500/25 transition hover:bg-red-600"
+                    className="group inline-flex flex-1 items-center justify-center gap-2 rounded-full bg-gradient-to-r from-red-500 to-red-600 px-5 py-3.5 text-sm font-bold text-white shadow-lg shadow-red-500/30 transition hover:from-red-600 hover:to-red-700 hover:shadow-xl hover:shadow-red-500/40"
                   >
-                    <Phone className="h-4 w-4" />
+                    <Phone className="h-4 w-4 transition group-hover:rotate-12" />
                     Call {centre.shortName}
                   </a>
                   <a
                     href={centreWa(centre, waMessage)}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex flex-1 items-center justify-center gap-2 rounded-full bg-[#25D366] px-5 py-3 text-sm font-semibold text-white shadow-lg shadow-[#25D366]/25 transition hover:bg-[#1ea855]"
+                    className="group inline-flex flex-1 items-center justify-center gap-2 rounded-full bg-gradient-to-r from-[#25D366] to-[#1ea855] px-5 py-3.5 text-sm font-bold text-white shadow-lg shadow-[#25D366]/30 transition hover:shadow-xl hover:shadow-[#25D366]/40"
                   >
-                    <MessageCircle className="h-4 w-4" />
+                    <MessageCircle className="h-4 w-4 transition group-hover:rotate-12" />
                     WhatsApp Now
                   </a>
                 </div>
