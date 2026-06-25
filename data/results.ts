@@ -38,7 +38,7 @@ export const toppers: Topper[] = [
   },
   {
     name: "Sneha Garg",
-    grade: "Class 12",
+    grade: "Class 10",
     marks: "89%",
     school: "Himalyan Public School",
     image: "/students/sneha-garg.jpg",
