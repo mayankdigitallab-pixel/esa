@@ -87,7 +87,8 @@ export function HeroSlider() {
                   alt={`${s.eyebrow} - ${s.headline} ${s.accentWord} at Excellent Students' Academy`}
                   fill
                   sizes="100vw"
-                  className="block object-cover sm:hidden"
+                  className="block object-contain object-center sm:hidden"
+                  style={{ backgroundColor: "#e5e7eb" }}
                   priority={i === 0}
                 />
                 <Image
