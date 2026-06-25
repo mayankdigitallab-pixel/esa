@@ -49,7 +49,7 @@ function buildSearchIndex(): SearchHit[] {
     { title: "ESA Lucknow Thakurganj", type: "Page", href: "/lucknow", keywords: "lucknow thakurganj chowk hardoi road basant vihar ashok rastogi cbse coaching up uttar pradesh" },
     { title: "FAQs", type: "Page", href: "/faq", keywords: "faq questions parents answers" },
     { title: "Book Free Demo Class", type: "Action", href: "/contact#enquiry", keywords: "demo free 7 day book trial class enrol enquiry" },
-    { title: "WhatsApp ESA Rohini", type: "Action", href: "https://wa.me/918882663340", keywords: "whatsapp message chat phone" },
+    { title: "WhatsApp ESA", type: "Action", href: "https://wa.me/919458012793", keywords: "whatsapp message chat phone" },
     { title: "Terms & Conditions", type: "Legal", href: "/terms", keywords: "terms conditions agreement fees refund" },
     { title: "Privacy Policy", type: "Legal", href: "/privacy", keywords: "privacy policy data information" },
   ];
@@ -390,16 +390,16 @@ export function Header() {
                 Reach Us
               </p>
               <div className="mt-4 space-y-3 text-sm text-white/80">
-                <a href="tel:+918882663340" className="block transition hover:text-white">
-                  Call: +91 88826 63340
+                <a href="tel:+919458012793" className="block transition hover:text-white">
+                  Call: +91 94580 12793
                 </a>
                 <a
-                  href="https://wa.me/918882663340"
+                  href="https://wa.me/919458012793"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="block transition hover:text-white"
                 >
-                  WhatsApp: +91 88826 63340
+                  WhatsApp: +91 94580 12793
                 </a>
                 <a href="mailto:excellentstudentsacademy1@gmail.com" className="block transition hover:text-white">
                   Email: excellentstudentsacademy1@gmail.com

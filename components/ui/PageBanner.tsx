@@ -135,9 +135,9 @@ function BannerRow({
 
 export function BannerContactRight() {
   const items = [
-    { icon: <Phone size={15} />, label: "CALL US", value: "+91 88826 63340", href: "tel:+918882663340" },
+    { icon: <Phone size={15} />, label: "CALL US", value: "+91 94580 12793", href: "tel:+919458012793" },
     { icon: <Mail size={15} />, label: "EMAIL", value: "excellentstudentsacademy1@gmail.com", href: "mailto:excellentstudentsacademy1@gmail.com" },
-    { icon: <MessageCircle size={15} />, label: "WHATSAPP", value: "+91 88826 63340", href: "https://wa.me/918882663340" },
+    { icon: <MessageCircle size={15} />, label: "WHATSAPP", value: "+91 94580 12793", href: "https://wa.me/919458012793" },
     { icon: <MapPin size={15} />, label: "VISIT US", value: "Sector 7, Rohini, Delhi", href: "/contact" },
   ];
   return (
@@ -199,8 +199,8 @@ export function BannerHeroRight() {
       <BannerRow
         icon={<Phone size={15} />}
         label="CALL US"
-        value="+91 88826 63340"
-        href="tel:+918882663340"
+        value="+91 94580 12793"
+        href="tel:+919458012793"
       />
       <div className="my-5" style={{ height: 1, background: "rgba(255,255,255,0.12)" }} />
       <BannerRow
