@@ -37,35 +37,36 @@ import { faqs } from "@/data/faqs";
 import { siteConfig, whatsappLink } from "@/data/site";
 import { blogPosts } from "@/data/blog";
 import { nearbyAreas } from "@/data/areas";
+import { centres } from "@/data/centres";
+import { BranchesGrid } from "@/components/BranchesGrid";
 import { breadcrumbSchema, faqPageSchema, jsonLd, localBusinessSchema, speakableWebPage, websiteSchema } from "@/lib/seo";
 
 export const metadata: Metadata = {
   title:
-    "Best Coaching & Tuition in Rohini | Class 1 to 12 | Excellent Students' Academy",
+    "Coaching & Tuition for Class 1-12 in Delhi & Lucknow | Excellent Students' Academy",
   description:
-    "Best coaching institute in Rohini Sector 7 for Class 1 to 12. Science, Commerce, Math tuition. Serving Rohini, Pitampura, Shalimar Bagh, Model Town, Ashok Vihar. Free demo class.",
+    "Four ESA branches: Rohini Sector 7, Rohini Sector 15, Shakurpur (Delhi) and Thakurganj (Lucknow). Coaching for Class 1 to 12 - Math, Science, Commerce. Free demo class at any centre.",
   keywords: [
     "best coaching in Rohini",
     "tuition in Rohini",
+    "coaching in Lucknow",
+    "coaching in Thakurganj",
+    "coaching in Shakurpur",
     "coaching classes Rohini Sector 7",
+    "coaching classes Rohini Sector 15",
     "Class 11 12 coaching Rohini",
-    "Class 10 board coaching Rohini",
+    "Class 10 board coaching Lucknow",
     "Math tuition Rohini",
     "Science coaching Rohini",
-    "Commerce coaching Rohini",
     "tuition in Pitampura",
     "coaching in Shalimar Bagh",
-    "tuition in Model Town",
-    "coaching in Ashok Vihar",
-    "tuition near Rohini West Metro",
-    "home tuition Rohini Delhi",
-    "Excellent Students Academy Rohini",
+    "Excellent Students Academy",
   ],
   alternates: { canonical: "https://www.theesa.in" },
   openGraph: {
-    title: "Best Coaching in Rohini for Class 1-12 | Excellent Students' Academy",
+    title: "Coaching for Class 1-12 across Delhi & Lucknow | Excellent Students' Academy",
     description:
-      "Coaching institute in Rohini Sector 7 for Class 1 to 12. Math, Science, Commerce. Serving Rohini, Pitampura, Shalimar Bagh, Model Town, Ashok Vihar.",
+      "ESA branches in Rohini Sector 7, Rohini Sector 15, Shakurpur (Delhi) and Thakurganj (Lucknow). Coaching for Class 1 to 12 in Math, Science, Commerce.",
     url: "https://www.theesa.in",
     type: "website",
   },
@@ -664,8 +665,27 @@ export default function HomePage() {
         </Container>
       </section>
 
+      {/* OUR BRANCHES */}
+      <section className="border-y border-neutral-200 bg-neutral-50 py-20 sm:py-24">
+        <Container>
+          <SectionHeading
+            align="center"
+            eyebrow="Our Branches"
+            title={<>Four centres across <span className="text-teal-600">Delhi & Lucknow</span>.</>}
+            description="Same syllabus, same teaching framework, same disciplined coaching - close to where you live. Walk in to any branch for a free demo class."
+          />
+          <BranchesGrid centres={centres} />
+          <div className="mt-10 text-center">
+            <Link href="/centres" className="btn-ghost">
+              View all branches
+              <ArrowRight className="h-4 w-4" />
+            </Link>
+          </div>
+        </Container>
+      </section>
+
       {/* FACULTY CAROUSEL (12 teachers, excluding founder) */}
-      <section className="bg-neutral-50 py-20 sm:py-24">
+      <section className="bg-white py-20 sm:py-24">
         <Container>
           <div className="flex flex-col items-start justify-between gap-6 sm:flex-row sm:items-end">
             <SectionHeading

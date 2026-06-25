@@ -26,6 +26,7 @@ function YoutubeIcon({ className }: { className?: string }) {
   );
 }
 import { siteConfig } from "@/data/site";
+import { centres } from "@/data/centres";
 
 export function Footer() {
   const year = new Date().getFullYear();
@@ -47,7 +48,7 @@ export function Footer() {
             </span>
           </Link>
           <p className="mt-5 text-sm leading-relaxed text-neutral-400">
-            Coaching institute in Rohini, Delhi for Grades 1 to 12. Trusted by parents for disciplined tuition, expert faculty and consistent board results.
+            Coaching institute with four centres across Delhi (Rohini, Shakurpur) and Lucknow (Thakurganj). Grades 1 to 12 - disciplined tuition, expert faculty and consistent board results.
           </p>
           {/* Render a social icon only when its URL has been configured.
               Placeholder ("TODO") entries are filtered so we never ship dead links. */}
@@ -97,10 +98,11 @@ export function Footer() {
           <ul className="mt-5 space-y-3 text-sm">
             <li><Link href="/about" className="text-neutral-300 transition hover:text-white">About Us</Link></li>
             <li><Link href="/faculty" className="text-neutral-300 transition hover:text-white">Faculty</Link></li>
+            <li><Link href="/centres" className="text-neutral-300 transition hover:text-white">Our Branches</Link></li>
             <li><Link href="/results" className="text-neutral-300 transition hover:text-white">Results</Link></li>
             <li><Link href="/gallery" className="text-neutral-300 transition hover:text-white">Gallery</Link></li>
             <li><Link href="/materials" className="text-neutral-300 transition hover:text-white">Study Materials</Link></li>
-            <li><Link href="/faq" className="text-neutral-300 transition hover:text-white">FAQ</Link></li>
+            <li><Link href="/lucknow" className="text-neutral-300 transition hover:text-white">ESA Lucknow</Link></li>
             <li><Link href="/contact" className="text-neutral-300 transition hover:text-white">Contact</Link></li>
           </ul>
         </div>

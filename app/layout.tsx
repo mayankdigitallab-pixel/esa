@@ -16,27 +16,27 @@ const inter = Inter({
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.theesa.in"),
   title: {
-    default: "Excellent Students' Academy | Coaching & Tuition in Rohini, Delhi",
+    default: "Excellent Students' Academy | Coaching in Delhi & Lucknow",
     template: "%s | Excellent Students' Academy",
   },
   description:
-    "Excellent Students' Academy (ESA) Rohini Sector 7. Coaching and home tuition for Grades 1 to 12. Science, Commerce, Math. Weekly tests, demo classes, AC premises, expert faculty.",
+    "Excellent Students' Academy (ESA) - coaching for Grades 1 to 12 across four centres: Rohini Sector 7, Rohini Sector 15, Shakurpur (Delhi) and Thakurganj (Lucknow). Weekly tests, demo classes, expert faculty.",
   keywords: [
     "coaching in Rohini",
     "tuition in Rohini",
+    "coaching in Lucknow",
+    "coaching in Thakurganj",
+    "coaching in Shakurpur",
     "best coaching institute Delhi",
     "Class 11 12 coaching Rohini",
-    "Science coaching Rohini",
-    "Math tuition Rohini",
-    "home tuition Rohini",
     "Excellent Students Academy",
   ],
   authors: [{ name: "Excellent Students' Academy" }],
   alternates: { canonical: "https://www.theesa.in" },
   openGraph: {
-    title: "Excellent Students' Academy | Coaching & Tuition in Rohini",
+    title: "Excellent Students' Academy | Coaching in Delhi & Lucknow",
     description:
-      "Coaching and home tuition for Grades 1 to 12 in Rohini Sector 7, Delhi. Expert faculty, weekly tests, demo classes, nominal fees.",
+      "Coaching for Grades 1 to 12 across four centres in Delhi (Rohini Sec-7, Rohini Sec-15, Shakurpur) and Lucknow (Thakurganj). Expert faculty, weekly tests, demo classes.",
     url: "https://www.theesa.in",
     siteName: "Excellent Students' Academy",
     locale: "en_IN",
@@ -46,15 +46,15 @@ export const metadata: Metadata = {
         url: "/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "Students and faculty at Excellent Students' Academy Rohini",
+        alt: "Students and faculty at Excellent Students' Academy",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Excellent Students' Academy | Rohini",
+    title: "Excellent Students' Academy | Delhi & Lucknow",
     description:
-      "Coaching and home tuition for Grades 1 to 12 in Rohini Sector 7, Delhi.",
+      "Coaching for Grades 1 to 12 across Delhi (Rohini, Shakurpur) and Lucknow (Thakurganj).",
     images: ["/og-image.jpg"],
   },
   robots: {

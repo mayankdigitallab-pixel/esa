@@ -4,6 +4,7 @@ import { testimonials } from "@/data/testimonials";
 import { faqs } from "@/data/faqs";
 import { programs } from "@/data/programs";
 import { faculty } from "@/data/faculty";
+import { centres } from "@/data/centres";
 import type { BlogPost } from "@/data/blog";
 
 const BASE = "https://www.theesa.in";
@@ -34,15 +35,19 @@ function reviewsForSchema() {
 
 /**
  * Hybrid LocalBusiness + EducationalOrganization schema for the home page.
- * Powers Google Local Pack appearances and rich SERP cards for "coaching in Rohini" queries.
+ * Now multi-location: the flagship Rohini Sec-7 centre stays the primary entity
+ * and the other three branches are emitted via the `location` property.
  */
 export function localBusinessSchema() {
+  const flagship = centres.find((c) => c.isFlagship) ?? centres[0];
+  const branches = centres.filter((c) => c.slug !== flagship.slug);
+
   return {
     "@context": "https://schema.org",
     "@type": ["EducationalOrganization", "LocalBusiness"],
     "@id": ORG_ID,
     name: siteConfig.name,
-    alternateName: ["ESA Rohini", "Excellent Students Academy", "ESA"],
+    alternateName: ["ESA", "ESA Rohini", "Excellent Students Academy", "ESA Lucknow"],
     url: BASE,
     logo: `${BASE}/esa-logo.jpg`,
     image: [
@@ -51,9 +56,9 @@ export function localBusinessSchema() {
       `${BASE}/gallery/g30.jpg`,
     ],
     description:
-      "Coaching institute in Rohini Sector 7, New Delhi for Class 1 to 12. Math, Science, Commerce, English and all CBSE subjects. Operating since 2015 with consistent CBSE board results across North Delhi.",
+      "Coaching institute for Class 1 to 12 with four branches: Rohini Sector 7, Rohini Sector 15, Shakurpur (Delhi) and Thakurganj (Lucknow). Math, Science, Commerce, English and all CBSE subjects. Operating since 2015.",
     email: siteConfig.email,
-    telephone: siteConfig.phone,
+    telephone: flagship.phone,
     foundingDate: "2015",
     founder: { "@type": "Person", name: "Chandan Prajapati" },
     address: {
@@ -65,14 +70,38 @@ export function localBusinessSchema() {
     },
     geo: {
       "@type": "GeoCoordinates",
-      latitude: "28.7061354",
-      longitude: "77.1223773",
+      latitude: flagship.geo.lat,
+      longitude: flagship.geo.lng,
     },
-    hasMap: siteConfig.mapEmbedUrl,
-    areaServed: nearbyAreas.map((a) => ({
+    hasMap: flagship.mapLink,
+    location: branches.map((c) => ({
       "@type": "Place",
-      name: `${a.name}, North Delhi`,
+      "@id": `${BASE}/centres#${c.slug}`,
+      name: c.name,
+      address: {
+        "@type": "PostalAddress",
+        streetAddress: c.addressLines[0],
+        addressLocality: c.city,
+        addressRegion: c.state,
+        postalCode: c.pin,
+        addressCountry: "IN",
+      },
+      geo: {
+        "@type": "GeoCoordinates",
+        latitude: c.geo.lat,
+        longitude: c.geo.lng,
+      },
+      hasMap: c.mapLink,
+      telephone: c.phone,
     })),
+    areaServed: [
+      ...nearbyAreas.map((a) => ({
+        "@type": "Place",
+        name: `${a.name}, North Delhi`,
+      })),
+      { "@type": "Place", name: "Shakurpur, Delhi" },
+      { "@type": "Place", name: "Thakurganj, Lucknow" },
+    ],
     openingHoursSpecification: [
       {
         "@type": "OpeningHoursSpecification",
@@ -89,8 +118,6 @@ export function localBusinessSchema() {
       },
     ],
     priceRange: "₹₹",
-    // Only include real, configured social URLs. Placeholders ("TODO") and
-    // bare platform homepages are dropped so we don't dilute the entity.
     sameAs: [
       siteConfig.socials.facebook,
       siteConfig.socials.instagram,
@@ -103,14 +130,14 @@ export function localBusinessSchema() {
     ),
     aggregateRating: AGGREGATE_RATING,
     review: reviewsForSchema(),
-    contactPoint: {
+    contactPoint: centres.map((c) => ({
       "@type": "ContactPoint",
-      telephone: siteConfig.phone,
-      contactType: "customer service",
-      email: siteConfig.email,
+      telephone: c.phone,
+      contactType: `${c.shortName} enquiries`,
+      email: c.email,
       areaServed: "IN",
       availableLanguage: ["en", "hi"],
-    },
+    })),
   };
 }
 
@@ -261,7 +288,7 @@ export function websiteSchema() {
 
 /**
  * Speakable schema flags content as ideal for voice assistants
- * (Google Assistant, Siri etc.) — wrap a WebPage with this.
+ * (Google Assistant, Siri etc.) - wrap a WebPage with this.
  */
 export function speakableWebPage(opts: {
   url: string;

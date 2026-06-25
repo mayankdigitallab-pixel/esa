@@ -7,6 +7,7 @@ export type Faculty = {
   qualification: string;
   bio: string;
   image: string;
+  centre?: string;
 };
 
 export const faculty: Faculty[] = [
@@ -130,5 +131,16 @@ export const faculty: Faculty[] = [
     qualification: "Foundation Teacher, ESA Rohini",
     bio: "Junior class teacher for Class 1 to 3 at our Rohini centre. Patient, gentle classroom style focused on early reading, writing and number sense for our youngest learners.",
     image: "/faculty/mamta.jpg",
+  },
+  {
+    slug: "ashok-rastogi",
+    name: "Mr. Ashok Rastogi",
+    title: "Centre Incharge, ESA Lucknow",
+    subjects: "Centre operations & student mentoring",
+    experience: "11 years",
+    qualification: "B.Tech, Mechanical Engineering",
+    bio: "Heads our Lucknow Thakurganj centre. Eleven years in education and centre management - oversees daily operations, parent communication and academic discipline for every batch running in Lucknow.",
+    image: "/faculty/ashok-rastogi.jpg",
+    centre: "Lucknow Thakurganj",
   },
 ];

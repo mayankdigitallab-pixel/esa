@@ -19,6 +19,7 @@ const nav = [
   { href: "/about", label: "About" },
   { href: "/programs", label: "Programs" },
   { href: "/faculty", label: "Faculty" },
+  { href: "/centres", label: "Branches" },
   { href: "/results", label: "Results" },
   { href: "/materials", label: "Materials" },
   { href: "/gallery", label: "Gallery" },
@@ -44,6 +45,8 @@ function buildSearchIndex(): SearchHit[] {
     { title: "Study Materials - Class-wise PDF Downloads", type: "Page", href: "/materials", keywords: "study material PDF notes download class 1 2 3 4 5 6 7 8 9 10 11 12 cbse sample papers mock tests revision" },
     { title: "ESA Blog", type: "Page", href: "/blog", keywords: "blog articles guides parents tips" },
     { title: "Contact Us", type: "Page", href: "/contact", keywords: "contact phone whatsapp email visit demo enquiry" },
+    { title: "Our Branches - Delhi & Lucknow", type: "Page", href: "/centres", keywords: "centres branches rohini sector 7 sector 15 shakurpur lucknow thakurganj address map directions" },
+    { title: "ESA Lucknow Thakurganj", type: "Page", href: "/lucknow", keywords: "lucknow thakurganj chowk hardoi road basant vihar ashok rastogi cbse coaching up uttar pradesh" },
     { title: "FAQs", type: "Page", href: "/faq", keywords: "faq questions parents answers" },
     { title: "Book Free Demo Class", type: "Action", href: "/contact#enquiry", keywords: "demo free 7 day book trial class enrol enquiry" },
     { title: "WhatsApp ESA Rohini", type: "Action", href: "https://wa.me/918882663340", keywords: "whatsapp message chat phone" },
@@ -274,7 +277,7 @@ export function Header() {
                 Excellent Students&apos; Academy
               </span>
               <span className="mt-1 text-[11px] font-semibold uppercase tracking-[0.16em] text-teal-300">
-                Coaching · Rohini, Delhi
+                Coaching · Delhi & Lucknow
               </span>
             </span>
           </Link>
@@ -351,7 +354,7 @@ export function Header() {
                 height={56}
                 className="h-12 w-12 rounded-full object-cover"
               />
-              <span className="text-base font-bold tracking-tight text-white">ESA Rohini</span>
+              <span className="text-base font-bold tracking-tight text-white">Excellent Students&apos; Academy</span>
             </Link>
             <button
               type="button"

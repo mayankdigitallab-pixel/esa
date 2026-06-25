@@ -42,7 +42,7 @@ export const heroSlides: HeroSlide[] = [
     accentWord: "remembers.",
     accentColor: "teal",
     description:
-      "Eleven full-time mentors. Six-plus years of average classroom experience. Every birthday cut at the centre, every Teachers' Day banner — this is the team behind ESA.",
+      "Eleven full-time mentors. Six-plus years of average classroom experience. Every birthday cut at the centre, every Teachers' Day banner - this is the team behind ESA.",
     primaryCta: { label: "Meet The Faculty", href: "/faculty" },
     secondaryCta: { label: "See Gallery", href: "/gallery" },
     image: "/gallery/g22.jpg",

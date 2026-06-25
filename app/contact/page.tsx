@@ -12,20 +12,25 @@ import { Container } from "@/components/ui/Container";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { PageBanner, BannerContactRight } from "@/components/ui/PageBanner";
 import { siteConfig, whatsappLink } from "@/data/site";
+import { centres } from "@/data/centres";
+import { BranchesGrid } from "@/components/BranchesGrid";
 import { EnquiryForm } from "@/components/EnquiryForm";
 import { CallbackForm } from "@/components/CallbackForm";
 import { breadcrumbSchema, jsonLd } from "@/lib/seo";
 
 export const metadata: Metadata = {
-  title: "Contact Us | Book a Free Demo at ESA Rohini",
+  title: "Contact Us | Book a Free Demo at ESA Delhi & Lucknow",
   description:
-    "Get in touch with Excellent Students' Academy in Rohini Sector 7. Call, WhatsApp, email or fill our enquiry form to book a free demo class for your child.",
+    "Get in touch with Excellent Students' Academy. Four centres across Delhi (Rohini Sector 7, Rohini Sector 15, Shakurpur) and Lucknow (Thakurganj). Call, WhatsApp or fill our form to book a free demo.",
   alternates: { canonical: "https://www.theesa.in/contact" },
   keywords: [
-    "contact ESA Rohini",
+    "contact ESA",
+    "ESA Rohini contact",
+    "ESA Lucknow contact",
+    "ESA Shakurpur contact",
     "coaching enquiry Rohini",
     "book demo class Rohini",
-    "tuition enquiry Pitampura",
+    "book demo class Lucknow",
   ],
 };
 
@@ -42,7 +47,7 @@ export default function ContactPage() {
         image="https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=1920&q=80"
         imageAlt="Students learning in a friendly classroom at Excellent Students' Academy Rohini"
         heading={<>Book a free demo. No fees. No pressure.</>}
-        subtitle="Visit our Sector 7 centre, call us, or send a WhatsApp. We respond within working hours and can book a demo slot the same day."
+        subtitle="Visit any of our four branches across Delhi and Lucknow, call us, or send a WhatsApp. We respond within working hours and can book a demo slot the same day."
         right={<BannerContactRight />}
       />
 
@@ -165,18 +170,17 @@ export default function ContactPage() {
               <EnquiryForm />
             </div>
           </div>
-          <div className="mt-12 overflow-hidden rounded-2xl border border-neutral-200 shadow-sm">
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3501.8089!2d77.119802!3d28.706135!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjjCsDQyJzIyLjEiTiA3N8KwMDcnMjAuNiJF!5e0!3m2!1sen!2sin!4v1700000000000"
-              width="100%"
-              height="420"
-              style={{ border: 0 }}
-              allowFullScreen
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-              title="ESA Rohini location"
-            />
-          </div>
+        </Container>
+      </section>
+
+      <section className="border-t border-neutral-200 bg-white py-16 sm:py-20">
+        <Container>
+          <SectionHeading
+            eyebrow="Our Branches"
+            title="Four centres across Delhi and Lucknow"
+            description="Walk into any ESA branch for a free demo class. Same syllabus, same teaching framework, same disciplined coaching - close to you."
+          />
+          <BranchesGrid centres={centres} />
         </Container>
       </section>
     </div>
