@@ -331,31 +331,35 @@ export default function LucknowPage() {
                 your child&apos;s demo class. Walk in to our Thakurganj centre and sit through an
                 actual batch before deciding.
               </p>
-              <div className="mt-6 space-y-2 text-sm text-body">
-                <p className="flex items-center gap-2">
-                  <Phone className="h-4 w-4 text-teal-500" />
-                  Or call us directly:{" "}
-                  <a
-                    href={`tel:${centre.phone}`}
-                    className="font-semibold text-charcoal hover:text-teal-700"
-                  >
-                    {centre.phoneDisplay}
-                  </a>
-                </p>
-                <p className="flex items-center gap-2">
-                  <MessageCircle className="h-4 w-4 text-[#25D366]" />
-                  WhatsApp:{" "}
-                  <a
-                    href={lucknowWa(
-                      "Hello ESA Lucknow, I want to book a free demo class for my child.",
-                    )}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="font-semibold text-charcoal hover:text-teal-700"
-                  >
-                    {centre.whatsappDisplay}
-                  </a>
-                </p>
+              <div className="mt-6 space-y-3 text-sm text-body">
+                <div className="flex items-start gap-2.5">
+                  <Phone className="mt-0.5 h-4 w-4 shrink-0 text-teal-500" />
+                  <div className="flex flex-wrap items-baseline gap-x-2 gap-y-0.5">
+                    <span>Or call us directly:</span>
+                    <a
+                      href={`tel:${centre.phone}`}
+                      className="font-semibold text-charcoal hover:text-teal-700"
+                    >
+                      {centre.phoneDisplay}
+                    </a>
+                  </div>
+                </div>
+                <div className="flex items-start gap-2.5">
+                  <MessageCircle className="mt-0.5 h-4 w-4 shrink-0 text-[#25D366]" />
+                  <div className="flex flex-wrap items-baseline gap-x-2 gap-y-0.5">
+                    <span>WhatsApp:</span>
+                    <a
+                      href={lucknowWa(
+                        "Hello ESA Lucknow, I want to book a free demo class for my child.",
+                      )}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="font-semibold text-charcoal hover:text-teal-700"
+                    >
+                      {centre.whatsappDisplay}
+                    </a>
+                  </div>
+                </div>
               </div>
             </div>
             <div
