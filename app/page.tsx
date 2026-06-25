@@ -706,11 +706,11 @@ export default function HomePage() {
             <StudentResults toppers={toppers} />
           </div>
 
-          <div className="mt-14 grid gap-px overflow-hidden rounded-2xl border border-neutral-200 bg-neutral-200 sm:grid-cols-4">
+          <div className="mt-10 grid grid-cols-2 gap-px overflow-hidden rounded-xl border border-neutral-200 bg-neutral-200 sm:mt-14 sm:grid-cols-4 sm:rounded-2xl">
             {resultsStats.map((s, i) => (
-              <div key={s.label} className="bg-white px-6 py-8 text-center">
-                <p className={`text-4xl font-bold tracking-tight sm:text-5xl ${i % 2 === 0 ? "text-teal-600" : "text-red-600"}`}>{s.value}</p>
-                <p className="mt-2 text-xs uppercase tracking-wider text-neutral-500">{s.label}</p>
+              <div key={s.label} className="bg-white px-3 py-4 text-center sm:px-6 sm:py-8">
+                <p className={`text-xl font-bold tracking-tight sm:text-4xl lg:text-5xl ${i % 2 === 0 ? "text-teal-600" : "text-red-600"}`}>{s.value}</p>
+                <p className="mt-1 text-[10px] uppercase tracking-wider text-neutral-500 sm:mt-2 sm:text-xs">{s.label}</p>
               </div>
             ))}
           </div>
