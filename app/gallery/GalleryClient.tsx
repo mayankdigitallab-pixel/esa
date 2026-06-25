@@ -104,6 +104,12 @@ const sections: Section[] = [
       { file: "g32.jpg", alt: "Junior batch test in progress", caption: "Junior batch, pens in hand" },
       { file: "g33.jpg", alt: "Senior batch test in ESA uniform", caption: "Senior batch in matching ESA tees" },
       { file: "g34.jpg", alt: "Wide view of test day at ESA", caption: "Whole batch, one paper" },
+      { file: "tests/test-01.jpeg", alt: "Students writing weekly test at ESA Rohini", caption: "Weekly test in progress" },
+      { file: "tests/test-02.jpeg", alt: "ESA Rohini students attempting chapter test", caption: "Focused test session" },
+      { file: "tests/test-03.jpeg", alt: "Students solving questions during weekly test", caption: "Solving the question paper" },
+      { file: "tests/test-04.jpeg", alt: "ESA Rohini classroom during test hours", caption: "Full batch test sitting" },
+      { file: "tests/test-05.jpeg", alt: "Senior students writing test at ESA Rohini", caption: "Class 11 and 12 weekly test" },
+      { file: "tests/test-06.jpeg", alt: "Students attempting weekly chapter test under invigilation", caption: "Invigilated weekly assessment" },
     ],
   },
   {
