@@ -93,7 +93,7 @@ export function PhotoLightbox({ items, openIndex, onClose, onIndexChange }: Prop
             </span>
           ) : null}
 
-          {/* Prev / next arrows sit on top of the image, left and right edges */}
+          {/* Prev / next arrows sit on top of the image, left and right edges - translucent glass */}
           <button
             type="button"
             onClick={(e) => {
@@ -101,7 +101,7 @@ export function PhotoLightbox({ items, openIndex, onClose, onIndexChange }: Prop
               prev();
             }}
             aria-label="Previous"
-            className="absolute left-2 top-1/2 z-10 flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full bg-white text-charcoal shadow-xl ring-2 ring-black/30 transition hover:bg-neutral-200 sm:left-3 sm:h-12 sm:w-12"
+            className="absolute left-2 top-1/2 z-10 flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full border border-white/50 bg-black/35 text-white shadow-lg backdrop-blur-md transition hover:bg-black/55 sm:left-3 sm:h-12 sm:w-12"
           >
             <ChevronLeft className="h-5 w-5 sm:h-6 sm:w-6" />
           </button>
@@ -112,7 +112,7 @@ export function PhotoLightbox({ items, openIndex, onClose, onIndexChange }: Prop
               next();
             }}
             aria-label="Next"
-            className="absolute right-2 top-1/2 z-10 flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full bg-white text-charcoal shadow-xl ring-2 ring-black/30 transition hover:bg-neutral-200 sm:right-3 sm:h-12 sm:w-12"
+            className="absolute right-2 top-1/2 z-10 flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full border border-white/50 bg-black/35 text-white shadow-lg backdrop-blur-md transition hover:bg-black/55 sm:right-3 sm:h-12 sm:w-12"
           >
             <ChevronRight className="h-5 w-5 sm:h-6 sm:w-6" />
           </button>
