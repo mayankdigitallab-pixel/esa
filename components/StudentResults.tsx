@@ -99,11 +99,12 @@ export function StudentResults({ toppers }: Props) {
             type="button"
             onClick={close}
             aria-label="Close"
-            className="absolute right-5 top-5 flex h-11 w-11 items-center justify-center rounded-full border border-white/25 bg-white/5 text-white transition hover:bg-white/15 sm:right-8 sm:top-8"
+            className="fixed right-4 top-4 z-50 flex h-11 w-11 items-center justify-center rounded-full bg-white text-charcoal shadow-xl ring-2 ring-black/30 transition hover:bg-neutral-200 sm:right-6 sm:top-6"
           >
             <X className="h-5 w-5" />
           </button>
 
+          {/* Edge arrows - hidden on mobile, shown sm+ */}
           <button
             type="button"
             onClick={(e) => {
@@ -111,9 +112,9 @@ export function StudentResults({ toppers }: Props) {
               prev();
             }}
             aria-label="Previous"
-            className="absolute left-3 top-1/2 -translate-y-1/2 flex h-11 w-11 items-center justify-center rounded-full border border-white/25 bg-white/5 text-white transition hover:bg-white/15 sm:left-6"
+            className="fixed left-6 top-1/2 z-50 hidden h-12 w-12 -translate-y-1/2 items-center justify-center rounded-full bg-white text-charcoal shadow-xl ring-2 ring-black/30 transition hover:bg-neutral-200 sm:flex"
           >
-            <ChevronLeft className="h-5 w-5" />
+            <ChevronLeft className="h-6 w-6" />
           </button>
 
           <div
@@ -153,10 +154,42 @@ export function StudentResults({ toppers }: Props) {
               next();
             }}
             aria-label="Next"
-            className="absolute right-3 top-1/2 -translate-y-1/2 flex h-11 w-11 items-center justify-center rounded-full border border-white/25 bg-white/5 text-white transition hover:bg-white/15 sm:right-6"
+            className="fixed right-6 top-1/2 z-50 hidden h-12 w-12 -translate-y-1/2 items-center justify-center rounded-full bg-white text-charcoal shadow-xl ring-2 ring-black/30 transition hover:bg-neutral-200 sm:flex"
           >
-            <ChevronRight className="h-5 w-5" />
+            <ChevronRight className="h-6 w-6" />
           </button>
+
+          {/* Mobile fixed bottom nav (prev / counter / next) */}
+          <div
+            className="fixed inset-x-0 bottom-4 z-50 mx-auto flex w-fit items-center gap-4 rounded-full bg-black/80 px-4 py-2 shadow-2xl ring-1 ring-white/20 backdrop-blur sm:hidden"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <button
+              type="button"
+              onClick={(e) => {
+                e.stopPropagation();
+                prev();
+              }}
+              aria-label="Previous"
+              className="flex h-11 w-11 items-center justify-center rounded-full bg-white text-charcoal shadow-md ring-1 ring-black/20 transition active:bg-neutral-200"
+            >
+              <ChevronLeft className="h-5 w-5" />
+            </button>
+            <p className="min-w-[60px] text-center text-[12px] font-semibold tracking-[0.18em] text-white">
+              {String(openIndex! + 1).padStart(2, "0")} / {String(toppers.length).padStart(2, "0")}
+            </p>
+            <button
+              type="button"
+              onClick={(e) => {
+                e.stopPropagation();
+                next();
+              }}
+              aria-label="Next"
+              className="flex h-11 w-11 items-center justify-center rounded-full bg-white text-charcoal shadow-md ring-1 ring-black/20 transition active:bg-neutral-200"
+            >
+              <ChevronRight className="h-5 w-5" />
+            </button>
+          </div>
         </div>
       ) : null}
     </>
