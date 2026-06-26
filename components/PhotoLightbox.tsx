@@ -65,7 +65,7 @@ export function PhotoLightbox({ items, openIndex, onClose, onIndexChange }: Prop
         type="button"
         onClick={onClose}
         aria-label="Close"
-        className="fixed right-4 top-4 z-50 flex h-11 w-11 items-center justify-center rounded-full border border-white/40 bg-black/70 text-white shadow-lg backdrop-blur transition hover:bg-black/85 sm:right-6 sm:top-6"
+        className="fixed right-4 top-4 z-50 flex h-11 w-11 items-center justify-center rounded-full bg-white text-charcoal shadow-xl ring-2 ring-black/30 transition hover:bg-neutral-200 sm:right-6 sm:top-6"
       >
         <X className="h-5 w-5" />
       </button>
@@ -77,9 +77,9 @@ export function PhotoLightbox({ items, openIndex, onClose, onIndexChange }: Prop
           prev();
         }}
         aria-label="Previous"
-        className="fixed left-3 top-1/2 z-50 flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full border border-white/40 bg-black/70 text-white shadow-lg backdrop-blur transition hover:bg-black/85 sm:left-6"
+        className="fixed left-2 top-1/2 z-50 flex h-12 w-12 -translate-y-1/2 items-center justify-center rounded-full bg-white text-charcoal shadow-xl ring-2 ring-black/30 transition hover:bg-neutral-200 sm:left-6"
       >
-        <ChevronLeft className="h-5 w-5" />
+        <ChevronLeft className="h-6 w-6" />
       </button>
       <button
         type="button"
@@ -88,9 +88,9 @@ export function PhotoLightbox({ items, openIndex, onClose, onIndexChange }: Prop
           next();
         }}
         aria-label="Next"
-        className="fixed right-3 top-1/2 z-50 flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full border border-white/40 bg-black/70 text-white shadow-lg backdrop-blur transition hover:bg-black/85 sm:right-6"
+        className="fixed right-2 top-1/2 z-50 flex h-12 w-12 -translate-y-1/2 items-center justify-center rounded-full bg-white text-charcoal shadow-xl ring-2 ring-black/30 transition hover:bg-neutral-200 sm:right-6"
       >
-        <ChevronRight className="h-5 w-5" />
+        <ChevronRight className="h-6 w-6" />
       </button>
 
       <div
