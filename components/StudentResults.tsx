@@ -104,19 +104,6 @@ export function StudentResults({ toppers }: Props) {
             <X className="h-5 w-5" />
           </button>
 
-          {/* Edge arrows - hidden on mobile, shown sm+ */}
-          <button
-            type="button"
-            onClick={(e) => {
-              e.stopPropagation();
-              prev();
-            }}
-            aria-label="Previous"
-            className="fixed left-6 top-1/2 z-50 hidden h-12 w-12 -translate-y-1/2 items-center justify-center rounded-full bg-white text-charcoal shadow-xl ring-2 ring-black/30 transition hover:bg-neutral-200 sm:flex"
-          >
-            <ChevronLeft className="h-6 w-6" />
-          </button>
-
           <div
             className="relative flex max-h-full w-full max-w-3xl flex-col items-center"
             onClick={(e) => e.stopPropagation()}
@@ -130,6 +117,30 @@ export function StudentResults({ toppers }: Props) {
                 className="rounded-xl object-cover shadow-2xl"
                 priority
               />
+
+              {/* Prev / next arrows on the image - left and right edges, mobile and desktop */}
+              <button
+                type="button"
+                onClick={(e) => {
+                  e.stopPropagation();
+                  prev();
+                }}
+                aria-label="Previous"
+                className="absolute left-2 top-1/2 z-10 flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full bg-white text-charcoal shadow-xl ring-2 ring-black/30 transition hover:bg-neutral-200 sm:left-3 sm:h-12 sm:w-12"
+              >
+                <ChevronLeft className="h-5 w-5 sm:h-6 sm:w-6" />
+              </button>
+              <button
+                type="button"
+                onClick={(e) => {
+                  e.stopPropagation();
+                  next();
+                }}
+                aria-label="Next"
+                className="absolute right-2 top-1/2 z-10 flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full bg-white text-charcoal shadow-xl ring-2 ring-black/30 transition hover:bg-neutral-200 sm:right-3 sm:h-12 sm:w-12"
+              >
+                <ChevronRight className="h-5 w-5 sm:h-6 sm:w-6" />
+              </button>
             </div>
             <div className="mt-5 flex w-full flex-wrap items-center justify-between gap-3 text-white">
               <div>
@@ -145,50 +156,6 @@ export function StudentResults({ toppers }: Props) {
                 {active.marks}
               </span>
             </div>
-          </div>
-
-          <button
-            type="button"
-            onClick={(e) => {
-              e.stopPropagation();
-              next();
-            }}
-            aria-label="Next"
-            className="fixed right-6 top-1/2 z-50 hidden h-12 w-12 -translate-y-1/2 items-center justify-center rounded-full bg-white text-charcoal shadow-xl ring-2 ring-black/30 transition hover:bg-neutral-200 sm:flex"
-          >
-            <ChevronRight className="h-6 w-6" />
-          </button>
-
-          {/* Mobile fixed bottom nav (prev / counter / next) */}
-          <div
-            className="fixed inset-x-0 bottom-4 z-50 mx-auto flex w-fit items-center gap-4 rounded-full bg-black/80 px-4 py-2 shadow-2xl ring-1 ring-white/20 backdrop-blur sm:hidden"
-            onClick={(e) => e.stopPropagation()}
-          >
-            <button
-              type="button"
-              onClick={(e) => {
-                e.stopPropagation();
-                prev();
-              }}
-              aria-label="Previous"
-              className="flex h-11 w-11 items-center justify-center rounded-full bg-white text-charcoal shadow-md ring-1 ring-black/20 transition active:bg-neutral-200"
-            >
-              <ChevronLeft className="h-5 w-5" />
-            </button>
-            <p className="min-w-[60px] text-center text-[12px] font-semibold tracking-[0.18em] text-white">
-              {String(openIndex! + 1).padStart(2, "0")} / {String(toppers.length).padStart(2, "0")}
-            </p>
-            <button
-              type="button"
-              onClick={(e) => {
-                e.stopPropagation();
-                next();
-              }}
-              aria-label="Next"
-              className="flex h-11 w-11 items-center justify-center rounded-full bg-white text-charcoal shadow-md ring-1 ring-black/20 transition active:bg-neutral-200"
-            >
-              <ChevronRight className="h-5 w-5" />
-            </button>
           </div>
         </div>
       ) : null}
