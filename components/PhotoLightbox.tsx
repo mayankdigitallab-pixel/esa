@@ -142,39 +142,42 @@ export function PhotoLightbox({ items, openIndex, onClose, onIndexChange }: Prop
           </div>
         ) : null}
 
-        {/* Mobile nav bar (prev / counter / next) - hidden on sm+ where edge arrows are used */}
-        <div className="mt-5 flex items-center justify-between gap-3 sm:hidden">
-          <button
-            type="button"
-            onClick={(e) => {
-              e.stopPropagation();
-              prev();
-            }}
-            aria-label="Previous"
-            className="flex h-12 w-12 items-center justify-center rounded-full bg-white text-charcoal shadow-xl ring-2 ring-black/30 transition active:bg-neutral-200"
-          >
-            <ChevronLeft className="h-6 w-6" />
-          </button>
-          <p className="text-[12px] font-semibold tracking-[0.2em] text-white/70">
-            {String(openIndex + 1).padStart(2, "0")} / {String(items.length).padStart(2, "0")}
-          </p>
-          <button
-            type="button"
-            onClick={(e) => {
-              e.stopPropagation();
-              next();
-            }}
-            aria-label="Next"
-            className="flex h-12 w-12 items-center justify-center rounded-full bg-white text-charcoal shadow-xl ring-2 ring-black/30 transition active:bg-neutral-200"
-          >
-            <ChevronRight className="h-6 w-6" />
-          </button>
-        </div>
-
-        {/* Slide counter (sm+ only - mobile shows it in the nav bar above) */}
+        {/* Slide counter (sm+ only - mobile shows it in the fixed nav bar below) */}
         <p className="mt-3 hidden text-center text-[11px] font-semibold tracking-[0.2em] text-white/55 sm:block">
           {String(openIndex + 1).padStart(2, "0")} / {String(items.length).padStart(2, "0")}
         </p>
+      </div>
+
+      {/* Mobile fixed bottom nav (prev / counter / next) - always visible at bottom on mobile */}
+      <div
+        className="fixed inset-x-0 bottom-4 z-50 mx-auto flex w-fit items-center gap-4 rounded-full bg-black/80 px-4 py-2 shadow-2xl ring-1 ring-white/20 backdrop-blur sm:hidden"
+        onClick={(e) => e.stopPropagation()}
+      >
+        <button
+          type="button"
+          onClick={(e) => {
+            e.stopPropagation();
+            prev();
+          }}
+          aria-label="Previous"
+          className="flex h-11 w-11 items-center justify-center rounded-full bg-white text-charcoal shadow-md ring-1 ring-black/20 transition active:bg-neutral-200"
+        >
+          <ChevronLeft className="h-5 w-5" />
+        </button>
+        <p className="min-w-[60px] text-center text-[12px] font-semibold tracking-[0.18em] text-white">
+          {String(openIndex + 1).padStart(2, "0")} / {String(items.length).padStart(2, "0")}
+        </p>
+        <button
+          type="button"
+          onClick={(e) => {
+            e.stopPropagation();
+            next();
+          }}
+          aria-label="Next"
+          className="flex h-11 w-11 items-center justify-center rounded-full bg-white text-charcoal shadow-md ring-1 ring-black/20 transition active:bg-neutral-200"
+        >
+          <ChevronRight className="h-5 w-5" />
+        </button>
       </div>
     </div>
   );
