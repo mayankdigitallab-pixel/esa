@@ -70,6 +70,7 @@ export function PhotoLightbox({ items, openIndex, onClose, onIndexChange }: Prop
         <X className="h-5 w-5" />
       </button>
 
+      {/* Edge arrows - hidden on mobile (image fills width), shown sm+ where there's gutter space */}
       <button
         type="button"
         onClick={(e) => {
@@ -77,7 +78,7 @@ export function PhotoLightbox({ items, openIndex, onClose, onIndexChange }: Prop
           prev();
         }}
         aria-label="Previous"
-        className="fixed left-2 top-1/2 z-50 flex h-12 w-12 -translate-y-1/2 items-center justify-center rounded-full bg-white text-charcoal shadow-xl ring-2 ring-black/30 transition hover:bg-neutral-200 sm:left-6"
+        className="fixed left-6 top-1/2 z-50 hidden h-12 w-12 -translate-y-1/2 items-center justify-center rounded-full bg-white text-charcoal shadow-xl ring-2 ring-black/30 transition hover:bg-neutral-200 sm:flex"
       >
         <ChevronLeft className="h-6 w-6" />
       </button>
@@ -88,7 +89,7 @@ export function PhotoLightbox({ items, openIndex, onClose, onIndexChange }: Prop
           next();
         }}
         aria-label="Next"
-        className="fixed right-2 top-1/2 z-50 flex h-12 w-12 -translate-y-1/2 items-center justify-center rounded-full bg-white text-charcoal shadow-xl ring-2 ring-black/30 transition hover:bg-neutral-200 sm:right-6"
+        className="fixed right-6 top-1/2 z-50 hidden h-12 w-12 -translate-y-1/2 items-center justify-center rounded-full bg-white text-charcoal shadow-xl ring-2 ring-black/30 transition hover:bg-neutral-200 sm:flex"
       >
         <ChevronRight className="h-6 w-6" />
       </button>
@@ -141,8 +142,37 @@ export function PhotoLightbox({ items, openIndex, onClose, onIndexChange }: Prop
           </div>
         ) : null}
 
-        {/* Slide counter */}
-        <p className="mt-3 text-center text-[11px] font-semibold tracking-[0.2em] text-white/55">
+        {/* Mobile nav bar (prev / counter / next) - hidden on sm+ where edge arrows are used */}
+        <div className="mt-5 flex items-center justify-between gap-3 sm:hidden">
+          <button
+            type="button"
+            onClick={(e) => {
+              e.stopPropagation();
+              prev();
+            }}
+            aria-label="Previous"
+            className="flex h-12 w-12 items-center justify-center rounded-full bg-white text-charcoal shadow-xl ring-2 ring-black/30 transition active:bg-neutral-200"
+          >
+            <ChevronLeft className="h-6 w-6" />
+          </button>
+          <p className="text-[12px] font-semibold tracking-[0.2em] text-white/70">
+            {String(openIndex + 1).padStart(2, "0")} / {String(items.length).padStart(2, "0")}
+          </p>
+          <button
+            type="button"
+            onClick={(e) => {
+              e.stopPropagation();
+              next();
+            }}
+            aria-label="Next"
+            className="flex h-12 w-12 items-center justify-center rounded-full bg-white text-charcoal shadow-xl ring-2 ring-black/30 transition active:bg-neutral-200"
+          >
+            <ChevronRight className="h-6 w-6" />
+          </button>
+        </div>
+
+        {/* Slide counter (sm+ only - mobile shows it in the nav bar above) */}
+        <p className="mt-3 hidden text-center text-[11px] font-semibold tracking-[0.2em] text-white/55 sm:block">
           {String(openIndex + 1).padStart(2, "0")} / {String(items.length).padStart(2, "0")}
         </p>
       </div>
