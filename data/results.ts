@@ -87,6 +87,34 @@ export const toppers: Topper[] = [
   },
 ];
 
+/**
+ * Subject toppers - students who scored exceptionally high in a single subject.
+ * Rendered as a separate section on the results page so the faculty link is visible.
+ */
+export type SubjectTopper = Topper & {
+  subject: string;
+  facultyName: string;
+};
+
+export const subjectToppers: SubjectTopper[] = [
+  {
+    name: "Atharv",
+    marks: "100/100",
+    subject: "Mathematics",
+    facultyName: "Mr. Chandan Prajapati",
+    school: "Mathematics · Mr. Chandan Prajapati",
+    image: "/students/atharv.jpg",
+  },
+  {
+    name: "Shudhanshu",
+    marks: "95/100",
+    subject: "Mathematics",
+    facultyName: "Mr. Chandan Prajapati",
+    school: "Mathematics · Mr. Chandan Prajapati",
+    image: "/students/shudhanshu.jpg",
+  },
+];
+
 export const resultsStats = [
   { label: "Top score · 2026", value: "95%" },
   { label: "Above 85% · 2026", value: "6 of 11" },

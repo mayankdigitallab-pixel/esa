@@ -4,7 +4,7 @@ import { SectionHeading } from "@/components/ui/SectionHeading";
 import { PageBanner, BannerStatsRight } from "@/components/ui/PageBanner";
 import { ResultsGrid } from "@/components/ResultsGrid";
 import { VideoReviews } from "@/components/VideoReviews";
-import { toppers } from "@/data/results";
+import { toppers, subjectToppers } from "@/data/results";
 import { breadcrumbSchema, jsonLd } from "@/lib/seo";
 
 export const metadata: Metadata = {
@@ -60,6 +60,22 @@ export default function ResultsPage() {
             description="Real students from real ESA batches. Names shared with consent. Marks reflect the recent CBSE board cycle."
           />
           <ResultsGrid items={toppers} />
+        </Container>
+      </section>
+
+      <section className="border-t border-neutral-200 bg-neutral-50 py-20 sm:py-24">
+        <Container>
+          <SectionHeading
+            eyebrow="Subject toppers"
+            title={
+              <>
+                Perfect-score students who{" "}
+                <span className="text-charcoal">aced their subject</span>
+              </>
+            }
+            description="Standout scores in a single subject. Each card lists the faculty member who personally mentored that batch."
+          />
+          <ResultsGrid items={subjectToppers} />
         </Container>
       </section>
 

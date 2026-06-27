@@ -43,6 +43,17 @@ export const faculty: Faculty[] = [
     image: "/faculty/rajesh.jpg",
   },
   {
+    slug: "amit",
+    // TODO (Mayank): set subjects + classes (e.g. "Physics (Class 11-12)")
+    name: "Mr. Amit",
+    title: "Senior Faculty",
+    subjects: "TBD",
+    experience: "10 years",
+    qualification: "NET JRF qualified",
+    bio: "Ten years of teaching experience including senior faculty roles at Unacademy and Vedantu. NET JRF qualified - brings exam-tested concept clarity and structured answer writing into every ESA Rohini batch he mentors.",
+    image: "/faculty/amit.jpg",
+  },
+  {
     slug: "rahul",
     name: "Mr. Rahul",
     title: "Mathematics Mentor",
@@ -142,5 +153,15 @@ export const faculty: Faculty[] = [
     qualification: "Foundation Teacher, ESA Rohini",
     bio: "Junior class teacher for Class 1 to 3 at our Rohini centre. Patient, gentle classroom style focused on early reading, writing and number sense for our youngest learners.",
     image: "/faculty/mamta.jpg",
+  },
+  {
+    slug: "chehak-yadav",
+    name: "Ms. Chehak Yadav",
+    title: "English & SST Mentor",
+    subjects: "English, Social Science",
+    experience: "Junior faculty",
+    qualification: "B.A, M.A",
+    bio: "Teaches English and Social Science at ESA Rohini. B.A and M.A qualified - focuses on writing technique, comprehension and structured board-style answers for middle and high school students.",
+    image: "/faculty/chehak-yadav.jpg",
   },
 ];
