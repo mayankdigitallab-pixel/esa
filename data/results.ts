@@ -6,6 +6,8 @@ export type Topper = {
   school?: string;
   quote?: string;
   image: string;
+  subject?: string;
+  facultyName?: string;
 };
 
 /**
@@ -102,7 +104,6 @@ export const subjectToppers: SubjectTopper[] = [
     marks: "100/100",
     subject: "Mathematics",
     facultyName: "Mr. Chandan Prajapati",
-    school: "Mathematics · Mr. Chandan Prajapati",
     image: "/students/atharv.jpg",
   },
   {
@@ -110,7 +111,6 @@ export const subjectToppers: SubjectTopper[] = [
     marks: "95/100",
     subject: "Mathematics",
     facultyName: "Mr. Chandan Prajapati",
-    school: "Mathematics · Mr. Chandan Prajapati",
     image: "/students/shudhanshu.jpg",
   },
 ];

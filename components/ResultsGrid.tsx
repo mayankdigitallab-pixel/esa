@@ -12,7 +12,9 @@ export function ResultsGrid({ items }: { items: Topper[] }) {
     image: t.image,
     name: t.name,
     badge: t.marks,
-    meta: t.school ?? `${t.grade ?? ""}${t.stream ? ` · ${t.stream}` : ""}`,
+    meta: t.subject
+      ? `${t.subject}${t.facultyName ? ` · ${t.facultyName}` : ""}`
+      : t.school ?? `${t.grade ?? ""}${t.stream ? ` · ${t.stream}` : ""}`,
     description: t.quote ? `"${t.quote}"` : undefined,
   }));
 
@@ -43,9 +45,22 @@ export function ResultsGrid({ items }: { items: Topper[] }) {
             </button>
             <div className="p-5">
               <h3 className="text-xl font-semibold text-charcoal">{t.name}</h3>
-              <p className="mt-1 text-xs uppercase tracking-wider text-muted">
-                {t.school ?? `${t.grade ?? ""}${t.stream ? ` | ${t.stream}` : ""}`}
-              </p>
+              {t.subject ? (
+                <>
+                  <p className="mt-1 text-base font-bold text-charcoal">
+                    {t.subject}
+                  </p>
+                  {t.facultyName ? (
+                    <p className="mt-0.5 text-xs uppercase tracking-wider text-muted">
+                      Taught by {t.facultyName}
+                    </p>
+                  ) : null}
+                </>
+              ) : (
+                <p className="mt-1 text-xs uppercase tracking-wider text-muted">
+                  {t.school ?? `${t.grade ?? ""}${t.stream ? ` | ${t.stream}` : ""}`}
+                </p>
+              )}
               {t.quote ? (
                 <p className="mt-3 text-sm leading-relaxed text-body">&ldquo;{t.quote}&rdquo;</p>
               ) : null}
