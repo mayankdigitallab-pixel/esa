@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import { Phone, Mail, MapPin } from "lucide-react";
+import { Phone, Mail, MapPin, Star } from "lucide-react";
 
 function FacebookIcon({ className }: { className?: string }) {
   return (
@@ -147,6 +147,20 @@ export function Footer() {
               <a href={`mailto:${siteConfig.email}`} className="flex items-center gap-2.5 text-neutral-300 transition hover:text-white">
                 <Mail className="h-4 w-4 text-teal-400" />
                 {siteConfig.email}
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://www.google.com/maps?cid=9967802887841334001"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2.5 text-neutral-300 transition hover:text-white"
+              >
+                <Star className="h-4 w-4 fill-yellow-400 text-yellow-400" />
+                <span>
+                  <span className="font-semibold text-white">4.8</span> on Google
+                  <span className="text-neutral-500"> · 55 reviews</span>
+                </span>
               </a>
             </li>
           </ul>
