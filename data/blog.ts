@@ -13,6 +13,190 @@ export type BlogPost = {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "right-support-for-better-learning-rohini-coaching",
+    title:
+      "Is Your Child Getting the Right Support for Better Learning? A Rohini Parent's Guide",
+    description:
+      "Every student learns differently. Here is how to tell if your child is getting the right academic support at home and in coaching, and what signs to look out for.",
+    date: "2026-06-25",
+    readTime: "7 min read",
+    category: "Parent Guide",
+    author: "ESA Editorial",
+    cover:
+      "https://images.unsplash.com/photo-1427504494785-3a9ca7044f45?auto=format&fit=crop&w=1200&q=80",
+    excerpt:
+      "Every student faces different challenges. The question is not whether your child is studying enough hours, it is whether the support around them matches the way they actually learn. Here is how to tell.",
+    body: `<p>Every parent in Rohini eventually sits across the dining table with a worried thought. The marks are not where they should be. The child is sitting at the desk for hours, but the next test result still looks the same. The tutor was changed last year. The coaching was changed this year. What is actually going wrong?</p>
+
+<p>The honest answer is rarely that the child is not working hard enough. In our experience running batches at ESA Sector 7, the missing variable is almost always <strong>the right kind of support</strong>, not more hours. Hours without the right support multiply effort but not understanding.</p>
+
+<h2>What "right support" actually means</h2>
+<p>Right support is not a longer class or a thicker notebook. It is a teacher who notices when your child is stuck on a particular type of question and stops to fix the underlying concept, not the symptom. It is weekly testing that exposes weak chapters early so they can be revisited before they snowball into the next term. It is doubt sessions where your child feels comfortable asking the same question three times if needed.</p>
+
+<p>If any of these are missing, even a sincere student stagnates.</p>
+
+<h2>Signs your child is not getting the support they need</h2>
+<p>Watch for these patterns. If two or more apply, the support around your child needs to change.</p>
+<ul>
+<li><strong>They study for hours but cannot explain what they studied.</strong> This is a sign of passive reading without active feedback.</li>
+<li><strong>They are scoring the same range across every test, no matter the chapter.</strong> This means they are repeating the same mistakes without correction.</li>
+<li><strong>They have stopped asking questions.</strong> Silent students are often students who have given up on the current setup.</li>
+<li><strong>Their notebook is full but their performance is flat.</strong> Beautiful notes mean nothing if no one is testing whether they understood.</li>
+<li><strong>You have to constantly push them to start studying.</strong> Motivation is downstream of progress. Students who see results push themselves.</li>
+</ul>
+
+<h2>What good academic support looks like</h2>
+<p>At ESA, we built our weekly structure around what consistently produces results.</p>
+<ul>
+<li><strong>Small batches.</strong> Class strength is capped so every student gets eye contact and individual feedback in the same session.</li>
+<li><strong>Weekly chapter tests.</strong> Not optional. Not skippable. Tests are how we catch weak topics within a week of teaching, not at the end of the term.</li>
+<li><strong>Saturday doubt sessions.</strong> Students who do not understand something get a structured slot to fix it, not a quick answer between two chapters.</li>
+<li><strong>Faculty consistency.</strong> The teacher named in your child's program is the teacher who actually teaches the batch. No swaps, no junior substitutes.</li>
+<li><strong>Monthly parent meetings.</strong> A proper sit-down with the subject teacher to discuss what is going well, what is not, and what to do next.</li>
+</ul>
+
+<h2>The shift you usually see in 60 days</h2>
+<p>When a student moves into a setup with the right support, the change is rarely dramatic in week one. The first thing that changes is their attitude toward studying. They stop dreading tests. By week six, you usually see a 10 to 15 mark improvement on weekly tests. By the time the term exam arrives, the change is visible on the report card.</p>
+
+<p>None of this requires a "special student." It requires a setup that is built around learning, not seat time.</p>
+
+<h2>How to check this without committing</h2>
+<p>The simplest way to check is to sit your child in a real batch for a week. Not a curated demo. The actual class they would attend Monday to Saturday. Watch how they react after three days. Ask them whether the questions they had at the start of the week were answered.</p>
+
+<p>At ESA Rohini we offer 7 days of free demo classes. Real batches, real teachers, real tests. You and your child decide after.</p>
+
+<h3>Book a free demo</h3>
+<p>If you would like to see whether ESA is the right support setup for your child, WhatsApp us at +91 88826 63340 or visit our centre at Sector 7, Rohini. We will walk you through the batch your child would join, before you commit to anything.</p>`,
+  },
+  {
+    slug: "strong-fundamentals-better-academic-results-rohini",
+    title:
+      "Are Strong Fundamentals the Key to Better Academic Results? What Rohini Toppers Get Right",
+    description:
+      "Toppers in Rohini are not naturally smarter. They have stronger fundamentals built over months of disciplined practice. Here is how strong basics translate into board exam marks.",
+    date: "2026-06-12",
+    readTime: "8 min read",
+    category: "Learning Method",
+    author: "ESA Editorial",
+    cover:
+      "https://images.unsplash.com/photo-1456735190827-d1262f71b8a3?auto=format&fit=crop&w=1200&q=80",
+    excerpt:
+      "The students who score 90 plus in CBSE boards are not the ones who studied more chapters. They are the ones whose Class 8 and 9 basics were rock solid. Here is what that actually means.",
+    body: `<p>Every year, parents call us in February asking the same panicked question. "Boards are eight weeks away. Can my child still cross 90 percent?" The honest answer depends on one thing, and it is not how many hours they will study in February. It is whether their fundamentals from Class 8 and 9 are intact.</p>
+
+<p>Fundamentals are the unfashionable answer to academic success. Coaching brochures rarely highlight them because they take months to build, not weeks. But the moment you talk to a CBSE topper or look at their actual study patterns, the same word keeps appearing. <strong>Basics.</strong></p>
+
+<h2>What "strong fundamentals" really means</h2>
+<p>Fundamentals are not the same as "knowing the textbook." A student can recite the laws of motion and still get four marks out of seven on the application question. Fundamentals mean three specific things.</p>
+<ul>
+<li><strong>The student can do the question without checking their notes.</strong> If they need to flip back, the concept is not internalised yet.</li>
+<li><strong>The student can explain why the answer works, not just what the answer is.</strong> If they cannot explain it to a classmate, they will lose marks on the "why" sub-parts in boards.</li>
+<li><strong>The student can spot when a question is testing the same concept in a different wrapper.</strong> This is the difference between an 80 percent scorer and a 95 percent scorer.</li>
+</ul>
+
+<h2>Why fundamentals matter more in boards than in school exams</h2>
+<p>School exams often test exactly what the teacher taught. Board papers test concepts in unfamiliar wrappers. A student who memorised the NCERT example will score 70 percent. A student who understood the underlying concept will score 90 plus.</p>
+
+<p>That gap is built or lost in Class 8 and Class 9. By Class 10 you are racing against the syllabus, and there is no time to fix shaky basics from earlier years.</p>
+
+<h2>Subject by subject, what fundamentals look like</h2>
+<p>Strong fundamentals look different across subjects, but the principle is the same. Master the building blocks before adding complexity.</p>
+<ul>
+<li><strong>Mathematics.</strong> Number system, factorisation, linear equations and basic geometry from Class 8. If these are weak, the student will struggle through trigonometry and coordinate geometry in Class 10.</li>
+<li><strong>Science.</strong> The Class 8 and 9 chapters on motion, force, atoms and the periodic table are not optional. Most Class 10 questions are extensions of these.</li>
+<li><strong>English.</strong> Grammar, sentence structure and basic comprehension. Students who skip these in middle school spend Class 12 writing essays that read like translations.</li>
+<li><strong>Social Science.</strong> The habit of writing dated, point-wise, structured answers. Built over years of weekly tests, not last-minute cramming.</li>
+</ul>
+
+<h2>How ESA builds fundamentals into every batch</h2>
+<p>At our Rohini centre, fundamentals are not an "extra topic." They are baked into how we teach every week.</p>
+<ul>
+<li><strong>Foundation focus from Class 6.</strong> Younger batches spend extra time on number sense, reading comprehension and conceptual problem solving, before syllabus pressure begins in Class 9.</li>
+<li><strong>Weekly chapter tests.</strong> Every Saturday. Tests catch shaky concepts within a week of teaching, so they can be revisited before the next chapter starts.</li>
+<li><strong>Diagnostic doubt sessions.</strong> Saturday doubt sessions are not just for revision. They are where the teacher figures out which earlier concept is causing a current confusion, and fixes that first.</li>
+<li><strong>Periodic backward revision.</strong> Once a month, batches revise an earlier chapter alongside the current one. This stops topics from being forgotten between term exams and boards.</li>
+</ul>
+
+<h2>The 90 percent shift</h2>
+<p>The students who cross 90 percent at the end of Class 10 or 12 are almost never the ones who studied 14 hours a day in February. They are the ones who quietly nailed their basics over the previous 18 months. By the time February arrives, they are not learning, they are revising. That is the entire shift.</p>
+
+<h2>What you can do right now</h2>
+<p>If your child is in Class 6 to Class 9, do not wait until Class 10 to fix the foundations. The work done now decides what is possible later. Look for a coaching setup where:</p>
+<ul>
+<li>Weekly tests happen every single week, without exception.</li>
+<li>Doubt sessions are scheduled, not just "available on request."</li>
+<li>The teacher knows which chapter your child is currently weakest on and can name it.</li>
+</ul>
+
+<h3>See what foundation-focused coaching looks like</h3>
+<p>Sit your child in a real ESA batch for 7 days. Watch the test routine. Read the diagnostic feedback. Decide after. WhatsApp +91 88826 63340 or visit our Sector 7, Rohini centre to book.</p>`,
+  },
+  {
+    slug: "strong-academic-foundation-every-subject-rohini",
+    title:
+      "Build a Strong Academic Foundation with Expert Guidance for Every Subject in Rohini",
+    description:
+      "Subject-specific coaching makes the difference between a 75 percent and a 92 percent student. Here is what subject-by-subject expert guidance looks like at ESA Rohini.",
+    date: "2026-06-11",
+    readTime: "9 min read",
+    category: "Inside ESA",
+    author: "ESA Editorial",
+    cover:
+      "https://images.unsplash.com/photo-1497486751825-1233686d5d80?auto=format&fit=crop&w=1200&q=80",
+    excerpt:
+      "A generalist tutor who teaches everything from Maths to History rarely produces a 90 percent scorer. Subject-specialist faculty does. Here is how subject-by-subject coaching changes outcomes at ESA Rohini.",
+    body: `<p>Walk into most small tuition centres in Rohini and ask who teaches Class 10 Science. You will often hear the same teacher's name for Science, Social Science and English. That is the model many home tuitions and budget centres run on. One teacher, every subject. It works at the primary level. It quietly falls apart from Class 8 onwards.</p>
+
+<p>The students who consistently score 90 plus in CBSE boards are coached by <strong>subject specialists</strong>, not generalists. At ESA Rohini we have built our entire faculty model around this. Eleven teachers, each with a clear subject specialisation. Here is why that matters and what subject-by-subject expert guidance actually looks like.</p>
+
+<h2>Why subject specialisation matters from Class 8</h2>
+<p>From Class 8 onwards, every CBSE subject becomes its own discipline with its own logic, exam pattern and answer structure.</p>
+<ul>
+<li>Mathematics rewards step-by-step working and clear notation.</li>
+<li>Science rewards diagrams, labelled answers and conceptual explanations.</li>
+<li>Social Science rewards structured, dated, point-wise writing.</li>
+<li>English rewards vocabulary range and grammar precision in writing tasks.</li>
+</ul>
+<p>A generalist teacher cannot give a Class 10 student deep guidance in all four. The student picks up patchy habits and loses marks at the answer-writing stage, not the knowledge stage. Subject specialists fix this because they grade hundreds of answers a year in their own subject and know exactly where marks are won and lost.</p>
+
+<h2>What expert guidance looks like at ESA, subject by subject</h2>
+
+<h3>Mathematics (Class 6 to 12)</h3>
+<p>Our Maths faculty is led by <strong>Mr. Chandan Prajapati</strong> (Class 11-12) and <strong>Mr. Rahul</strong> (Class 6-10). The model: every concept gets explained, then demonstrated on the board, then the student solves it standalone, then a similar problem is given immediately. Doubt is resolved in the same session it appears, not three days later.</p>
+
+<h3>Physics, Chemistry, Biology (Class 11 to 12)</h3>
+<p>Specialist subject coaches per stream. <strong>Mr. Prateek</strong> teaches Class 11-12 Physics with a problem-solving-first approach. <strong>Ms. Faujiya</strong> handles Class 11-12 Biology with NET JRF and GATE credentials, bringing research-grade clarity into PCB and NEET-foundation batches.</p>
+
+<h3>English (Class 6 to 12)</h3>
+<p><strong>Mr. Rajesh</strong> brings 25 years of teaching English language and literature. The focus shifts by grade. Middle school English is taught with vocabulary, grammar and basic comprehension drills. By Class 11-12 the focus moves to formal writing technique, comprehension at speed, and structured board answers.</p>
+
+<h3>Social Science (Class 6 to 10)</h3>
+<p><strong>Ms. Divya</strong>, <strong>Mr. Puneet</strong> and <strong>Ms. Chehak Yadav</strong> handle Social Science alongside English. The same teacher teaches the language and the SST writing technique, which keeps the answer-writing approach consistent across subjects.</p>
+
+<h3>Commerce stream (Class 11 to 12)</h3>
+<p><strong>Ms. Sadhana</strong> leads Accountancy with ten years of board-level coaching. <strong>Mr. Prateek</strong> handles Economics with eight years of senior coaching. Together they cover the three core Class 11-12 Commerce subjects in dedicated batches.</p>
+
+<h3>Foundation classes (Class 1 to 5)</h3>
+<p>For our youngest learners we have <strong>Ms. Uzma</strong> (15 years of foundation experience) and <strong>Ms. Mamta</strong>. The focus here is reading habits, handwriting, mental math and conceptual clarity, not premature board preparation.</p>
+
+<h2>What this means for your child</h2>
+<p>When your child enrols at ESA Rohini, every subject in their schedule is taught by someone who has spent years on that specific subject. There is no "Maths sir teaching Science because the Science teacher is on leave." Faculty consistency is the silent variable behind board scores.</p>
+
+<h2>The compounding effect over three years</h2>
+<p>A student who studies under specialists from Class 9 to Class 12 develops different habits from a student in a one-teacher setup. By Class 12 the difference is visible in:</p>
+<ul>
+<li><strong>Answer structure.</strong> They know how to format a 5-mark Physics answer differently from a 5-mark History answer.</li>
+<li><strong>Time discipline.</strong> They have written enough Maths mock papers and English comprehensions to know the per-section time budget by feel.</li>
+<li><strong>Confidence in weaker subjects.</strong> Most students have one subject they are anxious about. With a specialist who has fixed this exact pattern hundreds of times before, the anxiety reduces.</li>
+</ul>
+
+<h2>How to check this for yourself</h2>
+<p>Ask any coaching centre for the name of the teacher who will handle each subject your child enrols for. Then ask to sit in a real batch taught by that specific person for a few days. If the institute cannot tell you the teacher's name, or if the named teacher does not show up in the batch, you have your answer.</p>
+
+<h3>See our subject specialists in action</h3>
+<p>Sit your child in real ESA batches for 7 days, taught by the actual subject specialists who would mentor them through the year. WhatsApp +91 88826 63340 or visit Sector 7, Rohini to book.</p>`,
+  },
+  {
     slug: "esa-toppers-2026-class-10-12-rohini",
     title:
       "Meet the ESA Toppers of 2026: How Class 10 and 12 Students from Rohini Scored 90+ in CBSE Boards",
