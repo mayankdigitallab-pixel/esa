@@ -75,7 +75,7 @@ export const faculty: Faculty[] = [
   },
   {
     slug: "faujia",
-    name: "Ms. Faujia",
+    name: "Ms. Faujiya",
     title: "Biology Mentor",
     subjects: "Biology (Class 11-12)",
     experience: "Senior faculty",
