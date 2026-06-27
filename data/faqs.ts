@@ -5,43 +5,63 @@ export type Faq = {
 
 export const faqs: Faq[] = [
   {
-    question: "Do you offer free demo classes?",
+    question: "Which classes do you teach?",
     answer:
-      "Yes. Every new student gets up to 7 days of free demo classes. You can sit through real batches before deciding. Book via WhatsApp or the contact form.",
+      "We offer coaching for Classes 6 to 12 (CBSE), along with foundation classes for our younger students.",
   },
   {
-    question: "Which classes do you coach?",
+    question: "Which subjects are available?",
     answer:
-      "Excellent Students' Academy coaches students from Class 1 to Class 12 across all major boards including CBSE, ICSE and Delhi State Board.",
+      "Mathematics, Science, English and Social Science are available across classes. Class 11 and 12 also get Physics, Chemistry, Biology, Accountancy and Economics depending on the chosen stream.",
   },
   {
-    question: "Which subjects do you teach?",
+    question: "Do you provide demo classes?",
     answer:
-      "We cover Mathematics, Science (Physics, Chemistry, Biology), Social Science, English, Hindi, Sanskrit, Computer Science, Accountancy, Business Studies and Economics depending on the class and stream.",
+      "Yes. Students can attend a demo class before enrolling so they can experience our teaching style and batch environment first-hand.",
   },
   {
-    question: "What is the fee structure?",
+    question: "What is the batch size?",
     answer:
-      "Our fees are intentionally nominal compared to large coaching brands. Exact fee depends on class, subject combination and batch type. Please contact us by WhatsApp or phone for a quote tailored to your child.",
+      "We maintain small batches to ensure personal attention for every student. Class strength is capped so every child can ask doubts and get feedback in the same session.",
   },
   {
-    question: "Do you provide notes and study material?",
+    question: "How do you track student progress?",
     answer:
-      "Yes. Our faculty prepares short, exam-ready notes for Class 8 to Class 12. You also get weekly tests, monthly mock papers and previous year question sets.",
+      "Through regular tests, assignments, performance reports and parent-teacher meetings. Parents receive structured updates so there are no surprises before the board exam.",
   },
   {
-    question: "Where is Excellent Students' Academy located?",
+    question: "Are study materials provided?",
     answer:
-      "We are located at C7/72, 2nd Floor, Sector 7, Rohini, New Delhi 110085. The institute is easily reachable from Rohini, Pitampura, Shalimar Bagh and nearby areas.",
+      "Yes. We provide handwritten notes, topic-wise worksheets, previous-year question sets and weekly practice papers prepared by our own faculty.",
   },
   {
-    question: "Do you offer home tuition?",
+    question: "What are the class timings?",
     answer:
-      "Yes. Along with classroom coaching at our Rohini centre, we offer home tuition for students from Class 1 to Class 12 in nearby Delhi areas. WhatsApp us to check availability.",
+      "Morning and evening batches are available. Most senior batches run between 4:00 PM and 9:00 PM, Monday to Saturday. Contact us for the latest class-wise schedule.",
   },
   {
-    question: "How are classes scheduled?",
+    question: "How can I take admission?",
     answer:
-      "Classes run Monday to Saturday in batches between 4:00 PM and 9:00 PM. Exact slot depends on class and subject combination. Sunday is reserved for doubt sessions on request.",
+      "Visit our Rohini Sector 7 centre or contact us by phone or WhatsApp at +91 88826 63340 to complete the admission process.",
+  },
+  {
+    question: "Is there a fee installment option?",
+    answer:
+      "Yes. Easy installment plans are available for eligible students. Please speak to our centre coordinator for the current installment structure.",
+  },
+  {
+    question: "Do you prepare students for board exams?",
+    answer:
+      "Yes. We run complete board exam preparation including chapter-wise revision, full-length mock tests, error analysis and dedicated doubt sessions in the months before the board.",
+  },
+  {
+    question: "Are online classes available?",
+    answer:
+      "Yes, online classes are available when required, including for students who travel or fall sick during the academic year.",
+  },
+  {
+    question: "Why should I choose Excellent Students' Academy?",
+    answer:
+      "Experienced teachers, small batch sizes, regular tests and doubt sessions, personalised attention and a proven track record of board results. We have been operating in Rohini since 2015.",
   },
 ];
