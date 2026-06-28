@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { Play, X, ArrowRight, MessageCircle } from "lucide-react";
@@ -8,6 +8,7 @@ import { Container } from "@/components/ui/Container";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { videoReviews, type VideoReview } from "@/data/videoReviews";
 import { whatsappLink } from "@/data/site";
+import { useDragScroll } from "@/lib/useDragScroll";
 
 function youtubeThumb(id: string) {
   return `https://i.ytimg.com/vi/${id}/hqdefault.jpg`;
@@ -19,8 +20,97 @@ function isPlaceholder(v: VideoReview) {
   return false;
 }
 
+// Auto-scroll speed in pixels per second (matches FacultyMarquee).
+const SCROLL_SPEED = 40;
+
 export function VideoReviews() {
   const [open, setOpen] = useState<VideoReview | null>(null);
+  const trackRef = useRef<HTMLDivElement>(null);
+  const interactingRef = useRef(false);
+  const lastInteractionEndRef = useRef(0);
+
+  useDragScroll(trackRef);
+
+  // Cap to the first four reviews per the home-page request.
+  const reviews = videoReviews.slice(0, 4);
+
+  const [cloned, setCloned] = useState(false);
+  useEffect(() => {
+    setCloned(true);
+  }, []);
+  const loop = cloned ? [...reviews, ...reviews] : reviews;
+
+  useEffect(() => {
+    const el = trackRef.current;
+    if (!el || !cloned) return;
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+
+    let rafId = 0;
+    let lastTime = performance.now();
+
+    const tick = (now: number) => {
+      const dt = now - lastTime;
+      lastTime = now;
+
+      const idleSinceRelease = now - lastInteractionEndRef.current > 600;
+      if (!interactingRef.current && idleSinceRelease) {
+        el.scrollLeft += (SCROLL_SPEED * dt) / 1000;
+        const half = el.scrollWidth / 2;
+        if (half > 0 && el.scrollLeft >= half) {
+          el.scrollLeft -= half;
+        }
+      }
+
+      rafId = requestAnimationFrame(tick);
+    };
+
+    rafId = requestAnimationFrame(tick);
+
+    const onDown = () => {
+      interactingRef.current = true;
+    };
+    const onUp = () => {
+      interactingRef.current = false;
+      lastInteractionEndRef.current = performance.now();
+      lastTime = performance.now();
+    };
+    const onTouchStart = () => {
+      interactingRef.current = true;
+    };
+    const onTouchEnd = () => {
+      interactingRef.current = false;
+      lastInteractionEndRef.current = performance.now();
+      lastTime = performance.now();
+    };
+    const onEnter = () => {
+      interactingRef.current = true;
+    };
+    const onLeave = () => {
+      interactingRef.current = false;
+      lastTime = performance.now();
+    };
+
+    el.addEventListener("pointerdown", onDown);
+    window.addEventListener("pointerup", onUp);
+    window.addEventListener("pointercancel", onUp);
+    el.addEventListener("touchstart", onTouchStart, { passive: true });
+    el.addEventListener("touchend", onTouchEnd);
+    el.addEventListener("touchcancel", onTouchEnd);
+    el.addEventListener("mouseenter", onEnter);
+    el.addEventListener("mouseleave", onLeave);
+
+    return () => {
+      cancelAnimationFrame(rafId);
+      el.removeEventListener("pointerdown", onDown);
+      window.removeEventListener("pointerup", onUp);
+      window.removeEventListener("pointercancel", onUp);
+      el.removeEventListener("touchstart", onTouchStart);
+      el.removeEventListener("touchend", onTouchEnd);
+      el.removeEventListener("touchcancel", onTouchEnd);
+      el.removeEventListener("mouseenter", onEnter);
+      el.removeEventListener("mouseleave", onLeave);
+    };
+  }, [cloned]);
 
   return (
     <section className="border-y border-neutral-200 bg-white py-20 sm:py-24">
@@ -36,81 +126,116 @@ export function VideoReviews() {
           description="Short video reviews from our students, parents, faculty and staff. Tap any card to play."
         />
 
-        <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-          {videoReviews.map((v, i) => {
-            const placeholder = isPlaceholder(v);
-            const poster =
-              v.poster ??
-              (v.source.kind === "youtube" && v.source.youtubeId
-                ? youtubeThumb(v.source.youtubeId)
-                : undefined);
-            return (
-              <button
-                key={`${v.name}-${i}`}
-                type="button"
-                onClick={() => !placeholder && setOpen(v)}
-                disabled={placeholder}
-                aria-label={
-                  placeholder
-                    ? `Video review slot for ${v.name} (coming soon)`
-                    : `Play video review by ${v.name}`
+        <div className="relative">
+          <style
+            dangerouslySetInnerHTML={{
+              __html: `
+                .esa-vr-card { width: 86vw; max-width: 360px; }
+                @media (min-width: 640px) {
+                  .esa-vr-card { width: 44vw; }
                 }
-                className="group relative flex flex-col overflow-hidden rounded-2xl border border-neutral-200 bg-white text-left shadow-sm transition hover:-translate-y-1 hover:shadow-xl disabled:cursor-not-allowed disabled:opacity-70"
-              >
-                <div className="relative aspect-video w-full overflow-hidden bg-neutral-900">
-                  {poster ? (
-                    <Image
-                      src={poster}
-                      alt={`Preview of ${v.name}'s video review`}
-                      fill
-                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                      className="object-cover transition duration-500 group-hover:scale-[1.04]"
-                      unoptimized
-                    />
-                  ) : (
-                    <div
-                      className="absolute inset-0"
-                      style={{
-                        background:
-                          "linear-gradient(135deg, #1F2937 0%, #374151 60%, #4B5563 100%)",
-                      }}
-                    />
-                  )}
-                  <div className="absolute inset-0 bg-gradient-to-t from-charcoal/85 via-charcoal/20 to-transparent" />
-                  <span
-                    aria-hidden
-                    className="absolute inset-0 flex items-center justify-center"
+                @media (min-width: 1024px) {
+                  .esa-vr-card { width: 22vw; }
+                }
+              `,
+            }}
+          />
+          <div
+            ref={trackRef}
+            className="flex gap-5 overflow-x-auto pb-2 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+            style={{ overscrollBehaviorX: "contain" }}
+          >
+            {loop.map((v, i) => {
+              const placeholder = isPlaceholder(v);
+              const isClone = i >= reviews.length;
+              const ytPoster =
+                v.source.kind === "youtube" && v.source.youtubeId
+                  ? youtubeThumb(v.source.youtubeId)
+                  : undefined;
+              const explicitPoster = v.poster ?? ytPoster;
+              return (
+                <article
+                  key={`${v.name}-${i}`}
+                  className="esa-vr-card group shrink-0"
+                  aria-hidden={isClone ? true : undefined}
+                >
+                  <button
+                    type="button"
+                    onClick={() => !placeholder && setOpen(v)}
+                    disabled={placeholder}
+                    tabIndex={isClone ? -1 : 0}
+                    aria-label={
+                      placeholder
+                        ? `Video review slot for ${v.name} (coming soon)`
+                        : `Play video review by ${v.name}`
+                    }
+                    className="group relative flex w-full flex-col overflow-hidden rounded-2xl border border-neutral-200 bg-white text-left shadow-sm transition hover:-translate-y-1 hover:shadow-xl disabled:cursor-not-allowed disabled:opacity-70"
                   >
-                    <span
-                      className={`flex h-16 w-16 items-center justify-center rounded-full shadow-2xl transition ${
-                        placeholder
-                          ? "bg-white/40 text-white/80"
-                          : "bg-white text-red-600 group-hover:scale-110"
-                      }`}
-                    >
-                      <Play className="h-6 w-6 fill-current" />
-                    </span>
-                  </span>
-                  {placeholder ? (
-                    <span className="absolute left-3 top-3 inline-flex rounded-full bg-amber-400/95 px-2.5 py-0.5 text-[10px] font-bold uppercase tracking-[0.18em] text-amber-900">
-                      Coming soon
-                    </span>
-                  ) : null}
-                </div>
-                <div className="flex flex-1 flex-col p-5">
-                  <p className="text-[10px] font-bold uppercase tracking-[0.18em] text-teal-700">
-                    {v.role}
-                  </p>
-                  <h3 className="mt-2 text-lg font-bold tracking-tight text-charcoal">
-                    {v.name}
-                  </h3>
-                  <p className="mt-2 flex-1 text-sm leading-relaxed text-charcoal-soft">
-                    {v.blurb}
-                  </p>
-                </div>
-              </button>
-            );
-          })}
+                    <div className="relative aspect-video w-full overflow-hidden bg-neutral-900">
+                      {explicitPoster ? (
+                        <Image
+                          src={explicitPoster}
+                          alt={`Preview of ${v.name}'s video review`}
+                          fill
+                          sizes="(max-width: 640px) 86vw, (max-width: 1024px) 44vw, 22vw"
+                          className="object-cover transition duration-500 group-hover:scale-[1.04]"
+                          unoptimized
+                          draggable={false}
+                        />
+                      ) : v.source.kind === "mp4" && v.source.src ? (
+                        <video
+                          src={`${v.source.src}#t=0.5`}
+                          preload="metadata"
+                          muted
+                          playsInline
+                          className="absolute inset-0 h-full w-full object-cover"
+                        />
+                      ) : (
+                        <div
+                          className="absolute inset-0"
+                          style={{
+                            background:
+                              "linear-gradient(135deg, #1F2937 0%, #374151 60%, #4B5563 100%)",
+                          }}
+                        />
+                      )}
+                      <div className="absolute inset-0 bg-gradient-to-t from-charcoal/85 via-charcoal/20 to-transparent" />
+                      <span
+                        aria-hidden
+                        className="absolute inset-0 flex items-center justify-center"
+                      >
+                        <span
+                          className={`flex h-16 w-16 items-center justify-center rounded-full shadow-2xl transition ${
+                            placeholder
+                              ? "bg-white/40 text-white/80"
+                              : "bg-white text-red-600 group-hover:scale-110"
+                          }`}
+                        >
+                          <Play className="h-6 w-6 fill-current" />
+                        </span>
+                      </span>
+                      {placeholder ? (
+                        <span className="absolute left-3 top-3 inline-flex rounded-full bg-amber-400/95 px-2.5 py-0.5 text-[10px] font-bold uppercase tracking-[0.18em] text-amber-900">
+                          Coming soon
+                        </span>
+                      ) : null}
+                    </div>
+                    <div className="flex flex-1 flex-col p-5">
+                      <p className="text-[10px] font-bold uppercase tracking-[0.18em] text-teal-700">
+                        {v.role}
+                      </p>
+                      <h3 className="mt-2 text-lg font-bold tracking-tight text-charcoal">
+                        {v.name}
+                      </h3>
+                      <p className="mt-2 flex-1 text-sm leading-relaxed text-charcoal-soft">
+                        {v.blurb}
+                      </p>
+                    </div>
+                  </button>
+                </article>
+              );
+            })}
+          </div>
         </div>
 
         <div className="mt-10 flex flex-wrap items-center justify-between gap-4 rounded-2xl border border-neutral-200 bg-neutral-50 p-6">

@@ -10,10 +10,16 @@ interface Props {
   toppers: Topper[];
 }
 
+// Auto-scroll speed in pixels per second (matches FacultyMarquee).
+const SCROLL_SPEED = 40;
+
 export function StudentResults({ toppers }: Props) {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
-  const scrollRef = useRef<HTMLDivElement>(null);
-  useDragScroll(scrollRef);
+  const trackRef = useRef<HTMLDivElement>(null);
+  const interactingRef = useRef(false);
+  const lastInteractionEndRef = useRef(0);
+
+  useDragScroll(trackRef);
 
   const close = useCallback(() => setOpenIndex(null), []);
   const next = useCallback(() => {
@@ -40,51 +46,157 @@ export function StudentResults({ toppers }: Props) {
     };
   }, [openIndex, close, next, prev]);
 
+  // SSR renders a single set of toppers so crawlers see each name exactly once.
+  // After hydration we append a clone so the scroll can loop seamlessly.
+  const [cloned, setCloned] = useState(false);
+  useEffect(() => {
+    setCloned(true);
+  }, []);
+  const loop = cloned ? [...toppers, ...toppers] : toppers;
+
+  // JS-driven auto-scroll. Pauses while the user is interacting; resumes after.
+  useEffect(() => {
+    const el = trackRef.current;
+    if (!el || !cloned) return;
+
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      return;
+    }
+
+    let rafId = 0;
+    let lastTime = performance.now();
+
+    const tick = (now: number) => {
+      const dt = now - lastTime;
+      lastTime = now;
+
+      const idleSinceRelease = now - lastInteractionEndRef.current > 600;
+      if (!interactingRef.current && idleSinceRelease) {
+        el.scrollLeft += (SCROLL_SPEED * dt) / 1000;
+        const half = el.scrollWidth / 2;
+        if (half > 0 && el.scrollLeft >= half) {
+          el.scrollLeft -= half;
+        }
+      }
+
+      rafId = requestAnimationFrame(tick);
+    };
+
+    rafId = requestAnimationFrame(tick);
+
+    const onDown = () => {
+      interactingRef.current = true;
+    };
+    const onUp = () => {
+      interactingRef.current = false;
+      lastInteractionEndRef.current = performance.now();
+      lastTime = performance.now();
+    };
+    const onTouchStart = () => {
+      interactingRef.current = true;
+    };
+    const onTouchEnd = () => {
+      interactingRef.current = false;
+      lastInteractionEndRef.current = performance.now();
+      lastTime = performance.now();
+    };
+    const onEnter = () => {
+      interactingRef.current = true;
+    };
+    const onLeave = () => {
+      interactingRef.current = false;
+      lastTime = performance.now();
+    };
+
+    el.addEventListener("pointerdown", onDown);
+    window.addEventListener("pointerup", onUp);
+    window.addEventListener("pointercancel", onUp);
+    el.addEventListener("touchstart", onTouchStart, { passive: true });
+    el.addEventListener("touchend", onTouchEnd);
+    el.addEventListener("touchcancel", onTouchEnd);
+    el.addEventListener("mouseenter", onEnter);
+    el.addEventListener("mouseleave", onLeave);
+
+    return () => {
+      cancelAnimationFrame(rafId);
+      el.removeEventListener("pointerdown", onDown);
+      window.removeEventListener("pointerup", onUp);
+      window.removeEventListener("pointercancel", onUp);
+      el.removeEventListener("touchstart", onTouchStart);
+      el.removeEventListener("touchend", onTouchEnd);
+      el.removeEventListener("touchcancel", onTouchEnd);
+      el.removeEventListener("mouseenter", onEnter);
+      el.removeEventListener("mouseleave", onLeave);
+    };
+  }, [cloned]);
+
   const active = openIndex !== null ? toppers[openIndex] : null;
 
   return (
     <>
-      <div
-        ref={scrollRef}
-        className="-mx-4 flex snap-x snap-mandatory gap-4 overflow-x-auto scroll-smooth px-4 pb-4 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden sm:gap-5"
-        style={{ scrollPaddingLeft: 16, scrollPaddingRight: 16 }}
-      >
-        {toppers.map((t, i) => (
-          <article
-            key={t.name}
-            className="group flex w-[86%] shrink-0 snap-start snap-always flex-col overflow-hidden rounded-2xl border border-neutral-200 bg-white transition hover:-translate-y-1 hover:shadow-xl sm:w-[44%] md:w-[30%] lg:w-[22%]"
-          >
-            <button
-              type="button"
-              onClick={() => setOpenIndex(i)}
-              aria-label={`View ${t.name}'s photo full size`}
-              className="relative aspect-[4/5] cursor-zoom-in overflow-hidden bg-neutral-100 outline-none focus-visible:ring-2 focus-visible:ring-teal-500"
-            >
-              <Image
-                src={t.image}
-                alt={`${t.name}, board topper at Excellent Students' Academy Rohini`}
-                fill
-                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 20vw"
-                className="object-cover object-top transition duration-500 group-hover:scale-[1.06]"
-              />
-              <div className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-charcoal/95 via-charcoal/40 to-transparent" />
-              <span className="absolute bottom-3 right-3 z-10 rounded-full bg-red-500 px-3 py-1 text-sm font-bold text-white shadow-lg ring-2 ring-white/70">
-                {t.marks}
-              </span>
-              <div className="absolute inset-x-0 bottom-0 p-4 text-left">
-                <h3 className="text-lg font-bold tracking-tight text-white">{t.name}</h3>
-                <p className="mt-1 text-[11px] font-medium text-white/85">
-                  {t.school ?? `${t.grade ?? ""}${t.stream ? ` · ${t.stream}` : ""}`}
-                </p>
-              </div>
-            </button>
-            {t.quote ? (
-              <div className="flex-1 border-t border-neutral-200 bg-neutral-50 p-5">
-                <p className="text-sm leading-relaxed text-charcoal">&ldquo;{t.quote}&rdquo;</p>
-              </div>
-            ) : null}
-          </article>
-        ))}
+      <div className="relative">
+        <style
+          dangerouslySetInnerHTML={{
+            __html: `
+              .esa-results-card { width: 86vw; max-width: 360px; }
+              @media (min-width: 640px) {
+                .esa-results-card { width: 44vw; }
+              }
+              @media (min-width: 1024px) {
+                .esa-results-card { width: 22vw; }
+              }
+            `,
+          }}
+        />
+        <div
+          ref={trackRef}
+          className="flex gap-5 overflow-x-auto pb-2 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+          style={{ overscrollBehaviorX: "contain" }}
+        >
+          {loop.map((t, i) => {
+            const realIndex = i % toppers.length;
+            const isClone = i >= toppers.length;
+            return (
+              <article
+                key={`${t.name}-${i}`}
+                className="esa-results-card group shrink-0 overflow-hidden rounded-2xl border border-neutral-200 bg-white transition hover:-translate-y-1 hover:shadow-xl"
+                aria-hidden={isClone ? true : undefined}
+              >
+                <button
+                  type="button"
+                  onClick={() => setOpenIndex(realIndex)}
+                  aria-label={`View ${t.name}'s photo full size`}
+                  tabIndex={isClone ? -1 : 0}
+                  className="relative block aspect-[4/5] w-full cursor-zoom-in overflow-hidden bg-neutral-100 outline-none focus-visible:ring-2 focus-visible:ring-teal-500"
+                >
+                  <Image
+                    src={t.image}
+                    alt={`${t.name}, board topper at Excellent Students' Academy Rohini`}
+                    fill
+                    sizes="(max-width: 640px) 86vw, (max-width: 1024px) 44vw, 22vw"
+                    className="object-cover object-top transition duration-500 group-hover:scale-[1.06]"
+                    draggable={false}
+                  />
+                  <div className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-charcoal/95 via-charcoal/40 to-transparent" />
+                  <span className="absolute bottom-3 right-3 z-10 rounded-full bg-red-500 px-3 py-1 text-sm font-bold text-white shadow-lg ring-2 ring-white/70">
+                    {t.marks}
+                  </span>
+                  <div className="absolute inset-x-0 bottom-0 p-4 text-left">
+                    <h3 className="text-lg font-bold tracking-tight text-white">{t.name}</h3>
+                    <p className="mt-1 text-[11px] font-medium text-white/85">
+                      {t.school ?? `${t.grade ?? ""}${t.stream ? ` · ${t.stream}` : ""}`}
+                    </p>
+                  </div>
+                </button>
+                {t.quote ? (
+                  <div className="border-t border-neutral-200 bg-neutral-50 p-5">
+                    <p className="text-sm leading-relaxed text-charcoal">&ldquo;{t.quote}&rdquo;</p>
+                  </div>
+                ) : null}
+              </article>
+            );
+          })}
+        </div>
       </div>
 
       {active ? (
@@ -118,7 +230,6 @@ export function StudentResults({ toppers }: Props) {
                 priority
               />
 
-              {/* Prev / next arrows on the image - left and right edges, translucent glass */}
               <button
                 type="button"
                 onClick={(e) => {
