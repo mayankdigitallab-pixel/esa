@@ -171,7 +171,7 @@ export function VideoReviews() {
                     }
                     className="group relative flex w-full flex-col overflow-hidden rounded-2xl border border-neutral-200 bg-white text-left shadow-sm transition hover:-translate-y-1 hover:shadow-xl disabled:cursor-not-allowed disabled:opacity-70"
                   >
-                    <div className="relative aspect-video w-full overflow-hidden bg-neutral-900">
+                    <div className="relative aspect-[3/4] w-full overflow-hidden bg-neutral-900">
                       {explicitPoster ? (
                         <Image
                           src={explicitPoster}
@@ -278,10 +278,16 @@ export function VideoReviews() {
             <X className="h-5 w-5" />
           </button>
           <div
-            className="relative w-full max-w-3xl"
+            className={`relative w-full ${
+              open.source.kind === "youtube" ? "max-w-3xl" : "max-w-sm sm:max-w-md"
+            }`}
             onClick={(e) => e.stopPropagation()}
           >
-            <div className="relative aspect-video w-full overflow-hidden rounded-2xl bg-black shadow-2xl">
+            <div
+              className={`relative w-full overflow-hidden rounded-2xl bg-black shadow-2xl ${
+                open.source.kind === "youtube" ? "aspect-video" : "aspect-[9/16]"
+              }`}
+            >
               {open.source.kind === "youtube" ? (
                 <iframe
                   src={`https://www.youtube.com/embed/${open.source.youtubeId}?autoplay=1&rel=0`}
@@ -297,7 +303,7 @@ export function VideoReviews() {
                   autoPlay
                   playsInline
                   poster={open.poster}
-                  className="h-full w-full"
+                  className="h-full w-full object-contain"
                 />
               )}
             </div>
