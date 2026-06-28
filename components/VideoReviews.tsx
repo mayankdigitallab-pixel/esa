@@ -29,11 +29,11 @@ export function VideoReviews() {
           eyebrow="Video reviews"
           title={
             <>
-              In our students&rsquo; own{" "}
-              <span className="text-teal-600">words</span>.
+              Voices from the ESA{" "}
+              <span className="text-teal-600">community</span>.
             </>
           }
-          description="Short video reviews from current and past ESA students - and their parents. Tap any card to play."
+          description="Short video reviews from our students, parents, faculty and staff. Tap any card to play."
         />
 
         <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
