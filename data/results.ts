@@ -103,14 +103,14 @@ export const subjectToppers: SubjectTopper[] = [
     name: "Atharv",
     marks: "100/100",
     subject: "Mathematics",
-    facultyName: "Mr. Chandan Prajapati",
+    facultyName: "ESA",
     image: "/students/atharv.jpg",
   },
   {
     name: "Shudhanshu",
     marks: "95/100",
     subject: "Mathematics",
-    facultyName: "Mr. Chandan Prajapati",
+    facultyName: "ESA",
     image: "/students/shudhanshu.jpg",
   },
 ];

@@ -44,13 +44,12 @@ export const faculty: Faculty[] = [
   },
   {
     slug: "amit",
-    // TODO (Mayank): set subjects + classes (e.g. "Physics (Class 11-12)")
     name: "Mr. Amit",
-    title: "Senior Faculty",
-    subjects: "TBD",
+    title: "Chemistry & Science Mentor",
+    subjects: "Chemistry (Class 11-12), Science (Class 6-10)",
     experience: "10 years",
     qualification: "NET JRF qualified",
-    bio: "Ten years of teaching experience including senior faculty roles at Unacademy and Vedantu. NET JRF qualified - brings exam-tested concept clarity and structured answer writing into every ESA Rohini batch he mentors.",
+    bio: "Ten years of teaching experience including senior faculty roles at Unacademy and Vedantu. NET JRF qualified. Teaches Class 11-12 Chemistry and Class 6-10 Science at ESA Rohini, bringing exam-tested concept clarity and structured answer-writing into every batch he mentors.",
     image: "/faculty/amit.jpg",
   },
   {
