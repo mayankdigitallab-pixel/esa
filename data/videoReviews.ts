@@ -31,10 +31,10 @@ export type VideoReview = {
  */
 export const videoReviews: VideoReview[] = [
   {
-    name: "TODO - Student name",
-    role: "TODO - Class 12 / Parent / etc.",
-    blurb: "TODO - one-line takeaway from the review.",
-    source: { kind: "youtube", youtubeId: "" },
+    name: "Shubh Tyagi",
+    role: "Student, Mount Abu Public School",
+    blurb: "Shares his experience studying at ESA Rohini.",
+    source: { kind: "mp4", src: "/videos/shubh-tyagi.mp4" },
   },
   {
     name: "TODO - Student name",
