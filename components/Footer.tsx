@@ -163,6 +163,20 @@ export function Footer() {
                 </span>
               </a>
             </li>
+            <li>
+              <a
+                href="https://www.justdial.com/Delhi/Excellent-Students-Academy-Standard-Ice-Cream-Faluda-Rohini-Sector-7/011PXX11-XX11-250321094433-M6L9_BZDET"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2.5 text-neutral-300 transition hover:text-white"
+              >
+                <Star className="h-4 w-4 fill-green-500 text-green-500" />
+                <span>
+                  <span className="font-semibold text-white">4.8</span> on JustDial
+                  <span className="text-neutral-500"> · 124 ratings</span>
+                </span>
+              </a>
+            </li>
           </ul>
         </div>
       </div>
