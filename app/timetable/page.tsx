@@ -90,7 +90,7 @@ export default function TimetablePage() {
 
                   {/* Banner */}
                   <div className="border-b border-neutral-200 bg-gradient-to-r from-teal-600 to-teal-700 px-6 py-3 text-center text-sm font-bold uppercase tracking-[0.18em] text-white sm:px-9">
-                    Time Table · {tt.slug.replace("sector-", "Sector ")}
+                    {tt.title}
                   </div>
 
                   {/* Table */}
