@@ -508,13 +508,17 @@ export function CentreLanding({ centre }: Props) {
       </section>
 
       {centre.locality && (
-        <section className="border-t border-neutral-200 bg-neutral-50 py-16 sm:py-20">
+        <section
+          className="border-t border-neutral-200 py-16 sm:py-20"
+          style={{ background: "linear-gradient(180deg, #f8fafc 0%, #ecfeff 60%, #f0fdfa 100%)" }}
+        >
           <Container>
             <SectionHeading
+              align="center"
               eyebrow="Local to you"
               title={<>Coaching for families in and around {centre.shortName}.</>}
             />
-            <div className="max-w-3xl space-y-4">
+            <div className="mx-auto max-w-3xl space-y-4 text-center">
               {centre.locality.intro.map((p, i) => (
                 <p key={i} className="text-sm leading-relaxed text-body sm:text-base">
                   {p}
