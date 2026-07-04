@@ -179,20 +179,30 @@ export function CentreLanding({ centre }: Props) {
             description="Operating since 2015 from our Rohini flagship - ESA has built its name on disciplined coaching, expert faculty and consistent board results. Every branch runs the same teaching framework."
           />
           <div className="grid gap-6 sm:grid-cols-2">
-            {highlights.map((h) => (
-              <div
-                key={h.title}
-                className="flex gap-4 rounded-2xl border border-neutral-200 bg-white p-6 shadow-sm"
-              >
-                <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-teal-500/10 text-teal-600">
-                  {h.icon}
-                </span>
-                <div>
-                  <h3 className="text-base font-semibold text-charcoal">{h.title}</h3>
-                  <p className="mt-1.5 text-sm leading-relaxed text-body">{h.body}</p>
+            {highlights.map((h, i) => {
+              const palette = [
+                { card: "linear-gradient(135deg,#E0F7FA 0%,#FFFFFF 75%)", border: "border-teal-200", icon: "bg-teal-500 text-white" },
+                { card: "linear-gradient(135deg,#FEE2E2 0%,#FFFFFF 75%)", border: "border-red-200", icon: "bg-red-500 text-white" },
+                { card: "linear-gradient(135deg,#FEF3C7 0%,#FFFFFF 75%)", border: "border-amber-200", icon: "bg-amber-500 text-white" },
+                { card: "linear-gradient(135deg,#E0E7FF 0%,#FFFFFF 75%)", border: "border-indigo-200", icon: "bg-indigo-500 text-white" },
+              ];
+              const p = palette[i % palette.length];
+              return (
+                <div
+                  key={h.title}
+                  className={`flex gap-4 rounded-2xl border ${p.border} p-6 shadow-sm`}
+                  style={{ background: p.card }}
+                >
+                  <span className={`flex h-11 w-11 shrink-0 items-center justify-center rounded-xl ${p.icon} shadow-md`}>
+                    {h.icon}
+                  </span>
+                  <div>
+                    <h3 className="text-base font-semibold text-charcoal">{h.title}</h3>
+                    <p className="mt-1.5 text-sm leading-relaxed text-body">{h.body}</p>
+                  </div>
                 </div>
-              </div>
-            ))}
+              );
+            })}
           </div>
         </Container>
       </section>
