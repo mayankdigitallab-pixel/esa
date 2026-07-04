@@ -29,6 +29,19 @@ export type Centre = {
   heroImage: string;
   highlights: string[];
   faqs: { question: string; answer: string }[];
+  /** Locality-focused content for local SEO on the landing page. */
+  locality?: {
+    /** Intro paragraphs naming nearby localities, landmarks and commute routes. */
+    intro: string[];
+    /** Areas the centre serves; slug links to the matching /areas/[slug] page. */
+    areas: { name: string; slug?: string }[];
+    /** Schools most students at this centre come from. */
+    schools: string[];
+    /** How families typically reach the centre. */
+    reach: { from: string; how: string }[];
+    /** Other ESA centres worth cross-linking for families on the boundary. */
+    nearbyCentres?: { name: string; path: string; note: string }[];
+  };
 };
 
 export const centres: Centre[] = [
@@ -103,6 +116,47 @@ export const centres: Centre[] = [
           "Yes - 7 days of free demo for any batch. Walk in, sit through the actual class your child will join, meet the faculty, and decide only after. No fees, no commitment.",
       },
     ],
+    locality: {
+      intro: [
+        "Our Sector 7 centre on the main C-block road has been Rohini's go-to coaching address since 2015. Families from Sectors 3, 5, 8, 9 and 11 are a short e-rickshaw ride away, and students from Pitampura, Kohat Enclave, Saraswati Vihar and Rani Bagh join our evening batches after school. Being 10 minutes from Rohini West Metro on the Red Line means older students from further out - Shalimar Bagh, Ashok Vihar, even Model Town - commute here on their own for Class 11-12 stream coaching.",
+        "Most of our students come from CBSE schools within a 3 km radius, so batch timings are planned around local school dismissal times and our faculty already know each school's internal exam pattern. If you live anywhere in central or west Rohini, there is a running batch your child can walk into for a free demo this week.",
+      ],
+      areas: [
+        { name: "Rohini Sector 3", slug: "rohini-sector-3" },
+        { name: "Rohini Sector 5", slug: "rohini-sector-5" },
+        { name: "Rohini Sector 9", slug: "rohini-sector-9" },
+        { name: "Rohini Sector 11", slug: "rohini-sector-11" },
+        { name: "Pitampura", slug: "pitampura" },
+        { name: "Kohat Enclave", slug: "kohat-enclave" },
+        { name: "Saraswati Vihar", slug: "saraswati-vihar" },
+        { name: "Rani Bagh", slug: "rani-bagh" },
+        { name: "Shalimar Bagh", slug: "shalimar-bagh" },
+        { name: "Ashok Vihar", slug: "ashok-vihar" },
+      ],
+      schools: [
+        "DAV Public School, Rohini",
+        "Vishal Bharti Public School",
+        "Mount Abu Public School",
+        "Other CBSE schools across Sectors 3-11",
+      ],
+      reach: [
+        { from: "Rohini West Metro (Red Line)", how: "10 minute walk; autos outside the station charge ₹30-40" },
+        { from: "Rohini East / Rithala Metro", how: "Short auto or e-rickshaw ride to the C-block main road" },
+        { from: "Pitampura / Kohat Enclave", how: "10-15 minutes by auto via the Outer Ring Road side lanes" },
+      ],
+      nearbyCentres: [
+        {
+          name: "ESA Rohini Sector 15",
+          path: "/rohini-sector-15",
+          note: "Live in Sectors 13-17 or along the Bawana road? Our Sector 15 branch is closer.",
+        },
+        {
+          name: "ESA Shakurpur",
+          path: "/shakurpur",
+          note: "For families in Punjabi Bagh, Tri Nagar or Shakurpur Colony, our west Delhi centre saves the commute.",
+        },
+      ],
+    },
   },
   {
     slug: "rohini-sector-15",

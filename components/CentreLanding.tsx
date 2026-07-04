@@ -12,6 +12,7 @@ import {
   CheckCircle2,
   HelpCircle,
   ChevronDown,
+  Bus,
 } from "lucide-react";
 import { Container } from "@/components/ui/Container";
 import { SectionHeading } from "@/components/ui/SectionHeading";
@@ -78,6 +79,10 @@ function buildLocalBusinessSchema(centre: Centre) {
       },
     ],
     hasMap: centre.mapLink,
+    areaServed: centre.locality?.areas.map((a) => ({
+      "@type": "Place",
+      name: `${a.name}, ${centre.city}`,
+    })),
   };
 }
 
@@ -491,6 +496,111 @@ export function CentreLanding({ centre }: Props) {
           )}
         </Container>
       </section>
+
+      {centre.locality && (
+        <section className="border-t border-neutral-200 bg-neutral-50 py-16 sm:py-20">
+          <Container>
+            <SectionHeading
+              eyebrow="Local to you"
+              title={<>Coaching for families in and around {centre.shortName}.</>}
+            />
+            <div className="mx-auto max-w-3xl space-y-4">
+              {centre.locality.intro.map((p, i) => (
+                <p key={i} className="text-sm leading-relaxed text-body sm:text-base">
+                  {p}
+                </p>
+              ))}
+            </div>
+
+            <div className="mt-10 grid gap-6 lg:grid-cols-3">
+              <div className="rounded-2xl border border-neutral-200 bg-white p-6 shadow-sm">
+                <div className="flex items-center gap-3">
+                  <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-teal-500/10 text-teal-600">
+                    <MapPin className="h-5 w-5" />
+                  </span>
+                  <h3 className="text-base font-semibold text-charcoal">Areas we serve</h3>
+                </div>
+                <div className="mt-4 flex flex-wrap gap-2">
+                  {centre.locality.areas.map((a) =>
+                    a.slug ? (
+                      <Link
+                        key={a.name}
+                        href={`/areas/${a.slug}`}
+                        className="rounded-full border border-teal-200 bg-teal-50 px-3 py-1.5 text-xs font-semibold text-teal-700 transition hover:bg-teal-100"
+                      >
+                        {a.name}
+                      </Link>
+                    ) : (
+                      <span
+                        key={a.name}
+                        className="rounded-full border border-neutral-200 bg-neutral-50 px-3 py-1.5 text-xs font-semibold text-charcoal-soft"
+                      >
+                        {a.name}
+                      </span>
+                    ),
+                  )}
+                </div>
+              </div>
+
+              <div className="rounded-2xl border border-neutral-200 bg-white p-6 shadow-sm">
+                <div className="flex items-center gap-3">
+                  <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-red-500/10 text-red-600">
+                    <GraduationCap className="h-5 w-5" />
+                  </span>
+                  <h3 className="text-base font-semibold text-charcoal">
+                    Schools our students come from
+                  </h3>
+                </div>
+                <ul className="mt-4 space-y-2.5">
+                  {centre.locality.schools.map((s) => (
+                    <li key={s} className="flex items-start gap-2.5 text-sm leading-relaxed text-body">
+                      <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-teal-600" />
+                      {s}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              <div className="rounded-2xl border border-neutral-200 bg-white p-6 shadow-sm">
+                <div className="flex items-center gap-3">
+                  <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-amber-500/10 text-amber-600">
+                    <Bus className="h-5 w-5" />
+                  </span>
+                  <h3 className="text-base font-semibold text-charcoal">Getting here</h3>
+                </div>
+                <ul className="mt-4 space-y-3">
+                  {centre.locality.reach.map((r) => (
+                    <li key={r.from} className="text-sm leading-relaxed text-body">
+                      <span className="font-semibold text-charcoal">{r.from}:</span> {r.how}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+
+            {centre.locality.nearbyCentres && centre.locality.nearbyCentres.length > 0 && (
+              <div className="mt-8 grid gap-4 sm:grid-cols-2">
+                {centre.locality.nearbyCentres.map((n) => (
+                  <Link
+                    key={n.path}
+                    href={n.path}
+                    className="group flex items-start justify-between gap-4 rounded-2xl border border-neutral-200 bg-white p-5 shadow-sm transition hover:-translate-y-0.5 hover:border-teal-300 hover:shadow-md"
+                  >
+                    <div>
+                      <p className="text-[10px] font-bold uppercase tracking-[0.18em] text-teal-700">
+                        Also nearby
+                      </p>
+                      <p className="mt-1 text-sm font-semibold text-charcoal">{n.name}</p>
+                      <p className="mt-1 text-xs leading-relaxed text-body">{n.note}</p>
+                    </div>
+                    <ArrowRight className="mt-1 h-4 w-4 shrink-0 text-teal-600 transition group-hover:translate-x-1" />
+                  </Link>
+                ))}
+              </div>
+            )}
+          </Container>
+        </section>
+      )}
 
       {centre.faqs.length > 0 && (
         <section className="relative overflow-hidden border-t border-neutral-200 bg-white py-16 sm:py-20">
