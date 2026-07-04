@@ -514,7 +514,7 @@ export function CentreLanding({ centre }: Props) {
               eyebrow="Local to you"
               title={<>Coaching for families in and around {centre.shortName}.</>}
             />
-            <div className="mx-auto max-w-3xl space-y-4">
+            <div className="max-w-3xl space-y-4">
               {centre.locality.intro.map((p, i) => (
                 <p key={i} className="text-sm leading-relaxed text-body sm:text-base">
                   {p}
