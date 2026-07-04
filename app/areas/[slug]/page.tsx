@@ -7,7 +7,7 @@ import { PageBanner } from "@/components/ui/PageBanner";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { nearbyAreas } from "@/data/areas";
 import { siteConfig, whatsappLink } from "@/data/site";
-import { breadcrumbSchema, jsonLd } from "@/lib/seo";
+import { breadcrumbSchema, jsonLd, shareMeta } from "@/lib/seo";
 
 export function generateStaticParams() {
   return nearbyAreas.map((a) => ({ slug: a.slug }));
@@ -34,7 +34,15 @@ export async function generateMetadata({
       `Class 12 coaching ${area.name}`,
       `best coaching near ${area.name}`,
       `home tuition ${area.name}`,
+      `CBSE coaching ${area.name}`,
+      `Math tuition ${area.name}`,
+      `coaching centre near ${area.name}`,
     ],
+    ...shareMeta({
+      title: `Best Coaching in ${area.name} | Class 1 to 12 Tuition | ESA Rohini`,
+      description: `Looking for coaching in ${area.name}? Excellent Students' Academy Rohini Sector 7 offers Class 1 to 12 tuition in Math, Science, Commerce. Just ${area.distanceKm} km away. Free demo class.`,
+      path: `/areas/${area.slug}`,
+    }),
   };
 }
 

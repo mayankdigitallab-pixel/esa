@@ -21,7 +21,7 @@ import {
   type MaterialGroupMeta,
 } from "@/data/materials";
 import { whatsappLink } from "@/data/site";
-import { breadcrumbSchema, jsonLd } from "@/lib/seo";
+import { breadcrumbSchema, jsonLd, shareMeta } from "@/lib/seo";
 
 export const metadata: Metadata = {
   title: "Study Materials | Class 1 to 12 PDF Notes Download | ESA Rohini",
@@ -35,7 +35,16 @@ export const metadata: Metadata = {
     "CBSE board notes Rohini",
     "ESA Rohini downloads",
     "free study material coaching Delhi",
+    "CBSE chapter notes PDF",
+    "Class 9 revision notes PDF",
+    "mock test papers CBSE download",
   ],
+  ...shareMeta({
+    title: "Study Materials | Class 1 to 12 PDF Notes Download | ESA Rohini",
+    description:
+      "Download class-wise study material PDFs from Excellent Students' Academy Rohini. Chapter notes, sample papers, mock tests and revision sheets for Class 1 to 12.",
+    path: "/materials",
+  }),
 };
 
 const accentClass = {

@@ -308,6 +308,37 @@ export function speakableWebPage(opts: {
   };
 }
 
+/**
+ * Open Graph + Twitter card block for a page. Next.js replaces (does not
+ * deep-merge) the layout's openGraph/twitter objects, so every page that
+ * wants a correct share preview must emit the full block itself.
+ */
+export function shareMeta(opts: {
+  title: string;
+  description: string;
+  path: string;
+  image?: string;
+}) {
+  const image = opts.image ?? `${BASE}/og-image.jpg`;
+  return {
+    openGraph: {
+      title: opts.title,
+      description: opts.description,
+      url: `${BASE}${opts.path}`,
+      siteName: siteConfig.name,
+      locale: "en_IN",
+      type: "website" as const,
+      images: [{ url: image, width: 1200, height: 630, alt: siteConfig.name }],
+    },
+    twitter: {
+      card: "summary_large_image" as const,
+      title: opts.title,
+      description: opts.description,
+      images: [image],
+    },
+  };
+}
+
 /** Convenience: render JSON-LD as a script tag. */
 export function jsonLd(obj: unknown) {
   return {

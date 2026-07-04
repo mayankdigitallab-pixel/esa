@@ -16,7 +16,7 @@ import { centres } from "@/data/centres";
 import { BranchesGrid } from "@/components/BranchesGrid";
 import { EnquiryForm } from "@/components/EnquiryForm";
 import { CallbackForm } from "@/components/CallbackForm";
-import { breadcrumbSchema, jsonLd } from "@/lib/seo";
+import { breadcrumbSchema, jsonLd, shareMeta } from "@/lib/seo";
 
 export const metadata: Metadata = {
   title: "Contact Us | Book a Free Demo at ESA Delhi & Lucknow",
@@ -31,7 +31,16 @@ export const metadata: Metadata = {
     "coaching enquiry Rohini",
     "book demo class Rohini",
     "book demo class Lucknow",
+    "free demo class coaching Delhi",
+    "ESA Rohini phone number",
+    "coaching admission enquiry Delhi",
   ],
+  ...shareMeta({
+    title: "Contact Us | Book a Free Demo at ESA Delhi & Lucknow",
+    description:
+      "Get in touch with Excellent Students' Academy. Four centres across Delhi (Rohini Sector 7, Rohini Sector 15, Shakurpur) and Lucknow (Thakurganj). Call, WhatsApp or fill our form to book a free demo.",
+    path: "/contact",
+  }),
 };
 
 export default function ContactPage() {

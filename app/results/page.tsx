@@ -5,7 +5,7 @@ import { PageBanner, BannerStatsRight } from "@/components/ui/PageBanner";
 import { ResultsGrid } from "@/components/ResultsGrid";
 import { VideoReviews } from "@/components/VideoReviews";
 import { toppers, subjectToppers } from "@/data/results";
-import { breadcrumbSchema, jsonLd } from "@/lib/seo";
+import { breadcrumbSchema, jsonLd, shareMeta } from "@/lib/seo";
 
 export const metadata: Metadata = {
   title: "Board Results & Toppers | ESA Rohini",
@@ -18,7 +18,16 @@ export const metadata: Metadata = {
     "Class 10 toppers Rohini",
     "Class 12 toppers Rohini",
     "best Math coaching results Rohini",
+    "CBSE board results coaching Delhi",
+    "100 percent pass rate coaching Rohini",
+    "90 plus scorers CBSE Rohini",
   ],
+  ...shareMeta({
+    title: "Board Results & Toppers | ESA Rohini",
+    description:
+      "Recent CBSE Class 10 and Class 12 board results from Excellent Students' Academy Rohini. 84% average score, 32+ students above 90%, 100% pass rate. Meet our toppers.",
+    path: "/results",
+  }),
 };
 
 export default function ResultsPage() {

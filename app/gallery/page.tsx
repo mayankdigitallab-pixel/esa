@@ -1,13 +1,28 @@
 import type { Metadata } from "next";
 import { PageBanner, BannerStatsRight } from "@/components/ui/PageBanner";
 import { GalleryClient } from "./GalleryClient";
-import { breadcrumbSchema, jsonLd } from "@/lib/seo";
+import { breadcrumbSchema, jsonLd, shareMeta } from "@/lib/seo";
 
 export const metadata: Metadata = {
   title: "Gallery | Inside ESA Rohini - Classes, Festivals, Birthdays",
   description:
     "Real photos from inside Excellent Students' Academy Rohini Sector 7 - classrooms, weekly tests, Saraswati Puja, Independence Day, Teachers' Day, birthdays and our centre.",
   alternates: { canonical: "https://www.theesa.in/gallery" },
+  keywords: [
+    "ESA Rohini photos",
+    "ESA gallery",
+    "coaching centre Rohini Sector 7 photos",
+    "Excellent Students Academy classroom",
+    "coaching institute celebrations Rohini",
+    "inside ESA coaching centre",
+  ],
+  ...shareMeta({
+    title: "Gallery | Inside ESA Rohini - Classes, Festivals, Birthdays",
+    description:
+      "Real photos from inside Excellent Students' Academy Rohini Sector 7 - classrooms, weekly tests, Saraswati Puja, Independence Day, Teachers' Day, birthdays and our centre.",
+    path: "/gallery",
+    image: "https://www.theesa.in/gallery/g13.jpg",
+  }),
 };
 
 export default function GalleryPage() {

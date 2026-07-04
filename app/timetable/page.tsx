@@ -3,7 +3,7 @@ import { Download, Share2, MapPin, Phone } from "lucide-react";
 import { Container } from "@/components/ui/Container";
 import { PageBanner } from "@/components/ui/PageBanner";
 import { timetables } from "@/data/timetable";
-import { breadcrumbSchema, jsonLd } from "@/lib/seo";
+import { breadcrumbSchema, jsonLd, shareMeta } from "@/lib/seo";
 
 export const metadata: Metadata = {
   title: "Class Timings & Time Table | ESA Rohini Sector 7 and Sector 15",
@@ -15,7 +15,17 @@ export const metadata: Metadata = {
     "ESA Sector 7 class timings",
     "ESA Sector 15 class timings",
     "coaching class schedule Rohini",
+    "coaching batch timings Rohini Sector 7",
+    "coaching batch timings Rohini Sector 15",
+    "tuition timings Rohini",
+    "ESA time table download",
   ],
+  ...shareMeta({
+    title: "Class Timings & Time Table | ESA Rohini Sector 7 and Sector 15",
+    description:
+      "Weekly time table for Excellent Students' Academy Rohini. Class-wise batch timings for Sector 7 and Sector 15 centres. Download or share the schedule on WhatsApp.",
+    path: "/timetable",
+  }),
 };
 
 function whatsappShareLink(text: string) {

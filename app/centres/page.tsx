@@ -6,7 +6,7 @@ import { SectionHeading } from "@/components/ui/SectionHeading";
 import { PageBanner, BannerStatsRight } from "@/components/ui/PageBanner";
 import { BranchesGrid } from "@/components/BranchesGrid";
 import { centres } from "@/data/centres";
-import { breadcrumbSchema, jsonLd } from "@/lib/seo";
+import { breadcrumbSchema, jsonLd, shareMeta } from "@/lib/seo";
 
 export const metadata: Metadata = {
   title: "Our Branches | ESA Coaching Centres in Delhi & Lucknow",
@@ -21,7 +21,16 @@ export const metadata: Metadata = {
     "coaching in Lucknow Thakurganj",
     "ESA Rohini Sector 7",
     "ESA Rohini Sector 15",
+    "coaching centre near me Rohini",
+    "tuition centre near me Delhi",
+    "coaching centre address Rohini",
   ],
+  ...shareMeta({
+    title: "Our Branches | ESA Coaching Centres in Delhi & Lucknow",
+    description:
+      "Excellent Students' Academy runs four coaching centres - Rohini Sector 7, Rohini Sector 15, Shakurpur (Delhi) and Thakurganj (Lucknow). Find your nearest ESA branch, address, in-charge and contact.",
+    path: "/centres",
+  }),
 };
 
 export default function CentresPage() {

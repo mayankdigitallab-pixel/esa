@@ -24,6 +24,14 @@ export async function generateMetadata({
     title: post.title,
     description: post.description,
     alternates: { canonical: `https://www.theesa.in/blog/${post.slug}` },
+    keywords: [
+      post.category,
+      `${post.category} Rohini`,
+      "ESA Rohini blog",
+      "CBSE coaching tips",
+      "coaching in Rohini",
+      "Excellent Students Academy",
+    ],
     openGraph: {
       title: post.title,
       description: post.description,

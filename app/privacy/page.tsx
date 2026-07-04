@@ -1,12 +1,24 @@
 import type { Metadata } from "next";
 import { Container } from "@/components/ui/Container";
 import { PageBanner } from "@/components/ui/PageBanner";
+import { shareMeta } from "@/lib/seo";
 
 export const metadata: Metadata = {
   title: "Privacy Policy | Excellent Students' Academy Rohini",
   description:
     "How Excellent Students' Academy Rohini collects, uses and protects parent and student information shared during demo booking, enrolment and ongoing coaching.",
   alternates: { canonical: "https://www.theesa.in/privacy" },
+  keywords: [
+    "ESA privacy policy",
+    "Excellent Students Academy privacy policy",
+    "coaching institute data protection",
+  ],
+  ...shareMeta({
+    title: "Privacy Policy | Excellent Students' Academy Rohini",
+    description:
+      "How Excellent Students' Academy Rohini collects, uses and protects parent and student information shared during demo booking, enrolment and ongoing coaching.",
+    path: "/privacy",
+  }),
 };
 
 export default function PrivacyPage() {

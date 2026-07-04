@@ -1,12 +1,25 @@
 import type { Metadata } from "next";
 import { Container } from "@/components/ui/Container";
 import { PageBanner } from "@/components/ui/PageBanner";
+import { shareMeta } from "@/lib/seo";
 
 export const metadata: Metadata = {
   title: "Terms & Conditions | Excellent Students' Academy Rohini",
   description:
     "Terms and conditions for enrolling at Excellent Students' Academy, Rohini Sector 7. Read the agreement covering fees, demo classes, attendance, refunds and code of conduct.",
   alternates: { canonical: "https://www.theesa.in/terms" },
+  keywords: [
+    "ESA terms and conditions",
+    "Excellent Students Academy terms",
+    "coaching enrolment terms Rohini",
+    "coaching fees refund policy",
+  ],
+  ...shareMeta({
+    title: "Terms & Conditions | Excellent Students' Academy Rohini",
+    description:
+      "Terms and conditions for enrolling at Excellent Students' Academy, Rohini Sector 7. Read the agreement covering fees, demo classes, attendance, refunds and code of conduct.",
+    path: "/terms",
+  }),
 };
 
 export default function TermsPage() {

@@ -14,7 +14,7 @@ import { Container } from "@/components/ui/Container";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { PageBanner, BannerStatsRight } from "@/components/ui/PageBanner";
 import { faculty } from "@/data/faculty";
-import { breadcrumbSchema, jsonLd } from "@/lib/seo";
+import { breadcrumbSchema, jsonLd, shareMeta } from "@/lib/seo";
 
 export const metadata: Metadata = {
   title: "About Us | Best Coaching Institute in Rohini Since 2015",
@@ -25,9 +25,17 @@ export const metadata: Metadata = {
     "about Excellent Students Academy",
     "ESA Rohini",
     "best coaching institute Rohini",
+    "coaching institute in Rohini since 2015",
     "coaching history Rohini",
+    "trusted tuition centre North Delhi",
     "Chandan Prajapati ESA",
   ],
+  ...shareMeta({
+    title: "About Us | Best Coaching Institute in Rohini Since 2015",
+    description:
+      "Learn about Excellent Students' Academy, the trusted coaching institute in Rohini Sector 7 since 2015. Our story, mission and what makes ESA different for Class 1 to 12 students across North Delhi.",
+    path: "/about",
+  }),
 };
 
 const values = [

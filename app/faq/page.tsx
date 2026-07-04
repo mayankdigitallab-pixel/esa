@@ -3,13 +3,29 @@ import { Container } from "@/components/ui/Container";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { PageBanner } from "@/components/ui/PageBanner";
 import { faqs } from "@/data/faqs";
-import { breadcrumbSchema, faqPageSchema, jsonLd } from "@/lib/seo";
+import { breadcrumbSchema, faqPageSchema, jsonLd, shareMeta } from "@/lib/seo";
 
 export const metadata: Metadata = {
   title: "FAQ | Coaching Questions Answered | ESA Rohini",
   description:
     "Common questions about coaching at Excellent Students' Academy Rohini. Demo classes, fees, batch timings, subjects, home tuition and admission process answered.",
   alternates: { canonical: "https://www.theesa.in/faq" },
+  keywords: [
+    "ESA Rohini FAQ",
+    "coaching fees Rohini",
+    "tuition fees Rohini Sector 7",
+    "coaching admission process Rohini",
+    "free demo class Rohini",
+    "coaching batch timings Rohini",
+    "home tuition Rohini",
+    "coaching subjects Rohini",
+  ],
+  ...shareMeta({
+    title: "FAQ | Coaching Questions Answered | ESA Rohini",
+    description:
+      "Common questions about coaching at Excellent Students' Academy Rohini. Demo classes, fees, batch timings, subjects, home tuition and admission process answered.",
+    path: "/faq",
+  }),
 };
 
 export default function FaqPage() {

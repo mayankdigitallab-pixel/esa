@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { CentreLanding } from "@/components/CentreLanding";
 import { findCentre } from "@/data/centres";
+import { shareMeta } from "@/lib/seo";
 
 const centre = findCentre("lucknow-thakurganj")!;
 
@@ -16,7 +17,15 @@ export const metadata: Metadata = {
     "Class 12 coaching Lucknow",
     "ESA Lucknow",
     "Ashok Rastogi ESA",
+    "tuition centre Thakurganj",
+    "best coaching Thakurganj Lucknow",
+    "Class 9 tuition Lucknow",
   ],
+  ...shareMeta({
+    title: centre.metaTitle,
+    description: centre.metaDescription,
+    path: centre.landingPath!,
+  }),
 };
 
 export default function LucknowPage() {

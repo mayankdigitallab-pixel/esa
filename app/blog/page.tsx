@@ -3,7 +3,7 @@ import { Container } from "@/components/ui/Container";
 import { PageBanner } from "@/components/ui/PageBanner";
 import { BlogIndex } from "@/components/BlogIndex";
 import { blogPosts } from "@/data/blog";
-import { breadcrumbSchema, jsonLd } from "@/lib/seo";
+import { breadcrumbSchema, jsonLd, shareMeta } from "@/lib/seo";
 
 export const metadata: Metadata = {
   title: "Blog | ESA Rohini",
@@ -14,10 +14,18 @@ export const metadata: Metadata = {
     "coaching blog Rohini",
     "ESA blog",
     "CBSE prep tips",
+    "CBSE exam preparation blog",
     "Class 10 board strategy",
     "Class 12 study tips",
+    "study tips for CBSE students",
     "parent guide coaching Rohini",
   ],
+  ...shareMeta({
+    title: "Blog | Coaching Tips & Board Exam Strategy | ESA Rohini",
+    description:
+      "Coaching tips, topper stories, parent guides and board exam strategy from Excellent Students' Academy Rohini. Local insights for parents in Rohini, Pitampura, Shalimar Bagh.",
+    path: "/blog",
+  }),
 };
 
 export default function BlogIndexPage() {

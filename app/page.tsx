@@ -39,7 +39,7 @@ import { blogPosts } from "@/data/blog";
 import { nearbyAreas } from "@/data/areas";
 import { centres } from "@/data/centres";
 import { BranchesCarousel } from "@/components/BranchesCarousel";
-import { breadcrumbSchema, faqPageSchema, jsonLd, localBusinessSchema, speakableWebPage, websiteSchema } from "@/lib/seo";
+import { breadcrumbSchema, faqPageSchema, jsonLd, localBusinessSchema, shareMeta, speakableWebPage, websiteSchema } from "@/lib/seo";
 
 export const metadata: Metadata = {
   title:
@@ -63,13 +63,12 @@ export const metadata: Metadata = {
     "Excellent Students Academy",
   ],
   alternates: { canonical: "https://www.theesa.in" },
-  openGraph: {
+  ...shareMeta({
     title: "Coaching for Class 1-12 across Delhi & Lucknow | Excellent Students' Academy",
     description:
       "ESA branches in Rohini Sector 7, Rohini Sector 15, Shakurpur (Delhi) and Thakurganj (Lucknow). Coaching for Class 1 to 12 in Math, Science, Commerce.",
-    url: "https://www.theesa.in",
-    type: "website",
-  },
+    path: "",
+  }),
 };
 
 const trustPoints = [

@@ -6,7 +6,7 @@ import { SectionHeading } from "@/components/ui/SectionHeading";
 import { PageBanner, BannerStatsRight } from "@/components/ui/PageBanner";
 import { programs } from "@/data/programs";
 import { whatsappLink } from "@/data/site";
-import { breadcrumbSchema, courseListSchema, jsonLd } from "@/lib/seo";
+import { breadcrumbSchema, courseListSchema, jsonLd, shareMeta } from "@/lib/seo";
 import { FeeBlock } from "@/components/FeeBlock";
 
 export const metadata: Metadata = {
@@ -25,7 +25,16 @@ export const metadata: Metadata = {
     "PCB coaching Rohini",
     "Commerce coaching Rohini",
     "crash course Rohini",
+    "CBSE coaching programs Delhi",
+    "coaching fees Class 1 to 12 Rohini",
+    "foundation course Rohini",
   ],
+  ...shareMeta({
+    title: "Programs & Courses | Class 1 to 12 Coaching in Rohini",
+    description:
+      "Coaching programs for Class 1 to 12 at Excellent Students' Academy Rohini. Foundation, Middle School, Board Prep and Senior Secondary streams. Math, Science, Commerce. View details and fees.",
+    path: "/programs",
+  }),
 };
 
 export default function ProgramsPage() {

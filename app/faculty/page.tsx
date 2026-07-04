@@ -6,7 +6,7 @@ import { SectionHeading } from "@/components/ui/SectionHeading";
 import { PageBanner, BannerStatsRight } from "@/components/ui/PageBanner";
 import { FacultyGrid } from "@/components/FacultyGrid";
 import { faculty } from "@/data/faculty";
-import { breadcrumbSchema, facultyItemListSchema, jsonLd } from "@/lib/seo";
+import { breadcrumbSchema, facultyItemListSchema, jsonLd, shareMeta } from "@/lib/seo";
 
 export const metadata: Metadata = {
   title: "Our Faculty | Expert Teachers at ESA Rohini",
@@ -17,9 +17,18 @@ export const metadata: Metadata = {
     "ESA faculty Rohini",
     "best Math teacher Rohini",
     "best Science teacher Rohini",
+    "best English teacher Rohini",
+    "Commerce teacher Rohini",
+    "experienced CBSE teachers Delhi",
     "Chandan Prajapati ESA",
     "expert tutors Rohini",
   ],
+  ...shareMeta({
+    title: "Our Faculty | Expert Teachers at ESA Rohini",
+    description:
+      "Meet the faculty at Excellent Students' Academy Rohini. Experienced mentors with 6+ years coaching Math, Science, Commerce and English for Class 1 to 12 CBSE and ICSE.",
+    path: "/faculty",
+  }),
 };
 
 export default function FacultyPage() {
