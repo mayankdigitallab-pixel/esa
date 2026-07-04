@@ -227,6 +227,36 @@ export const centres: Centre[] = [
           "Yes, 7-day free demo. Walk into the centre or send us a WhatsApp - we will book a slot in the actual batch matching your child's class and subject.",
       },
     ],
+    locality: {
+      intro: [
+        "The Sector 15 centre sits close to the Sector 15 market and bus stop, which makes parent drop-off easy - most families from Sectors 13, 14, 16 and 17 reach us in under ten minutes by e-rickshaw along the Rohini-Bawana road. It is our newest Delhi branch, opened so that families in outer Rohini no longer have to send children all the way to Sector 7 for the same ESA coaching.",
+        "Batches here are deliberately smaller than at the flagship, and timings are matched to the dismissal times of nearby schools. If you live in Sectors 13 to 17 or along the Bawana road stretch, this is your nearest ESA centre - walk in any working day for a free demo.",
+      ],
+      areas: [
+        { name: "Rohini Sector 13", slug: "rohini-sector-13" },
+        { name: "Rohini Sector 14" },
+        { name: "Rohini Sector 16" },
+        { name: "Rohini Sector 17", slug: "rohini-sector-17" },
+        { name: "Rohini Sector 11", slug: "rohini-sector-11" },
+      ],
+      schools: [
+        "Rajiv Gandhi Public School",
+        "Mount Carmel School, Rohini",
+        "Other CBSE schools across Sectors 13-17",
+      ],
+      reach: [
+        { from: "Sectors 13, 14 and 16", how: "5-10 minute auto or e-rickshaw ride via the Rohini-Bawana road" },
+        { from: "Sector 15 market / bus stop", how: "Walking distance; DTC and cluster buses stop nearby" },
+        { from: "Central Rohini", how: "15-20 minutes by auto from the Rohini West Metro side" },
+      ],
+      nearbyCentres: [
+        {
+          name: "ESA Rohini Sector 7 (Flagship)",
+          path: "/rohini-sector-7",
+          note: "Closer to Sectors 3-11? Our flagship centre has the widest batch availability, including founder-taught Class 11-12 Math.",
+        },
+      ],
+    },
   },
   {
     slug: "shakurpur-delhi",
@@ -298,6 +328,39 @@ export const centres: Centre[] = [
           "Yes - every Saturday is test day at Shakurpur, same as our Rohini flagship. Chapter-wise testing for board classes and skill-based assessments for foundation classes.",
       },
     ],
+    locality: {
+      intro: [
+        "Our Shakurpur centre sits in Block G of Shakurpur Colony, near the Ravi Shoe Palace landmark just off the main market road - the heart of a dense west Delhi school belt. Families from Pitampura, Punjabi Bagh, Tri Nagar, Shastri Nagar and Wazirpur reach us in 10-15 minutes by auto or e-rickshaw, and several CBSE schools are within walking distance, so children often come straight from school to their batch.",
+        "The centre runs a strong foundation programme for Class 1-5 alongside full board-prep batches for Class 6-12, with the same Saturday test discipline as our Rohini flagship. If you are anywhere between the Outer Ring Road and Punjabi Bagh, this is the closest place to get the ESA system.",
+      ],
+      areas: [
+        { name: "Pitampura", slug: "pitampura" },
+        { name: "Punjabi Bagh", slug: "punjabi-bagh" },
+        { name: "Shastri Nagar", slug: "shastri-nagar" },
+        { name: "Wazirpur", slug: "wazirpur" },
+        { name: "Rani Bagh", slug: "rani-bagh" },
+        { name: "Tri Nagar" },
+        { name: "Shakurpur Colony" },
+      ],
+      schools: [
+        "DAV Public School, Shakurpur",
+        "Maharaja Agrasen Public School",
+        "Salwan Public School",
+        "Apeejay School",
+      ],
+      reach: [
+        { from: "Pitampura / Punjabi Bagh", how: "10-15 minutes by auto or e-rickshaw" },
+        { from: "Tri Nagar / Shastri Nagar", how: "Short e-rickshaw ride through Shakurpur Colony" },
+        { from: "Outer Ring Road", how: "Direct buses connect through Shakurpur Colony; get down at the Block G market stop" },
+      ],
+      nearbyCentres: [
+        {
+          name: "ESA Rohini Sector 7 (Flagship)",
+          path: "/rohini-sector-7",
+          note: "Living towards Rohini or Kohat Enclave? The flagship centre is a short metro ride away with the widest batch choice.",
+        },
+      ],
+    },
   },
   {
     slug: "lucknow-thakurganj",
@@ -376,6 +439,30 @@ export const centres: Centre[] = [
           "Call or WhatsApp +91 97165 02093, or fill the demo form on this page. We will call back within working hours, fix a slot in the running batch matching your child's class, and you can walk in to attend before deciding.",
       },
     ],
+    locality: {
+      intro: [
+        "ESA's first Uttar Pradesh centre sits on the Hardoi Road side of Chowk in Thakurganj - one of old Lucknow's most connected corners. Families from Basant Vihar Colony and Thakurganj itself walk in; students from Daliganj, Balaganj and Aminabad reach us within 10-20 minutes by auto, and city buses and tempos run through the Hardoi Road / Chowk route all day.",
+        "Teaching here is bilingual - concepts explained in Hindi, answer-writing and definitions in English - so both CBSE and UP Board students settle in quickly. The faculty is trained at our Rohini flagship and follows the same weekly test framework, bringing Delhi-grade board coaching to families in old Lucknow.",
+      ],
+      areas: [
+        { name: "Thakurganj" },
+        { name: "Chowk" },
+        { name: "Basant Vihar Colony" },
+        { name: "Daliganj" },
+        { name: "Balaganj" },
+        { name: "Aminabad" },
+        { name: "Hazratganj" },
+      ],
+      schools: [
+        "CBSE schools across Chowk and Thakurganj",
+        "UP Board schools in old Lucknow",
+      ],
+      reach: [
+        { from: "Daliganj", how: "10-15 minute auto-rickshaw ride" },
+        { from: "Aminabad", how: "Around 20 minutes by auto" },
+        { from: "Hazratganj", how: "25-30 minutes; direct city buses run via Hardoi Road / Chowk" },
+      ],
+    },
   },
 ];
 
