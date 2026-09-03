@@ -21,7 +21,35 @@ import {
   type MaterialGroupMeta,
 } from "@/data/materials";
 import { whatsappLink } from "@/data/site";
-import { breadcrumbSchema, jsonLd, shareMeta } from "@/lib/seo";
+import { breadcrumbSchema, faqSchema, jsonLd, shareMeta } from "@/lib/seo";
+
+const materialsFaqs = [
+  {
+    question: "Who can access the ESA study material PDFs?",
+    answer:
+      "The class-wise Drive folders are shared freely for ESA students and their parents. If a folder shows as uploading soon, WhatsApp us the class and subject and we'll share the specific PDF directly.",
+  },
+  {
+    question: "Are the materials aligned with the CBSE and NCERT syllabus?",
+    answer:
+      "Yes. Chapter notes, sample papers and mock tests are prepared by ESA faculty against the current CBSE/NCERT curriculum for each class, and we also link the official NCERT, CBSE and DIKSHA portals on this page for source syllabus documents.",
+  },
+  {
+    question: "What is inside each class folder?",
+    answer:
+      "Chapter-wise notes, previous year board papers with solutions, weekly chapter test papers, mock exams under board pattern, and quick-revision formula sheets - the same material used in class.",
+  },
+  {
+    question: "I can't find notes for a specific chapter - what do I do?",
+    answer:
+      "WhatsApp us your child's class, subject and chapter name. Our team shares the exact notes, previous year paper or mock test within a few hours.",
+  },
+  {
+    question: "Do I need to pay for these study materials?",
+    answer:
+      "No, study material is free for ESA students, included as part of the coaching programs across Foundation, Middle School, Board Prep and Senior Secondary.",
+  },
+];
 
 export const metadata: Metadata = {
   title: "Study Materials | Class 1 to 12 PDF Notes Download | ESA Rohini",
@@ -217,6 +245,7 @@ export default function MaterialsPage() {
   return (
     <div>
       <script {...jsonLd(breadcrumb)} />
+      <script {...jsonLd(faqSchema(materialsFaqs))} />
       <PageBanner
         label="Study Materials"
         image="/gallery/g07.jpg"
@@ -402,6 +431,28 @@ export default function MaterialsPage() {
                 ))}
               </ul>
             </div>
+          </div>
+        </Container>
+      </section>
+
+      <section className="border-t border-neutral-200 bg-neutral-50 py-16 sm:py-20">
+        <Container>
+          <SectionHeading
+            eyebrow="FAQs"
+            title={<>Questions about the <span className="text-charcoal">study materials</span></>}
+          />
+          <div className="mx-auto mt-8 max-w-3xl space-y-5">
+            {materialsFaqs.map((f) => (
+              <div
+                key={f.question}
+                className="rounded-2xl border border-neutral-200 bg-white p-6"
+              >
+                <h3 className="text-base font-bold text-charcoal">{f.question}</h3>
+                <p className="mt-2 text-sm leading-relaxed text-charcoal-soft">
+                  {f.answer}
+                </p>
+              </div>
+            ))}
           </div>
         </Container>
       </section>

@@ -2,8 +2,37 @@ import type { Metadata } from "next";
 import { Download, Share2, MapPin, Phone } from "lucide-react";
 import { Container } from "@/components/ui/Container";
 import { PageBanner } from "@/components/ui/PageBanner";
+import { SectionHeading } from "@/components/ui/SectionHeading";
 import { timetables } from "@/data/timetable";
-import { breadcrumbSchema, jsonLd, shareMeta } from "@/lib/seo";
+import { breadcrumbSchema, faqSchema, jsonLd, shareMeta } from "@/lib/seo";
+
+const timetableFaqs = [
+  {
+    question: "How do I find the batch timing for my child's class?",
+    answer:
+      "Open the time table for your centre (Sector 7 or Sector 15) below and find the row matching your child's class. Each row shows the total time slot and, where a class has multiple subject periods, the exact timing for each subject.",
+  },
+  {
+    question: "Do timings ever change?",
+    answer:
+      "Class timings can shift by up to 15 minutes during summer or exam season. WhatsApp the centre for the latest confirmed schedule before making other plans around it.",
+  },
+  {
+    question: "Is Saturday a normal teaching day?",
+    answer:
+      "Saturday is reserved for weekly chapter tests across all classes at both centres, not fresh teaching. Sunday is closed, with occasional doubt sessions on request.",
+  },
+  {
+    question: "Can I download or share the time table?",
+    answer:
+      "Yes - each centre's time table has a Download button for a printable copy and a Share on WhatsApp button to send it directly to another parent or student.",
+  },
+  {
+    question: "Can I talk to a faculty member about the schedule in person?",
+    answer:
+      "Yes, parents may walk in on any working day between 11 AM and 1 PM to discuss batch timing or scheduling with faculty at either centre.",
+  },
+];
 
 export const metadata: Metadata = {
   title: "Class Timings & Time Table | ESA Rohini Sector 7 and Sector 15",
@@ -41,6 +70,7 @@ export default function TimetablePage() {
   return (
     <div>
       <script {...jsonLd(breadcrumb)} />
+      <script {...jsonLd(faqSchema(timetableFaqs))} />
       <PageBanner
         label="Class Schedule"
         image="https://images.unsplash.com/photo-1506784983877-45594efa4cbe?auto=format&fit=crop&w=1920&q=80"
@@ -196,6 +226,28 @@ export default function TimetablePage() {
               <li>Sunday is reserved for doubt sessions on request.</li>
               <li>Parents may walk in any working day between 11 AM and 1 PM to talk to faculty.</li>
             </ul>
+          </div>
+        </Container>
+      </section>
+
+      <section className="border-t border-neutral-200 bg-white py-16 sm:py-20">
+        <Container>
+          <SectionHeading
+            eyebrow="FAQs"
+            title={<>Questions about <span className="text-charcoal">batch timings</span></>}
+          />
+          <div className="mx-auto mt-8 max-w-3xl space-y-5">
+            {timetableFaqs.map((f) => (
+              <div
+                key={f.question}
+                className="rounded-2xl border border-neutral-200 bg-neutral-50 p-6"
+              >
+                <h3 className="text-base font-bold text-charcoal">{f.question}</h3>
+                <p className="mt-2 text-sm leading-relaxed text-charcoal-soft">
+                  {f.answer}
+                </p>
+              </div>
+            ))}
           </div>
         </Container>
       </section>
