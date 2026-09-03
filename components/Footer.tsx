@@ -88,6 +88,7 @@ export function Footer() {
             <li><Link href="/programs#grades-9-10" className="text-neutral-300 transition hover:text-white">Classes 9 and 10</Link></li>
             <li><Link href="/programs#grades-11-12" className="text-neutral-300 transition hover:text-white">Classes 11 and 12</Link></li>
             <li><Link href="/programs#crash" className="text-neutral-300 transition hover:text-white">Crash Courses</Link></li>
+            <li><Link href="/classes" className="text-neutral-300 transition hover:text-white">Classes 6 to 12 (class-wise)</Link></li>
           </ul>
         </div>
 

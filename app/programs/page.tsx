@@ -5,9 +5,43 @@ import { Container } from "@/components/ui/Container";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { PageBanner, BannerStatsRight } from "@/components/ui/PageBanner";
 import { programs } from "@/data/programs";
+import { classes } from "@/data/classes";
 import { whatsappLink } from "@/data/site";
-import { breadcrumbSchema, courseListSchema, jsonLd, shareMeta } from "@/lib/seo";
+import { breadcrumbSchema, courseListSchema, faqSchema, jsonLd, shareMeta } from "@/lib/seo";
 import { FeeBlock } from "@/components/FeeBlock";
+
+const programFaqs = [
+  {
+    question: "Which program is right for my child's class?",
+    answer:
+      "Foundation (Class 1-5) builds core Math, English and EVS basics. Middle School (Class 6-8) adds Science and Social Science with weekly tests. Board Prep (Class 9-10) is full CBSE board preparation. Senior Secondary (Class 11-12) is stream-wise coaching in Science, Commerce or Arts. Call or WhatsApp us and we'll confirm the right batch for your child's class and current level.",
+  },
+  {
+    question: "Can my child switch streams or subjects after joining Class 11?",
+    answer:
+      "Stream changes are easiest in the first two to three weeks, before batches settle into their syllabus pace. Talk to us early if your child is unsure between Science, Commerce or Arts - we can run a short diagnostic conversation to help decide.",
+  },
+  {
+    question: "Does Senior Secondary coaching cover JEE or NEET as well as boards?",
+    answer:
+      "Yes, for Class 11-12 Science (PCM/PCB) students. The teaching sequence covers the board syllabus first for concept clarity, then layers JEE/NEET-pattern practice on top, so board scores are never sacrificed for competitive prep.",
+  },
+  {
+    question: "What do the Crash Courses cover, and who are they for?",
+    answer:
+      "Crash Courses are 4 to 8 week intensive programs for Class 6 to 12 students who need a focused push before board exams: full syllabus revision, 10+ mock papers under exam conditions, and daily doubt sessions. Best suited for students revisiting the full syllabus close to exams.",
+  },
+  {
+    question: "What are the program fees?",
+    answer:
+      "Fees are nominal and vary by program and subject combination - Foundation and Middle School are priced lower than Board Prep and Senior Secondary stream coaching. Exact numbers are confirmed on a call or WhatsApp message, and the quoted figure never changes once you visit.",
+  },
+  {
+    question: "Can I see a program in action before enrolling?",
+    answer:
+      "Yes - every program includes 7 days of free demo classes. Your child sits in the actual batch for that program, meets the faculty, and you decide only after seeing the real teaching style.",
+  },
+];
 
 export const metadata: Metadata = {
   title: "Programs & Courses | Class 1 to 12 Coaching in Rohini",
@@ -46,6 +80,7 @@ export default function ProgramsPage() {
     <div>
       <script {...jsonLd(breadcrumb)} />
       <script {...jsonLd(courseListSchema())} />
+      <script {...jsonLd(faqSchema(programFaqs))} />
       <PageBanner
         label="Our Programs"
         image="https://images.unsplash.com/photo-1427504494785-3a9ca7044f45?auto=format&fit=crop&w=1920&q=80"
@@ -135,6 +170,23 @@ export default function ProgramsPage() {
                         </span>
                       </div>
                     </div>
+                    {(() => {
+                      const relatedClasses = classes.filter((c) => c.programSlug === p.slug);
+                      return relatedClasses.length > 0 ? (
+                        <div className="mt-6 flex flex-wrap items-center gap-x-4 gap-y-2 text-sm">
+                          <span className="font-semibold text-charcoal-soft">Class pages:</span>
+                          {relatedClasses.map((c) => (
+                            <Link
+                              key={c.slug}
+                              href={`/classes/${c.slug}`}
+                              className="font-semibold text-teal-700 hover:text-red-600"
+                            >
+                              {c.label}
+                            </Link>
+                          ))}
+                        </div>
+                      ) : null;
+                    })()}
                     <div className="mt-7 flex flex-wrap gap-3">
                       <Link
                         href={whatsappLink(
@@ -245,6 +297,28 @@ export default function ProgramsPage() {
       </section>
 
       <FeeBlock />
+
+      <section className="border-t border-neutral-200 bg-white py-16 sm:py-20">
+        <Container>
+          <SectionHeading
+            eyebrow="FAQs"
+            title={<>Questions parents ask about our <span className="text-charcoal">programs</span></>}
+          />
+          <div className="mx-auto mt-8 max-w-3xl space-y-5">
+            {programFaqs.map((f) => (
+              <div
+                key={f.question}
+                className="rounded-2xl border border-neutral-200 bg-neutral-50 p-6"
+              >
+                <h3 className="text-base font-bold text-charcoal">{f.question}</h3>
+                <p className="mt-2 text-sm leading-relaxed text-charcoal-soft">
+                  {f.answer}
+                </p>
+              </div>
+            ))}
+          </div>
+        </Container>
+      </section>
     </div>
   );
 }

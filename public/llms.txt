@@ -1,10 +1,16 @@
 # Excellent Students' Academy (ESA)
 
-> Coaching institute in Rohini Sector 7, New Delhi for Class 1 to 12 students. Math, Science, Commerce, English and all CBSE subjects. Founded 2015 - currently in its eleventh year of operation. Consistent CBSE board results across North Delhi.
+> Coaching institute for Class 1 to 12 across four centres: Rohini Sector 7 and Rohini Sector 15 (New Delhi), Shakurpur (Delhi) and Thakurganj (Lucknow, Uttar Pradesh). Math, Science, Commerce, English and all CBSE/ICSE/UP Board subjects. Founded 2015, currently in its eleventh year of operation. Consistent CBSE board results across North Delhi and Lucknow.
 
-Located at C7/72, 2nd Floor, Sector 7, Rohini, New Delhi 110085. Two minutes from Rohini West metro. Serving students from Rohini, Pitampura, Shalimar Bagh, Model Town, Ashok Vihar, Mukherjee Nagar, Kohat Enclave, Saraswati Vihar, Punjabi Bagh, Rani Bagh, Shastri Nagar and nearby North Delhi localities.
+Website: https://www.theesa.in | Email: excellentstudentsacademy1@gmail.com
 
-Phone: +91 9458012793 | WhatsApp: +91 8750663995 | Email: excellentstudentsacademy1@gmail.com | Website: https://www.theesa.in
+## Centres
+
+- [Rohini Sector 7, New Delhi (Flagship)](https://www.theesa.in/rohini-sector-7): C7/72, 2nd Floor, Sector 7, Rohini, New Delhi 110085. 10 min walk from Rohini West Metro (Red Line). Phone/WhatsApp +91 87506 63995. Headed by Ms. Mamta; founder Mr. Chandan Prajapati personally teaches Class 11-12 Maths here. Serves Rohini Sectors 3, 5, 9, 11, Pitampura, Kohat Enclave, Saraswati Vihar, Rani Bagh, Shalimar Bagh, Ashok Vihar.
+- [Rohini Sector 15, New Delhi](https://www.theesa.in/rohini-sector-15): Sector 15, Rohini, New Delhi 110089, near the Sector 15 market and bus stop. Phone/WhatsApp +91 94580 12793. Headed by Mr. Dhruv Narayan. Serves Rohini Sectors 11, 13, 14, 16, 17.
+- [Shakurpur, Delhi](https://www.theesa.in/shakurpur): Block G, Shakurpur Colony, Shakurpur, Delhi 110034, near the Ravi Shoe Palace landmark. Phone/WhatsApp +91 94580 12793. Headed by Ms. Khushboo. Serves Pitampura, Punjabi Bagh, Tri Nagar, Shastri Nagar, Wazirpur, Rani Bagh.
+- [Lucknow Thakurganj, Uttar Pradesh](https://www.theesa.in/lucknow): I I C Computer Institute, Building Sparkling Careers, Chowk, Thakur Ganj Hardoi Road, Thakurganj, Basant Vihar Colony, Lucknow 226003. Phone/WhatsApp +91 97165 02093. Headed by Mr. Ashok Rastogi (B.Tech Mechanical, 11 years). Bilingual (Hindi + English) teaching for CBSE and UP Board students. Serves Thakurganj, Chowk, Basant Vihar Colony, Daliganj, Balaganj, Aminabad, Hazratganj.
+- [All centres overview](https://www.theesa.in/centres)
 
 ## Programs
 
@@ -14,37 +20,61 @@ Phone: +91 9458012793 | WhatsApp: +91 8750663995 | Email: excellentstudentsacade
 - [Senior Secondary (Class 11 and 12)](https://www.theesa.in/programs#grades-11-12): Science (PCM/PCB), Commerce and Arts streams. Board scoring plus JEE/NEET foundation. Stream-wise senior faculty.
 - [Crash Courses (Class 6 to 12)](https://www.theesa.in/programs#crash): 4 to 8 week intensive revision before board exams. Full syllabus revision plus 10+ mock papers.
 
+## Classes 6 to 12 (class-wise pages)
+
+- [All classes](https://www.theesa.in/classes): index of Class 6 through Class 12 pages.
+- [Class 6](https://www.theesa.in/classes/class-6), [Class 7](https://www.theesa.in/classes/class-7), [Class 8](https://www.theesa.in/classes/class-8): Middle School - Mathematics, Science, Social Science, English, Hindi, Sanskrit.
+- [Class 9](https://www.theesa.in/classes/class-9), [Class 10](https://www.theesa.in/classes/class-10): Board Prep - full CBSE syllabus, weekly Saturday tests, monthly mocks, previous-year papers.
+- [Class 11](https://www.theesa.in/classes/class-11), [Class 12](https://www.theesa.in/classes/class-12): Senior Secondary - Science (PCM/PCB), Commerce, Arts streams with JEE/NEET foundation for Science.
+
 ## Key pages
 
 - [Home](https://www.theesa.in): Hero, programs overview, results, testimonials, demo class booking.
-- [About](https://www.theesa.in/about): Story, mission, 9-year timeline, values.
-- [Faculty](https://www.theesa.in/faculty): Eleven full-time mentors. Postgraduates and B.Tech holders with average 6+ years coaching experience.
+- [About](https://www.theesa.in/about): Story, mission, timeline since 2015, values.
+- [Faculty](https://www.theesa.in/faculty): Full-time subject-specialist mentors across all four centres.
 - [Results](https://www.theesa.in/results): Recent CBSE board toppers, scores, and class-wise statistics.
-- [Gallery](https://www.theesa.in/gallery): Real photos from inside the centre: classroom sessions, weekly tests, Saraswati Puja, Independence Day, Teachers' Day, birthdays, and the Sector 7 exterior.
+- [Gallery](https://www.theesa.in/gallery): Real photos from inside the centres - classroom sessions, weekly tests, festivals, events.
 - [Materials](https://www.theesa.in/materials): Class-wise PDF study materials (chapter notes, sample papers, mock tests) shared via Google Drive folders per class.
-- [Contact](https://www.theesa.in/contact): Enquiry form, WhatsApp, phone, location, embedded map.
+- [Timetable](https://www.theesa.in/timetable): Weekly batch schedule by class and subject.
+- [Contact](https://www.theesa.in/contact): Enquiry form, WhatsApp, phone, location, embedded map for every centre.
 - [FAQ](https://www.theesa.in/faq): Demo classes, fees, batch timings, subjects, home tuition, admission process.
+- [Areas served](https://www.theesa.in/areas/rohini-sector-7): Locality pages for the North Delhi neighbourhoods each centre serves.
 
 ## Blog (educational + local SEO)
 
-- [Meet the ESA Toppers of 2026](https://www.theesa.in/blog/esa-toppers-2026-class-10-12-rohini): Class 10 and 12 students who scored 90+ in CBSE boards, with their habits and routines.
-- [How to Choose a Coaching Institute in Rohini](https://www.theesa.in/blog/how-to-choose-coaching-institute-rohini-parents-guide): Parent's checklist for evaluating coaching centres in North Delhi.
-- [5 Things ESA Students Do Differently](https://www.theesa.in/blog/5-things-esa-students-do-differently-rohini-coaching): Habits that drive higher CBSE scores.
-- [Best Class 10 Coaching in Rohini](https://www.theesa.in/blog/best-class-10-coaching-rohini): What parents should look for in 2026.
+- [Best Coaching Center Near Me in Rohini: Why Parents Keep Choosing ESA Sector 7](https://www.theesa.in/blog/best-coaching-center-near-me-rohini-esa)
+- [Looking for an Expert Maths Teacher in Rohini? Join Excellent Students' Academy](https://www.theesa.in/blog/expert-maths-teacher-rohini-chandan-sir-esa)
+- [Why Excellent Students' Academy Is a Trusted Choice for Physics Coaching in Rohini](https://www.theesa.in/blog/physics-coaching-trusted-choice-rohini-esa)
+- [Why Excellent Students' Academy Is a Trusted Choice for Maths Coaching in Rohini](https://www.theesa.in/blog/maths-coaching-trusted-choice-rohini-esa)
+- [Why Excellent Students' Academy Is a Trusted Choice for Chemistry Coaching in Rohini](https://www.theesa.in/blog/chemistry-coaching-trusted-choice-rohini-esa)
+- [Is Your Child Getting the Right Support for Better Learning? A Rohini Parent's Guide](https://www.theesa.in/blog/right-support-for-better-learning-rohini-coaching)
+- [Are Strong Fundamentals the Key to Better Academic Results? What Rohini Toppers Get Right](https://www.theesa.in/blog/strong-fundamentals-better-academic-results-rohini)
+- [Build a Strong Academic Foundation with Expert Guidance for Every Subject in Rohini](https://www.theesa.in/blog/strong-academic-foundation-every-subject-rohini)
+- [Meet the ESA Toppers of 2026: How Class 10 and 12 Students from Rohini Scored 90+ in CBSE Boards](https://www.theesa.in/blog/esa-toppers-2026-class-10-12-rohini)
+- [How to Choose a Coaching Institute in Rohini: A Parent's Honest Checklist for 2026](https://www.theesa.in/blog/how-to-choose-coaching-institute-rohini-parents-guide)
+- [5 Things ESA Students Do Differently From Other Coaching Centres in Rohini](https://www.theesa.in/blog/5-things-esa-students-do-differently-rohini-coaching)
+- [Best Coaching for CBSE Class 10 Boards in Rohini: What to Look For in 2026](https://www.theesa.in/blog/best-class-10-coaching-rohini)
+- [Class 12 Science Coaching in Rohini: PCM Strategy for Boards + JEE Foundation](https://www.theesa.in/blog/class-12-science-pcm-coaching-rohini-2026)
+- [Class 11 Commerce Coaching in Rohini: Accounts, BST and Economics Made Simple](https://www.theesa.in/blog/class-11-commerce-coaching-rohini-stream-guide)
+- [Why Weekly Tests Work: The ESA Saturday Routine That Builds Board Exam Stamina](https://www.theesa.in/blog/weekly-test-system-board-exam-prep-rohini)
+- [When Class 9 Math Starts to Feel Hard: A Parent's Guide for Rohini Students](https://www.theesa.in/blog/math-anxiety-class-9-10-rohini-parents-guide)
+- [Free Demo Class in Rohini: What Parents Should Watch For in 7 Days](https://www.theesa.in/blog/free-demo-class-rohini-coaching-what-parents-should-look-for)
+- [Home Tuition vs Coaching Institute in Rohini: Which Actually Works for Your Child](https://www.theesa.in/blog/home-tuition-vs-coaching-institute-rohini-which-is-better)
 
 ## Key facts about ESA
 
 - Founded 2015 by Mr. Chandan Prajapati (B.Tech Mechanical Engineering)
-- 11 years of continuous operation in Rohini Sector 7
+- 11 years of continuous operation, now with four centres: Rohini Sector 7 (flagship), Rohini Sector 15, Shakurpur (Delhi) and Thakurganj (Lucknow)
 - 500+ students mentored since founding
 - Recent batch (2026 CBSE): 84% average board score, every student passed
 - 32 students in the recent batch scored above 90% in CBSE boards
-- Air-conditioned classrooms on two floors
+- Air-conditioned classrooms at every centre
 - Weekly Saturday chapter tests, scored within 48 hours, scorecards sent to parents on Monday
 - Monthly one-on-one parent meetings on the first Saturday of every month
 - 7 days of free demo classes for every prospective student (no registration fee, no commitment)
 - Faculty-prepared notes for Class 8 to 12
-- Home tuition available across Rohini, Pitampura, Shalimar Bagh, Model Town and nearby
+- Home tuition available across Rohini, Pitampura, Shalimar Bagh, Model Town, Shakurpur and nearby localities
+- Lucknow centre teaches bilingually (Hindi explanation, English answer-writing) for both CBSE and UP Board students
 
 ## Hours
 
@@ -52,13 +82,13 @@ Monday to Saturday: 10:00 AM to 8:30 PM. Sunday: Closed (occasional doubt sessio
 
 ## Frequently asked questions
 
-### Where is ESA located?
+### Where are ESA centres located?
 
-C7/72, 2nd Floor, Sector 7, Rohini, New Delhi 110085. Two minutes walk from the Rohini West metro side. We are the bright yellow signboard above Insurance Experts on the main road.
+Rohini Sector 7 (flagship, C7/72, 2nd Floor, New Delhi 110085), Rohini Sector 15 (New Delhi 110089), Shakurpur (Block G, Shakurpur Colony, Delhi 110034), and Thakurganj (Chowk, Hardoi Road, Lucknow, UP 226003).
 
 ### Which classes does ESA teach?
 
-Class 1 to Class 12, across CBSE, ICSE and State Boards. Subjects include Mathematics, Science, Social Science, English, Hindi, Sanskrit (Class 6 to 10), and Physics, Chemistry, Biology, Accountancy, Business Studies, Economics, Computer Science (Class 11 to 12).
+Class 1 to Class 12, across CBSE, ICSE and State Boards (plus UP Board at the Lucknow centre). Subjects include Mathematics, Science, Social Science, English, Hindi, Sanskrit (Class 6 to 10), and Physics, Chemistry, Biology, Accountancy, Business Studies, Economics, Computer Science (Class 11 to 12).
 
 ### How does the free demo work?
 
@@ -66,27 +96,27 @@ You sit through up to 7 days of real classes - the actual batch your child would
 
 ### How are the weekly tests structured?
 
-Every Saturday between 5 PM and 8 PM, ESA students write a chapter test on whatever was taught that week. Papers are scored within 48 hours and a scorecard is sent to parents on Monday morning via WhatsApp.
+Every Saturday, ESA students write a chapter test on whatever was taught that week. Papers are scored within 48 hours and a scorecard is sent to parents on Monday morning via WhatsApp. Same discipline at every centre.
 
 ### Does ESA do home tuition?
 
-Yes. Home tuition is available across Rohini, Pitampura, Shalimar Bagh, Model Town, Ashok Vihar and nearby North Delhi localities. Same faculty, same teaching method, in the comfort of your home.
+Yes, around the Delhi centres - Rohini, Pitampura, Shalimar Bagh, Model Town, Ashok Vihar, Shakurpur and nearby localities. Same faculty, same teaching method, in the comfort of your home.
 
-### What makes ESA different from other coaching institutes in Rohini?
+### What makes ESA different from other coaching institutes?
 
 Three things. First, batch sizes are capped so no student goes unnoticed. Second, faculty stay with the same batches for years rather than rotating gig-style. Third, ESA measures success on average board score across all students, not on a handful of toppers.
 
 ### Who is the founder of ESA?
 
-Mr. Chandan Prajapati, a B.Tech (Mechanical Engineering) graduate who realised teaching was his real calling. He still personally mentors every Class 11 and Class 12 Mathematics batch at the Rohini centre.
+Mr. Chandan Prajapati, a B.Tech (Mechanical Engineering) graduate who realised teaching was his real calling. He still personally mentors every Class 11 and Class 12 Mathematics batch at the Rohini Sector 7 flagship centre.
 
 ### What fees does ESA charge?
 
-Fees are nominal and intentionally accessible. Pricing is monthly and varies by class and subject combination. Contact us on WhatsApp at +91 8750663995 or call +91 9458012793 for the current fee structure.
+Fees are nominal and intentionally accessible. Pricing is monthly and varies by centre, class and subject combination. Contact the relevant centre on WhatsApp or phone for the current fee structure.
 
 ### Does ESA offer JEE / NEET preparation?
 
-ESA offers JEE and NEET foundation alongside board prep for Class 11 and 12 Science students. The focus is on building strong concept clarity through the board syllabus first, then layering competitive exam practice on top.
+ESA offers JEE and NEET foundation alongside board prep for Class 11 and 12 Science students at its Delhi centres. The focus is on building strong concept clarity through the board syllabus first, then layering competitive exam practice on top.
 
 ### Can a student enrol mid-year?
 
@@ -94,8 +124,9 @@ Yes. Mid-year admission is possible if there is room in the relevant batch. A di
 
 ## How to contact
 
-- WhatsApp (fastest): https://wa.me/918750663995
-- Phone: +91 9458012793 (10 AM to 8:30 PM, Mon to Sat)
+- Rohini Sector 7 (flagship): WhatsApp/Call +91 87506 63995
+- Rohini Sector 15: WhatsApp/Call +91 94580 12793
+- Shakurpur: WhatsApp/Call +91 94580 12793
+- Lucknow Thakurganj: WhatsApp/Call +91 97165 02093
 - Email: excellentstudentsacademy1@gmail.com
-- Visit: C7/72, 2nd Floor, Sector 7, Rohini, New Delhi 110085
 - Demo enquiry form: https://www.theesa.in/contact#enquiry
