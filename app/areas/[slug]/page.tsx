@@ -5,9 +5,39 @@ import { MapPin, ArrowRight, CheckCircle2 } from "lucide-react";
 import { Container } from "@/components/ui/Container";
 import { PageBanner } from "@/components/ui/PageBanner";
 import { SectionHeading } from "@/components/ui/SectionHeading";
-import { nearbyAreas } from "@/data/areas";
+import { nearbyAreas, type Area } from "@/data/areas";
 import { siteConfig, whatsappLink } from "@/data/site";
-import { breadcrumbSchema, jsonLd, shareMeta } from "@/lib/seo";
+import { breadcrumbSchema, faqSchema, jsonLd, shareMeta } from "@/lib/seo";
+
+function areaFaqs(area: Area) {
+  const commute =
+    area.distanceKm === 0
+      ? "You're right in Sector 7 - walking distance to the centre."
+      : area.distanceKm < 3
+        ? `Under 10 minutes by auto or e-rickshaw, about ${area.distanceKm} km.`
+        : area.distanceKm < 6
+          ? `12 to 18 minutes by auto, about ${area.distanceKm} km.`
+          : `20 to 30 minutes by auto or metro, about ${area.distanceKm} km.`;
+
+  return [
+    {
+      question: `Does ESA offer coaching for students from ${area.name}?`,
+      answer: `Yes. Excellent Students' Academy's Rohini Sector 7 centre teaches Class 1 to 12 students from ${area.name} across Math, Science, Commerce, English and all CBSE/ICSE subjects, with several current students commuting from ${area.name} every day.`,
+    },
+    {
+      question: `How far is ESA from ${area.name}, and how do students get there?`,
+      answer: `${commute} Our centre is at ${siteConfig.address.line1}, ${siteConfig.address.line2}, ${siteConfig.address.city} ${siteConfig.address.pin}.${area.transport ? ` ${area.transport} is the most common way students reach us.` : ""}`,
+    },
+    {
+      question: `Is home tuition available in ${area.name}?`,
+      answer: `Yes, home tuition is available in ${area.name} on request, taught by the same faculty using the same weekly-test method as our Sector 7 centre.`,
+    },
+    {
+      question: `Can I book a free demo class for my child from ${area.name}?`,
+      answer: `Yes - 7 days of free demo classes, no registration fee. Your child sits in the actual batch they would join, meets the faculty, and you decide only after. WhatsApp ${siteConfig.whatsappDisplay} or call ${siteConfig.phoneDisplay} to book a slot.`,
+    },
+  ];
+}
 
 export function generateStaticParams() {
   return nearbyAreas.map((a) => ({ slug: a.slug }));
@@ -61,10 +91,12 @@ export default async function AreaPage({
     { name: "Areas", href: "/areas/rohini-sector-7" },
     { name: area.name, href: `/areas/${area.slug}` },
   ]);
+  const faqs = areaFaqs(area);
 
   return (
     <div>
       <script {...jsonLd(breadcrumb)} />
+      <script {...jsonLd(faqSchema(faqs))} />
       <PageBanner
         label={`Coaching · ${area.name}`}
         image="https://images.unsplash.com/photo-1543269865-cbf427effbad?auto=format&fit=crop&w=1920&q=80"
@@ -203,6 +235,35 @@ export default async function AreaPage({
                 </div>
                 <ArrowRight className="h-4 w-4 text-muted transition group-hover:translate-x-0.5 group-hover:text-teal-700" />
               </Link>
+            ))}
+          </div>
+        </Container>
+      </section>
+
+      <section className="border-t border-neutral-200 bg-neutral-50 py-16 sm:py-20">
+        <Container>
+          <SectionHeading
+            eyebrow="FAQs"
+            title={
+              <>
+                Questions parents in{" "}
+                <span className="text-charcoal">{area.name}</span> ask us
+              </>
+            }
+          />
+          <div className="mx-auto mt-8 max-w-3xl space-y-5">
+            {faqs.map((f) => (
+              <div
+                key={f.question}
+                className="rounded-2xl border border-neutral-200 bg-white p-6"
+              >
+                <h3 className="text-base font-bold text-charcoal">
+                  {f.question}
+                </h3>
+                <p className="mt-2 text-sm leading-relaxed text-charcoal-soft">
+                  {f.answer}
+                </p>
+              </div>
             ))}
           </div>
         </Container>
