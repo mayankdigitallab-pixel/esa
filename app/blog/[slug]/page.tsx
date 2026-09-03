@@ -5,8 +5,8 @@ import { notFound } from "next/navigation";
 import { ArrowRight, ChevronRight } from "lucide-react";
 import { Container } from "@/components/ui/Container";
 import { blogPosts } from "@/data/blog";
-import { siteConfig } from "@/data/site";
-import { articleSchema, breadcrumbSchema, jsonLd } from "@/lib/seo";
+import { siteConfig, whatsappLink } from "@/data/site";
+import { articleSchema, breadcrumbSchema, faqSchema, jsonLd } from "@/lib/seo";
 
 export function generateStaticParams() {
   return blogPosts.map((p) => ({ slug: p.slug }));
@@ -31,6 +31,7 @@ export async function generateMetadata({
       "CBSE coaching tips",
       "coaching in Rohini",
       "Excellent Students Academy",
+      ...(post.keywords ?? []),
     ],
     openGraph: {
       title: post.title,
@@ -75,6 +76,9 @@ export default async function BlogPostPage({
     <div className="bg-neutral-50">
       <script {...jsonLd(articleSchema(post))} />
       <script {...jsonLd(breadcrumb)} />
+      {post.faqs && post.faqs.length > 0 && (
+        <script {...jsonLd(faqSchema(post.faqs))} />
+      )}
 
       <article className="pb-20">
         {/* Breadcrumb */}
@@ -159,6 +163,36 @@ export default async function BlogPostPage({
               />
             </div>
 
+            {/* FAQ */}
+            {post.faqs && post.faqs.length > 0 && (
+              <div className="border-t border-neutral-200 px-6 py-12 sm:px-10">
+                <p className="text-[11px] font-bold uppercase tracking-[0.22em] text-teal-700">
+                  FAQs
+                </p>
+                <h2
+                  className="mt-3 text-charcoal"
+                  style={{
+                    fontSize: "clamp(1.4rem, 2.4vw, 1.9rem)",
+                    fontWeight: 700,
+                    letterSpacing: "-0.02em",
+                    lineHeight: 1.15,
+                  }}
+                >
+                  Frequently asked questions
+                </h2>
+                <div className="mt-6 space-y-5">
+                  {post.faqs.map((f) => (
+                    <div key={f.question} className="border-b border-neutral-200 pb-5">
+                      <h3 className="text-base font-bold text-charcoal">{f.question}</h3>
+                      <p className="mt-2 text-sm leading-relaxed text-charcoal-soft">
+                        {f.answer}
+                      </p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
+
             {/* Company CTA */}
             <div className="border-t border-neutral-200 bg-charcoal px-6 py-12 text-center text-white sm:px-10">
               <p className="text-[11px] font-bold uppercase tracking-[0.22em] text-teal-300">
@@ -183,6 +217,14 @@ export default async function BlogPostPage({
                   Book Free Demo
                   <ArrowRight className="h-4 w-4" />
                 </Link>
+                <a
+                  href={whatsappLink(`Hi, I'd like to book a free demo. I read the "${post.title}" blog.`)}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 rounded-lg border border-white/30 px-5 py-3 text-sm font-semibold text-white transition hover:bg-white/10"
+                >
+                  WhatsApp {siteConfig.whatsappDisplay}
+                </a>
                 <Link
                   href="/programs"
                   className="inline-flex items-center gap-2 rounded-lg border border-white/30 px-5 py-3 text-sm font-semibold text-white transition hover:bg-white/10"
@@ -190,6 +232,9 @@ export default async function BlogPostPage({
                   Explore programs
                 </Link>
               </div>
+              <p className="mx-auto mt-6 max-w-xl text-xs leading-relaxed text-white/60">
+                {siteConfig.name} &middot; {siteConfig.address.line1}, {siteConfig.address.line2}, {siteConfig.address.city} {siteConfig.address.pin} &middot; Call {siteConfig.phoneDisplay}
+              </p>
             </div>
           </div>
         </Container>

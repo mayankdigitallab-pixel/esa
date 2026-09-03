@@ -170,6 +170,19 @@ export function faqPageSchema() {
   };
 }
 
+/** Generic FAQPage JSON-LD for a given set of Q&A pairs (e.g. a blog post's FAQ section). */
+export function faqSchema(items: { question: string; answer: string }[]) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: items.map((f) => ({
+      "@type": "Question",
+      name: f.question,
+      acceptedAnswer: { "@type": "Answer", text: f.answer },
+    })),
+  };
+}
+
 /** Course list JSON-LD for /programs. */
 export function courseListSchema() {
   return {

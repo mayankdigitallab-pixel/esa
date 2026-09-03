@@ -1,3 +1,5 @@
+import { siteConfig, whatsappLink } from "@/data/site";
+
 export type BlogPost = {
   slug: string;
   title: string;
@@ -9,9 +11,611 @@ export type BlogPost = {
   cover: string;
   excerpt: string;
   body: string;
+  faqs?: { question: string; answer: string }[];
+  keywords?: string[];
 };
 
 export const blogPosts: BlogPost[] = [
+  {
+    slug: "best-coaching-center-near-me-rohini-esa",
+    title: "Best Coaching Center Near Me in Rohini: Why Parents Keep Choosing ESA Sector 7",
+    description:
+      "Searching for the best coaching center near you in Rohini? Here is what actually separates a good local coaching institute from an average one, and why ESA Sector 7 is the answer for hundreds of Rohini families.",
+    date: "2026-08-19",
+    readTime: "6 min read",
+    category: "Parent Guide",
+    author: "ESA Editorial",
+    cover:
+      "https://images.unsplash.com/photo-1577896851231-70ef18881754?auto=format&fit=crop&w=1200&q=80",
+    excerpt:
+      "Typing 'best coaching center near me' gives you a map full of pins, not an answer. Here is how Rohini parents actually narrow it down, and why Excellent Students' Academy Sector 7 keeps coming out on top.",
+    keywords: [
+      "best coaching center near me Rohini",
+      "coaching institute Sector 7 Rohini",
+      "CBSE coaching near me Rohini",
+      "tuition classes Rohini Pitampura Shalimar Bagh",
+      "coaching center Rohini Sector 7",
+      "best tuition Rohini Ashok Vihar",
+    ],
+    body: `<p>Every parent's coaching search in Rohini starts the same way. A Google search for "best coaching center near me", a map full of pins, and no real way to tell which one is actually good. Proximity matters, but it is not the deciding factor. What matters is what happens inside the classroom once your child walks in.</p>
+
+<p>We run Excellent Students' Academy out of Sector 7, Rohini, and most of our students live within a fifteen minute walk or a short auto ride. Here is what we think "near me" should actually mean, beyond distance on a map.</p>
+
+<figure><img src="https://images.unsplash.com/photo-1577896851231-70ef18881754?auto=format&fit=crop&w=1200&q=80" alt="Excellent Students Academy coaching centre building in Rohini Sector 7, New Delhi" loading="lazy" width="1200" height="800" /><figcaption>Excellent Students' Academy, Sector 7 Rohini - the coaching centre most searched families in the area walk into first.</figcaption></figure>
+
+<h2>Near enough to actually attend every day</h2>
+<p>The best coaching institute near you is the one your child will not skip because the commute is exhausting. A centre thirty minutes away sounds fine in September and becomes a missed Saturday test by December. ESA sits in the middle of Sector 7, walkable or a five-minute ride for most of Rohini, Pitampura and Shalimar Bagh families, and a short auto or two-wheeler ride from Rohini Sector 3, 5, 9, 11, 13, 15, 17, Ashok Vihar, Mukherjee Nagar and Saraswati Vihar.</p>
+
+<h2>What "best" should actually mean locally</h2>
+<ul>
+<li><strong>Small batches.</strong> We cap batches around 18 students so every child gets seen every day, not once a month.</li>
+<li><strong>Weekly Saturday tests.</strong> Every Saturday, without exception. This is the single biggest driver of the score jump our students see.</li>
+<li><strong>Subject specialist faculty.</strong> Maths (Mr. Chandan Prajapati, Mr. Rahul), Physics (Mr. Prateek), Chemistry (Mr. Amit), Biology (Ms. Faujiya), Commerce and Social Science are each taught by a dedicated specialist, not one generalist covering everything.</li>
+<li><strong>Monthly parent meetings.</strong> A proper fifteen-minute sit-down with the actual subject teacher, not a hallway update.</li>
+<li><strong>Faculty consistency.</strong> The teacher named in your child's batch is the one who shows up every day. No swaps, no substitutes.</li>
+<li><strong>Transparent fees.</strong> One clear monthly number for the subject combination you enrol for, confirmed on a call, not changed once you reach the centre.</li>
+</ul>
+
+<figure><img src="https://images.unsplash.com/photo-1497486751825-1233686d5d80?auto=format&fit=crop&w=1200&q=80" alt="Subject specialist faculty teaching a small batch at the best coaching center in Rohini Sector 7, ESA" loading="lazy" width="1200" height="800" /><figcaption>Small batches, subject specialist faculty and weekly testing - the three things worth checking before choosing any coaching centre near you.</figcaption></figure>
+
+<h2>Why proximity plus discipline beats proximity alone</h2>
+<p>There are other coaching centres closer to some Rohini pockets than ours. What we hear from parents who switch to us is rarely about distance. It is about what happens once the child is inside the room. A test that actually happens every Saturday. A doubt that gets answered the same day, not "in the next class". A teacher who knows their child's name and their weak chapter.</p>
+
+<h2>What our current families say</h2>
+<p>Ask any of our 32 plus students who crossed 90 percent this year, and the story is rarely about the location. It is about the Saturday test they could not skip, the doubt session that ran past 9 PM, and the teacher who stayed with their batch for three years straight.</p>
+
+<h2>Serving families across North West Delhi</h2>
+<p>While we are based in Sector 7, our students regularly come from Rohini Sector 3, 5, 9, 11, 13, 15 and 17, as well as Pitampura, Shalimar Bagh, Ashok Vihar, Mukherjee Nagar, Kohat Enclave, Saraswati Vihar and Rani Bagh. If your "coaching center near me" search is coming from any of these areas, our Sector 7 centre is built to be within easy reach.</p>
+
+<h2>What each subject looks like at ESA, briefly</h2>
+<p>Maths for Class 6 to 10 is led by Mr. Rahul and for Class 11-12 by Mr. Chandan Prajapati, both using an explain-demonstrate-practice-retest method. Physics for Class 11-12 is led by Mr. Prateek with a problem-solving-first approach built around numericals rather than formula recall. Chemistry for Class 11-12 is led by Mr. Amit, who treats Organic, Inorganic and Physical Chemistry as three distinct teaching tracks. Biology, Commerce and Social Science are each handled by dedicated subject faculty as well, and every subject follows the same weekly Saturday testing discipline described throughout this article.</p>
+
+<h2>What a full week at ESA Rohini actually looks like</h2>
+<p>Monday to Friday evenings are teaching sessions built around the four-step method used across every subject: explain, demonstrate, standalone practice, then a variation to confirm the concept has actually stuck. Saturday is test day across every batch, chapter tests corrected and returned within 48 hours with a specific mistake note, not just a score. The first Saturday of the month is reserved for structured parent meetings, a proper fifteen-minute sit-down with the subject teacher rather than a rushed hallway update. This weekly rhythm, repeated for months, is what our 32 plus 90 percent scorers this year all went through, regardless of which subject or class they were in.</p>
+
+<h2>Facility and fee transparency</h2>
+<p>Our Sector 7 classrooms are air-conditioned, with dedicated whiteboard stations for worked examples and diagrams across Maths, Physics and Chemistry. Batch sizes are capped around 18 students across subjects. Fees depend on the class and subject combination chosen and are confirmed clearly on a call before your visit, with the same number applying once you reach the centre, never a different figure quoted in person.</p>
+
+<h2>How to actually judge "near me" options</h2>
+<p>Do not stop at the map pin. Walk in. Ask for a real batch to sit in for a week, not a curated demo. Ask for the batch size. Ask who teaches, and confirm that person actually shows up. Ask to see last month's test papers and the fee sheet in writing. Do this for every institute within your radius, including us, before deciding.</p>
+
+<h2>Coaching institute versus home tuition near you</h2>
+<p>Some searches for "best coaching near me" are really a decision between a coaching institute and a home tutor. Our honest view, from running both a coaching centre and a home tuition service across Rohini, Pitampura and Shalimar Bagh, is that home tuition works better for Classes 1 to 4 and for closing a specific short-term gap, while a coaching institute works better for Classes 9 to 12, where peer learning, weekly testing and exam-hall discipline matter more than one-on-one pacing. Many of our families use both at different points, home tuition for one weak subject alongside a coaching batch for the rest.</p>
+
+<h2>What to expect on your first visit</h2>
+<p>Walk in on any working day without an appointment. Someone from our team will walk you through the current batch timings for your child's class, the subjects covered, and the exact monthly fee for the combination you are considering. If you are ready, your child can start the free 7-day demo the very next working day, sitting in the same batch they would join permanently.</p>
+
+<h2>Directions and accessibility</h2>
+<p>Our centre is on the second floor at ${siteConfig.address.line1}, ${siteConfig.address.line2}, ${siteConfig.address.city} ${siteConfig.address.pin}, a short walk from the main Sector 7 market and easily reached by auto rickshaw from the Rohini area metro stations. Parking for two-wheelers is available near the building for parents dropping off younger children.</p>
+
+<h2>Questions worth asking any "near me" coaching centre, including us</h2>
+<p>Before you commit a full academic year and a meaningful monthly fee, a short list of direct questions filters out most bad decisions quickly. Ask exactly how many students sit in the batch your child would join, not the institute's overall enrolment number. Ask to see the actual weekly or monthly test calendar for the next two months, not just a general claim that "we test regularly." Ask whether the faculty member you are told will teach your child is the same person who will show up on a random Tuesday six months from now. Ask what happens, in concrete terms, if your child misses a class due to illness or a family function. At ESA, our answers to all four are on the record and open to verification during your free demo week.</p>
+
+<h2>Why 32 plus 90 percent scorers matter more than a slogan</h2>
+<p>Marketing slogans are cheap to print. A results sheet with 32 or more students crossing 90 percent in a single board cycle, from one centre, across Class 10 and Class 12, is far harder to fabricate and far more useful to a parent deciding where to enrol. We share our full results sheet, not just topper photos, with any parent who asks during their visit, specifically so the "best coaching center near me" decision can be based on verifiable numbers rather than a wall poster.</p>
+
+<h2>A quick summary for parents short on time</h2>
+<p>If you only take one thing from this article, let it be this: judge any coaching centre near you by whether the Saturday test genuinely happens every week without fail, whether the named teacher is the one who actually shows up, and whether the batch size stays small enough for individual attention. Distance on the map is the least useful filter of the three.</p>
+
+<h2>Coming from further away in North Delhi?</h2>
+<p>Beyond our immediate Rohini and Pitampura catchment, we also welcome enquiries from families in Model Town, Punjabi Bagh, Shastri Nagar, Adarsh Nagar and Wazirpur who are willing to travel for a coaching centre with a verifiable weekly-test track record. For these families we usually recommend weekend batches or a slightly earlier evening slot to make the commute more manageable alongside school hours, and our team is happy to work out a timing that fits before you commit to the demo week.</p>
+
+<h2>One last thing before you decide</h2>
+<p>Whichever coaching centre you eventually choose near your home in Rohini, Pitampura, Shalimar Bagh or beyond, insist on the free trial week before paying a full month's fee anywhere. A genuine institute will never hesitate to let your child sit in a real batch first. If an institute pushes hard for payment before letting you observe an actual class, treat that as your answer.</p>
+
+<p>Save this checklist before your next coaching visit, whether it is to us or anywhere else near you: real batch size, weekly test proof, named and verified faculty, and a clear written fee. Four questions, five minutes, and a far better decision than the map pin alone would have given you, whether you end up at our Sector 7 centre or elsewhere in Rohini.</p>
+
+<p>We would still love the chance to show you our classrooms first, so reach out whenever you are ready to compare, and bring this checklist along whichever centre you end up visiting, ours included, so the final decision is based on what you and your child actually see and experience in person, rather than on what any single brochure, advertisement or blog post ever claims.</p>
+
+<h3>Visit ESA Sector 7, Rohini</h3>
+<p>If you are searching for the best coaching center near you in Rohini, walk into our centre at ${siteConfig.address.line1}, ${siteConfig.address.line2}, ${siteConfig.address.city} ${siteConfig.address.pin}, call ${siteConfig.phoneDisplay}, or WhatsApp <a href="${whatsappLink("Hi, I'm looking for a coaching centre near me in Rohini. Can I book a free demo?")}" target="_blank" rel="noopener noreferrer">${siteConfig.whatsappDisplay}</a>. Book a free 7-day demo, sit in the actual batch your child would join, and decide after.</p>`,
+    faqs: [
+      {
+        question: "Where exactly is Excellent Students' Academy located?",
+        answer: `Our flagship centre is at ${siteConfig.address.line1}, ${siteConfig.address.line2}, ${siteConfig.address.city} ${siteConfig.address.pin}, easily reachable from all Rohini sectors, Pitampura, Shalimar Bagh and Ashok Vihar.`,
+      },
+      {
+        question: "Which areas does ESA Rohini serve besides Sector 7?",
+        answer:
+          "We regularly have students from Rohini Sector 3, 5, 9, 11, 13, 15 and 17, as well as Pitampura, Shalimar Bagh, Ashok Vihar, Mukherjee Nagar, Kohat Enclave and Saraswati Vihar.",
+      },
+      {
+        question: "What subjects and classes does ESA cover?",
+        answer:
+          "Classes 1 to 12 across Mathematics, Physics, Chemistry, Biology, Commerce (Accountancy, Business Studies, Economics), Social Science and English, plus JEE and NEET foundation for Science students.",
+      },
+      {
+        question: "How is ESA different from a generic tuition centre near me?",
+        answer:
+          "Small batches capped around 18, subject-specialist faculty for every subject, weekly Saturday tests, monthly parent meetings and faculty who stay with the same batch for years, not rotating teachers.",
+      },
+      {
+        question: "Is there a free demo before I enrol?",
+        answer: `Yes, we offer a free 7-day demo where your child attends the actual batch they would join. Call ${siteConfig.phoneDisplay} or WhatsApp ${siteConfig.whatsappDisplay} to book.`,
+      },
+      {
+        question: "What are the fees at ESA Rohini?",
+        answer:
+          "Fees depend on the class and subject combination. We share one clear monthly number on a call, confirmed before you visit, with no hidden line items added at the centre.",
+      },
+    ],
+  },
+  {
+    slug: "expert-maths-teacher-rohini-chandan-sir-esa",
+    title: "Looking for an Expert Maths Teacher in Rohini? Join Excellent Students' Academy",
+    description:
+      "Searching for an expert Maths teacher in Rohini for Class 11-12? Meet Mr. Chandan Prajapati at Excellent Students' Academy Sector 7 and see what makes his teaching method produce consistent 90+ scorers.",
+    date: "2026-08-22",
+    readTime: "6 min read",
+    category: "Faculty Spotlight",
+    author: "ESA Editorial",
+    cover:
+      "https://images.unsplash.com/photo-1571260899304-425eee4c7efc?auto=format&fit=crop&w=1200&q=80",
+    excerpt:
+      "A good Maths score is rarely about the student alone. It is about whether the teacher explains a concept, demonstrates it, and then makes the student solve it standalone before moving on. Here is how Chandan sir does exactly that at ESA Rohini.",
+    keywords: [
+      "expert Maths teacher Rohini",
+      "Chandan sir Maths ESA Rohini",
+      "Class 11 12 Maths teacher near me",
+      "best Maths tutor Sector 7 Rohini",
+      "Maths teacher Pitampura Shalimar Bagh",
+      "CBSE Maths coaching Rohini",
+    ],
+    body: `<p>If you have been searching for an expert Maths teacher in Rohini for your Class 11 or 12 child, the search usually ends the same way. A recommendation, a demo class, and then a decision based on one thing: does the child actually understand what is being taught, or are they just copying it down.</p>
+
+<p>At Excellent Students' Academy Sector 7, our Class 11-12 Maths programme is led by <strong>Mr. Chandan Prajapati</strong>. Here is what parents and students from Rohini, Pitampura and Shalimar Bagh consistently tell us makes his classroom different.</p>
+
+<figure><img src="https://images.unsplash.com/photo-1571260899304-425eee4c7efc?auto=format&fit=crop&w=1200&q=80" alt="Mr. Chandan Prajapati teaching an expert Maths class at ESA Rohini Sector 7" loading="lazy" width="1200" height="800" /><figcaption>Mr. Chandan Prajapati leads Class 11-12 Maths at ESA Rohini Sector 7.</figcaption></figure>
+
+<h2>The four-step method</h2>
+<p>Every new concept in Chandan sir's classroom goes through the same sequence. First it is explained. Then it is demonstrated on the board, step by step. Then the student solves an identical problem standalone, with no help. Then a slightly different variation is given immediately, so the concept is tested in a new wrapper before the class moves on. Nothing is marked "done" until the student can do it alone.</p>
+
+<h2>Doubts resolved in the same session</h2>
+<p>A doubt raised in Chandan sir's class is not deferred to "the next class" or "after the lecture." It is addressed on the spot, because a Maths gap left unresolved compounds. By the time the next chapter builds on it, an unresolved doubt from two weeks ago becomes the reason a student cannot follow the current lesson.</p>
+
+<h2>Weekly testing that tracks real understanding</h2>
+<p>Every Saturday, Chandan sir's students write a chapter test on whatever was taught that week. Papers are corrected by him personally within 48 hours, and the specific mistake pattern, not just the score, is shared with the student and the parent on WhatsApp. This is how a shaky topic gets caught in week one instead of resurfacing in the board exam.</p>
+
+<figure><img src="https://images.unsplash.com/photo-1456406644174-8ddd4cd52a06?auto=format&fit=crop&w=1200&q=80" alt="Students writing a weekly Saturday Maths test under Chandan sir at ESA Rohini Sector 7" loading="lazy" width="1200" height="800" /><figcaption>Every Saturday, Chandan sir's students write a chapter test corrected within 48 hours.</figcaption></figure>
+
+<h2>Why this matters for Class 11-12 Maths specifically</h2>
+<p>Class 11-12 Maths carries some of the highest-weightage, highest-scoring topics in the CBSE syllabus: Integration, Vectors, 3D Geometry, Probability and Calculus. These topics reward fluency built over months, not last-minute revision. Chandan sir's Class 12 batch finishes the full syllabus well before the board date, leaving substantial time purely for mock papers and revision.</p>
+
+<h2>Why parents specifically look for an "expert" Maths teacher, not just any tutor</h2>
+<p>There is a real difference between a tutor who can solve a Class 12 Maths problem and a teacher who can diagnose exactly why a student is stuck on it. An expert Maths teacher recognises within a few questions whether a student's struggle is with the current chapter or with an unresolved Class 9 or 10 concept underneath it. Chandan sir's diagnostic approach with every new student is built around exactly this distinction, which is why families from Rohini Sector 3, 5, 9, 11, 13, 15, 17, as well as Pitampura, Shalimar Bagh and Ashok Vihar, specifically ask for him by name when enquiring about Maths coaching.</p>
+
+<h2>What a first month under Chandan sir typically looks like</h2>
+<p>New students usually go through a short diagnostic conversation in the first week, not a formal test, where Chandan sir figures out which earlier concept is actually holding the student back. The first two to three weeks then focus on tightening that specific gap alongside the current syllabus, rather than pretending the gap does not exist. By the first Saturday test, most students are already being tested purely on the current chapter, with the earlier gap no longer showing up as a recurring mistake.</p>
+
+<h2>Batch details, fees and facility</h2>
+<p>Chandan sir's Class 11-12 Maths batches run Monday to Saturday, capped around 18 students per batch so that standalone problem-solving can be checked individually during class, not just inferred from the Saturday test. Fees are confirmed clearly on a call based on the exact class and subject combination, with no changes once you arrive at the centre. The Sector 7 classroom used for senior Maths batches has dedicated whiteboard space for long-form derivations in Calculus, Vectors and 3D Geometry, and a WhatsApp broadcast group keeps parents updated with weekly scores and specific mistake notes.</p>
+
+<h2>What students say</h2>
+<p>Ayush Goel, one of our 2026 toppers, scored 99 in Maths under Chandan sir's guidance. His own words: "Weekly tests prepared me for the real board pressure. By exam day it just felt like another Saturday." Other students describe the same pattern: the standalone-practice step feels slower in the first few weeks compared to just watching a solved example, but it is what actually makes the concept stick for the board exam months later.</p>
+
+<h2>Who this teaching style suits, and who should look elsewhere</h2>
+<p>Chandan sir's method works best for students willing to actually attempt a problem standalone in class, even if they get it wrong the first time, rather than students looking for someone to simply hand them a solved example to copy. If your child needs to be pushed gently to try before being shown the answer, this classroom is built exactly for that. If your child already has strong Maths fundamentals and mainly needs speed drills for JEE, that is also covered within the same syllabus timeline, since the full course finishes well before boards.</p>
+
+<h2>How to check this for yourself</h2>
+<p>Do not take our word for it. Sit your child in an actual Chandan sir batch for a week, not a one-off demo class. Watch how a doubt is handled. Watch whether he checks that every student in the room can solve the problem alone before moving to the next one. Ask to see the diagnostic notes made for a new student in the first week, and how the plan changed based on what was found.</p>
+
+<h2>Beyond the classroom: how doubts are tracked between sessions</h2>
+<p>Not every doubt surfaces conveniently during class hours. Chandan sir's batches use a WhatsApp broadcast group where students can flag a specific question number they got stuck on while doing homework, and it gets addressed at the start of the very next session rather than being lost between classes. Parents are added to a separate update thread that shares only test scores and mistake notes, keeping the student group focused purely on academic doubts.</p>
+
+<h2>How this compares to a private home tutor for Maths</h2>
+<p>A private home tutor can certainly explain a concept one-on-one, but cannot replicate the effect of a student watching a classmate solve the same problem through a different, sometimes faster route. Chandan sir's classroom keeps batch sizes small enough, around 18 students, that the individual attention of a home tutor and the peer-learning benefit of a batch both remain available at the same time. For a student who has a very specific, narrow gap, a short home tuition stint before joining the batch is sometimes the better sequence, and we say so honestly when parents ask.</p>
+
+<h2>What "expert" looks like in an actual Saturday test correction</h2>
+<p>Pick up any corrected Saturday paper from Chandan sir's batch and the difference from a generic tutor's red pen becomes obvious. Marks are not just deducted; the specific step where the logic broke down is circled, with a one-line note on what to revisit. Over a term, a student's corrected papers become a readable record of exactly which concepts needed a second pass, which is far more useful heading into boards than a stack of scores with no context.</p>
+
+<h2>Enrolling with Chandan sir's batch</h2>
+<p>Call or WhatsApp us with your child's current class, and we will confirm which of Chandan sir's Class 11 or 12 Maths batch timings currently has an open seat, along with the exact fee for that combination. We recommend visiting for the free 7-day demo before committing, so you and your child can judge the classroom firsthand rather than relying on this article alone.</p>
+
+<h2>Reaching Chandan sir's batch from across North West Delhi</h2>
+<p>Students travel to this specific Maths batch from well beyond Sector 7 itself. Families from Rohini Sector 3, 5, 9, 11, 13, 15 and 17 typically reach the centre in under fifteen minutes by auto, while students from Pitampura, Shalimar Bagh, Ashok Vihar and Mukherjee Nagar usually manage the commute in twenty to twenty five minutes on a two-wheeler or shared auto. For many of these families, the deciding factor in accepting a slightly longer commute than the nearest generic tuition centre was simple: they wanted their child taught by a named, verifiable Maths specialist rather than whichever teacher happened to be free that evening at a closer option.</p>
+
+<h2>What makes this different from Maths tuition apps and video courses</h2>
+<p>Recorded Maths lectures and app-based courses cannot see whether a student actually solved the standalone problem correctly or copied the next step from the video. Chandan sir's classroom is built around the opposite principle: every student attempts every problem live, in the room, where a wrong step is caught and corrected within seconds rather than discovered three chapters later at test time. For a subject as sequential as Maths, where one unresolved gap directly breaks the next topic, this real-time correction is difficult to replace with any recorded format.</p>
+
+<h2>A teacher parents can actually reach</h2>
+<p>Beyond the classroom, one detail parents mention repeatedly is accessibility. Chandan sir is reachable through the batch WhatsApp channel for genuine academic queries, and the monthly parent meeting is a real fifteen-minute conversation about your specific child, not a scripted general update read out to a room of parents at once. For a subject where parents often feel locked out of understanding what their child is actually stuck on, this level of direct access is, by itself, a meaningful reason many Rohini families describe him as an expert Maths teacher worth commuting for.</p>
+
+<h2>Bringing prior test papers to your first visit</h2>
+<p>If you are booking the free demo, bring your child's most recent school Maths papers or report card along, if you have them. It gives Chandan sir a starting reference point before the diagnostic conversation even begins, which usually means the first week's placement within the batch is more accurate and less trial-and-error.</p>
+
+<p>If your search for an "expert Maths teacher in Rohini" started because of a specific recent score drop, mention that directly on your first call. It helps us route your child straight to the diagnostic conversation instead of a generic enquiry, and gets the actual fix started sooner rather than waiting for the first monthly parent meeting to raise it.</p>
+
+<p>We would rather have that conversation early than watch a preventable gap turn into a term-exam surprise.</p>
+
+<h3>Meet Chandan sir at ESA Rohini</h3>
+<p>Book a free 7-day demo at our centre at ${siteConfig.address.line1}, ${siteConfig.address.line2}, ${siteConfig.address.city} ${siteConfig.address.pin} and sit in an actual Class 11-12 Maths batch taught by Mr. Chandan Prajapati. Call ${siteConfig.phoneDisplay} or WhatsApp <a href="${whatsappLink("Hi, I'd like to book a free Maths demo class with Chandan sir.")}" target="_blank" rel="noopener noreferrer">${siteConfig.whatsappDisplay}</a> to book.</p>`,
+    faqs: [
+      {
+        question: "Who is Chandan sir at ESA Rohini?",
+        answer:
+          "Mr. Chandan Prajapati is our Class 11-12 Maths faculty at the Sector 7 centre, known for a four-step teaching method: explain, demonstrate, standalone practice, then an immediate variation to lock in the concept.",
+      },
+      {
+        question: "How does Chandan sir handle doubts in class?",
+        answer:
+          "Doubts are addressed the same session they come up, not deferred, because an unresolved Maths gap compounds quickly once the next chapter builds on it.",
+      },
+      {
+        question: "Does Chandan sir also help students prepare for competitive exams?",
+        answer:
+          "His Class 12 batch finishes the CBSE syllabus well ahead of boards, which also gives students a stronger base for JEE-level Maths problems in the remaining months.",
+      },
+      {
+        question: "How can I find out if my child's specific Maths gap will be addressed?",
+        answer:
+          "New students go through a diagnostic conversation to identify whether the current struggle is with the present chapter or an earlier unresolved concept, which is then fixed first.",
+      },
+      {
+        question: "Is ESA Rohini accessible from outside Rohini, like Pitampura?",
+        answer:
+          "Yes, our Sector 7 centre is a short ride from Pitampura, Shalimar Bagh, Ashok Vihar and every major Rohini sector.",
+      },
+      {
+        question: "Can I book a trial class with Chandan sir specifically?",
+        answer: `Yes, mention Chandan sir's Class 11-12 Maths batch when you call ${siteConfig.phoneDisplay} or WhatsApp ${siteConfig.whatsappDisplay} to book your free demo.`,
+      },
+    ],
+  },
+  {
+    slug: "physics-coaching-trusted-choice-rohini-esa",
+    title: "Why Excellent Students' Academy Is a Trusted Choice for Physics Coaching in Rohini",
+    description:
+      "Looking for reliable Physics coaching in Rohini for Class 11-12? Here is why parents trust ESA Sector 7 and how Mr. Prateek's problem-solving-first method builds both board and JEE-level fluency.",
+    date: "2026-08-26",
+    readTime: "7 min read",
+    category: "Subject Spotlight",
+    author: "ESA Editorial",
+    cover:
+      "https://images.unsplash.com/photo-1497486751825-1233686d5d80?auto=format&fit=crop&w=1200&q=80",
+    excerpt:
+      "Physics is the subject where students either build genuine problem-solving instinct or spend two years memorising formulas that fall apart under a slightly different question. Here is how ESA Rohini builds the former.",
+    keywords: [
+      "Physics coaching Rohini",
+      "Class 11 12 Physics tuition Sector 7 Rohini",
+      "best Physics teacher Rohini",
+      "JEE Physics foundation Rohini",
+      "Physics tuition near me Pitampura",
+      "numerical problem solving Physics coaching",
+    ],
+    body: `<p>Physics has a reputation among CBSE students in Rohini as the subject you either "get" or you do not. That reputation is misleading. Physics is learnable like any other subject, provided the teaching method is built around solving problems, not just covering formulas. This is exactly why parents across Rohini Sector 3, 5, 7, 9, 11, 13, 15 and 17, along with Pitampura, Shalimar Bagh and Ashok Vihar, choose Excellent Students' Academy Sector 7 for Class 11-12 Physics coaching.</p>
+
+<figure><img src="https://images.unsplash.com/photo-1453733190371-0a9bedd82893?auto=format&fit=crop&w=1200&q=80" alt="Class 12 Physics numerical problem solving session at ESA Rohini Sector 7 coaching centre" loading="lazy" width="1200" height="800" /><figcaption>Problem-solving-first Physics teaching at ESA Rohini Sector 7, led by Mr. Prateek.</figcaption></figure>
+
+<h2>Why "Physics coaching near me" matters more in Rohini than it seems</h2>
+<p>Physics is one of those subjects where a ten-minute shorter commute genuinely changes outcomes, because the subject depends on a student staying consistent with numerical practice every single day, not just attending class. A centre that is a thirty-minute journey away quietly loses that daily consistency by December. Our Sector 7 location keeps the commute under fifteen minutes for most of Rohini and under twenty five for Pitampura and Shalimar Bagh families, which is one reason so many local parents specifically search for "Physics tuition near me in Rohini" and land on ESA.</p>
+
+<h2>Problem-solving first, not formula-first</h2>
+<p>Our Class 11-12 Physics programme is led by <strong>Mr. Prateek</strong>, who teaches with a problem-solving-first approach. Instead of front-loading formulas and hoping students apply them later, every chapter starts with the underlying physical concept, moves to worked numericals, and only then formalises the formula the student has already seen in action three times. By the time the formula is written on the board as a final summary, the student has already used it twice without being told what to call it.</p>
+
+<h2>Why this matters for Current Electricity, EMI and Optics</h2>
+<p>The highest-weightage Class 12 Physics chapters - Current Electricity, Electromagnetic Induction, Optics and Modern Physics - are also the chapters where rote formula memorisation fails fastest. These topics reward students who have solved at least 30 numericals per chapter and can recognise the same underlying principle dressed up in a new question. ESA Physics batches run 90-minute sessions four days a week, with a dedicated numerical-solving hour every Saturday where the whole session is spent on mixed-chapter problems, not new teaching.</p>
+
+<h2>Weekly tests that catch conceptual gaps early</h2>
+<p>Every Saturday, the chapter taught that week is tested under exam conditions. Papers are corrected within 48 hours and a specific mistake pattern, not just a score, is shared with parents on WhatsApp. A gap in Current Electricity caught in week one is a five-minute fix. The same gap discovered in February, two weeks before boards, is a crisis. Our weekly system exists specifically to prevent the second scenario, and it is the same discipline that has produced 32 plus 90 percent scorers from our centre this year alone.</p>
+
+<figure><img src="https://images.unsplash.com/photo-1497486751825-1233686d5d80?auto=format&fit=crop&w=1200&q=80" alt="Mr. Prateek explaining a Physics numerical on the whiteboard to Class 12 students at ESA Rohini" loading="lazy" width="1200" height="800" /><figcaption>Every Physics numerical is demonstrated on the board before students attempt it standalone.</figcaption></figure>
+
+<h2>Boards and JEE foundation, taught together</h2>
+<p>Most Rohini students taking Physics in Class 11-12 are managing two parallel goals: scoring 90 plus in CBSE boards and building a foundation for JEE. These are not the same skill. Boards reward clear, structured derivations and diagram labelling. JEE rewards speed and multi-concept problem solving across a much larger question bank. At ESA, both are taught in the same classroom, so students are not choosing between the two or paying for a separate JEE Physics coaching on top of school-aligned tuition.</p>
+
+<h2>What parents consistently tell us</h2>
+<p>The most common thing we hear from parents who move their child to ESA for Physics is some version of: "He used to memorise the formula sheet the night before the test. Now he actually solves the numerical without looking anything up." That shift usually shows up within the first two months of joining, well before the first term exam.</p>
+
+<h2>Small batches, real doubt sessions</h2>
+<p>Physics doubts rarely resolve in a thirty-second answer. A student stuck on why a particular circuit behaves a certain way needs the diagram redrawn, the logic walked through again, sometimes twice. Our Saturday doubt sessions are structured specifically for this, with faculty staying back until every doubt in the room is actually resolved, not just acknowledged. Batch sizes are capped around 18 students specifically so this level of individual attention stays possible.</p>
+
+<h2>Physics coaching for families across North West Delhi</h2>
+<p>Our Sector 7 centre serves Physics students from Rohini's own sectors as well as Pitampura, Shalimar Bagh, Ashok Vihar, Mukherjee Nagar and Saraswati Vihar. Many of these families specifically chose ESA over a closer generic tuition centre because Mr. Prateek's Physics batch is a genuine subject-specialist programme, not a side offering taught by whoever is free that evening.</p>
+
+<h2>Where students lose marks, and how the classroom fixes it</h2>
+<p>Across years of correcting Physics papers, the same three mistake patterns show up repeatedly. The first is a correct final numerical answer with no working shown, which loses step marks in boards even when the answer is right. The second is confusing sign conventions in Optics and EMI, which flips the entire answer even when the underlying concept is understood. The third is skipping diagram labelling in Current Electricity circuit questions, which is a guaranteed mark loss regardless of how correct the calculation is. Mr. Prateek's classroom drills all three explicitly, because CBSE Physics marking is unusually generous to structured, fully-labelled working and unusually harsh to unstructured "correct" answers.</p>
+
+<h2>Batch structure, fees and facility</h2>
+<p>Physics batches run Monday to Saturday alongside the rest of the Science stream schedule, with Saturday reserved for the numerical-solving hour and doubt session. Batches are capped around 18 students. Fees depend on the class and subject combination and are confirmed clearly over a call, with the same number applying once you visit, never a surprise revision. Our Sector 7 classrooms are air-conditioned with a dedicated diagram and circuit-drawing whiteboard area, and every batch gets a WhatsApp broadcast for weekly scores and mistake notes.</p>
+
+<h2>What three years of the same Physics teacher builds</h2>
+<p>Because Mr. Prateek stays with his Class 11 batch through to Class 12, he enters the second year already knowing each student's specific weak chapters from the first year, whether that is Rotational Mechanics, Thermodynamics or Electrostatics. This continuity removes the relearning period that happens when Physics faculty rotate between academic sessions, which is common at larger chain institutes in the Rohini and Pitampura area.</p>
+
+<h2>How to check this for yourself</h2>
+<p>Sit your child in an actual Physics batch for a week. Watch whether the class solves numericals on the board together or just copies formulas from a slide. Ask to see last month's Saturday test papers and the correction notes written on them, and confirm the syllabus timeline leaves enough runway for JEE-style mixed practice before boards. Ask specifically how step-marks and diagram labelling are graded in the Saturday tests, since this mirrors exactly how CBSE grades the real board paper.</p>
+
+<h2>Physics for board scorers who are not aiming for JEE</h2>
+<p>Not every Class 11-12 Science student at ESA is targeting an engineering entrance exam, and the Physics programme does not assume everyone is. For students focused purely on a strong CBSE board score, Mr. Prateek's sessions place extra weight on derivation structure, diagram labelling and the specific keyword phrasing CBSE examiners look for in theory answers, alongside the same numerical fluency. The numerical-solving hour on Saturday benefits both groups equally, since strong numerical instinct improves board scores just as much as it improves JEE readiness.</p>
+
+<h2>A note on switching from another institute mid-year</h2>
+<p>We regularly get Class 11 and 12 students joining mid-year after an unsatisfactory experience elsewhere, often because a promised "senior faculty" turned out to be a junior substitute mid-term. Mr. Prateek's diagnostic conversation with new students in their first week identifies exactly which chapters were taught well versus superficially at the previous institute, so teaching time is not wasted re-covering chapters the student has already genuinely mastered.</p>
+
+<h2>Enrolling and fee confirmation</h2>
+<p>Call or WhatsApp us with your child's current class, and we will confirm the Physics fee for that specific class and stream combination on the same call. The number quoted on the phone is the number you pay once enrolled, with no additional charges added at the centre.</p>
+
+<h2>Physics doubts that come up outside class hours</h2>
+<p>A student working through a numerical at home on a Tuesday night should not have to wait until Thursday's class to get unstuck. Mr. Prateek's batches use a WhatsApp broadcast group where a student can post the specific question number they are stuck on, and it gets picked up and explained at the start of the next session, or sooner if it is urgent ahead of a test. This keeps the Saturday numerical hour focused on new mixed-practice problems rather than re-explaining homework doubts that could have been resolved earlier in the week.</p>
+
+<h2>Consistency across board cycles, not a one-off result</h2>
+<p>Physics results at ESA have held steady across multiple board cycles because the underlying method, problem-solving before formula, numericals before shortcuts, does not change from year to year even as individual student cohorts do. A parent evaluating "best Physics teacher near me" options should ask any institute for more than one year of results, since a single strong batch can be a coincidence, but a repeated pattern across years usually reflects the actual teaching process rather than luck.</p>
+
+<h2>What to bring on your first visit</h2>
+<p>If you are booking a free demo, bring along your child's recent school Physics test papers or report card if available. This helps Mr. Prateek get an honest read on the current level before the first session, so the demo week can start at the right pace rather than spending the first two days figuring out where your child stands relative to the batch.</p>
+
+<p>For families comparing multiple Physics coaching options across Rohini and Pitampura before deciding, the free demo week exists precisely so that decision does not have to be made on a brochure or a single trial class alone. Watch a full week, including a Saturday test, before committing, and pay close attention to whether the numerical solving happens on the board together or whether students are simply handed a worked solution to copy down.</p>
+
+<p>Book your child's free Physics demo week at our Sector 7 centre today, and judge the classroom for yourself before the next term exam arrives. The earlier a numerical-solving habit is built, the less catching up is needed in the final months before boards, and the noticeably calmer the last few stressful weeks before the actual final board exam day tend to feel overall.</p>
+
+<h3>See Physics taught the ESA way</h3>
+<p>Book a free 7-day demo at our centre at ${siteConfig.address.line1}, ${siteConfig.address.line2}, ${siteConfig.address.city} ${siteConfig.address.pin} and sit your child in an actual Class 11-12 Physics batch taught by Mr. Prateek. Call ${siteConfig.phoneDisplay} or WhatsApp <a href="${whatsappLink("Hi, I'd like to book a free Physics demo class for my child.")}" target="_blank" rel="noopener noreferrer">${siteConfig.whatsappDisplay}</a> to book.</p>`,
+    faqs: [
+      {
+        question: "Who teaches Physics for Class 11 and 12 at ESA Rohini?",
+        answer:
+          "Mr. Prateek leads our Class 11-12 Physics programme at the Sector 7 centre, using a problem-solving-first method built around numericals rather than formula memorisation.",
+      },
+      {
+        question: "Does ESA Physics coaching also help with JEE foundation?",
+        answer:
+          "Yes. Physics sessions are structured to build CBSE board answer-writing technique and JEE-level numerical speed together, in the same batch, without needing separate JEE coaching.",
+      },
+      {
+        question: "How many numericals does a student practise per chapter?",
+        answer:
+          "For high-weightage chapters like Current Electricity, EMI and Optics, students typically work through 30 or more numericals per chapter across class sessions and the Saturday numerical-solving hour.",
+      },
+      {
+        question: "What is the batch size for Physics classes?",
+        answer:
+          "Batches are capped around 18 students so doubts can be resolved individually and every student gets checked before the class moves to the next concept.",
+      },
+      {
+        question: "Is ESA Rohini reachable from Pitampura and Shalimar Bagh?",
+        answer:
+          "Yes, our Sector 7 centre is a short ride from Pitampura, Shalimar Bagh, Ashok Vihar, Mukherjee Nagar and all Rohini sectors including 3, 5, 9, 11, 13, 15 and 17.",
+      },
+      {
+        question: "Can I book a free Physics demo class?",
+        answer: `Yes, we offer a free 7-day demo where your child sits in the actual Class 11-12 Physics batch. Call ${siteConfig.phoneDisplay} or WhatsApp ${siteConfig.whatsappDisplay} to book.`,
+      },
+    ],
+  },
+  {
+    slug: "maths-coaching-trusted-choice-rohini-esa",
+    title: "Why Excellent Students' Academy Is a Trusted Choice for Maths Coaching in Rohini",
+    description:
+      "Rohini parents consistently pick ESA Sector 7 for Maths coaching, from Class 6 foundations to Class 12 boards. Here is the teaching method behind it, led by Mr. Chandan Prajapati and Mr. Rahul.",
+    date: "2026-08-29",
+    readTime: "7 min read",
+    category: "Subject Spotlight",
+    author: "ESA Editorial",
+    cover:
+      "https://images.unsplash.com/photo-1635372722656-389f87a941b7?auto=format&fit=crop&w=1200&q=80",
+    excerpt:
+      "Maths scores rarely fail because a student is 'bad at Maths'. They fail because a gap from two years ago was never fixed. Here is how ESA Rohini builds Maths fluency from Class 6 through Class 12 boards.",
+    keywords: [
+      "Maths coaching Rohini",
+      "Class 11 12 Maths tuition Sector 7 Rohini",
+      "best Maths teacher Rohini Chandan sir",
+      "Maths tuition near me Rohini",
+      "Class 9 10 Maths coaching Rohini",
+      "Maths tuition Pitampura Shalimar Bagh",
+    ],
+    body: `<p>Ask any Rohini parent why they eventually chose Excellent Students' Academy for their child's Maths coaching, and the answer is rarely about a single flashy feature. It is about a teaching method that has produced consistent 90 plus scorers year after year, from our Sector 7 centre, and it is why "Maths tuition near me" searches from across Rohini, Pitampura and Shalimar Bagh keep leading parents to us.</p>
+
+<figure><img src="https://images.unsplash.com/photo-1635372722656-389f87a941b7?auto=format&fit=crop&w=1200&q=80" alt="Student solving a Maths problem at ESA Rohini Sector 7 coaching centre" loading="lazy" width="1200" height="800" /><figcaption>Maths at ESA Rohini is taught concept-first, from Class 6 foundations through Class 12 board topics.</figcaption></figure>
+
+<h2>Two specialists, one continuous method</h2>
+<p>Our Maths faculty is led by <strong>Mr. Rahul</strong> for Class 6-10 and <strong>Mr. Chandan Prajapati</strong> for Class 11-12. Both follow the same underlying method: explain the concept, demonstrate it on the board, have the student solve an identical problem standalone, then immediately test the same concept in a different wrapper. A concept is not considered taught until the student can do it alone, without looking back at the worked example.</p>
+
+<h2>Why foundation years matter more than parents realise</h2>
+<p>The jump from Class 8 to Class 9 Maths is the steepest in the CBSE syllabus. Formal Geometry proofs, abstract Algebra and irrational Number Systems appear almost overnight, and a student who scored 90 in Class 8 through quick arithmetic can suddenly drop to 65. This is not a talent problem. It is a fundamentals problem, and it is fixable with the right support at the right time. Mr. Rahul's Class 9 batches include a one-on-one diagnostic session for every new student, to find the exact earlier chapter causing the current struggle before moving forward, rather than pushing ahead with the current syllabus while the gap widens.</p>
+
+<h2>Weekly tests, every single Saturday</h2>
+<p>Every Saturday, students write a chapter test on whatever was taught that week. Papers are corrected by the same teacher who taught the chapter, within 48 hours, with a specific note on what was strong and what needs work. This is the single most consistent driver of the score jump our Maths students see, because a shaky chapter is caught within a week, not discovered at the term exam when it is far more expensive to fix.</p>
+
+<figure><img src="https://images.unsplash.com/photo-1497486751825-1233686d5d80?auto=format&fit=crop&w=1200&q=80" alt="Mr. Chandan Prajapati teaching Class 12 Maths integration on the whiteboard at ESA Rohini Sector 7" loading="lazy" width="1200" height="800" /><figcaption>Class 12 Maths topics like Integration and Vectors are demonstrated on the board before students attempt them alone.</figcaption></figure>
+
+<h2>How Class 11-12 Maths is handled</h2>
+<p>Class 12 Maths carries some of the highest-scoring, highest-weightage topics in the entire CBSE syllabus: Integration, Vectors, 3D Geometry and Probability. Mr. Chandan Prajapati's Class 12 batch finishes the complete syllabus well ahead of the board date, which leaves several weeks purely for mock papers and targeted revision. By board day, most students have already written the equivalent of the exam format more than twenty times over, so the actual exam does not feel unfamiliar.</p>
+
+<h2>Daily practice over marathon weekend sessions</h2>
+<p>Twenty minutes of daily Maths practice consistently outperforms a single two-hour Sunday session. Our students get a one-page daily worksheet to complete at home and bring to the next class, which keeps the practice muscle active between sessions rather than concentrated into occasional cramming that fades within a week.</p>
+
+<h2>What results actually look like</h2>
+<p>This year, Ayush Goel scored 99 in Class 12 Maths. Aditya Singh scored 98 in Class 10 Maths. Neither is a "Maths genius" by their own account. Both credit the weekly test routine and the standalone-problem-solving method for the shift, and both were taught within the same batch structure described in this article, not a special topper-only track.</p>
+
+<h2>Maths tuition for students across Rohini and nearby localities</h2>
+<p>Our Sector 7 centre draws Maths students from Rohini Sector 3, 5, 9, 11, 13, 15 and 17, as well as Pitampura, Shalimar Bagh, Ashok Vihar and Mukherjee Nagar. If you are comparing "best Maths teacher near me" options across these localities, the deciding factor should be whether the teacher checks individual understanding every session, not just batch size or fee.</p>
+
+<h2>Why Maths anxiety is a fixable pattern, not a fixed trait</h2>
+<p>Almost every parent who calls us about Maths starts the conversation the same way: "she was fine till Class 8, now she panics at the sight of a Maths paper." This is one of the most predictable and most fixable patterns in CBSE education, and it is rarely about the student's ability. The Class 8 to Class 9 jump introduces formal proofs, abstract Algebra and irrational Number Systems almost overnight, and a student who relied on quick arithmetic in earlier years suddenly finds that approach does not work anymore. Anxiety follows the score drop, not the other way round. Mr. Rahul's diagnostic-first approach exists specifically to interrupt this cycle before it hardens into "I am just not a Maths person," which is a belief that, left unaddressed, follows a student all the way to Class 12.</p>
+
+<h2>Batch structure, fees and facility</h2>
+<p>Maths batches run Monday to Saturday, with class timing structured around the student's grade so it does not clash with school hours or other subject batches. Batches are capped around 18 students, which keeps Chandan sir and Mr. Rahul able to personally check standalone problem-solving during class rather than relying purely on the Saturday test to catch gaps. Fees vary by class and are confirmed clearly on a call before your visit, with the exact monthly number never changing once you reach the centre. Classrooms are air-conditioned with dedicated whiteboard space for worked examples, and every batch gets a WhatsApp broadcast group for weekly test scores and daily worksheet reminders.</p>
+
+<h2>Long-term compounding: what three years under the same teacher builds</h2>
+<p>Because Mr. Rahul and Mr. Chandan Prajapati stay with their batches across years rather than rotating, a student who joins in Class 9 is often taught by the same mentor through Class 10, and the transition into Class 11-12 Maths under Chandan sir happens with full visibility into exactly where that student's fundamentals stand. This continuity is quietly one of the biggest reasons our Maths results stay consistent year after year: there is no "starting over" moment at every grade transition, which is common in coaching centres that reshuffle faculty every academic session.</p>
+
+<h2>How to check this for yourself</h2>
+<p>Sit your child in an actual Maths batch for a week. Watch whether the teacher checks that every student can solve a problem alone before the class moves on, or just demonstrates it once and continues to the next topic regardless of whether the room has understood it. Ask to see an actual corrected Saturday test paper, not a sample, and ask what happens when a student scores below 50 percent on it.</p>
+
+<h2>Maths for the youngest learners too</h2>
+<p>Maths coaching at ESA does not start at Class 9. For Classes 1 to 5, our foundation team builds number sense, mental maths and reading-linked comprehension well before syllabus pressure begins, on the belief that a confident Class 5 student who enjoys Maths is far easier to carry through Class 9's abstraction jump than one who has already learned to fear the subject. For Classes 6 to 8, Mr. Rahul's middle-school batches focus on fraction fluency, basic algebra and geometry groundwork, specifically because these are the chapters that resurface, barely disguised, as the hardest parts of Class 9 and 10.</p>
+
+<h2>A note on home tuition versus batch coaching for Maths specifically</h2>
+<p>Some parents ask whether one-on-one home tuition would work better for Maths than a batch. Our honest answer, based on years of both models, is that Maths specifically benefits from peer exposure once a student crosses Class 8. Watching a classmate solve the same problem with a different, sometimes shorter method is a learning moment a solo home tuition session cannot replicate. Where home tuition genuinely helps is closing a specific two-month gap before rejoining a batch, which several of our current Class 10 and 11 students have done successfully before transitioning back into a full ESA batch.</p>
+
+<h2>Fee transparency and how to enrol</h2>
+<p>Enrolling is straightforward. Call or WhatsApp us with your child's current class and the subjects you are considering, and we will confirm the fee for that exact combination on the same call, along with the batch timing available. There is no need to visit in person just to get a fee quote, though we always recommend visiting before making a final decision.</p>
+
+<h2>What other parents ask before switching their child's Maths coaching</h2>
+<p>Two questions come up in almost every enquiry call. The first is whether switching mid-year will disrupt the syllabus flow, and the answer is that Chandan sir and Mr. Rahul both run a short diagnostic with any mid-year joiner to map exactly where the new student stands before placing them in the right pace within the batch. The second is whether the fee includes test correction and doubt sessions, or whether these are charged separately, and at ESA the answer is that weekly tests, corrections and Saturday doubt sessions are all included in the standard monthly fee with no extra charges.</p>
+
+<h2>Maths results that hold up over multiple years</h2>
+<p>A single good batch result can be a coincidence. What convinces most parents at ESA is that our Maths results have stayed consistent across multiple board cycles, not just one strong year. This consistency comes directly from the method staying the same regardless of which specific cohort passes through it: explain, demonstrate, standalone practice, retest weekly. Individual students vary in starting ability, but the process that gets them from wherever they start to a confident board score does not change from batch to batch.</p>
+
+<h2>What to bring on your first visit</h2>
+<p>If you are planning to walk in for a free demo, bring your child's most recent school test papers or report card if you have them handy. This lets Mr. Rahul or Chandan sir get a rough sense of the current level before the first class even starts, so the demo week is not spent guessing where to place your child within the batch. It is not mandatory, but it saves everyone a week of adjustment.</p>
+
+<p>Whichever class your child is in, the underlying question worth asking before enrolling anywhere in Rohini, Pitampura or Shalimar Bagh remains the same: does the teacher confirm real understanding before moving on, or just move through the syllabus on schedule regardless of whether the room has kept up. That single habit, repeated every day for a full academic year, is the entire difference between a student who fears Maths and one who quietly stops noticing it as a separate, harder subject.</p>
+
+<p>Reach out whenever you are ready, and we will find the right batch and timing for your child's current level.</p>
+
+<h3>See our Maths method in action</h3>
+<p>Book a free 7-day demo at our centre at ${siteConfig.address.line1}, ${siteConfig.address.line2}, ${siteConfig.address.city} ${siteConfig.address.pin}. Call ${siteConfig.phoneDisplay} or WhatsApp <a href="${whatsappLink("Hi, I'd like to book a free Maths demo class for my child.")}" target="_blank" rel="noopener noreferrer">${siteConfig.whatsappDisplay}</a> to sit your child in an actual Maths batch, taught by Mr. Rahul or Mr. Chandan Prajapati depending on their class.</p>`,
+    faqs: [
+      {
+        question: "Who teaches Maths at ESA Rohini?",
+        answer:
+          "Mr. Rahul teaches Maths for Class 6 to 10 and Mr. Chandan Prajapati teaches Class 11-12 Maths at our Sector 7 centre, both using the same explain-demonstrate-practice-retest method.",
+      },
+      {
+        question: "My child's Maths score dropped suddenly in Class 9. Can this be fixed?",
+        answer:
+          "Yes, this is extremely common. New students get a one-on-one diagnostic session to identify the exact earlier chapter causing the gap, which is then fixed before moving ahead with the current syllabus.",
+      },
+      {
+        question: "How often are Maths tests conducted?",
+        answer:
+          "Every Saturday. The chapter taught that week is tested, corrected within 48 hours, and specific feedback is shared with parents so gaps are caught early.",
+      },
+      {
+        question: "When does the Class 12 Maths syllabus finish?",
+        answer:
+          "Mr. Chandan Prajapati's Class 12 batch completes the full syllabus well before boards, leaving several weeks purely for mock papers and revision.",
+      },
+      {
+        question: "Is ESA Rohini a good option for students from Pitampura or Shalimar Bagh?",
+        answer:
+          "Yes, our Sector 7 centre is easily reachable from Pitampura, Shalimar Bagh, Ashok Vihar and all nearby Rohini sectors within a short auto or two-wheeler ride.",
+      },
+      {
+        question: "Can I book a free Maths demo class?",
+        answer: `Yes, we offer a free 7-day demo. Call ${siteConfig.phoneDisplay} or WhatsApp ${siteConfig.whatsappDisplay} to book your child's slot in an actual Maths batch.`,
+      },
+    ],
+  },
+  {
+    slug: "chemistry-coaching-trusted-choice-rohini-esa",
+    title: "Why Excellent Students' Academy Is a Trusted Choice for Chemistry Coaching in Rohini",
+    description:
+      "Chemistry is often the most feared CBSE subject in Class 11-12. Here is why Rohini parents trust Excellent Students' Academy Sector 7 for Chemistry, and how Mr. Amit's method covers Organic, Inorganic and Physical Chemistry without last-minute cramming.",
+    date: "2026-09-02",
+    readTime: "7 min read",
+    category: "Subject Spotlight",
+    author: "ESA Editorial",
+    cover:
+      "https://images.unsplash.com/photo-1453733190371-0a9bedd82893?auto=format&fit=crop&w=1200&q=80",
+    excerpt:
+      "Chemistry is really three subjects stitched into one paper: Organic, Inorganic and Physical. Most students cram Organic in the last month and pay for it in both boards and JEE. Here is how ESA Rohini prevents that.",
+    keywords: [
+      "Chemistry coaching Rohini",
+      "Class 11 12 Chemistry tuition Rohini Sector 7",
+      "Organic Chemistry coaching near me",
+      "best Chemistry teacher Rohini",
+      "JEE Chemistry foundation Rohini",
+      "Chemistry tuition Pitampura Shalimar Bagh",
+    ],
+    body: `<p>Ask any Class 12 student in Rohini which subject worries them the most, and Chemistry comes up more often than Physics or Maths. The reason is structural. Chemistry is not one subject, it is three - Organic, Inorganic and Physical - stitched into a single paper, each requiring a different way of studying. Most students discover this too late, usually in December, when Organic Chemistry alone has become an unmanageable pile of named reactions.</p>
+
+<p>This is exactly the gap Excellent Students' Academy (ESA), Sector 7 Rohini, was built to close, and it is why parents from Rohini Sector 3, 5, 9, 11, 13, 15 and 17, along with families from Pitampura, Shalimar Bagh, Ashok Vihar and Mukherjee Nagar, have consistently trusted us for Class 11-12 Chemistry coaching near their home.</p>
+
+<figure><img src="https://images.unsplash.com/photo-1571260899304-425eee4c7efc?auto=format&fit=crop&w=1200&q=80" alt="Chemistry classroom at ESA Rohini Sector 7 where Organic, Inorganic and Physical Chemistry are taught as three distinct disciplines" loading="lazy" width="1200" height="800" /><figcaption>Concept-first Chemistry teaching at ESA Rohini Sector 7 - Organic, Inorganic and Physical taught as three distinct disciplines.</figcaption></figure>
+
+<h2>Why Rohini parents specifically search for "Chemistry coaching near me"</h2>
+<p>Chemistry is unusual among CBSE subjects because a generalist tutor rarely helps beyond Class 9. From Class 11 onward, Chemistry needs a teacher who has personally corrected hundreds of Organic mechanism answers, knows exactly which Inorganic reactions CBSE repeats year after year, and can walk a student through a Physical Chemistry numerical the way a Maths teacher would. This is why "Chemistry coaching near me in Rohini" is one of the most searched terms among Class 11 and 12 parents in our area, and why proximity plus a genuine subject specialist matters more here than in almost any other subject.</p>
+
+<h2>Three sub-subjects, taught with three different methods</h2>
+<p>Our Chemistry programme at the Sector 7 centre is led by <strong>Mr. Amit</strong>, who treats Organic, Inorganic and Physical Chemistry as genuinely different disciplines within the same subject, rather than teaching all three the same way.</p>
+<ul>
+<li><strong>Organic Chemistry</strong> is taught through named reactions and mechanisms from day one of Class 11, not crammed in the final term. Mr. Amit's approach spends extra time on reaction mechanisms specifically because this is where both board and JEE marks are lost most often. Students are made to draw out the mechanism themselves, step by step, rather than memorise the final product.</li>
+<li><strong>Inorganic Chemistry</strong> is treated as a memory-plus-pattern subject, with weekly recall tests rather than one large revision push before the exam. Periodic table trends, coordination compounds and p-block reactions are tested in small doses every week so nothing is left to the final month.</li>
+<li><strong>Physical Chemistry</strong> is taught numerically, the same way Maths is taught, with worked problems demonstrated on the board followed by standalone practice questions the student solves alone before moving to the next concept.</li>
+</ul>
+
+<h2>Why NCERT mastery cannot be a last-month project</h2>
+<p>Organic Chemistry in Class 12 rewards students who have internalised NCERT mechanisms over many months, not the ones who highlight the textbook the week before boards. Mr. Amit's batches build this deliberately slowly across Class 11 and the first half of Class 12, so there is nothing left to cram when the board date approaches. By the time a student reaches Alcohols, Phenols and Ethers or Aldehydes and Ketones in Class 12, the reaction logic from Class 11 Hydrocarbons is already second nature, not something being relearned under pressure.</p>
+
+<h2>Weekly testing across all three sections</h2>
+<p>Every Saturday, Chemistry students at ESA write a chapter test that rotates across Organic, Inorganic and Physical, not just whichever section was most recently taught. This prevents the common pattern where a student is strong in Physical Chemistry numericals but has quietly forgotten Inorganic reactions from three months earlier. Scores and a specific mistake note reach parents on WhatsApp within 48 hours of each test, along with what the student should revisit before the following week.</p>
+
+<figure><img src="https://images.unsplash.com/photo-1456406644174-8ddd4cd52a06?auto=format&fit=crop&w=1200&q=80" alt="Students writing a weekly Saturday Chemistry test at ESA Rohini Sector 7 coaching centre" loading="lazy" width="1200" height="800" /><figcaption>Saturday chapter tests rotate across Organic, Inorganic and Physical Chemistry so no section is left unrevised.</figcaption></figure>
+
+<h2>Built for boards and JEE together</h2>
+<p>Most of our Chemistry students are also preparing for a JEE foundation alongside CBSE boards. The two exams test Chemistry differently - boards reward structured, labelled answers with the correct IUPAC naming and clean mechanism diagrams, while JEE rewards speed and recall across a much wider question pool. Mr. Amit's sessions are structured to build both simultaneously, so students from Rohini and nearby Pitampura do not need to enrol in a separate JEE Chemistry batch on top of their board coaching.</p>
+
+<h2>What a typical Chemistry week looks like at ESA</h2>
+<p>Class 11-12 Chemistry batches run alongside the Science stream schedule at our Sector 7 centre, Monday to Saturday, with sessions built around the same four-step method used across ESA: concept explanation, board demonstration, standalone student practice, and an immediate variation to lock in the learning. Saturday afternoons are reserved for the rotating chapter test described above, followed by a doubt-clearing block where any unresolved mechanism or numerical from the week is worked through again, sometimes twice, until the student can do it without help.</p>
+
+<h2>What separates this from cramming-based Chemistry coaching</h2>
+<ul>
+<li>Named reactions taught with mechanism logic, not rote memorisation</li>
+<li>Weekly tests across all three sections of Chemistry, not just the latest chapter</li>
+<li>Doubt sessions every Saturday where a mechanism can be re-explained as many times as needed</li>
+<li>Full syllabus completed with enough runway left for mock papers, not a rushed finish in February</li>
+<li>Faculty-written notes that match exactly how the chapter was taught in class, not a photocopied booklet from a chain institute</li>
+<li>Monthly parent meetings where Mr. Amit walks you through your child's Organic, Inorganic and Physical scores separately</li>
+</ul>
+
+<h2>Chemistry coaching for students across North West Delhi</h2>
+<p>While our Sector 7 centre is the home base, our Class 11-12 Chemistry batches draw students from across North West Delhi. Families from Rohini Sector 3, 5, 9, 11, 13, 15 and 17 reach us within fifteen minutes by auto or the Outer Ring Road. Students from Pitampura, Shalimar Bagh, Ashok Vihar, Mukherjee Nagar and Saraswati Vihar also commute to our Chemistry batches specifically because a genuine subject specialist for Organic, Inorganic and Physical Chemistry together is hard to find within a short radius. If you are searching for "Chemistry tuition near me" from any of these localities, our Sector 7 centre is built to be the answer.</p>
+
+<h2>Common Chemistry mistakes we see, and how they are fixed</h2>
+<p>Three mistake patterns show up in almost every new Chemistry student who joins us mid-way through Class 11 or 12. The first is memorising the final product of an Organic reaction without understanding the mechanism, which works fine on a simple question and collapses the moment CBSE or JEE dresses the same reaction up differently. Mr. Amit's classes fix this by making students draw the electron movement themselves, not just recall the answer. The second is treating Inorganic Chemistry as unlearnable and giving up on it entirely, which is corrected through short, low-pressure weekly recall tests rather than one intimidating revision block. The third is skipping Physical Chemistry numericals because "it feels like Maths", when in fact it is the most scoring, most predictable section of the paper if practised the same way Maths is practised - worked example, then standalone attempt, then a variation.</p>
+
+<h2>Fee, schedule and facility, in plain terms</h2>
+<p>Class 11-12 Chemistry runs as part of our Science stream batches, Monday to Saturday, with Saturday reserved for the rotating chapter test and doubt session described above. Batch size is capped around 18 students so Mr. Amit can personally review each student's mechanism-writing and numerical work through the week, not just at test time. Fees depend on the class and subject combination chosen and are shared clearly on a call, with no hidden charges added once you visit the centre. Our Sector 7 classrooms are air-conditioned with dedicated writing desks, a stocked whiteboard station for reaction diagrams, and a waiting area for parents dropping off younger siblings during the session.</p>
+
+<h2>What a parent moving their child to ESA for Chemistry can expect in 90 days</h2>
+<p>The first visible change is rarely the test score. It is whether the student can explain a reaction mechanism out loud without looking at notes, and whether Physical Chemistry numericals stop feeling like a separate, harder subject. By the second monthly parent meeting, most families see the Saturday test scores stabilise upward, and by the third month, Organic reactions that were previously a source of dread become one of the more comfortable sections of the paper.</p>
+
+<h2>How to check this for yourself before enrolling</h2>
+<p>Do not take a blog post's word for it. Sit your child in an actual Chemistry batch for a full week, not a one-off curated demo. Ask to see the last month's test papers across Organic, Inorganic and Physical, not just one section. Ask Mr. Amit directly when the full Class 12 syllabus is expected to finish, and confirm the answer leaves enough time for mock papers before boards. Ask, too, about the batch size on the day you visit, not the number quoted on a brochure.</p>
+
+<h2>Frequently searched questions about Chemistry coaching in Rohini</h2>
+<p>Parents evaluating Chemistry coaching in Rohini usually want clarity on batch size, fees, and whether their child's specific weak area (often Organic mechanisms or Physical numericals) will actually get attention in a group batch. Our answers to the most common questions are below, and our team is happy to go deeper on a call or WhatsApp message. Whether you are coming from Sector 7 itself, from Sector 11 or 15 across Rohini, or from Pitampura and Shalimar Bagh, the same Chemistry batch structure and the same faculty apply, so the quality of teaching does not change based on which locality you are enrolling from.</p>
+
+<h2>Why "trusted" is the right word, not just "popular"</h2>
+<p>Trust in a coaching relationship is built slowly, over test scores that hold up, doubts that actually get resolved, and a teacher who is still there next term. It is not built by a single flashy result poster in a window. Parents who have stayed with ESA for Chemistry across both Class 11 and Class 12, sending younger siblings after the first child's experience, are the clearest evidence of that trust, more than any single topper story could be.</p>
+
+<h2>Chemistry alongside Physics and Maths in the same PCM schedule</h2>
+<p>Most of our Chemistry students are also enrolled in Physics and Maths at the same centre, which lets Mr. Amit coordinate test dates with the other subject faculty so a student is never facing three chapter tests in the same week. This coordination is a small operational detail that matters a great deal in practice, since PCM students juggling three demanding subjects benefit enormously from a predictable, staggered test calendar rather than every subject testing on the same Saturday.</p>
+
+<h3>Visit or book a free Chemistry demo at ESA</h3>
+<p>Book a free 7-day demo at our centre at ${siteConfig.address.line1}, ${siteConfig.address.line2}, ${siteConfig.address.city} ${siteConfig.address.pin}, and sit your child in an actual Class 11-12 Chemistry batch taught by Mr. Amit. Call us at ${siteConfig.phoneDisplay} or WhatsApp <a href="${whatsappLink("Hi, I'd like to book a free Chemistry demo class for my child.")}" target="_blank" rel="noopener noreferrer">${siteConfig.whatsappDisplay}</a> to book your slot.</p>`,
+    faqs: [
+      {
+        question: "Who teaches Chemistry for Class 11 and 12 at ESA Rohini?",
+        answer:
+          "Mr. Amit leads our Class 11-12 Chemistry programme at the Sector 7 centre, covering Organic, Inorganic and Physical Chemistry as three distinct teaching tracks within the same batch.",
+      },
+      {
+        question: "Does ESA cover both CBSE boards and JEE Chemistry?",
+        answer:
+          "Yes. Our Chemistry sessions are structured to build board answer-writing technique and JEE-level speed and recall together, so students do not need a separate JEE Chemistry batch.",
+      },
+      {
+        question: "How often are Chemistry tests conducted?",
+        answer:
+          "Every Saturday. The test rotates across Organic, Inorganic and Physical Chemistry so every section stays fresh, not just the most recently taught chapter. Scores reach parents on WhatsApp within 48 hours.",
+      },
+      {
+        question: "What is the fee for Chemistry coaching at ESA Rohini?",
+        answer: `Fees depend on the class and subject combination you choose. Call us at ${siteConfig.phoneDisplay} or WhatsApp ${siteConfig.whatsappDisplay} for the current Class 11-12 Science stream fee structure.`,
+      },
+      {
+        question: "Is ESA accessible for students outside Rohini Sector 7, like Pitampura or Shalimar Bagh?",
+        answer:
+          "Yes. Our Sector 7 centre is a short auto or two-wheeler ride from Rohini Sector 3, 5, 9, 11, 13, 15, 17, and from Pitampura, Shalimar Bagh, Ashok Vihar and Mukherjee Nagar.",
+      },
+      {
+        question: "Can I sit my child in a real Chemistry class before enrolling?",
+        answer:
+          "Yes. We offer a free 7-day demo where your child attends the actual Class 11-12 Chemistry batch taught by Mr. Amit, not a separately curated demo session.",
+      },
+    ],
+  },
   {
     slug: "right-support-for-better-learning-rohini-coaching",
     title:
