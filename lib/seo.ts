@@ -6,6 +6,7 @@ import { programs } from "@/data/programs";
 import { faculty } from "@/data/faculty";
 import { centres } from "@/data/centres";
 import type { BlogPost } from "@/data/blog";
+import type { ClassInfo } from "@/data/classes";
 
 const BASE = "https://www.theesa.in";
 const ORG_ID = `${BASE}/#organization`;
@@ -223,6 +224,42 @@ export function courseListSchema() {
         },
       },
     })),
+  };
+}
+
+/** Course JSON-LD for a single /classes/[slug] page. */
+export function classCourseSchema(classInfo: ClassInfo) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "Course",
+    "@id": `${BASE}/classes/${classInfo.slug}`,
+    name: `${classInfo.label} Coaching - ${classInfo.bandLabel}`,
+    description: classInfo.whoFor,
+    provider: { "@id": ORG_ID, name: siteConfig.name },
+    educationalLevel: classInfo.label,
+    about: classInfo.subjects,
+    offers: {
+      "@type": "Offer",
+      category: "Coaching",
+      availability: "https://schema.org/InStock",
+      priceCurrency: "INR",
+      url: `${BASE}/contact#enquiry`,
+    },
+    hasCourseInstance: {
+      "@type": "CourseInstance",
+      courseMode: "OnSite",
+      location: {
+        "@type": "Place",
+        name: siteConfig.name,
+        address: {
+          "@type": "PostalAddress",
+          streetAddress: `${siteConfig.address.line1}, ${siteConfig.address.line2}`,
+          addressLocality: siteConfig.address.city,
+          postalCode: siteConfig.address.pin,
+          addressCountry: "IN",
+        },
+      },
+    },
   };
 }
 

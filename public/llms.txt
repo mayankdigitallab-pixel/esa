@@ -20,6 +20,13 @@ Website: https://www.theesa.in | Email: excellentstudentsacademy1@gmail.com
 - [Senior Secondary (Class 11 and 12)](https://www.theesa.in/programs#grades-11-12): Science (PCM/PCB), Commerce and Arts streams. Board scoring plus JEE/NEET foundation. Stream-wise senior faculty.
 - [Crash Courses (Class 6 to 12)](https://www.theesa.in/programs#crash): 4 to 8 week intensive revision before board exams. Full syllabus revision plus 10+ mock papers.
 
+## Classes 6 to 12 (class-wise pages)
+
+- [All classes](https://www.theesa.in/classes): index of Class 6 through Class 12 pages.
+- [Class 6](https://www.theesa.in/classes/class-6), [Class 7](https://www.theesa.in/classes/class-7), [Class 8](https://www.theesa.in/classes/class-8): Middle School - Mathematics, Science, Social Science, English, Hindi, Sanskrit.
+- [Class 9](https://www.theesa.in/classes/class-9), [Class 10](https://www.theesa.in/classes/class-10): Board Prep - full CBSE syllabus, weekly Saturday tests, monthly mocks, previous-year papers.
+- [Class 11](https://www.theesa.in/classes/class-11), [Class 12](https://www.theesa.in/classes/class-12): Senior Secondary - Science (PCM/PCB), Commerce, Arts streams with JEE/NEET foundation for Science.
+
 ## Key pages
 
 - [Home](https://www.theesa.in): Hero, programs overview, results, testimonials, demo class booking.

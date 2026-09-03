@@ -8,6 +8,7 @@ import { Menu, X, ArrowRight, Search } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { faculty } from "@/data/faculty";
 import { programs, subjects } from "@/data/programs";
+import { classes } from "@/data/classes";
 import { nearbyAreas } from "@/data/areas";
 import { toppers } from "@/data/results";
 import { testimonials } from "@/data/testimonials";
@@ -36,6 +37,7 @@ function buildSearchIndex(): SearchHit[] {
     { title: "Home", type: "Page", href: "/", keywords: "home esa rohini coaching" },
     { title: "About ESA Rohini", type: "Page", href: "/about", keywords: "about story founder chandan prajapati eleven years" },
     { title: "Our Programs", type: "Page", href: "/programs", keywords: "programs courses class 1 2 3 4 5 6 7 8 9 10 11 12 foundation board prep senior secondary" },
+    { title: "Classes 6 to 12", type: "Page", href: "/classes", keywords: "classes 6 7 8 9 10 11 12 classwise coaching" },
     { title: "Our Faculty", type: "Page", href: "/faculty", keywords: "faculty teachers mentors postgraduates b.tech experienced" },
     { title: "Board Results", type: "Page", href: "/results", keywords: "results board topper marks cbse 90 95" },
     { title: "Photo Gallery", type: "Page", href: "/gallery", keywords: "gallery photos centre classroom festivals puja independence day birthday teachers day" },
@@ -65,6 +67,16 @@ function buildSearchIndex(): SearchHit[] {
     });
   }
   hits.push({ title: "Crash Course - Class 6 to 12", type: "Program", href: "/programs#crash", keywords: "crash course revision boards mock papers short term" });
+
+  // Class pages
+  for (const c of classes) {
+    hits.push({
+      title: `${c.label} Coaching`,
+      type: "Class",
+      href: `/classes/${c.slug}`,
+      keywords: `${c.label} ${c.bandLabel} ${c.subjects.join(" ")} class ${c.number} coaching`,
+    });
+  }
 
   // Subjects
   for (const s of subjects) {

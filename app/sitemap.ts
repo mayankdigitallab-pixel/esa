@@ -2,6 +2,7 @@ import type { MetadataRoute } from "next";
 import { blogPosts } from "@/data/blog";
 import { nearbyAreas } from "@/data/areas";
 import { centres } from "@/data/centres";
+import { classes } from "@/data/classes";
 
 const base = "https://www.theesa.in";
 
@@ -16,6 +17,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${base}/results`, lastModified: today, changeFrequency: "monthly", priority: 0.85 },
     { url: `${base}/gallery`, lastModified: today, changeFrequency: "monthly", priority: 0.6 },
     { url: `${base}/materials`, lastModified: today, changeFrequency: "weekly", priority: 0.8 },
+    { url: `${base}/classes`, lastModified: today, changeFrequency: "monthly", priority: 0.85 },
     { url: `${base}/timetable`, lastModified: today, changeFrequency: "monthly", priority: 0.8 },
     { url: `${base}/blog`, lastModified: today, changeFrequency: "weekly", priority: 0.85 },
     { url: `${base}/faq`, lastModified: today, changeFrequency: "monthly", priority: 0.7 },
@@ -32,6 +34,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: c.isFlagship ? 0.9 : 0.85,
     }));
 
+  const classRoutes: MetadataRoute.Sitemap = classes.map((c) => ({
+    url: `${base}/classes/${c.slug}`,
+    lastModified: today,
+    changeFrequency: "monthly",
+    priority: 0.8,
+  }));
+
   const blogRoutes: MetadataRoute.Sitemap = blogPosts.map((p) => ({
     url: `${base}/blog/${p.slug}`,
     lastModified: p.date,
@@ -46,5 +55,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.6,
   }));
 
-  return [...staticRoutes, ...centreRoutes, ...blogRoutes, ...areaRoutes];
+  return [...staticRoutes, ...centreRoutes, ...classRoutes, ...blogRoutes, ...areaRoutes];
 }

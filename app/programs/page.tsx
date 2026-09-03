@@ -5,6 +5,7 @@ import { Container } from "@/components/ui/Container";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { PageBanner, BannerStatsRight } from "@/components/ui/PageBanner";
 import { programs } from "@/data/programs";
+import { classes } from "@/data/classes";
 import { whatsappLink } from "@/data/site";
 import { breadcrumbSchema, courseListSchema, faqSchema, jsonLd, shareMeta } from "@/lib/seo";
 import { FeeBlock } from "@/components/FeeBlock";
@@ -169,6 +170,23 @@ export default function ProgramsPage() {
                         </span>
                       </div>
                     </div>
+                    {(() => {
+                      const relatedClasses = classes.filter((c) => c.programSlug === p.slug);
+                      return relatedClasses.length > 0 ? (
+                        <div className="mt-6 flex flex-wrap items-center gap-x-4 gap-y-2 text-sm">
+                          <span className="font-semibold text-charcoal-soft">Class pages:</span>
+                          {relatedClasses.map((c) => (
+                            <Link
+                              key={c.slug}
+                              href={`/classes/${c.slug}`}
+                              className="font-semibold text-teal-700 hover:text-red-600"
+                            >
+                              {c.label}
+                            </Link>
+                          ))}
+                        </div>
+                      ) : null;
+                    })()}
                     <div className="mt-7 flex flex-wrap gap-3">
                       <Link
                         href={whatsappLink(

@@ -297,6 +297,32 @@ export default async function AreaPage({
                 </li>
               ))}
             </ul>
+
+            <div className="mt-10 rounded-2xl border border-teal-200 bg-teal-50/50 p-6">
+              <p className="text-[11px] font-bold uppercase tracking-widest text-teal-700">
+                Explore by class
+              </p>
+              <p className="mt-2 text-sm text-charcoal-soft">
+                See what coaching looks like for your child&apos;s exact class:
+              </p>
+              <div className="mt-4 flex flex-wrap gap-x-5 gap-y-2 text-sm">
+                <Link href="/classes/class-10" className="font-semibold text-teal-700 hover:text-red-600">
+                  Class 10 coaching
+                </Link>
+                <Link href="/classes/class-12" className="font-semibold text-teal-700 hover:text-red-600">
+                  Class 12 coaching
+                </Link>
+                <Link href="/classes" className="font-semibold text-teal-700 hover:text-red-600">
+                  View all classes (6-12)
+                </Link>
+                <Link href="/faculty" className="font-semibold text-teal-700 hover:text-red-600">
+                  Meet our faculty
+                </Link>
+                <Link href="/results" className="font-semibold text-teal-700 hover:text-red-600">
+                  See board results
+                </Link>
+              </div>
+            </div>
           </div>
         </Container>
       </section>
