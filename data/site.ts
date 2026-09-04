@@ -25,7 +25,7 @@ export const siteConfig = {
   // footer and the URL is excluded from LocalBusiness schema sameAs.
   socials: {
     facebook: "TODO" as string,
-    instagram: "TODO" as string,
+    instagram: "https://www.instagram.com/excellent_students_academy/" as string,
     youtube: "TODO" as string,
   },
   mapEmbedUrl:
