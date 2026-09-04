@@ -11,11 +11,11 @@ import type { ClassInfo } from "@/data/classes";
 const BASE = "https://www.theesa.in";
 const ORG_ID = `${BASE}/#organization`;
 
-// Aggregate rating shown on the site copy: 4.9 / 5 from 300+ parents.
+// Aggregate rating from real listings: Google 4.9 (72) + JustDial 5.0 (130) = 202.
 const AGGREGATE_RATING = {
   "@type": "AggregateRating",
   ratingValue: "4.9",
-  reviewCount: "300",
+  reviewCount: "202",
   bestRating: "5",
   worstRating: "1",
 } as const;
