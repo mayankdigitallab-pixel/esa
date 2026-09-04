@@ -150,11 +150,6 @@ export const centres: Centre[] = [
           path: "/rohini-sector-15",
           note: "Live in Sectors 13-17 or along the Bawana road? Our Sector 15 branch is closer.",
         },
-        {
-          name: "ESA Shakurpur",
-          path: "/shakurpur",
-          note: "For families in Punjabi Bagh, Tri Nagar or Shakurpur Colony, our west Delhi centre saves the commute.",
-        },
       ],
     },
   },
@@ -254,110 +249,6 @@ export const centres: Centre[] = [
           name: "ESA Rohini Sector 7 (Flagship)",
           path: "/rohini-sector-7",
           note: "Closer to Sectors 3-11? Our flagship centre has the widest batch availability, including founder-taught Class 11-12 Math.",
-        },
-      ],
-    },
-  },
-  {
-    slug: "shakurpur-delhi",
-    name: "ESA Shakurpur",
-    shortName: "Shakurpur Delhi",
-    city: "New Delhi",
-    state: "Delhi",
-    pin: "110034",
-    fullAddress: "Block G, Shakurpur Colony, Shakurpur, Delhi 110034",
-    addressLines: ["Block G, Shakurpur Colony", "Shakurpur, Delhi 110034"],
-    inCharge: "Ms. Khushboo",
-    inChargeRole: "Centre Incharge",
-    inChargePhoto: "/faculty/khushboo.jpg",
-    inChargeBio:
-      "Heads our Shakurpur centre. Handles admissions, parent meetings and academic planning for every batch running in Block G. Reach her directly during working hours for any concern.",
-    phone: "+919458012793",
-    phoneDisplay: "+91 94580 12793",
-    whatsapp: "+919458012793",
-    whatsappDisplay: "+91 94580 12793",
-    email: "excellentstudentsacademy1@gmail.com",
-    mapEmbedUrl:
-      "https://maps.google.com/maps?q=Ravi+Shoe+Palace,+Block+G,+Shakurpur+Colony,+Delhi+110034&z=17&output=embed",
-    mapLink:
-      "https://maps.google.com/maps?q=Ravi+Shoe+Palace,+Block+G,+Shakurpur+Colony,+Delhi+110034",
-    geo: { lat: "28.6815", lng: "77.1418" },
-    photos: [],
-    isFlagship: false,
-    landingPath: "/shakurpur",
-    metaTitle: "Coaching in Shakurpur Delhi | ESA Shakurpur Centre",
-    metaDescription:
-      "Excellent Students' Academy coaching centre in Block G, Shakurpur Colony, Delhi 110034. Class 1 to 12 CBSE coaching. Headed by Ms. Khushboo.",
-    heroImage:
-      "https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=1920&q=80",
-    highlights: [
-      "West Delhi presence next to Block G market, near Ravi Shoe Palace landmark",
-      "Strong foundation focus for Class 1-5 with Class 6-12 board batches running through the year",
-      "Easy access from Pitampura, Punjabi Bagh, Tri Nagar and Shakurpur Colony",
-      "Walking distance from local schools - DAV, Maharaja Agrasen, Salwan",
-    ],
-    faqs: [
-      {
-        question: "Where is the ESA Shakurpur centre located?",
-        answer:
-          "Block G, Shakurpur Colony, Shakurpur, Delhi 110034 - near Ravi Shoe Palace, just off the main Block G market road. Send a WhatsApp message for the live Google Maps pin.",
-      },
-      {
-        question: "Is the Shakurpur centre close to Pitampura and Punjabi Bagh?",
-        answer:
-          "Yes - 10-15 minutes by auto or e-rickshaw from Pitampura, Punjabi Bagh, Tri Nagar and Shastri Nagar. Direct buses connect through Shakurpur Colony from Outer Ring Road.",
-      },
-      {
-        question: "Which classes are taught at Shakurpur?",
-        answer:
-          "Class 1 to Class 12. Strong focus on foundation classes (1-5) plus Class 6-10 CBSE board prep and Class 11-12 Science, Commerce and Humanities streams.",
-      },
-      {
-        question: "Who is the Centre Incharge at Shakurpur?",
-        answer:
-          "Ms. Khushboo heads the Shakurpur centre. She handles admissions, batch allocation, parent communication and daily centre operations. Reach her directly during working hours.",
-      },
-      {
-        question: "Which schools do most ESA Shakurpur students come from?",
-        answer:
-          "DAV Public School (Shakurpur), Maharaja Agrasen Public School, Salwan Public School, Apeejay and other CBSE schools across west Delhi. Walking distance from several of these.",
-      },
-      {
-        question: "Do you have weekly tests like the Rohini centres?",
-        answer:
-          "Yes - every Saturday is test day at Shakurpur, same as our Rohini flagship. Chapter-wise testing for board classes and skill-based assessments for foundation classes.",
-      },
-    ],
-    locality: {
-      intro: [
-        "Our Shakurpur centre sits in Block G of Shakurpur Colony, near the Ravi Shoe Palace landmark just off the main market road - the heart of a dense west Delhi school belt. Families from Pitampura, Punjabi Bagh, Tri Nagar, Shastri Nagar and Wazirpur reach us in 10-15 minutes by auto or e-rickshaw, and several CBSE schools are within walking distance, so children often come straight from school to their batch.",
-        "The centre runs a strong foundation programme for Class 1-5 alongside full board-prep batches for Class 6-12, with the same Saturday test discipline as our Rohini flagship. If you are anywhere between the Outer Ring Road and Punjabi Bagh, this is the closest place to get the ESA system.",
-      ],
-      areas: [
-        { name: "Pitampura", slug: "pitampura" },
-        { name: "Punjabi Bagh", slug: "punjabi-bagh" },
-        { name: "Shastri Nagar", slug: "shastri-nagar" },
-        { name: "Wazirpur", slug: "wazirpur" },
-        { name: "Rani Bagh", slug: "rani-bagh" },
-        { name: "Tri Nagar" },
-        { name: "Shakurpur Colony" },
-      ],
-      schools: [
-        "DAV Public School, Shakurpur",
-        "Maharaja Agrasen Public School",
-        "Salwan Public School",
-        "Apeejay School",
-      ],
-      reach: [
-        { from: "Pitampura / Punjabi Bagh", how: "10-15 minutes by auto or e-rickshaw" },
-        { from: "Tri Nagar / Shastri Nagar", how: "Short e-rickshaw ride through Shakurpur Colony" },
-        { from: "Outer Ring Road", how: "Direct buses connect through Shakurpur Colony; get down at the Block G market stop" },
-      ],
-      nearbyCentres: [
-        {
-          name: "ESA Rohini Sector 7 (Flagship)",
-          path: "/rohini-sector-7",
-          note: "Living towards Rohini or Kohat Enclave? The flagship centre is a short metro ride away with the widest batch choice.",
         },
       ],
     },

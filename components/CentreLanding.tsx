@@ -155,7 +155,7 @@ export function CentreLanding({ centre }: Props) {
         imageAlt={`${centre.name} coaching centre`}
         heading={
           <>
-            CBSE coaching in {centre.shortName.replace(/^(Rohini |Lucknow |Shakurpur ?)/, "$&")}.
+            CBSE coaching in {centre.shortName}.
           </>
         }
         subtitle={`Class 1 to 12 coaching at our ${centre.shortName} centre. Walk in for a free demo class - no fees, no pressure.`}

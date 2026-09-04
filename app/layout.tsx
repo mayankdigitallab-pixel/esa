@@ -20,13 +20,12 @@ export const metadata: Metadata = {
     template: "%s | Excellent Students' Academy",
   },
   description:
-    "Excellent Students' Academy (ESA) - coaching for Grades 1 to 12 across four centres: Rohini Sector 7, Rohini Sector 15, Shakurpur (Delhi) and Thakurganj (Lucknow). Weekly tests, demo classes, expert faculty.",
+    "Excellent Students' Academy (ESA) - coaching for Grades 1 to 12 across three centres: Rohini Sector 7, Rohini Sector 15 (Delhi) and Thakurganj (Lucknow). Weekly tests, demo classes, expert faculty.",
   keywords: [
     "coaching in Rohini",
     "tuition in Rohini",
     "coaching in Lucknow",
     "coaching in Thakurganj",
-    "coaching in Shakurpur",
     "best coaching institute Delhi",
     "Class 11 12 coaching Rohini",
     "Excellent Students Academy",
@@ -36,7 +35,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Excellent Students' Academy | Coaching in Delhi & Lucknow",
     description:
-      "Coaching for Grades 1 to 12 across four centres in Delhi (Rohini Sec-7, Rohini Sec-15, Shakurpur) and Lucknow (Thakurganj). Expert faculty, weekly tests, demo classes.",
+      "Coaching for Grades 1 to 12 across three centres in Delhi (Rohini Sec-7, Rohini Sec-15) and Lucknow (Thakurganj). Expert faculty, weekly tests, demo classes.",
     url: "https://www.theesa.in",
     siteName: "Excellent Students' Academy",
     locale: "en_IN",
@@ -54,7 +53,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Excellent Students' Academy | Delhi & Lucknow",
     description:
-      "Coaching for Grades 1 to 12 across Delhi (Rohini, Shakurpur) and Lucknow (Thakurganj).",
+      "Coaching for Grades 1 to 12 across Delhi (Rohini) and Lucknow (Thakurganj).",
     images: ["/og-image.jpg"],
   },
   robots: {

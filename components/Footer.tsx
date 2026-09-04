@@ -48,7 +48,7 @@ export function Footer() {
             </span>
           </Link>
           <p className="mt-5 text-sm leading-relaxed text-neutral-400">
-            Coaching institute with four centres across Delhi (Rohini, Shakurpur) and Lucknow (Thakurganj). Grades 1 to 12 - disciplined tuition, expert faculty and consistent board results.
+            Coaching institute with three centres across Delhi (Rohini) and Lucknow (Thakurganj). Grades 1 to 12 - disciplined tuition, expert faculty and consistent board results.
           </p>
           {/* Render a social icon only when its URL has been configured.
               Placeholder ("TODO") entries are filtered so we never ship dead links. */}

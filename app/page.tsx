@@ -45,13 +45,12 @@ export const metadata: Metadata = {
   title:
     "Coaching & Tuition for Class 1-12 in Delhi & Lucknow | Excellent Students' Academy",
   description:
-    "Four ESA branches: Rohini Sector 7, Rohini Sector 15, Shakurpur (Delhi) and Thakurganj (Lucknow). Coaching for Class 1 to 12 - Math, Science, Commerce. Free demo class at any centre.",
+    "Three ESA branches: Rohini Sector 7, Rohini Sector 15 (Delhi) and Thakurganj (Lucknow). Coaching for Class 1 to 12 - Math, Science, Commerce. Free demo class at any centre.",
   keywords: [
     "best coaching in Rohini",
     "tuition in Rohini",
     "coaching in Lucknow",
     "coaching in Thakurganj",
-    "coaching in Shakurpur",
     "coaching classes Rohini Sector 7",
     "coaching classes Rohini Sector 15",
     "Class 11 12 coaching Rohini",
@@ -66,7 +65,7 @@ export const metadata: Metadata = {
   ...shareMeta({
     title: "Coaching for Class 1-12 across Delhi & Lucknow | Excellent Students' Academy",
     description:
-      "ESA branches in Rohini Sector 7, Rohini Sector 15, Shakurpur (Delhi) and Thakurganj (Lucknow). Coaching for Class 1 to 12 in Math, Science, Commerce.",
+      "ESA branches in Rohini Sector 7, Rohini Sector 15 (Delhi) and Thakurganj (Lucknow). Coaching for Class 1 to 12 in Math, Science, Commerce.",
     path: "",
   }),
 };
@@ -1228,7 +1227,7 @@ export default function HomePage() {
           <SectionHeading
             align="center"
             eyebrow="Our Branches"
-            title={<>Four centres across <span className="text-teal-600">Delhi & Lucknow</span>.</>}
+            title={<>Three centres across <span className="text-teal-600">Delhi & Lucknow</span>.</>}
             description="Same syllabus, same teaching framework, same disciplined coaching - close to where you live. Walk in to any branch for a free demo class."
           />
           <BranchesCarousel centres={centres} />

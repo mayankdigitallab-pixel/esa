@@ -11,13 +11,12 @@ import { breadcrumbSchema, jsonLd, shareMeta } from "@/lib/seo";
 export const metadata: Metadata = {
   title: "Our Branches | ESA Coaching Centres in Delhi & Lucknow",
   description:
-    "Excellent Students' Academy runs four coaching centres - Rohini Sector 7, Rohini Sector 15, Shakurpur (Delhi) and Thakurganj (Lucknow). Find your nearest ESA branch, address, in-charge and contact.",
+    "Excellent Students' Academy runs three coaching centres - Rohini Sector 7, Rohini Sector 15 (Delhi) and Thakurganj (Lucknow). Find your nearest ESA branch, address, in-charge and contact.",
   alternates: { canonical: "https://www.theesa.in/centres" },
   keywords: [
     "ESA centres",
     "ESA branches",
     "coaching in Rohini",
-    "coaching in Shakurpur",
     "coaching in Lucknow Thakurganj",
     "ESA Rohini Sector 7",
     "ESA Rohini Sector 15",
@@ -28,7 +27,7 @@ export const metadata: Metadata = {
   ...shareMeta({
     title: "Our Branches | ESA Coaching Centres in Delhi & Lucknow",
     description:
-      "Excellent Students' Academy runs four coaching centres - Rohini Sector 7, Rohini Sector 15, Shakurpur (Delhi) and Thakurganj (Lucknow). Find your nearest ESA branch, address, in-charge and contact.",
+      "Excellent Students' Academy runs three coaching centres - Rohini Sector 7, Rohini Sector 15 (Delhi) and Thakurganj (Lucknow). Find your nearest ESA branch, address, in-charge and contact.",
     path: "/centres",
   }),
 };
@@ -47,7 +46,7 @@ export default function CentresPage() {
         label="Our Branches"
         image="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1920&q=80"
         imageAlt="ESA coaching centre interior"
-        heading={<>Four centres. One academy.</>}
+        heading={<>Three centres. One academy.</>}
         subtitle="Visit any ESA branch across Delhi and Lucknow. Same curriculum, same discipline, same board-focused mentoring - taught by faculty trained at our Rohini flagship."
         right={
           <BannerStatsRight

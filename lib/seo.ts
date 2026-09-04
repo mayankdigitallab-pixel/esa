@@ -57,7 +57,7 @@ export function localBusinessSchema() {
       `${BASE}/gallery/g30.jpg`,
     ],
     description:
-      "Coaching institute for Class 1 to 12 with four branches: Rohini Sector 7, Rohini Sector 15, Shakurpur (Delhi) and Thakurganj (Lucknow). Math, Science, Commerce, English and all CBSE subjects. Operating since 2015.",
+      "Coaching institute for Class 1 to 12 with three branches: Rohini Sector 7, Rohini Sector 15 (Delhi) and Thakurganj (Lucknow). Math, Science, Commerce, English and all CBSE subjects. Operating since 2015.",
     email: siteConfig.email,
     telephone: flagship.phone,
     foundingDate: "2015",
@@ -100,7 +100,6 @@ export function localBusinessSchema() {
         "@type": "Place",
         name: `${a.name}, North Delhi`,
       })),
-      { "@type": "Place", name: "Shakurpur, Delhi" },
       { "@type": "Place", name: "Thakurganj, Lucknow" },
     ],
     openingHoursSpecification: [
