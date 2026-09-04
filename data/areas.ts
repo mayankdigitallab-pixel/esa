@@ -415,4 +415,37 @@ export const nearbyAreas: Area[] = [
     localCopy:
       "Bahadurgarh sits just across the Delhi-Haryana border in the NCR, on the western side of Rohini. Families here who want ESA's weekly-test system either travel in along the Rohtak Road corridor or use the Green Line metro, and home tuition is available across the nearer sectors.",
   },
+  {
+    slug: "nangloi",
+    name: "Nangloi",
+    distanceKm: 8.0,
+    description: "CBSE coaching for Nangloi families in West Delhi, a short ride from our Rohini Sector 7 centre.",
+    landmark: "Near Nangloi Metro Station (Green Line) and Nangloi Chowk on the Rohtak Road",
+    nearbySchools: ["CBSE schools across Nangloi, Nangloi Jat and Nihal Vihar"],
+    transport: "the Green Line metro to Mundka/onward, or the Rohtak Road by auto",
+    localCopy:
+      "Nangloi sits on the Green Line and the Rohtak Road, on the west side of Rohini. Students here reach our Sector 7 centre in about 20-25 minutes, and home tuition is available across Nangloi Jat, Nihal Vihar and the nearby colonies.",
+  },
+  {
+    slug: "mundka",
+    name: "Mundka",
+    distanceKm: 11.0,
+    description: "CBSE coaching for Mundka and Mundka Industrial Area families on West Delhi's Green Line belt near Rohini.",
+    landmark: "Near Mundka Metro Station (Green Line) on the Delhi-Bahadurgarh road",
+    nearbySchools: ["CBSE schools across Mundka, Ganesh Nagar and the Mundka belt"],
+    transport: "the Green Line metro, or the Delhi-Bahadurgarh road by car",
+    localCopy:
+      "Mundka is the last West Delhi stretch of the Green Line before Bahadurgarh, on the western approach to Rohini. Families who want ESA's disciplined weekly-test system travel in along the Delhi-Bahadurgarh road or the metro, with home tuition available across the nearer colonies.",
+  },
+  {
+    slug: "kirari",
+    name: "Kirari",
+    distanceKm: 7.0,
+    description: "CBSE coaching for Kirari Suleman Nagar families in North-West Delhi, close to our Rohini centres.",
+    landmark: "Kirari Suleman Nagar, between Nangloi and Rohini, near the Nangloi-Najafgarh road",
+    nearbySchools: ["CBSE schools across Kirari Suleman Nagar and Prem Nagar"],
+    transport: "auto or e-rickshaw via Nangloi/Rithala, then a short ride to Rohini",
+    localCopy:
+      "Kirari Suleman Nagar is a dense residential belt just west of Rohini, between Nangloi and the Rohini sectors. Students here reach our Sector 7 centre in about 15-20 minutes by auto, and home tuition is a popular option across Kirari and Prem Nagar.",
+  },
 ];
