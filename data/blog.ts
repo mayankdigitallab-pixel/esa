@@ -830,6 +830,12 @@ export const blogPosts: BlogPost[] = [
 <h2>Aditya Singh, Class 10, 94.8 percent</h2>
 <p>Aditya is from Rohini Sector 5, fifteen minutes from our centre. He had joined ESA in Class 8. By Class 10 boards he scored 94.8 with a 98 in Mathematics. His Math teacher made him solve every NCERT example problem on the board until he could do it without looking. That is it. No shortcut.</p>
 
+<h2>Anushka, 95 percent</h2>
+<p>Anushka scored 95 percent in her CBSE 2026 boards. Like everyone else on this list, she followed the same ESA routine without skipping - every Saturday chapter test, every monthly mock paper, and doubt sessions until the concept actually stuck.</p>
+
+<h2>Anannya, 94 percent</h2>
+<p>Anannya scored 94 percent in her CBSE 2026 boards. Steady weekly testing and regular mock practice through the year is what turned consistent effort into a 90-plus result on the board sheet.</p>
+
 <h2>What is common across our top scorers?</h2>
 <p>We looked at all 32 of our 90+ scorers from this year and three patterns showed up in every single one.</p>
 <ul>
