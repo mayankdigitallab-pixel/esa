@@ -19,9 +19,9 @@ import { CallbackForm } from "@/components/CallbackForm";
 import { breadcrumbSchema, jsonLd, shareMeta } from "@/lib/seo";
 
 export const metadata: Metadata = {
-  title: "Contact Us | Book a Free Demo at ESA Delhi & Lucknow",
+  title: "Contact Us | Book a Free Demo at ESA Delhi NCR & Lucknow",
   description:
-    "Get in touch with Excellent Students' Academy. Three centres across Delhi (Rohini Sector 7, Rohini Sector 15) and Lucknow (Thakurganj). Call, WhatsApp or fill our form to book a free demo.",
+    "Get in touch with Excellent Students' Academy. Three centres across Delhi NCR (Rohini Sector 7, Rohini Sector 15) and Lucknow (Thakurganj). Call, WhatsApp or fill our form to book a free demo.",
   alternates: { canonical: "https://www.theesa.in/contact" },
   keywords: [
     "contact ESA",
@@ -35,9 +35,9 @@ export const metadata: Metadata = {
     "coaching admission enquiry Delhi",
   ],
   ...shareMeta({
-    title: "Contact Us | Book a Free Demo at ESA Delhi & Lucknow",
+    title: "Contact Us | Book a Free Demo at ESA Delhi NCR & Lucknow",
     description:
-      "Get in touch with Excellent Students' Academy. Three centres across Delhi (Rohini Sector 7, Rohini Sector 15) and Lucknow (Thakurganj). Call, WhatsApp or fill our form to book a free demo.",
+      "Get in touch with Excellent Students' Academy. Three centres across Delhi NCR (Rohini Sector 7, Rohini Sector 15) and Lucknow (Thakurganj). Call, WhatsApp or fill our form to book a free demo.",
     path: "/contact",
   }),
 };

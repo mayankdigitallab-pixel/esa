@@ -57,7 +57,7 @@ export function localBusinessSchema() {
       `${BASE}/gallery/g30.jpg`,
     ],
     description:
-      "Coaching institute for Class 1 to 12 with three branches: Rohini Sector 7, Rohini Sector 15 (Delhi) and Thakurganj (Lucknow). Math, Science, Commerce, English and all CBSE subjects. Operating since 2015.",
+      "CBSE coaching institute for Class 1 to 12 serving Delhi NCR and Lucknow. Three branches: Rohini Sector 7 and Rohini Sector 15 (North-West Delhi NCR) and Thakurganj (Lucknow). Math, Science, Commerce, English and all CBSE subjects. Operating since 2015.",
     email: siteConfig.email,
     telephone: flagship.phone,
     foundingDate: "2015",
@@ -96,9 +96,11 @@ export function localBusinessSchema() {
       telephone: c.phone,
     })),
     areaServed: [
+      { "@type": "AdministrativeArea", name: "Delhi NCR" },
+      { "@type": "AdministrativeArea", name: "North-West Delhi" },
       ...nearbyAreas.map((a) => ({
         "@type": "Place",
-        name: `${a.name}, North Delhi`,
+        name: `${a.name}, Delhi NCR`,
       })),
       { "@type": "Place", name: "Thakurganj, Lucknow" },
     ],

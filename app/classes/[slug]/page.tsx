@@ -30,6 +30,7 @@ export async function generateMetadata({
     keywords: [
       `${classInfo.label} coaching Rohini`,
       `${classInfo.label} tuition Rohini`,
+      `${classInfo.label} coaching Delhi NCR`,
       `best coaching for ${classInfo.label}`,
       `${classInfo.label} CBSE coaching`,
       ...classInfo.subjects.map((s) => `${classInfo.label} ${s} coaching`),

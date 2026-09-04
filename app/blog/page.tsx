@@ -8,7 +8,7 @@ import { breadcrumbSchema, jsonLd, shareMeta } from "@/lib/seo";
 export const metadata: Metadata = {
   title: "Blog | ESA Rohini",
   description:
-    "Coaching tips, topper stories, parent guides and board exam strategy from Excellent Students' Academy Rohini. Local insights for parents in Rohini, Pitampura, Shalimar Bagh.",
+    "Coaching tips, topper stories, parent guides and board exam strategy from Excellent Students' Academy Rohini. Local insights for parents across Delhi NCR - Rohini, Pitampura, Shalimar Bagh and nearby.",
   alternates: { canonical: "https://www.theesa.in/blog" },
   keywords: [
     "coaching blog Rohini",
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
   ...shareMeta({
     title: "Blog | Coaching Tips & Board Exam Strategy | ESA Rohini",
     description:
-      "Coaching tips, topper stories, parent guides and board exam strategy from Excellent Students' Academy Rohini. Local insights for parents in Rohini, Pitampura, Shalimar Bagh.",
+      "Coaching tips, topper stories, parent guides and board exam strategy from Excellent Students' Academy Rohini. Local insights for parents across Delhi NCR - Rohini, Pitampura, Shalimar Bagh and nearby.",
     path: "/blog",
   }),
 };

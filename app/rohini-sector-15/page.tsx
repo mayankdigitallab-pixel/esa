@@ -14,6 +14,8 @@ export const metadata: Metadata = {
     "ESA Rohini Sector 15",
     "tuition in Rohini Sector 15",
     "CBSE coaching Sector 15 Rohini",
+    "coaching in Delhi NCR",
+    "best coaching institute North West Delhi",
     "Class 10 board coaching Rohini",
     "Class 12 coaching Rohini",
     "Dhruv Narayan ESA",

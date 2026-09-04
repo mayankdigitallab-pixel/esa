@@ -44,9 +44,9 @@ const programFaqs = [
 ];
 
 export const metadata: Metadata = {
-  title: "Programs & Courses | Class 1 to 12 Coaching in Rohini",
+  title: "Programs & Courses | Class 1 to 12 Coaching in Rohini, Delhi NCR",
   description:
-    "Coaching programs for Class 1 to 12 at Excellent Students' Academy Rohini. Foundation, Middle School, Board Prep and Senior Secondary streams. Math, Science, Commerce. View details and fees.",
+    "Coaching programs for Class 1 to 12 at Excellent Students' Academy, Rohini (Delhi NCR). Foundation, Middle School, Board Prep and Senior Secondary streams. Math, Science, Commerce. View details and fees.",
   alternates: { canonical: "https://www.theesa.in/programs" },
   keywords: [
     "Class 11 coaching Rohini",
@@ -64,9 +64,9 @@ export const metadata: Metadata = {
     "foundation course Rohini",
   ],
   ...shareMeta({
-    title: "Programs & Courses | Class 1 to 12 Coaching in Rohini",
+    title: "Programs & Courses | Class 1 to 12 Coaching in Rohini, Delhi NCR",
     description:
-      "Coaching programs for Class 1 to 12 at Excellent Students' Academy Rohini. Foundation, Middle School, Board Prep and Senior Secondary streams. Math, Science, Commerce. View details and fees.",
+      "Coaching programs for Class 1 to 12 at Excellent Students' Academy, Rohini (Delhi NCR). Foundation, Middle School, Board Prep and Senior Secondary streams. Math, Science, Commerce. View details and fees.",
     path: "/programs",
   }),
 };

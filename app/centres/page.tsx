@@ -9,9 +9,9 @@ import { centres } from "@/data/centres";
 import { breadcrumbSchema, jsonLd, shareMeta } from "@/lib/seo";
 
 export const metadata: Metadata = {
-  title: "Our Branches | ESA Coaching Centres in Delhi & Lucknow",
+  title: "Our Branches | ESA Coaching Centres in Delhi NCR & Lucknow",
   description:
-    "Excellent Students' Academy runs three coaching centres - Rohini Sector 7, Rohini Sector 15 (Delhi) and Thakurganj (Lucknow). Find your nearest ESA branch, address, in-charge and contact.",
+    "Excellent Students' Academy runs three coaching centres - Rohini Sector 7 and Rohini Sector 15 (North-West Delhi NCR) and Thakurganj (Lucknow). Find your nearest ESA branch, address, in-charge and contact.",
   alternates: { canonical: "https://www.theesa.in/centres" },
   keywords: [
     "ESA centres",
@@ -25,9 +25,9 @@ export const metadata: Metadata = {
     "coaching centre address Rohini",
   ],
   ...shareMeta({
-    title: "Our Branches | ESA Coaching Centres in Delhi & Lucknow",
+    title: "Our Branches | ESA Coaching Centres in Delhi NCR & Lucknow",
     description:
-      "Excellent Students' Academy runs three coaching centres - Rohini Sector 7, Rohini Sector 15 (Delhi) and Thakurganj (Lucknow). Find your nearest ESA branch, address, in-charge and contact.",
+      "Excellent Students' Academy runs three coaching centres - Rohini Sector 7 and Rohini Sector 15 (North-West Delhi NCR) and Thakurganj (Lucknow). Find your nearest ESA branch, address, in-charge and contact.",
     path: "/centres",
   }),
 };

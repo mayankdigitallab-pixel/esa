@@ -43,12 +43,16 @@ import { breadcrumbSchema, faqPageSchema, jsonLd, localBusinessSchema, shareMeta
 
 export const metadata: Metadata = {
   title:
-    "Coaching & Tuition for Class 1-12 in Delhi & Lucknow | Excellent Students' Academy",
+    "Coaching & Tuition for Class 1-12 in Delhi NCR & Lucknow | Excellent Students' Academy",
   description:
-    "Three ESA branches: Rohini Sector 7, Rohini Sector 15 (Delhi) and Thakurganj (Lucknow). Coaching for Class 1 to 12 - Math, Science, Commerce. Free demo class at any centre.",
+    "Class 1 to 12 CBSE coaching in Delhi NCR and Lucknow. Three ESA branches: Rohini Sector 7 & Rohini Sector 15 (North-West Delhi NCR) and Thakurganj (Lucknow). Math, Science, Commerce - free demo class at any centre.",
   keywords: [
     "best coaching in Rohini",
     "tuition in Rohini",
+    "coaching in Delhi NCR",
+    "best coaching institute in Delhi NCR",
+    "CBSE coaching Delhi NCR",
+    "coaching in North West Delhi",
     "coaching in Lucknow",
     "coaching in Thakurganj",
     "coaching classes Rohini Sector 7",
@@ -63,9 +67,9 @@ export const metadata: Metadata = {
   ],
   alternates: { canonical: "https://www.theesa.in" },
   ...shareMeta({
-    title: "Coaching for Class 1-12 across Delhi & Lucknow | Excellent Students' Academy",
+    title: "Coaching for Class 1-12 across Delhi NCR & Lucknow | Excellent Students' Academy",
     description:
-      "ESA branches in Rohini Sector 7, Rohini Sector 15 (Delhi) and Thakurganj (Lucknow). Coaching for Class 1 to 12 in Math, Science, Commerce.",
+      "ESA branches in Rohini Sector 7 & Rohini Sector 15 (North-West Delhi NCR) and Thakurganj (Lucknow). Class 1 to 12 coaching in Math, Science, Commerce.",
     path: "",
   }),
 };
@@ -999,8 +1003,8 @@ export default function HomePage() {
         <Container>
           <SectionHeading
             eyebrow="Areas we serve"
-            title={<>Students travel to ESA from <span className="text-teal-600">across North Delhi</span>.</>}
-            description="Located in Rohini Sector 7. Students come from these neighbouring localities. Home tuition is also available in most of them."
+            title={<>Students travel to ESA from <span className="text-teal-600">across North-West Delhi NCR</span>.</>}
+            description="Located in Rohini Sector 7, we draw students from Rohini and the surrounding North-West Delhi NCR belt. Home tuition is also available in most of these localities."
           />
           <div className="grid gap-3 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
             {nearbyAreas.map((area, i) => (
@@ -1227,8 +1231,8 @@ export default function HomePage() {
           <SectionHeading
             align="center"
             eyebrow="Our Branches"
-            title={<>Three centres across <span className="text-teal-600">Delhi & Lucknow</span>.</>}
-            description="Same syllabus, same teaching framework, same disciplined coaching - close to where you live. Walk in to any branch for a free demo class."
+            title={<>Three centres across <span className="text-teal-600">Delhi NCR & Lucknow</span>.</>}
+            description="Same syllabus, same teaching framework, same disciplined coaching across Delhi NCR and Lucknow - close to where you live. Walk in to any branch for a free demo class."
           />
           <BranchesCarousel centres={centres} />
           <div className="mt-10 text-center">

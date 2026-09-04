@@ -404,4 +404,15 @@ export const nearbyAreas: Area[] = [
     localCopy:
       "NSP is a major commercial and metro hub - students here connect easily to our Sector 7 centre via the Red Line.",
   },
+  {
+    slug: "bahadurgarh",
+    name: "Bahadurgarh",
+    distanceKm: 16.0,
+    description: "CBSE coaching for Bahadurgarh (Haryana NCR) families, on the western edge of the Delhi NCR belt near Rohini.",
+    landmark: "Connected to Delhi via the Green Line metro (Bahadurgarh City / Brigadier Hoshiar Singh stations)",
+    nearbySchools: ["CBSE schools across Bahadurgarh and the Delhi-Haryana border belt"],
+    transport: "the Green Line metro via Mundka, or the Rohtak Road corridor by car",
+    localCopy:
+      "Bahadurgarh sits just across the Delhi-Haryana border in the NCR, on the western side of Rohini. Families here who want ESA's weekly-test system either travel in along the Rohtak Road corridor or use the Green Line metro, and home tuition is available across the nearer sectors.",
+  },
 ];

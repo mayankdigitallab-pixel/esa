@@ -11,7 +11,7 @@ import { breadcrumbSchema, facultyItemListSchema, jsonLd, shareMeta } from "@/li
 export const metadata: Metadata = {
   title: "Our Faculty | Expert Teachers at ESA Rohini",
   description:
-    "Meet the faculty at Excellent Students' Academy Rohini. Experienced mentors with 6+ years coaching Math, Science, Commerce and English for Class 1 to 12 CBSE and ICSE.",
+    "Meet the faculty at Excellent Students' Academy, Rohini (Delhi NCR). Experienced mentors with 6+ years coaching Math, Science, Commerce and English for Class 1 to 12 CBSE and ICSE.",
   alternates: { canonical: "https://www.theesa.in/faculty" },
   keywords: [
     "ESA faculty Rohini",
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
   ...shareMeta({
     title: "Our Faculty | Expert Teachers at ESA Rohini",
     description:
-      "Meet the faculty at Excellent Students' Academy Rohini. Experienced mentors with 6+ years coaching Math, Science, Commerce and English for Class 1 to 12 CBSE and ICSE.",
+      "Meet the faculty at Excellent Students' Academy, Rohini (Delhi NCR). Experienced mentors with 6+ years coaching Math, Science, Commerce and English for Class 1 to 12 CBSE and ICSE.",
     path: "/faculty",
   }),
 };

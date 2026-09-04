@@ -19,7 +19,7 @@ import { breadcrumbSchema, jsonLd, shareMeta } from "@/lib/seo";
 export const metadata: Metadata = {
   title: "About Us | Best Coaching Institute in Rohini Since 2015",
   description:
-    "Learn about Excellent Students' Academy, the trusted coaching institute in Rohini Sector 7 since 2015. Our story, mission and what makes ESA different for Class 1 to 12 students across North Delhi.",
+    "Learn about Excellent Students' Academy, the trusted coaching institute in Rohini Sector 7 since 2015. Our story, mission and what makes ESA different for Class 1 to 12 students across North-West Delhi NCR.",
   alternates: { canonical: "https://www.theesa.in/about" },
   keywords: [
     "about Excellent Students Academy",
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
   ...shareMeta({
     title: "About Us | Best Coaching Institute in Rohini Since 2015",
     description:
-      "Learn about Excellent Students' Academy, the trusted coaching institute in Rohini Sector 7 since 2015. Our story, mission and what makes ESA different for Class 1 to 12 students across North Delhi.",
+      "Learn about Excellent Students' Academy, the trusted coaching institute in Rohini Sector 7 since 2015. Our story, mission and what makes ESA different for Class 1 to 12 students across North-West Delhi NCR.",
     path: "/about",
   }),
 };
