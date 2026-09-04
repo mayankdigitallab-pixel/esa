@@ -160,8 +160,8 @@ export function Footer() {
               >
                 <Star className="h-4 w-4 fill-yellow-400 text-yellow-400" />
                 <span>
-                  <span className="font-semibold text-white">4.8</span> on Google
-                  <span className="text-neutral-500"> · 55 reviews</span>
+                  <span className="font-semibold text-white">4.9</span> on Google
+                  <span className="text-neutral-500"> · 72 reviews</span>
                 </span>
               </a>
             </li>
@@ -174,8 +174,8 @@ export function Footer() {
               >
                 <Star className="h-4 w-4 fill-green-500 text-green-500" />
                 <span>
-                  <span className="font-semibold text-white">4.8</span> on JustDial
-                  <span className="text-neutral-500"> · 124 ratings</span>
+                  <span className="font-semibold text-white">5.0</span> on JustDial
+                  <span className="text-neutral-500"> · 130 ratings</span>
                 </span>
               </a>
             </li>
