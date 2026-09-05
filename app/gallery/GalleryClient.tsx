@@ -76,6 +76,29 @@ const accentStyles: Record<
 
 const sections: Section[] = [
   {
+    id: "teachers-day-2026",
+    title: "Teachers' Day 2026",
+    eyebrow: "Sept 5, 2026",
+    blurb:
+      "Balloon arches, a hand-made banner, cake cutting and batch after batch of selfies - our latest Teachers' Day at the Rohini centre.",
+    icon: <Heart className="h-5 w-5" />,
+    accent: "red",
+    photos: [
+      { file: "teachers-day/td-01.jpeg", alt: "Students and faculty group selfie on Teachers' Day 2026 at ESA Rohini", caption: "Group selfie with the whole Teachers' Day crew" },
+      { file: "teachers-day/td-02.jpeg", alt: "Full ESA batch with faculty on Teachers' Day 2026 amid balloon decor", caption: "Full batch with sir, ready for the frame" },
+      { file: "teachers-day/td-03.jpeg", alt: "Senior batch group photo with mentor on Teachers' Day 2026 at ESA Rohini", caption: "Senior batch lined up for the camera" },
+      { file: "teachers-day/td-04.jpeg", alt: "ESA juniors posing in front of Happy Teachers' Day 2026 banner", caption: "Juniors in front of the Happy Teachers banner" },
+      { file: "teachers-day/td-05.jpeg", alt: "Middle-school ESA students posing on Teachers' Day 2026", caption: "Middle-school batch, all smiles" },
+      { file: "teachers-day/td-06.jpeg", alt: "ESA batch students posing by decorated wall on Teachers' Day 2026", caption: "Batch posing by the decorated wall" },
+      { file: "teachers-day/td-07.jpeg", alt: "Three ESA students posing on Teachers' Day 2026 at the Rohini centre", caption: "Three friends, one Teachers' Day frame" },
+      { file: "teachers-day/td-08.jpeg", alt: "Two junior ESA students on Teachers' Day 2026 at Rohini", caption: "Two juniors, arms around shoulders" },
+      { file: "teachers-day/td-09.jpeg", alt: "ESA faculty selfie on Teachers' Day 2026 at Rohini", caption: "A quick selfie between mentors" },
+      { file: "teachers-day/td-10.jpeg", alt: "ESA founder and faculty during Teachers' Day 2026 celebration", caption: "Founder and faculty share a break" },
+      { file: "teachers-day/td-11.jpeg", alt: "Large group selfie of ESA students and teachers on Teachers' Day 2026", caption: "Everyone leans in for the group selfie" },
+      { file: "teachers-day/td-12.jpeg", alt: "ESA faculty cutting the Teachers' Day 2026 cake at Rohini centre", caption: "Cutting the Teachers' Day cake together" },
+    ],
+  },
+  {
     id: "classroom",
     title: "Inside the Classroom",
     eyebrow: "Live teaching",
@@ -172,29 +195,6 @@ const sections: Section[] = [
       { file: "g35.jpg", alt: "Teachers' Day batch selfie at ESA", caption: "Happy Teachers backboard, full crew" },
       { file: "g36.jpg", alt: "Crowded Teachers' Day selfie", caption: "Students lean in for the frame" },
       { file: "g42.jpg", alt: "Faculty group with Happy Teachers banner", caption: "Faculty against the kids' Teachers Day banner" },
-    ],
-  },
-  {
-    id: "teachers-day-2026",
-    title: "Teachers' Day 2026",
-    eyebrow: "Sept 5, 2026",
-    blurb:
-      "Balloon arches, a hand-made banner, cake cutting and batch after batch of selfies - our latest Teachers' Day at the Rohini centre.",
-    icon: <Heart className="h-5 w-5" />,
-    accent: "red",
-    photos: [
-      { file: "teachers-day/td-01.jpeg", alt: "Students and faculty group selfie on Teachers' Day 2026 at ESA Rohini", caption: "Group selfie with the whole Teachers' Day crew" },
-      { file: "teachers-day/td-02.jpeg", alt: "Full ESA batch with faculty on Teachers' Day 2026 amid balloon decor", caption: "Full batch with sir, ready for the frame" },
-      { file: "teachers-day/td-03.jpeg", alt: "Senior batch group photo with mentor on Teachers' Day 2026 at ESA Rohini", caption: "Senior batch lined up for the camera" },
-      { file: "teachers-day/td-04.jpeg", alt: "ESA juniors posing in front of Happy Teachers' Day 2026 banner", caption: "Juniors in front of the Happy Teachers banner" },
-      { file: "teachers-day/td-05.jpeg", alt: "Middle-school ESA students posing on Teachers' Day 2026", caption: "Middle-school batch, all smiles" },
-      { file: "teachers-day/td-06.jpeg", alt: "ESA batch students posing by decorated wall on Teachers' Day 2026", caption: "Batch posing by the decorated wall" },
-      { file: "teachers-day/td-07.jpeg", alt: "Three ESA students posing on Teachers' Day 2026 at the Rohini centre", caption: "Three friends, one Teachers' Day frame" },
-      { file: "teachers-day/td-08.jpeg", alt: "Two junior ESA students on Teachers' Day 2026 at Rohini", caption: "Two juniors, arms around shoulders" },
-      { file: "teachers-day/td-09.jpeg", alt: "ESA faculty selfie on Teachers' Day 2026 at Rohini", caption: "A quick selfie between mentors" },
-      { file: "teachers-day/td-10.jpeg", alt: "ESA founder and faculty during Teachers' Day 2026 celebration", caption: "Founder and faculty share a break" },
-      { file: "teachers-day/td-11.jpeg", alt: "Large group selfie of ESA students and teachers on Teachers' Day 2026", caption: "Everyone leans in for the group selfie" },
-      { file: "teachers-day/td-12.jpeg", alt: "ESA faculty cutting the Teachers' Day 2026 cake at Rohini centre", caption: "Cutting the Teachers' Day cake together" },
     ],
   },
   {
