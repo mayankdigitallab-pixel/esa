@@ -5,12 +5,12 @@ import { PageBanner, BannerStatsRight } from "@/components/ui/PageBanner";
 import { ResultsGrid } from "@/components/ResultsGrid";
 import { VideoReviews } from "@/components/VideoReviews";
 import { toppers, subjectToppers } from "@/data/results";
-import { breadcrumbSchema, jsonLd, shareMeta } from "@/lib/seo";
+import { breadcrumbSchema, webPageSchema, jsonLd, shareMeta } from "@/lib/seo";
 
 export const metadata: Metadata = {
   title: "Board Results & Toppers | ESA Rohini",
   description:
-    "Recent CBSE Class 10 and Class 12 board results from Excellent Students' Academy Rohini. 84% average score, 32+ students above 90%, 100% pass rate. Meet our toppers.",
+    "ESA Rohini CBSE 2026 board results: 84% average, 32 students above 90% and a 100% pass rate across Class 10 and 12. Meet our toppers.",
   alternates: { canonical: "https://www.theesa.in/results" },
   keywords: [
     "best CBSE results Rohini",
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
   ...shareMeta({
     title: "Board Results & Toppers | ESA Rohini",
     description:
-      "Recent CBSE Class 10 and Class 12 board results from Excellent Students' Academy Rohini. 84% average score, 32+ students above 90%, 100% pass rate. Meet our toppers.",
+      "ESA Rohini CBSE 2026 board results: 84% average, 32 students above 90% and a 100% pass rate across Class 10 and 12. Meet our toppers.",
     path: "/results",
   }),
 };
@@ -38,6 +38,16 @@ export default function ResultsPage() {
   return (
     <div>
       <script {...jsonLd(breadcrumb)} />
+      <script
+        {...jsonLd(
+          webPageSchema({
+            type: "WebPage",
+            path: "/results",
+            name: String(metadata.title),
+            description: String(metadata.description),
+          }),
+        )}
+      />
       <PageBanner
         label="Recent Results"
         image="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=1920&q=80"

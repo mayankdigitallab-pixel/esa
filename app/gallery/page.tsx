@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
 import { PageBanner, BannerStatsRight } from "@/components/ui/PageBanner";
 import { GalleryClient } from "./GalleryClient";
-import { breadcrumbSchema, jsonLd, shareMeta } from "@/lib/seo";
+import { breadcrumbSchema, webPageSchema, jsonLd, shareMeta } from "@/lib/seo";
 
 export const metadata: Metadata = {
   title: "Gallery | Inside ESA Rohini - Classes, Festivals, Birthdays",
   description:
-    "Real photos from inside Excellent Students' Academy Rohini Sector 7 - classrooms, weekly tests, Saraswati Puja, Independence Day, Teachers' Day, birthdays and our centre.",
+    "Photos from inside ESA Rohini Sector 7: classrooms, weekly tests, Saraswati Puja, Independence Day, Teachers' Day and student birthdays.",
   alternates: { canonical: "https://www.theesa.in/gallery" },
   keywords: [
     "ESA Rohini photos",
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   ...shareMeta({
     title: "Gallery | Inside ESA Rohini - Classes, Festivals, Birthdays",
     description:
-      "Real photos from inside Excellent Students' Academy Rohini Sector 7 - classrooms, weekly tests, Saraswati Puja, Independence Day, Teachers' Day, birthdays and our centre.",
+      "Photos from inside ESA Rohini Sector 7: classrooms, weekly tests, Saraswati Puja, Independence Day, Teachers' Day and student birthdays.",
     path: "/gallery",
     image: "https://www.theesa.in/gallery/g13.jpg",
   }),
@@ -33,6 +33,16 @@ export default function GalleryPage() {
   return (
     <div>
       <script {...jsonLd(breadcrumb)} />
+      <script
+        {...jsonLd(
+          webPageSchema({
+            type: "CollectionPage",
+            path: "/gallery",
+            name: String(metadata.title),
+            description: String(metadata.description),
+          }),
+        )}
+      />
       <PageBanner
         label="Gallery"
         image="/gallery/g13.jpg"

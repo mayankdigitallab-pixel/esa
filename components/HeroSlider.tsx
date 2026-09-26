@@ -131,7 +131,10 @@ export function HeroSlider() {
         {/* LEFT */}
         <div className="esa-hero-left relative">
           <div className="relative">
-            {heroSlides.map((s, i) => (
+            {heroSlides.map((s, i) => {
+              // One H1 per page: only the first slide's headline is the H1.
+              const Heading = i === 0 ? "h1" : "h2";
+              return (
               <div
                 key={s.eyebrow + i}
                 className={`transition-all duration-700 ease-out ${
@@ -147,7 +150,7 @@ export function HeroSlider() {
                   </span>
                   <span className="h-px w-12 bg-teal-400" />
                 </div>
-                <h1
+                <Heading
                   className="mt-7 m-0"
                   style={{
                     fontSize: "clamp(2.8rem, 7.5vw, 7rem)",
@@ -165,7 +168,7 @@ export function HeroSlider() {
                   >
                     {s.accentWord}
                   </span>
-                </h1>
+                </Heading>
                 <p
                   className="mt-7 max-w-xl text-base leading-relaxed sm:text-[17px]"
                   style={{ color: "rgba(255,255,255,0.62)" }}
@@ -185,7 +188,8 @@ export function HeroSlider() {
                   </Link>
                 </div>
               </div>
-            ))}
+              );
+            })}
           </div>
         </div>
 

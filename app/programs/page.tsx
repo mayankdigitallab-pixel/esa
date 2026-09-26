@@ -41,7 +41,7 @@ const programFaqs = [
 export const metadata: Metadata = {
   title: "Programs & Courses | Class 1-12 Coaching | ESA Rohini",
   description:
-    "Coaching programs for Class 1 to 12 at Excellent Students' Academy, Rohini (Delhi NCR). Foundation, Middle School, Board Prep and Senior Secondary streams. Math, Science, Commerce. View details and fees.",
+    "Class 1-12 coaching programs at ESA Rohini: Foundation, Middle School, Board Prep and Senior Secondary. Maths, Science, Commerce and more.",
   alternates: { canonical: "https://www.theesa.in/programs" },
   keywords: [
     "Class 11 coaching Rohini",
@@ -61,7 +61,7 @@ export const metadata: Metadata = {
   ...shareMeta({
     title: "Programs & Courses | Class 1-12 Coaching | ESA Rohini",
     description:
-      "Coaching programs for Class 1 to 12 at Excellent Students' Academy, Rohini (Delhi NCR). Foundation, Middle School, Board Prep and Senior Secondary streams. Math, Science, Commerce. View details and fees.",
+      "Class 1-12 coaching programs at ESA Rohini: Foundation, Middle School, Board Prep and Senior Secondary. Maths, Science, Commerce and more.",
     path: "/programs",
   }),
 };

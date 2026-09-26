@@ -16,12 +16,12 @@ import { centres } from "@/data/centres";
 import { BranchesGrid } from "@/components/BranchesGrid";
 import { EnquiryForm } from "@/components/EnquiryForm";
 import { CallbackForm } from "@/components/CallbackForm";
-import { breadcrumbSchema, jsonLd, shareMeta } from "@/lib/seo";
+import { breadcrumbSchema, webPageSchema, jsonLd, shareMeta } from "@/lib/seo";
 
 export const metadata: Metadata = {
   title: "Contact Us | Book a Free Demo at ESA Delhi NCR & Lucknow",
   description:
-    "Get in touch with Excellent Students' Academy. Three centres across Delhi NCR (Rohini Sector 7, Rohini Sector 15) and Lucknow (Thakurganj). Call, WhatsApp or fill our form to book a free demo.",
+    "Contact Excellent Students' Academy: Rohini Sector 7, Rohini Sector 15 and Lucknow centres. Call, WhatsApp or fill the form for a free demo.",
   alternates: { canonical: "https://www.theesa.in/contact" },
   keywords: [
     "contact ESA",
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
   ...shareMeta({
     title: "Contact Us | Book a Free Demo at ESA Delhi NCR & Lucknow",
     description:
-      "Get in touch with Excellent Students' Academy. Three centres across Delhi NCR (Rohini Sector 7, Rohini Sector 15) and Lucknow (Thakurganj). Call, WhatsApp or fill our form to book a free demo.",
+      "Contact Excellent Students' Academy: Rohini Sector 7, Rohini Sector 15 and Lucknow centres. Call, WhatsApp or fill the form for a free demo.",
     path: "/contact",
   }),
 };
@@ -50,6 +50,16 @@ export default function ContactPage() {
   return (
     <div>
       <script {...jsonLd(breadcrumb)} />
+      <script
+        {...jsonLd(
+          webPageSchema({
+            type: "ContactPage",
+            path: "/contact",
+            name: String(metadata.title),
+            description: String(metadata.description),
+          }),
+        )}
+      />
       <PageBanner
         label="Get In Touch"
         image="https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=1920&q=80"

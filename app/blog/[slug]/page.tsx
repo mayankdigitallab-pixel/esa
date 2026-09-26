@@ -20,8 +20,9 @@ export async function generateMetadata({
   const { slug } = await params;
   const post = blogPosts.find((p) => p.slug === slug);
   if (!post) return {};
+  const title = post.seoTitle ?? post.title;
   return {
-    title: post.title,
+    title,
     description: post.description,
     alternates: { canonical: `https://www.theesa.in/blog/${post.slug}` },
     keywords: [
@@ -34,7 +35,7 @@ export async function generateMetadata({
       ...(post.keywords ?? []),
     ],
     openGraph: {
-      title: post.title,
+      title,
       description: post.description,
       url: `https://www.theesa.in/blog/${post.slug}`,
       type: "article",
@@ -43,7 +44,7 @@ export async function generateMetadata({
     },
     twitter: {
       card: "summary_large_image",
-      title: post.title,
+      title,
       description: post.description,
       images: [post.cover],
     },
@@ -154,6 +155,23 @@ export default async function BlogPostPage({
                 <span className="font-medium">{post.readTime}</span>
               </div>
             </header>
+
+            {/* Key takeaways - a short direct answer for readers and answer engines */}
+            {post.takeaways && post.takeaways.length > 0 && (
+              <aside className="blog-takeaways mx-6 mt-8 rounded-xl border border-teal-200 bg-white p-6 sm:mx-10">
+                <p className="text-[11px] font-bold uppercase tracking-[0.22em] text-teal-700">
+                  Key takeaways
+                </p>
+                <ul className="mt-3 space-y-2">
+                  {post.takeaways.map((t) => (
+                    <li key={t} className="flex gap-3 text-[15px] leading-relaxed text-charcoal">
+                      <span aria-hidden className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-teal-600" />
+                      {t}
+                    </li>
+                  ))}
+                </ul>
+              </aside>
+            )}
 
             {/* Body */}
             <div className="px-6 pb-12 pt-8 sm:px-10 sm:pt-10">

@@ -22,7 +22,7 @@ export async function generateMetadata({
   const classInfo = classes.find((c) => c.slug === slug);
   if (!classInfo) return {};
   const title = `${classInfo.label} Coaching in Rohini | ESA Coaching Centre`;
-  const description = `Looking for coaching in Rohini for ${classInfo.label}? Explore ESA Coaching Centre's ${classInfo.label} program - subjects, teaching approach, weekly tests, doubt support and outcomes.`;
+  const description = `${classInfo.label} coaching in Rohini at ESA: subjects, teaching approach, weekly Saturday tests and doubt support. Book a free 7-day demo class.`;
   return {
     title,
     description,

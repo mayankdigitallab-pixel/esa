@@ -10,7 +10,7 @@ import { breadcrumbSchema, jsonLd, shareMeta } from "@/lib/seo";
 export const metadata: Metadata = {
   title: "Classes 6 to 12 Coaching | ESA Coaching Centre Rohini",
   description:
-    "Explore ESA Coaching Centre's Class 6 to Class 12 programs in Rohini, Delhi NCR - subjects, teaching approach, weekly tests, doubt support and outcomes for every class.",
+    "Class 6 to 12 coaching at ESA Rohini: subjects, teaching approach, weekly tests and doubt support for every class. Book a free demo.",
   alternates: { canonical: "https://www.theesa.in/classes" },
   keywords: [
     "Class 6 coaching Rohini",
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
   ...shareMeta({
     title: "Classes 6 to 12 Coaching | ESA Coaching Centre Rohini",
     description:
-      "Explore ESA Coaching Centre's Class 6 to Class 12 programs in Rohini, Delhi NCR - subjects, teaching approach, weekly tests, doubt support and outcomes for every class.",
+      "Class 6 to 12 coaching at ESA Rohini: subjects, teaching approach, weekly tests and doubt support for every class. Book a free demo.",
     path: "/classes",
   }),
 };

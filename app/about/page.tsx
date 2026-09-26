@@ -14,12 +14,12 @@ import { Container } from "@/components/ui/Container";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { PageBanner, BannerStatsRight } from "@/components/ui/PageBanner";
 import { faculty } from "@/data/faculty";
-import { breadcrumbSchema, jsonLd, shareMeta } from "@/lib/seo";
+import { breadcrumbSchema, webPageSchema, jsonLd, shareMeta } from "@/lib/seo";
 
 export const metadata: Metadata = {
   title: "About Us | Best Coaching Institute in Rohini Since 2015",
   description:
-    "Learn about Excellent Students' Academy, the trusted coaching institute in Rohini Sector 7 since 2015. Our story, mission and what makes ESA different for Class 1 to 12 students across North-West Delhi NCR.",
+    "About Excellent Students' Academy, a Class 1-12 coaching institute in Rohini Sector 7 since 2015: our story, teaching method and faculty.",
   alternates: { canonical: "https://www.theesa.in/about" },
   keywords: [
     "about Excellent Students Academy",
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
   ...shareMeta({
     title: "About Us | Best Coaching Institute in Rohini Since 2015",
     description:
-      "Learn about Excellent Students' Academy, the trusted coaching institute in Rohini Sector 7 since 2015. Our story, mission and what makes ESA different for Class 1 to 12 students across North-West Delhi NCR.",
+      "About Excellent Students' Academy, a Class 1-12 coaching institute in Rohini Sector 7 since 2015: our story, teaching method and faculty.",
     path: "/about",
   }),
 };
@@ -106,6 +106,16 @@ export default function AboutPage() {
   return (
     <div>
       <script {...jsonLd(breadcrumb)} />
+      <script
+        {...jsonLd(
+          webPageSchema({
+            type: "AboutPage",
+            path: "/about",
+            name: String(metadata.title),
+            description: String(metadata.description),
+          }),
+        )}
+      />
       <PageBanner
         label="About ESA"
         image="https://images.unsplash.com/photo-1577896851231-70ef18881754?auto=format&fit=crop&w=1920&q=80"

@@ -273,12 +273,16 @@ export function articleSchema(post: BlogPost) {
       "@type": "WebPage",
       "@id": `${BASE}/blog/${post.slug}`,
     },
-    headline: post.title,
+    headline: post.seoTitle ?? post.title,
     description: post.description ?? post.excerpt ?? post.title,
     image: post.cover ? [post.cover] : [`${BASE}/og-image.jpg`],
     datePublished: post.date,
     dateModified: post.date,
-    author: { "@type": "Person", name: post.author },
+    // "ESA Editorial" is the institute itself, not a person.
+    author:
+      post.author === "ESA Editorial"
+        ? { "@type": "Organization", "@id": ORG_ID, name: siteConfig.name, url: BASE }
+        : { "@type": "Person", name: post.author },
     publisher: {
       "@id": ORG_ID,
       "@type": "Organization",
@@ -290,6 +294,16 @@ export function articleSchema(post: BlogPost) {
     },
     articleSection: post.category,
     inLanguage: "en-IN",
+    url: `${BASE}/blog/${post.slug}`,
+    ...(post.takeaways?.length
+      ? {
+          abstract: post.takeaways.join(" "),
+          speakable: {
+            "@type": "SpeakableSpecification",
+            cssSelector: [".blog-takeaways", "h1"],
+          },
+        }
+      : {}),
   };
 }
 
@@ -387,6 +401,34 @@ export function shareMeta(opts: {
       description: opts.description,
       images: [image],
     },
+  };
+}
+
+/**
+ * Typed WebPage JSON-LD (AboutPage, ContactPage, CollectionPage...) tied to the
+ * site's WebSite and Organization nodes, so search and AI engines can tell what
+ * each page is about and who publishes it.
+ */
+export function webPageSchema(opts: {
+  type: string;
+  path: string;
+  name: string;
+  description: string;
+  mainEntity?: unknown;
+}) {
+  const url = `${BASE}${opts.path}`;
+  return {
+    "@context": "https://schema.org",
+    "@type": opts.type,
+    "@id": `${url}#webpage`,
+    url,
+    name: opts.name,
+    description: opts.description,
+    inLanguage: "en-IN",
+    isPartOf: { "@id": `${BASE}/#website` },
+    about: { "@id": ORG_ID },
+    publisher: { "@id": ORG_ID },
+    ...(opts.mainEntity ? { mainEntity: opts.mainEntity } : {}),
   };
 }
 

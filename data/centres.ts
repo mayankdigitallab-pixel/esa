@@ -292,7 +292,7 @@ export const centres: Centre[] = [
     landingPath: "/lucknow",
     metaTitle: "Coaching in Lucknow Thakurganj | ESA Lucknow Centre",
     metaDescription:
-      "Excellent Students' Academy Lucknow centre at Thakurganj, Chowk. Class 1 to 12 CBSE coaching, board prep and foundation classes. Headed by Mr. Ashok Rastogi - B.Tech, 11 years.",
+      "Excellent Students' Academy Lucknow at Thakurganj, Chowk: Class 1-12 CBSE and UP Board coaching, bilingual teaching. Free 7-day demo.",
     heroImage: "/centres/lucknow-1.jpg",
     highlights: [
       "ESA's first Uttar Pradesh centre - bringing Rohini-grade coaching to Lucknow",

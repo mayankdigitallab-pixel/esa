@@ -4,7 +4,7 @@ import { Container } from "@/components/ui/Container";
 import { PageBanner } from "@/components/ui/PageBanner";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { timetables } from "@/data/timetable";
-import { breadcrumbSchema, faqSchema, jsonLd, shareMeta } from "@/lib/seo";
+import { breadcrumbSchema, webPageSchema, faqSchema, jsonLd, shareMeta } from "@/lib/seo";
 
 const timetableFaqs = [
   {
@@ -37,7 +37,7 @@ const timetableFaqs = [
 export const metadata: Metadata = {
   title: "Class Timings & Time Table | ESA Rohini Sector 7 & 15",
   description:
-    "Weekly time table for Excellent Students' Academy Rohini. Class-wise batch timings for Sector 7 and Sector 15 centres. Download or share the schedule on WhatsApp.",
+    "ESA Rohini weekly time table: class-wise batch timings for the Sector 7 and Sector 15 centres. Download or share the schedule on WhatsApp.",
   alternates: { canonical: "https://www.theesa.in/timetable" },
   keywords: [
     "ESA Rohini time table",
@@ -52,7 +52,7 @@ export const metadata: Metadata = {
   ...shareMeta({
     title: "Class Timings & Time Table | ESA Rohini Sector 7 & 15",
     description:
-      "Weekly time table for Excellent Students' Academy Rohini. Class-wise batch timings for Sector 7 and Sector 15 centres. Download or share the schedule on WhatsApp.",
+      "ESA Rohini weekly time table: class-wise batch timings for the Sector 7 and Sector 15 centres. Download or share the schedule on WhatsApp.",
     path: "/timetable",
   }),
 };
@@ -70,6 +70,16 @@ export default function TimetablePage() {
   return (
     <div>
       <script {...jsonLd(breadcrumb)} />
+      <script
+        {...jsonLd(
+          webPageSchema({
+            type: "WebPage",
+            path: "/timetable",
+            name: String(metadata.title),
+            description: String(metadata.description),
+          }),
+        )}
+      />
       <script {...jsonLd(faqSchema(timetableFaqs))} />
       <PageBanner
         label="Class Schedule"

@@ -3,6 +3,8 @@ import { siteConfig, whatsappLink } from "@/data/site";
 export type BlogPost = {
   slug: string;
   title: string;
+  /** Shorter <title> for search results when the headline runs past ~60 chars. */
+  seoTitle?: string;
   description: string;
   date: string;
   readTime: string;
@@ -10,6 +12,8 @@ export type BlogPost = {
   author: string;
   cover: string;
   excerpt: string;
+  /** 2-4 one-line answers shown in a Key takeaways box above the article. */
+  takeaways?: string[];
   body: string;
   faqs?: { question: string; answer: string }[];
   keywords?: string[];
@@ -19,8 +23,9 @@ export const blogPosts: BlogPost[] = [
   {
     slug: "best-coaching-center-near-me-rohini-esa",
     title: "Best Coaching Center Near Me in Rohini: Why Parents Keep Choosing ESA Sector 7",
+    seoTitle: "Best Coaching Center Near Me in Rohini | ESA Sector 7",
     description:
-      "Searching for the best coaching center near you in Rohini? Here is what actually separates a good local coaching institute from an average one, and why ESA Sector 7 is the answer for hundreds of Rohini families.",
+      "What separates a good coaching centre in Rohini from an average one, and why families from Rohini, Pitampura and Shalimar Bagh choose ESA Sector 7.",
     date: "2026-08-19",
     readTime: "6 min read",
     category: "Parent Guide",
@@ -36,6 +41,11 @@ export const blogPosts: BlogPost[] = [
       "tuition classes Rohini Pitampura Shalimar Bagh",
       "coaching center Rohini Sector 7",
       "best tuition Rohini Ashok Vihar",
+    ],
+    takeaways: [
+      "Pick a centre close enough that your child never skips a Saturday test.",
+      "Check batch size, weekly testing and who actually teaches before looking at fees.",
+      "ESA Sector 7 coaches Class 1 to 12 students from across Rohini, Pitampura and Shalimar Bagh, with a 7-day free demo.",
     ],
     body: `<p>Every parent's coaching search in Rohini starts the same way. A Google search for "best coaching center near me", a map full of pins, and no real way to tell which one is actually good. Proximity matters, but it is not the deciding factor. What matters is what happens inside the classroom once your child walks in.</p>
 
@@ -143,8 +153,9 @@ export const blogPosts: BlogPost[] = [
   {
     slug: "expert-maths-teacher-rohini-chandan-sir-esa",
     title: "Looking for an Expert Maths Teacher in Rohini? Join Excellent Students' Academy",
+    seoTitle: "Expert Maths Teacher in Rohini: Chandan Sir at ESA",
     description:
-      "Searching for an expert Maths teacher in Rohini for Class 11-12? Meet Mr. Chandan Prajapati at Excellent Students' Academy Sector 7 and see what makes his teaching method produce consistent 90+ scorers.",
+      "Meet Mr. Chandan Prajapati, Class 11-12 Maths teacher at ESA Rohini Sector 7, and the teaching method behind his students' consistent 90+ scores.",
     date: "2026-08-22",
     readTime: "6 min read",
     category: "Faculty Spotlight",
@@ -160,6 +171,11 @@ export const blogPosts: BlogPost[] = [
       "best Maths tutor Sector 7 Rohini",
       "Maths teacher Pitampura Shalimar Bagh",
       "CBSE Maths coaching Rohini",
+    ],
+    takeaways: [
+      "Mr. Chandan Prajapati, ESA's founder, teaches Class 11-12 Maths at the Rohini Sector 7 centre.",
+      "Students attempt each problem on their own in class before the method is shown.",
+      "The Class 12 syllabus finishes well before boards, leaving months for mock papers and revision.",
     ],
     body: `<p>If you have been searching for an expert Maths teacher in Rohini for your Class 11 or 12 child, the search usually ends the same way. A recommendation, a demo class, and then a decision based on one thing: does the child actually understand what is being taught, or are they just copying it down.</p>
 
@@ -264,8 +280,9 @@ export const blogPosts: BlogPost[] = [
   {
     slug: "physics-coaching-trusted-choice-rohini-esa",
     title: "Why Excellent Students' Academy Is a Trusted Choice for Physics Coaching in Rohini",
+    seoTitle: "Physics Coaching in Rohini for Class 11-12 | ESA",
     description:
-      "Looking for reliable Physics coaching in Rohini for Class 11-12? Here is why parents trust ESA Sector 7 and how Mr. Prateek's problem-solving-first method builds board-exam numerical fluency.",
+      "Why Rohini parents trust ESA Sector 7 for Class 11-12 Physics, and how Mr. Prateek's problem-solving-first method builds board-exam fluency.",
     date: "2026-08-26",
     readTime: "7 min read",
     category: "Subject Spotlight",
@@ -281,6 +298,11 @@ export const blogPosts: BlogPost[] = [
       "Class 12 Physics board prep Rohini",
       "Physics tuition near me Pitampura",
       "numerical problem solving Physics coaching",
+    ],
+    takeaways: [
+      "Class 11-12 Physics at ESA is taught by subject specialist Mr. Prateek.",
+      "Derivations and numericals are taught together, because the board paper tests both.",
+      "A Saturday numerical-solving hour builds speed and accuracy for the board paper.",
     ],
     body: `<p>Physics has a reputation among CBSE students in Rohini as the subject you either "get" or you do not. That reputation is misleading. Physics is learnable like any other subject, provided the teaching method is built around solving problems, not just covering formulas. This is exactly why parents across Rohini Sector 3, 5, 7, 9, 11, 13, 15 and 17, along with Pitampura, Shalimar Bagh and Ashok Vihar, choose Excellent Students' Academy Sector 7 for Class 11-12 Physics coaching.</p>
 
@@ -383,8 +405,9 @@ export const blogPosts: BlogPost[] = [
   {
     slug: "maths-coaching-trusted-choice-rohini-esa",
     title: "Why Excellent Students' Academy Is a Trusted Choice for Maths Coaching in Rohini",
+    seoTitle: "Maths Coaching in Rohini, Class 6 to 12 | ESA",
     description:
-      "Rohini parents consistently pick ESA Sector 7 for Maths coaching, from Class 6 foundations to Class 12 boards. Here is the teaching method behind it, led by Mr. Chandan Prajapati and Mr. Rahul.",
+      "Why Rohini parents choose ESA Sector 7 for Maths from Class 6 to 12, and the teaching method led by Mr. Chandan Prajapati and Mr. Rahul.",
     date: "2026-08-29",
     readTime: "7 min read",
     category: "Subject Spotlight",
@@ -400,6 +423,11 @@ export const blogPosts: BlogPost[] = [
       "Maths tuition near me Rohini",
       "Class 9 10 Maths coaching Rohini",
       "Maths tuition Pitampura Shalimar Bagh",
+    ],
+    takeaways: [
+      "ESA Maths is led by Mr. Chandan Prajapati (Class 11-12) and Mr. Rahul (Class 6-10).",
+      "Every concept is explained, demonstrated, practised independently, then tested with a variation.",
+      "Weekly Saturday tests catch weak chapters before they build up.",
     ],
     body: `<p>Ask any Rohini parent why they eventually chose Excellent Students' Academy for their child's Maths coaching, and the answer is rarely about a single flashy feature. It is about a teaching method that has produced consistent 90 plus scorers year after year, from our Sector 7 centre, and it is why "Maths tuition near me" searches from across Rohini, Pitampura and Shalimar Bagh keep leading parents to us.</p>
 
@@ -499,8 +527,9 @@ export const blogPosts: BlogPost[] = [
   {
     slug: "chemistry-coaching-trusted-choice-rohini-esa",
     title: "Why Excellent Students' Academy Is a Trusted Choice for Chemistry Coaching in Rohini",
+    seoTitle: "Chemistry Coaching in Rohini for Class 11-12 | ESA",
     description:
-      "Chemistry is often the most feared CBSE subject in Class 11-12. Here is why Rohini parents trust Excellent Students' Academy Sector 7 for Chemistry, and how Mr. Amit's method covers Organic, Inorganic and Physical Chemistry without last-minute cramming.",
+      "How Mr. Amit at ESA Rohini teaches Class 11-12 Organic, Inorganic and Physical Chemistry for the CBSE boards without last-minute cramming.",
     date: "2026-09-02",
     readTime: "7 min read",
     category: "Subject Spotlight",
@@ -516,6 +545,11 @@ export const blogPosts: BlogPost[] = [
       "best Chemistry teacher Rohini",
       "Class 12 Chemistry board prep Rohini",
       "Chemistry tuition Pitampura Shalimar Bagh",
+    ],
+    takeaways: [
+      "Organic Chemistry is taught through reaction mechanisms from the first week of Class 11.",
+      "Inorganic Chemistry is revised through short, low-pressure weekly recall tests.",
+      "Physical Chemistry numericals are practised like Maths: worked example, own attempt, then a variation.",
     ],
     body: `<p>Ask any Class 12 student in Rohini which subject worries them the most, and Chemistry comes up more often than Physics or Maths. The reason is structural. Chemistry is not one subject, it is three - Organic, Inorganic and Physical - stitched into a single paper, each requiring a different way of studying. Most students discover this too late, usually in December, when Organic Chemistry alone has become an unmanageable pile of named reactions.</p>
 
@@ -620,8 +654,9 @@ export const blogPosts: BlogPost[] = [
     slug: "right-support-for-better-learning-rohini-coaching",
     title:
       "Is Your Child Getting the Right Support for Better Learning? A Rohini Parent's Guide",
+    seoTitle: "Is Your Child Getting the Right Learning Support?",
     description:
-      "Every student learns differently. Here is how to tell if your child is getting the right academic support at home and in coaching, and what signs to look out for.",
+      "How to tell if your child is getting the right academic support at home and in coaching, and the warning signs Rohini parents should watch for.",
     date: "2026-06-25",
     readTime: "7 min read",
     category: "Parent Guide",
@@ -630,6 +665,11 @@ export const blogPosts: BlogPost[] = [
       "https://images.unsplash.com/photo-1427504494785-3a9ca7044f45?auto=format&fit=crop&w=1200&q=80",
     excerpt:
       "Every student faces different challenges. The question is not whether your child is studying enough hours, it is whether the support around them matches the way they actually learn. Here is how to tell.",
+    takeaways: [
+      "Flat marks usually mean the wrong kind of support, not too little effort.",
+      "Warning signs: long study hours with no improvement, the same score every test, no questions asked in class.",
+      "Good support means small batches, weekly tests, doubt sessions and monthly parent meetings.",
+    ],
     body: `<p>Every parent in Rohini eventually sits across the dining table with a worried thought. The marks are not where they should be. The child is sitting at the desk for hours, but the next test result still looks the same. The tutor was changed last year. The coaching was changed this year. What is actually going wrong?</p>
 
 <p>The honest answer is rarely that the child is not working hard enough. In our experience running batches at ESA Sector 7, the missing variable is almost always <strong>the right kind of support</strong>, not more hours. Hours without the right support multiply effort but not understanding.</p>
@@ -671,13 +711,31 @@ export const blogPosts: BlogPost[] = [
 
 <h3>Book a free demo</h3>
 <p>If you would like to see whether ESA is the right support setup for your child, WhatsApp us at +91 88826 63340 or visit our centre at Sector 7, Rohini. We will walk you through the batch your child would join, before you commit to anything.</p>`,
+    faqs: [
+      {
+        question: "How do I know if my child needs a different kind of academic support?",
+        answer:
+          "If two or more signs apply - long study hours but no improvement, the same score range in every test, no questions in class, or needing constant pushing to study - the support around your child probably needs to change.",
+      },
+      {
+        question: "What does good academic support look like?",
+        answer:
+          "Small batches, weekly chapter tests that catch weak topics early, structured doubt sessions, the same named teacher throughout the year, and regular meetings with parents.",
+      },
+      {
+        question: "How long does it take to see improvement with better support?",
+        answer:
+          "In our experience at ESA, the attitude towards studying changes first. Weekly test scores often improve by 10 to 15 marks by around week six, and the change then shows on the term report card.",
+      },
+    ],
   },
   {
     slug: "strong-fundamentals-better-academic-results-rohini",
     title:
       "Are Strong Fundamentals the Key to Better Academic Results? What Rohini Toppers Get Right",
+    seoTitle: "Strong Fundamentals: What Rohini Toppers Get Right",
     description:
-      "Toppers in Rohini are not naturally smarter. They have stronger fundamentals built over months of disciplined practice. Here is how strong basics translate into board exam marks.",
+      "Toppers are not naturally smarter - they have stronger basics. How fundamentals from Class 8 and 9 turn into 90+ board scores, subject by subject.",
     date: "2026-06-12",
     readTime: "8 min read",
     category: "Learning Method",
@@ -686,6 +744,11 @@ export const blogPosts: BlogPost[] = [
       "https://images.unsplash.com/photo-1456735190827-d1262f71b8a3?auto=format&fit=crop&w=1200&q=80",
     excerpt:
       "The students who score 90 plus in CBSE boards are not the ones who studied more chapters. They are the ones whose Class 8 and 9 basics were rock solid. Here is what that actually means.",
+    takeaways: [
+      "Strong fundamentals mean solving without notes, explaining why, and spotting a known concept in a new question.",
+      "Board papers test concepts in unfamiliar forms, so memorised answers cap scores well below 90%.",
+      "Fundamentals are built in Class 8 and 9; by Class 10 there is little time left to repair them.",
+    ],
     body: `<p>Every year, parents call us in February asking the same panicked question. "Boards are eight weeks away. Can my child still cross 90 percent?" The honest answer depends on one thing, and it is not how many hours they will study in February. It is whether their fundamentals from Class 8 and 9 are intact.</p>
 
 <p>Fundamentals are the unfashionable answer to academic success. Coaching brochures rarely highlight them because they take months to build, not weeks. But the moment you talk to a CBSE topper or look at their actual study patterns, the same word keeps appearing. <strong>Basics.</strong></p>
@@ -734,13 +797,31 @@ export const blogPosts: BlogPost[] = [
 
 <h3>See what foundation-focused coaching looks like</h3>
 <p>Sit your child in a real ESA batch for 7 days. Watch the test routine. Read the diagnostic feedback. Decide after. WhatsApp +91 88826 63340 or visit our Sector 7, Rohini centre to book.</p>`,
+    faqs: [
+      {
+        question: "What does it mean to have strong fundamentals?",
+        answer:
+          "The student can solve a question without checking notes, explain why the answer works, and recognise when a new question is testing a concept they already know.",
+      },
+      {
+        question: "Why do fundamentals matter more in board exams than school exams?",
+        answer:
+          "School exams often repeat what was taught in class, while board papers test the same concepts in unfamiliar forms. Students who understand the concept, not just the NCERT example, score much higher.",
+      },
+      {
+        question: "When should fundamentals be built?",
+        answer:
+          "Mainly in Class 8 and 9. By Class 10 the pace of the syllabus leaves little time to fix weak basics from earlier years.",
+      },
+    ],
   },
   {
     slug: "strong-academic-foundation-every-subject-rohini",
     title:
       "Build a Strong Academic Foundation with Expert Guidance for Every Subject in Rohini",
+    seoTitle: "Subject-Expert Coaching for Every Subject in Rohini",
     description:
-      "Subject-specific coaching makes the difference between a 75 percent and a 92 percent student. Here is what subject-by-subject expert guidance looks like at ESA Rohini.",
+      "Why subject specialists, not one teacher for everything, make the difference from Class 8 onwards, and what subject-wise guidance looks like at ESA.",
     date: "2026-06-11",
     readTime: "9 min read",
     category: "Inside ESA",
@@ -749,6 +830,11 @@ export const blogPosts: BlogPost[] = [
       "https://images.unsplash.com/photo-1497486751825-1233686d5d80?auto=format&fit=crop&w=1200&q=80",
     excerpt:
       "A generalist tutor who teaches everything from Maths to History rarely produces a 90 percent scorer. Subject-specialist faculty does. Here is how subject-by-subject coaching changes outcomes at ESA Rohini.",
+    takeaways: [
+      "From Class 8, every subject has its own answer-writing style and needs a specialist teacher.",
+      "At ESA, Maths, Physics, Biology, English, Social Science and Commerce each have dedicated faculty.",
+      "Foundation classes (1-5) focus on reading, handwriting, mental maths and concepts.",
+    ],
     body: `<p>Walk into most small tuition centres in Rohini and ask who teaches Class 10 Science. You will often hear the same teacher's name for Science, Social Science and English. That is the model many home tuitions and budget centres run on. One teacher, every subject. It works at the primary level. It quietly falls apart from Class 8 onwards.</p>
 
 <p>The students who consistently score 90 plus in CBSE boards are coached by <strong>subject specialists</strong>, not generalists. At ESA Rohini we have built our entire faculty model around this. Eleven teachers, each with a clear subject specialisation. Here is why that matters and what subject-by-subject expert guidance actually looks like.</p>
@@ -799,13 +885,31 @@ export const blogPosts: BlogPost[] = [
 
 <h3>See our subject specialists in action</h3>
 <p>Sit your child in real ESA batches for 7 days, taught by the actual subject specialists who would mentor them through the year. WhatsApp +91 88826 63340 or visit Sector 7, Rohini to book.</p>`,
+    faqs: [
+      {
+        question: "Why does subject-specialist coaching matter from Class 8?",
+        answer:
+          "From Class 8, each subject has its own logic and answer structure - step-by-step working in Maths, labelled diagrams in Science, structured points in Social Science. Specialists know exactly where marks are won and lost.",
+      },
+      {
+        question: "Who teaches which subject at ESA Rohini?",
+        answer:
+          "Maths is led by Mr. Chandan Prajapati (Class 11-12) and Mr. Rahul (Class 6-10), Physics by Mr. Prateek, Biology by Ms. Faujiya, English by Mr. Rajesh, Accountancy by Ms. Sadhana, and foundation classes by Ms. Uzma and Ms. Mamta.",
+      },
+      {
+        question: "What do ESA's foundation classes for Class 1 to 5 focus on?",
+        answer:
+          "Reading habits, handwriting, mental maths and conceptual clarity, rather than early board-exam preparation.",
+      },
+    ],
   },
   {
     slug: "esa-toppers-2026-class-10-12-rohini",
     title:
       "Meet the ESA Toppers of 2026: How Class 10 and 12 Students from Rohini Scored 90+ in CBSE Boards",
+    seoTitle: "ESA Toppers 2026: How Rohini Students Scored 90+",
     description:
-      "Real stories of Class 10 and Class 12 students from Excellent Students' Academy Rohini who scored above 90% in CBSE 2026 boards. What they did differently and how ESA helped.",
+      "How Class 10 and 12 students at ESA Rohini scored above 90% in the CBSE 2026 boards, and the habits all 32 of our 90+ scorers had in common.",
     date: "2026-06-15",
     readTime: "9 min read",
     category: "Topper Stories",
@@ -814,6 +918,11 @@ export const blogPosts: BlogPost[] = [
       "https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=1200&q=80",
     excerpt:
       "Every year, a handful of students from our Rohini batches score above 90% in CBSE boards. We sat down with seven of them. Here is exactly what they did, and how ESA fits into their routine.",
+    takeaways: [
+      "32 ESA students scored above 90% in the CBSE 2026 board exams.",
+      "Every top scorer wrote every Saturday test and at least 8 mock papers before boards.",
+      "There is no separate topper batch - the same weekly routine applies to everyone.",
+    ],
     body: `<p>If you walk into the Excellent Students' Academy classroom in Rohini Sector 7 at 5:30 PM on a Saturday, you will not see a special "topper batch". You will see the same students writing the same weekly chapter test. That is the entire secret. There is no shortcut, no parallel programme. Just the same disciplined, weekly grind for everyone.</p>
 
 <p>This year we crossed our usual milestone again. <strong>32 students above 90 percent.</strong> Three students above 95. One above 96. Most of them were not toppers when they joined us. They became toppers because of what they did between September and February.</p>
@@ -850,13 +959,31 @@ export const blogPosts: BlogPost[] = [
 
 <h3>Want to see this routine in action?</h3>
 <p>Book a free 7-day demo at our Rohini Sector 7 centre. Your child sits in the actual batch they would join. You see the teaching, the tests, the doubt sessions. Decide after.</p>`,
+    faqs: [
+      {
+        question: "How many ESA students scored above 90% in 2026?",
+        answer:
+          "32 ESA students scored above 90% in the CBSE 2026 board exams, with three of them above 95%.",
+      },
+      {
+        question: "What did ESA's top scorers have in common?",
+        answer:
+          "They wrote every weekly test even when they did not feel ready, sat at least 8 mock papers before boards, and asked questions openly in class.",
+      },
+      {
+        question: "Is there a special topper batch at ESA?",
+        answer:
+          "No. Every student follows the same routine: weekly Saturday chapter tests, monthly mock papers and doubt sessions until concepts are clear.",
+      },
+    ],
   },
   {
     slug: "how-to-choose-coaching-institute-rohini-parents-guide",
     title:
       "How to Choose a Coaching Institute in Rohini: A Parent's Honest Checklist for 2026",
+    seoTitle: "How to Choose a Coaching Institute in Rohini: Checklist",
     description:
-      "A parent's complete guide to choosing the right coaching institute in Rohini for Class 1 to 12. Fees, batch size, faculty, test pattern, parent communication. What actually matters and what does not.",
+      "A parent's checklist for choosing a coaching institute in Rohini: real demo classes, batch size, weekly tests, who teaches, parent meetings and fees.",
     date: "2026-06-12",
     readTime: "10 min read",
     category: "Parent Guide",
@@ -865,6 +992,11 @@ export const blogPosts: BlogPost[] = [
       "https://images.unsplash.com/photo-1577896851231-70ef18881754?auto=format&fit=crop&w=1200&q=80",
     excerpt:
       "Choosing a coaching institute in Rohini is harder than it looks. The flyers all say the same thing. Here is what a parent should actually check before paying that first month's fee.",
+    takeaways: [
+      "Ask for a full week in the actual batch, not a one-off demo show.",
+      "Check the batch size first - around 15 to 20 students works well for board prep.",
+      "Confirm who actually teaches, how tests are graded, and how parents are kept informed.",
+    ],
     body: `<p>Most parents in Rohini start the coaching search the same way. They ask three neighbours, look at two flyers stuck on the milk booth, search "best coaching in Rohini" on Google, and then walk into the closest centre. Within fifteen minutes someone is showing them a brochure and asking for the first month's fee in cash.</p>
 
 <p>It is a stressful decision and it deserves more thought. We run a coaching institute ourselves in Rohini Sector 7, so we may not be the most neutral source. But we have also been on the parent side. Here is exactly what we would check if we were enrolling our own child.</p>
@@ -910,13 +1042,31 @@ export const blogPosts: BlogPost[] = [
 <h2>One last note</h2>
 <p>The most expensive institute is not always the best. The biggest chain is not always the most rigorous. Some of the best coaching in Rohini happens at small, focused centres that have been quietly producing 90+ scorers for years.</p>
 <p>If you would like to see what that looks like, book a free 7-day demo at Excellent Students' Academy in Rohini Sector 7. Visit our <a href="/about">About</a> page or <a href="/contact#enquiry">send an enquiry</a>.</p>`,
+    faqs: [
+      {
+        question: "What should parents check before choosing a coaching institute?",
+        answer:
+          "Sit in a real class for a week, check the batch size, look at the weekly test calendar, confirm who actually teaches, and ask how parents are updated and what happens when a class is missed.",
+      },
+      {
+        question: "What is a good batch size for board exam coaching?",
+        answer:
+          "Around 15 to 20 students works well for board preparation. Much larger batches turn into lectures with little individual feedback.",
+      },
+      {
+        question: "What happens if my child misses a class at ESA?",
+        answer:
+          "Missed classes are recorded and shared the same day, and Saturday doubt sessions let students catch up on anything they missed during the week.",
+      },
+    ],
   },
   {
     slug: "5-things-esa-students-do-differently-rohini-coaching",
     title:
       "5 Things ESA Students Do Differently From Other Coaching Centres in Rohini",
+    seoTitle: "5 Habits That Set ESA Students Apart in Rohini",
     description:
-      "Why ESA students consistently outperform peers from other coaching institutes in Rohini. Five concrete habits we build into every weekly schedule, from Class 6 to Class 12.",
+      "Five routines built into every ESA batch - Saturday tests, same-day doubts, parent meetings, faculty notes and stable teachers - and why they work.",
     date: "2026-06-09",
     readTime: "7 min read",
     category: "Inside ESA",
@@ -925,6 +1075,11 @@ export const blogPosts: BlogPost[] = [
       "https://images.unsplash.com/photo-1571260899304-425eee4c7efc?auto=format&fit=crop&w=1200&q=80",
     excerpt:
       "Parents who switch their child from another coaching centre in Rohini to ESA often ask, 'What is different?' Here are the five concrete habits that show up in every batch from Class 6 to Class 12.",
+    takeaways: [
+      "A test every Saturday, never cancelled, for the whole year.",
+      "Doubts are cleared at the end of every class, not postponed.",
+      "Faculty-written notes and teachers who stay with the same batch for years.",
+    ],
     body: `<p>Every coaching institute in Rohini will tell you they have expert faculty, weekly tests and parent meetings. The brochures are basically identical. So why do ESA students consistently score higher than peers from nearby institutes in Pitampura, Shalimar Bagh and Model Town?</p>
 
 <p>It is not because we hire smarter teachers. It is not because we charge higher fees. It is because of five specific routines built into every batch. Most institutes mention them in their flyer. Very few actually do them properly. Here they are.</p>
@@ -956,13 +1111,31 @@ export const blogPosts: BlogPost[] = [
 
 <h3>See it in action</h3>
 <p>Book a free 7-day demo at our Rohini Sector 7 centre. Sit through the Saturday test. Watch a doubt session. Talk to a current parent. Decide after.</p>`,
+    faqs: [
+      {
+        question: "When are weekly tests held at ESA?",
+        answer:
+          "Every Saturday, on the chapter finished that week. Scores are recorded and shared with parents along with the next week's plan.",
+      },
+      {
+        question: "How are doubts handled at ESA?",
+        answer:
+          "Doubt sessions run at the end of every batch for at least twenty minutes, so a gap is fixed the same day instead of carrying into the next chapter.",
+      },
+      {
+        question: "Who writes ESA's study notes?",
+        answer:
+          "Chapter notes for Class 8 to 12 are written by the faculty who teach that subject, so they match the way the chapter was taught in class.",
+      },
+    ],
   },
   {
     slug: "best-class-10-coaching-rohini",
     title:
       "Best Coaching for CBSE Class 10 Boards in Rohini: What to Look For in 2026",
+    seoTitle: "Best Class 10 Board Coaching in Rohini: What to Look For",
     description:
-      "Looking for the best Class 10 board coaching in Rohini? Compare batch size, weekly tests, mock exams and fees. Find the right CBSE Class 10 coaching institute for your child.",
+      "What to look for in CBSE Class 10 coaching in Rohini: syllabus finish date, subject-wise weekly tests, past papers, mock exams and doubt support.",
     date: "2026-06-05",
     readTime: "8 min read",
     category: "Parent Guide",
@@ -971,6 +1144,11 @@ export const blogPosts: BlogPost[] = [
       "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=1200&q=80",
     excerpt:
       "Class 10 is the first time most students sit a real board exam. The right coaching makes the difference between a panicked first attempt and a confident one. Here is what Rohini parents should look for.",
+    takeaways: [
+      "Choose coaching that finishes the full syllabus by early January.",
+      "Every subject, including Social Science, should be tested weekly.",
+      "Expect at least 10 full papers, corrected with feedback, before boards.",
+    ],
     body: `<p>Class 10 board is the first real exam that goes on your child's permanent record. Score patterns set here often predict the stream they end up in for Class 11. So the choice of coaching for Class 10 matters more than the choice you made in Class 8 or 9.</p>
 
 <p>If you are a parent in Rohini, Pitampura, Shalimar Bagh or Ashok Vihar evaluating Class 10 coaching options for the upcoming year, here is what we would prioritise.</p>
@@ -1000,12 +1178,29 @@ export const blogPosts: BlogPost[] = [
 
 <h3>Book a free demo for Class 10</h3>
 <p>If your child is starting Class 10 next year and you want to evaluate ESA, book a free 7-day demo at our Rohini Sector 7 centre. They sit in the actual evening batch, write the Saturday test, and you decide after.</p>`,
+    faqs: [
+      {
+        question: "When should Class 10 coaching finish the syllabus?",
+        answer:
+          "By early to mid-January, leaving six to eight weeks for revision, doubt clearing and full mock exams before the boards.",
+      },
+      {
+        question: "How many practice papers should a Class 10 student write?",
+        answer:
+          "At least 10 full papers under exam conditions, each corrected with feedback.",
+      },
+      {
+        question: "What are ESA's Class 10 batch timings?",
+        answer:
+          "Class 10 batches run six days a week in evening slots between 5 PM and 8:30 PM, with Saturdays reserved for weekly chapter tests.",
+      },
+    ],
   },
   {
     slug: "class-12-science-pcm-coaching-rohini-2026",
     title: "Class 12 Science Coaching in Rohini: PCM Board Exam Strategy",
     description:
-      "How Class 12 Science (PCM) students in Rohini should prepare for CBSE board exams. Subject-wise plan, weekly tests, mock papers and what ESA does in our Sector 7 centre.",
+      "How Class 12 PCM students in Rohini should prepare for CBSE boards: a subject-wise plan for Physics, Chemistry and Maths, weekly tests and mocks.",
     date: "2026-06-12",
     readTime: "8 min read",
     category: "Class 12",
@@ -1014,6 +1209,11 @@ export const blogPosts: BlogPost[] = [
       "https://images.unsplash.com/photo-1453733190371-0a9bedd82893?auto=format&fit=crop&w=1200&q=80",
     excerpt:
       "Most Class 12 PCM students leave too little time for revision before boards. Here is the schedule that actually works, and the gaps in it that we cover at ESA in Rohini.",
+    takeaways: [
+      "Finish the Class 12 PCM syllabus early and spend the final months on mocks and revision.",
+      "Physics rewards regular numerical practice; Organic Chemistry cannot be crammed.",
+      "Integration, vectors, 3D and probability carry a large share of the Maths paper.",
+    ],
     body: `<p>Class 12 PCM is the most demanding year of school in India. Three heavy subjects, a full board syllabus, and a January-to-March window that decides the next four years. This guide explains how Rohini students should plan it, and what we do at Excellent Students' Academy Sector 7 to make it manageable.</p>
 
 <h2>Why an early finish is the only realistic path</h2>
@@ -1037,12 +1237,30 @@ export const blogPosts: BlogPost[] = [
 
 <h3>Book a free Class 12 demo</h3>
 <p>Book 7 days of real Class 12 batches at our Rohini Sector 7 centre. Sit through Physics, Chem, Math sessions, write the Saturday test, meet the faculty. Decide after.</p>`,
+    faqs: [
+      {
+        question: "When should Class 12 PCM students finish the syllabus?",
+        answer:
+          "Ideally by December, so that January to the board exam can be used for revision and full mock papers.",
+      },
+      {
+        question: "How should Class 12 students practise Physics?",
+        answer:
+          "Through regular numerical practice - around 30 numericals per chapter for topics like Current Electricity, EMI, Optics and Modern Physics.",
+      },
+      {
+        question: "How many tests do ESA Class 12 students write before boards?",
+        answer:
+          "Most write 30 plus chapter tests and 6 plus full mock papers in their main subjects before the board exams.",
+      },
+    ],
   },
   {
     slug: "class-11-commerce-coaching-rohini-stream-guide",
     title: "Class 11 Commerce Coaching in Rohini: Accounts, BST and Economics Made Simple",
+    seoTitle: "Class 11 Commerce Coaching in Rohini: Subject Guide",
     description:
-      "Class 11 Commerce in Rohini - what your child will study, how Accounts, Business Studies and Economics differ, and how ESA teaches all three to build a strong Class 12 base.",
+      "What Class 11 Commerce students study in Accountancy, Business Studies and Economics, and how ESA Rohini teaches all three for a strong Class 12 base.",
     date: "2026-06-08",
     readTime: "7 min read",
     category: "Class 11",
@@ -1051,6 +1269,11 @@ export const blogPosts: BlogPost[] = [
       "https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?auto=format&fit=crop&w=1200&q=80",
     excerpt:
       "Class 11 Commerce is where most Class 10 average students discover they can actually score high. Here is what we teach, in what order, and why that order matters at ESA Rohini.",
+    takeaways: [
+      "Accountancy rewards practice: journal entries should feel automatic by the end of Class 11.",
+      "Business Studies needs year-round answer practice, not last-week cramming.",
+      "Economics has two halves - Statistics and Micro - that need separate practice.",
+    ],
     body: `<p>Class 11 Commerce is the most underrated stream in Delhi schools. Many parents push children towards Science by default. But a Class 10 student who is comfortable with English, has a logical mind and finds Math manageable will often outscore Science students in Class 12 if they pick Commerce. This guide explains the three core subjects and how we teach them at Excellent Students' Academy Rohini.</p>
 
 <h2>The three core subjects</h2>
@@ -1072,12 +1295,30 @@ export const blogPosts: BlogPost[] = [
 
 <h3>Book a free Class 11 Commerce demo</h3>
 <p>If your child is moving into Class 11 next year and you want to evaluate the Commerce stream, book a 7-day demo with us. Real batch, real faculty, no commitment.</p>`,
+    faqs: [
+      {
+        question: "What subjects are studied in Class 11 Commerce?",
+        answer:
+          "Accountancy, Business Studies and Economics (Statistics and Microeconomics), usually with Maths or Applied Maths as an option.",
+      },
+      {
+        question: "Can a student with average Class 10 marks do well in Commerce?",
+        answer:
+          "Yes. We regularly see students who scored 70-75% in Class 10 finish Class 11 Commerce above 85%, because Accountancy rewards practice rather than aptitude.",
+      },
+      {
+        question: "What is the ESA Class 11 Commerce schedule?",
+        answer:
+          "Monday to Saturday, 5 PM to 8:30 PM at Rohini Sector 7, with Accountancy, Business Studies and Economics on fixed days and a chapter test every Saturday.",
+      },
+    ],
   },
   {
     slug: "weekly-test-system-board-exam-prep-rohini",
     title: "Why Weekly Tests Work: The ESA Saturday Routine That Builds Board Exam Stamina",
+    seoTitle: "Why Weekly Tests Work: ESA's Saturday Test Routine",
     description:
-      "How a weekly Saturday test at Excellent Students' Academy Rohini turns nervous Class 9 to 12 students into confident board paper writers. The exact format, what is tested, how scores are shared.",
+      "How ESA Rohini's weekly Saturday test builds board-exam stamina for Class 9 to 12: the format, what is tested, and how scores reach parents.",
     date: "2026-06-05",
     readTime: "6 min read",
     category: "Study Habits",
@@ -1086,6 +1327,11 @@ export const blogPosts: BlogPost[] = [
       "https://images.unsplash.com/photo-1456406644174-8ddd4cd52a06?auto=format&fit=crop&w=1200&q=80",
     excerpt:
       "There is no special topper batch at ESA. There is just the same weekly Saturday test that every student writes. Eleven years of it has made our boards results what they are.",
+    takeaways: [
+      "Every Saturday, students write a three-hour closed-book test on that week's chapter.",
+      "Papers are corrected within 48 hours by the teacher who taught the chapter.",
+      "From January, senior students add full mock papers - at least 8 before boards.",
+    ],
     body: `<p>If a Class 9 student walks into Excellent Students' Academy in March, by June they have already written 12 tests. By December, 40. By board exam day, 60 plus. That is the single most underrated reason our students do well. Not the faculty. Not the notes. The Saturday test routine.</p>
 
 <h2>The format</h2>
@@ -1107,12 +1353,30 @@ export const blogPosts: BlogPost[] = [
 
 <h3>Try one Saturday test free</h3>
 <p>Book a 7-day demo at ESA Rohini. The free trial includes one Saturday test that your child will write alongside our regular batch. The score and feedback come to you on WhatsApp the following Monday - exactly the way it would if your child enrolled.</p>`,
+    faqs: [
+      {
+        question: "What is tested in the ESA Saturday test?",
+        answer:
+          "Only the chapter taught that week, in an exam-style, closed-book paper with strict timing.",
+      },
+      {
+        question: "How do parents get the Saturday test results?",
+        answer:
+          "Scores reach parents on WhatsApp on Monday morning with a short teacher note, and the corrected paper is returned to the student.",
+      },
+      {
+        question: "Can a demo student write a Saturday test?",
+        answer:
+          "Yes. The 7-day free demo includes one Saturday test, with the score and feedback shared on WhatsApp the following Monday.",
+      },
+    ],
   },
   {
     slug: "math-anxiety-class-9-10-rohini-parents-guide",
     title: "When Class 9 Math Starts to Feel Hard: A Parent's Guide for Rohini Students",
+    seoTitle: "Class 9 Maths Feels Hard? A Parent's Guide",
     description:
-      "Class 9 Math anxiety is the most common reason parents call us at ESA Rohini. Why it happens, what works, what doesn't, and how we fix it in our Sector 7 batches.",
+      "Why Class 9 Maths feels so much harder than Class 8, what does not work, and what helps - a practical guide for Rohini parents from ESA.",
     date: "2026-05-30",
     readTime: "6 min read",
     category: "Class 9-10",
@@ -1121,6 +1385,11 @@ export const blogPosts: BlogPost[] = [
       "https://images.unsplash.com/photo-1635372722656-389f87a941b7?auto=format&fit=crop&w=1200&q=80",
     excerpt:
       "Many Class 8 students who scored 90 in Math suddenly hit 65 in Class 9. It is not their fault. The jump in abstraction is real. Here is how parents in Rohini should respond.",
+    takeaways: [
+      "Class 9 adds proofs, abstract algebra and irrational numbers - memorisation stops working.",
+      "Twenty minutes of daily practice beats two hours on Sunday.",
+      "Parents help most by staying calm, sitting in on practice and talking to the teacher monthly.",
+    ],
     body: `<p>The single most common parent phone call we get at our Rohini centre is some version of "she always did well in Math, but Class 9 has been a shock". The phenomenon is real. The Class 8 to Class 9 jump in CBSE Math is the steepest of all school years. This guide explains why and what to do.</p>
 
 <h2>What changes in Class 9 Math</h2>
@@ -1148,12 +1417,30 @@ export const blogPosts: BlogPost[] = [
 
 <h3>Book a Class 9 Math demo at ESA</h3>
 <p>If your child is in Class 9 and Math has slipped, book a 7-day demo at our Rohini Sector 7 centre. The first day is the diagnostic. The next six are regular batches. Decide after.</p>`,
+    faqs: [
+      {
+        question: "Why does Class 9 Maths feel so much harder than Class 8?",
+        answer:
+          "Class 9 introduces geometry proofs, abstract algebra and irrational numbers at the same time. These reward daily practice and reasoning, not memorisation.",
+      },
+      {
+        question: "How can parents help a child who is struggling with Class 9 Maths?",
+        answer:
+          "Ask what was taught rather than the score, sit with your child during twenty minutes of practice, and talk to the teacher every month instead of after the term result.",
+      },
+      {
+        question: "Does ESA find out where a new Class 9 student is struggling?",
+        answer:
+          "Yes. Every new Class 9 student has a one-on-one diagnostic session with the Maths mentor to find the real gap - often a weak Class 8 chapter - and fix it first.",
+      },
+    ],
   },
   {
     slug: "free-demo-class-rohini-coaching-what-parents-should-look-for",
     title: "Free Demo Class in Rohini: What Parents Should Watch For in 7 Days",
+    seoTitle: "Free Demo Class in Rohini: A 7-Day Parent Checklist",
     description:
-      "Most Rohini coaching institutes offer a free demo class. Here is what you should actually pay attention to during your 7-day trial at ESA - and what every parent forgets to check.",
+      "What to check during a 7-day free demo at a Rohini coaching institute: batch size, doubt handling, notes, test day, parent references and fees.",
     date: "2026-05-26",
     readTime: "5 min read",
     category: "Parent Guide",
@@ -1162,6 +1449,11 @@ export const blogPosts: BlogPost[] = [
       "https://images.unsplash.com/photo-1543269865-cbf427effbad?auto=format&fit=crop&w=1200&q=80",
     excerpt:
       "Booking a free demo class is easy. Using those 7 days to actually evaluate whether the institute is right for your child is the hard part. Here is our parent checklist.",
+    takeaways: [
+      "Use all 7 demo days - a single class is not enough to judge.",
+      "Count the chairs, watch how doubts are handled and ask to see the notes.",
+      "Attend a test day and ask for last year's full result sheet.",
+    ],
     body: `<p>At Excellent Students' Academy in Rohini we offer 7 days of free demo classes for every new student. Most coaching institutes do. But many parents enrol or reject after watching just one class - which is too little information. This guide is the checklist we wish every parent used during those 7 days, whether at ESA or any other institute.</p>
 
 <h2>Day 1 - Walk in, observe the room</h2>
@@ -1187,12 +1479,30 @@ export const blogPosts: BlogPost[] = [
 
 <h3>Book your 7-day demo at ESA Rohini</h3>
 <p>If you are evaluating coaching for your child in Rohini, book a 7-day demo at our Sector 7 centre. Walk in any working day, no fee, no commitment. We will hand you this checklist on Day 1.</p>`,
+    faqs: [
+      {
+        question: "How long is the free demo at ESA?",
+        answer:
+          "7 days of free demo classes in the actual batch your child would join, with no fee and no commitment.",
+      },
+      {
+        question: "What should parents check during a demo class?",
+        answer:
+          "The batch size, how doubts are handled, the quality of the notes, how the weekly test is run, feedback from current parents, and a clear fee and refund policy.",
+      },
+      {
+        question: "Can I speak to a current ESA parent before enrolling?",
+        answer:
+          "Yes. On request, ESA can connect you with a current parent who is willing to share their experience.",
+      },
+    ],
   },
   {
     slug: "home-tuition-vs-coaching-institute-rohini-which-is-better",
     title: "Home Tuition vs Coaching Institute in Rohini: Which Actually Works for Your Child",
+    seoTitle: "Home Tuition vs Coaching in Rohini: Which Is Better?",
     description:
-      "Home tuition or coaching institute in Rohini? Cost, peer learning, discipline, teacher quality compared. When each option makes sense for Class 1 to 12 students.",
+      "Home tuition or a coaching institute in Rohini? Cost, peer learning, discipline and teacher quality compared, and when each option makes sense.",
     date: "2026-05-22",
     readTime: "7 min read",
     category: "Parent Guide",
@@ -1201,6 +1511,11 @@ export const blogPosts: BlogPost[] = [
       "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=1200&q=80",
     excerpt:
       "Every Rohini parent eventually asks this question. We answer honestly - home tuition is better in some cases, coaching is better in others. Here is how to decide.",
+    takeaways: [
+      "Home tuition works well for Class 1-4, one specific weak subject, or confidence issues.",
+      "A coaching institute works better for Class 9-12: weekly tests, peers and a fixed routine.",
+      "Per subject, a coaching institute usually costs less than home tuition.",
+    ],
     body: `<p>We run a coaching institute in Rohini Sector 7. We also send our own faculty for home tuition across Rohini, Pitampura and Shalimar Bagh. So when parents ask "home tuition or coaching institute", we genuinely see both sides. This article is an honest comparison.</p>
 
 <h2>Where home tuition is better</h2>
@@ -1231,10 +1546,28 @@ export const blogPosts: BlogPost[] = [
 
 <h3>Talk to us before deciding</h3>
 <p>If you are deciding between home tuition and coaching for your Rohini-area child, walk in to our Sector 7 centre. We will tell you honestly what we think suits your child. Sometimes we recommend home tuition with one of our own teachers. Sometimes we recommend coaching. The advice is free.</p>`,
+    faqs: [
+      {
+        question: "Is home tuition or coaching better for Class 9 to 12?",
+        answer:
+          "For Class 9 to 12, a coaching institute usually works better, because weekly tests, mock papers, peer learning and a fixed schedule are hard to replicate at home.",
+      },
+      {
+        question: "When is home tuition the better choice?",
+        answer:
+          "For Classes 1 to 4, for fixing one specific weak subject, and for children who need to rebuild confidence one-on-one.",
+      },
+      {
+        question: "Does ESA also offer home tuition?",
+        answer:
+          "Yes. ESA sends its own faculty for home tuition across Rohini, Pitampura and Shalimar Bagh, and many families combine it with coaching.",
+      },
+    ],
   },
   {
     slug: "class-10-board-exam-2027-study-plan-october-to-february",
     title: "Class 10 Board Exam 2027: A Month-by-Month Study Plan from October to February",
+    seoTitle: "Class 10 Board Exam 2027: Month-by-Month Study Plan",
     description:
       "A realistic October to February study plan for CBSE Class 10 Board Exam 2027 - what to finish each month, when to start sample papers, and how to revise.",
     date: "2026-09-26",
@@ -1251,6 +1584,11 @@ export const blogPosts: BlogPost[] = [
       "Class 10 board preparation month wise",
       "Class 10 coaching Rohini",
       "how to prepare for Class 10 boards",
+    ],
+    takeaways: [
+      "Finish the full syllabus once by 30 November.",
+      "December: first revision and official CBSE sample papers. January: pre-boards and targeted practice.",
+      "February: light revision from your own notes and error log - nothing new.",
     ],
     body: `<p>By the end of September most Class 10 students have finished their half-yearly exams and are looking at a board exam that is roughly five months away. The phase 1 board exam for Class 10 usually begins in the second half of February, so the window from October to February is the one that actually decides the result. This plan is the same structure we follow with our Class 10 batches at Excellent Students' Academy in Rohini, written so that any student can use it at home.</p>
 
@@ -1342,6 +1680,11 @@ export const blogPosts: BlogPost[] = [
       "CBSE Class 10 improvement exam",
       "Class 10 board exam parents guide",
     ],
+    takeaways: [
+      "The February (phase 1) board exam is compulsory; the May exam is optional.",
+      "The second exam lets students try to improve in a limited number of subjects.",
+      "Plan fully for February - Class 11 admissions usually depend on it.",
+    ],
     body: `<p>From the 2026 exam cycle onwards, CBSE Class 10 students have two opportunities to take the board exam in the same academic year. Many parents in Rohini have asked us the same questions about it: is the second exam compulsory, does it make the first one less important, and how should a child plan for it? This guide answers those questions in plain language.</p>
 
 <p><strong>Important:</strong> the rules below reflect CBSE's announced scheme. CBSE can revise details through circulars, so always check the latest notice on the official CBSE website before making decisions.</p>
@@ -1399,6 +1742,7 @@ export const blogPosts: BlogPost[] = [
   {
     slug: "low-marks-class-12-pre-boards-what-to-do",
     title: "Scored Low in Class 12 Pre-Boards? What to Do Before the Final Exams",
+    seoTitle: "Low Class 12 Pre-Board Marks? What to Do Next",
     description:
       "Low Class 12 pre-board marks are common and fixable. How to analyse the paper, what to prioritise in the weeks before boards, and how parents can help.",
     date: "2026-09-24",
@@ -1415,6 +1759,11 @@ export const blogPosts: BlogPost[] = [
       "how to improve marks before Class 12 boards",
       "Class 12 board exam tips",
       "Class 12 coaching Rohini",
+    ],
+    takeaways: [
+      "Pre-board papers are often harder and marked more strictly than the board exam.",
+      "Sort every lost mark: concept gap, careless mistake or time.",
+      "Fix presentation - formulas, steps, units, diagrams and working notes all earn marks.",
     ],
     body: `<p>Every year, many Class 12 students walk out of their school pre-boards with marks far below what they expected. It is one of the most stressful moments of the year, for students and parents alike. The good news is that a low pre-board score is common, it is usually fixable, and it is far more useful as a diagnosis than as a prediction.</p>
 
@@ -1485,7 +1834,7 @@ export const blogPosts: BlogPost[] = [
     slug: "how-to-solve-cbse-sample-papers-right-way",
     title: "How to Solve CBSE Sample Papers the Right Way",
     description:
-      "Solving sample papers is only useful if you do it properly. A step-by-step method for CBSE Class 10 and 12 students: timing, checking with marking schemes and error logs.",
+      "How to solve CBSE sample papers properly for Class 10 and 12: full-time practice, checking with the marking scheme and keeping an error log.",
     date: "2026-09-23",
     readTime: "6 min read",
     category: "Board Exams",
@@ -1500,6 +1849,11 @@ export const blogPosts: BlogPost[] = [
       "CBSE sample paper Class 12",
       "CBSE marking scheme",
       "board exam practice papers",
+    ],
+    takeaways: [
+      "Start with the official CBSE sample papers and marking schemes.",
+      "Solve a full paper in one sitting, in exam time, written as you would in the exam.",
+      "Check strictly against the marking scheme and keep an error log.",
     ],
     body: `<p>Every CBSE board student is told to "solve sample papers". Very few are told how. Solved badly, a sample paper is just another worksheet. Solved properly, it is the closest thing to a rehearsal of the real exam, and the most reliable way to find the marks you are still losing.</p>
 
@@ -1562,6 +1916,7 @@ export const blogPosts: BlogPost[] = [
   {
     slug: "understand-child-progress-half-yearly-results",
     title: "How to Understand Your Child's Progress After Half-Yearly Results",
+    seoTitle: "Understanding Your Child's Half-Yearly Results",
     description:
       "Half-yearly results say more than the total. How parents can read the report card, find the real weak areas, talk to teachers and plan the second term.",
     date: "2026-09-22",
@@ -1578,6 +1933,11 @@ export const blogPosts: BlogPost[] = [
       "parents guide half yearly exam",
       "improve marks second term",
       "tuition in Rohini",
+    ],
+    takeaways: [
+      "Read the checked answer sheets, not just the report card.",
+      "Sort lost marks into concept gaps, careless mistakes, time and presentation.",
+      "Pick no more than two focus areas per subject for the second term.",
     ],
     body: `<p>Half-yearly results usually arrive in September or October, and for many families the conversation at home revolves around a single number: the total percentage. That number matters, but on its own it tells you very little about what your child needs next. This guide explains how to read the result so that the second term goes better than the first.</p>
 
@@ -1641,7 +2001,7 @@ export const blogPosts: BlogPost[] = [
     slug: "why-class-10-preparation-should-start-in-class-9",
     title: "Why Class 10 Preparation Should Start in Class 9",
     description:
-      "Class 10 board results are shaped in Class 9. Which Class 9 chapters Class 10 builds on, the habits to form early, and how parents can plan the two years together.",
+      "Class 10 board results are shaped in Class 9. Which Class 9 chapters Class 10 builds on, the habits to form early, and how parents can plan ahead.",
     date: "2026-09-21",
     readTime: "6 min read",
     category: "Parent Guide",
@@ -1656,6 +2016,11 @@ export const blogPosts: BlogPost[] = [
       "why Class 9 is important",
       "Class 9 Maths Science foundation",
       "Class 9 and 10 CBSE preparation",
+    ],
+    takeaways: [
+      "Class 10 Maths and Science build directly on Class 9 chapters.",
+      "Starting early means mastering Class 9 NCERT fully, not studying Class 10 early.",
+      "Weekly tests and answer-writing habits formed in Class 9 pay off in the boards.",
     ],
     body: `<p>Ask most Class 9 students about their plans and you will hear something like: "I'll get serious in Class 10." It is an understandable thought - Class 9 has no board exam. But when we look at the students who struggle in Class 10 at our Rohini centres, the problem almost always started a year earlier.</p>
 
@@ -1717,6 +2082,7 @@ export const blogPosts: BlogPost[] = [
   {
     slug: "science-commerce-humanities-choose-stream-after-class-10",
     title: "Science, Commerce or Humanities: How to Choose a Stream After Class 10",
+    seoTitle: "Science, Commerce or Humanities After Class 10?",
     description:
       "How to choose between Science, Commerce and Humanities after Class 10: interests, subject strengths, career paths and the Maths Basic vs Standard rule.",
     date: "2026-09-20",
@@ -1733,6 +2099,11 @@ export const blogPosts: BlogPost[] = [
       "stream selection after Class 10",
       "Class 11 stream guidance",
       "Class 11 coaching Rohini",
+    ],
+    takeaways: [
+      "Choose on interest, consistent performance and the kind of work the student enjoys.",
+      "No stream is 'best' - Science, Commerce and Humanities all lead to respected careers.",
+      "Maths Basic in Class 10 generally rules out core Maths in Class 11.",
     ],
     body: `<p>Every year, thousands of Class 10 students choose between Science, Commerce and Humanities, often in a hurry and often under pressure from relatives, friends or the marks they happened to get. The stream affects the next two years of study and many later options, so it is worth choosing carefully. This guide gives a practical way to decide.</p>
 
@@ -1823,6 +2194,11 @@ export const blogPosts: BlogPost[] = [
       "CBSE Class 10 Maths tips",
       "Maths tuition Rohini",
     ],
+    takeaways: [
+      "Algebra carries the most marks - about 20 of 80.",
+      "Statistics, Probability and Coordinate Geometry are among the easiest marks to secure.",
+      "Show every step - board marking gives step marks.",
+    ],
     body: `<p>Class 10 Maths is one of the most scoring subjects in the board exam, and also one where students lose marks in the most predictable ways. Knowing where the marks come from, and where they usually go, helps a student use the remaining months well.</p>
 
 <h2>Unit-wise weightage</h2>
@@ -1890,6 +2266,7 @@ export const blogPosts: BlogPost[] = [
   {
     slug: "class-12-accountancy-common-mistakes",
     title: "Class 12 Accountancy: Common Mistakes That Cost Students Marks",
+    seoTitle: "Class 12 Accountancy: Common Mistakes to Avoid",
     description:
       "The Class 12 Accountancy mistakes that cost the most marks in CBSE boards - partnership, company accounts and cash flow - and how to avoid them.",
     date: "2026-09-18",
@@ -1906,6 +2283,11 @@ export const blogPosts: BlogPost[] = [
       "partnership accounts mistakes",
       "cash flow statement mistakes",
       "Accountancy tuition Rohini",
+    ],
+    takeaways: [
+      "Do not confuse the sacrificing ratio with the gaining ratio.",
+      "For a non-financial company, interest paid is financing and interest received is investing.",
+      "Working notes carry marks - always show them.",
     ],
     body: `<p>Class 12 Accountancy can give students near-full marks, because most questions have a single correct answer. That same precision is why marks disappear so easily: one wrong ratio or one missed adjustment can spoil an entire question. These are the mistakes we see most often in our Commerce batches in Rohini.</p>
 
@@ -1972,6 +2354,7 @@ export const blogPosts: BlogPost[] = [
   {
     slug: "class-10-science-balance-physics-chemistry-biology",
     title: "How to Balance Physics, Chemistry and Biology in Class 10 Science",
+    seoTitle: "Class 10 Science: How to Balance Physics, Chem & Bio",
     description:
       "Class 10 Science has three different subjects in one paper. How marks are spread across Physics, Chemistry and Biology, and a weekly plan to balance all three.",
     date: "2026-09-17",
@@ -1988,6 +2371,11 @@ export const blogPosts: BlogPost[] = [
       "Class 10 Science weightage",
       "how to study Class 10 Science",
       "Science tuition Rohini",
+    ],
+    takeaways: [
+      "Physics, Chemistry and Biology each carry roughly a third of the 80-mark paper.",
+      "Physics needs numericals and ray diagrams; Chemistry needs written, balanced equations; Biology needs key terms and labelled diagrams.",
+      "Study all three every week - never drop your weakest part.",
     ],
     body: `<p>Class 10 Science is one paper, but it contains three very different subjects. Physics needs numericals and ray diagrams, Chemistry needs balanced equations and reactions, and Biology needs clear explanations and labelled diagrams. Most students like one of these and avoid another - and the avoided part is usually where the marks are lost.</p>
 

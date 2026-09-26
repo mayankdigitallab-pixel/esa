@@ -6,12 +6,12 @@ import { SectionHeading } from "@/components/ui/SectionHeading";
 import { PageBanner, BannerStatsRight } from "@/components/ui/PageBanner";
 import { BranchesGrid } from "@/components/BranchesGrid";
 import { centres } from "@/data/centres";
-import { breadcrumbSchema, jsonLd, shareMeta } from "@/lib/seo";
+import { breadcrumbSchema, webPageSchema, jsonLd, shareMeta } from "@/lib/seo";
 
 export const metadata: Metadata = {
   title: "Our Branches | ESA Coaching Centres in Delhi NCR & Lucknow",
   description:
-    "Excellent Students' Academy runs three coaching centres - Rohini Sector 7 and Rohini Sector 15 (North-West Delhi NCR) and Thakurganj (Lucknow). Find your nearest ESA branch, address, in-charge and contact.",
+    "ESA's three coaching centres: Rohini Sector 7, Rohini Sector 15 (Delhi) and Thakurganj (Lucknow). Addresses, in-charges, timings and phone.",
   alternates: { canonical: "https://www.theesa.in/centres" },
   keywords: [
     "ESA centres",
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
   ...shareMeta({
     title: "Our Branches | ESA Coaching Centres in Delhi NCR & Lucknow",
     description:
-      "Excellent Students' Academy runs three coaching centres - Rohini Sector 7 and Rohini Sector 15 (North-West Delhi NCR) and Thakurganj (Lucknow). Find your nearest ESA branch, address, in-charge and contact.",
+      "ESA's three coaching centres: Rohini Sector 7, Rohini Sector 15 (Delhi) and Thakurganj (Lucknow). Addresses, in-charges, timings and phone.",
     path: "/centres",
   }),
 };
@@ -42,6 +42,25 @@ export default function CentresPage() {
   return (
     <div>
       <script {...jsonLd(breadcrumb)} />
+      <script
+        {...jsonLd(
+          webPageSchema({
+            type: "CollectionPage",
+            path: "/centres",
+            name: String(metadata.title),
+            description: String(metadata.description),
+          mainEntity: {
+            "@type": "ItemList",
+            itemListElement: centres.map((c, i) => ({
+              "@type": "ListItem",
+              position: i + 1,
+              name: c.name,
+              url: `https://www.theesa.in${c.landingPath}`,
+            })),
+          },
+          }),
+        )}
+      />
       <PageBanner
         label="Our Branches"
         image="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1920&q=80"

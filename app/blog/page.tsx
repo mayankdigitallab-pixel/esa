@@ -3,12 +3,12 @@ import { Container } from "@/components/ui/Container";
 import { PageBanner } from "@/components/ui/PageBanner";
 import { BlogIndex } from "@/components/BlogIndex";
 import { blogPosts } from "@/data/blog";
-import { breadcrumbSchema, jsonLd, shareMeta } from "@/lib/seo";
+import { breadcrumbSchema, webPageSchema, jsonLd, shareMeta } from "@/lib/seo";
 
 export const metadata: Metadata = {
   title: "Blog | ESA Rohini",
   description:
-    "Coaching tips, topper stories, parent guides and board exam strategy from Excellent Students' Academy Rohini. Local insights for parents across Delhi NCR - Rohini, Pitampura, Shalimar Bagh and nearby.",
+    "Board exam strategy, parent guides, subject tips and topper stories from Excellent Students' Academy, for families in Rohini and Delhi NCR.",
   alternates: { canonical: "https://www.theesa.in/blog" },
   keywords: [
     "coaching blog Rohini",
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
   ...shareMeta({
     title: "Blog | Coaching Tips & Board Exam Strategy | ESA Rohini",
     description:
-      "Coaching tips, topper stories, parent guides and board exam strategy from Excellent Students' Academy Rohini. Local insights for parents across Delhi NCR - Rohini, Pitampura, Shalimar Bagh and nearby.",
+      "Board exam strategy, parent guides, subject tips and topper stories from Excellent Students' Academy, for families in Rohini and Delhi NCR.",
     path: "/blog",
   }),
 };
@@ -36,6 +36,25 @@ export default function BlogIndexPage() {
   return (
     <div>
       <script {...jsonLd(breadcrumb)} />
+      <script
+        {...jsonLd(
+          webPageSchema({
+            type: "CollectionPage",
+            path: "/blog",
+            name: String(metadata.title),
+            description: String(metadata.description),
+          mainEntity: {
+            "@type": "ItemList",
+            itemListElement: blogPosts.map((p, i) => ({
+              "@type": "ListItem",
+              position: i + 1,
+              name: p.seoTitle ?? p.title,
+              url: `https://www.theesa.in/blog/${p.slug}`,
+            })),
+          },
+          }),
+        )}
+      />
       <PageBanner
         label="ESA Blog"
         image="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&w=1920&q=80"
