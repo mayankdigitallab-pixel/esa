@@ -12,6 +12,17 @@ export type Area = {
   landmark?: string;
   nearbySchools?: string[];
   transport?: string;
+  /**
+   * Which ESA centre is closer for this locality. Defaults to the Rohini
+   * Sector 7 flagship; set for the northern sectors the Sector 15 branch serves.
+   */
+  nearestCentre?: "rohini-sector-7" | "rohini-sector-15";
+  /**
+   * Owner-supplied, verified local proof. Only fill with real information -
+   * never invented results, names or reviews. Each renders only when present.
+   */
+  localResults?: string;
+  testimonial?: { quote: string; by: string };
 };
 
 // Localities around Rohini Sector 7 where most ESA students come from.
@@ -68,6 +79,7 @@ export const nearbyAreas: Area[] = [
   {
     slug: "rohini-sector-13",
     name: "Rohini Sector 13",
+    nearestCentre: "rohini-sector-15",
     distanceKm: 3.2,
     description: "Students from Sector 13 enrol for Class 1 to 12 board coaching.",
     landmark: "Near Venkateshwar Global School, Sector 13",
@@ -79,6 +91,7 @@ export const nearbyAreas: Area[] = [
   {
     slug: "rohini-sector-17",
     name: "Rohini Sector 17",
+    nearestCentre: "rohini-sector-15",
     distanceKm: 4.1,
     description: "Many of our Class 11 and 12 students come from Sector 17.",
     landmark: "Near the Rohini Sector 18-19 Metro Station (Yellow Line)",
@@ -299,6 +312,7 @@ export const nearbyAreas: Area[] = [
   {
     slug: "rohini-sector-16",
     name: "Rohini Sector 16",
+    nearestCentre: "rohini-sector-15",
     distanceKm: 3.9,
     description: "Board prep and foundation classes for Rohini Sector 16 families, close to our Sector 15 centre.",
     landmark: "Near BCC Model School, Sector 16",
@@ -310,6 +324,7 @@ export const nearbyAreas: Area[] = [
   {
     slug: "rohini-sector-18",
     name: "Rohini Sector 18",
+    nearestCentre: "rohini-sector-15",
     distanceKm: 4.7,
     description: "Coaching for Rohini Sector 18 students, served by our Sector 15 centre.",
     landmark: "Rohini Sector 18-19 Metro Station (Yellow Line)",
@@ -321,6 +336,7 @@ export const nearbyAreas: Area[] = [
   {
     slug: "rohini-sector-19",
     name: "Rohini Sector 19",
+    nearestCentre: "rohini-sector-15",
     distanceKm: 5.1,
     description: "Class 1 to 12 coaching for Rohini Sector 19 residents.",
     landmark: "Rohini Sector 18-19 Metro Station (Yellow Line)",
@@ -332,6 +348,7 @@ export const nearbyAreas: Area[] = [
   {
     slug: "rohini-sector-20",
     name: "Rohini Sector 20",
+    nearestCentre: "rohini-sector-15",
     distanceKm: 5.4,
     description: "Board exam preparation for Rohini Sector 20 students.",
     landmark: "Near Sector 19 and Sector 21, Rohini",
@@ -343,6 +360,7 @@ export const nearbyAreas: Area[] = [
   {
     slug: "rohini-sector-21",
     name: "Rohini Sector 21",
+    nearestCentre: "rohini-sector-15",
     distanceKm: 5.7,
     description: "Coaching for Rohini Sector 21 families.",
     landmark: "Near Sector 20 and Sector 22, Rohini",
@@ -365,6 +383,7 @@ export const nearbyAreas: Area[] = [
   {
     slug: "rohini-sector-24",
     name: "Rohini Sector 24",
+    nearestCentre: "rohini-sector-15",
     distanceKm: 6.4,
     description: "Coaching for Rohini Sector 24 students near the Bawana Road stretch.",
     landmark: "Near Delhi Public School, Sector 24",
@@ -479,3 +498,33 @@ export const nearbyAreas: Area[] = [
       "Kirari Suleman Nagar is a dense residential belt just west of Rohini, between Nangloi and the Rohini sectors. Students here reach our Sector 7 centre in about 15-20 minutes by auto, and home tuition is a popular option across Kirari and Prem Nagar.",
   },
 ];
+
+/**
+ * Localities that sit next to each other on the ground. Used to link each
+ * area page to its real neighbours instead of the same six areas everywhere.
+ */
+const areaClusters: string[][] = [
+  ["rohini-sector-1", "rohini-sector-2", "rohini-sector-3", "rohini-sector-4", "rohini-sector-5", "rohini-sector-6", "rohini-sector-8", "rohini-sector-9"],
+  ["rohini-sector-9", "rohini-sector-10", "rohini-sector-11", "rithala", "budh-vihar", "vijay-vihar"],
+  ["rohini-sector-13", "rohini-sector-16", "rohini-sector-17", "rohini-sector-18", "rohini-sector-19", "prashant-vihar"],
+  ["rohini-sector-18", "rohini-sector-19", "rohini-sector-20", "rohini-sector-21", "rohini-sector-22", "rohini-sector-24"],
+  ["pitampura", "kohat-enclave", "saraswati-vihar", "rani-bagh", "netaji-subhash-place", "prashant-vihar", "shalimar-bagh"],
+  ["shalimar-bagh", "ashok-vihar", "wazirpur", "model-town", "adarsh-nagar", "mukherjee-nagar"],
+  ["netaji-subhash-place", "wazirpur", "ashok-vihar", "shastri-nagar", "punjabi-bagh"],
+  ["kirari", "nangloi", "mundka", "bahadurgarh", "budh-vihar", "vijay-vihar"],
+];
+
+/** Up to six neighbouring localities, closest by distance first. */
+export function neighbourAreas(slug: string, limit = 6): Area[] {
+  const self = nearbyAreas.find((a) => a.slug === slug);
+  const slugs = new Set(areaClusters.filter((c) => c.includes(slug)).flat());
+  slugs.delete(slug);
+  return nearbyAreas
+    .filter((a) => slugs.has(a.slug))
+    .sort(
+      (a, b) =>
+        Math.abs(a.distanceKm - (self?.distanceKm ?? 0)) -
+        Math.abs(b.distanceKm - (self?.distanceKm ?? 0)),
+    )
+    .slice(0, limit);
+}

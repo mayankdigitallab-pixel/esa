@@ -2,11 +2,12 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { MapPin, ArrowRight, CheckCircle2 } from "lucide-react";
+import { MapPin, ArrowRight, CheckCircle2, Phone } from "lucide-react";
 import { Container } from "@/components/ui/Container";
 import { PageBanner } from "@/components/ui/PageBanner";
 import { SectionHeading } from "@/components/ui/SectionHeading";
-import { nearbyAreas, type Area } from "@/data/areas";
+import { nearbyAreas, neighbourAreas, type Area } from "@/data/areas";
+import { findCentre, type Centre } from "@/data/centres";
 import { siteConfig } from "@/data/site";
 import { breadcrumbSchema, faqSchema, jsonLd, shareMeta } from "@/lib/seo";
 
@@ -41,39 +42,62 @@ function areaImage(index: number, size: "banner" | "inline") {
 }
 
 function commutePhrase(area: Area) {
-  return area.distanceKm === 0
-    ? "you're right at the centre"
-    : area.distanceKm < 3
-      ? "under 10 minutes"
-      : area.distanceKm < 6
-        ? "12 to 18 minutes"
-        : "20 to 30 minutes";
+  return area.distanceKm < 3
+    ? "under 10 minutes"
+    : area.distanceKm < 6
+      ? "12 to 18 minutes"
+      : "20 to 30 minutes";
 }
 
-function areaFaqs(area: Area) {
-  const commute =
-    area.distanceKm === 0
-      ? "You're right in Sector 7 - walking distance to the centre."
-      : `${commutePhrase(area)} by auto or e-rickshaw, about ${area.distanceKm} km.`;
+function nearestCentreFor(area: Area): Centre {
+  return findCentre(area.nearestCentre ?? "rohini-sector-7")!;
+}
 
-  return [
+/** FAQs built from this area's own data, so no two area pages share the same set. */
+function areaFaqs(area: Area, centre: Centre, neighbours: Area[]) {
+  const faqs: { question: string; answer: string }[] = [
     {
-      question: `Does ESA offer coaching for students from ${area.name}?`,
-      answer: `Yes. Excellent Students' Academy's Rohini Sector 7 centre teaches Class 1 to 12 students from ${area.name} across Math, Science, Commerce, English and all CBSE/ICSE subjects. ESA is a school-tuition institute: we coach for school and board exams only.`,
+      question: `Which ESA centre is closest to ${area.name}?`,
+      answer:
+        centre.slug === "rohini-sector-7"
+          ? `The Rohini Sector 7 flagship centre at ${centre.fullAddress}, about ${area.distanceKm} km from ${area.name} - roughly ${commutePhrase(area)} by auto or e-rickshaw.`
+          : `The Rohini Sector 15 centre (${centre.fullAddress}), near the Sector 15 market and bus stop, is the closer option for ${area.name}. The Sector 7 flagship is about ${area.distanceKm} km away if you prefer its wider batch choice.`,
     },
+  ];
+  if (area.transport || area.landmark) {
+    faqs.push({
+      question: `How do students from ${area.name} reach ESA?`,
+      answer: area.transport
+        ? `Most students come by ${area.transport}. Local reference point: ${area.landmark ?? area.name}.`
+        : `The usual reference point is ${area.landmark}. From there it is a ${commutePhrase(area)} ride by auto or e-rickshaw to the centre.`,
+    });
+  }
+  if (area.nearbySchools && area.nearbySchools.length > 0) {
+    faqs.push({
+      question: `Which schools do ESA students from ${area.name} attend?`,
+      answer: `Our ${area.name} students come from ${area.nearbySchools.join(", ")}, among others. Batch timings are planned around local school dismissal times.`,
+    });
+  }
+  faqs.push(
     {
-      question: `How far is ESA from ${area.name}, and how do students get there?`,
-      answer: `${commute} Our centre is at ${siteConfig.address.line1}, ${siteConfig.address.line2}, ${siteConfig.address.city} ${siteConfig.address.pin}.${area.transport ? ` ${area.transport} is the most common way students reach us.` : ""}`,
-    },
-    {
-      question: `What classes and subjects can my child join from ${area.name}?`,
-      answer: `Class 1 to Class 12, across CBSE, ICSE and State Boards - Mathematics, Science, Social Science, English, Hindi, Sanskrit (Class 6-10), and Physics, Chemistry, Biology, Accountancy, Business Studies, Economics, Computer Science (Class 11-12).`,
+      question: `What classes and subjects can a student from ${area.name} join?`,
+      answer: `Class 1 to 12 for CBSE, ICSE and State Boards - Mathematics, Science, Social Science, English, Hindi, Sanskrit (Class 6-10), and Physics, Chemistry, Biology, Accountancy, Business Studies, Economics, Computer Science (Class 11-12). ESA prepares students for school and board exams only.`,
     },
     {
       question: `Can I book a free demo class for my child from ${area.name}?`,
-      answer: `Yes - 7 days of free demo classes, no registration fee. Your child sits in the actual batch they would join, meets the faculty, and you decide only after. WhatsApp ${siteConfig.whatsappDisplay} or call ${siteConfig.phoneDisplay} to book a slot.`,
+      answer: `Yes - 7 days of free demo classes in the real batch, no registration fee. Call or WhatsApp the ${centre.shortName} centre on ${centre.phoneDisplay} to book a slot.`,
     },
-  ];
+  );
+  if (neighbours.length > 0) {
+    faqs.push({
+      question: `Does ESA also teach students from areas near ${area.name}?`,
+      answer: `Yes. Families from neighbouring ${neighbours
+        .slice(0, 4)
+        .map((n) => n.name)
+        .join(", ")} also send their children to ESA.`,
+    });
+  }
+  return faqs;
 }
 
 export function generateStaticParams() {
@@ -88,8 +112,12 @@ export async function generateMetadata({
   const { slug } = await params;
   const area = nearbyAreas.find((a) => a.slug === slug);
   if (!area) return {};
+  const centre = nearestCentreFor(area);
   const title = `Coaching in ${area.name} | Class 1-12 Tuition | ESA`;
-  const description = `Class 1-12 tuition for ${area.name} students at ESA Rohini Sector 7, ${area.distanceKm} km away. Math, Science, Commerce, weekly tests. Free demo class.`;
+  const description =
+    centre.slug === "rohini-sector-7"
+      ? `Class 1-12 tuition for ${area.name} students at ESA Rohini Sector 7, ${area.distanceKm} km away. Math, Science, Commerce, weekly tests. Free demo class.`
+      : `Class 1-12 tuition for ${area.name} students at ESA's nearby Rohini Sector 15 centre. Math, Science, Commerce, weekly tests. Free demo class.`;
   return {
     title,
     description,
@@ -123,26 +151,43 @@ export default async function AreaPage({
   const area = nearbyAreas.find((a) => a.slug === slug);
   if (!area) notFound();
 
+  const centre = nearestCentreFor(area);
+  const otherCentre = findCentre(
+    centre.slug === "rohini-sector-7" ? "rohini-sector-15" : "rohini-sector-7",
+  )!;
   const areaIndex = nearbyAreas.findIndex((a) => a.slug === area.slug);
-  const other = nearbyAreas.filter((a) => a.slug !== area.slug).slice(0, 6);
+  const neighbours = neighbourAreas(area.slug);
   const breadcrumb = breadcrumbSchema([
     { name: "Home", href: "/" },
     { name: "Centres", href: "/centres" },
     { name: area.name, href: `/areas/${area.slug}` },
   ]);
-  const faqs = areaFaqs(area);
+  const faqs = areaFaqs(area, centre, neighbours);
   const commute = commutePhrase(area);
+  const pageUrl = `https://www.theesa.in/areas/${area.slug}`;
+  const serviceSchema = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "@id": `${pageUrl}#service`,
+    name: `Class 1-12 coaching for students in ${area.name}`,
+    serviceType: "School tuition and board exam coaching",
+    url: pageUrl,
+    provider: { "@id": `https://www.theesa.in${centre.landingPath}#localbusiness` },
+    areaServed: { "@type": "Place", name: `${area.name}, Delhi` },
+    audience: { "@type": "EducationalAudience", educationalRole: "student" },
+  };
 
   return (
     <div>
       <script {...jsonLd(breadcrumb)} />
       <script {...jsonLd(faqSchema(faqs))} />
+      <script {...jsonLd(serviceSchema)} />
       <PageBanner
         label={`Coaching · ${area.name}`}
         image={areaImage(areaIndex, "banner")}
         imageAlt={`Coaching classes for students in ${area.name}`}
         heading={<>Best coaching for Class 1 to 12 in {area.name}.</>}
-        subtitle={`ESA's Rohini Sector 7 centre serves students from ${area.name} and nearby North Delhi areas, with a teaching method built around weekly testing and faculty who stay with the same batch year after year.`}
+        subtitle={`ESA's ${centre.shortName} centre is the nearest branch for ${area.name} families, with weekly Saturday tests, small batches and faculty who stay with the same batch year after year.`}
       />
 
       <section className="border-t border-neutral-200 bg-white py-16 sm:py-24">
@@ -153,40 +198,151 @@ export default async function AreaPage({
               eyebrow={`Coaching in ${area.name}`}
               title={
                 <>
-                  Why {area.name} families choose{" "}
-                  <span className="text-charcoal">ESA Rohini</span>
+                  Your nearest ESA centre from{" "}
+                  <span className="text-charcoal">{area.name}</span>
                 </>
               }
             />
             <div className="space-y-5 text-[15px] leading-relaxed text-body">
               <p>
-                If you live in {area.name} and are searching for a coaching institute your child will actually enjoy walking into, distance is only half the answer. What happens once your child sits down in a batch decides everything else. Excellent Students&apos; Academy runs its flagship centre out of Rohini Sector 7, and a growing number of {area.name} families now send their children here for Class 1 to 12 coaching in Math, Science, Commerce, English and every core CBSE/ICSE subject.
-              </p>
-              <p>
-                We are about {area.distanceKm === 0 ? "0" : area.distanceKm} km from {area.name}
-                {area.transport ? `, reachable by ${area.transport.toLowerCase()}` : ""}, which in practice means a {commute} commute for most students - close enough that a Saturday test or an evening doubt session never feels like a big ask.
+                {area.description}{" "}
+                {centre.slug === "rohini-sector-7"
+                  ? `Our Rohini Sector 7 flagship is about ${area.distanceKm} km away - a ${commute} ride for most students, close enough that a Saturday test or an evening doubt session never feels like a big ask.`
+                  : `For ${area.name}, our Rohini Sector 15 branch near the Sector 15 market is the closer centre, and the Sector 7 flagship (about ${area.distanceKm} km) is there if you need a wider choice of batches.`}
               </p>
               {area.localCopy ? (
                 <p className="rounded-2xl border border-teal-200 bg-teal-50/50 p-5 text-charcoal">
                   {area.localCopy}
                 </p>
               ) : null}
-              {/* TODO: unique content - add real, verified per-area info in data/areas.ts
-                  (route to the centre, local student results, a real parent testimonial).
-                  Do not invent results, names or reviews. */}
-              {area.landmark ? (
-                <p>
-                  <strong className="font-semibold text-charcoal">Local landmark:</strong>{" "}
-                  {area.landmark}.
-                </p>
-              ) : null}
-              {area.nearbySchools && area.nearbySchools.length > 0 ? (
-                <p>
-                  <strong className="font-semibold text-charcoal">Schools we coach students from in {area.name}:</strong>{" "}
-                  {area.nearbySchools.join(", ")}.
-                </p>
-              ) : null}
             </div>
+
+            {/* Local snapshot - every row comes from this area's own data */}
+            <div className="mt-10 rounded-2xl border border-neutral-200 bg-neutral-50 p-7 sm:p-9">
+              <p className="text-[11px] font-bold uppercase tracking-[0.22em] text-charcoal">
+                {area.name} at a glance
+              </p>
+              <dl className="mt-5 space-y-3 text-sm">
+                <div className="flex justify-between gap-6 border-b border-neutral-200 pb-2">
+                  <dt className="shrink-0 text-muted">Nearest ESA centre</dt>
+                  <dd className="text-right font-medium text-charcoal">
+                    <Link href={centre.landingPath!} className="text-teal-700 hover:text-red-600">
+                      {centre.name}
+                    </Link>
+                  </dd>
+                </div>
+                <div className="flex justify-between gap-6 border-b border-neutral-200 pb-2">
+                  <dt className="shrink-0 text-muted">Distance to Sector 7 flagship</dt>
+                  <dd className="text-right font-medium text-charcoal">
+                    {area.distanceKm} km · about {commute}
+                  </dd>
+                </div>
+                {area.landmark ? (
+                  <div className="flex justify-between gap-6 border-b border-neutral-200 pb-2">
+                    <dt className="shrink-0 text-muted">Local landmark</dt>
+                    <dd className="text-right font-medium text-charcoal">{area.landmark}</dd>
+                  </div>
+                ) : null}
+                <div className="flex justify-between gap-6 border-b border-neutral-200 pb-2">
+                  <dt className="shrink-0 text-muted">Getting there</dt>
+                  <dd className="text-right font-medium text-charcoal">
+                    {area.transport ?? "Auto, e-rickshaw or two-wheeler"}
+                  </dd>
+                </div>
+                {area.nearbySchools && area.nearbySchools.length > 0 ? (
+                  <div className="flex justify-between gap-6 border-b border-neutral-200 pb-2">
+                    <dt className="shrink-0 text-muted">Students&apos; schools</dt>
+                    <dd className="text-right font-medium text-charcoal">
+                      {area.nearbySchools.join(", ")}
+                    </dd>
+                  </div>
+                ) : null}
+                <div className="flex justify-between gap-6 border-b border-neutral-200 pb-2">
+                  <dt className="shrink-0 text-muted">Classes</dt>
+                  <dd className="text-right font-medium text-charcoal">
+                    Class 1 to 12 (CBSE, ICSE, State Board)
+                  </dd>
+                </div>
+                <div className="flex justify-between gap-6 border-b border-neutral-200 pb-2">
+                  <dt className="shrink-0 text-muted">Subjects</dt>
+                  <dd className="text-right font-medium text-charcoal">
+                    Math, Science, SST, English, Hindi, Sanskrit; Class 11-12: Physics, Chemistry, Biology, Accountancy, Business Studies, Economics, Computer Science
+                  </dd>
+                </div>
+                <div className="flex justify-between gap-6">
+                  <dt className="shrink-0 text-muted">Free demo</dt>
+                  <dd className="text-right font-medium text-charcoal">7 days, no fee</dd>
+                </div>
+              </dl>
+            </div>
+
+            {/* Nearest centre contact card */}
+            <div className="mt-8 rounded-2xl border border-teal-200 bg-white p-7 sm:p-9">
+              <p className="text-[11px] font-bold uppercase tracking-[0.22em] text-teal-700">
+                Visit {centre.name}
+              </p>
+              <p className="mt-3 flex items-start gap-2 text-[15px] text-charcoal">
+                <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-teal-700" />
+                {centre.fullAddress}
+              </p>
+              <p className="mt-2 text-sm text-body">
+                Centre in-charge: {centre.inCharge} · Open {siteConfig.hours.weekdays}, Monday to Saturday
+              </p>
+              <div className="mt-5 flex flex-wrap gap-3 text-sm">
+                <a
+                  href={`tel:${centre.phone}`}
+                  className="inline-flex items-center gap-2 rounded-lg bg-charcoal px-4 py-2.5 font-semibold text-white hover:bg-black"
+                >
+                  <Phone className="h-4 w-4" />
+                  {centre.phoneDisplay}
+                </a>
+                <a
+                  href={centre.mapLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 rounded-lg border border-neutral-300 px-4 py-2.5 font-semibold text-charcoal hover:border-neutral-500"
+                >
+                  Directions on Google Maps
+                </a>
+                <Link
+                  href={centre.landingPath!}
+                  className="inline-flex items-center gap-2 rounded-lg border border-neutral-300 px-4 py-2.5 font-semibold text-charcoal hover:border-neutral-500"
+                >
+                  Centre details
+                  <ArrowRight className="h-4 w-4" />
+                </Link>
+              </div>
+              <p className="mt-4 text-xs text-muted">
+                Also nearby:{" "}
+                <Link
+                  href={otherCentre.landingPath!}
+                  className="font-semibold text-teal-700 hover:text-red-600"
+                >
+                  {otherCentre.name}
+                </Link>{" "}
+                ({otherCentre.phoneDisplay})
+              </p>
+            </div>
+
+            {/* Owner-verified local proof: renders only once real info is added in data/areas.ts */}
+            {area.localResults || area.testimonial ? (
+              <div className="mt-8 space-y-5">
+                {area.localResults ? (
+                  <p className="rounded-2xl border border-neutral-200 bg-white p-6 text-[15px] leading-relaxed text-charcoal">
+                    <strong className="font-semibold">Results from {area.name}:</strong>{" "}
+                    {area.localResults}
+                  </p>
+                ) : null}
+                {area.testimonial ? (
+                  <figure className="rounded-2xl border border-neutral-200 bg-white p-6">
+                    <blockquote className="text-[15px] italic leading-relaxed text-charcoal">
+                      &ldquo;{area.testimonial.quote}&rdquo;
+                    </blockquote>
+                    <figcaption className="mt-3 text-sm text-muted">- {area.testimonial.by}</figcaption>
+                  </figure>
+                ) : null}
+              </div>
+            ) : null}
 
             <figure className="my-10">
               <div className="relative aspect-[16/10] overflow-hidden rounded-2xl bg-neutral-200">
@@ -199,100 +355,26 @@ export default async function AreaPage({
                 />
               </div>
               <figcaption className="mt-3 text-center text-sm italic text-charcoal-soft">
-                Small batches and subject-specialist faculty - the same classroom {area.name} students join every day.
+                Small batches and subject-specialist faculty - the classroom {area.name} students join.
               </figcaption>
             </figure>
 
             <h2 className="text-2xl font-bold tracking-tight text-charcoal sm:text-3xl">
-              What families from {area.name} notice first
+              How ESA teaches
             </h2>
-            <div className="mt-4 space-y-5 text-[15px] leading-relaxed text-body">
-              <p>
-                The first thing most {area.name} parents mention after a few weeks is the testing rhythm. Every Saturday, without exception, our students write a chapter test on whatever was taught that week. Papers are corrected within 48 hours and a scorecard reaches parents by Monday morning on WhatsApp - not a vague progress update, but a specific note on which chapter or concept still needs work.
-              </p>
-              <p>
-                Batch sizes are capped at around 18 students, so a child from {area.name} is never just a face in a large room. Faculty stay with the same batch for the full year, often for several years running, so by the time board exams arrive, the teacher already knows exactly where each student&apos;s gaps are.
-              </p>
-            </div>
+            <p className="mt-4 text-[15px] leading-relaxed text-body">
+              Every Saturday, students write a test on the chapter taught that week; papers are corrected within 48 hours and parents get a scorecard on WhatsApp. Batches are capped at around 18, faculty stay with the same batch across years, and the first Saturday of each month is a sit-down parent meeting with the subject teacher. Our most recent CBSE batch averaged 84% with every student passing, and 32 students scored above 90%. See the{" "}
+              <Link href="/results" className="font-semibold text-teal-700 hover:text-red-600">
+                full results
+              </Link>{" "}
+              or{" "}
+              <Link href="/faculty" className="font-semibold text-teal-700 hover:text-red-600">
+                meet the faculty
+              </Link>
+              .
+            </p>
 
-            <h2 className="mt-10 text-2xl font-bold tracking-tight text-charcoal sm:text-3xl">
-              A week at ESA, for a {area.name} student
-            </h2>
-            <div className="mt-4 space-y-5 text-[15px] leading-relaxed text-body">
-              <p>
-                Monday to Friday evenings follow a simple four-step method in every subject - explain the concept, demonstrate it, let the student practise independently, then test a variation to confirm it has actually stuck. Saturday is reserved entirely for the weekly chapter test across every batch. The first Saturday of each month is set aside for a proper fifteen-minute parent meeting with the actual subject teacher, not a rushed hallway conversation.
-              </p>
-              <p>
-                This routine has produced consistent results: our most recent CBSE batch averaged 84% with every student passing, and 32 students scored above 90%. None of that comes from a single gifted batch - it comes from the same weekly discipline running for months, which is exactly what a family commuting from {area.name} signs up for.
-              </p>
-            </div>
-
-            <figure className="my-10">
-              <div className="relative aspect-[16/10] overflow-hidden rounded-2xl bg-neutral-200">
-                <Image
-                  src={areaImage(areaIndex + 12, "inline")}
-                  alt={`Students from ${area.name} writing a weekly Saturday test at ESA Rohini Sector 7`}
-                  fill
-                  sizes="(max-width: 1024px) 100vw, 768px"
-                  className="object-cover"
-                />
-              </div>
-              <figcaption className="mt-3 text-center text-sm italic text-charcoal-soft">
-                Weekly Saturday chapter tests, corrected within 48 hours - the routine behind our board results.
-              </figcaption>
-            </figure>
-
-            <h2 className="text-2xl font-bold tracking-tight text-charcoal sm:text-3xl">
-              Getting to ESA from {area.name}
-            </h2>
-            <div className="mt-4 space-y-5 text-[15px] leading-relaxed text-body">
-              <p>
-                Our centre is at {siteConfig.address.line1}, {siteConfig.address.line2}, {siteConfig.address.city} {siteConfig.address.pin}. Most {area.name} students settle into the {commute} commute within the first week and stop noticing it - the classroom routine becomes the more memorable part of the evening.
-              </p>
-              <p>
-                We do not ask any {area.name} family to commit on a phone call. Every student gets 7 days of free demo classes in the exact batch they would join, taught by the exact faculty member, with no registration fee. Walk in, sit through a real week of classes, and decide only once you have seen it firsthand.
-              </p>
-            </div>
-
-            <div className="mt-10 rounded-2xl border border-neutral-200 bg-neutral-50 p-7 sm:p-9">
-              <p className="text-[11px] font-bold uppercase tracking-widest text-charcoal">
-                Quick facts for {area.name}
-              </p>
-              <dl className="mt-5 space-y-3 text-sm">
-                <div className="flex justify-between border-b border-neutral-200 pb-2">
-                  <dt className="text-muted">Distance from {area.name}</dt>
-                  <dd className="font-medium text-charcoal">
-                    {area.distanceKm === 0 ? "We are here" : `${area.distanceKm} km`}
-                  </dd>
-                </div>
-                <div className="flex justify-between border-b border-neutral-200 pb-2">
-                  <dt className="text-muted">Approx commute</dt>
-                  <dd className="font-medium text-charcoal">{commute}</dd>
-                </div>
-                <div className="flex justify-between border-b border-neutral-200 pb-2">
-                  <dt className="text-muted">Public transport</dt>
-                  <dd className="font-medium text-charcoal">
-                    {area.transport ?? "Auto / Metro"}
-                  </dd>
-                </div>
-                <div className="flex justify-between border-b border-neutral-200 pb-2">
-                  <dt className="text-muted">Classes</dt>
-                  <dd className="font-medium text-charcoal">Class 1 to 12 (CBSE, ICSE, State Board)</dd>
-                </div>
-                <div className="flex justify-between gap-6 border-b border-neutral-200 pb-2">
-                  <dt className="shrink-0 text-muted">Subjects</dt>
-                  <dd className="text-right font-medium text-charcoal">
-                    Math, Science, SST, English, Hindi, Sanskrit; Class 11-12: Physics, Chemistry, Biology, Accountancy, Business Studies, Economics, Computer Science
-                  </dd>
-                </div>
-                <div className="flex justify-between">
-                  <dt className="text-muted">Free demo</dt>
-                  <dd className="font-medium text-charcoal">7 days, no fee</dd>
-                </div>
-              </dl>
-            </div>
-
-            <ul className="mt-10 grid gap-4 sm:grid-cols-2">
+            <ul className="mt-8 grid gap-4 sm:grid-cols-2">
               {[
                 `Class 1 to 12 coaching, all subjects covered`,
                 `Weekly Saturday tests and monthly mock papers`,
@@ -300,8 +382,6 @@ export default async function AreaPage({
                 `7 days of free demo classes before you decide`,
                 `Monthly parent meetings with detailed progress notes`,
                 `Faculty-prepared notes for Class 8 to 12`,
-                `Batch size capped around 18 students`,
-                `Nominal monthly fee, no hidden charges`,
               ].map((p) => (
                 <li
                   key={p}
@@ -321,6 +401,9 @@ export default async function AreaPage({
                 See what coaching looks like for your child&apos;s exact class:
               </p>
               <div className="mt-4 flex flex-wrap gap-x-5 gap-y-2 text-sm">
+                <Link href="/classes/class-9" className="font-semibold text-teal-700 hover:text-red-600">
+                  Class 9 coaching
+                </Link>
                 <Link href="/classes/class-10" className="font-semibold text-teal-700 hover:text-red-600">
                   Class 10 coaching
                 </Link>
@@ -328,13 +411,10 @@ export default async function AreaPage({
                   Class 12 coaching
                 </Link>
                 <Link href="/classes" className="font-semibold text-teal-700 hover:text-red-600">
-                  View all classes (6-12)
+                  All classes
                 </Link>
-                <Link href="/faculty" className="font-semibold text-teal-700 hover:text-red-600">
-                  Meet our faculty
-                </Link>
-                <Link href="/results" className="font-semibold text-teal-700 hover:text-red-600">
-                  See board results
+                <Link href="/timetable" className="font-semibold text-teal-700 hover:text-red-600">
+                  Batch timings
                 </Link>
               </div>
             </div>
@@ -342,36 +422,36 @@ export default async function AreaPage({
         </Container>
       </section>
 
-      <section className="bg-white py-16 sm:py-20">
-        <Container>
-          <SectionHeading
-            eyebrow="Other nearby areas"
-            title={
-              <>
-                ESA also serves families from these{" "}
-                <span className="text-charcoal">other localities</span>
-              </>
-            }
-          />
-          <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
-            {other.map((a) => (
-              <Link
-                key={a.slug}
-                href={`/areas/${a.slug}`}
-                className="group flex items-center justify-between rounded border border-neutral-200 bg-white px-5 py-4 transition hover:border-neutral-400 hover:shadow"
-              >
-                <div className="flex items-center gap-3">
-                  <MapPin className="h-4 w-4 text-charcoal" />
-                  <span className="text-sm font-medium text-charcoal">
-                    {a.name}
-                  </span>
-                </div>
-                <ArrowRight className="h-4 w-4 text-muted transition group-hover:translate-x-0.5 group-hover:text-teal-700" />
-              </Link>
-            ))}
-          </div>
-        </Container>
-      </section>
+      {neighbours.length > 0 ? (
+        <section className="bg-white py-16 sm:py-20">
+          <Container>
+            <SectionHeading
+              eyebrow={`Near ${area.name}`}
+              title={
+                <>
+                  ESA also teaches students from{" "}
+                  <span className="text-charcoal">neighbouring areas</span>
+                </>
+              }
+            />
+            <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+              {neighbours.map((a) => (
+                <Link
+                  key={a.slug}
+                  href={`/areas/${a.slug}`}
+                  className="group flex items-center justify-between rounded border border-neutral-200 bg-white px-5 py-4 transition hover:border-neutral-400 hover:shadow"
+                >
+                  <div className="flex items-center gap-3">
+                    <MapPin className="h-4 w-4 text-charcoal" />
+                    <span className="text-sm font-medium text-charcoal">{a.name}</span>
+                  </div>
+                  <ArrowRight className="h-4 w-4 text-muted transition group-hover:translate-x-0.5 group-hover:text-teal-700" />
+                </Link>
+              ))}
+            </div>
+          </Container>
+        </section>
+      ) : null}
 
       <section className="border-t border-neutral-200 bg-neutral-50 py-16 sm:py-20">
         <Container>
@@ -390,12 +470,8 @@ export default async function AreaPage({
                 key={f.question}
                 className="rounded-2xl border border-neutral-200 bg-white p-6"
               >
-                <h3 className="text-base font-bold text-charcoal">
-                  {f.question}
-                </h3>
-                <p className="mt-2 text-sm leading-relaxed text-charcoal-soft">
-                  {f.answer}
-                </p>
+                <h3 className="text-base font-bold text-charcoal">{f.question}</h3>
+                <p className="mt-2 text-sm leading-relaxed text-charcoal-soft">{f.answer}</p>
               </div>
             ))}
           </div>
