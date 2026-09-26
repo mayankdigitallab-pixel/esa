@@ -3,9 +3,9 @@ import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { ArrowRight, ChevronRight } from "lucide-react";
+import { BlogEsaPromo } from "@/components/BlogEsaPromo";
 import { Container } from "@/components/ui/Container";
 import { blogPosts } from "@/data/blog";
-import { siteConfig, whatsappLink } from "@/data/site";
 import { articleSchema, breadcrumbSchema, faqSchema, jsonLd } from "@/lib/seo";
 
 export function generateStaticParams() {
@@ -193,49 +193,8 @@ export default async function BlogPostPage({
               </div>
             )}
 
-            {/* Company CTA */}
-            <div className="border-t border-neutral-200 bg-charcoal px-6 py-12 text-center text-white sm:px-10">
-              <p className="text-[11px] font-bold uppercase tracking-[0.22em] text-teal-300">
-                Excellent Students&apos; Academy
-              </p>
-              <h2
-                className="mt-4 text-white"
-                style={{
-                  fontSize: "clamp(1.5rem, 3vw, 2.2rem)",
-                  fontWeight: 700,
-                  letterSpacing: "-0.02em",
-                  lineHeight: 1.15,
-                }}
-              >
-                Want this kind of coaching for your child?
-              </h2>
-              <p className="mx-auto mt-3 max-w-xl text-sm leading-relaxed text-white/70 sm:text-base">
-                Book a free 7-day demo at our Rohini Sector 7 centre. Real batch, real faculty, no commitment.
-              </p>
-              <div className="mt-6 flex flex-wrap justify-center gap-3">
-                <Link href="/contact#enquiry" className="btn-primary">
-                  Book Free Demo
-                  <ArrowRight className="h-4 w-4" />
-                </Link>
-                <a
-                  href={whatsappLink(`Hi, I'd like to book a free demo. I read the "${post.title}" blog.`)}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 rounded-lg border border-white/30 px-5 py-3 text-sm font-semibold text-white transition hover:bg-white/10"
-                >
-                  WhatsApp {siteConfig.whatsappDisplay}
-                </a>
-                <Link
-                  href="/programs"
-                  className="inline-flex items-center gap-2 rounded-lg border border-white/30 px-5 py-3 text-sm font-semibold text-white transition hover:bg-white/10"
-                >
-                  Explore programs
-                </Link>
-              </div>
-              <p className="mx-auto mt-6 max-w-xl text-xs leading-relaxed text-white/60">
-                {siteConfig.name} &middot; {siteConfig.address.line1}, {siteConfig.address.line2}, {siteConfig.address.city} {siteConfig.address.pin} &middot; Call {siteConfig.phoneDisplay}
-              </p>
-            </div>
+            {/* Why ESA - promotion shown under every post */}
+            <BlogEsaPromo postTitle={post.title} />
           </div>
         </Container>
       </article>

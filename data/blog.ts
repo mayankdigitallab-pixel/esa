@@ -1232,4 +1232,833 @@ export const blogPosts: BlogPost[] = [
 <h3>Talk to us before deciding</h3>
 <p>If you are deciding between home tuition and coaching for your Rohini-area child, walk in to our Sector 7 centre. We will tell you honestly what we think suits your child. Sometimes we recommend home tuition with one of our own teachers. Sometimes we recommend coaching. The advice is free.</p>`,
   },
+  {
+    slug: "class-10-board-exam-2027-study-plan-october-to-february",
+    title: "Class 10 Board Exam 2027: A Month-by-Month Study Plan from October to February",
+    description:
+      "A realistic October to February study plan for CBSE Class 10 Board Exam 2027 - what to finish each month, when to start sample papers, and how to revise.",
+    date: "2026-09-26",
+    readTime: "8 min read",
+    category: "Board Exams",
+    author: "ESA Editorial",
+    cover:
+      "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&w=1200&q=80",
+    excerpt:
+      "Five months to the Class 10 boards. Here is what a Class 10 student should finish in October, November, December, January and February - month by month, subject by subject.",
+    keywords: [
+      "Class 10 board exam 2027 study plan",
+      "CBSE Class 10 timetable for preparation",
+      "Class 10 board preparation month wise",
+      "Class 10 coaching Rohini",
+      "how to prepare for Class 10 boards",
+    ],
+    body: `<p>By the end of September most Class 10 students have finished their half-yearly exams and are looking at a board exam that is roughly five months away. The phase 1 board exam for Class 10 usually begins in the second half of February, so the window from October to February is the one that actually decides the result. This plan is the same structure we follow with our Class 10 batches at Excellent Students' Academy in Rohini, written so that any student can use it at home.</p>
+
+<p>Always confirm the final dates on the official CBSE date sheet when it is released. The plan below works backwards from a mid-February start.</p>
+
+<h2>October: close the syllabus gaps</h2>
+<p>October is not a revision month. It is the month to finish whatever the school has not yet covered and to repair the chapters that went badly in the half-yearly exam.</p>
+<ul>
+<li><strong>List every chapter</strong> in Maths, Science and Social Science and mark each one as done, weak or not started. Be honest - a chapter you read once is not done.</li>
+<li><strong>Pick two weak chapters per subject</strong> from the half-yearly paper and redo them from the NCERT textbook, including every in-text question and exercise.</li>
+<li><strong>Start a formula and definitions notebook</strong> for Maths and Science. One page per chapter. This notebook becomes your main revision tool in February.</li>
+<li><strong>Languages:</strong> practise one letter or formal writing task and one reading passage every week so the format becomes automatic.</li>
+</ul>
+
+<h2>November: finish the syllabus completely</h2>
+<p>The single most important target of this plan is simple: by 30 November the entire syllabus should have been studied at least once. Students who are still learning new chapters in January spend their final weeks panicking instead of practising.</p>
+<ul>
+<li>Maths: finish the remaining chapters and solve every NCERT exercise, including the examples. The NCERT examples are regularly adapted into board questions.</li>
+<li>Science: complete all three parts - Physics, Chemistry and Biology - and draw every labelled diagram at least twice.</li>
+<li>Social Science: finish History, Geography, Political Science and Economics, and practise the map list given in the CBSE syllabus.</li>
+<li>Start writing one chapter test per subject every week, timed.</li>
+</ul>
+
+<h2>December: first full revision and the first sample papers</h2>
+<p>December is for the first complete revision and the first real exposure to the full paper. Most schools also hold pre-boards between December and January, so treat this month as practice for them.</p>
+<ul>
+<li>Revise each subject chapter by chapter using your notebook, not the full textbook.</li>
+<li>Solve the <strong>official CBSE sample paper</strong> for each subject in exam conditions - three hours, no phone, no breaks - and check it against the marking scheme.</li>
+<li>Make an <strong>error log</strong>: every question you lost marks on, why you lost them, and the correct method. Read this log every Sunday.</li>
+</ul>
+
+<h2>January: pre-boards and targeted practice</h2>
+<p>Pre-board results are useful only if you study them properly. After each pre-board paper, sort every lost mark into one of three buckets: did not know the concept, knew it but made a calculation or reading mistake, or ran out of time. Each bucket has a different fix.</p>
+<ul>
+<li><strong>Concept gaps:</strong> go back to NCERT and your class notes for that chapter.</li>
+<li><strong>Silly mistakes:</strong> practise showing every step and re-reading the question before answering.</li>
+<li><strong>Time problems:</strong> solve sections of papers against a stopwatch and decide a fixed order of attempting sections.</li>
+</ul>
+<p>Aim for two full papers per subject in January, spaced out, with proper checking after each one.</p>
+
+<h2>February: light revision, sharp practice</h2>
+<p>In the final weeks, stop starting anything new. Read the formula notebook and the error log daily, solve one or two papers per subject, and keep sleep and meals regular. A tired student makes more careless mistakes than an under-prepared one.</p>
+<ul>
+<li>Revise the day before each paper only from your own notes.</li>
+<li>Use the gaps between exams for the next subject's weakest chapters, not for full re-reading.</li>
+<li>Keep the admit card, stationery and exam-centre route sorted a week in advance.</li>
+</ul>
+
+<h2>A sample weekday routine</h2>
+<p>For most students a school-day routine of about three focused hours after school works well: one hour of Maths problems, one hour of Science or Social Science, and forty-five minutes of revision from the notebook, with a short break between each block. Weekends can hold a full-length paper plus checking.</p>
+
+<h2>How ESA runs this plan in class</h2>
+<p>At our Rohini Sector 7 and Sector 15 centres, Class 10 batches follow this same calendar. Every Saturday is a chapter test, papers are corrected within 48 hours, and parents receive a scorecard on WhatsApp showing exactly which chapter needs more work. If your child would benefit from a structured routine for the next five months, you can book a free 7-day demo in a real Class 10 batch before deciding.</p>`,
+    faqs: [
+      {
+        question: "When should Class 10 students finish the syllabus for the 2027 boards?",
+        answer:
+          "Aim to finish the full syllabus once by the end of November. That leaves December for the first revision and sample papers, and January-February for pre-boards and targeted practice.",
+      },
+      {
+        question: "How many sample papers should a Class 10 student solve?",
+        answer:
+          "Quality matters more than number. Four to six full papers per subject, each solved in exam conditions and checked against the CBSE marking scheme, is more useful than rushing through fifteen.",
+      },
+      {
+        question: "How many hours should a Class 10 student study daily before boards?",
+        answer:
+          "About three focused hours after school on weekdays is enough for most students if the time is used for active practice. Weekends can add one full-length timed paper with checking.",
+      },
+    ],
+  },
+  {
+    slug: "cbse-class-10-two-board-exams-parents-guide",
+    title: "CBSE Class 10 Two Board Exams: What Parents Need to Know",
+    description:
+      "CBSE Class 10 now has two board exams a year. What the February and May exams mean, who can appear in the second one, and how to plan your child's preparation.",
+    date: "2026-09-25",
+    readTime: "6 min read",
+    category: "Board Exams",
+    author: "ESA Editorial",
+    cover:
+      "https://images.unsplash.com/photo-1456406644174-8ddd4cd52a06?auto=format&fit=crop&w=1200&q=80",
+    excerpt:
+      "CBSE Class 10 students now get two chances at the board exam each year. Here is what the change means in practice, and why it should not change how your child prepares.",
+    keywords: [
+      "CBSE Class 10 two board exams",
+      "CBSE two board exam rules",
+      "Class 10 second board exam May",
+      "CBSE Class 10 improvement exam",
+      "Class 10 board exam parents guide",
+    ],
+    body: `<p>From the 2026 exam cycle onwards, CBSE Class 10 students have two opportunities to take the board exam in the same academic year. Many parents in Rohini have asked us the same questions about it: is the second exam compulsory, does it make the first one less important, and how should a child plan for it? This guide answers those questions in plain language.</p>
+
+<p><strong>Important:</strong> the rules below reflect CBSE's announced scheme. CBSE can revise details through circulars, so always check the latest notice on the official CBSE website before making decisions.</p>
+
+<h2>How the two-exam system works</h2>
+<ul>
+<li><strong>The first exam (phase 1) is compulsory</strong> for every Class 10 student and is held around mid-February. This is the main board exam.</li>
+<li><strong>The second exam (phase 2) is optional</strong> and is held around May. It is meant for students who want to improve their performance.</li>
+<li>Students can use the second exam to try to improve their score in a limited number of subjects - CBSE has set this at up to three subjects from the main subjects such as Science, Maths, Social Science and languages.</li>
+<li><strong>Internal assessment happens only once</strong> in the year. The second exam does not come with a second internal assessment.</li>
+<li>The results of the first exam are expected around April and those of the second exam around June.</li>
+</ul>
+
+<h2>Who can appear in the second exam</h2>
+<p>The second exam is for students who have appeared in the first one. CBSE's scheme does not allow a student who skipped three or more subjects in the first exam to use the second exam as a fresh start. The second exam also serves students who need to clear a subject, in place of the older separate supplementary exam. Check the exact eligibility categories in the CBSE circular for your child's year.</p>
+
+<h2>What this does not change</h2>
+<p>The biggest risk with the new system is a mindset problem: a child who thinks "there is always May" and prepares half-heartedly for February. That is a poor bet for three reasons.</p>
+<ul>
+<li><strong>February is the real exam.</strong> Class 11 admissions and stream allotment in most schools are decided on the first exam result.</li>
+<li><strong>May clashes with the start of Class 11.</strong> A student preparing for a second attempt is revising Class 10 while classmates begin Class 11 Physics, Accountancy or Maths.</li>
+<li><strong>The syllabus and difficulty are the same.</strong> A student who was not ready in February will not suddenly be ready in May without a very different approach.</li>
+</ul>
+
+<h2>When the second exam genuinely helps</h2>
+<p>The second attempt is valuable for a student who was well prepared but had a bad day - illness, panic in one paper, or a single subject that went wrong. It is also a safety net for a student who narrowly missed a mark needed for a particular stream. In those cases, targeted preparation in one to three subjects over March and April can make a real difference.</p>
+
+<h2>How parents should plan</h2>
+<ol>
+<li><strong>Plan only for February.</strong> Build the full preparation calendar around the first exam and treat May as insurance, not as part of the plan.</li>
+<li><strong>Decide about May quickly.</strong> Once the first result arrives, decide within a few days whether an improvement attempt is worth it, subject by subject.</li>
+<li><strong>Keep Class 11 on track.</strong> If your child does sit the second exam, make sure Class 11 studies do not fall behind in the meantime.</li>
+</ol>
+
+<h2>How ESA supports both exams</h2>
+<p>At Excellent Students' Academy, our Class 10 batches are planned around the February exam: full syllabus by November, sample papers from December and weekly Saturday tests throughout. For students who choose to take the second exam, we can guide a focused improvement plan for the specific subjects involved. If you are unsure what the new system means for your child, visit our Rohini centre or WhatsApp us, and we will talk it through with you.</p>`,
+    faqs: [
+      {
+        question: "Is the second CBSE Class 10 board exam compulsory?",
+        answer:
+          "No. The first exam in February is compulsory. The second exam in May is optional and is meant for students who want to improve their performance in a limited number of subjects.",
+      },
+      {
+        question: "Should my child prepare less for February because there is a second exam?",
+        answer:
+          "No. The February result is usually what schools use for Class 11 admission and stream allotment, and the May exam overlaps with the start of Class 11. Plan fully for February and treat May as a safety net.",
+      },
+      {
+        question: "Where can I check the official rules for the two board exams?",
+        answer:
+          "Always refer to the latest circulars on the official CBSE website, since CBSE can update eligibility and dates from year to year.",
+      },
+    ],
+  },
+  {
+    slug: "low-marks-class-12-pre-boards-what-to-do",
+    title: "Scored Low in Class 12 Pre-Boards? What to Do Before the Final Exams",
+    description:
+      "Low Class 12 pre-board marks are common and fixable. How to analyse the paper, what to prioritise in the weeks before boards, and how parents can help.",
+    date: "2026-09-24",
+    readTime: "7 min read",
+    category: "Board Exams",
+    author: "ESA Editorial",
+    cover:
+      "https://images.unsplash.com/photo-1453733190371-0a9bedd82893?auto=format&fit=crop&w=1200&q=80",
+    excerpt:
+      "Pre-board marks are often lower than final board marks - and for good reason. Here is how a Class 12 student should use a bad pre-board result in the weeks that remain.",
+    keywords: [
+      "low marks in Class 12 pre boards",
+      "Class 12 pre board preparation",
+      "how to improve marks before Class 12 boards",
+      "Class 12 board exam tips",
+      "Class 12 coaching Rohini",
+    ],
+    body: `<p>Every year, many Class 12 students walk out of their school pre-boards with marks far below what they expected. It is one of the most stressful moments of the year, for students and parents alike. The good news is that a low pre-board score is common, it is usually fixable, and it is far more useful as a diagnosis than as a prediction.</p>
+
+<h2>Why pre-board marks are often low</h2>
+<ul>
+<li><strong>School papers are often set harder</strong> than the actual board paper, deliberately, to push students.</li>
+<li><strong>Checking is usually stricter.</strong> Teachers mark down missing steps, units and diagrams that students assume will be overlooked.</li>
+<li><strong>The syllabus is fresh.</strong> Many students sit pre-boards having only just finished the last few chapters, with no full revision done.</li>
+</ul>
+<p>None of this means the result should be ignored. It means the result should be read carefully.</p>
+
+<h2>Step 1: Read the answer sheet, not just the total</h2>
+<p>Ask the school for the checked answer sheets and go through every subject, question by question. For each lost mark, write down one reason:</p>
+<ul>
+<li><strong>Did not know it</strong> - a real concept gap.</li>
+<li><strong>Knew it, wrote it wrongly</strong> - calculation errors, wrong units, misread question, missing steps.</li>
+<li><strong>Could not finish</strong> - a time management problem.</li>
+</ul>
+<p>Most students find that a large share of their lost marks sit in the second and third buckets. Those are the quickest to fix.</p>
+
+<h2>Step 2: Prioritise by marks, not by fear</h2>
+<p>With limited weeks left, do not try to re-study the whole syllabus. Use the chapter-wise weightage in the CBSE syllabus for each subject and put your time first into chapters that carry high marks and where you lost the most. A chapter worth ten marks where you scored two deserves more attention than a difficult chapter worth three.</p>
+
+<h2>Step 3: Fix presentation</h2>
+<p>Board examiners follow a marking scheme. Marks are given for steps, not just for the final answer. In Physics, Chemistry, Maths and Accountancy especially, students regain a lot of marks simply by:</p>
+<ul>
+<li>writing the formula before substituting values,</li>
+<li>showing every step and the unit in the final answer,</li>
+<li>drawing neat, labelled diagrams where they are asked for,</li>
+<li>adding working notes in Accountancy.</li>
+</ul>
+<p>Look at the official CBSE marking schemes for previous papers to see exactly where step marks are awarded.</p>
+
+<h2>Step 4: Practise under real conditions</h2>
+<p>Solve at least two or three full papers per subject before the final exam, each in three hours at a desk with no interruptions. Check each paper against the marking scheme and add every mistake to an error log. Read that log before every subsequent paper.</p>
+
+<h2>Step 5: Protect sleep and routine</h2>
+<p>Students who panic after pre-boards often start studying late into the night. That usually lowers performance. Seven hours of sleep, regular meals and short breaks do more for board marks in the final weeks than extra hours of tired reading.</p>
+
+<h2>What parents can do</h2>
+<ul>
+<li>Talk about the analysis, not the total. "Which chapter lost you the most marks?" is a more useful question than "Why only this much?"</li>
+<li>Meet the subject teachers once and ask for the two or three specific things they would fix.</li>
+<li>Keep the home environment calm and avoid comparisons with other children.</li>
+</ul>
+
+<h2>How ESA helps Class 12 students after pre-boards</h2>
+<p>At our Rohini centres, Class 12 batches finish the syllabus well before the final exams so that the last months are spent on full papers, checking and targeted revision. Subject teachers go through each student's weak chapters individually. If your child's pre-board result has worried you, you can book a free 7-day demo in our Class 12 batches and speak to the faculty directly.</p>`,
+    faqs: [
+      {
+        question: "Can a student improve significantly after low Class 12 pre-board marks?",
+        answer:
+          "Yes, in many cases. Pre-board papers are often harder and marked more strictly than the board exam, and many lost marks come from fixable issues like missing steps, calculation slips and time management.",
+      },
+      {
+        question: "Should a Class 12 student re-read the whole syllabus after pre-boards?",
+        answer:
+          "No. With limited time left, it is better to prioritise high-weightage chapters where marks were lost, fix presentation and practise full papers under exam conditions.",
+      },
+      {
+        question: "How many full papers should a Class 12 student solve before boards?",
+        answer:
+          "Two to three full papers per subject after pre-boards, each solved in three hours and checked against the CBSE marking scheme, is a practical target for most students.",
+      },
+    ],
+  },
+  {
+    slug: "how-to-solve-cbse-sample-papers-right-way",
+    title: "How to Solve CBSE Sample Papers the Right Way",
+    description:
+      "Solving sample papers is only useful if you do it properly. A step-by-step method for CBSE Class 10 and 12 students: timing, checking with marking schemes and error logs.",
+    date: "2026-09-23",
+    readTime: "6 min read",
+    category: "Board Exams",
+    author: "ESA Editorial",
+    cover:
+      "https://images.unsplash.com/photo-1456735190827-d1262f71b8a3?auto=format&fit=crop&w=1200&q=80",
+    excerpt:
+      "Most students solve sample papers the wrong way - half a paper at a time, answers checked from a guide, and the mistakes forgotten a week later. Here is a better method.",
+    keywords: [
+      "how to solve CBSE sample papers",
+      "CBSE sample paper Class 10",
+      "CBSE sample paper Class 12",
+      "CBSE marking scheme",
+      "board exam practice papers",
+    ],
+    body: `<p>Every CBSE board student is told to "solve sample papers". Very few are told how. Solved badly, a sample paper is just another worksheet. Solved properly, it is the closest thing to a rehearsal of the real exam, and the most reliable way to find the marks you are still losing.</p>
+
+<h2>Start with the official CBSE sample papers</h2>
+<p>CBSE publishes an official sample question paper and marking scheme for each subject on its academic website, usually in the months before the exam. Start there. These papers show the current pattern, the types of questions and, most importantly, how marks are awarded. Guide books and online papers are useful for extra practice later, but they do not always follow the latest pattern.</p>
+
+<h2>When to start</h2>
+<p>Begin sample papers only after the syllabus is complete, ideally from December for February exams. Solving a full paper while half the chapters are unfinished mostly teaches a student that they do not know those chapters - which they already knew.</p>
+
+<h2>The right way to solve a paper</h2>
+<ol>
+<li><strong>Full paper, full time.</strong> Sit for the entire duration in one go, at a table, with a clock, and without phone or books. Solving one section today and another tomorrow does not train exam stamina.</li>
+<li><strong>Read the paper first.</strong> Spend the first few minutes reading the full paper and deciding the order in which you will attempt sections.</li>
+<li><strong>Write as you would in the exam.</strong> Full sentences, steps, units, diagrams and headings. A sample paper solved in rough is not practice for the real one.</li>
+<li><strong>Mark the time.</strong> Note how long each section took. This is where you will discover whether time is your real problem.</li>
+</ol>
+
+<h2>Checking is where the learning happens</h2>
+<p>Check your paper strictly against the official marking scheme, preferably the next day with a fresh mind, or ask a teacher to check it. For every question:</p>
+<ul>
+<li>Compare your answer with the value points in the marking scheme. Did you include each point that carries a mark?</li>
+<li>For numerical questions, see where step marks are given. Did you write the formula? The substitution? The unit?</li>
+<li>For long answers, check whether your answer was organised in the way the scheme expects.</li>
+</ul>
+
+<h2>Keep an error log</h2>
+<p>Use one notebook for all subjects. After each paper, write down every question where you lost marks, the reason and the correct approach. Group the entries into three types: concept not known, careless mistake, and time. Revise the error log before every new paper. Over five or six papers, the same mistakes start disappearing.</p>
+
+<h2>How many papers are enough?</h2>
+<p>For most students, four to six properly solved and properly checked papers per subject is more valuable than fifteen papers finished in a hurry. If time is short, solve fewer papers and check them more carefully.</p>
+
+<h2>Common mistakes to avoid</h2>
+<ul>
+<li>Looking at the solution after every difficult question.</li>
+<li>Skipping the checking step because "I know where I went wrong".</li>
+<li>Solving only the sections you like.</li>
+<li>Using unofficial papers that do not match the current pattern as the main practice source.</li>
+</ul>
+
+<h2>How ESA uses sample papers</h2>
+<p>At Excellent Students' Academy, board classes move to full mock papers once the syllabus is finished. Papers are written under exam timing at our Rohini centres, checked by the subject teacher against the marking scheme, and discussed question by question in class. If your child needs a structured practice routine before the boards, you are welcome to book a free 7-day demo.</p>`,
+    faqs: [
+      {
+        question: "Where can I find official CBSE sample papers?",
+        answer:
+          "CBSE publishes official sample question papers and marking schemes for each subject on its academic website before the board exams. Start with these because they follow the current pattern.",
+      },
+      {
+        question: "When should students start solving sample papers?",
+        answer:
+          "After the syllabus is complete - usually from December for board exams in February. Solving full papers earlier mainly exposes unfinished chapters.",
+      },
+      {
+        question: "Is it better to solve many sample papers quickly or fewer carefully?",
+        answer:
+          "Fewer, carefully. Four to six papers per subject, each solved under exam timing and checked against the marking scheme with an error log, are more useful than many rushed papers.",
+      },
+    ],
+  },
+  {
+    slug: "understand-child-progress-half-yearly-results",
+    title: "How to Understand Your Child's Progress After Half-Yearly Results",
+    description:
+      "Half-yearly results say more than the total. How parents can read the report card, find the real weak areas, talk to teachers and plan the second term.",
+    date: "2026-09-22",
+    readTime: "6 min read",
+    category: "Parent Guide",
+    author: "ESA Editorial",
+    cover:
+      "https://images.unsplash.com/photo-1427504494785-3a9ca7044f45?auto=format&fit=crop&w=1200&q=80",
+    excerpt:
+      "The half-yearly report card arrives, and most conversations at home start and end with the percentage. Here is how to read it in a way that actually helps your child.",
+    keywords: [
+      "half yearly result analysis",
+      "how to understand child's report card",
+      "parents guide half yearly exam",
+      "improve marks second term",
+      "tuition in Rohini",
+    ],
+    body: `<p>Half-yearly results usually arrive in September or October, and for many families the conversation at home revolves around a single number: the total percentage. That number matters, but on its own it tells you very little about what your child needs next. This guide explains how to read the result so that the second term goes better than the first.</p>
+
+<h2>Look at the answer sheets, not only the report card</h2>
+<p>Most schools show the checked answer sheets to students or parents. Ask for them. A report card tells you that your child scored 62 in Science. The answer sheet tells you whether those 38 marks were lost in Chemistry equations, in Physics numericals or in long Biology answers - and that difference decides what to do next.</p>
+
+<h2>Sort the lost marks</h2>
+<p>Sit with your child and go through each paper. For every lost mark, decide which of these it was:</p>
+<ul>
+<li><strong>Did not know the topic</strong> - the chapter needs to be re-taught or re-studied.</li>
+<li><strong>Knew it, but made a mistake</strong> - wrong calculation, misread question, missing step or label.</li>
+<li><strong>Could not finish the paper</strong> - a speed or planning problem.</li>
+<li><strong>Presentation</strong> - answers too short, unorganised, or missing key terms.</li>
+</ul>
+<p>Each category has a different fix. Extra tuition helps with the first. Practice and checking habits fix the second. Timed papers fix the third. Model answers and teacher feedback fix the fourth.</p>
+
+<h2>Compare with the first term, not with other children</h2>
+<p>A useful comparison is your child's own earlier scores: the unit tests, the previous year and the periodic tests. Is the trend going up or down? Did one subject drop sharply? A sudden drop in one subject usually points to one or two specific chapters, which is good news - it is a narrow problem.</p>
+<p>Comparing with a cousin or a classmate rarely helps. It adds pressure without telling your child what to change.</p>
+
+<h2>Talk to the teachers</h2>
+<p>Use the parent-teacher meeting well. Instead of asking "How is my child doing?", ask each subject teacher:</p>
+<ul>
+<li>Which two chapters should my child revise first?</li>
+<li>Is the problem understanding or practice?</li>
+<li>How does my child behave in class - attentive, distracted, hesitant to ask?</li>
+</ul>
+<p>Write down the answers. Three specific suggestions from each teacher are more useful than a general "needs to work harder".</p>
+
+<h2>Turn it into a plan for the second term</h2>
+<ol>
+<li>Pick no more than two focus areas per subject.</li>
+<li>Set a weekly routine that includes revision of those chapters, not only new school work.</li>
+<li>Check progress with a short test after three or four weeks, not only at the final exam.</li>
+</ol>
+
+<h2>How to talk to your child about the result</h2>
+<p>Children who feel judged tend to hide problems. Begin with what went well, then move to one or two areas to improve, and make the plan together. A child who helped build the plan is far more likely to follow it.</p>
+
+<h2>How ESA keeps parents informed</h2>
+<p>At Excellent Students' Academy, parents do not have to wait for the half-yearly exam to know how their child is doing. Every Saturday our students write a chapter test, papers are checked within 48 hours and a scorecard goes to parents on WhatsApp, with a monthly meeting with the subject teacher. If you would like a clearer picture of your child's progress, visit our Rohini or Lucknow centre for a free 7-day demo.</p>`,
+    faqs: [
+      {
+        question: "What should parents look at after half-yearly results?",
+        answer:
+          "Look at the checked answer sheets, not just the report card. Sort lost marks into concept gaps, careless mistakes, time problems and presentation issues, because each needs a different fix.",
+      },
+      {
+        question: "What should I ask teachers at the parent-teacher meeting?",
+        answer:
+          "Ask which two chapters to revise first, whether the problem is understanding or practice, and how your child participates in class. Specific answers are more useful than general feedback.",
+      },
+      {
+        question: "How do I talk to my child about low half-yearly marks?",
+        answer:
+          "Start with what went well, focus on one or two areas to improve, and build the second-term plan together. Avoid comparisons with other children.",
+      },
+    ],
+  },
+  {
+    slug: "why-class-10-preparation-should-start-in-class-9",
+    title: "Why Class 10 Preparation Should Start in Class 9",
+    description:
+      "Class 10 board results are shaped in Class 9. Which Class 9 chapters Class 10 builds on, the habits to form early, and how parents can plan the two years together.",
+    date: "2026-09-21",
+    readTime: "6 min read",
+    category: "Parent Guide",
+    author: "ESA Editorial",
+    cover:
+      "https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=1200&q=80",
+    excerpt:
+      "Most families treat Class 9 as a relaxed year before the boards. In our experience, it is the year that quietly decides the Class 10 result.",
+    keywords: [
+      "Class 9 preparation for Class 10 boards",
+      "Class 9 coaching Rohini",
+      "why Class 9 is important",
+      "Class 9 Maths Science foundation",
+      "Class 9 and 10 CBSE preparation",
+    ],
+    body: `<p>Ask most Class 9 students about their plans and you will hear something like: "I'll get serious in Class 10." It is an understandable thought - Class 9 has no board exam. But when we look at the students who struggle in Class 10 at our Rohini centres, the problem almost always started a year earlier.</p>
+
+<h2>Class 10 is built on Class 9</h2>
+<p>The CBSE syllabus for Classes 9 and 10 is designed as a two-year sequence. Many Class 10 chapters assume that the Class 9 version was understood properly.</p>
+<ul>
+<li><strong>Maths:</strong> Class 9 Polynomials, Linear Equations in Two Variables, Coordinate Geometry and Triangles lead directly into the Class 10 chapters of the same families. A student who is weak in factorisation in Class 9 will find Quadratic Equations difficult in Class 10.</li>
+<li><strong>Science:</strong> Class 9 Motion, Force and Laws of Motion, Atoms and Molecules and The Fundamental Unit of Life are the base for Class 10 Electricity, Chemical Reactions and Life Processes.</li>
+<li><strong>Social Science:</strong> map skills, answer-writing and the habit of reading the textbook carefully are built in Class 9.</li>
+</ul>
+
+<h2>Why Class 9 feels harder than expected</h2>
+<p>Class 9 is a jump. The syllabus becomes more abstract, Science splits into three distinct subjects, and Maths starts demanding proofs and multi-step reasoning. Students who coasted through Class 8 on memory often see their marks fall for the first time. That dip is normal - what matters is whether it gets fixed in Class 9 or carried into Class 10.</p>
+
+<h2>What starting early actually means</h2>
+<p>Starting Class 10 preparation in Class 9 does not mean studying the Class 10 syllabus early. It means:</p>
+<ol>
+<li><strong>Mastering the Class 9 NCERT textbooks</strong> fully, including every exercise and example.</li>
+<li><strong>Building a writing habit</strong> - structured answers, labelled diagrams and step-by-step working in Maths.</li>
+<li><strong>Getting used to regular tests</strong> so that exam pressure feels familiar by the time boards arrive.</li>
+<li><strong>Fixing weak areas the same month they appear</strong>, not at the end of the year.</li>
+</ol>
+
+<h2>The habits that pay off in Class 10</h2>
+<ul>
+<li>A fixed daily study slot, even if it is only ninety minutes.</li>
+<li>A formula and definitions notebook started in Class 9 and continued in Class 10.</li>
+<li>Reading the question twice before answering.</li>
+<li>Asking doubts in class instead of carrying them home.</li>
+</ul>
+
+<h2>What parents can do in Class 9</h2>
+<ul>
+<li>Watch the unit test marks, not just the final result. A sudden drop in one subject is an early warning.</li>
+<li>Look at the checked answer sheets now and then, to see how your child writes answers.</li>
+<li>If your child needs help, get it in Class 9. Coaching that begins in the last months of Class 10 has far less time to work.</li>
+</ul>
+
+<h2>How ESA teaches Class 9</h2>
+<p>At Excellent Students' Academy, our Class 9 batches follow the same routine as Class 10: concept teaching, independent practice, and a chapter test every Saturday with a scorecard for parents. By the time our students reach Class 10, weekly testing and structured answer-writing are already a habit. If your child is in Class 9, this is the best year to visit our Rohini Sector 7, Rohini Sector 15 or Lucknow centre for a free 7-day demo. You can also read more about our <a href="/classes/class-9">Class 9 coaching</a>.</p>`,
+    faqs: [
+      {
+        question: "Is Class 9 important for Class 10 board results?",
+        answer:
+          "Yes. The CBSE Class 9 and 10 syllabus works as a two-year sequence, and many Class 10 Maths and Science chapters build directly on Class 9 concepts.",
+      },
+      {
+        question: "Should a Class 9 student start studying the Class 10 syllabus?",
+        answer:
+          "No. The best preparation is to master the Class 9 NCERT syllabus fully, build a regular study and test routine, and fix weak areas as they appear.",
+      },
+      {
+        question: "When should a student join coaching for Class 10 boards?",
+        answer:
+          "Ideally in Class 9. Joining early gives time to fix weak foundations and build test habits, which is hard to do in the last few months of Class 10.",
+      },
+    ],
+  },
+  {
+    slug: "science-commerce-humanities-choose-stream-after-class-10",
+    title: "Science, Commerce or Humanities: How to Choose a Stream After Class 10",
+    description:
+      "How to choose between Science, Commerce and Humanities after Class 10: interests, subject strengths, career paths and the Maths Basic vs Standard rule.",
+    date: "2026-09-20",
+    readTime: "8 min read",
+    category: "Parent Guide",
+    author: "ESA Editorial",
+    cover:
+      "https://images.unsplash.com/photo-1571260899304-425eee4c7efc?auto=format&fit=crop&w=1200&q=80",
+    excerpt:
+      "Stream choice after Class 10 is one of the first big decisions a student makes. Here is a practical way for students and parents to decide together.",
+    keywords: [
+      "how to choose stream after Class 10",
+      "Science vs Commerce vs Humanities",
+      "stream selection after Class 10",
+      "Class 11 stream guidance",
+      "Class 11 coaching Rohini",
+    ],
+    body: `<p>Every year, thousands of Class 10 students choose between Science, Commerce and Humanities, often in a hurry and often under pressure from relatives, friends or the marks they happened to get. The stream affects the next two years of study and many later options, so it is worth choosing carefully. This guide gives a practical way to decide.</p>
+
+<h2>Start with the student, not the stream</h2>
+<p>Before comparing streams, answer three questions honestly:</p>
+<ol>
+<li><strong>Which subjects does the student enjoy</strong> and study willingly, even without being told?</li>
+<li><strong>Which subjects does the student do well in</strong> consistently, across Classes 9 and 10, not just in one exam?</li>
+<li><strong>What kind of work interests the student</strong> - solving problems, working with numbers and business, understanding people and society, creating, or something else?</li>
+</ol>
+<p>A stream chosen only because "everyone good takes Science" often leads to two difficult years.</p>
+
+<h2>Science</h2>
+<p>Science usually has two main combinations: PCM (Physics, Chemistry, Maths) and PCB (Physics, Chemistry, Biology), with some schools allowing PCMB. It suits students who enjoy Maths or Biology and are comfortable with a heavy, concept-driven workload.</p>
+<ul>
+<li><strong>Good fit if:</strong> the student likes problem solving, experiments and reasoning, and has done well in Class 10 Maths and Science.</li>
+<li><strong>Paths it keeps open:</strong> engineering, medicine and allied health, pure sciences, architecture, and many others. Science students can also move to Commerce or Humanities later for college.</li>
+<li><strong>Be realistic about:</strong> the workload. Class 11 Physics and Maths are a big step up from Class 10.</li>
+</ul>
+
+<h2>Commerce</h2>
+<p>Commerce typically includes Accountancy, Business Studies and Economics, with Mathematics or Applied Mathematics as an option in many schools.</p>
+<ul>
+<li><strong>Good fit if:</strong> the student is comfortable with numbers, interested in business, money and how organisations work.</li>
+<li><strong>Paths it keeps open:</strong> chartered accountancy, company secretaryship, finance, management, economics, banking and business.</li>
+<li><strong>Be realistic about:</strong> Accountancy needs regular practice. It is not a subject that can be crammed at the end.</li>
+</ul>
+
+<h2>Humanities</h2>
+<p>Humanities (Arts) can include History, Political Science, Geography, Economics, Psychology, Sociology and more, depending on the school.</p>
+<ul>
+<li><strong>Good fit if:</strong> the student enjoys reading, writing, discussion and understanding society, people and ideas.</li>
+<li><strong>Paths it keeps open:</strong> law, civil services, journalism, psychology, design, teaching, social work and research, among many others.</li>
+<li><strong>Be realistic about:</strong> Humanities demands a lot of reading and good written expression. It is not an "easy" stream.</li>
+</ul>
+
+<h2>An important rule: Maths Standard vs Basic</h2>
+<p>In CBSE Class 10, students choose between Mathematics Standard and Mathematics Basic. Under CBSE's rules, students who take Maths Basic in Class 10 are generally not allowed to take core Mathematics in Class 11 - they can opt for Applied Mathematics instead. If a student is even considering PCM, or Commerce with core Maths, make sure they sit the Standard paper. Check your school's and CBSE's current rules before the Class 10 exam registration.</p>
+
+<h2>Mistakes to avoid</h2>
+<ul>
+<li>Choosing a stream because a best friend chose it.</li>
+<li>Deciding only on one exam's marks rather than two years of performance.</li>
+<li>Assuming one stream is "better" than the others. Each leads to well-respected careers.</li>
+<li>Ignoring the student's own interest in favour of family expectations.</li>
+</ul>
+
+<h2>If you are still unsure</h2>
+<p>Talk to subject teachers who know the student, look at the actual Class 11 textbooks of each stream, and speak to older students who took each stream. A school counsellor or a formal aptitude assessment can also help.</p>
+
+<h2>How ESA helps with stream choice</h2>
+<p>At Excellent Students' Academy, our teachers see each student's work every week through Saturday tests, so they can give parents a grounded view of strengths across subjects. We coach Class 11 and 12 in all three streams - Science, Commerce and Humanities - at our Rohini centres. If you want to talk through your child's stream choice, visit us or book a free 7-day demo in a Class 11 batch.</p>`,
+    faqs: [
+      {
+        question: "How should a student choose a stream after Class 10?",
+        answer:
+          "Look at three things together: which subjects the student enjoys, which subjects they perform well in consistently across Classes 9 and 10, and what kind of work interests them.",
+      },
+      {
+        question: "Can a student with Maths Basic in Class 10 take Maths in Class 11?",
+        answer:
+          "Under CBSE rules, students who pass Class 10 with Maths Basic generally cannot take core Mathematics in Class 11, but can opt for Applied Mathematics. Check the current CBSE rules with your school.",
+      },
+      {
+        question: "Is Science the best stream after Class 10?",
+        answer:
+          "No single stream is best. Science, Commerce and Humanities each lead to respected careers. The right stream depends on the student's interests and strengths.",
+      },
+    ],
+  },
+  {
+    slug: "class-10-maths-high-scoring-chapters-common-mistakes",
+    title: "Class 10 Maths: High-Scoring Chapters and Common Mistakes",
+    description:
+      "CBSE Class 10 Maths unit-wise weightage, the chapters that give the best return on revision time, and the common mistakes that cost students marks.",
+    date: "2026-09-19",
+    readTime: "7 min read",
+    category: "Subject Spotlight",
+    author: "ESA Editorial",
+    cover:
+      "https://images.unsplash.com/photo-1635372722656-389f87a941b7?auto=format&fit=crop&w=1200&q=80",
+    excerpt:
+      "Class 10 Maths rewards students who know where the marks are and who stop losing them to careless mistakes. Here is where to focus and what to avoid.",
+    keywords: [
+      "Class 10 Maths important chapters",
+      "Class 10 Maths weightage",
+      "Class 10 Maths common mistakes",
+      "CBSE Class 10 Maths tips",
+      "Maths tuition Rohini",
+    ],
+    body: `<p>Class 10 Maths is one of the most scoring subjects in the board exam, and also one where students lose marks in the most predictable ways. Knowing where the marks come from, and where they usually go, helps a student use the remaining months well.</p>
+
+<h2>Unit-wise weightage</h2>
+<p>The theory paper is of 80 marks, with 20 marks of internal assessment. Recent CBSE syllabus documents distribute the 80 marks roughly as follows (always confirm with the syllabus for your exam year):</p>
+<ul>
+<li><strong>Algebra</strong> (Polynomials, Pair of Linear Equations, Quadratic Equations, Arithmetic Progressions) - about 20 marks</li>
+<li><strong>Geometry</strong> (Triangles, Circles) - about 15 marks</li>
+<li><strong>Trigonometry</strong> (Introduction to Trigonometry, Applications) - about 12 marks</li>
+<li><strong>Statistics and Probability</strong> - about 11 marks</li>
+<li><strong>Mensuration</strong> (Areas Related to Circles, Surface Areas and Volumes) - about 10 marks</li>
+<li><strong>Number Systems</strong> (Real Numbers) - about 6 marks</li>
+<li><strong>Coordinate Geometry</strong> - about 6 marks</li>
+</ul>
+
+<h2>Chapters that give the best return</h2>
+<h3>Algebra</h3>
+<p>The largest unit, and very scoring once the methods are clear. Quadratic Equations and Arithmetic Progressions follow fixed patterns. Students who practise the NCERT exercises and examples thoroughly usually score well here.</p>
+<h3>Statistics and Probability</h3>
+<p>Mean, median and mode of grouped data are formula-based and predictable. Probability questions are short but need careful reading. Together they are among the easiest marks in the paper.</p>
+<h3>Trigonometry</h3>
+<p>Once the identities and standard values are memorised, trigonometric identities and heights-and-distances questions become routine. Draw the figure for every heights-and-distances question.</p>
+<h3>Coordinate Geometry and Real Numbers</h3>
+<p>Short chapters with a limited number of question types. Distance and section formula questions are almost guaranteed marks with practice.</p>
+
+<h2>The most common mistakes</h2>
+<ul>
+<li><strong>Skipping steps.</strong> Board marking gives step marks. A correct answer with no working can lose marks; a wrong final answer with correct steps can still earn most of them.</li>
+<li><strong>Sign errors</strong> while shifting terms in algebra and while solving quadratic equations.</li>
+<li><strong>Forgetting units</strong> in Mensuration answers - cm, cm squared and cm cubed are not interchangeable.</li>
+<li><strong>Using the wrong value of pi</strong> - use the value asked in the question, 22/7 or 3.14.</li>
+<li><strong>Not writing "Given, To prove, Construction, Proof"</strong> in geometry theorems.</li>
+<li><strong>Misreading the question</strong> - for example, finding the sum of an AP when the question asks for a specific term.</li>
+<li><strong>Not checking the discriminant</strong> before discussing the nature of roots.</li>
+<li><strong>Poor time management</strong>, leaving long-answer or case-based questions for the last few minutes.</li>
+</ul>
+
+<h2>How to practise</h2>
+<ol>
+<li>Finish every NCERT exercise and example first. They are the core of the board paper.</li>
+<li>Keep a formula sheet - one page for the whole subject - and revise it daily from December.</li>
+<li>Solve official CBSE sample papers in three hours and check them against the marking scheme.</li>
+<li>Maintain a mistakes notebook and read it before every test.</li>
+</ol>
+
+<h2>How ESA teaches Class 10 Maths</h2>
+<p>At Excellent Students' Academy, Class 10 Maths follows a four-step method: explain, demonstrate, let the student solve independently, then test a variation. Every Saturday is a chapter test, checked within 48 hours with notes on exactly where step marks were lost. If your child finds Class 10 Maths difficult, or wants to move from good marks to excellent ones, book a free 7-day demo at our Rohini or Lucknow centre. More details are on our <a href="/classes/class-10">Class 10 coaching</a> page.</p>`,
+    faqs: [
+      {
+        question: "Which unit carries the most marks in Class 10 Maths?",
+        answer:
+          "Algebra carries the most marks, about 20 out of 80 in recent CBSE syllabus documents, followed by Geometry and Trigonometry. Confirm the weightage in the syllabus for your exam year.",
+      },
+      {
+        question: "Which Class 10 Maths chapters are easiest to score in?",
+        answer:
+          "Statistics, Probability, Coordinate Geometry, Real Numbers and Arithmetic Progressions follow predictable patterns and are among the most scoring with regular practice.",
+      },
+      {
+        question: "Why do students lose marks in Class 10 Maths even when they know the method?",
+        answer:
+          "Most lost marks come from skipped steps, sign errors, missing units, misreading the question and poor time management. Practising full papers and keeping a mistakes notebook helps fix these.",
+      },
+    ],
+  },
+  {
+    slug: "class-12-accountancy-common-mistakes",
+    title: "Class 12 Accountancy: Common Mistakes That Cost Students Marks",
+    description:
+      "The Class 12 Accountancy mistakes that cost the most marks in CBSE boards - partnership, company accounts and cash flow - and how to avoid them.",
+    date: "2026-09-18",
+    readTime: "7 min read",
+    category: "Subject Spotlight",
+    author: "ESA Editorial",
+    cover:
+      "https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?auto=format&fit=crop&w=1200&q=80",
+    excerpt:
+      "Accountancy is one of the most scoring Class 12 subjects - and one of the easiest to lose marks in. These are the mistakes we see most often, and how to stop making them.",
+    keywords: [
+      "Class 12 Accountancy common mistakes",
+      "Class 12 Accountancy tips",
+      "partnership accounts mistakes",
+      "cash flow statement mistakes",
+      "Accountancy tuition Rohini",
+    ],
+    body: `<p>Class 12 Accountancy can give students near-full marks, because most questions have a single correct answer. That same precision is why marks disappear so easily: one wrong ratio or one missed adjustment can spoil an entire question. These are the mistakes we see most often in our Commerce batches in Rohini.</p>
+
+<h2>Partnership accounts</h2>
+<h3>Confusing sacrificing and gaining ratios</h3>
+<p>On admission of a partner, old partners sacrifice; on retirement or death, the continuing partners gain. Using the wrong ratio for goodwill adjustment is one of the most common errors. Always write the ratio calculation as a working note.</p>
+<h3>Ignoring what applies when the partnership deed is silent</h3>
+<p>When the deed is silent, the provisions of the Partnership Act apply - for example, profits are shared equally, no interest on capital or salary is allowed, and interest on a partner's loan is allowed at a fixed rate. Many students add interest on capital by habit and lose marks.</p>
+<h3>Wrong sides in the Revaluation Account</h3>
+<p>An increase in an asset or a decrease in a liability is a gain and goes on the credit side. Students frequently reverse this under exam pressure. Make a quick two-line check before posting each item.</p>
+<h3>Goodwill calculation errors</h3>
+<p>Read carefully whether the question asks for average profit, super profit or capitalisation method, and whether the number of years' purchase applies to average or super profit.</p>
+
+<h2>Company accounts</h2>
+<h3>Forfeiture and reissue of shares</h3>
+<p>Share Forfeiture is credited only with the amount already received towards share capital on the forfeited shares - not with any premium. On reissue, only the balance left after covering the loss on reissue is transferred to Capital Reserve. Transferring the whole forfeiture amount is a common error.</p>
+<h3>Securities premium handling</h3>
+<p>Track when the premium is called and received. If the premium has already been received before forfeiture, it is not debited to Securities Premium at the time of forfeiture.</p>
+<h3>Issue of debentures</h3>
+<p>Remember how loss on issue of debentures is written off, and do not forget to record interest on debentures where the question asks for it.</p>
+
+<h2>Analysis of financial statements</h2>
+<h3>Cash flow statement classification</h3>
+<p>For a non-financial company, interest and dividend paid are financing activities, while interest and dividend received are investing activities. Students regularly put them in operating activities. Also remember to add back non-cash items like depreciation and adjust for profit or loss on sale of fixed assets.</p>
+<h3>Ratio formula errors</h3>
+<p>Know exactly what is included in current assets, quick assets and total debts. For example, inventory and prepaid expenses are excluded from quick assets. A wrong numerator makes the whole ratio wrong.</p>
+
+<h2>Presentation mistakes</h2>
+<ul>
+<li><strong>No working notes.</strong> Working notes carry marks and show the examiner your method even if the final figure is wrong.</li>
+<li><strong>Missing narrations</strong> in journal entries.</li>
+<li><strong>Unbalanced accounts</strong> left without checking. If an account does not balance, recheck quickly - there is usually one missed adjustment.</li>
+<li><strong>Messy formats.</strong> Use the prescribed format for the balance sheet, notes to accounts and cash flow statement.</li>
+</ul>
+
+<h2>How to practise Accountancy</h2>
+<ol>
+<li>Solve every illustration and exercise from the prescribed textbook - most board questions follow those patterns.</li>
+<li>Practise at least one full question from each major topic every week.</li>
+<li>Solve official CBSE sample papers and compare your working with the marking scheme.</li>
+<li>Keep a mistakes notebook with the correct entry beside each error.</li>
+</ol>
+
+<h2>How ESA teaches Commerce</h2>
+<p>At Excellent Students' Academy, Class 11 and 12 Commerce students practise Accountancy every week, with a Saturday test checked within 48 hours and feedback on each entry and working note. Batches are small, so teachers can check individual working rather than just final answers. If your child is in Class 11 or 12 Commerce, book a free 7-day demo at our Rohini centre to see the teaching style first-hand. See also our <a href="/classes/class-12">Class 12 coaching</a> page.</p>`,
+    faqs: [
+      {
+        question: "What is the most common mistake in Class 12 partnership accounts?",
+        answer:
+          "Confusing the sacrificing ratio with the gaining ratio when adjusting goodwill, and adding interest on capital when the partnership deed is silent, are two of the most common mistakes.",
+      },
+      {
+        question: "Where should interest paid go in a cash flow statement?",
+        answer:
+          "For a non-financial company, interest paid is a financing activity and interest received is an investing activity. Placing them under operating activities is a frequent error.",
+      },
+      {
+        question: "Do working notes carry marks in Class 12 Accountancy?",
+        answer:
+          "Yes. Working notes are often awarded marks in the marking scheme and show the examiner your method, which can earn step marks even if the final figure is wrong.",
+      },
+    ],
+  },
+  {
+    slug: "class-10-science-balance-physics-chemistry-biology",
+    title: "How to Balance Physics, Chemistry and Biology in Class 10 Science",
+    description:
+      "Class 10 Science has three different subjects in one paper. How marks are spread across Physics, Chemistry and Biology, and a weekly plan to balance all three.",
+    date: "2026-09-17",
+    readTime: "6 min read",
+    category: "Subject Spotlight",
+    author: "ESA Editorial",
+    cover:
+      "https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=1200&q=80",
+    excerpt:
+      "Class 10 Science is really three subjects - and most students are comfortable in only one or two of them. Here is how to give each part the time it deserves.",
+    keywords: [
+      "Class 10 Science preparation",
+      "Class 10 Physics Chemistry Biology",
+      "Class 10 Science weightage",
+      "how to study Class 10 Science",
+      "Science tuition Rohini",
+    ],
+    body: `<p>Class 10 Science is one paper, but it contains three very different subjects. Physics needs numericals and ray diagrams, Chemistry needs balanced equations and reactions, and Biology needs clear explanations and labelled diagrams. Most students like one of these and avoid another - and the avoided part is usually where the marks are lost.</p>
+
+<h2>How the marks are spread</h2>
+<p>The theory paper is of 80 marks, with 20 marks of internal assessment. Recent CBSE syllabus documents divide the theory marks by unit roughly as follows (confirm with the syllabus for your exam year):</p>
+<ul>
+<li><strong>Chemical Substances - Nature and Behaviour</strong> (Chemistry): about 25 marks</li>
+<li><strong>World of Living</strong> (Biology): about 25 marks</li>
+<li><strong>Natural Phenomena</strong> (Light and the Human Eye - Physics): about 12 marks</li>
+<li><strong>Effects of Current</strong> (Electricity and Magnetism - Physics): about 13 marks</li>
+<li><strong>Natural Resources</strong> (Our Environment): about 5 marks</li>
+</ul>
+<p>In other words, Physics, Chemistry and Biology each carry roughly a third of the paper. No part can be skipped.</p>
+
+<h2>How to study each part</h2>
+<h3>Physics: practise, do not just read</h3>
+<ul>
+<li>Solve numericals on Electricity regularly - series and parallel combinations and power calculations appear every year.</li>
+<li>Draw ray diagrams for mirrors and lenses until they become automatic, with arrows and labels.</li>
+<li>Keep all formulas and sign conventions on one page.</li>
+</ul>
+<h3>Chemistry: equations and reasons</h3>
+<ul>
+<li>Write and balance chemical equations daily, not just read them.</li>
+<li>Learn the reason behind each property - why metals react as they do, why carbon forms so many compounds.</li>
+<li>Make a chart of acids, bases and salts with examples and uses.</li>
+</ul>
+<h3>Biology: explanation and diagrams</h3>
+<ul>
+<li>Practise writing answers in clear steps, using the terms used in NCERT.</li>
+<li>Draw and label the important diagrams - the human digestive system, heart, nephron, neuron, and the reproductive structures in the syllabus.</li>
+<li>Revise with flowcharts for processes like respiration and nutrition.</li>
+</ul>
+
+<h2>A simple weekly plan</h2>
+<p>Split Science study time across the week so that no part is left for later:</p>
+<ul>
+<li><strong>Two sessions</strong> of Physics numericals and diagrams</li>
+<li><strong>Two sessions</strong> of Chemistry equations and concepts</li>
+<li><strong>Two sessions</strong> of Biology answers and diagrams</li>
+<li><strong>One session</strong> of mixed revision or a short test across all three</li>
+</ul>
+<p>Give a little extra time to the part you find hardest - but never drop the others completely.</p>
+
+<h2>Common mistakes</h2>
+<ul>
+<li>Studying only the favourite part and hoping the others go well.</li>
+<li>Reading Chemistry equations instead of writing and balancing them.</li>
+<li>Drawing diagrams without labels, or with arrows missing in ray diagrams.</li>
+<li>Writing long Biology answers without the key terms examiners look for.</li>
+<li>Forgetting units in Physics numericals.</li>
+</ul>
+
+<h2>How ESA teaches Class 10 Science</h2>
+<p>At Excellent Students' Academy, Class 10 Science is taught with all three parts running in parallel, so no part is left until the end. Saturday chapter tests rotate through Physics, Chemistry and Biology, and parents get a WhatsApp scorecard that shows exactly which part needs more work. Book a free 7-day demo at our Rohini Sector 7, Rohini Sector 15 or Lucknow centre to see how our Science batches work.</p>`,
+    faqs: [
+      {
+        question: "How are marks divided between Physics, Chemistry and Biology in Class 10 Science?",
+        answer:
+          "In recent CBSE syllabus documents, the 80-mark theory paper is spread roughly equally, with about 25 marks each for Chemistry and Physics and about 30 for Biology including Our Environment. Confirm with the current syllabus.",
+      },
+      {
+        question: "How should a Class 10 student divide Science study time?",
+        answer:
+          "Spread sessions across all three parts every week - for example two sessions each of Physics, Chemistry and Biology plus one mixed revision session - with a little extra time for the weakest part.",
+      },
+      {
+        question: "Which diagrams are important for Class 10 Science?",
+        answer:
+          "Ray diagrams for mirrors and lenses, the human eye, electric circuits, and Biology diagrams such as the digestive system, heart, nephron and neuron are frequently asked. Practise them with labels.",
+      },
+    ],
+  },
 ];
