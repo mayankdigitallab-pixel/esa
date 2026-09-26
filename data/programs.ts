@@ -63,10 +63,10 @@ export const programs: Program[] = [
     label: "Senior Secondary",
     grades: "Classes 11 and 12",
     description:
-      "Stream-wise coaching for Science, Commerce and Arts. Board scoring + competitive foundation in one batch. Taught by senior faculty with proven board-result track records.",
+      "Stream-wise coaching for Science, Commerce and Arts. Focused entirely on school and board exam scores. Taught by senior faculty with proven board-result track records.",
     highlights: [
       "Science (PCM / PCB), Commerce, Arts streams",
-      "JEE / NEET foundation for Science students",
+      "Chapter-wise board answer-writing practice",
       "Term-1 and Term-2 mock exams",
       "Doubt classes till exam week",
     ],

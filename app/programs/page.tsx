@@ -22,11 +22,6 @@ const programFaqs = [
       "Stream changes are easiest in the first two to three weeks, before batches settle into their syllabus pace. Talk to us early if your child is unsure between Science, Commerce or Arts - we can run a short diagnostic conversation to help decide.",
   },
   {
-    question: "Does Senior Secondary coaching cover JEE or NEET as well as boards?",
-    answer:
-      "Yes, for Class 11-12 Science (PCM/PCB) students. The teaching sequence covers the board syllabus first for concept clarity, then layers JEE/NEET-pattern practice on top, so board scores are never sacrificed for competitive prep.",
-  },
-  {
     question: "What do the Crash Courses cover, and who are they for?",
     answer:
       "Crash Courses are 4 to 8 week intensive programs for Class 6 to 12 students who need a focused push before board exams: full syllabus revision, 10+ mock papers under exam conditions, and daily doubt sessions. Best suited for students revisiting the full syllabus close to exams.",
@@ -44,7 +39,7 @@ const programFaqs = [
 ];
 
 export const metadata: Metadata = {
-  title: "Programs & Courses | Class 1 to 12 Coaching in Rohini, Delhi NCR",
+  title: "Programs & Courses | Class 1-12 Coaching | ESA Rohini",
   description:
     "Coaching programs for Class 1 to 12 at Excellent Students' Academy, Rohini (Delhi NCR). Foundation, Middle School, Board Prep and Senior Secondary streams. Math, Science, Commerce. View details and fees.",
   alternates: { canonical: "https://www.theesa.in/programs" },
@@ -64,7 +59,7 @@ export const metadata: Metadata = {
     "foundation course Rohini",
   ],
   ...shareMeta({
-    title: "Programs & Courses | Class 1 to 12 Coaching in Rohini, Delhi NCR",
+    title: "Programs & Courses | Class 1-12 Coaching | ESA Rohini",
     description:
       "Coaching programs for Class 1 to 12 at Excellent Students' Academy, Rohini (Delhi NCR). Foundation, Middle School, Board Prep and Senior Secondary streams. Math, Science, Commerce. View details and fees.",
     path: "/programs",

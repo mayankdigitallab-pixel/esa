@@ -15,19 +15,12 @@ export type Area = {
 };
 
 // Localities around Rohini Sector 7 where most ESA students come from.
+// Rohini Sector 7 and Sector 15 are deliberately absent: their branch landing
+// pages (/rohini-sector-7, /rohini-sector-15) cover them, and proxy.ts 301s
+// the old /areas/ URLs there.
 // Used for: areas grid on homepage, sitemap, location-targeted SEO pages and blogs.
 export const nearbyAreas: Area[] = [
-  {
-    slug: "rohini-sector-7",
-    name: "Rohini Sector 7",
-    distanceKm: 0,
-    description:
-      "Our home base. Walking distance for students from Sector 7 Rohini.",
-    landmark: "Rohini West Metro Station (Red Line), about 10 minutes' walk away",
-    nearbySchools: ["DAV Public School, Sector 7", "Vishal Bharti Public School", "Mount Abu Public School"],
-    localCopy:
-      "Sector 7 is our flagship centre's own sector, so this is as close as coaching gets - most students walk in directly after school.",
-  },
+  // TODO: unique content - real route/commute to the centre, local student results, a genuine parent testimonial.
   {
     slug: "rohini-sector-3",
     name: "Rohini Sector 3",
@@ -38,6 +31,7 @@ export const nearbyAreas: Area[] = [
     localCopy:
       "Sector 3 students reach our Sector 7 centre in a short auto ride along the main C-block road.",
   },
+  // TODO: unique content - real route/commute to the centre, local student results, a genuine parent testimonial.
   {
     slug: "rohini-sector-5",
     name: "Rohini Sector 5",
@@ -48,6 +42,7 @@ export const nearbyAreas: Area[] = [
     localCopy:
       "Many of our Sector 5 students come straight from their Mount Abu Public School day into an evening ESA batch.",
   },
+  // TODO: unique content - real route/commute to the centre, local student results, a genuine parent testimonial.
   {
     slug: "rohini-sector-9",
     name: "Rohini Sector 9",
@@ -58,6 +53,7 @@ export const nearbyAreas: Area[] = [
     localCopy:
       "Sector 9 sits between our Sector 7 centre and the Sector 10 Japanese Park side, an easy e-rickshaw ride either way.",
   },
+  // TODO: unique content - real route/commute to the centre, local student results, a genuine parent testimonial.
   {
     slug: "rohini-sector-11",
     name: "Rohini Sector 11",
@@ -68,26 +64,18 @@ export const nearbyAreas: Area[] = [
     localCopy:
       "Sector 11 is home to Rohini's well-known Japanese Park - students from around it reach our Sector 7 centre in under 15 minutes.",
   },
+  // TODO: unique content - real route/commute to the centre, local student results, a genuine parent testimonial.
   {
     slug: "rohini-sector-13",
     name: "Rohini Sector 13",
     distanceKm: 3.2,
-    description: "Students from Sector 13 enrol for board and competitive coaching.",
+    description: "Students from Sector 13 enrol for Class 1 to 12 board coaching.",
     landmark: "Near Venkateshwar Global School, Sector 13",
     nearbySchools: ["Venkateshwar Global School", "VSPK International School"],
     localCopy:
       "Students from Sector 13 often join us for board prep alongside their regular school routine at Venkateshwar Global or VSPK International.",
   },
-  {
-    slug: "rohini-sector-15",
-    name: "Rohini Sector 15",
-    distanceKm: 3.6,
-    description: "Tuition classes for Sector 15 Rohini residents.",
-    landmark: "Sector 15 market and bus stop",
-    nearbySchools: ["Vidya Bharati School, Sector 15", "St. Angel's School, Sector 15"],
-    localCopy:
-      "Sector 15 also has its own ESA branch, so families here can choose whichever centre - Sector 7 or Sector 15 - fits their timing better.",
-  },
+  // TODO: unique content - real route/commute to the centre, local student results, a genuine parent testimonial.
   {
     slug: "rohini-sector-17",
     name: "Rohini Sector 17",
@@ -98,6 +86,7 @@ export const nearbyAreas: Area[] = [
     localCopy:
       "Sector 17 families are within easy reach of both our Sector 7 flagship and our newer Sector 15 branch.",
   },
+  // TODO: unique content - real route/commute to the centre, local student results, a genuine parent testimonial.
   {
     slug: "pitampura",
     name: "Pitampura",
@@ -109,6 +98,7 @@ export const nearbyAreas: Area[] = [
     localCopy:
       "Pitampura students commute to our Sector 7 centre via Kohat Enclave or the Outer Ring Road side lanes, usually in 10-15 minutes.",
   },
+  // TODO: unique content - real route/commute to the centre, local student results, a genuine parent testimonial.
   {
     slug: "shalimar-bagh",
     name: "Shalimar Bagh",
@@ -120,6 +110,7 @@ export const nearbyAreas: Area[] = [
     localCopy:
       "Several Shalimar Bagh students switch to ESA after finding batches at other centres too large or inconsistent on faculty.",
   },
+  // TODO: unique content - real route/commute to the centre, local student results, a genuine parent testimonial.
   {
     slug: "model-town",
     name: "Model Town",
@@ -131,6 +122,7 @@ export const nearbyAreas: Area[] = [
     localCopy:
       "Model Town is on the far edge of our regular catchment, and we recommend the free demo week to confirm the commute fits your family's schedule.",
   },
+  // TODO: unique content - real route/commute to the centre, local student results, a genuine parent testimonial.
   {
     slug: "ashok-vihar",
     name: "Ashok Vihar",
@@ -142,6 +134,8 @@ export const nearbyAreas: Area[] = [
     localCopy:
       "Ashok Vihar Phase 1 to 3 students mostly join us for Class 9 to 12 board and stream coaching.",
   },
+  // FLAGGED for owner decision (keep / merge / noindex): avg position 23.
+  // TODO: unique content - real route/commute to the centre, local student results, a genuine parent testimonial.
   {
     slug: "mukherjee-nagar",
     name: "Mukherjee Nagar",
@@ -151,8 +145,9 @@ export const nearbyAreas: Area[] = [
     landmark: "Near GTB Nagar Metro Station, close to the Mukherjee Nagar coaching hub",
     nearbySchools: ["CBSE schools around GTB Nagar and Mukherjee Nagar"],
     localCopy:
-      "Mukherjee Nagar is better known for competitive-exam coaching, but our school-board batches draw steadily from its residential side.",
+      "Our school-board batches draw steadily from Mukherjee Nagar's residential side, mostly families with children in Class 6 to 12.",
   },
+  // TODO: unique content - real route/commute to the centre, local student results, a genuine parent testimonial.
   {
     slug: "kohat-enclave",
     name: "Kohat Enclave",
@@ -163,6 +158,7 @@ export const nearbyAreas: Area[] = [
     localCopy:
       "Kohat Enclave sits right on the metro, making it one of the easiest commutes to our Sector 7 centre.",
   },
+  // TODO: unique content - real route/commute to the centre, local student results, a genuine parent testimonial.
   {
     slug: "saraswati-vihar",
     name: "Saraswati Vihar",
@@ -173,6 +169,7 @@ export const nearbyAreas: Area[] = [
     localCopy:
       "Saraswati Vihar families typically travel via the Pitampura or Kohat Enclave metro side to reach our Sector 7 centre.",
   },
+  // TODO: unique content - real route/commute to the centre, local student results, a genuine parent testimonial.
   {
     slug: "rani-bagh",
     name: "Rani Bagh",
@@ -183,6 +180,8 @@ export const nearbyAreas: Area[] = [
     localCopy:
       "Rani Bagh students usually combine a short auto ride with the Pitampura road stretch to reach us.",
   },
+  // FLAGGED for owner decision (keep / merge / noindex): far/weak.
+  // TODO: unique content - real route/commute to the centre, local student results, a genuine parent testimonial.
   {
     slug: "punjabi-bagh",
     name: "Punjabi Bagh",
@@ -194,6 +193,7 @@ export const nearbyAreas: Area[] = [
     localCopy:
       "Punjabi Bagh is at the far end of our service radius - Class 11-12 students make up most of our enrolments from here.",
   },
+  // TODO: unique content - real route/commute to the centre, local student results, a genuine parent testimonial.
   {
     slug: "shastri-nagar",
     name: "Shastri Nagar",
@@ -204,6 +204,7 @@ export const nearbyAreas: Area[] = [
     localCopy:
       "Shastri Nagar students generally take the Red Line towards Rithala or Kohat Enclave and then a short auto ride to reach us.",
   },
+  // TODO: unique content - real route/commute to the centre, local student results, a genuine parent testimonial.
   {
     slug: "adarsh-nagar",
     name: "Adarsh Nagar",
@@ -214,6 +215,8 @@ export const nearbyAreas: Area[] = [
     localCopy:
       "Adarsh Nagar is on the outer edge of where we recommend a daily commute - the free demo week helps confirm the routine works for your family.",
   },
+  // FLAGGED for owner decision (keep / merge / noindex): far/weak.
+  // TODO: unique content - real route/commute to the centre, local student results, a genuine parent testimonial.
   {
     slug: "wazirpur",
     name: "Wazirpur",
@@ -224,6 +227,7 @@ export const nearbyAreas: Area[] = [
     localCopy:
       "Wazirpur students typically travel via Shalimar Bagh or Ashok Vihar to reach our Sector 7 centre.",
   },
+  // TODO: unique content - real route/commute to the centre, local student results, a genuine parent testimonial.
   {
     slug: "rohini-sector-1",
     name: "Rohini Sector 1",
@@ -234,6 +238,7 @@ export const nearbyAreas: Area[] = [
     localCopy:
       "Sector 1 sits on the western edge of Rohini, near Avantika - most students here travel by auto to our Sector 7 centre.",
   },
+  // TODO: unique content - real route/commute to the centre, local student results, a genuine parent testimonial.
   {
     slug: "rohini-sector-2",
     name: "Rohini Sector 2",
@@ -244,6 +249,8 @@ export const nearbyAreas: Area[] = [
     localCopy:
       "Sector 2 is a quick ride from our Sector 7 centre along the main Rohini road network.",
   },
+  // FLAGGED for owner decision (keep / merge / noindex): weak.
+  // TODO: unique content - real route/commute to the centre, local student results, a genuine parent testimonial.
   {
     slug: "rohini-sector-4",
     name: "Rohini Sector 4",
@@ -254,6 +261,7 @@ export const nearbyAreas: Area[] = [
     localCopy:
       "Sector 4 is one of the shortest commutes to our Sector 7 flagship centre.",
   },
+  // TODO: unique content - real route/commute to the centre, local student results, a genuine parent testimonial.
   {
     slug: "rohini-sector-6",
     name: "Rohini Sector 6",
@@ -264,6 +272,7 @@ export const nearbyAreas: Area[] = [
     localCopy:
       "Sector 6 borders our home sector directly - many students walk or cycle to class.",
   },
+  // TODO: unique content - real route/commute to the centre, local student results, a genuine parent testimonial.
   {
     slug: "rohini-sector-8",
     name: "Rohini Sector 8",
@@ -274,6 +283,7 @@ export const nearbyAreas: Area[] = [
     localCopy:
       "Sector 8 students often combine their school day at Orleans with an evening ESA batch.",
   },
+  // TODO: unique content - real route/commute to the centre, local student results, a genuine parent testimonial.
   {
     slug: "rohini-sector-10",
     name: "Rohini Sector 10",
@@ -284,6 +294,8 @@ export const nearbyAreas: Area[] = [
     localCopy:
       "Sector 10, right by Metro Walk Mall and Japanese Park, is a short and familiar route to our Sector 7 centre.",
   },
+  // FLAGGED for owner decision (keep / merge / noindex): weak.
+  // TODO: unique content - real route/commute to the centre, local student results, a genuine parent testimonial.
   {
     slug: "rohini-sector-16",
     name: "Rohini Sector 16",
@@ -294,6 +306,7 @@ export const nearbyAreas: Area[] = [
     localCopy:
       "Sector 16 students are closest to our Sector 15 branch, though many still choose the Sector 7 flagship for its wider batch choice.",
   },
+  // TODO: unique content - real route/commute to the centre, local student results, a genuine parent testimonial.
   {
     slug: "rohini-sector-18",
     name: "Rohini Sector 18",
@@ -304,6 +317,7 @@ export const nearbyAreas: Area[] = [
     localCopy:
       "Sector 18 is well connected by the Yellow Line, making the ride to either of our Rohini centres straightforward.",
   },
+  // TODO: unique content - real route/commute to the centre, local student results, a genuine parent testimonial.
   {
     slug: "rohini-sector-19",
     name: "Rohini Sector 19",
@@ -314,6 +328,7 @@ export const nearbyAreas: Area[] = [
     localCopy:
       "Sector 19 shares the same metro connectivity as Sector 18, an easy ride to our Sector 15 branch.",
   },
+  // TODO: unique content - real route/commute to the centre, local student results, a genuine parent testimonial.
   {
     slug: "rohini-sector-20",
     name: "Rohini Sector 20",
@@ -324,6 +339,7 @@ export const nearbyAreas: Area[] = [
     localCopy:
       "Sector 20 students typically travel via the Sector 18-19 metro corridor to reach our centres.",
   },
+  // TODO: unique content - real route/commute to the centre, local student results, a genuine parent testimonial.
   {
     slug: "rohini-sector-21",
     name: "Rohini Sector 21",
@@ -334,6 +350,7 @@ export const nearbyAreas: Area[] = [
     localCopy:
       "Sector 21 is on the outer stretch of Rohini - our Sector 15 branch is usually the closer option.",
   },
+  // TODO: unique content - real route/commute to the centre, local student results, a genuine parent testimonial.
   {
     slug: "rohini-sector-22",
     name: "Rohini Sector 22",
@@ -344,6 +361,7 @@ export const nearbyAreas: Area[] = [
     localCopy:
       "Sector 22, the Avantika side of Rohini, sends several students to us for Class 9-12 board coaching.",
   },
+  // TODO: unique content - real route/commute to the centre, local student results, a genuine parent testimonial.
   {
     slug: "rohini-sector-24",
     name: "Rohini Sector 24",
@@ -354,6 +372,7 @@ export const nearbyAreas: Area[] = [
     localCopy:
       "Sector 24, near the Bawana Road stretch, is at the far edge of our usual commute range.",
   },
+  // TODO: unique content - real route/commute to the centre, local student results, a genuine parent testimonial.
   {
     slug: "prashant-vihar",
     name: "Prashant Vihar",
@@ -364,6 +383,8 @@ export const nearbyAreas: Area[] = [
     localCopy:
       "Prashant Vihar sits between Rohini East metro and Netaji Subhash Place, an easy ride to either of our Rohini centres.",
   },
+  // FLAGGED for owner decision (keep / merge / noindex): far/weak.
+  // TODO: unique content - real route/commute to the centre, local student results, a genuine parent testimonial.
   {
     slug: "budh-vihar",
     name: "Budh Vihar",
@@ -374,6 +395,7 @@ export const nearbyAreas: Area[] = [
     localCopy:
       "Budh Vihar students usually travel via Rithala or the Rohini-Bawana road to reach our centres.",
   },
+  // TODO: unique content - real route/commute to the centre, local student results, a genuine parent testimonial.
   {
     slug: "rithala",
     name: "Rithala",
@@ -384,6 +406,8 @@ export const nearbyAreas: Area[] = [
     localCopy:
       "Rithala's metro terminus makes it one of the most convenient starting points for the ride to our Sector 7 centre.",
   },
+  // FLAGGED for owner decision (keep / merge / noindex): far/weak.
+  // TODO: unique content - real route/commute to the centre, local student results, a genuine parent testimonial.
   {
     slug: "vijay-vihar",
     name: "Vijay Vihar",
@@ -394,6 +418,8 @@ export const nearbyAreas: Area[] = [
     localCopy:
       "Vijay Vihar students typically travel via the Rithala metro corridor to reach us.",
   },
+  // FLAGGED for owner decision (keep / merge / noindex): far/weak.
+  // TODO: unique content - real route/commute to the centre, local student results, a genuine parent testimonial.
   {
     slug: "netaji-subhash-place",
     name: "Netaji Subhash Place",
@@ -404,6 +430,7 @@ export const nearbyAreas: Area[] = [
     localCopy:
       "NSP is a major commercial and metro hub - students here connect easily to our Sector 7 centre via the Red Line.",
   },
+  // TODO: unique content - real route/commute to the centre, local student results, a genuine parent testimonial.
   {
     slug: "bahadurgarh",
     name: "Bahadurgarh",
@@ -415,6 +442,7 @@ export const nearbyAreas: Area[] = [
     localCopy:
       "Bahadurgarh sits just across the Delhi-Haryana border in the NCR, on the western side of Rohini. Families here who want ESA's weekly-test system either travel in along the Rohtak Road corridor or use the Green Line metro, and home tuition is available across the nearer sectors.",
   },
+  // TODO: unique content - real route/commute to the centre, local student results, a genuine parent testimonial.
   {
     slug: "nangloi",
     name: "Nangloi",
@@ -426,6 +454,7 @@ export const nearbyAreas: Area[] = [
     localCopy:
       "Nangloi sits on the Green Line and the Rohtak Road, on the west side of Rohini. Students here reach our Sector 7 centre in about 20-25 minutes, and home tuition is available across Nangloi Jat, Nihal Vihar and the nearby colonies.",
   },
+  // TODO: unique content - real route/commute to the centre, local student results, a genuine parent testimonial.
   {
     slug: "mundka",
     name: "Mundka",
@@ -437,6 +466,7 @@ export const nearbyAreas: Area[] = [
     localCopy:
       "Mundka is the last West Delhi stretch of the Green Line before Bahadurgarh, on the western approach to Rohini. Families who want ESA's disciplined weekly-test system travel in along the Delhi-Bahadurgarh road or the metro, with home tuition available across the nearer colonies.",
   },
+  // TODO: unique content - real route/commute to the centre, local student results, a genuine parent testimonial.
   {
     slug: "kirari",
     name: "Kirari",

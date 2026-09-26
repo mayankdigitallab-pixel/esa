@@ -35,7 +35,7 @@ const timetableFaqs = [
 ];
 
 export const metadata: Metadata = {
-  title: "Class Timings & Time Table | ESA Rohini Sector 7 and Sector 15",
+  title: "Class Timings & Time Table | ESA Rohini Sector 7 & 15",
   description:
     "Weekly time table for Excellent Students' Academy Rohini. Class-wise batch timings for Sector 7 and Sector 15 centres. Download or share the schedule on WhatsApp.",
   alternates: { canonical: "https://www.theesa.in/timetable" },
@@ -50,7 +50,7 @@ export const metadata: Metadata = {
     "ESA time table download",
   ],
   ...shareMeta({
-    title: "Class Timings & Time Table | ESA Rohini Sector 7 and Sector 15",
+    title: "Class Timings & Time Table | ESA Rohini Sector 7 & 15",
     description:
       "Weekly time table for Excellent Students' Academy Rohini. Class-wise batch timings for Sector 7 and Sector 15 centres. Download or share the schedule on WhatsApp.",
     path: "/timetable",

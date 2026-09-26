@@ -37,7 +37,7 @@ Website: https://www.theesa.in | Email: excellentstudentsacademy1@gmail.com
 - [Timetable](https://www.theesa.in/timetable): Weekly batch schedule by class and subject.
 - [Contact](https://www.theesa.in/contact): Enquiry form, WhatsApp, phone, location, embedded map for every centre.
 - [FAQ](https://www.theesa.in/faq): Demo classes, fees, batch timings, subjects, home tuition, admission process.
-- [Areas served](https://www.theesa.in/areas/rohini-sector-7): Locality pages for the North Delhi neighbourhoods each centre serves.
+- [Areas served](https://www.theesa.in/centres): Locality pages for the North Delhi neighbourhoods each centre serves.
 
 ## Blog (educational + local SEO)
 

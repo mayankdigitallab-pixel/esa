@@ -122,7 +122,7 @@ export const blogPosts: BlogPost[] = [
       {
         question: "What subjects and classes does ESA cover?",
         answer:
-          "Classes 1 to 12 across Mathematics, Physics, Chemistry, Biology, Commerce (Accountancy, Business Studies, Economics), Social Science and English, plus JEE and NEET foundation for Science students.",
+          "Classes 1 to 12 across Mathematics, Physics, Chemistry, Biology, Commerce (Accountancy, Business Studies, Economics), Social Science and English - school and board exam coaching only.",
       },
       {
         question: "How is ESA different from a generic tuition centre near me?",
@@ -194,7 +194,7 @@ export const blogPosts: BlogPost[] = [
 <p>Ayush Goel, one of our 2026 toppers, scored 99 in Maths under Chandan sir's guidance. His own words: "Weekly tests prepared me for the real board pressure. By exam day it just felt like another Saturday." Other students describe the same pattern: the standalone-practice step feels slower in the first few weeks compared to just watching a solved example, but it is what actually makes the concept stick for the board exam months later.</p>
 
 <h2>Who this teaching style suits, and who should look elsewhere</h2>
-<p>Chandan sir's method works best for students willing to actually attempt a problem standalone in class, even if they get it wrong the first time, rather than students looking for someone to simply hand them a solved example to copy. If your child needs to be pushed gently to try before being shown the answer, this classroom is built exactly for that. If your child already has strong Maths fundamentals and mainly needs speed drills for JEE, that is also covered within the same syllabus timeline, since the full course finishes well before boards.</p>
+<p>Chandan sir's method works best for students willing to actually attempt a problem standalone in class, even if they get it wrong the first time, rather than students looking for someone to simply hand them a solved example to copy. If your child needs to be pushed gently to try before being shown the answer, this classroom is built exactly for that. If your child already has strong Maths fundamentals and mainly needs speed and accuracy drills, those fit into the same syllabus timeline, since the full course finishes well before boards.</p>
 
 <h2>How to check this for yourself</h2>
 <p>Do not take our word for it. Sit your child in an actual Chandan sir batch for a week, not a one-off demo class. Watch how a doubt is handled. Watch whether he checks that every student in the room can solve the problem alone before moving to the next one. Ask to see the diagnostic notes made for a new student in the first week, and how the plan changed based on what was found.</p>
@@ -241,9 +241,9 @@ export const blogPosts: BlogPost[] = [
           "Doubts are addressed the same session they come up, not deferred, because an unresolved Maths gap compounds quickly once the next chapter builds on it.",
       },
       {
-        question: "Does Chandan sir also help students prepare for competitive exams?",
+        question: "When does Chandan sir finish the Class 12 Maths syllabus?",
         answer:
-          "His Class 12 batch finishes the CBSE syllabus well ahead of boards, which also gives students a stronger base for JEE-level Maths problems in the remaining months.",
+          "His Class 12 batch finishes the CBSE syllabus well ahead of boards, leaving the remaining months for full-length mock papers and revision of weak chapters.",
       },
       {
         question: "How can I find out if my child's specific Maths gap will be addressed?",
@@ -265,7 +265,7 @@ export const blogPosts: BlogPost[] = [
     slug: "physics-coaching-trusted-choice-rohini-esa",
     title: "Why Excellent Students' Academy Is a Trusted Choice for Physics Coaching in Rohini",
     description:
-      "Looking for reliable Physics coaching in Rohini for Class 11-12? Here is why parents trust ESA Sector 7 and how Mr. Prateek's problem-solving-first method builds both board and JEE-level fluency.",
+      "Looking for reliable Physics coaching in Rohini for Class 11-12? Here is why parents trust ESA Sector 7 and how Mr. Prateek's problem-solving-first method builds board-exam numerical fluency.",
     date: "2026-08-26",
     readTime: "7 min read",
     category: "Subject Spotlight",
@@ -278,7 +278,7 @@ export const blogPosts: BlogPost[] = [
       "Physics coaching Rohini",
       "Class 11 12 Physics tuition Sector 7 Rohini",
       "best Physics teacher Rohini",
-      "JEE Physics foundation Rohini",
+      "Class 12 Physics board prep Rohini",
       "Physics tuition near me Pitampura",
       "numerical problem solving Physics coaching",
     ],
@@ -300,8 +300,8 @@ export const blogPosts: BlogPost[] = [
 
 <figure><img src="https://images.unsplash.com/photo-1497486751825-1233686d5d80?auto=format&fit=crop&w=1200&q=80" alt="Mr. Prateek explaining a Physics numerical on the whiteboard to Class 12 students at ESA Rohini" loading="lazy" width="1200" height="800" /><figcaption>Every Physics numerical is demonstrated on the board before students attempt it standalone.</figcaption></figure>
 
-<h2>Boards and JEE foundation, taught together</h2>
-<p>Most Rohini students taking Physics in Class 11-12 are managing two parallel goals: scoring 90 plus in CBSE boards and building a foundation for JEE. These are not the same skill. Boards reward clear, structured derivations and diagram labelling. JEE rewards speed and multi-concept problem solving across a much larger question bank. At ESA, both are taught in the same classroom, so students are not choosing between the two or paying for a separate JEE Physics coaching on top of school-aligned tuition.</p>
+<h2>Derivations and numericals, taught together</h2>
+<p>Scoring 90 plus in CBSE Physics takes two different skills. The theory section rewards clear, structured derivations and correct diagram labelling. The numerical section rewards speed and multi-concept problem solving. At ESA, both are taught in the same classroom, so students are not left strong in one half of the paper and weak in the other.</p>
 
 <h2>What parents consistently tell us</h2>
 <p>The most common thing we hear from parents who move their child to ESA for Physics is some version of: "He used to memorise the formula sheet the night before the test. Now he actually solves the numerical without looking anything up." That shift usually shows up within the first two months of joining, well before the first term exam.</p>
@@ -322,10 +322,10 @@ export const blogPosts: BlogPost[] = [
 <p>Because Mr. Prateek stays with his Class 11 batch through to Class 12, he enters the second year already knowing each student's specific weak chapters from the first year, whether that is Rotational Mechanics, Thermodynamics or Electrostatics. This continuity removes the relearning period that happens when Physics faculty rotate between academic sessions, which is common at larger chain institutes in the Rohini and Pitampura area.</p>
 
 <h2>How to check this for yourself</h2>
-<p>Sit your child in an actual Physics batch for a week. Watch whether the class solves numericals on the board together or just copies formulas from a slide. Ask to see last month's Saturday test papers and the correction notes written on them, and confirm the syllabus timeline leaves enough runway for JEE-style mixed practice before boards. Ask specifically how step-marks and diagram labelling are graded in the Saturday tests, since this mirrors exactly how CBSE grades the real board paper.</p>
+<p>Sit your child in an actual Physics batch for a week. Watch whether the class solves numericals on the board together or just copies formulas from a slide. Ask to see last month's Saturday test papers and the correction notes written on them, and confirm the syllabus timeline leaves enough runway for full mock papers before boards. Ask specifically how step-marks and diagram labelling are graded in the Saturday tests, since this mirrors exactly how CBSE grades the real board paper.</p>
 
-<h2>Physics for board scorers who are not aiming for JEE</h2>
-<p>Not every Class 11-12 Science student at ESA is targeting an engineering entrance exam, and the Physics programme does not assume everyone is. For students focused purely on a strong CBSE board score, Mr. Prateek's sessions place extra weight on derivation structure, diagram labelling and the specific keyword phrasing CBSE examiners look for in theory answers, alongside the same numerical fluency. The numerical-solving hour on Saturday benefits both groups equally, since strong numerical instinct improves board scores just as much as it improves JEE readiness.</p>
+<h2>Physics for students who find theory answers harder than numericals</h2>
+<p>Some Class 11-12 students are comfortable with numericals but lose marks on theory. For them, Mr. Prateek's sessions place extra weight on derivation structure, diagram labelling and the specific keyword phrasing CBSE examiners look for in theory answers, alongside the same numerical fluency. The numerical-solving hour on Saturday still applies to every student, since strong numerical instinct lifts the board score across the whole paper.</p>
 
 <h2>A note on switching from another institute mid-year</h2>
 <p>We regularly get Class 11 and 12 students joining mid-year after an unsatisfactory experience elsewhere, often because a promised "senior faculty" turned out to be a junior substitute mid-term. Mr. Prateek's diagnostic conversation with new students in their first week identifies exactly which chapters were taught well versus superficially at the previous institute, so teaching time is not wasted re-covering chapters the student has already genuinely mastered.</p>
@@ -355,9 +355,9 @@ export const blogPosts: BlogPost[] = [
           "Mr. Prateek leads our Class 11-12 Physics programme at the Sector 7 centre, using a problem-solving-first method built around numericals rather than formula memorisation.",
       },
       {
-        question: "Does ESA Physics coaching also help with JEE foundation?",
+        question: "Does ESA Physics coaching cover both theory and numericals?",
         answer:
-          "Yes. Physics sessions are structured to build CBSE board answer-writing technique and JEE-level numerical speed together, in the same batch, without needing separate JEE coaching.",
+          "Yes. Physics sessions build CBSE board answer-writing technique and numerical speed together, in the same batch.",
       },
       {
         question: "How many numericals does a student practise per chapter?",
@@ -508,13 +508,13 @@ export const blogPosts: BlogPost[] = [
     cover:
       "https://images.unsplash.com/photo-1453733190371-0a9bedd82893?auto=format&fit=crop&w=1200&q=80",
     excerpt:
-      "Chemistry is really three subjects stitched into one paper: Organic, Inorganic and Physical. Most students cram Organic in the last month and pay for it in both boards and JEE. Here is how ESA Rohini prevents that.",
+      "Chemistry is really three subjects stitched into one paper: Organic, Inorganic and Physical. Most students cram Organic in the last month and pay for it in the board exam. Here is how ESA Rohini prevents that.",
     keywords: [
       "Chemistry coaching Rohini",
       "Class 11 12 Chemistry tuition Rohini Sector 7",
       "Organic Chemistry coaching near me",
       "best Chemistry teacher Rohini",
-      "JEE Chemistry foundation Rohini",
+      "Class 12 Chemistry board prep Rohini",
       "Chemistry tuition Pitampura Shalimar Bagh",
     ],
     body: `<p>Ask any Class 12 student in Rohini which subject worries them the most, and Chemistry comes up more often than Physics or Maths. The reason is structural. Chemistry is not one subject, it is three - Organic, Inorganic and Physical - stitched into a single paper, each requiring a different way of studying. Most students discover this too late, usually in December, when Organic Chemistry alone has become an unmanageable pile of named reactions.</p>
@@ -529,7 +529,7 @@ export const blogPosts: BlogPost[] = [
 <h2>Three sub-subjects, taught with three different methods</h2>
 <p>Our Chemistry programme at the Sector 7 centre is led by <strong>Mr. Amit</strong>, who treats Organic, Inorganic and Physical Chemistry as genuinely different disciplines within the same subject, rather than teaching all three the same way.</p>
 <ul>
-<li><strong>Organic Chemistry</strong> is taught through named reactions and mechanisms from day one of Class 11, not crammed in the final term. Mr. Amit's approach spends extra time on reaction mechanisms specifically because this is where both board and JEE marks are lost most often. Students are made to draw out the mechanism themselves, step by step, rather than memorise the final product.</li>
+<li><strong>Organic Chemistry</strong> is taught through named reactions and mechanisms from day one of Class 11, not crammed in the final term. Mr. Amit's approach spends extra time on reaction mechanisms specifically because this is where board marks are lost most often. Students are made to draw out the mechanism themselves, step by step, rather than memorise the final product.</li>
 <li><strong>Inorganic Chemistry</strong> is treated as a memory-plus-pattern subject, with weekly recall tests rather than one large revision push before the exam. Periodic table trends, coordination compounds and p-block reactions are tested in small doses every week so nothing is left to the final month.</li>
 <li><strong>Physical Chemistry</strong> is taught numerically, the same way Maths is taught, with worked problems demonstrated on the board followed by standalone practice questions the student solves alone before moving to the next concept.</li>
 </ul>
@@ -542,8 +542,8 @@ export const blogPosts: BlogPost[] = [
 
 <figure><img src="https://images.unsplash.com/photo-1456406644174-8ddd4cd52a06?auto=format&fit=crop&w=1200&q=80" alt="Students writing a weekly Saturday Chemistry test at ESA Rohini Sector 7 coaching centre" loading="lazy" width="1200" height="800" /><figcaption>Saturday chapter tests rotate across Organic, Inorganic and Physical Chemistry so no section is left unrevised.</figcaption></figure>
 
-<h2>Built for boards and JEE together</h2>
-<p>Most of our Chemistry students are also preparing for a JEE foundation alongside CBSE boards. The two exams test Chemistry differently - boards reward structured, labelled answers with the correct IUPAC naming and clean mechanism diagrams, while JEE rewards speed and recall across a much wider question pool. Mr. Amit's sessions are structured to build both simultaneously, so students from Rohini and nearby Pitampura do not need to enrol in a separate JEE Chemistry batch on top of their board coaching.</p>
+<h2>Built around how CBSE marks Chemistry</h2>
+<p>CBSE rewards structured, labelled Chemistry answers with the correct IUPAC naming and clean mechanism diagrams, along with steady recall across Organic, Inorganic and Physical. Mr. Amit's sessions are structured to build both answer-writing and recall together, so students from Rohini and nearby Pitampura get complete board preparation in one batch.</p>
 
 <h2>What a typical Chemistry week looks like at ESA</h2>
 <p>Class 11-12 Chemistry batches run alongside the Science stream schedule at our Sector 7 centre, Monday to Saturday, with sessions built around the same four-step method used across ESA: concept explanation, board demonstration, standalone student practice, and an immediate variation to lock in the learning. Saturday afternoons are reserved for the rotating chapter test described above, followed by a doubt-clearing block where any unresolved mechanism or numerical from the week is worked through again, sometimes twice, until the student can do it without help.</p>
@@ -562,7 +562,7 @@ export const blogPosts: BlogPost[] = [
 <p>While our Sector 7 centre is the home base, our Class 11-12 Chemistry batches draw students from across North West Delhi. Families from Rohini Sector 3, 5, 9, 11, 13, 15 and 17 reach us within fifteen minutes by auto or the Outer Ring Road. Students from Pitampura, Shalimar Bagh, Ashok Vihar, Mukherjee Nagar and Saraswati Vihar also commute to our Chemistry batches specifically because a genuine subject specialist for Organic, Inorganic and Physical Chemistry together is hard to find within a short radius. If you are searching for "Chemistry tuition near me" from any of these localities, our Sector 7 centre is built to be the answer.</p>
 
 <h2>Common Chemistry mistakes we see, and how they are fixed</h2>
-<p>Three mistake patterns show up in almost every new Chemistry student who joins us mid-way through Class 11 or 12. The first is memorising the final product of an Organic reaction without understanding the mechanism, which works fine on a simple question and collapses the moment CBSE or JEE dresses the same reaction up differently. Mr. Amit's classes fix this by making students draw the electron movement themselves, not just recall the answer. The second is treating Inorganic Chemistry as unlearnable and giving up on it entirely, which is corrected through short, low-pressure weekly recall tests rather than one intimidating revision block. The third is skipping Physical Chemistry numericals because "it feels like Maths", when in fact it is the most scoring, most predictable section of the paper if practised the same way Maths is practised - worked example, then standalone attempt, then a variation.</p>
+<p>Three mistake patterns show up in almost every new Chemistry student who joins us mid-way through Class 11 or 12. The first is memorising the final product of an Organic reaction without understanding the mechanism, which works fine on a simple question and collapses the moment the board paper dresses the same reaction up differently. Mr. Amit's classes fix this by making students draw the electron movement themselves, not just recall the answer. The second is treating Inorganic Chemistry as unlearnable and giving up on it entirely, which is corrected through short, low-pressure weekly recall tests rather than one intimidating revision block. The third is skipping Physical Chemistry numericals because "it feels like Maths", when in fact it is the most scoring, most predictable section of the paper if practised the same way Maths is practised - worked example, then standalone attempt, then a variation.</p>
 
 <h2>Fee, schedule and facility, in plain terms</h2>
 <p>Class 11-12 Chemistry runs as part of our Science stream batches, Monday to Saturday, with Saturday reserved for the rotating chapter test and doubt session described above. Batch size is capped around 18 students so Mr. Amit can personally review each student's mechanism-writing and numerical work through the week, not just at test time. Fees depend on the class and subject combination chosen and are shared clearly on a call, with no hidden charges added once you visit the centre. Our Sector 7 classrooms are air-conditioned with dedicated writing desks, a stocked whiteboard station for reaction diagrams, and a waiting area for parents dropping off younger siblings during the session.</p>
@@ -591,9 +591,9 @@ export const blogPosts: BlogPost[] = [
           "Mr. Amit leads our Class 11-12 Chemistry programme at the Sector 7 centre, covering Organic, Inorganic and Physical Chemistry as three distinct teaching tracks within the same batch.",
       },
       {
-        question: "Does ESA cover both CBSE boards and JEE Chemistry?",
+        question: "Does ESA Chemistry coaching cover all three branches?",
         answer:
-          "Yes. Our Chemistry sessions are structured to build board answer-writing technique and JEE-level speed and recall together, so students do not need a separate JEE Chemistry batch.",
+          "Yes. Organic, Inorganic and Physical Chemistry are all covered in the same batch, with board answer-writing technique and recall built together.",
       },
       {
         question: "How often are Chemistry tests conducted?",
@@ -769,7 +769,7 @@ export const blogPosts: BlogPost[] = [
 <p>Our Maths faculty is led by <strong>Mr. Chandan Prajapati</strong> (Class 11-12) and <strong>Mr. Rahul</strong> (Class 6-10). The model: every concept gets explained, then demonstrated on the board, then the student solves it standalone, then a similar problem is given immediately. Doubt is resolved in the same session it appears, not three days later.</p>
 
 <h3>Physics, Chemistry, Biology (Class 11 to 12)</h3>
-<p>Specialist subject coaches per stream. <strong>Mr. Prateek</strong> teaches Class 11-12 Physics with a problem-solving-first approach. <strong>Ms. Faujiya</strong> handles Class 11-12 Biology with NET JRF and GATE credentials, bringing research-grade clarity into PCB and NEET-foundation batches.</p>
+<p>Specialist subject coaches per stream. <strong>Mr. Prateek</strong> teaches Class 11-12 Physics with a problem-solving-first approach. <strong>Ms. Faujiya</strong> handles Class 11-12 Biology with NET JRF and GATE credentials, bringing research-grade clarity into PCB board batches.</p>
 
 <h3>English (Class 6 to 12)</h3>
 <p><strong>Mr. Rajesh</strong> brings 25 years of teaching English language and literature. The focus shifts by grade. Middle school English is taught with vocabulary, grammar and basic comprehension drills. By Class 11-12 the focus moves to formal writing technique, comprehension at speed, and structured board answers.</p>
@@ -1003,9 +1003,9 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: "class-12-science-pcm-coaching-rohini-2026",
-    title: "Class 12 Science Coaching in Rohini: PCM Strategy for Boards + JEE Foundation",
+    title: "Class 12 Science Coaching in Rohini: PCM Board Exam Strategy",
     description:
-      "How Class 12 Science (PCM) students in Rohini should prepare for CBSE boards and JEE foundation together. Subject-wise plan, weekly tests, mock papers and what ESA does in our Sector 7 centre.",
+      "How Class 12 Science (PCM) students in Rohini should prepare for CBSE board exams. Subject-wise plan, weekly tests, mock papers and what ESA does in our Sector 7 centre.",
     date: "2026-06-12",
     readTime: "8 min read",
     category: "Class 12",
@@ -1013,18 +1013,18 @@ export const blogPosts: BlogPost[] = [
     cover:
       "https://images.unsplash.com/photo-1453733190371-0a9bedd82893?auto=format&fit=crop&w=1200&q=80",
     excerpt:
-      "Most Class 12 PCM students try to balance board prep with JEE foundation. Here is the schedule that actually works, and the gaps in it that we cover at ESA in Rohini.",
-    body: `<p>Class 12 PCM is the most demanding year of school in India. Three heavy subjects, two parallel exams (CBSE plus JEE), and a January-to-March window that decides the next four years. This guide explains how Rohini students should plan it, and what we do at Excellent Students' Academy Sector 7 to make it manageable.</p>
+      "Most Class 12 PCM students leave too little time for revision before boards. Here is the schedule that actually works, and the gaps in it that we cover at ESA in Rohini.",
+    body: `<p>Class 12 PCM is the most demanding year of school in India. Three heavy subjects, a full board syllabus, and a January-to-March window that decides the next four years. This guide explains how Rohini students should plan it, and what we do at Excellent Students' Academy Sector 7 to make it manageable.</p>
 
-<h2>Why parallel prep is the only realistic path</h2>
-<p>Students who try to first finish boards and then "start JEE prep" in April lose the entire year. Conversely, students who chase only JEE and treat boards as a side task often slip below 90 percent in Class 12 boards, which closes doors at premium colleges. The only realistic strategy is parallel prep where Physics, Chemistry and Math are taught with both objective rigor and CBSE answer-writing technique.</p>
+<h2>Why an early finish is the only realistic path</h2>
+<p>Students who are still finishing new chapters in February walk into boards without having written a single full mock paper. Class 12 marks decide college admissions, and slipping below 90 percent closes doors at premium colleges. The only realistic strategy is to finish Physics, Chemistry and Math early, teaching each with both problem-solving rigor and CBSE answer-writing technique, and then spend the final months on revision and mocks.</p>
 
 <h2>Subject-wise breakdown</h2>
 <h3>Physics</h3>
 <p>The biggest scoring subject if practised right. Class 12 chapters - Current Electricity, EMI, Optics, Modern Physics - reward students who do at least 30 numerical per chapter. ESA Physics batches run 90-minute sessions four days a week with a focused numerical hour on Saturdays.</p>
 
 <h3>Chemistry</h3>
-<p>Three sub-subjects in one paper: Organic, Inorganic and Physical. Organic Class 12 cannot be crammed in the last month. NCERT mastery is the only way. Our Organic Chemistry track at ESA spends extra time on named reactions and reaction mechanisms because that is what JEE asks and what students lose marks on in boards too.</p>
+<p>Three sub-subjects in one paper: Organic, Inorganic and Physical. Organic Class 12 cannot be crammed in the last month. NCERT mastery is the only way. Our Organic Chemistry track at ESA spends extra time on named reactions and reaction mechanisms because that is where students lose the most marks in boards.</p>
 
 <h3>Mathematics</h3>
 <p>Class 12 Math is the highest scoring of the three if your problem-solving is fluent. Integration, vectors, 3D and probability together carry close to 50 marks. Our Math Class 12 batch finishes the full syllabus by December and runs mock papers from January.</p>
@@ -1033,7 +1033,7 @@ export const blogPosts: BlogPost[] = [
 <p>Every Saturday at ESA is test day. The chapter taught that week is tested. Scored within 48 hours. Detailed analytics shared with parents on WhatsApp. By the time boards arrive, most Class 12 students have written 30 plus chapter tests and 6 plus full mock papers in their main subjects.</p>
 
 <h2>What separates ESA Class 12 batches</h2>
-<ul><li>Senior faculty who only teach Class 11 and 12 - no juggling with junior batches</li><li>Full syllabus by mid-December, three months of pure revision and mocks after</li><li>JEE Foundation classes alternate days, included in the standard fee</li><li>Direct WhatsApp access to subject teachers for doubt clearing</li></ul>
+<ul><li>Senior faculty who only teach Class 11 and 12 - no juggling with junior batches</li><li>Full syllabus by mid-December, three months of pure revision and mocks after</li><li>Extra doubt sessions in the weeks before boards, included in the standard fee</li><li>Direct WhatsApp access to subject teachers for doubt clearing</li></ul>
 
 <h3>Book a free Class 12 demo</h3>
 <p>Book 7 days of real Class 12 batches at our Rohini Sector 7 centre. Sit through Physics, Chem, Math sessions, write the Saturday test, meet the faculty. Decide after.</p>`,
@@ -1068,7 +1068,7 @@ export const blogPosts: BlogPost[] = [
 <ul><li>Monday and Thursday: Accountancy</li><li>Tuesday and Friday: Business Studies</li><li>Wednesday: Economics (Statistics half)</li><li>Saturday: Weekly chapter test for whichever subject was the focus, plus one hour Economics Micro</li></ul>
 
 <h2>What weak Class 10 students do well in Class 11 Commerce</h2>
-<p>Every year we see students who scored 70-75 percent in Class 10 finish Class 11 Commerce above 85. Three reasons. One, Accounts rewards practice not aptitude. Two, BST is shorter than 10th Social Science. Three, the Commerce stream has fewer parallel competitive exams pulling attention - no JEE, no NEET - so the focus stays on boards.</p>
+<p>Every year we see students who scored 70-75 percent in Class 10 finish Class 11 Commerce above 85. Three reasons. One, Accounts rewards practice not aptitude. Two, BST is shorter than 10th Social Science. Three, Commerce subjects build on each other across Class 11 and 12, so steady weekly practice keeps the focus on boards.</p>
 
 <h3>Book a free Class 11 Commerce demo</h3>
 <p>If your child is moving into Class 11 next year and you want to evaluate the Commerce stream, book a 7-day demo with us. Real batch, real faculty, no commitment.</p>`,

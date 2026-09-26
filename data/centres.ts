@@ -237,6 +237,8 @@ export const centres: Centre[] = [
       schools: [
         "Rajiv Gandhi Public School",
         "Mount Carmel School, Rohini",
+        "Vidya Bharati School, Sector 15",
+        "St. Angel's School, Sector 15",
         "Other CBSE schools across Sectors 13-17",
       ],
       reach: [

@@ -79,7 +79,7 @@ export const faculty: Faculty[] = [
     subjects: "Biology (Class 11-12)",
     experience: "Senior faculty",
     qualification: "NET JRF, GATE qualified",
-    bio: "Biology mentor for Class 11 and 12 PCB students. NET JRF and GATE qualified - brings research-grade conceptual clarity into board prep and NEET foundation classes.",
+    bio: "Biology mentor for Class 11 and 12 PCB students. NET JRF and GATE qualified - brings research-grade conceptual clarity into Class 11-12 Biology board prep.",
     image: "/faculty/faujia.jpg",
   },
   {

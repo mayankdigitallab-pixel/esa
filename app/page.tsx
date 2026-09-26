@@ -42,10 +42,9 @@ import { BranchesCarousel } from "@/components/BranchesCarousel";
 import { breadcrumbSchema, faqPageSchema, jsonLd, localBusinessSchema, shareMeta, speakableWebPage, websiteSchema } from "@/lib/seo";
 
 export const metadata: Metadata = {
-  title:
-    "Coaching & Tuition for Class 1-12 in Delhi NCR & Lucknow | Excellent Students' Academy",
+  title: "Excellent Students' Academy | Coaching in Delhi & Lucknow",
   description:
-    "Class 1 to 12 CBSE coaching in Delhi NCR and Lucknow. Three ESA branches: Rohini Sector 7 & Rohini Sector 15 (North-West Delhi NCR) and Thakurganj (Lucknow). Math, Science, Commerce - free demo class at any centre.",
+    "Class 1-12 CBSE coaching in Rohini, Delhi & Lucknow. 84% board average, 32 students above 90% in 2026. Weekly tests, expert faculty. Book a free demo!",
   keywords: [
     "best coaching in Rohini",
     "tuition in Rohini",
@@ -65,12 +64,12 @@ export const metadata: Metadata = {
     "coaching in Shalimar Bagh",
     "Excellent Students Academy",
   ],
-  alternates: { canonical: "https://www.theesa.in" },
+  alternates: { canonical: "https://www.theesa.in/" },
   ...shareMeta({
-    title: "Coaching for Class 1-12 across Delhi NCR & Lucknow | Excellent Students' Academy",
+    title: "Excellent Students' Academy | Coaching in Delhi & Lucknow",
     description:
-      "ESA branches in Rohini Sector 7 & Rohini Sector 15 (North-West Delhi NCR) and Thakurganj (Lucknow). Class 1 to 12 coaching in Math, Science, Commerce.",
-    path: "",
+      "Class 1-12 CBSE coaching in Rohini, Delhi & Lucknow. 84% board average, 32 students above 90% in 2026. Weekly tests, expert faculty. Book a free demo!",
+    path: "/",
   }),
 };
 

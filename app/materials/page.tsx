@@ -52,7 +52,7 @@ const materialsFaqs = [
 ];
 
 export const metadata: Metadata = {
-  title: "Study Materials | Class 1 to 12 PDF Notes Download | ESA Rohini",
+  title: "Study Materials | Class 1-12 PDF Notes | ESA Rohini",
   description:
     "Download class-wise study material PDFs from Excellent Students' Academy Rohini. Chapter notes, sample papers, mock tests and revision sheets for Class 1 to 12.",
   alternates: { canonical: "https://www.theesa.in/materials" },
@@ -68,7 +68,7 @@ export const metadata: Metadata = {
     "mock test papers CBSE download",
   ],
   ...shareMeta({
-    title: "Study Materials | Class 1 to 12 PDF Notes Download | ESA Rohini",
+    title: "Study Materials | Class 1-12 PDF Notes | ESA Rohini",
     description:
       "Download class-wise study material PDFs from Excellent Students' Academy Rohini. Chapter notes, sample papers, mock tests and revision sheets for Class 1 to 12.",
     path: "/materials",

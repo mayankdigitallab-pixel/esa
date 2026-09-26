@@ -59,7 +59,7 @@ function areaFaqs(area: Area) {
   return [
     {
       question: `Does ESA offer coaching for students from ${area.name}?`,
-      answer: `Yes. Excellent Students' Academy's Rohini Sector 7 centre teaches Class 1 to 12 students from ${area.name} across Math, Science, Commerce, English and all CBSE/ICSE subjects, with several current students commuting from ${area.name} every day.`,
+      answer: `Yes. Excellent Students' Academy's Rohini Sector 7 centre teaches Class 1 to 12 students from ${area.name} across Math, Science, Commerce, English and all CBSE/ICSE subjects. ESA is a school-tuition institute: we coach for school and board exams only.`,
     },
     {
       question: `How far is ESA from ${area.name}, and how do students get there?`,
@@ -88,9 +88,11 @@ export async function generateMetadata({
   const { slug } = await params;
   const area = nearbyAreas.find((a) => a.slug === slug);
   if (!area) return {};
+  const title = `Coaching in ${area.name} | Class 1-12 Tuition | ESA`;
+  const description = `Class 1-12 tuition for ${area.name} students at ESA Rohini Sector 7, ${area.distanceKm} km away. Math, Science, Commerce, weekly tests. Free demo class.`;
   return {
-    title: `Best Coaching in ${area.name} | Class 1 to 12 Tuition | ESA Rohini`,
-    description: `Looking for coaching in ${area.name}? Excellent Students' Academy Rohini Sector 7 offers Class 1 to 12 tuition in Math, Science, Commerce. Just ${area.distanceKm} km away. Free demo class.`,
+    title,
+    description,
     alternates: {
       canonical: `https://www.theesa.in/areas/${area.slug}`,
     },
@@ -105,8 +107,8 @@ export async function generateMetadata({
       `coaching centre near ${area.name}`,
     ],
     ...shareMeta({
-      title: `Best Coaching in ${area.name} | Class 1 to 12 Tuition | ESA Rohini`,
-      description: `Looking for coaching in ${area.name}? Excellent Students' Academy Rohini Sector 7 offers Class 1 to 12 tuition in Math, Science, Commerce. Just ${area.distanceKm} km away. Free demo class.`,
+      title,
+      description,
       path: `/areas/${area.slug}`,
     }),
   };
@@ -125,7 +127,7 @@ export default async function AreaPage({
   const other = nearbyAreas.filter((a) => a.slug !== area.slug).slice(0, 6);
   const breadcrumb = breadcrumbSchema([
     { name: "Home", href: "/" },
-    { name: "Areas", href: "/areas/rohini-sector-7" },
+    { name: "Centres", href: "/centres" },
     { name: area.name, href: `/areas/${area.slug}` },
   ]);
   const faqs = areaFaqs(area);
@@ -169,6 +171,9 @@ export default async function AreaPage({
                   {area.localCopy}
                 </p>
               ) : null}
+              {/* TODO: unique content - add real, verified per-area info in data/areas.ts
+                  (route to the centre, local student results, a real parent testimonial).
+                  Do not invent results, names or reviews. */}
               {area.landmark ? (
                 <p>
                   <strong className="font-semibold text-charcoal">Local landmark:</strong>{" "}
@@ -268,6 +273,16 @@ export default async function AreaPage({
                   <dt className="text-muted">Public transport</dt>
                   <dd className="font-medium text-charcoal">
                     {area.transport ?? "Auto / Metro"}
+                  </dd>
+                </div>
+                <div className="flex justify-between border-b border-neutral-200 pb-2">
+                  <dt className="text-muted">Classes</dt>
+                  <dd className="font-medium text-charcoal">Class 1 to 12 (CBSE, ICSE, State Board)</dd>
+                </div>
+                <div className="flex justify-between gap-6 border-b border-neutral-200 pb-2">
+                  <dt className="shrink-0 text-muted">Subjects</dt>
+                  <dd className="text-right font-medium text-charcoal">
+                    Math, Science, SST, English, Hindi, Sanskrit; Class 11-12: Physics, Chemistry, Biology, Accountancy, Business Studies, Economics, Computer Science
                   </dd>
                 </div>
                 <div className="flex justify-between">

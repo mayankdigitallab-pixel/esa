@@ -222,7 +222,7 @@ export const classes: ClassInfo[] = [
     whoFor:
       "Students choosing a stream for the first time - Science (PCM or PCB), Commerce or Arts - and building the two-year base for Class 12 boards.",
     boardContext:
-      "CBSE Class 11 curriculum across streams, with Science batches also introduced to JEE/NEET-pattern questions alongside board topics.",
+      "CBSE Class 11 curriculum across streams, taught to build the concept base that Class 12 board exams depend on.",
     subjects: [...seniorSubjectsScience, ...seniorSubjectsCommerce.filter((s) => !seniorSubjectsScience.includes(s))],
     teachingApproach:
       "Founder Mr. Chandan Prajapati personally teaches Class 11 Mathematics; Mr. Prateek leads Physics, Mr. Amit leads Chemistry, Ms. Faujiya leads Biology, Ms. Sadhana leads Accountancy and Mr. Prateek (Economics) leads Economics - each a subject specialist rather than one teacher covering multiple subjects.",
@@ -242,10 +242,6 @@ export const classes: ClassInfo[] = [
         answer: "Our founder, Mr. Chandan Prajapati, personally teaches every Class 11 and 12 Mathematics batch at our Rohini Sector 7 centre.",
       },
       {
-        question: "Does Class 11 Science include JEE or NEET preparation?",
-        answer: "Yes, layered on top of the board syllabus - the board topics are taught first for concept clarity, then JEE/NEET-pattern practice is added.",
-      },
-      {
         question: "Can a student switch streams after joining Class 11?",
         answer: "Easiest in the first two to three weeks before batches settle into their syllabus pace - talk to us early if your child is unsure between streams.",
       },
@@ -258,9 +254,9 @@ export const classes: ClassInfo[] = [
     bandLabel: "Senior Secondary",
     programSlug: "grades-11-12",
     whoFor:
-      "Students in their final CBSE board year across Science (PCM/PCB), Commerce or Arts, balancing board scores with competitive exam prep where relevant.",
+      "Students in their final CBSE board year across Science (PCM/PCB), Commerce or Arts, focused on maximising board exam scores.",
     boardContext:
-      "CBSE Class 12 board examination preparation across streams, with Science students also continuing JEE/NEET foundation alongside boards.",
+      "CBSE Class 12 board examination preparation across streams.",
     subjects: [...seniorSubjectsScience, ...seniorSubjectsCommerce.filter((s) => !seniorSubjectsScience.includes(s))],
     teachingApproach:
       "Founder Mr. Chandan Prajapati personally teaches Class 12 Mathematics; Mr. Prateek leads Physics, Mr. Amit leads Chemistry, Ms. Faujiya leads Biology, Ms. Sadhana leads Accountancy and Mr. Prateek (Economics) leads Economics - the same specialists who taught the batch in Class 11.",
@@ -278,10 +274,6 @@ export const classes: ClassInfo[] = [
       {
         question: "Which subjects are available for Class 12?",
         answer: "Physics, Chemistry, Mathematics, Biology, Accountancy, Business Studies, Economics and English, depending on stream (Science PCM/PCB, Commerce or Arts).",
-      },
-      {
-        question: "Does ESA continue JEE/NEET prep in Class 12?",
-        answer: "Yes, for Science stream students, alongside board preparation - board topics are never skipped in favour of competitive-exam practice.",
       },
       {
         question: "How can a parent reach ESA from Rohini Sector 7?",

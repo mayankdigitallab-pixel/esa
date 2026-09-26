@@ -16,10 +16,9 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.theesa.in"),
-  title: {
-    default: "Excellent Students' Academy | Coaching in Delhi NCR & Lucknow",
-    template: "%s | Excellent Students' Academy",
-  },
+  // No title template: every page sets its own complete title (kept under
+  // 60 characters), and a brand suffix pushed most of them past that limit.
+  title: "Excellent Students' Academy | Coaching in Delhi & Lucknow",
   description:
     "Excellent Students' Academy (ESA) - Class 1 to 12 CBSE coaching in Delhi NCR and Lucknow. Three centres: Rohini Sector 7 & Rohini Sector 15 (North-West Delhi NCR) and Thakurganj (Lucknow). Weekly tests, demo classes, expert faculty.",
   keywords: [
@@ -36,12 +35,13 @@ export const metadata: Metadata = {
     "Excellent Students Academy",
   ],
   authors: [{ name: "Excellent Students' Academy" }],
-  alternates: { canonical: "https://www.theesa.in" },
+  // No default canonical here - an inherited one would point every page that
+  // forgets its own canonical (including 404s) at the homepage.
   openGraph: {
     title: "Excellent Students' Academy | Coaching in Delhi NCR & Lucknow",
     description:
       "Class 1 to 12 CBSE coaching across Delhi NCR and Lucknow - Rohini Sector 7 & 15 (North-West Delhi NCR) and Thakurganj (Lucknow). Expert faculty, weekly tests, demo classes.",
-    url: "https://www.theesa.in",
+    url: "https://www.theesa.in/",
     siteName: "Excellent Students' Academy",
     locale: "en_IN",
     type: "website",

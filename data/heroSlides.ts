@@ -132,7 +132,7 @@ export const heroSlides: HeroSlide[] = [
     accentColor: "red",
     description:
       "Same ESA faculty, same teaching method, in the comfort of your home. Available across most North Delhi localities we serve.",
-    primaryCta: { label: "Check Your Area", href: "/areas/rohini-sector-7" },
+    primaryCta: { label: "Check Your Area", href: "/centres" },
     secondaryCta: { label: "WhatsApp Us", href: "/contact" },
     image:
       "https://images.unsplash.com/photo-1588072432836-e10032774350?auto=format&fit=crop&w=1920&q=80",
