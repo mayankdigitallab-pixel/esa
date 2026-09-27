@@ -25,15 +25,9 @@ export async function generateMetadata({
     title,
     description: post.description,
     alternates: { canonical: `https://www.theesa.in/blog/${post.slug}` },
-    keywords: [
-      post.category,
-      `${post.category} Rohini`,
-      "ESA Rohini blog",
-      "CBSE coaching tips",
-      "coaching in Rohini",
-      "Excellent Students Academy",
-      ...(post.keywords ?? []),
-    ],
+    // Only the post's own keywords - a shared list repeated on every post
+    // made all blog pages look alike.
+    keywords: post.keywords,
     openGraph: {
       title,
       description: post.description,

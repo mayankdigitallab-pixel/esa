@@ -18,8 +18,6 @@ export const metadata: Metadata = {
     "ESA branches",
     "coaching in Rohini",
     "coaching in Lucknow Thakurganj",
-    "ESA Rohini Sector 7",
-    "ESA Rohini Sector 15",
     "coaching centre near me Rohini",
     "tuition centre near me Delhi",
     "coaching centre address Rohini",

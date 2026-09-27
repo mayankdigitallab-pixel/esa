@@ -44,10 +44,6 @@ export const metadata: Metadata = {
     "Class 1-12 coaching programs at ESA Rohini: Foundation, Middle School, Board Prep and Senior Secondary. Maths, Science, Commerce and more.",
   alternates: { canonical: "https://www.theesa.in/programs" },
   keywords: [
-    "Class 11 coaching Rohini",
-    "Class 12 coaching Rohini",
-    "Class 10 board coaching Rohini",
-    "Class 9 tuition Rohini",
     "Class 6 to 8 tuition Rohini",
     "primary tuition Rohini",
     "PCM coaching Rohini",

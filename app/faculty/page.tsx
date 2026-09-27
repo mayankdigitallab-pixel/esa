@@ -20,7 +20,6 @@ export const metadata: Metadata = {
     "best English teacher Rohini",
     "Commerce teacher Rohini",
     "experienced CBSE teachers Delhi",
-    "Chandan Prajapati ESA",
     "expert tutors Rohini",
   ],
   ...shareMeta({

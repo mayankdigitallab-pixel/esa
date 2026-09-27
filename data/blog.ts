@@ -665,6 +665,13 @@ export const blogPosts: BlogPost[] = [
       "https://images.unsplash.com/photo-1427504494785-3a9ca7044f45?auto=format&fit=crop&w=1200&q=80",
     excerpt:
       "Every student faces different challenges. The question is not whether your child is studying enough hours, it is whether the support around them matches the way they actually learn. Here is how to tell.",
+    keywords: [
+      "signs child needs academic support",
+      "child studying hard but marks not improving",
+      "learning support for school students",
+      "how to help child improve marks",
+      "tuition support for Rohini parents",
+    ],
     takeaways: [
       "Flat marks usually mean the wrong kind of support, not too little effort.",
       "Warning signs: long study hours with no improvement, the same score every test, no questions asked in class.",
@@ -744,6 +751,13 @@ export const blogPosts: BlogPost[] = [
       "https://images.unsplash.com/photo-1456735190827-d1262f71b8a3?auto=format&fit=crop&w=1200&q=80",
     excerpt:
       "The students who score 90 plus in CBSE boards are not the ones who studied more chapters. They are the ones whose Class 8 and 9 basics were rock solid. Here is what that actually means.",
+    keywords: [
+      "importance of strong fundamentals in studies",
+      "how CBSE toppers study",
+      "Class 8 and 9 basics for board exams",
+      "concept clarity vs rote learning",
+      "fundamentals for 90 percent in boards",
+    ],
     takeaways: [
       "Strong fundamentals mean solving without notes, explaining why, and spotting a known concept in a new question.",
       "Board papers test concepts in unfamiliar forms, so memorised answers cap scores well below 90%.",
@@ -830,6 +844,13 @@ export const blogPosts: BlogPost[] = [
       "https://images.unsplash.com/photo-1497486751825-1233686d5d80?auto=format&fit=crop&w=1200&q=80",
     excerpt:
       "A generalist tutor who teaches everything from Maths to History rarely produces a 90 percent scorer. Subject-specialist faculty does. Here is how subject-by-subject coaching changes outcomes at ESA Rohini.",
+    keywords: [
+      "subject specialist teachers Rohini",
+      "subject wise tuition Class 8 to 12",
+      "English tuition Rohini",
+      "Social Science tuition Class 10 Rohini",
+      "foundation classes Class 1 to 5 Rohini",
+    ],
     takeaways: [
       "From Class 8, every subject has its own answer-writing style and needs a specialist teacher.",
       "At ESA, Maths, Physics, Biology, English, Social Science and Commerce each have dedicated faculty.",
@@ -918,6 +939,13 @@ export const blogPosts: BlogPost[] = [
       "https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=1200&q=80",
     excerpt:
       "Every year, a handful of students from our Rohini batches score above 90% in CBSE boards. We sat down with seven of them. Here is exactly what they did, and how ESA fits into their routine.",
+    keywords: [
+      "CBSE 2026 toppers Rohini",
+      "how to score 90 in CBSE boards",
+      "Class 12 board topper routine",
+      "Class 10 board topper tips",
+      "Rohini students 95 percent CBSE",
+    ],
     takeaways: [
       "32 ESA students scored above 90% in the CBSE 2026 board exams.",
       "Every top scorer wrote every Saturday test and at least 8 mock papers before boards.",
@@ -992,6 +1020,13 @@ export const blogPosts: BlogPost[] = [
       "https://images.unsplash.com/photo-1577896851231-70ef18881754?auto=format&fit=crop&w=1200&q=80",
     excerpt:
       "Choosing a coaching institute in Rohini is harder than it looks. The flyers all say the same thing. Here is what a parent should actually check before paying that first month's fee.",
+    keywords: [
+      "how to choose a coaching institute",
+      "questions to ask a coaching centre",
+      "coaching institute checklist for parents",
+      "ideal batch size for coaching",
+      "coaching fees in Rohini",
+    ],
     takeaways: [
       "Ask for a full week in the actual batch, not a one-off demo show.",
       "Check the batch size first - around 15 to 20 students works well for board prep.",
@@ -1075,6 +1110,13 @@ export const blogPosts: BlogPost[] = [
       "https://images.unsplash.com/photo-1571260899304-425eee4c7efc?auto=format&fit=crop&w=1200&q=80",
     excerpt:
       "Parents who switch their child from another coaching centre in Rohini to ESA often ask, 'What is different?' Here are the five concrete habits that show up in every batch from Class 6 to Class 12.",
+    keywords: [
+      "study habits of good students",
+      "benefits of weekly tests",
+      "same day doubt clearing",
+      "monthly parent teacher meeting",
+      "teacher written chapter notes",
+    ],
     takeaways: [
       "A test every Saturday, never cancelled, for the whole year.",
       "Doubts are cleared at the end of every class, not postponed.",
@@ -1144,6 +1186,13 @@ export const blogPosts: BlogPost[] = [
       "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=1200&q=80",
     excerpt:
       "Class 10 is the first time most students sit a real board exam. The right coaching makes the difference between a panicked first attempt and a confident one. Here is what Rohini parents should look for.",
+    keywords: [
+      "Class 10 board coaching Rohini",
+      "when should Class 10 syllabus finish",
+      "Class 10 mock tests Rohini",
+      "Class 10 previous year papers practice",
+      "Class 10 evening tuition batch",
+    ],
     takeaways: [
       "Choose coaching that finishes the full syllabus by early January.",
       "Every subject, including Social Science, should be tested weekly.",
@@ -1209,6 +1258,13 @@ export const blogPosts: BlogPost[] = [
       "https://images.unsplash.com/photo-1453733190371-0a9bedd82893?auto=format&fit=crop&w=1200&q=80",
     excerpt:
       "Most Class 12 PCM students leave too little time for revision before boards. Here is the schedule that actually works, and the gaps in it that we cover at ESA in Rohini.",
+    keywords: [
+      "Class 12 PCM tuition Rohini",
+      "Class 12 physics numericals practice",
+      "Class 12 organic chemistry preparation",
+      "Class 12 maths integration practice",
+      "Class 12 board preparation plan",
+    ],
     takeaways: [
       "Finish the Class 12 PCM syllabus early and spend the final months on mocks and revision.",
       "Physics rewards regular numerical practice; Organic Chemistry cannot be crammed.",
@@ -1269,6 +1325,13 @@ export const blogPosts: BlogPost[] = [
       "https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?auto=format&fit=crop&w=1200&q=80",
     excerpt:
       "Class 11 Commerce is where most Class 10 average students discover they can actually score high. Here is what we teach, in what order, and why that order matters at ESA Rohini.",
+    keywords: [
+      "Class 11 commerce tuition Rohini",
+      "Class 11 accountancy tuition",
+      "business studies answer writing",
+      "Class 11 economics statistics tuition",
+      "commerce stream after Class 10",
+    ],
     takeaways: [
       "Accountancy rewards practice: journal entries should feel automatic by the end of Class 11.",
       "Business Studies needs year-round answer practice, not last-week cramming.",
@@ -1327,6 +1390,13 @@ export const blogPosts: BlogPost[] = [
       "https://images.unsplash.com/photo-1456406644174-8ddd4cd52a06?auto=format&fit=crop&w=1200&q=80",
     excerpt:
       "There is no special topper batch at ESA. There is just the same weekly Saturday test that every student writes. Eleven years of it has made our boards results what they are.",
+    keywords: [
+      "weekly test system in coaching",
+      "Saturday test tuition Rohini",
+      "board exam stamina practice",
+      "3 hour mock test practice",
+      "test results on WhatsApp for parents",
+    ],
     takeaways: [
       "Every Saturday, students write a three-hour closed-book test on that week's chapter.",
       "Papers are corrected within 48 hours by the teacher who taught the chapter.",
@@ -1385,6 +1455,13 @@ export const blogPosts: BlogPost[] = [
       "https://images.unsplash.com/photo-1635372722656-389f87a941b7?auto=format&fit=crop&w=1200&q=80",
     excerpt:
       "Many Class 8 students who scored 90 in Math suddenly hit 65 in Class 9. It is not their fault. The jump in abstraction is real. Here is how parents in Rohini should respond.",
+    keywords: [
+      "Class 9 maths feels difficult",
+      "maths anxiety in students",
+      "Class 9 maths tuition Rohini",
+      "how to improve maths in Class 9",
+      "Class 9 geometry proofs help",
+    ],
     takeaways: [
       "Class 9 adds proofs, abstract algebra and irrational numbers - memorisation stops working.",
       "Twenty minutes of daily practice beats two hours on Sunday.",
@@ -1449,6 +1526,13 @@ export const blogPosts: BlogPost[] = [
       "https://images.unsplash.com/photo-1543269865-cbf427effbad?auto=format&fit=crop&w=1200&q=80",
     excerpt:
       "Booking a free demo class is easy. Using those 7 days to actually evaluate whether the institute is right for your child is the hard part. Here is our parent checklist.",
+    keywords: [
+      "free demo class tuition Rohini",
+      "7 day free trial coaching",
+      "what to check in a demo class",
+      "trial class at coaching institute",
+      "coaching demo checklist",
+    ],
     takeaways: [
       "Use all 7 demo days - a single class is not enough to judge.",
       "Count the chairs, watch how doubts are handled and ask to see the notes.",
@@ -1511,6 +1595,13 @@ export const blogPosts: BlogPost[] = [
       "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=1200&q=80",
     excerpt:
       "Every Rohini parent eventually asks this question. We answer honestly - home tuition is better in some cases, coaching is better in others. Here is how to decide.",
+    keywords: [
+      "home tuition vs coaching",
+      "home tuition in Rohini",
+      "home tuition fees Rohini",
+      "home tutor Pitampura",
+      "coaching or tuition which is better",
+    ],
     takeaways: [
       "Home tuition works well for Class 1-4, one specific weak subject, or confidence issues.",
       "A coaching institute works better for Class 9-12: weekly tests, peers and a fixed routine.",
@@ -1582,7 +1673,7 @@ export const blogPosts: BlogPost[] = [
       "Class 10 board exam 2027 study plan",
       "CBSE Class 10 timetable for preparation",
       "Class 10 board preparation month wise",
-      "Class 10 coaching Rohini",
+      "Class 10 exam preparation timeline",
       "how to prepare for Class 10 boards",
     ],
     takeaways: [
@@ -1758,7 +1849,7 @@ export const blogPosts: BlogPost[] = [
       "Class 12 pre board preparation",
       "how to improve marks before Class 12 boards",
       "Class 12 board exam tips",
-      "Class 12 coaching Rohini",
+      "Class 12 final exam strategy",
     ],
     takeaways: [
       "Pre-board papers are often harder and marked more strictly than the board exam.",
@@ -1932,7 +2023,7 @@ export const blogPosts: BlogPost[] = [
       "how to understand child's report card",
       "parents guide half yearly exam",
       "improve marks second term",
-      "tuition in Rohini",
+      "half yearly exam result tips",
     ],
     takeaways: [
       "Read the checked answer sheets, not just the report card.",
@@ -2012,7 +2103,7 @@ export const blogPosts: BlogPost[] = [
       "Most families treat Class 9 as a relaxed year before the boards. In our experience, it is the year that quietly decides the Class 10 result.",
     keywords: [
       "Class 9 preparation for Class 10 boards",
-      "Class 9 coaching Rohini",
+      "Class 9 study habits for boards",
       "why Class 9 is important",
       "Class 9 Maths Science foundation",
       "Class 9 and 10 CBSE preparation",
@@ -2098,7 +2189,7 @@ export const blogPosts: BlogPost[] = [
       "Science vs Commerce vs Humanities",
       "stream selection after Class 10",
       "Class 11 stream guidance",
-      "Class 11 coaching Rohini",
+      "Class 11 subject choice guide",
     ],
     takeaways: [
       "Choose on interest, consistent performance and the kind of work the student enjoys.",
@@ -2446,6 +2537,596 @@ export const blogPosts: BlogPost[] = [
         question: "Which diagrams are important for Class 10 Science?",
         answer:
           "Ray diagrams for mirrors and lenses, the human eye, electric circuits, and Biology diagrams such as the digestive system, heart, nephron and neuron are frequently asked. Practise them with labels.",
+      },
+    ],
+  },
+  {
+    slug: "coaching-in-pitampura-class-6-to-12-parents-guide",
+    title: "Pitampura Parents' Checklist: Picking a Tuition Centre for Class 6-12",
+    seoTitle: "Pitampura Parents' Checklist for Choosing a Tuition",
+    description:
+      "Choosing coaching in Pitampura for Class 6 to 12? Commute, batch timings, what to check in a demo, and how ESA Rohini Sector 7 serves Pitampura families.",
+    date: "2026-09-27",
+    readTime: "7 min read",
+    category: "Local Guide",
+    author: "ESA Editorial",
+    cover:
+      "https://images.unsplash.com/photo-1577896851231-70ef18881754?auto=format&fit=crop&w=1200&q=80",
+    excerpt:
+      "Pitampura has no shortage of tuition centres. Here is how Pitampura parents can choose one sensibly - and why many of them pick our Rohini Sector 7 centre, a short ride away.",
+    keywords: [
+      "tuition centre checklist Pitampura",
+      "Pitampura tuition for Class 6 to 12",
+      "Kohat Enclave tuition classes",
+      "Saraswati Vihar tuition centre",
+      "Rani Bagh students tuition",
+    ],
+    takeaways: [
+      "ESA's Rohini Sector 7 centre is about 4.5 km from Pitampura, a 10-15 minute ride via Kohat Enclave or the Outer Ring Road side lanes.",
+      "Pick coaching on batch size, weekly tests and who actually teaches - not only on distance.",
+      "Use the 7-day free demo to test both the teaching and the daily commute.",
+    ],
+    body: `<p>Pitampura is one of North-West Delhi's busiest residential areas, and parents here can find a tuition centre on almost every block. That is exactly why choosing one is hard. This guide is for Pitampura families - including Kohat Enclave, Saraswati Vihar and Rani Bagh - who want a structured coaching option for Class 6 to 12, and it explains how our Rohini Sector 7 centre fits in.</p>
+
+<h2>How far is ESA from Pitampura?</h2>
+<p>Our flagship centre is at C7/72, 2nd Floor, Sector 7, Rohini - about 4.5 km from Pitampura. Most Pitampura students reach us in 10 to 15 minutes by auto via Kohat Enclave or the Outer Ring Road side lanes. The Kohat Enclave and Pitampura metro stations on the Red Line are the usual reference points, and Rohini West metro is about a 10-minute walk from the centre.</p>
+<p>That distance matters. A coaching centre that feels close in April can feel far in December, when Saturday tests and extra doubt sessions start. Before deciding, try the actual route at the actual batch time for a few days.</p>
+
+<h2>Which schools do our Pitampura students come from?</h2>
+<p>Our Pitampura students come from schools such as Bal Bharati Public School, PP International School and Aadharshila Vidyapeeth, along with other CBSE schools in the area. Because we know these schools' timings and exam calendars, batches are planned around school dismissal times.</p>
+
+<h2>What Pitampura parents should check in any coaching centre</h2>
+<ul>
+<li><strong>Batch size.</strong> Ask how many students sit in one class. At ESA, batches are capped at around 18.</li>
+<li><strong>Weekly testing.</strong> Ask to see the test calendar. A test that is "regular" but never scheduled is not a test.</li>
+<li><strong>Who teaches.</strong> Ask for the name of your child's teacher, and sit in that teacher's class.</li>
+<li><strong>Parent updates.</strong> Ask how and how often you will hear about your child's progress.</li>
+<li><strong>The real batch.</strong> A special demo class is not the same as a normal Tuesday evening.</li>
+</ul>
+
+<h2>How ESA works for Pitampura students</h2>
+<ul>
+<li>Class 1 to 12, CBSE, ICSE and State Board, across Maths, Science, Social Science, English, Hindi and Sanskrit, and Science and Commerce subjects in Class 11-12.</li>
+<li>A chapter test every Saturday, corrected within 48 hours, with a scorecard for parents on WhatsApp.</li>
+<li>A monthly meeting with the subject teacher.</li>
+<li>Faculty-written notes for Class 8 to 12, and founder Mr. Chandan Prajapati personally teaches Class 11-12 Maths at this centre.</li>
+</ul>
+<p>Batch timings are in the evening after school - see the current <a href="/timetable">timetable</a> for your child's class.</p>
+
+<h2>Neighbouring areas</h2>
+<p>Families from <a href="/areas/kohat-enclave">Kohat Enclave</a>, <a href="/areas/saraswati-vihar">Saraswati Vihar</a>, <a href="/areas/rani-bagh">Rani Bagh</a> and <a href="/areas/netaji-subhash-place">Netaji Subhash Place</a> follow very similar routes to the centre. You can see local details for Pitampura on our <a href="/areas/pitampura">Pitampura page</a>.</p>
+
+<h2>Book a free demo from Pitampura</h2>
+<p>The simplest way to decide is to try it. Book a free 7-day demo at our <a href="/rohini-sector-7">Rohini Sector 7 centre</a>: your child joins the real batch, writes the Saturday test, and you decide only after seeing the routine and the commute for yourself.</p>`,
+    faqs: [
+      {
+        question: "How long does it take to reach ESA Rohini Sector 7 from Pitampura?",
+        answer:
+          "Most Pitampura students reach the centre in 10 to 15 minutes by auto via Kohat Enclave or the Outer Ring Road side lanes. The centre is about 4.5 km away.",
+      },
+      {
+        question: "Which classes can a Pitampura student join at ESA?",
+        answer:
+          "Class 1 to 12 for CBSE, ICSE and State Boards, including Science and Commerce subjects in Class 11-12. ESA coaches for school and board exams only.",
+      },
+      {
+        question: "Can we try ESA before enrolling?",
+        answer:
+          "Yes. ESA offers a free 7-day demo in the actual batch your child would join, with no registration fee.",
+      },
+    ],
+  },
+  {
+    slug: "coaching-near-rohini-sector-13-14-16-17-sector-15-centre",
+    title: "Why Families in Rohini Sectors 13-17 Choose ESA's Sector 15 Branch",
+    seoTitle: "Rohini Sectors 13-17: Guide to ESA's Sector 15 Branch",
+    description:
+      "Looking for coaching near Rohini Sector 13, 14, 16 or 17? ESA's Sector 15 centre near the Sector 15 market offers Class 1-12 coaching with small batches.",
+    date: "2026-09-27",
+    readTime: "6 min read",
+    category: "Local Guide",
+    author: "ESA Editorial",
+    cover:
+      "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1200&q=80",
+    excerpt:
+      "Families in the Sector 13 to 17 belt of Rohini do not need to travel to Sector 7 for ESA coaching. Here is what our Sector 15 centre offers and how to reach it.",
+    keywords: [
+      "tuition centre near Sector 15 market Rohini",
+      "Rohini Sector 16 tuition classes",
+      "Sector 13 Rohini board exam classes",
+      "Sector 17 Rohini school tuition",
+      "Rohini Bawana road tuition centre",
+    ],
+    takeaways: [
+      "ESA's Sector 15 centre is close to the Sector 15 market and bus stop, 5-10 minutes from Sectors 13, 14 and 16.",
+      "It follows the same weekly test framework as the Sector 7 flagship, with smaller batches.",
+      "The centre is headed by Mr. Dhruv Narayan - call or WhatsApp +91 94580 12793 for a free demo.",
+    ],
+    body: `<p>For families living in the Sector 13 to 17 stretch of Rohini, travelling to Sector 7 every evening is not always practical. That is why Excellent Students' Academy runs a second Rohini centre in Sector 15. This guide explains what it offers and how to reach it.</p>
+
+<h2>Where is the Sector 15 centre?</h2>
+<p>The centre is in Sector 15, Rohini, New Delhi 110089, close to the Sector 15 market and bus stop - which makes parent drop-off easy. Students from Sectors 13, 14 and 16 usually reach it in 5 to 10 minutes by auto or e-rickshaw along the Rohini-Bawana road, and DTC and cluster buses stop nearby. Message us on WhatsApp and we will share the live Google Maps pin.</p>
+
+<h2>Who runs it?</h2>
+<p>The centre is headed by <strong>Mr. Dhruv Narayan</strong>, Centre Incharge, who handles admissions, parent meetings and academic planning for every batch at Sector 15. It is the same ESA - same management, same faculty framework and the same weekly tests as our Sector 7 flagship.</p>
+
+<h2>What is taught at Sector 15?</h2>
+<ul>
+<li>Class 1 to 12 - foundation classes, Class 9-10 CBSE board preparation, and Class 11-12.</li>
+<li>Smaller batches than the flagship centre.</li>
+<li>A chapter test every Saturday, corrected within 48 hours, with the scorecard sent to parents.</li>
+<li>Working hours: Monday to Saturday, 10:00 AM to 8:30 PM. Sunday closed.</li>
+</ul>
+<p>Batch timings for Sector 15 are on our <a href="/timetable">timetable page</a>.</p>
+
+<h2>Schools our Sector 15 students come from</h2>
+<p>Students at this centre come from schools across Sectors 13 to 17, including Rajiv Gandhi Public School, Mount Carmel School, Vidya Bharati School and St. Angel's School in Sector 15, Venkateshwar Global School and VSPK International School in Sector 13, and BCC Model School, Jain Bharti Model School and Rockfield Public School in Sector 16.</p>
+
+<h2>What parents say</h2>
+<p>On our Sector 15 Google Business Profile, one parent wrote that the teachers "pay good attention to the students' studies and patiently clear their doubts." You can read more reviews on the Google profile and on our <a href="/results">results page</a>.</p>
+
+<h2>Sector 15 or Sector 7?</h2>
+<p>If you live in Sectors 13 to 17 or along the Bawana road, Sector 15 is usually closer. If you live nearer Sectors 3 to 11, the <a href="/rohini-sector-7">Sector 7 flagship</a> is closer and has the widest batch choice, including founder-taught Class 11-12 Maths. Local pages: <a href="/areas/rohini-sector-13">Sector 13</a>, <a href="/areas/rohini-sector-16">Sector 16</a>, <a href="/areas/rohini-sector-17">Sector 17</a>.</p>
+
+<h2>Book a free demo at Sector 15</h2>
+<p>Visit the <a href="/rohini-sector-15">Sector 15 centre page</a> or call or WhatsApp +91 94580 12793. Your child can join the real batch for 7 days free before you decide.</p>`,
+    faqs: [
+      {
+        question: "Where is ESA's Rohini Sector 15 centre?",
+        answer:
+          "In Sector 15, Rohini, New Delhi 110089, close to the Sector 15 market and bus stop. ESA shares the exact Google Maps pin on WhatsApp.",
+      },
+      {
+        question: "Is the Sector 15 centre the same as ESA Sector 7?",
+        answer:
+          "Yes. It is run by the same management with the same faculty framework and weekly Saturday tests. Mr. Dhruv Narayan is the Centre Incharge.",
+      },
+      {
+        question: "What are the Sector 15 centre's working hours?",
+        answer:
+          "Monday to Saturday, 10:00 AM to 8:30 PM. Sunday is closed. Batch timings by class are listed on the ESA timetable page.",
+      },
+    ],
+  },
+  {
+    slug: "coaching-near-rithala-budh-vihar-vijay-vihar",
+    title: "Rithala, Budh Vihar and Vijay Vihar: Is Travelling to Rohini for Tuition Worth It?",
+    seoTitle: "Rithala & Budh Vihar Students: Is Rohini Tuition Worth It?",
+    description:
+      "Coaching options for Class 6-12 students in Rithala, Budh Vihar and Vijay Vihar: commute to Rohini, what to check, and how ESA serves this belt.",
+    date: "2026-09-26",
+    readTime: "6 min read",
+    category: "Local Guide",
+    author: "ESA Editorial",
+    cover:
+      "https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=1200&q=80",
+    excerpt:
+      "Students from Rithala, Budh Vihar and Vijay Vihar have a direct route into Rohini for coaching. Here is how the commute works and what to look for.",
+    keywords: [
+      "tuition near Rithala metro station",
+      "Budh Vihar tuition centre",
+      "Vijay Vihar tuition for Class 10",
+      "Pooth Kalan students tuition",
+      "north-west Delhi tuition commute",
+    ],
+    takeaways: [
+      "Rithala metro, the Red Line terminus, is the usual starting point for students from this belt.",
+      "ESA's Rohini Sector 7 centre is about 3.3 km from Rithala and about 6 km from Budh Vihar.",
+      "Try the evening commute during the free 7-day demo before committing.",
+    ],
+    body: `<p>Rithala, Budh Vihar and Vijay Vihar sit on the north-western edge of Rohini. Families here often ask whether it is worth travelling into Rohini for coaching, or whether a centre next door is enough. This guide gives an honest answer.</p>
+
+<h2>The commute</h2>
+<p><strong>Rithala</strong> is the Red Line metro terminus, next to Japanese Park and Metro Walk Mall, and is about 3.3 km from our Rohini Sector 7 centre. <strong>Budh Vihar</strong> is about 6 km away - students usually travel via Rithala or the Rohini-Bawana road, and Budh Vihar Market is about 2.4 km from Rithala metro. <strong>Vijay Vihar</strong>, near Budh Vihar and Pooth Kalan, is about 4.6 km away, and students typically use the Rithala metro corridor.</p>
+<p>For most students from this belt, the ride to the centre takes 12 to 30 minutes depending on where exactly they live. Rohini West metro is about a 10-minute walk from the centre.</p>
+
+<h2>Is it worth travelling for coaching?</h2>
+<p>A centre next door saves time, but only if it offers what your child needs. Travel is worth it when the coaching offers things the nearby option does not - small batches, a fixed weekly test, subject-specialist teachers and regular parent updates. Travel is not worth it if your child will start skipping classes because of it. Test the real commute at the real batch time before you decide.</p>
+
+<h2>What to check in any coaching centre</h2>
+<ul>
+<li>How many students sit in one batch.</li>
+<li>Whether there is a fixed weekly test, and when the results reach parents.</li>
+<li>Who actually teaches each subject.</li>
+<li>When the syllabus will be finished before board exams.</li>
+</ul>
+
+<h2>How ESA serves this belt</h2>
+<ul>
+<li>Class 1 to 12 coaching for CBSE, ICSE and State Board students.</li>
+<li>Batches of around 18 students and faculty who stay with the same batch.</li>
+<li>A chapter test every Saturday, checked within 48 hours, with a WhatsApp scorecard for parents.</li>
+<li>Evening batch timings after school - see the <a href="/timetable">timetable</a>.</li>
+</ul>
+<p>Students from Budh Vihar include those from Yuvashakti School, along with other CBSE schools in the area.</p>
+
+<h2>Local pages</h2>
+<p>See the details for <a href="/areas/rithala">Rithala</a>, <a href="/areas/budh-vihar">Budh Vihar</a> and <a href="/areas/vijay-vihar">Vijay Vihar</a>, and the neighbouring <a href="/areas/rohini-sector-10">Rohini Sector 10</a> and <a href="/areas/rohini-sector-11">Sector 11</a>.</p>
+
+<h2>Book a free demo</h2>
+<p>Book a free 7-day demo at our <a href="/rohini-sector-7">Rohini Sector 7 centre</a>. Your child joins the real batch, writes the Saturday test, and you see the daily commute for yourself before deciding.</p>`,
+    faqs: [
+      {
+        question: "How far is ESA Rohini Sector 7 from Rithala?",
+        answer:
+          "About 3.3 km. Rithala metro, the Red Line terminus near Japanese Park and Metro Walk Mall, is the usual starting point for students.",
+      },
+      {
+        question: "How do Budh Vihar students reach ESA?",
+        answer:
+          "Usually via Rithala or the Rohini-Bawana road. The centre is about 6 km from Budh Vihar.",
+      },
+      {
+        question: "Should a student travel from Budh Vihar or Vijay Vihar for coaching?",
+        answer:
+          "It is worth it if the coaching offers small batches, weekly tests and specialist teachers that nearby options do not, and if the commute is manageable. Test the route during the free 7-day demo.",
+      },
+    ],
+  },
+  {
+    slug: "coaching-for-shalimar-bagh-ashok-vihar-students",
+    title: "Class 9-12 Board Exam Prep for Shalimar Bagh and Ashok Vihar Students",
+    seoTitle: "Board Exam Prep for Shalimar Bagh & Ashok Vihar Students",
+    description:
+      "A guide for Shalimar Bagh and Ashok Vihar families choosing Class 9-12 coaching: commute to Rohini, batch size, board prep and the free demo.",
+    date: "2026-09-26",
+    readTime: "6 min read",
+    category: "Local Guide",
+    author: "ESA Editorial",
+    cover:
+      "https://images.unsplash.com/photo-1427504494785-3a9ca7044f45?auto=format&fit=crop&w=1200&q=80",
+    excerpt:
+      "Many Shalimar Bagh and Ashok Vihar students join ESA Rohini for Class 9 to 12 board and stream coaching. Here is how the commute and the routine work.",
+    keywords: [
+      "Class 12 tuition Shalimar Bagh",
+      "Ashok Vihar board exam tuition",
+      "Class 11 science tuition North Delhi",
+      "Ashok Vihar Phase 1 tuition",
+      "Shalimar Bagh Class 10 tuition",
+    ],
+    takeaways: [
+      "ESA Rohini Sector 7 is about 5.2 km from Shalimar Bagh and 6.1 km from Ashok Vihar - roughly 20-30 minutes.",
+      "Most students from these areas join for Class 9 to 12 board and stream coaching.",
+      "Small batches of around 18 are a common reason families make the trip.",
+    ],
+    body: `<p>Shalimar Bagh and Ashok Vihar families have plenty of coaching options nearby. Yet many students from both areas travel to Excellent Students' Academy in Rohini Sector 7, mostly for Class 9 to 12. This guide explains why, and how to decide whether it suits your child.</p>
+
+<h2>The commute</h2>
+<p>Our Rohini Sector 7 centre is about 5.2 km from Shalimar Bagh and about 6.1 km from Ashok Vihar. For most students that means a 20 to 30 minute ride. It is a real commute, which is why we recommend using the free demo week to try the route at the actual batch time before deciding.</p>
+
+<h2>Why families from these areas choose ESA</h2>
+<ul>
+<li><strong>Batch size.</strong> Several Shalimar Bagh students have switched to ESA after finding batches at other centres too large. Our batches are capped at around 18 students.</li>
+<li><strong>Board and stream coaching.</strong> Ashok Vihar students from Phase 1 to 3 mostly join us for Class 9 to 12 board and stream coaching.</li>
+<li><strong>Weekly tests.</strong> A chapter test every Saturday, checked within 48 hours, with a WhatsApp scorecard for parents.</li>
+<li><strong>Teachers who stay.</strong> Faculty stay with the same batch across years, so by Class 12 the teacher already knows the student's weak areas.</li>
+</ul>
+
+<h2>Schools our students come from</h2>
+<p>Students from Shalimar Bagh include those from Darbari Lal DAV Model School, DAV Public School Shalimar Bagh and Maxfort International School. From Ashok Vihar, they include students of Lions Public School, Prudence School and Mahavir Senior Model School.</p>
+
+<h2>Class 11-12 streams</h2>
+<p>ESA teaches Class 11 and 12 in Science (Physics, Chemistry, Maths, Biology) and Commerce (Accountancy, Business Studies, Economics), and our founder Mr. Chandan Prajapati personally teaches the Class 11-12 Maths batches at Sector 7. If your child is choosing a stream, read our guide on <a href="/blog/science-commerce-humanities-choose-stream-after-class-10">choosing a stream after Class 10</a>.</p>
+
+<h2>Local pages</h2>
+<p>See the <a href="/areas/shalimar-bagh">Shalimar Bagh</a> and <a href="/areas/ashok-vihar">Ashok Vihar</a> pages, and nearby <a href="/areas/wazirpur">Wazirpur</a> and <a href="/areas/model-town">Model Town</a>.</p>
+
+<h2>Book a free demo</h2>
+<p>Book a free 7-day demo at our <a href="/rohini-sector-7">Rohini Sector 7 centre</a>. Your child joins the real Class 9-12 batch, writes the Saturday test, and you see whether the routine and commute work for your family.</p>`,
+    faqs: [
+      {
+        question: "How far is ESA from Shalimar Bagh and Ashok Vihar?",
+        answer:
+          "The Rohini Sector 7 centre is about 5.2 km from Shalimar Bagh and about 6.1 km from Ashok Vihar, usually a 20 to 30 minute ride.",
+      },
+      {
+        question: "Which classes do Shalimar Bagh and Ashok Vihar students usually join?",
+        answer:
+          "Mostly Class 9 to 12 board and stream coaching, though ESA teaches Class 1 to 12.",
+      },
+      {
+        question: "Who teaches Class 11-12 Maths at ESA Sector 7?",
+        answer:
+          "Founder Mr. Chandan Prajapati personally teaches the Class 11 and 12 Maths batches at the Rohini Sector 7 centre.",
+      },
+    ],
+  },
+  {
+    slug: "coaching-for-nangloi-mundka-kirari-students",
+    title: "Nangloi, Mundka and Kirari: An Honest Guide to Travelling for Tuition",
+    seoTitle: "Nangloi, Mundka & Kirari: An Honest Tuition Travel Guide",
+    description:
+      "Should students from Nangloi, Mundka or Kirari travel to Rohini for coaching? Commute, when it is worth it, and what ESA Rohini offers.",
+    date: "2026-09-25",
+    readTime: "6 min read",
+    category: "Local Guide",
+    author: "ESA Editorial",
+    cover:
+      "https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?auto=format&fit=crop&w=1200&q=80",
+    excerpt:
+      "Nangloi, Mundka and Kirari are a longer ride from Rohini. Here is an honest look at when travelling for coaching makes sense, and when it does not.",
+    keywords: [
+      "tuition near Nangloi metro",
+      "Mundka students tuition classes",
+      "Kirari Suleman Nagar tuition",
+      "West Delhi Class 10 tuition",
+      "Green Line students tuition Rohini",
+    ],
+    takeaways: [
+      "ESA Rohini Sector 7 is about 7 km from Kirari, 8 km from Nangloi and 11 km from Mundka.",
+      "Longer commutes suit older students (Class 9-12) who need structured board preparation.",
+      "Always try the real commute during the free 7-day demo before enrolling.",
+    ],
+    body: `<p>Nangloi, Mundka and Kirari Suleman Nagar are on the western side of Rohini. Some families from these areas send their children to Excellent Students' Academy in Rohini Sector 7, especially for board classes. But a longer commute is a real cost, and we would rather you decide with the full picture.</p>
+
+<h2>The commute, area by area</h2>
+<ul>
+<li><strong>Kirari Suleman Nagar</strong> - about 7 km. A dense residential belt between Nangloi and Rohini; students come by auto or e-rickshaw via Nangloi or Rithala.</li>
+<li><strong>Nangloi</strong> - about 8 km. Near Nangloi metro (Green Line) and Nangloi Chowk on the Rohtak Road; students use the Green Line or an auto along the Rohtak Road.</li>
+<li><strong>Mundka</strong> - about 11 km. Near Mundka metro on the Green Line and the Delhi-Bahadurgarh road.</li>
+</ul>
+
+<h2>When travelling for coaching makes sense</h2>
+<ul>
+<li>For <strong>Class 9 to 12</strong>, when board preparation needs a fixed weekly test, full mock papers and subject specialists.</li>
+<li>When the student can manage the commute on their own and batch timings fit the school day.</li>
+<li>When nearby options do not offer small batches or regular parent updates.</li>
+</ul>
+
+<h2>When it may not</h2>
+<ul>
+<li>For young children in <strong>Class 1 to 5</strong>, a long daily commute is usually not worth it. A good local tutor may be the better choice.</li>
+<li>If the commute will cut into sleep or school homework, the extra coaching can do more harm than good.</li>
+</ul>
+
+<h2>What ESA offers</h2>
+<ul>
+<li>Class 1 to 12 coaching for CBSE, ICSE and State Board students.</li>
+<li>Batches of around 18, a chapter test every Saturday checked within 48 hours, and a WhatsApp scorecard for parents.</li>
+<li>Monthly parent meetings with the subject teacher.</li>
+<li>Evening batch timings - see the <a href="/timetable">timetable</a>.</li>
+</ul>
+
+<h2>Local pages</h2>
+<p>See <a href="/areas/nangloi">Nangloi</a>, <a href="/areas/mundka">Mundka</a> and <a href="/areas/kirari">Kirari</a>, and nearby <a href="/areas/bahadurgarh">Bahadurgarh</a>.</p>
+
+<h2>Try it before you decide</h2>
+<p>Book a free 7-day demo at our <a href="/rohini-sector-7">Rohini Sector 7 centre</a>. Your child attends the real batch at the real time, so you can judge both the teaching and the commute before enrolling.</p>`,
+    faqs: [
+      {
+        question: "How far is ESA Rohini from Nangloi, Mundka and Kirari?",
+        answer:
+          "The Rohini Sector 7 centre is about 7 km from Kirari Suleman Nagar, 8 km from Nangloi and 11 km from Mundka.",
+      },
+      {
+        question: "Is it worth travelling from Nangloi to Rohini for coaching?",
+        answer:
+          "For Class 9 to 12 students who need structured board preparation and can manage the commute, often yes. For young children, a long daily commute is usually not worth it.",
+      },
+      {
+        question: "How can we test the commute before enrolling?",
+        answer:
+          "ESA's free 7-day demo lets your child attend the real batch at the real time, so you can judge the travel as well as the teaching.",
+      },
+    ],
+  },
+  {
+    slug: "coaching-in-lucknow-thakurganj-cbse-up-board",
+    title: "UP Board and CBSE Tuition in Thakurganj, Lucknow: ESA's Chowk Centre",
+    seoTitle: "UP Board & CBSE Tuition in Thakurganj, Lucknow",
+    description:
+      "ESA's Lucknow centre on Hardoi Road, Chowk, Thakurganj offers Class 1-12 CBSE and UP Board coaching with bilingual teaching. How to reach it and what to expect.",
+    date: "2026-09-25",
+    readTime: "6 min read",
+    category: "Local Guide",
+    author: "ESA Editorial",
+    cover: "/centres/lucknow-1.jpg",
+    excerpt:
+      "Excellent Students' Academy's first Uttar Pradesh centre is in Thakurganj, old Lucknow. Here is what it offers CBSE and UP Board families, and how to reach it.",
+    keywords: [
+      "UP Board tuition Lucknow",
+      "Thakurganj tuition centre",
+      "Chowk Lucknow tuition classes",
+      "bilingual CBSE tuition Lucknow",
+      "Daliganj students tuition",
+    ],
+    takeaways: [
+      "ESA Lucknow is on the Hardoi Road side of Chowk, Thakurganj, near Basant Vihar Colony.",
+      "Teaching is bilingual: concepts in Hindi, answer-writing in English - for CBSE and UP Board students.",
+      "The centre is headed by Mr. Ashok Rastogi - call or WhatsApp +91 97165 02093.",
+    ],
+    body: `<p>Excellent Students' Academy started in Rohini, Delhi, in 2015. Our Lucknow centre in Thakurganj is our first in Uttar Pradesh, bringing the same weekly-test coaching framework to families in old Lucknow. This guide covers what it offers and how to reach it.</p>
+
+<h2>Where is ESA Lucknow?</h2>
+<p>The centre is at I I C Computer Institute, Building Sparkling Careers, Chowk, Thakur Ganj Hardoi Road, Thakurganj, Basant Vihar Colony, Lucknow 226003 - on the Hardoi Road side of Chowk.</p>
+<ul>
+<li><strong>Thakurganj and Basant Vihar Colony</strong> - many students walk in.</li>
+<li><strong>Daliganj</strong> - about a 10-15 minute auto ride.</li>
+<li><strong>Aminabad</strong> - around 20 minutes by auto.</li>
+<li><strong>Hazratganj</strong> - 25-30 minutes; direct city buses run via Hardoi Road and Chowk.</li>
+</ul>
+
+<h2>CBSE and UP Board</h2>
+<p>We follow the CBSE syllabus as our main framework, but we also teach UP Board students and align teaching to UP Board exam patterns where needed. Maths, Science and Commerce subjects overlap heavily across the two boards, so both groups can study together for most topics.</p>
+
+<h2>Bilingual teaching</h2>
+<p>Concepts are explained in Hindi for clarity, while answer-writing, formulas and definitions are taught in English. That way students are ready for board papers in either language and do not lose marks to unfamiliar terminology.</p>
+
+<h2>Who runs the centre?</h2>
+<p>The Lucknow centre is headed by <strong>Mr. Ashok Rastogi</strong>, B.Tech in Mechanical Engineering, with eleven years in education and centre management. He is the direct point of contact for parents. The faculty is trained at our Rohini flagship and follows the same weekly test framework.</p>
+
+<h2>What students get</h2>
+<ul>
+<li>Class 1 to 12 coaching - foundation classes and board preparation.</li>
+<li>A regular chapter test with feedback for parents.</li>
+<li>A free demo before enrolling.</li>
+</ul>
+
+<h2>Book a free demo in Lucknow</h2>
+<p>Call or WhatsApp <strong>+91 97165 02093</strong>, or visit the <a href="/lucknow">ESA Lucknow page</a> to fill the demo form. We will fix a slot in the running batch for your child's class so you can see the teaching before deciding.</p>`,
+    faqs: [
+      {
+        question: "Where is the ESA coaching centre in Lucknow?",
+        answer:
+          "On the Hardoi Road side of Chowk in Thakurganj, at I I C Computer Institute, Building Sparkling Careers, Basant Vihar Colony, Lucknow 226003.",
+      },
+      {
+        question: "Does ESA Lucknow teach UP Board students?",
+        answer:
+          "Yes. CBSE is the main framework, but UP Board students are taught too, with teaching aligned to UP Board exam patterns where needed.",
+      },
+      {
+        question: "Is teaching at ESA Lucknow in Hindi or English?",
+        answer:
+          "Bilingual. Concepts are explained in Hindi, while answer-writing, formulas and definitions are taught in English.",
+      },
+    ],
+  },
+  {
+    slug: "evening-coaching-batch-timings-rohini-after-school",
+    title: "After-School Tuition Timings: How Rohini Parents Should Pick a Batch",
+    seoTitle: "After-School Tuition Timings: Picking the Right Batch",
+    description:
+      "How to pick an evening coaching batch in Rohini that fits school, homework and sleep - with real ESA batch timings for Sector 7 and Sector 15.",
+    date: "2026-09-24",
+    readTime: "5 min read",
+    category: "Local Guide",
+    author: "ESA Editorial",
+    cover:
+      "https://images.unsplash.com/photo-1506784983877-45594efa4cbe?auto=format&fit=crop&w=1200&q=80",
+    excerpt:
+      "The right coaching batch is the one your child can attend every day without exhaustion. Here is how to choose timings around school in Rohini.",
+    keywords: [
+      "after school tuition timings",
+      "tuition batch time for Class 10",
+      "evening tuition classes Rohini",
+      "best time for tuition after school",
+      "Rohini tuition batch schedule",
+    ],
+    takeaways: [
+      "Leave at least an hour between school dismissal and the batch for food and rest.",
+      "ESA batches at Sector 7 and Sector 15 run in the evening, roughly between 3 PM and 9 PM depending on class.",
+      "Keep the final hour before sleep free for homework and revision.",
+    ],
+    body: `<p>Parents in Rohini often focus on which coaching to choose and forget a question that matters just as much: which batch time. A good batch at the wrong time leads to a tired child, rushed homework and skipped classes. This guide helps you pick timings that work.</p>
+
+<h2>Start with the school day</h2>
+<p>Note your child's school dismissal time and travel time home. Leave at least an hour for lunch, rest and a short break before the coaching batch. A child who walks straight from school into a two-hour class rarely learns well in the second hour.</p>
+
+<h2>ESA batch timings at a glance</h2>
+<p>At both our Rohini centres, batches run in the evening after school. Depending on the class and subject, they fall roughly between 3 PM and 9 PM - for example, junior classes (Class 1 to 5) usually start mid-afternoon, while senior batches for Class 9 to 12 run later in the evening. Exact timings are different for Sector 7 and Sector 15 and change with the session, so always check the current <a href="/timetable">ESA timetable</a>, where you can download or share the schedule on WhatsApp.</p>
+
+<h2>How to choose between two slots</h2>
+<ul>
+<li><strong>Younger children</strong> do better with an earlier slot so they have time to play and sleep on time.</li>
+<li><strong>Class 9 to 12</strong> students can manage later batches, but should still keep the last hour of the evening for homework and revision.</li>
+<li><strong>Commute:</strong> if the centre is 20-30 minutes away, include the ride both ways in your calculation.</li>
+<li><strong>Saturdays</strong> at ESA are for the weekly chapter test - keep that slot free.</li>
+</ul>
+
+<h2>Signs the timing is wrong</h2>
+<ul>
+<li>Your child is regularly too tired to do school homework.</li>
+<li>Bedtime keeps getting later.</li>
+<li>Your child starts missing classes for small reasons.</li>
+</ul>
+<p>If you see these, change the batch before changing the coaching.</p>
+
+<h2>Which centre is closer?</h2>
+<p>Families in Rohini Sectors 3 to 11, Pitampura and nearby areas are usually closer to our <a href="/rohini-sector-7">Sector 7 centre</a>. Families in Sectors 13 to 17 and along the Bawana road are usually closer to our <a href="/rohini-sector-15">Sector 15 centre</a>. Both follow the same weekly test framework.</p>
+
+<h2>Try a batch for a week</h2>
+<p>During ESA's free 7-day demo, your child attends the real batch at the real time. That is the best way to find out whether the timing works for your family before you enrol.</p>`,
+    faqs: [
+      {
+        question: "What time are ESA coaching batches in Rohini?",
+        answer:
+          "Batches run in the evening after school, roughly between 3 PM and 9 PM depending on the class, subject and centre. The current timetable is on the ESA timetable page.",
+      },
+      {
+        question: "How much gap should there be between school and coaching?",
+        answer:
+          "At least an hour, so the child can eat and rest. Include travel time to the centre as well.",
+      },
+      {
+        question: "Which ESA centre in Rohini is closer to me?",
+        answer:
+          "Sectors 3 to 11 and Pitampura are usually closer to the Sector 7 centre; Sectors 13 to 17 and the Bawana road side are usually closer to the Sector 15 centre.",
+      },
+    ],
+  },
+  {
+    slug: "inside-esa-rohini-sector-7-flagship-coaching-centre",
+    title: "A Week at ESA's Rohini Sector 7 Centre: Classrooms, Teachers and Tests",
+    seoTitle: "A Week at ESA Rohini Sector 7: Classrooms & Teachers",
+    description:
+      "A look inside Excellent Students' Academy's flagship centre at C7/72, Sector 7, Rohini: location, classrooms, who teaches and how a week runs.",
+    date: "2026-09-24",
+    readTime: "6 min read",
+    category: "Local Guide",
+    author: "ESA Editorial",
+    cover:
+      "https://images.unsplash.com/photo-1588072432836-e10032774350?auto=format&fit=crop&w=1200&q=80",
+    excerpt:
+      "Our Rohini Sector 7 centre has been running since 2015. Here is where it is, who teaches there, and what a normal week looks like for a student.",
+    keywords: [
+      "tuition near Rohini West metro",
+      "C block Rohini Sector 7 tuition",
+      "air conditioned tuition centre Rohini",
+      "Class 11 12 maths tuition Rohini",
+      "Rohini tuition centre with parking",
+    ],
+    takeaways: [
+      "ESA's flagship is at C7/72, 2nd Floor, Sector 7, Rohini - about a 10-minute walk from Rohini West metro.",
+      "Running since 2015, with fully air-conditioned classrooms across two floors.",
+      "Founder Mr. Chandan Prajapati teaches Class 11-12 Maths here; Ms. Mamta is Centre Incharge.",
+    ],
+    body: `<p>Excellent Students' Academy began in Rohini Sector 7 in 2015, and this centre is still our flagship. If you are thinking about coaching in Rohini, here is what the centre is actually like.</p>
+
+<h2>Where it is</h2>
+<p>The centre is at <strong>C7/72, 2nd Floor, Sector 7, Rohini, New Delhi 110085</strong>, on the main C-block road - look for the ESA board on the building. It is about a 10-minute walk from Rohini West metro on the Red Line; autos from the station charge around Rs 30-40. It is also a short ride from the Rithala and Rohini East stations.</p>
+<p>Two-wheeler parking is available on the street outside, and four-wheeler parking can be found in the C-block lane.</p>
+
+<h2>Who teaches here</h2>
+<ul>
+<li><strong>Mr. Chandan Prajapati</strong>, our founder, personally teaches the Class 11 and 12 Maths batches.</li>
+<li><strong>Ms. Mamta</strong> is the Centre Incharge and runs the foundation classes for our youngest learners with a senior junior-class team.</li>
+<li>Subject-specialist teachers handle Physics, Chemistry, Biology, English, Social Science and Commerce - see the <a href="/faculty">faculty page</a>.</li>
+</ul>
+
+<h2>The classrooms</h2>
+<p>The centre runs across two floors, and all classrooms are fully air-conditioned. Batches are capped at around 18 students so that every student gets individual attention.</p>
+
+<h2>What a week looks like</h2>
+<ul>
+<li><strong>Monday to Friday:</strong> evening batches after school. Each concept is explained, demonstrated, practised independently and then tested with a variation.</li>
+<li><strong>Saturday:</strong> a chapter test on what was taught that week, corrected within 48 hours, with a scorecard to parents on WhatsApp.</li>
+<li><strong>First Saturday of the month:</strong> a sit-down parent meeting with the subject teacher.</li>
+</ul>
+
+<h2>Who studies here</h2>
+<p>Students come from Rohini Sectors 3, 5, 9 and 11, and from Pitampura, Kohat Enclave, Saraswati Vihar, Rani Bagh, Shalimar Bagh and Ashok Vihar. Many attend nearby CBSE schools such as DAV Public School, Vishal Bharti Public School and Mount Abu Public School.</p>
+
+<h2>Results</h2>
+<p>Our most recent CBSE batch averaged 84%, every student passed, and 32 students scored above 90%. See the full <a href="/results">results</a>.</p>
+
+<h2>Visit the centre</h2>
+<p>Walk in any working day - Monday to Saturday, 10:00 AM to 8:30 PM - or call or WhatsApp +91 87506 63995. Your child can join a real batch for 7 days free. More details are on the <a href="/rohini-sector-7">Rohini Sector 7 centre page</a>.</p>`,
+    faqs: [
+      {
+        question: "Where exactly is ESA Rohini Sector 7?",
+        answer:
+          "C7/72, 2nd Floor, Sector 7, Rohini, New Delhi 110085, on the main C-block road, about a 10-minute walk from Rohini West metro station.",
+      },
+      {
+        question: "Who teaches Class 11-12 Maths at the Sector 7 centre?",
+        answer:
+          "ESA's founder, Mr. Chandan Prajapati, personally teaches the Class 11 and 12 Maths batches at this centre.",
+      },
+      {
+        question: "Is there parking at ESA Rohini Sector 7?",
+        answer:
+          "Two-wheeler parking is available on the street outside the building, and four-wheeler parking can be found in the C-block lane.",
       },
     ],
   },

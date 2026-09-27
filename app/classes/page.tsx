@@ -13,13 +13,6 @@ export const metadata: Metadata = {
     "Class 6 to 12 coaching at ESA Rohini: subjects, teaching approach, weekly tests and doubt support for every class. Book a free demo.",
   alternates: { canonical: "https://www.theesa.in/classes" },
   keywords: [
-    "Class 6 coaching Rohini",
-    "Class 7 coaching Rohini",
-    "Class 8 coaching Rohini",
-    "Class 9 coaching Rohini",
-    "Class 10 coaching Rohini",
-    "Class 11 coaching Rohini",
-    "Class 12 coaching Rohini",
     "classwise coaching Rohini",
   ],
   ...shareMeta({

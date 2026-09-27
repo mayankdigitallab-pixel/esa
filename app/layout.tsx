@@ -21,19 +21,6 @@ export const metadata: Metadata = {
   title: "Excellent Students' Academy | Coaching in Delhi & Lucknow",
   description:
     "Excellent Students' Academy (ESA) - Class 1 to 12 CBSE coaching in Delhi NCR and Lucknow. Three centres: Rohini Sector 7 & Rohini Sector 15 (North-West Delhi NCR) and Thakurganj (Lucknow). Weekly tests, demo classes, expert faculty.",
-  keywords: [
-    "coaching in Rohini",
-    "tuition in Rohini",
-    "coaching in Delhi NCR",
-    "best coaching institute in Delhi NCR",
-    "CBSE coaching Delhi NCR",
-    "coaching in North West Delhi",
-    "coaching in Lucknow",
-    "coaching in Thakurganj",
-    "best coaching institute Delhi",
-    "Class 11 12 coaching Rohini",
-    "Excellent Students Academy",
-  ],
   authors: [{ name: "Excellent Students' Academy" }],
   // No default canonical here - an inherited one would point every page that
   // forgets its own canonical (including 404s) at the homepage.
