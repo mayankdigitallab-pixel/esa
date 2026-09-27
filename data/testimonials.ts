@@ -15,6 +15,49 @@ export type Testimonial = {
 // they read as generic and should be swapped for real, attributable testimonials.
 // Schema supports `photo` and `source` for richer reviews (per P4.13).
 export const testimonials: Testimonial[] = [
+  // Verbatim Google reviews from the ESA Rohini Sector 15 Business Profile (screenshots, 2026-09-27).
+  {
+    name: "sailesh giri",
+    role: "Parent",
+    rating: 5,
+    source: "Google review \u00b7 ESA Rohini Sector 15",
+    text: "This coaching centre is very good for my children. The teachers are very polite, cooperative, and supportive. They pay good attention to the students' studies and patiently clear their doubts. I have seen a good improvement in my children's studies. Overall, I am very satisfied with the coaching centre.",
+  },
+  {
+    name: "Jimmy Singh",
+    role: "Google reviewer",
+    rating: 5,
+    source: "Google review \u00b7 ESA Rohini Sector 15",
+    text: "Excellent Student Academy is one of the best coaching institutes. Teachers are very supportive, teaching quality is excellent, and every doubt is explained properly. Highly recommended for students who want good guidance and quality education.",
+  },
+  {
+    name: "Gayatri Mathur",
+    role: "Google reviewer",
+    rating: 5,
+    source: "Google review \u00b7 ESA Rohini Sector 15",
+    text: "This academy is very good, all the teachers here are the best.",
+  },
+  {
+    name: "Vivek Kumar Thakur",
+    role: "Google reviewer",
+    rating: 5,
+    source: "Google review \u00b7 ESA Rohini Sector 15",
+    text: "Awesome experience.\nNice and experienced faculties.\nHighly recommended for all students from class 1 to 12.",
+  },
+  {
+    name: "Siddharth Chadha",
+    role: "Google reviewer",
+    rating: 5,
+    source: "Google review \u00b7 ESA Rohini Sector 15",
+    text: "It is a brilliant and very nice tuitions. There are very qualified and polite teachers. Teachers are here, gives a complete attention on the students.",
+  },
+  {
+    name: "Aditya Gaur",
+    role: "Student",
+    rating: 5,
+    source: "Google review \u00b7 ESA Rohini Sector 15",
+    text: "i had a very good experience here. I used to maths very rarely but after coming here i am solving questions in free time too and math has became too easy for me",
+  },
   {
     name: "Sneha Garg",
     role: "Class 10 · 89% · Himalyan Public School",

@@ -22,7 +22,7 @@ export type Area = {
    * never invented results, names or reviews. Each renders only when present.
    */
   localResults?: string;
-  testimonial?: { quote: string; by: string };
+  testimonial?: { quote: string; by: string; source?: string };
 };
 
 // Localities around Rohini Sector 7 where most ESA students come from.
@@ -80,6 +80,11 @@ export const nearbyAreas: Area[] = [
     slug: "rohini-sector-13",
     name: "Rohini Sector 13",
     nearestCentre: "rohini-sector-15",
+    testimonial: {
+      quote: "This coaching centre is very good for my children. The teachers are very polite, cooperative, and supportive. They pay good attention to the students' studies and patiently clear their doubts. I have seen a good improvement in my children's studies. Overall, I am very satisfied with the coaching centre.",
+      by: "sailesh giri",
+      source: "Google review \u00b7 ESA Rohini Sector 15",
+    },
     distanceKm: 3.2,
     description: "Students from Sector 13 enrol for Class 1 to 12 board coaching.",
     landmark: "Near Venkateshwar Global School, Sector 13",
@@ -92,6 +97,11 @@ export const nearbyAreas: Area[] = [
     slug: "rohini-sector-17",
     name: "Rohini Sector 17",
     nearestCentre: "rohini-sector-15",
+    testimonial: {
+      quote: "i had a very good experience here. I used to maths very rarely but after coming here i am solving questions in free time too and math has became too easy for me",
+      by: "Aditya Gaur",
+      source: "Google review \u00b7 ESA Rohini Sector 15",
+    },
     distanceKm: 4.1,
     description: "Many of our Class 11 and 12 students come from Sector 17.",
     landmark: "Near the Rohini Sector 18-19 Metro Station (Yellow Line)",
@@ -313,6 +323,11 @@ export const nearbyAreas: Area[] = [
     slug: "rohini-sector-16",
     name: "Rohini Sector 16",
     nearestCentre: "rohini-sector-15",
+    testimonial: {
+      quote: "Excellent Student Academy is one of the best coaching institutes. Teachers are very supportive, teaching quality is excellent, and every doubt is explained properly. Highly recommended for students who want good guidance and quality education.",
+      by: "Jimmy Singh",
+      source: "Google review \u00b7 ESA Rohini Sector 15",
+    },
     distanceKm: 3.9,
     description: "Board prep and foundation classes for Rohini Sector 16 families, close to our Sector 15 centre.",
     landmark: "Near BCC Model School, Sector 16",
@@ -325,6 +340,11 @@ export const nearbyAreas: Area[] = [
     slug: "rohini-sector-18",
     name: "Rohini Sector 18",
     nearestCentre: "rohini-sector-15",
+    testimonial: {
+      quote: "Awesome experience. Nice and experienced faculties. Highly recommended for all students from class 1 to 12.",
+      by: "Vivek Kumar Thakur",
+      source: "Google review \u00b7 ESA Rohini Sector 15",
+    },
     distanceKm: 4.7,
     description: "Coaching for Rohini Sector 18 students, served by our Sector 15 centre.",
     landmark: "Rohini Sector 18-19 Metro Station (Yellow Line)",
@@ -337,6 +357,11 @@ export const nearbyAreas: Area[] = [
     slug: "rohini-sector-19",
     name: "Rohini Sector 19",
     nearestCentre: "rohini-sector-15",
+    testimonial: {
+      quote: "It is a brilliant and very nice tuitions. There are very qualified and polite teachers. Teachers are here, gives a complete attention on the students.",
+      by: "Siddharth Chadha",
+      source: "Google review \u00b7 ESA Rohini Sector 15",
+    },
     distanceKm: 5.1,
     description: "Class 1 to 12 coaching for Rohini Sector 19 residents.",
     landmark: "Rohini Sector 18-19 Metro Station (Yellow Line)",
@@ -349,6 +374,11 @@ export const nearbyAreas: Area[] = [
     slug: "rohini-sector-20",
     name: "Rohini Sector 20",
     nearestCentre: "rohini-sector-15",
+    testimonial: {
+      quote: "This academy is very good, all the teachers here are the best.",
+      by: "Gayatri Mathur",
+      source: "Google review \u00b7 ESA Rohini Sector 15",
+    },
     distanceKm: 5.4,
     description: "Board exam preparation for Rohini Sector 20 students.",
     landmark: "Near Sector 19 and Sector 21, Rohini",
@@ -361,6 +391,11 @@ export const nearbyAreas: Area[] = [
     slug: "rohini-sector-21",
     name: "Rohini Sector 21",
     nearestCentre: "rohini-sector-15",
+    testimonial: {
+      quote: "This coaching centre is very good for my children. The teachers are very polite, cooperative, and supportive. They pay good attention to the students' studies and patiently clear their doubts. I have seen a good improvement in my children's studies. Overall, I am very satisfied with the coaching centre.",
+      by: "sailesh giri",
+      source: "Google review \u00b7 ESA Rohini Sector 15",
+    },
     distanceKm: 5.7,
     description: "Coaching for Rohini Sector 21 families.",
     landmark: "Near Sector 20 and Sector 22, Rohini",
@@ -384,6 +419,11 @@ export const nearbyAreas: Area[] = [
     slug: "rohini-sector-24",
     name: "Rohini Sector 24",
     nearestCentre: "rohini-sector-15",
+    testimonial: {
+      quote: "Excellent Student Academy is one of the best coaching institutes. Teachers are very supportive, teaching quality is excellent, and every doubt is explained properly. Highly recommended for students who want good guidance and quality education.",
+      by: "Jimmy Singh",
+      source: "Google review \u00b7 ESA Rohini Sector 15",
+    },
     distanceKm: 6.4,
     description: "Coaching for Rohini Sector 24 students near the Bawana Road stretch.",
     landmark: "Near Delhi Public School, Sector 24",

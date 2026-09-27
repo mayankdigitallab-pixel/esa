@@ -7,6 +7,10 @@ const LEGACY_REDIRECTS: Record<string, string> = {
   "/success-stories": "/results",
   "/sample-page": "/",
   "/shakurpur": "/areas/pitampura",
+  // Old WordPress (Yoast) sitemaps still registered in Search Console.
+  "/sitemap_index.xml": "/sitemap.xml",
+  "/page-sitemap.xml": "/sitemap.xml",
+  "/post-sitemap.xml": "/sitemap.xml",
   // The branch landing pages are the canonical pages for these two sectors.
   "/areas/rohini-sector-7": "/rohini-sector-7",
   "/areas/rohini-sector-15": "/rohini-sector-15",

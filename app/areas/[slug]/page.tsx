@@ -335,10 +335,16 @@ export default async function AreaPage({
                 ) : null}
                 {area.testimonial ? (
                   <figure className="rounded-2xl border border-neutral-200 bg-white p-6">
+                    <p className="mb-3 text-[11px] font-bold uppercase tracking-[0.22em] text-teal-700">
+                      What families say about {centre.name}
+                    </p>
                     <blockquote className="text-[15px] italic leading-relaxed text-charcoal">
                       &ldquo;{area.testimonial.quote}&rdquo;
                     </blockquote>
-                    <figcaption className="mt-3 text-sm text-muted">- {area.testimonial.by}</figcaption>
+                    <figcaption className="mt-3 text-sm text-muted">
+                      - {area.testimonial.by}
+                      {area.testimonial.source ? ` · ${area.testimonial.source}` : ""}
+                    </figcaption>
                   </figure>
                 ) : null}
               </div>
