@@ -4,7 +4,8 @@ import { SectionHeading } from "@/components/ui/SectionHeading";
 import { PageBanner, BannerStatsRight } from "@/components/ui/PageBanner";
 import { ResultsGrid } from "@/components/ResultsGrid";
 import { VideoReviews } from "@/components/VideoReviews";
-import { toppers, subjectToppers } from "@/data/results";
+import { SchoolAchievers } from "@/components/SchoolAchievers";
+import { toppers, subjectToppers, schoolAchievers } from "@/data/results";
 import { breadcrumbSchema, webPageSchema, jsonLd, shareMeta } from "@/lib/seo";
 
 export const metadata: Metadata = {
@@ -95,6 +96,22 @@ export default function ResultsPage() {
             description="Standout scores in a single subject. Each card lists the faculty member who personally mentored that batch."
           />
           <ResultsGrid items={subjectToppers} />
+        </Container>
+      </section>
+
+      <section className="border-t border-neutral-200 bg-white py-20 sm:py-24">
+        <Container>
+          <SectionHeading
+            eyebrow="School exam toppers"
+            title={
+              <>
+                Class 6 to 9 students{" "}
+                <span className="text-charcoal">leading their school exams</span>
+              </>
+            }
+            description="Recent school exam scores from our junior batches. Strong foundations in Classes 6 to 9 are what make the board year easier."
+          />
+          <SchoolAchievers items={schoolAchievers} />
         </Container>
       </section>
 

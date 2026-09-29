@@ -121,3 +121,77 @@ export const resultsStats = [
   { label: "Pass rate · 2026", value: "100%" },
   { label: "Operating in Rohini", value: "Since 2015" },
 ];
+
+/**
+ * School exam achievers - junior classes (6 to 9), school-level exams.
+ * Images are the full branded posters, shown uncropped (2:3).
+ *
+ * TODO (Mayank): the two Class 6 posters have no student name on them.
+ * Add `name` to those entries once confirmed.
+ */
+export type SchoolAchiever = {
+  name?: string;
+  grade: string;
+  school?: string;
+  scores: { subject: string; marks: string }[];
+  image: string;
+};
+
+export const schoolAchievers: SchoolAchiever[] = [
+  {
+    name: "Arvi",
+    grade: "Class 8",
+    school: "Ryan International School",
+    scores: [
+      { subject: "Science", marks: "78/80" },
+      { subject: "English", marks: "78/80" },
+      { subject: "Maths", marks: "77/80" },
+    ],
+    image: "/students/school/arvi.jpg",
+  },
+  {
+    name: "Vaani",
+    grade: "Class 9",
+    scores: [{ subject: "Science", marks: "72/80" }],
+    image: "/students/school/vaani.jpg",
+  },
+  {
+    name: "Jash",
+    grade: "Class 7",
+    school: "N K Bagrodia School",
+    scores: [
+      { subject: "Social Science", marks: "57/60" },
+      { subject: "English", marks: "57/60" },
+      { subject: "Science", marks: "55/60" },
+    ],
+    image: "/students/school/jash.jpg",
+  },
+  {
+    name: "Aadhya",
+    grade: "Class 7",
+    school: "Rockfield Public School",
+    scores: [
+      { subject: "SST", marks: "56/60" },
+      { subject: "Science", marks: "54/60" },
+      { subject: "Maths", marks: "53/60" },
+    ],
+    image: "/students/school/aadhya.jpg",
+  },
+  {
+    name: "Tanishka",
+    grade: "Class 7",
+    school: "Sachdeva School",
+    scores: [{ subject: "English", marks: "56/60" }],
+    image: "/students/school/tanishka.jpg",
+  },
+  {
+    grade: "Class 6",
+    scores: [{ subject: "Science", marks: "58/60" }],
+    image: "/students/school/class-6-science.jpg",
+  },
+  {
+    grade: "Class 6",
+    scores: [{ subject: "Social Science", marks: "57/60" }],
+    image: "/students/school/class-6-social-science.jpg",
+  },
+];
